@@ -67,7 +67,7 @@ export default function AboutPage() {
             <p>
               Since then, I&rsquo;ve managed campaigns for 215+ brands across 15 verticals.
               Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Axe. Discovery Channel.
-              Tupperware. Orange Theory. Names you&rsquo;ve heard of, in industries you work in.
+              Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
             </p>
             <p>
               At peak, Fifty &amp; Five had 5 offices and 22 employees. I&rsquo;ve run the full

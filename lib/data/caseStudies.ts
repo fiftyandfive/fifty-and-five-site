@@ -86,8 +86,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     slug: 'enterprise-holdings',
     client: 'Enterprise Holdings',
     industry: 'Auto / Transportation',
-    verticalLabel: 'Auto',
-    verticalColor: 'tech',
+    verticalLabel: 'Automotive',
+    verticalColor: 'automotive',
     services: ['Social media management across 6 brands', 'Cross-market coordination'],
     duration: 'Multi-year',
     durationBadge: '6 Brands, 2 Markets',
@@ -107,8 +107,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     slug: 'centennial-real-estate',
     client: 'Centennial Real Estate',
     industry: 'Retail / Real Estate',
-    verticalLabel: 'Retail',
-    verticalColor: 'retail',
+    verticalLabel: 'Real Estate',
+    verticalColor: 'realestate',
     services: ['Social media management for 9 properties', 'Local content systems'],
     duration: 'Multi-year',
     durationBadge: '9 Properties',
@@ -140,27 +140,6 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Crafted aspirational lifestyle content that showcased each property\u2019s unique character \u2014 turquoise water and over-water villas for Bimini, fireplaces and foliage for the Catskills. Managed community with the understanding that resort DMs are often sales conversations worth thousands of dollars.',
     outcome:
       'Built engaged communities around two very different resort experiences under one brand umbrella. Proof that hospitality social scales across property types when the strategy respects the specificity of the place.',
-  },
-  {
-    slug: 'orange-theory',
-    client: 'Orange Theory',
-    industry: 'Fitness & Wellness',
-    verticalLabel: 'Fitness',
-    verticalColor: 'fitness',
-    services: ['Social media management', 'Content strategy'],
-    duration: 'Multi-year',
-    durationBadge: 'Multi-Year',
-    platforms: ['Instagram', 'Facebook'],
-    tagline:
-      'Content frameworks for a transformation-focused fitness brand \u2014 built around member stories and the science-backed methodology.',
-    challenge:
-      'Create compelling social content for a transformation-focused fitness brand at the moment when boutique fitness was becoming the dominant category in the industry. Every competitor was fighting for the same transformation story.',
-    approach:
-      'Developed content frameworks centered on member transformation stories and the science-backed heart-rate methodology that differentiates Orange Theory from the boutique fitness crowd. Built templates that franchise owners could execute locally without watering down the national brand.',
-    outcome:
-      'Built the playbook that now informs every fitness and wellness client engagement the agency takes on. A blueprint for how transformation-based brands translate on-platform.',
-    featured: true,
-    size: 'standard',
   },
   {
     slug: 'netgear-arlo',
@@ -204,8 +183,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     slug: 'axe-unilever',
     client: 'Axe / Unilever',
     industry: 'CPG / Personal Care',
-    verticalLabel: 'CPG',
-    verticalColor: 'entertainment',
+    verticalLabel: 'Retail & CPG',
+    verticalColor: 'retail',
     services: ['Experiential marketing', 'Social media', 'Product launch'],
     duration: '2010 campaign',
     durationBadge: '2010 Campaign',
@@ -296,4 +275,7 @@ export const VERTICAL_COLOR_HEX: Record<string, string> = {
   tech: '#6366F1',
   retail: '#F59E0B',
   entertainment: '#8B5CF6',
+  healthcare: '#0284C7',
+  realestate: '#B45309',
+  automotive: '#64748B',
 };
