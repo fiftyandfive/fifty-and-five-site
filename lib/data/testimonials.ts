@@ -25,17 +25,16 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
   },
   {
-    // TODO(Lucas): paste Blaze Pizza Clutch quote
     quote:
-      'Paste the verbatim Blaze Pizza review text from clutch.co/profile/fifty-five here.',
-    author: 'Reviewer Name',
-    title: 'Title, Blaze Pizza',
+      'They grew our engagement 400%. It doesn\u2019t feel like I\u2019m partnered with a large company \u2014 we have a real relationship, and we always have access to them.',
+    author: 'Director of Digital Growth',
+    title: 'Blaze Pizza',
     company: 'Blaze Pizza',
     rating: 5,
   },
   {
     quote:
-      'Fifty & Five has helped us grow our Instagram & Facebook presence. They are professional, creative, and such a pleasure to work with. The professional photos and videos that they capture are beautiful and captivating. We are grateful to have them as part of our team.',
+      'They\u2019ve grown our Instagram and Facebook presence \u2014 professional, creative, and a real pleasure to work with. The photos and videos they capture are beautiful and captivating.',
     author: 'Co-Owner',
     title: 'Barsha Life — LA Restaurant & Wine Bar',
     company: 'Barsha',
