@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useState } from 'react';
 import { CLIENT_LOGOS } from '@/lib/data/clients';
 
@@ -15,15 +14,16 @@ function LogoItem({ name, asset }: { name: string; asset?: string }) {
     );
   }
 
+  /* eslint-disable @next/next/no-img-element */
   return (
-    <Image
+    <img
       src={asset}
       alt={name}
       width={128}
       height={128}
+      loading="lazy"
       className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:grayscale(1)_brightness(1.4)] hover:[filter:none]"
       onError={() => setFailed(true)}
-      unoptimized
     />
   );
 }
