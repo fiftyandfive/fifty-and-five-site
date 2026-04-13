@@ -16,6 +16,11 @@ export type CaseStudy = {
   outcome: string;
   featured?: boolean;
   size?: 'wide' | 'standard';
+  /**
+   * Optional hero image path relative to /public (e.g. '/images/case-studies/kendall-jackson.jpg').
+   * When unset, falls back to the gradient PlaceholderImage.
+   */
+  heroImage?: string;
 };
 
 export const CASE_STUDIES: CaseStudy[] = [

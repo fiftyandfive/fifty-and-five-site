@@ -83,6 +83,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 colorKey={cs.verticalColor}
                 label={`${cs.client} — hero`}
                 className="rounded-glass mb-16"
+                src={cs.heroImage}
+                alt={`${cs.client} case study hero`}
               />
             </SimpleReveal>
 
@@ -148,6 +150,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                   aspect="16/10"
                   colorKey={next.verticalColor}
                   label={next.client}
+                  src={next.heroImage}
+                  alt={`${next.client} case study`}
                 />
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-3 flex-wrap">

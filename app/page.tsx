@@ -216,6 +216,8 @@ export default function HomePage() {
                           colorKey={cs.verticalColor}
                           aspect={i === 0 ? '4/3' : '16/9'}
                           label={cs.client}
+                          src={cs.heroImage}
+                          alt={`${cs.client} — ${cs.verticalLabel} case study`}
                         />
                       </div>
                       <div className="p-6 pt-6 flex-1 flex flex-col">

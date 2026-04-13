@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
 
 type Props = {
@@ -5,6 +6,12 @@ type Props = {
   colorKey?: string;
   aspect?: string;
   className?: string;
+  /**
+   * When provided, renders the image instead of the gradient placeholder.
+   * Path should be relative to /public (e.g. '/images/case-studies/kendall-jackson.jpg').
+   */
+  src?: string;
+  alt?: string;
 };
 
 export function PlaceholderImage({
@@ -12,8 +19,28 @@ export function PlaceholderImage({
   colorKey = 'tech',
   aspect = '16/9',
   className = '',
+  src,
+  alt,
 }: Props) {
   const hex = VERTICAL_COLOR_HEX[colorKey] ?? '#6366F1';
+
+  if (src) {
+    return (
+      <div
+        className={`relative w-full overflow-hidden rounded-[inherit] ${className}`}
+        style={{ aspectRatio: aspect }}
+      >
+        <Image
+          src={src}
+          alt={alt ?? label ?? ''}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 640px"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`relative w-full overflow-hidden rounded-[inherit] ${className}`}
