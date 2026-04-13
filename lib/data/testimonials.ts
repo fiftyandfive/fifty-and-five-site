@@ -34,11 +34,10 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
   },
   {
-    // TODO(Lucas): paste Barsha Clutch quote
     quote:
-      'Paste the verbatim Barsha review text from clutch.co/profile/fifty-five here.',
-    author: 'Reviewer Name',
-    title: 'Title, Barsha',
+      'Fifty & Five has helped us grow our Instagram & Facebook presence. They are professional, creative, and such a pleasure to work with. The professional photos and videos that they capture are beautiful and captivating. We are grateful to have them as part of our team.',
+    author: 'Co-Owner',
+    title: 'Barsha Life — LA Restaurant & Wine Bar',
     company: 'Barsha',
     rating: 5,
   },
