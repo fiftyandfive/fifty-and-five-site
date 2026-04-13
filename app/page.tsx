@@ -5,7 +5,8 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { LogoTicker } from '@/components/ui/LogoTicker';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
-import { CorkCounter } from '@/components/ui/CorkCounter';
+import { AlgorithmCounter } from '@/components/ui/AlgorithmCounter';
+import { PlatformGraveyard } from '@/components/ui/PlatformGraveyard';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
@@ -100,9 +101,12 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 text-center">
           <Stat value={215} suffix="+" label="Brands Managed" />
           <Stat value={18} label="Years in Social" />
-          <CorkStat />
+          <AlgorithmStat />
         </div>
       </section>
+
+      {/* PLATFORMS WE'VE OUTLASTED */}
+      <PlatformGraveyard />
 
       {/* WHAT'S BROKEN — PAIN POINTS */}
       <section className="relative container-edge py-24 md:py-32">
@@ -394,14 +398,14 @@ function Stat({ value, suffix, label }: { value: number; suffix?: string; label:
   );
 }
 
-function CorkStat() {
+function AlgorithmStat() {
   return (
     <div>
-      <div className="font-serif text-[clamp(40px,6vw,72px)] leading-none tracking-[-0.03em] text-text-primary">
-        <CorkCounter />
+      <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
+        <AlgorithmCounter />
       </div>
       <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-        Corks Collected <span className="text-accent">(and still counting)</span>
+        Algorithm Updates Survived
       </div>
     </div>
   );

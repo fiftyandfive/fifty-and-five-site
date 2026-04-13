@@ -1,43 +1,15 @@
 'use client';
 
-import { useState, useCallback } from 'react';
 import { CLIENT_LOGOS } from '@/lib/data/clients';
 
-/** Minimum natural width (px) to keep the image — below this we show text. */
-const MIN_LOGO_WIDTH = 48;
-
-function LogoItem({ name, asset }: { name: string; asset?: string }) {
-  const [failed, setFailed] = useState(false);
-
-  const handleLoad = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
-    const img = e.currentTarget;
-    if (img.naturalWidth < MIN_LOGO_WIDTH) {
-      setFailed(true); // too small — show text wordmark instead
-    }
-  }, []);
-
-  if (!asset || failed) {
-    return (
-      <span className="font-serif text-[22px] tracking-tight whitespace-nowrap">
-        {name}
-      </span>
-    );
-  }
-
-  /* eslint-disable @next/next/no-img-element */
-  return (
-    <img
-      src={asset}
-      alt={name}
-      width={128}
-      height={128}
-      className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] hover:[filter:none]"
-      onLoad={handleLoad}
-      onError={() => setFailed(true)}
-    />
-  );
-}
-
+/**
+ * Typographic wordmark ticker. We intentionally render every client
+ * name in Archivo Black instead of fetching brand logos — Clearbit
+ * favicons come with white backgrounds that can't be cleanly matted
+ * against our dark canvas, which produced a row of white squares.
+ * Wordmarks read more "senior agency," scale crisply, and survive
+ * without any third-party image dependency.
+ */
 export function LogoTicker() {
   const doubled = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
   return (
@@ -52,14 +24,14 @@ export function LogoTicker() {
         className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10"
         style={{ background: 'linear-gradient(to left, var(--color-bg-secondary), transparent)' }}
       />
-      <div className="ticker-track gap-14 px-8 items-center">
+      <div className="ticker-track gap-16 px-8 items-center">
         {doubled.map((logo, i) => (
-          <div
+          <span
             key={`${logo.name}-${i}`}
-            className="shrink-0 text-text-secondary hover:text-text-primary transition-colors duration-300"
+            className="shrink-0 font-serif text-[26px] md:text-[30px] tracking-[-0.02em] whitespace-nowrap text-text-secondary hover:text-text-primary transition-colors duration-300"
           >
-            <LogoItem name={logo.name} asset={logo.asset} />
-          </div>
+            {logo.name}
+          </span>
         ))}
       </div>
     </div>
