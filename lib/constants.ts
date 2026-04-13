@@ -28,5 +28,5 @@ export const FOOTER_VERTICALS = [
   { href: '/verticals/healthcare', label: 'Healthcare' },
   { href: '/verticals/real-estate', label: 'Real Estate' },
   { href: '/verticals/automotive', label: 'Automotive' },
-  { href: '/verticals/entertainment', label: 'Entertainment & Media' },
+  { href: '/verticals/entertainment', label: 'Entertainment' },
 ];
