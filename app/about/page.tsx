@@ -21,7 +21,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2018', text: 'Peak agency: 5 offices, 22 employees.' },
   { year: '2020', text: 'Kendall-Jackson partnership begins.' },
   { year: '2023', text: 'Strategic shift: senior-led, AI-augmented model.' },
-  { year: '2026', text: '215+ brands. 18 years. Still going.' },
+  { year: '2026', text: 'Leaner. Faster. Sharper than ever.' },
 ];
 
 export default function AboutPage() {
