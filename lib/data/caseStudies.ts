@@ -142,27 +142,6 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Built engaged communities around two very different resort experiences under one brand umbrella. Proof that hospitality social scales across property types when the strategy respects the specificity of the place.',
   },
   {
-    slug: 'orange-theory',
-    client: 'Orange Theory',
-    industry: 'Fitness & Wellness',
-    verticalLabel: 'Fitness',
-    verticalColor: 'fitness',
-    services: ['Social media management', 'Content strategy'],
-    duration: 'Multi-year',
-    durationBadge: 'Multi-Year',
-    platforms: ['Instagram', 'Facebook'],
-    tagline:
-      'Content frameworks for a transformation-focused fitness brand \u2014 built around member stories and the science-backed methodology.',
-    challenge:
-      'Create compelling social content for a transformation-focused fitness brand at the moment when boutique fitness was becoming the dominant category in the industry. Every competitor was fighting for the same transformation story.',
-    approach:
-      'Developed content frameworks centered on member transformation stories and the science-backed heart-rate methodology that differentiates Orange Theory from the boutique fitness crowd. Built templates that franchise owners could execute locally without watering down the national brand.',
-    outcome:
-      'Built the playbook that now informs every fitness and wellness client engagement the agency takes on. A blueprint for how transformation-based brands translate on-platform.',
-    featured: true,
-    size: 'standard',
-  },
-  {
     slug: 'netgear-arlo',
     client: 'NETGEAR / Arlo Cameras',
     industry: 'Tech / Consumer Electronics',

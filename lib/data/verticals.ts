@@ -125,7 +125,7 @@ export const VERTICALS: Vertical[] = [
       'We\u2019ve built content frameworks for franchise models and independent studios alike. The franchise playbook requires scalable templates that local owners can execute. The boutique studio playbook requires the opposite \u2014 intimate, owner-led, local-flavor storytelling.',
       'We understand the fitness membership funnel: awareness \u2192 trial class \u2192 conversion \u2192 retention. Most agencies optimize only the top of that funnel. We optimize the whole thing, because retention is where the margin lives.',
     ],
-    featuredCaseStudies: ['orange-theory'],
+    featuredCaseStudies: [],
   },
   {
     slug: 'tech',

@@ -21,7 +21,7 @@ export default function HomePage() {
     'blaze-pizza',
     'enterprise-holdings',
     'mezzacorona',
-    'orange-theory',
+    'microsoft',
   ];
   const featured = featuredSlugs.map((s) => getCaseStudy(s)!).filter(Boolean);
 
@@ -96,11 +96,10 @@ export default function HomePage() {
 
       {/* STATS BAR */}
       <section className="container-edge py-28 md:py-36">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 text-center">
           <Stat value={215} suffix="+" label="Brands Managed" />
           <Stat value={18} label="Years in Social" />
           <Stat value={15} suffix="+" label="Industry Verticals" />
-          <Stat value={9} label="Longest Retainer (Years)" />
         </div>
       </section>
 
