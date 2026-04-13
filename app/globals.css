@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Bricolage Grotesque (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
+/* Archivo Black (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
 
 :root {
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Archivo Black', 'Inter', system-ui, sans-serif;
 
   /* Core Palette — Dark Mode Default */
   --color-bg-primary: #0A0A0C;
@@ -71,23 +71,16 @@ body {
   color: white;
 }
 
-/* Display helper — Bricolage Grotesque tuned for big display (opsz 96, slight narrow) */
+/* Display helper — Archivo Black is single-weight, tighten tracking hard */
 .font-display {
   font-family: var(--font-serif), system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  font-variation-settings: 'opsz' 96, 'wdth' 90;
+  font-weight: 900;
+  letter-spacing: -0.04em;
 }
 
-/* Bricolage Grotesque reads bold on headings (ignored by non-variable fonts) */
-h1, h2, h3, h4 {
-  font-variation-settings: 'opsz' 96, 'wdth' 95;
-}
-
-/* Punchy weight on display sans */
+/* Archivo Black is already heavy — tighten tracking on headings */
 .font-serif {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 /* Glass surface */

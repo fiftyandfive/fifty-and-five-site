@@ -59,8 +59,10 @@ export const VERTICALS: Vertical[] = [
     colorKey: 'hospitality',
     headline: 'Social Media for Hospitality & Tourism',
     subhead:
-      'Luxury resorts, cultural attractions, and tourism boards across the US, Caribbean, and Asia-Pacific.',
+      'Hospitality, travel, and tourism across the US, Caribbean, and Asia-Pacific \u2014 luxury resorts, cultural attractions, national tourism boards, and travel brands.',
     clients: [
+      'Enterprise Rent-A-Car',
+      'Hong Kong Tourism Board',
       'Resorts World Bimini',
       'Resorts World Catskills',
       'Polynesian Cultural Center',
