@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Geist loaded via next/font; Instrument Serif via Google Fonts <link> in layout. */
+/* Fraunces (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
 
 :root {
-  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
 
   /* Core Palette — Dark Mode Default */
   --color-bg-primary: #0A0A0C;
@@ -70,11 +71,22 @@ body {
   color: white;
 }
 
-/* Serif display helper */
+/* Serif display helper — Fraunces tuned for display (high opsz, soft axis) */
 .font-display {
   font-family: var(--font-serif), Georgia, serif;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.03em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+}
+
+/* Tighten Fraunces on all headings by default (ignored by non-variable fonts) */
+h1, h2, h3, h4 {
+  font-variation-settings: 'opsz' 144, 'SOFT' 40;
+}
+
+/* Fraunces reads best on display at 500, body serifs at 400 */
+.font-serif {
+  font-weight: 500;
 }
 
 /* Glass surface */
