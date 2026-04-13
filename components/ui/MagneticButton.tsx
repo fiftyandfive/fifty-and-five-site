@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 import { useRef, type ReactNode } from 'react';
 import { springSnappy } from '@/lib/animations';
+import { trackEvent } from '@/components/layout/Analytics';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
 type Size = 'default' | 'small' | 'large';
@@ -17,6 +18,8 @@ type Props = {
   size?: Size;
   className?: string;
   ariaLabel?: string;
+  /** Plausible event name to fire on click */
+  trackName?: string;
 };
 
 const base =
@@ -45,7 +48,13 @@ export function MagneticButton({
   size = 'default',
   className = '',
   ariaLabel,
+  trackName,
 }: Props) {
+  const handleClick = () => {
+    if (trackName) trackEvent(trackName, href ? { to: href } : undefined);
+    onClick?.();
+  };
+
   const ref = useRef<HTMLElement | null>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -84,6 +93,7 @@ export function MagneticButton({
       <Link
         href={href}
         ref={ref as React.Ref<HTMLAnchorElement>}
+        onClick={handleClick}
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
         aria-label={ariaLabel}
@@ -98,7 +108,7 @@ export function MagneticButton({
     <button
       ref={ref as React.Ref<HTMLButtonElement>}
       type={type}
-      onClick={onClick}
+      onClick={handleClick}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       aria-label={ariaLabel}

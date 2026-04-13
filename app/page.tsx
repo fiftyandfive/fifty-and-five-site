@@ -54,10 +54,20 @@ export default function HomePage() {
 
           <SimpleReveal delay={0.85}>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <MagneticButton href="/work" variant="primary" size="large">
+              <MagneticButton
+                href="/work"
+                variant="primary"
+                size="large"
+                trackName="Hero CTA — See the Work"
+              >
                 See the Work →
               </MagneticButton>
-              <MagneticButton href="/contact" variant="secondary" size="large">
+              <MagneticButton
+                href="/contact"
+                variant="secondary"
+                size="large"
+                trackName="Hero CTA — Let's Talk"
+              >
                 Let&rsquo;s Talk
               </MagneticButton>
             </div>

@@ -2,27 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Geist';
-  src: local('Geist'), local('Inter');
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: local('Geist Mono'), local('JetBrains Mono'), local('Menlo');
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Instrument Serif';
-  src: local('Instrument Serif'), local('Playfair Display'), local('Georgia');
-  font-display: swap;
-}
+/* Geist loaded via next/font; Instrument Serif via Google Fonts <link> in layout. */
 
 :root {
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+
   /* Core Palette — Dark Mode Default */
   --color-bg-primary: #0A0A0C;
   --color-bg-secondary: #111114;
@@ -76,10 +60,8 @@ html {
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
-  font-family: 'Geist', Inter, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'ss01', 'cv11';
   overflow-x: hidden;
 }
 
@@ -88,9 +70,9 @@ body {
   color: white;
 }
 
-/* Serif display */
+/* Serif display helper */
 .font-display {
-  font-family: 'Instrument Serif', Georgia, serif;
+  font-family: var(--font-serif), Georgia, serif;
   font-weight: 400;
   letter-spacing: -0.03em;
 }

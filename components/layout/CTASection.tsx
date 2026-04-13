@@ -29,7 +29,12 @@ export function CTASection({
         </SimpleReveal>
         <SimpleReveal delay={0.35}>
           <div className="mt-10 flex flex-col items-center gap-4">
-            <MagneticButton href={ctaHref} variant="primary" size="large">
+            <MagneticButton
+              href={ctaHref}
+              variant="primary"
+              size="large"
+              trackName="Close CTA"
+            >
               {ctaLabel}
             </MagneticButton>
             <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">

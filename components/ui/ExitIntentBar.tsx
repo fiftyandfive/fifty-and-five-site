@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { trackEvent } from '@/components/layout/Analytics';
 
 const KEY = 'fifty-and-five-exit-intent-v1';
 
@@ -18,6 +19,7 @@ export function ExitIntentBar() {
       if (e.clientY <= 0) {
         setOpen(true);
         sessionStorage.setItem(KEY, '1');
+        trackEvent('Exit Intent Shown');
       }
     };
     document.addEventListener('mouseleave', onLeave);
@@ -55,8 +57,21 @@ export function ExitIntentBar() {
                   </button>
                 </div>
                 <form
-                  onSubmit={(e) => {
+                  onSubmit={async (e) => {
                     e.preventDefault();
+                    const fd = new FormData(e.currentTarget);
+                    const email = String(fd.get('email') || '');
+                    trackEvent('Exit Intent Submit');
+                    // Fire-and-forget to the contact endpoint with a tag
+                    fetch('/api/contact', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({
+                        name: 'Exit-intent lead',
+                        email,
+                        message: 'Requested the 5-minute social media audit checklist.',
+                      }),
+                    }).catch(() => {});
                     setSubmitted(true);
                   }}
                   className="mt-4 flex flex-col sm:flex-row gap-2"

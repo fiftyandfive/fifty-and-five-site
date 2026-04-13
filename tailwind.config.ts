@@ -41,9 +41,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
-        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
-        mono: ['"Geist Mono"', '"JetBrains Mono"', 'monospace'],
+        sans: ['var(--font-geist-sans)', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
+        mono: ['var(--font-geist-mono)', '"JetBrains Mono"', 'monospace'],
       },
       fontSize: {
         display: ['clamp(56px, 8vw, 96px)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],

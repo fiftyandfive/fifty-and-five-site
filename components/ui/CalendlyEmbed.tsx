@@ -1,6 +1,12 @@
-import { SITE } from '@/lib/constants';
+'use client';
+
+import { InlineWidget } from 'react-calendly';
+
+const DEFAULT_URL = 'https://calendly.com/fiftyandfive/intro';
 
 export function CalendlyEmbed() {
+  const url = process.env.NEXT_PUBLIC_CALENDLY_URL || DEFAULT_URL;
+
   return (
     <div className="glass rounded-glass p-8 md:p-10">
       <div className="font-mono text-caption uppercase text-accent tracking-[0.1em]">
@@ -14,36 +20,18 @@ export function CalendlyEmbed() {
         Fifty &amp; Five is a fit.
       </p>
 
-      <div
-        className="mt-6 rounded-lg border border-glass-border bg-bg-tertiary p-6 flex flex-col items-center justify-center text-center min-h-[260px] relative overflow-hidden"
-      >
-        <div
-          aria-hidden
-          className="absolute inset-0 opacity-50"
-          style={{
-            background:
-              'radial-gradient(circle at 30% 20%, rgba(99,102,241,0.15), transparent 50%)',
+      <div className="mt-6 rounded-lg border border-glass-border overflow-hidden bg-bg-tertiary">
+        <InlineWidget
+          url={url}
+          styles={{ height: 680 }}
+          pageSettings={{
+            backgroundColor: '111114',
+            primaryColor: '6366F1',
+            textColor: 'F0F0EC',
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false,
           }}
         />
-        <div className="relative">
-          <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-            Calendly embed
-          </div>
-          <p className="mt-3 font-serif text-[24px] leading-[1.2] text-text-primary">
-            Pick a time that works.
-          </p>
-          <a
-            href={SITE.calendly}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent text-white px-5 py-2.5 text-[14px] font-medium glow-accent"
-          >
-            Open Calendly →
-          </a>
-          <p className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-            Calendar will embed inline on launch
-          </p>
-        </div>
       </div>
     </div>
   );
