@@ -6,7 +6,7 @@ export const SITE = {
   location: 'Orlando, FL',
   url: 'https://fiftyandfive.com',
   social: {
-    linkedin: 'https://www.linkedin.com/in/lucasvandenberg/',
+    linkedin: 'https://www.linkedin.com/in/LucasV/',
     instagram: 'https://www.instagram.com/fiftyandfive/',
   },
   calendly: 'https://calendly.com/lucasv/30-minute-intro-call',
