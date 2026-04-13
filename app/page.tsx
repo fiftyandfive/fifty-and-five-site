@@ -12,6 +12,7 @@ import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
+import { Testimonials } from '@/components/ui/Testimonials';
 import { SITE } from '@/lib/constants';
 import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
@@ -231,6 +232,9 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* TESTIMONIALS — CLUTCH QUOTES */}
+      <Testimonials />
 
       {/* FEATURED WORK — BENTO GRID */}
       <section className="container-edge py-24 md:py-32">
