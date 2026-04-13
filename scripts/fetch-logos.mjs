@@ -1,10 +1,10 @@
 /**
- * Prebuild script — fetches real brand logos from Google’s favicon service.
- * Runs automatically before `next build` on Vercel (full network access).
+ * Prebuild script — fetches real brand logos at build time.
+ * Uses Clearbit Logo API (full logos) with Google Favicon as fallback.
+ * Runs via: node scripts/fetch-logos.mjs && next build
  * Skips any brand that already has a local file in /public/logos/.
- *
- * Usage: node scripts/fetch-logos.mjs
  */
+
 import { writeFile, mkdir, access } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -37,42 +37,56 @@ const BRANDS = [
   { name: "Wolfgang's Steakhouse", file: 'wolfgangs.png', domain: 'wolfgangssteakhouse.net' },
 ];
 
+/** Clearbit Logo API — returns full company logos */
+function clearbitUrl(domain, size = 256) {
+  return `https://logo.clearbit.com/${domain}?size=${size}`;
+}
+
+/** Google Favicon API — fallback for brands Clearbit misses */
 function faviconUrl(domain, size = 128) {
   return `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=${size}`;
 }
 
 async function fileExists(path) {
-  try {
-    await access(path);
-    return true;
-  } catch {
-    return false;
-  }
+  try { await access(path); return true; } catch { return false; }
 }
 
 async function fetchLogo(brand) {
   const outPath = join(LOGOS_DIR, brand.file);
+
   if (await fileExists(outPath)) {
     console.log(`  \u2713 ${brand.name} \u2014 already exists, skipping`);
     return true;
   }
-  try {
-    const res = await fetch(faviconUrl(brand.domain));
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const buf = Buffer.from(await res.arrayBuffer());
-    if (buf.length < 100) throw new Error('Response too small');
-    await writeFile(outPath, buf);
-    console.log(`  \u2713 ${brand.name} \u2014 ${(buf.length / 1024).toFixed(1)}KB`);
-    return true;
-  } catch (err) {
-    console.warn(`  \u2717 ${brand.name} \u2014 ${err.message}`);
-    return false;
+
+  // Try Clearbit first (better logos), then Google Favicon
+  const sources = [
+    { name: 'Clearbit', url: clearbitUrl(brand.domain) },
+    { name: 'Favicon', url: faviconUrl(brand.domain) },
+  ];
+
+  for (const src of sources) {
+    try {
+      const res = await fetch(src.url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (buf.length < 100) throw new Error('Response too small');
+      await writeFile(outPath, buf);
+      console.log(`  \u2713 ${brand.name} \u2014 ${(buf.length / 1024).toFixed(1)}KB via ${src.name}`);
+      return true;
+    } catch {
+      // Try next source
+    }
   }
+
+  console.warn(`  \u2717 ${brand.name} \u2014 all sources failed`);
+  return false;
 }
 
 async function main() {
   console.log('Fetching brand logos...\n');
   await mkdir(LOGOS_DIR, { recursive: true });
+
   const results = await Promise.allSettled(BRANDS.map(fetchLogo));
   const ok = results.filter((r) => r.status === 'fulfilled' && r.value).length;
   console.log(`\nDone: ${ok}/${BRANDS.length} logos ready.`);
