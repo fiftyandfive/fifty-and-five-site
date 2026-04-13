@@ -6,6 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { NoiseOverlay } from '@/components/ui/NoiseOverlay';
 import { StickyCtaButton } from '@/components/ui/StickyCtaButton';
 import { ExitIntentBar } from '@/components/ui/ExitIntentBar';
+import { StockTicker } from '@/components/ui/StockTicker';
 import { Analytics } from '@/components/layout/Analytics';
 
 export const metadata: Metadata = {
@@ -58,6 +59,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main className="relative z-[2]">{children}</main>
         <Footer />
+        {/* spacer so the fixed stock ticker doesn't obscure the footer */}
+        <div aria-hidden className="h-8" />
+        <StockTicker />
         <StickyCtaButton />
         <ExitIntentBar />
         <Analytics />

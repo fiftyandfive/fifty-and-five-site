@@ -3,7 +3,6 @@ import { AuroraBackground } from '@/components/ui/AuroraBackground';
 import { SpotlightEffect } from '@/components/ui/SpotlightEffect';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
-import { LogoTicker } from '@/components/ui/LogoTicker';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { AlgorithmCounter } from '@/components/ui/AlgorithmCounter';
 import { PlatformGraveyard } from '@/components/ui/PlatformGraveyard';
@@ -86,15 +85,7 @@ export default function HomePage() {
         <ScrollIndicator />
       </section>
 
-      {/* LOGO TICKER */}
-      <section>
-        <LogoTicker />
-        <div className="container-edge pt-6 text-center">
-          <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-            A selection from 215+ brands managed since 2008
-          </p>
-        </div>
-      </section>
+      {/* Client list lives in the global StockTicker (fixed bottom chrome) */}
 
       {/* STATS BAR */}
       <section className="container-edge py-28 md:py-36">
