@@ -20,8 +20,9 @@ export function AnimatedHeadline({
   delay = 0,
   once = true,
 }: Props) {
-  const words = text.split(' ');
+  const lines = text.split('\n');
   const Tag = motion[as] as any;
+  let wordIndex = 0;
 
   return (
     <Tag
@@ -31,25 +32,32 @@ export function AnimatedHeadline({
       viewport={{ once, margin: '-10%' }}
       transition={{ staggerChildren: stagger, delayChildren: delay }}
     >
-      {words.map((word, i) => (
-        <span
-          key={i}
-          className="inline-block overflow-hidden align-bottom pb-[0.15em]"
-          style={{ marginRight: '0.25em' }}
-        >
-          <motion.span
-            className="inline-block"
-            variants={{
-              hidden: { y: '110%', opacity: 0 },
-              visible: {
-                y: '0%',
-                opacity: 1,
-                transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
-              },
-            }}
-          >
-            {word}
-          </motion.span>
+      {lines.map((line, lineIdx) => (
+        <span key={lineIdx} className="block">
+          {line.split(' ').map((word) => {
+            const key = wordIndex++;
+            return (
+              <span
+                key={key}
+                className="inline-block overflow-hidden align-bottom pb-[0.15em]"
+                style={{ marginRight: '0.25em' }}
+              >
+                <motion.span
+                  className="inline-block"
+                  variants={{
+                    hidden: { y: '110%', opacity: 0 },
+                    visible: {
+                      y: '0%',
+                      opacity: 1,
+                      transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+                    },
+                  }}
+                >
+                  {word}
+                </motion.span>
+              </span>
+            );
+          })}
         </span>
       ))}
     </Tag>

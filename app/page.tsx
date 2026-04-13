@@ -40,7 +40,7 @@ export default function HomePage() {
 
           <AnimatedHeadline
             as="h1"
-            text="215 brands. 18 years. Zero handoffs."
+            text={'215 brands.\n18 years.\nZero handoffs.'}
             className="mt-8 font-serif text-display text-text-primary max-w-5xl"
             stagger={0.06}
           />
