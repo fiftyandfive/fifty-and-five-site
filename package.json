@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/fetch-logos.mjs",
-    "build": "next build",
+    "build": "node scripts/fetch-logos.mjs && next build",
     "start": "next start",
     "lint": "next lint"
   },
