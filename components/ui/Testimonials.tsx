@@ -68,7 +68,7 @@ export function Testimonials() {
         </a>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
         {TESTIMONIALS.map((t, i) => (
           <Card key={t.company} t={t} delay={i * 0.08} />
         ))}
