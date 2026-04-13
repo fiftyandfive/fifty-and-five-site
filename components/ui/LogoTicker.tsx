@@ -22,7 +22,7 @@ function LogoItem({ name, asset }: { name: string; asset?: string }) {
       width={128}
       height={128}
       loading="lazy"
-      className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:grayscale(1)_brightness(1.4)] hover:[filter:none]"
+      className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] hover:[filter:none]"
       onError={() => setFailed(true)}
     />
   );

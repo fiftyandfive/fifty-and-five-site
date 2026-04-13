@@ -5,6 +5,7 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { LogoTicker } from '@/components/ui/LogoTicker';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
+import { CoffeeCounter } from '@/components/ui/CoffeeCounter';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
@@ -99,19 +100,80 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 text-center">
           <Stat value={215} suffix="+" label="Brands Managed" />
           <Stat value={18} label="Years in Social" />
-          <Stat value={10} label="Verticals" />
+          <CoffeeStat />
         </div>
       </section>
 
-      {/* THE PITCH — VALUE PROPS */}
+      {/* WHAT'S BROKEN — PAIN POINTS */}
       <section className="relative container-edge py-24 md:py-32">
         <div className="max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            Why brands hire us
+            You&rsquo;ve been here before
           </div>
           <AnimatedHeadline
             as="h2"
-            text="Why brands choose one senior strategist over a 20-person agency."
+            text={'You know what\u2019s broken about how\nagencies work. We built around it.'}
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+          <SimpleReveal delay={0.0} className="h-full">
+            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                The bait-and-switch
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                The principal sold you. The junior delivers.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                You bought a senior strategist. You got a 26-year-old learning on your brand. The
+                person who pitched you hasn&rsquo;t been on a call in six months.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.12} className="h-full">
+            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                The layer cake
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                You ask a question. Three people forward the email.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                Account manager to traffic manager to coordinator to strategist. Your feedback gets
+                translated four times before it reaches the person doing the work.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.24} className="h-full">
+            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                The billing game
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                You&rsquo;re paying for hours. Not pattern recognition.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                40% of a traditional agency&rsquo;s billable hours get eaten by coordination. You
+                wrote the check for strategy. You got a timesheet.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+        </div>
+      </section>
+
+      {/* WHAT YOU GET — BUYER-FORWARD SOLUTION CARDS */}
+      <section className="relative container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            What you actually get
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="One senior. One strategy. One name on the door."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
         </div>
@@ -122,13 +184,12 @@ export default function HomePage() {
               <GlassCard className="h-full flex flex-col">
                 <IconSingle />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  Principal on every account.
+                  Answers on the first call.
                 </h3>
                 <p className="mt-4 text-body text-text-secondary">
-                  Lucas leads every engagement — strategy, account management, day-to-day. When
-                  the work calls for a specialist (paid CTV, technical SEO, web build), we bring
-                  in a vetted partner who runs their own shop and has been doing it for a decade.
-                  You get the right senior for the work, every time. No coordinators. No handoffs.
+                  No &ldquo;let me check with the team.&rdquo; The person on the call is the person
+                  doing the work. You get the decision, not a scheduled follow-up to get the
+                  decision.
                 </p>
               </GlassCard>
             </TiltCard>
@@ -139,13 +200,12 @@ export default function HomePage() {
               <GlassCard className="h-full flex flex-col">
                 <IconGrid />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  215 brands of pattern recognition.
+                  A strategy that adjusts in real time.
                 </h3>
                 <p className="mt-4 text-body text-text-secondary">
-                  When you&rsquo;ve managed social for Kendall-Jackson, Enterprise Holdings, and
-                  Blaze Pizza across 15 verticals, you start seeing what works before the data
-                  confirms it. Pattern recognition is what you&rsquo;re buying — not hours on a
-                  timesheet.
+                  Not a PDF you review quarterly. A living plan that flexes when the feed shifts,
+                  when a platform changes its rules, when a competitor moves — because the
+                  strategist is the one shipping.
                 </p>
               </GlassCard>
             </TiltCard>
@@ -156,13 +216,11 @@ export default function HomePage() {
               <GlassCard className="h-full flex flex-col">
                 <IconSparkle />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  AI-augmented, not AI-dependent.
+                  One name to hold accountable.
                 </h3>
                 <p className="mt-4 text-body text-text-secondary">
-                  We use AI to accelerate research, scheduling, and reporting — the same work that
-                  eats 40% of a traditional agency&rsquo;s billable hours. The result: senior-level
-                  strategy at a fraction of the cost, because we&rsquo;re not billing you for a team
-                  of coordinators.
+                  One senior. One email. One person whose reputation rides on the outcome — backed
+                  by a vetted network of specialists when the work calls for depth outside social.
                 </p>
               </GlassCard>
             </TiltCard>
@@ -331,6 +389,19 @@ function Stat({ value, suffix, label }: { value: number; suffix?: string; label:
       </div>
       <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
         {label}
+      </div>
+    </div>
+  );
+}
+
+function CoffeeStat() {
+  return (
+    <div>
+      <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
+        <CoffeeCounter />
+      </div>
+      <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+        Cups of Coffee <span className="text-accent">(and counting)</span>
       </div>
     </div>
   );
