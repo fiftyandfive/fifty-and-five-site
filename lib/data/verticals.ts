@@ -85,7 +85,15 @@ export const VERTICALS: Vertical[] = [
     headline: 'Social Media for Restaurants & Food Brands',
     subhead:
       'From QSR chains scaling nationally to independent top-100 restaurants \u2014 social media that drives covers and conversions, not just likes.',
-    clients: ['Blaze Pizza', "Wolfgang's Steakhouse", "Roscoe's House of Chicken & Waffles", 'MidiCi Pizza'],
+    clients: [
+      'Blaze Pizza',
+      "Shakey's Pizza",
+      "Wolfgang's Steakhouse",
+      "Roscoe's House of Chicken & Waffles",
+      'MidiCi Pizza',
+      'Barsha',
+      'Melora Manuka Honey',
+    ],
     expertise: [
       'Restaurant social is where craft meets commerce. The feed has to look delicious. The stories have to feel human. The ads have to move traffic. And the community management has to catch complaints before they become one-star reviews.',
       'We\u2019ve run national programs for fast-growth QSR brands (Blaze Pizza at scale) and built individualized presence for iconic independents (Wolfgang\u2019s, Roscoe\u2019s). Same playbook, different dials.',
