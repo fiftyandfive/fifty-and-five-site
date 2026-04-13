@@ -169,3 +169,12 @@ body {
 .hairline {
   border-color: var(--glass-border);
 }
+
+/* Hide scrollbar on horizontal snap rows (Apple TV lineup feel) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
