@@ -91,6 +91,7 @@ export const VERTICALS: Vertical[] = [
       "Wolfgang's Steakhouse",
       "Roscoe's House of Chicken & Waffles",
       'MidiCi Pizza',
+      'Fresh & Co',
       'Barsha',
       'Melora Manuka Honey',
     ],
@@ -134,7 +135,16 @@ export const VERTICALS: Vertical[] = [
     headline: 'Social Media for Tech & Consumer Brands',
     subhead:
       'Enterprise tech, consumer electronics, and global brands. From Microsoft to NETGEAR/Arlo to SAP.',
-    clients: ['Microsoft', 'SAP', 'NETGEAR / Arlo', 'Warner Bros.', 'Discovery Channel'],
+    clients: [
+      'Microsoft',
+      'SAP',
+      'NETGEAR / Arlo',
+      'Warner Bros.',
+      'Discovery Channel',
+      'Axe',
+      'Golf Now',
+      'Tupperware',
+    ],
     expertise: [
       'Tech social needs translators \u2014 people who can take an engineering team\u2019s roadmap and turn it into content a non-technical audience actually cares about. Not blog posts reformatted for Instagram. Platform-native storytelling that earns attention in a hostile feed.',
       'We\u2019ve supported product launches (Arlo from NETGEAR sub-brand to NYSE-listed standalone), global education initiatives (Microsoft Partners in Learning), and enterprise brand work for SAP. The throughline: clarity over cleverness.',
