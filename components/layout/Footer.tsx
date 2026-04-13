@@ -92,7 +92,7 @@ export function Footer() {
 
         <div className="mt-14 pt-6 border-t border-glass-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-caption text-text-tertiary">
           <div>© 2026 Fifty &amp; Five LLC</div>
-          <div>Built with too much coffee and 18 years of opinions.</div>
+          <div>Built on too many glasses of wine and 18 years of strong opinions.</div>
         </div>
       </div>
     </footer>

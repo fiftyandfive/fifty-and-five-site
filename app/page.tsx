@@ -5,7 +5,7 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { LogoTicker } from '@/components/ui/LogoTicker';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
-import { CoffeeCounter } from '@/components/ui/CoffeeCounter';
+import { CorkCounter } from '@/components/ui/CorkCounter';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
@@ -100,7 +100,7 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 text-center">
           <Stat value={215} suffix="+" label="Brands Managed" />
           <Stat value={18} label="Years in Social" />
-          <CoffeeStat />
+          <CorkStat />
         </div>
       </section>
 
@@ -394,14 +394,14 @@ function Stat({ value, suffix, label }: { value: number; suffix?: string; label:
   );
 }
 
-function CoffeeStat() {
+function CorkStat() {
   return (
     <div>
-      <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
-        <CoffeeCounter />
+      <div className="font-serif text-[clamp(40px,6vw,72px)] leading-none tracking-[-0.03em] text-text-primary">
+        <CorkCounter />
       </div>
       <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-        Cups of Coffee <span className="text-accent">(and counting)</span>
+        Corks Collected <span className="text-accent">(and still counting)</span>
       </div>
     </div>
   );
