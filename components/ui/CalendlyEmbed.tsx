@@ -2,7 +2,7 @@
 
 import { InlineWidget } from 'react-calendly';
 
-const DEFAULT_URL = 'https://calendly.com/fiftyandfive/intro';
+const DEFAULT_URL = 'https://calendly.com/lucasv/30-minute-intro-call';
 
 export function CalendlyEmbed() {
   const url = process.env.NEXT_PUBLIC_CALENDLY_URL || DEFAULT_URL;

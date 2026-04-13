@@ -9,7 +9,7 @@ export const SITE = {
     linkedin: 'https://www.linkedin.com/in/lucasvandenberg/',
     instagram: 'https://www.instagram.com/fiftyandfive/',
   },
-  calendly: 'https://calendly.com/fiftyandfive/intro',
+  calendly: 'https://calendly.com/lucasv/30-minute-intro-call',
 };
 
 export const NAV_LINKS = [
