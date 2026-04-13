@@ -34,6 +34,9 @@
   --color-tech: #6366F1;
   --color-retail: #F59E0B;
   --color-entertainment: #8B5CF6;
+  --color-healthcare: #0284C7;
+  --color-realestate: #B45309;
+  --color-automotive: #64748B;
 
   --noise-opacity: 0.03;
 
@@ -159,6 +162,9 @@ body {
 .vertical-bar-tech { border-left-color: var(--color-tech); }
 .vertical-bar-retail { border-left-color: var(--color-retail); }
 .vertical-bar-entertainment { border-left-color: var(--color-entertainment); }
+.vertical-bar-healthcare { border-left-color: var(--color-healthcare); }
+.vertical-bar-realestate { border-left-color: var(--color-realestate); }
+.vertical-bar-automotive { border-left-color: var(--color-automotive); }
 
 .hairline {
   border-color: var(--glass-border);
