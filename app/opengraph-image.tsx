@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Fifty & Five — 215 brands. 18 years. One strategist.';
+export const alt = 'Fifty & Five — 215 brands. 18 years. Zero handoffs.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -48,7 +48,7 @@ export default async function Image() {
             <br />
             18 years.
             <br />
-            One strategist.
+            Zero handoffs.
           </div>
         </div>
 

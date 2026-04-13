@@ -15,19 +15,19 @@ export const metadata: Metadata = {
     template: '%s | Fifty & Five',
   },
   description:
-    'Social media management and content strategy from a senior strategist who\u2019s managed campaigns for Microsoft, Kendall-Jackson, Enterprise Holdings, and 215+ more brands. No junior handoffs. No bloated retainers.',
+    'Senior-led social and content strategy for 215+ brands since 2008 — Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza. Principal-led, specialist-backed, zero junior handoffs.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior-Led Social Media Agency',
     description:
-      'Senior-led social and content agency. 215+ brands. 18 years. One strategist.',
+      'Senior-led. Specialist-backed. No junior handoffs. 215+ brands since 2008.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fifty & Five | Senior-Led Social Media Agency',
-    description: '215+ brands. 18 years. One strategist.',
+    description: 'Senior-led. Specialist-backed. No junior handoffs. 215+ brands since 2008.',
   },
   icons: {
     icon: [

@@ -126,7 +126,8 @@ export default function ServicesPage() {
             </div>
             <ul className="mt-5 space-y-3 text-body text-text-primary">
               <li>— One phone number.</li>
-              <li>— One strategist.</li>
+              <li>— One senior principal, start to finish.</li>
+              <li>— Specialists on the bench when the work calls for it.</li>
               <li>— Direct answers.</li>
               <li>
                 — The kind of experience that usually requires a $30K/mo retainer — at a fraction of

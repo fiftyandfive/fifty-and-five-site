@@ -40,15 +40,23 @@ export default function HomePage() {
 
           <AnimatedHeadline
             as="h1"
-            text="215 brands. 18 years. One strategist."
+            text="215 brands. 18 years. Zero handoffs."
             className="mt-8 font-serif text-display text-text-primary max-w-5xl"
             stagger={0.06}
           />
 
-          <SimpleReveal delay={0.6}>
-            <p className="mt-8 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              The person who built campaigns for Microsoft, Kendall-Jackson, and Blaze Pizza —
-              working directly with you. No junior handoffs. No agency markup.
+          <SimpleReveal delay={0.55}>
+            <p className="mt-6 font-mono text-caption uppercase text-accent tracking-[0.15em]">
+              Senior-led. Specialist-backed. No junior handoffs.
+            </p>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.7}>
+            <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
+              Strategy and day-to-day from the senior who sold you the engagement — backed by a
+              vetted network of specialists (paid CTV, technical SEO, web) when the work calls
+              for it. The person who built campaigns for Microsoft, Kendall-Jackson, and Blaze
+              Pizza, working directly with you.
             </p>
           </SimpleReveal>
 
@@ -115,13 +123,13 @@ export default function HomePage() {
               <GlassCard>
                 <IconSingle />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  Senior from day one.
+                  Principal on every account.
                 </h3>
                 <p className="mt-4 text-body text-text-secondary">
-                  Most agencies send a senior strategist to the pitch, then hand you off to a
-                  coordinator three weeks in. At Fifty &amp; Five, the strategist who plans your
-                  campaign is the same person posting your content, replying to your community, and
-                  reporting your results. Every time.
+                  Lucas leads every engagement — strategy, account management, day-to-day. When
+                  the work calls for a specialist (paid CTV, technical SEO, web build), we bring
+                  in a vetted partner who runs their own shop and has been doing it for a decade.
+                  You get the right senior for the work, every time. No coordinators. No handoffs.
                 </p>
               </GlassCard>
             </TiltCard>
