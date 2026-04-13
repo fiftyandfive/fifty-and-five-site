@@ -9,19 +9,14 @@ export type Testimonial = {
 };
 
 /**
- * Verified Clutch reviews. PASTE the real quote text, reviewer name,
- * and title into each entry — Clutch blocks automated scraping, so
- * these have to come from a logged-in profile view.
+ * Verified Clutch reviews. Ordered for narrative punch:
+ * 1. Blaze Pizza leads with the hard stat (400% engagement).
+ * 2. Barsha grounds it with craft + character.
+ * 3. StreetStrider adds the "easy to work with" relational proof.
+ * 4. Luxury Cosmetics closes with the one-line verdict.
  * Source: https://clutch.co/profile/fifty-five
  */
 export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: 'The team is exceptional \u2014 they overdeliver every time.',
-    author: 'Owner',
-    title: 'Luxury Cosmetics & Skincare Company',
-    company: 'Luxury Cosmetics',
-    rating: 5,
-  },
   {
     quote:
       'They grew our engagement 400%. It doesn\u2019t feel like I\u2019m partnered with a large company \u2014 we have a real relationship, and we always have access to them.',
@@ -36,6 +31,21 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Co-Owner',
     title: 'Barsha Life — LA Restaurant & Wine Bar',
     company: 'Barsha',
+    rating: 5,
+  },
+  {
+    quote:
+      'Professional, organized, creative, smart \u2014 and consistently positive energy, which really matters when working with an agency. Thankful to have found this team.',
+    author: 'CMO',
+    title: 'StreetStrider',
+    company: 'StreetStrider',
+    rating: 5,
+  },
+  {
+    quote: 'The team is exceptional \u2014 they overdeliver every time.',
+    author: 'Owner',
+    title: 'Luxury Cosmetics & Skincare Company',
+    company: 'Luxury Cosmetics',
     rating: 5,
   },
 ];
