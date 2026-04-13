@@ -109,7 +109,16 @@ export const VERTICALS: Vertical[] = [
     headline: 'Social Media for Fitness & Wellness Brands',
     subhead:
       'From Orange Theory to boutique studios \u2014 social strategies that drive memberships, not just followers.',
-    clients: ['Orange Theory', 'BODYBar SoDo', 'CKO Kickboxing', 'BASI Pilates', 'StreetStrider'],
+    clients: [
+      'Orange Theory',
+      'Rainbow Light',
+      'Blessed Herbs',
+      'BASI Pilates',
+      'Laser Lab',
+      'BODYBar SoDo',
+      'CKO Kickboxing',
+      'StreetStrider',
+    ],
     expertise: [
       'Fitness social media is about transformation \u2014 not just the workout, but the identity shift. Members join because they want to become someone. The content has to reflect that aspiration without feeling fake.',
       'We\u2019ve built content frameworks for franchise models and independent studios alike. The franchise playbook requires scalable templates that local owners can execute. The boutique studio playbook requires the opposite \u2014 intimate, owner-led, local-flavor storytelling.',
