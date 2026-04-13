@@ -16,12 +16,10 @@ export type Testimonial = {
  */
 export const TESTIMONIALS: Testimonial[] = [
   {
-    // TODO(Lucas): paste StreetStrider Clutch quote
-    quote:
-      'Paste the verbatim StreetStrider review text from clutch.co/profile/fifty-five here. Keep it short — one or two sentences read strongest at large type.',
-    author: 'Reviewer Name',
-    title: 'Title, StreetStrider',
-    company: 'StreetStrider',
+    quote: 'The team is exceptional \u2014 they overdeliver every time.',
+    author: 'Owner',
+    title: 'Luxury Cosmetics & Skincare Company',
+    company: 'Luxury Cosmetics',
     rating: 5,
   },
   {
