@@ -53,10 +53,10 @@ export default function HomePage() {
 
           <SimpleReveal delay={0.7}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Strategy and day-to-day from the senior who sold you the engagement — backed by a
-              vetted network of specialists (paid CTV, technical SEO, web) when the work calls
-              for it. The person who built campaigns for Microsoft, Kendall-Jackson, and Blaze
-              Pizza, working directly with you.
+              Strategy and day-to-day from the same person who pitched you the work — backed by a
+              vetted network of specialists (paid CTV, technical SEO, web) when the brief calls
+              for it. The strategist who built campaigns for Microsoft, Kendall-Jackson, and
+              Blaze Pizza, working directly with you.
             </p>
           </SimpleReveal>
 
