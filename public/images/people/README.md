@@ -4,11 +4,12 @@ Primarily for the About page portrait.
 
 ## Format guidelines
 
-- **Aspect ratio**: 1:1 (square). The About page crops to square.
-- **Resolution**: 1200×1200px minimum, 2000×2000px ideal.
+- **Aspect ratio**: 3:4 portrait (or 1:1 square). The About page renders
+  at 3:4 to preserve portrait framing.
+- **Resolution**: 1200px on the short edge minimum; 2000px preferred.
 - **Format**: `.jpg`, medium-warm grade, natural lighting.
 - **Framing**: shoulders-up or 3/4 length. Avoid centered head-and-shoulders
-  passport-style — read as LinkedIn default.
+  passport-style — reads as LinkedIn default.
 - **Background**: simple, uncluttered. A bookshelf, a painted wall, or
   environmental Orlando context works. Avoid busy city streetscapes.
 
@@ -16,15 +17,6 @@ Primarily for the About page portrait.
 
 `lucas.jpg`
 
-Once dropped, uncomment the `src` line in `app/about/page.tsx`:
-
-```tsx
-<PlaceholderImage
-  aspect="1/1"
-  colorKey="tech"
-  label="Portrait — Lucas Vandenberg"
-  className="rounded-[12px]"
-  src="/images/people/lucas.jpg"
-  alt="Lucas Vandenberg, Founder of Fifty & Five"
-/>
-```
+The About page already references `/images/people/lucas.jpg`
+(see `app/about/page.tsx`). Dropping the file at this exact path is
+the only step needed — no code change required.
