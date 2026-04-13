@@ -1,10 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { CLIENT_LOGOS } from '@/lib/data/clients';
+
+/** Minimum natural width (px) to keep the image — below this we show text. */
+const MIN_LOGO_WIDTH = 48;
 
 function LogoItem({ name, asset }: { name: string; asset?: string }) {
   const [failed, setFailed] = useState(false);
+
+  const handleLoad = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    if (img.naturalWidth < MIN_LOGO_WIDTH) {
+      setFailed(true); // too small — show text wordmark instead
+    }
+  }, []);
 
   if (!asset || failed) {
     return (
@@ -21,8 +31,8 @@ function LogoItem({ name, asset }: { name: string; asset?: string }) {
       alt={name}
       width={128}
       height={128}
-      loading="lazy"
       className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] hover:[filter:none]"
+      onLoad={handleLoad}
       onError={() => setFailed(true)}
     />
   );
