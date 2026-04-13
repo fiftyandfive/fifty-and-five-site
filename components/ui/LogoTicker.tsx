@@ -1,5 +1,32 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 import { CLIENT_LOGOS } from '@/lib/data/clients';
+
+function LogoItem({ name, asset }: { name: string; asset?: string }) {
+  const [failed, setFailed] = useState(false);
+
+  if (!asset || failed) {
+    return (
+      <span className="font-serif text-[22px] tracking-tight whitespace-nowrap">
+        {name}
+      </span>
+    );
+  }
+
+  return (
+    <Image
+      src={asset}
+      alt={name}
+      width={128}
+      height={128}
+      className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:grayscale(1)_brightness(1.4)] hover:[filter:none]"
+      onError={() => setFailed(true)}
+      unoptimized
+    />
+  );
+}
 
 export function LogoTicker() {
   const doubled = [...CLIENT_LOGOS, ...CLIENT_LOGOS];
@@ -21,20 +48,7 @@ export function LogoTicker() {
             key={`${logo.name}-${i}`}
             className="shrink-0 text-text-secondary hover:text-text-primary transition-colors duration-300"
           >
-            {logo.asset ? (
-              <Image
-                src={logo.asset}
-                alt={logo.name}
-                width={140}
-                height={40}
-                className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity [filter:grayscale(1)_brightness(1.4)] hover:[filter:none]"
-                unoptimized
-              />
-            ) : (
-              <span className="font-serif text-[22px] tracking-tight whitespace-nowrap">
-                {logo.name}
-              </span>
-            )}
+            <LogoItem name={logo.name} asset={logo.asset} />
           </div>
         ))}
       </div>
