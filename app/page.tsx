@@ -367,7 +367,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="font-serif text-[24px] md:text-[26px] lg:text-[22px] xl:text-[24px] leading-[1.05] tracking-[-0.025em] text-white break-words hyphens-auto">
+                      <h3 className="font-serif text-[20px] md:text-[22px] lg:text-[18px] xl:text-[20px] leading-[1.05] tracking-[-0.025em] text-white">
                         {v.name}
                       </h3>
                     </div>
