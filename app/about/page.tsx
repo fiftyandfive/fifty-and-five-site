@@ -111,9 +111,9 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
-          <SimpleReveal delay={0.0}>
-            <GlassCard>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
+          <SimpleReveal delay={0.0} className="h-full">
+            <GlassCard className="h-full flex flex-col">
               <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
                 Web &amp; AI infrastructure
               </div>
@@ -128,8 +128,8 @@ export default function AboutPage() {
             </GlassCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.08}>
-            <GlassCard>
+          <SimpleReveal delay={0.08} className="h-full">
+            <GlassCard className="h-full flex flex-col">
               <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
                 Performance marketing
               </div>
@@ -144,8 +144,8 @@ export default function AboutPage() {
             </GlassCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.16}>
-            <GlassCard>
+          <SimpleReveal delay={0.16} className="h-full">
+            <GlassCard className="h-full flex flex-col">
               <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
                 Connected TV &amp; programmatic
               </div>
@@ -160,8 +160,8 @@ export default function AboutPage() {
             </GlassCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.24}>
-            <GlassCard>
+          <SimpleReveal delay={0.24} className="h-full">
+            <GlassCard className="h-full flex flex-col">
               <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
                 Creative &amp; video
               </div>

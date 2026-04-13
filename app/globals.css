@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fraunces (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
+/* Bricolage Grotesque (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
 
 :root {
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
 
   /* Core Palette — Dark Mode Default */
   --color-bg-primary: #0A0A0C;
@@ -71,22 +71,23 @@ body {
   color: white;
 }
 
-/* Serif display helper — Fraunces tuned for display (high opsz, soft axis) */
+/* Display helper — Bricolage Grotesque tuned for big display (opsz 96, slight narrow) */
 .font-display {
-  font-family: var(--font-serif), Georgia, serif;
-  font-weight: 500;
+  font-family: var(--font-serif), system-ui, sans-serif;
+  font-weight: 700;
   letter-spacing: -0.03em;
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  font-variation-settings: 'opsz' 96, 'wdth' 90;
 }
 
-/* Tighten Fraunces on all headings by default (ignored by non-variable fonts) */
+/* Bricolage Grotesque reads bold on headings (ignored by non-variable fonts) */
 h1, h2, h3, h4 {
-  font-variation-settings: 'opsz' 144, 'SOFT' 40;
+  font-variation-settings: 'opsz' 96, 'wdth' 95;
 }
 
-/* Fraunces reads best on display at 500, body serifs at 400 */
+/* Punchy weight on display sans */
 .font-serif {
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 /* Glass surface */

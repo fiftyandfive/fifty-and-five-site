@@ -114,11 +114,11 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
             Case studies in {v.shortLabel}
           </div>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
             {studies.map((cs) => (
-              <Link key={cs.slug} href={`/work/${cs.slug}`} className="block group">
-                <TiltCard tiltStrength={4}>
-                  <GlassCard padded={false}>
+              <Link key={cs.slug} href={`/work/${cs.slug}`} className="block h-full group">
+                <TiltCard tiltStrength={4} className="h-full">
+                  <GlassCard padded={false} className="h-full flex flex-col">
                     <div className="p-6 flex items-center justify-between gap-4">
                       <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
                       <DurationBadge>{cs.durationBadge}</DurationBadge>
@@ -130,11 +130,11 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
                         label={cs.client}
                       />
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex-1 flex flex-col">
                       <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
                         {cs.client}
                       </h3>
-                      <p className="mt-3 text-body text-text-secondary">{cs.tagline}</p>
+                      <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
                       <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
                         View Case Study
                         <span

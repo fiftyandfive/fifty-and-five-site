@@ -56,10 +56,10 @@ export default function ServicesPage() {
       </section>
 
       <section className="container-edge pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
           {CORE_SERVICES.map((s, i) => (
-            <SimpleReveal key={s.title} delay={i * 0.08}>
-              <TiltCard tiltStrength={4}>
+            <SimpleReveal key={s.title} delay={i * 0.08} className="h-full">
+              <TiltCard tiltStrength={4} className="h-full">
                 <GlassCard className="h-full flex flex-col">
                   <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
                     {s.tag}
@@ -108,8 +108,8 @@ export default function ServicesPage() {
       </section>
 
       <section className="container-edge py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <GlassCard>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
+          <GlassCard className="h-full flex flex-col">
             <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
               What you won&rsquo;t find here
             </div>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
               <li>— A monthly report that takes longer to read than it took to write.</li>
             </ul>
           </GlassCard>
-          <GlassCard>
+          <GlassCard className="h-full flex flex-col">
             <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
               What you will find
             </div>

@@ -57,12 +57,12 @@ export default function WorkIndex() {
       </section>
 
       <section className="container-edge pb-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
           {items.map((cs, i) => (
-            <SimpleReveal key={cs.slug} delay={Math.min(i * 0.05, 0.3)}>
-              <Link href={`/work/${cs.slug}`} className="block group">
-                <TiltCard tiltStrength={4}>
-                  <GlassCard padded={false} className="overflow-hidden">
+            <SimpleReveal key={cs.slug} delay={Math.min(i * 0.05, 0.3)} className="h-full">
+              <Link href={`/work/${cs.slug}`} className="block h-full group">
+                <TiltCard tiltStrength={4} className="h-full">
+                  <GlassCard padded={false} className="h-full flex flex-col overflow-hidden">
                     <div className="p-6 flex items-start justify-between gap-4">
                       <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
                       <DurationBadge>{cs.durationBadge}</DurationBadge>
@@ -74,11 +74,11 @@ export default function WorkIndex() {
                         label={cs.client}
                       />
                     </div>
-                    <div className="p-6">
+                    <div className="p-6 flex-1 flex flex-col">
                       <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
                         {cs.client}
                       </h3>
-                      <p className="mt-3 text-body text-text-secondary">{cs.tagline}</p>
+                      <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
                       <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
                         View Case Study
                         <span

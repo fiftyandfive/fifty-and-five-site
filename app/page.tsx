@@ -117,10 +117,10 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <SimpleReveal delay={0.0}>
-            <TiltCard tiltStrength={5}>
-              <GlassCard>
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+          <SimpleReveal delay={0.0} className="h-full">
+            <TiltCard tiltStrength={5} className="h-full">
+              <GlassCard className="h-full flex flex-col">
                 <IconSingle />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
                   Principal on every account.
@@ -135,9 +135,9 @@ export default function HomePage() {
             </TiltCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.12}>
-            <TiltCard tiltStrength={5}>
-              <GlassCard>
+          <SimpleReveal delay={0.12} className="h-full">
+            <TiltCard tiltStrength={5} className="h-full">
+              <GlassCard className="h-full flex flex-col">
                 <IconGrid />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
                   215 brands of pattern recognition.
@@ -152,9 +152,9 @@ export default function HomePage() {
             </TiltCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.24}>
-            <TiltCard tiltStrength={5}>
-              <GlassCard>
+          <SimpleReveal delay={0.24} className="h-full">
+            <TiltCard tiltStrength={5} className="h-full">
+              <GlassCard className="h-full flex flex-col">
                 <IconSparkle />
                 <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
                   AI-augmented, not AI-dependent.
@@ -256,9 +256,9 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 auto-rows-fr">
           {VERTICALS.map((v, i) => (
-            <SimpleReveal key={v.slug} delay={i * 0.06}>
+            <SimpleReveal key={v.slug} delay={i * 0.06} className="h-full">
               <Link
                 href={`/verticals/${v.slug}`}
                 className="group block h-full glass rounded-glass p-6 border-l-2 transition-all hover:bg-white/[0.05]"
