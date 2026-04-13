@@ -14,7 +14,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2008', text: 'Started managing social media for brands — pre-Instagram, pre-"social media manager" as a job title.' },
   { year: '2009', text: 'Fifty & Five LLC formed.' },
   { year: '2010', text: 'Axe / Unilever product launch — Twitter takeover + experiential activations.' },
-  { year: '2011', text: 'Mezzacorona retainer begins (still active in 2026 — 15 years and counting).' },
+  { year: '2012', text: 'Mezzacorona retainer begins — a decade-long run as the brand\u2019s social lead.' },
   { year: '2014', text: 'Blaze Pizza national social program launches.' },
   { year: '2014', text: 'El Camino College engagement begins — longest continuous relationship.' },
   { year: '2016', text: 'Enterprise Holdings — 6 brands, 2 markets, simultaneously.' },
@@ -73,8 +73,9 @@ export default function AboutPage() {
               At peak, Fifty &amp; Five had 5 offices and 22 employees. I&rsquo;ve run the full
               agency playbook — the hires, the overhead, the layers of account management between
               the strategist and the client. And I made a deliberate choice to go back to what
-              actually works: one senior person, working directly with the brand, augmented by AI
-              and automation instead of junior staff.
+              actually works: one senior principal leading every engagement, backed by a small
+              network of trusted specialist partners when the work calls for their depth, and
+              augmented by AI and automation instead of junior staff.
             </p>
             <p>
               The result is something most agencies can&rsquo;t offer: direct access to the person
@@ -90,6 +91,97 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section className="container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            The Network
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="Senior-led. Specialist-backed."
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.6] max-w-2xl">
+            Lucas leads every engagement. When the work calls for depth outside social strategy,
+            Fifty &amp; Five brings in a short list of vetted specialists — each a principal in
+            their own right, each running their own practice. You get the right senior for the
+            work, sourced per engagement. No bench. No markup.
+          </p>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <SimpleReveal delay={0.0}>
+            <GlassCard>
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                Web &amp; AI infrastructure
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
+                The technical partner when the stack is the bottleneck.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                MIT-educated engineer-founder running a boutique digital-transformation studio —
+                custom web builds, headless stacks, and AI-assisted automation. Brought in when
+                the site, the CMS, or the data plumbing needs senior hands.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.08}>
+            <GlassCard>
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                Performance marketing
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
+                The call when every conversion matters.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                A performance marketing principal with deep experience across paid search, technical
+                SEO, CRO, and customer acquisition for Fortune 500 and emerging DTC brands. Brought
+                in when the goal is measurable revenue, not reach.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.16}>
+            <GlassCard>
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                Connected TV &amp; programmatic
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
+                The call when social alone won&rsquo;t move the number.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                Veteran ad-tech operators running a connected-TV advertising platform with
+                distribution across major smart-TV, SSP, and DSP partners. Brought in when the
+                brief calls for upper-funnel reach and measurable CTV pickup.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.24}>
+            <GlassCard>
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                Creative &amp; video
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
+                Premium production, senior accountability.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                A long-standing creative partner for branding and media buying, paired with a
+                video studio for event, short-form, and social-native content. Brought in when the
+                work needs craft — not just more assets in the queue.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+        </div>
+
+        <p className="mt-10 max-w-3xl text-body text-text-tertiary leading-[1.7]">
+          These aren&rsquo;t employees. They aren&rsquo;t subcontractors billing hourly through
+          Fifty &amp; Five. They are working principals we trust with our own client
+          relationships, brought in only when the work genuinely calls for their depth.
+        </p>
       </section>
 
       <section className="container-edge py-24 md:py-32">

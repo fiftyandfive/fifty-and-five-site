@@ -47,17 +47,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     verticalLabel: 'Wine & Spirits',
     verticalColor: 'wine',
     services: ['Social media management', 'Content creation', 'Community growth'],
-    duration: '9+ year retainer (longest active client)',
-    durationBadge: '9-Year Partnership',
+    duration: 'Decade-long retainer',
+    durationBadge: 'Decade-Long Partnership',
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      '9+ years of consistent brand storytelling for an Italian wine portfolio in the U.S. market. The longest-running client relationship in the agency\u2019s history.',
+      'A decade of consistent brand storytelling for an Italian wine portfolio in the U.S. market \u2014 one of the longest continuous engagements in the agency\u2019s history.',
     challenge:
       'Build a meaningful English-language social presence for an Italian wine portfolio in a U.S. market already crowded with domestic and imported competition. Cultivate a community that understood the Trentino-Alto Adige story without turning every post into a wine-school lecture.',
     approach:
-      'Nine years of consistent brand storytelling, community cultivation, and platform evolution. Built the brand\u2019s entire English-language social presence from the ground up. Adapted strategy through every major social media shift from 2014 to present \u2014 the switch from organic reach to paid, the rise of video, the Reels era, shoppable content, and the fragmentation across platforms.',
+      'A decade of consistent brand storytelling, community cultivation, and platform evolution. Built the brand\u2019s entire English-language social presence from the ground up. Adapted strategy through every major social media shift across the engagement \u2014 the switch from organic reach to paid, the rise of video, the Reels era, shoppable content, and the fragmentation across platforms.',
     outcome:
-      'A 9+ year retainer speaks for itself. You don\u2019t keep a wine brand as a client for nearly a decade unless the social presence is doing real commercial work. The longest-running client relationship in the agency\u2019s history \u2014 and a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
+      'A decade-long retainer speaks for itself. You don\u2019t keep a wine brand as a client for nearly ten years unless the social presence is doing real commercial work \u2014 a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
     featured: true,
     size: 'standard',
   },
