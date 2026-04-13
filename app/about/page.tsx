@@ -20,7 +20,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2016', text: 'Enterprise Holdings — 6 brands, 2 markets, simultaneously.' },
   { year: '2018', text: 'Peak agency: 5 offices, 22 employees.' },
   { year: '2020', text: 'Kendall-Jackson partnership begins.' },
-  { year: '2022', text: 'Strategic shift: senior-led, AI-augmented model.' },
+  { year: '2023', text: 'Strategic shift: senior-led, AI-augmented model.' },
   { year: '2026', text: '215+ brands. 18 years. Still going.' },
 ];
 
