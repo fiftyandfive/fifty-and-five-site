@@ -16,7 +16,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2010', text: 'Axe / Unilever product launch — Twitter takeover + experiential activations.' },
   { year: '2011', text: 'Mezzacorona retainer begins — a decade-long run as the brand\u2019s social lead.' },
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
-  { year: '2014', text: 'Hong Kong Tourism Board — first travel-vertical engagement, opens the category.' },
+  { year: '2013', text: 'Hong Kong Tourism Board — first travel-vertical engagement, opens the category.' },
   { year: '2016', text: 'Enterprise Holdings — 6 brands, 2 markets, simultaneously.' },
   { year: '2018', text: 'Peak agency: 5 offices, 22 employees.' },
   { year: '2020', text: 'Kendall-Jackson partnership begins.' },
