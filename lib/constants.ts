@@ -20,13 +20,8 @@ export const NAV_LINKS = [
 
 export const FOOTER_VERTICALS = [
   { href: '/verticals/wine-spirits', label: 'Wine & Spirits' },
-  { href: '/verticals/hospitality', label: 'Hospitality & Tourism' },
-  { href: '/verticals/restaurant', label: 'Restaurant & Food' },
-  { href: '/verticals/fitness', label: 'Fitness & Wellness' },
+  { href: '/verticals/hospitality', label: 'Hospitality' },
   { href: '/verticals/tech', label: 'Tech & SaaS' },
   { href: '/verticals/retail-cpg', label: 'Retail & CPG' },
   { href: '/verticals/healthcare', label: 'Healthcare' },
-  { href: '/verticals/real-estate', label: 'Real Estate' },
-  { href: '/verticals/automotive', label: 'Automotive' },
-  { href: '/verticals/entertainment', label: 'Entertainment & Media' },
 ];
