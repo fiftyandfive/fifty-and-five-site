@@ -49,11 +49,13 @@ export default function AboutPage() {
           <div className="md:col-span-5">
             <SimpleReveal>
               <div className="glass rounded-glass p-3">
+                {/* Drop a headshot at /public/images/people/lucas.jpg, then pass src="/images/people/lucas.jpg" below */}
                 <PlaceholderImage
                   aspect="1/1"
                   colorKey="tech"
                   label="Portrait — Lucas Vandenberg"
                   className="rounded-[12px]"
+                  alt="Lucas Vandenberg, Founder of Fifty & Five"
                 />
               </div>
             </SimpleReveal>

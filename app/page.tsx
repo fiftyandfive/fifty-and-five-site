@@ -40,7 +40,7 @@ export default function HomePage() {
 
           <AnimatedHeadline
             as="h1"
-            text="215 brands. 18 years. Zero handoffs."
+            text={'215 brands.\n18 years.\nZero handoffs.'}
             className="mt-8 font-serif text-display text-text-primary max-w-5xl"
             stagger={0.06}
           />
@@ -53,10 +53,10 @@ export default function HomePage() {
 
           <SimpleReveal delay={0.7}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Strategy and day-to-day from the senior who sold you the engagement — backed by a
-              vetted network of specialists (paid CTV, technical SEO, web) when the work calls
-              for it. The person who built campaigns for Microsoft, Kendall-Jackson, and Blaze
-              Pizza, working directly with you.
+              Strategy and day-to-day from the same person who pitched you the work — backed by a
+              vetted network of specialists (paid CTV, technical SEO, web) when the brief calls
+              for it. The strategist who built campaigns for Microsoft, Kendall-Jackson, and
+              Blaze Pizza, working directly with you.
             </p>
           </SimpleReveal>
 
@@ -216,6 +216,8 @@ export default function HomePage() {
                           colorKey={cs.verticalColor}
                           aspect={i === 0 ? '4/3' : '16/9'}
                           label={cs.client}
+                          src={cs.heroImage}
+                          alt={`${cs.client} — ${cs.verticalLabel} case study`}
                         />
                       </div>
                       <div className="p-6 pt-6 flex-1 flex flex-col">
@@ -303,7 +305,7 @@ export default function HomePage() {
                       </span>
                     </div>
                     <div>
-                      <h3 className="font-serif text-[26px] md:text-[28px] leading-[1.05] tracking-[-0.02em] text-white">
+                      <h3 className="font-serif text-[24px] md:text-[26px] lg:text-[22px] xl:text-[24px] leading-[1.05] tracking-[-0.025em] text-white break-words hyphens-auto">
                         {v.name}
                       </h3>
                     </div>

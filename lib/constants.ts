@@ -6,7 +6,7 @@ export const SITE = {
   location: 'Orlando, FL',
   url: 'https://fiftyandfive.com',
   social: {
-    linkedin: 'https://www.linkedin.com/in/lucasvandenberg/',
+    linkedin: 'https://www.linkedin.com/in/LucasV/',
     instagram: 'https://www.instagram.com/fiftyandfive/',
   },
   calendly: 'https://calendly.com/lucasv/30-minute-intro-call',
@@ -20,8 +20,13 @@ export const NAV_LINKS = [
 
 export const FOOTER_VERTICALS = [
   { href: '/verticals/wine-spirits', label: 'Wine & Spirits' },
-  { href: '/verticals/hospitality', label: 'Hospitality' },
+  { href: '/verticals/hospitality', label: 'Hospitality & Tourism' },
+  { href: '/verticals/restaurant', label: 'Restaurant & Food' },
+  { href: '/verticals/fitness', label: 'Fitness & Wellness' },
   { href: '/verticals/tech', label: 'Tech & SaaS' },
   { href: '/verticals/retail-cpg', label: 'Retail & CPG' },
   { href: '/verticals/healthcare', label: 'Healthcare' },
+  { href: '/verticals/real-estate', label: 'Real Estate' },
+  { href: '/verticals/automotive', label: 'Automotive' },
+  { href: '/verticals/entertainment', label: 'Entertainment & Media' },
 ];

@@ -32,6 +32,11 @@ export type Vertical = {
   expertise: string[];
   featuredCaseStudies: string[];
   shortLabel: string;
+  /**
+   * Optional hero image path relative to /public (e.g. '/images/verticals/wine-spirits.jpg').
+   * When unset, the vertical page uses the gradient-only hero.
+   */
+  heroImage?: string;
 };
 
 export const VERTICALS: Vertical[] = [

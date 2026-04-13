@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="relative bg-bg-secondary border-t border-glass-border mt-32">
       <div className="container-edge py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8">
           <div className="md:col-span-1">
             <Link
               href="/"
@@ -34,11 +34,11 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="md:col-span-2">
             <h4 className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em] mb-4">
               Verticals
             </h4>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
               {FOOTER_VERTICALS.map((l) => (
                 <li key={l.href}>
                   <Link
