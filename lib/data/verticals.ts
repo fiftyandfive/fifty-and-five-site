@@ -267,7 +267,7 @@ export const VERTICALS: Vertical[] = [
   },
   {
     slug: 'entertainment',
-    name: 'Entertainment & Media',
+    name: 'Entertainment',
     shortLabel: 'Entertainment',
     colorKey: 'entertainment',
     headline: 'Social Media for Entertainment & Media Brands',
