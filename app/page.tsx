@@ -112,7 +112,7 @@ export default function HomePage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text={'You know what\u2019s broken about how\nagencies work. We built around it.'}
+            text={'Agencies break the same three ways.\nOurs doesn\u2019t.'}
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
         </div>
