@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   title: 'Contact — Let\u2019s Talk',
   description:
     'No pitch decks. No proposals until we know it\u2019s a fit. Start a conversation with Fifty & Five.',
+  alternates: {
+    canonical: 'https://fiftyandfive.com/contact',
+  },
+  openGraph: {
+    title: 'Contact | Let\u2019s Talk Social Media Strategy | Fifty & Five',
+    description: 'Start a conversation about your social media strategy. Orlando-based, nationally serving 215+ brands. Typical response time: same day.',
+    url: 'https://fiftyandfive.com/contact',
+  },
 };
 
 export default function ContactPage() {

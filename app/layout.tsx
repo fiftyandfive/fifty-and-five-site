@@ -12,11 +12,13 @@ import { Analytics } from '@/components/layout/Analytics';
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
   title: {
-    default: 'Fifty & Five | Senior-Led Social Media Agency | 215+ Brands Since 2008',
+    default: 'Fifty & Five | Senior-Led Social Media Agency | Orlando, FL | 215+ Brands Since 2008',
     template: '%s | Fifty & Five',
   },
-  description:
-    'Senior-led social and content strategy for 215+ brands since 2008 — Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza. Principal-led, specialist-backed, zero junior handoffs.',
+  alternates: {
+    canonical: 'https://fiftyandfive.com',
+  },
+  description: 'Senior-led social and content strategy for 215+ brands since 2008 — Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza. Principal-led, specialist-backed, zero junior handoffs.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior-Led Social Media Agency',
@@ -47,6 +49,78 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`dark ${GeistMono.variable}`}
     >
       <head>
+        
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+                  '@id': 'https://fiftyandfive.com/#organization',
+                  name: 'Fifty & Five',
+                  alternateName: 'Fifty and Five',
+                  url: 'https://fiftyandfive.com',
+                  logo: 'https://fiftyandfive.com/logo.svg',
+                  description: 'Senior-led social media management and content strategy agency. 215+ brands since 2008.',
+                  foundingDate: '2009',
+                  founder: {
+                    '@type': 'Person',
+                    '@id': 'https://fiftyandfive.com/#founder',
+                    name: 'Lucas Vandenberg',
+                    jobTitle: 'Founder & Principal',
+                    url: 'https://fiftyandfive.com/about',
+                  },
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Orlando',
+                    addressRegion: 'FL',
+                    addressCountry: 'US',
+                  },
+                  areaServed: {
+                    '@type': 'Country',
+                    name: 'United States',
+                  },
+                  serviceType: [
+                    'Social Media Management',
+                    'Content Strategy',
+                    'Community Management',
+                    'Paid Social Advertising',
+                  ],
+                  priceRange: '$3,000 - $7,500/mo',
+                  aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '5.0',
+                    reviewCount: '12',
+                    bestRating: '5',
+                  },
+                  sameAs: [
+                    'https://www.linkedin.com/company/fiftyandfive',
+                    'https://clutch.co/profile/fifty-five',
+                  ],
+                  knowsAbout: [
+                    'Social Media Marketing',
+                    'Content Strategy',
+                    'Brand Management',
+                    'Community Management',
+                    'Restaurant Marketing',
+                    'Wine Marketing',
+                    'Hospitality Marketing',
+                  ],
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://fiftyandfive.com/#website',
+                  url: 'https://fiftyandfive.com',
+                  name: 'Fifty & Five',
+                  publisher: { '@id': 'https://fiftyandfive.com/#organization' },
+                },
+              ],
+            }),
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

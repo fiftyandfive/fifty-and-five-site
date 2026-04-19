@@ -44,6 +44,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'A sustained multi-year retainer \u2014 the kind of partnership that only happens when results consistently exceed expectations. One of the longest-running social relationships in the wine industry at the boutique agency level. The brand\u2019s social presence now reads as the baseline against which competitor wine brands benchmark.',
     featured: true,
     size: 'wide',
+    heroImage: '/images/case-studies/kendall-jackson.jpg',
   },
   {
     slug: 'mezzacorona',

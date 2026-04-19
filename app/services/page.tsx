@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: 'Services | Social Media, Content Strategy, Paid Media',
   description:
     'Full-service social media management, content strategy, and paid media for brands that want senior-level execution without the agency markup. Retainers from $3,000/mo.',
+  alternates: {
+    canonical: 'https://fiftyandfive.com/services',
+  },
+  openGraph: {
+    title: 'Services | Social Media Management & Content Strategy | Fifty & Five',
+    description: 'Social media management, content strategy, community management, and paid social advertising. Retainers from $3,000 to $7,500/mo. Principal-led, zero junior handoffs.',
+    url: 'https://fiftyandfive.com/services',
+  },
 };
 
 const CORE_SERVICES = [

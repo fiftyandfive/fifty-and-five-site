@@ -1,6 +1,37 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+    images: {
+      formats: ['image/avif', 'image/webp'],
+      remotePatterns: [
+        { protocol: 'https', hostname: 'cdn.marblism.com' },
+        { protocol: 'https', hostname: 'static.wixstatic.com' },
+        { protocol: 'https', hostname: 'marblism-ai-agents-public.s3.us-west-2.amazonaws.com' },
+      ],
+    },
+    async redirects() {
+      return [
+      { source: '/post/beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention-in-2026', destination: '/blog/beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention', permanent: true },
+      { source: '/post/are-static-hotel-photos-dead-why-dynamic-video-content-is-your-new-booking-driver', destination: '/blog/static-hotel-photos-dead-dynamic-video-content-booking-driver', permanent: true },
+      { source: '/post/lights-camera-local-flavor-boosting-hotel-storytelling-with-video-amp-drones', destination: '/blog/hotel-storytelling-video-drones-local-flavor', permanent: true },
+      { source: '/post/why-everyone-is-talking-about-episodic-brand-storytelling-and-how-it-39-s-replacing-one-off-posts', destination: '/blog/episodic-brand-storytelling-replacing-one-off-posts', permanent: true },
+      { source: '/post/ai-content-fatigue-5-signs-your-social-media-feels-too-robotic-plus-the-human-touch-framework-that', destination: '/blog/ai-content-fatigue-social-media-too-robotic', permanent: true },
+      { source: '/post/from-boutique-charm-to-massive-resorts-our-resorts-world-success-stories', destination: '/blog/boutique-charm-massive-resorts-success-stories', permanent: true },
+      { source: '/post/ai-automation-amp-outreach-in-2026-how-tools-like-marblism-and-salesrobot-are-changing-the-game', destination: '/blog/ai-automation-outreach-2026-marblism-salesrobot', permanent: true },
+      { source: '/post/why-orlando-hospitality-brands-choose-fifty-amp-five-as-their-marketing-agency', destination: '/blog/why-orlando-hospitality-brands-choose-fifty-and-five', permanent: true },
+      { source: '/post/7-mistakes-you-39-re-making-with-ai-social-content-and-how-to-fix-them-without-losing-authenticity', destination: '/blog/7-mistakes-ai-social-content-how-to-fix', permanent: true },
+      { source: '/post/why-beverage-brands-choose-fifty-amp-five-lucas-vandenberg-s-story', destination: '/blog/why-beverage-brands-choose-fifty-and-five', permanent: true },
+      { source: '/post/testing-marblism-39-s-promise-of-complete-business-automation-a-positive-review-with-my-favorite-a', destination: '/blog/marblism-business-automation-review', permanent: true },
+      { source: '/post/short-form-video-the-not-so-secret-sauce-for-social-media-success-in-2025', destination: '/blog/short-form-video-secret-sauce-social-media-2025', permanent: true },
+      { source: '/post/short-form-long-impact-why-reels-shorts-and-tiktoks-are-changing-the-game-for-brands', destination: '/blog/reels-shorts-tiktoks-changing-the-game-for-brands', permanent: true },
+      { source: '/post/authenticity-over-perfection-why-unfiltered-content-is-your-best-marketing-move-this-year', destination: '/blog/authenticity-over-perfection-unfiltered-content-wins', permanent: true },
+      { source: '/post/how-to-choose-the-right-social-media-marketing-agency-a-checklist-for-brands', destination: '/blog/choose-right-social-media-marketing-agency-checklist', permanent: true },
+      { source: '/post/short-form-big-impact-why-bite-sized-video-still-rules-social-media-this-year', destination: '/blog/bite-sized-video-rules-social-media', permanent: true },
+      { source: '/post/how-boutique-wine-brands-can-level-the-social-media-playing-field-and-stand-out-against-the-big-guy', destination: '/blog/boutique-wine-brands-social-media-playing-field', permanent: true },
+      { source: '/post/how-ai-is-powering-the-next-wave-of-social-media-magic-and-what-it-means-for-brands-in-2025', destination: '/blog/ai-powering-next-wave-social-media-brands-2025', permanent: true },
+      { source: '/post/building-brand-loyalty-in-2025-community-led-marketing-strategies-that-work', destination: '/blog/brand-loyalty-2025-community-led-marketing-strategies', permanent: true },
+      ];
+    },
   images: {
     formats: ['image/avif', 'image/webp'],
   },

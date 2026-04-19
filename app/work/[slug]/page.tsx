@@ -23,6 +23,20 @@ export async function generateMetadata({
   return {
     title: `${cs.client} | Case Study`,
     description: cs.tagline,
+    alternates: {
+      canonical: `https://fiftyandfive.com/work/${cs.slug}`,
+    },
+    openGraph: {
+      title: `${cs.client} — Social Media Case Study | Fifty & Five`,
+      description: cs.tagline,
+      url: `https://fiftyandfive.com/work/${cs.slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${cs.client} — Case Study | Fifty & Five`,
+      description: cs.tagline,
+    },
   };
 }
 

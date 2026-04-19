@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: 'About Lucas Vandenberg — 18 Years, 215+ Brands',
   description:
     'Founded in 2008. 215+ brands managed. 18 years of social media expertise. Meet the strategist behind Fifty & Five.',
+  alternates: {
+    canonical: 'https://fiftyandfive.com/about',
+  },
+  openGraph: {
+    title: 'About Lucas Vandenberg | 18 Years, 215+ Brands | Fifty & Five',
+    description: 'Founded by Lucas Vandenberg in 2009. 18 years of social media work, 215+ brands, Orlando FL. From Microsoft to local restaurants — senior-led strategy, no handoffs.',
+    url: 'https://fiftyandfive.com/about',
+  },
 };
 
 const TIMELINE: { year: string; text: string }[] = [
