@@ -30,6 +30,16 @@ const nextConfig = {
       { source: '/post/how-boutique-wine-brands-can-level-the-social-media-playing-field-and-stand-out-against-the-big-guy', destination: '/blog/boutique-wine-brands-social-media-playing-field', permanent: true },
       { source: '/post/how-ai-is-powering-the-next-wave-of-social-media-magic-and-what-it-means-for-brands-in-2025', destination: '/blog/ai-powering-next-wave-social-media-brands-2025', permanent: true },
       { source: '/post/building-brand-loyalty-in-2025-community-led-marketing-strategies-that-work', destination: '/blog/brand-loyalty-2025-community-led-marketing-strategies', permanent: true },
+      { source: '/post/how-to-choose-a-social-media-agency-for-your-restaurant-group', destination: '/blog/choose-social-media-agency-restaurant-group', permanent: true },
+      { source: '/post/wine-brand-social-media-why-most-wineries-sound-the-same-online-and-how-to-fix-it', destination: '/blog/wine-brand-social-media-wineries-sound-same-fix', permanent: true },
+      { source: '/post/social-media-for-boutique-fitness-studios-a-paid-organic-playbook', destination: '/blog/social-media-boutique-fitness-studios-paid-organic-playbook', permanent: true },
+      { source: '/post/what-215-brands-taught-us-about-social-media-strategy-that-actually-works', destination: '/blog/215-brands-social-media-strategy-that-works', permanent: true },
+      { source: '/post/why-hotels-need-social-media-that-sells-rooms-not-just-gets-likes', destination: '/blog/hotel-social-media-sells-rooms-not-likes', permanent: true },
+      { source: '/post/the-multi-location-social-media-playbook-how-to-scale-without-losing-local', destination: '/blog/multi-location-social-media-playbook-scale-local', permanent: true },
+      { source: '/post/orlando-social-media-agency-why-local-expertise-matters-for-hospitality-brands', destination: '/blog/orlando-social-media-agency-hospitality-brands', permanent: true },
+      { source: '/post/how-ai-is-changing-social-media-management-without-replacing-the-strategist', destination: '/blog/ai-changing-social-media-management-not-replacing-strategist', permanent: true },
+      { source: '/post/social-media-for-consumer-tech-product-launches-from-sub-brand-to-standalone', destination: '/blog/consumer-tech-product-launch-social-media', permanent: true },
+      { source: '/post/legacy-brands-on-social-media-how-to-modernize-without-losing-your-community', destination: '/blog/legacy-brand-social-media-modernize-without-losing-community', permanent: true },
       ];
     },
   images: {
