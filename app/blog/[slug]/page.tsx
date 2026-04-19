@@ -130,66 +130,70 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <BreadcrumbJsonLd post={post} />
 
       <main className="min-h-screen bg-black text-white">
-        {/* Hero */}
-        <section className="relative">
-          <div className="aspect-[21/9] max-h-[480px] w-full overflow-hidden">
+        {/* Hero Image — full width, no text overlay */}
+        <section className="w-full">
+          <div className="w-full max-h-[560px] overflow-hidden bg-neutral-900">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.heroImage}
               alt={post.title}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain max-h-[560px]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-          </div>
-
-          <div className="absolute bottom-0 left-0 right-0 px-6 pb-12">
-            <div className="mx-auto max-w-3xl">
-              {/* Breadcrumbs */}
-              <nav className="flex items-center gap-2 text-sm text-white/40 mb-4">
-                <Link href="/" className="hover:text-white/60">Home</Link>
-                <span>/</span>
-                <Link href="/blog" className="hover:text-white/60">Blog</Link>
-                <span>/</span>
-                <span className="text-white/60">{post.category}</span>
-              </nav>
-
-              <h1 className="text-4xl font-bold tracking-tight md:text-5xl leading-tight">
-                {post.title}
-              </h1>
-
-              <div className="mt-4 flex items-center gap-4 text-sm text-white/50">
-                <span>By Lucas Vandenberg</span>
-                <span>•</span>
-                <time dateTime={post.date}>{formatDate(post.date)}</time>
-                <span>•</span>
-                <span>{post.minutesToRead} min read</span>
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* Article Body — placeholder that links to full Wix post */}
-        <article className="px-6 py-16">
+        {/* Title + Meta — clean dark background, always readable */}
+        <section className="px-6 pt-10 pb-8">
+          <div className="mx-auto max-w-3xl">
+            {/* Breadcrumbs */}
+            <nav className="flex items-center gap-2 text-sm text-white/40 mb-6">
+              <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
+              <span>/</span>
+              <Link href="/blog" className="hover:text-white/60 transition-colors">Blog</Link>
+              <span>/</span>
+              <span className="text-white/60">{post.category}</span>
+            </nav>
+
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl leading-tight">
+              {post.title}
+            </h1>
+
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-white/50">
+              <span>By Lucas Vandenberg</span>
+              <span className="hidden sm:inline">•</span>
+              <time dateTime={post.date}>{formatDate(post.date)}</time>
+              <span className="hidden sm:inline">•</span>
+              <span>{post.minutesToRead} min read</span>
+            </div>
+
+            <div className="mt-6 h-px bg-white/10" />
+          </div>
+        </section>
+
+        {/* Article Body */}
+        <article className="px-6 pb-16">
           <div className="mx-auto max-w-3xl prose prose-invert prose-lg">
             <p className="text-xl text-white/70 leading-relaxed">
               {post.excerpt}
             </p>
-
-            <div className="mt-12 p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
-              <p className="text-white/60 mb-4">
-                Read the full article on our blog
-              </p>
-              <a
-                href={`https://www.fiftyandfive.com/post/${post.wixSlug}`}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-colors"
-                target="_blank"
-                rel="noopener"
-              >
-                Read Full Post →
-              </a>
-            </div>
           </div>
         </article>
+
+        {/* CTA */}
+        <section className="px-6 pb-16">
+          <div className="mx-auto max-w-3xl p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
+            <h2 className="text-xl font-semibold mb-2">Need help with your social strategy?</h2>
+            <p className="text-white/50 mb-6 max-w-lg mx-auto">
+              Fifty &amp; Five has managed social for 130+ brands since 2008. Let&apos;s talk about what&apos;s next for yours.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-colors"
+            >
+              Let&apos;s Talk
+            </Link>
+          </div>
+        </section>
 
         {/* Related Posts */}
         {related.length > 0 && (
@@ -203,12 +207,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     href={`/blog/${r.slug}`}
                     className="group block rounded-xl bg-white/5 border border-white/10 overflow-hidden hover:border-white/30 transition-all"
                   >
-                    <div className="aspect-video overflow-hidden">
+                    <div className="overflow-hidden bg-black/40">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={r.heroImage}
                         alt={r.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
                     </div>

@@ -73,12 +73,12 @@ export default function BlogPage() {
               className="group block rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-white/30 transition-all"
             >
               {/* Hero Image */}
-              <div className="aspect-video relative overflow-hidden bg-white/5">
+              <div className="relative overflow-hidden bg-black/40">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={post.heroImage}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
               </div>
