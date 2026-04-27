@@ -55,9 +55,9 @@ export default function HomePage() {
 
           <SimpleReveal delay={0.7}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Strategy and day-to-day from the same person who pitched you the work — backed by a
-              vetted network of specialists (paid CTV, technical SEO, web) when the brief calls
-              for it. The strategist who built campaigns for Microsoft, Kendall-Jackson, and
+              Strategy and day-to-day from the same senior team who pitched you the work — backed by a
+              deep benches in paid CTV, technical SEO, content production, and web when the brief calls
+              for it. The team behind campaigns for Microsoft, Kendall-Jackson, and
               Blaze Pizza, working directly with you.
             </p>
           </SimpleReveal>
@@ -169,7 +169,7 @@ export default function HomePage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text="One senior. One strategy. One name on the door."
+            text="One senior team. One strategy. Zero account-manager telephone."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
         </div>
@@ -215,8 +215,8 @@ export default function HomePage() {
                   One name to hold accountable.
                 </h3>
                 <p className="mt-4 text-body text-text-secondary">
-                  One senior. One email. One person whose reputation rides on the outcome — backed
-                  by a vetted network of specialists when the work calls for depth outside social.
+                  One senior team. One direct line. The agency's reputation on every outcome — backed
+                  with an in-house bench of specialists when the work calls for depth outside social.
                 </p>
               </GlassCard>
             </TiltCard>
@@ -244,7 +244,7 @@ export default function HomePage() {
               Selected Work
             </div>
             <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em] max-w-3xl">
-              Campaigns for brands you know — by the person who actually ran them.
+              Campaigns for brands you know — built by the senior team that actually ran them.
             </h2>
           </div>
           <Link
