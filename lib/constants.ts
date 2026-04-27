@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Fifty & Five',
   wordmark: 'fifty & five',
-  tagline: 'Senior-led social media agency. 215+ brands since 2008.',
+  tagline: 'Boutique senior-led social media agency. 215+ brands since 2008.',
   email: 'lucas@fiftyandfive.com',
   location: 'Orlando, FL',
   url: 'https://fiftyandfive.com',

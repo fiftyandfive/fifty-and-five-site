@@ -7,13 +7,13 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: 'About Lucas Vandenberg — 18 Years, 215+ Brands',
   description:
-    'Founded in 2008. 215+ brands managed. 18 years of social media expertise. Meet the strategist behind Fifty & Five.',
+    'Founded in 2008. 215+ brands managed. 18 years of social media expertise. Meet the team behind Fifty & Five.',
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
     title: 'About Lucas Vandenberg | 18 Years, 215+ Brands | Fifty & Five',
-    description: 'Founded by Lucas Vandenberg in 2009. 18 years of social media work, 215+ brands, Orlando FL. From Microsoft to local restaurants — senior-led strategy, no handoffs.',
+    description: 'Founded by Lucas Vandenberg in 2009. 18 years building Fifty & Five into a boutique senior-led agency. 215+ brands, Orlando FL. From Microsoft to local restaurants.',
     url: 'https://fiftyandfive.com/about',
   },
 };
@@ -41,13 +41,13 @@ export default function AboutPage() {
         </div>
         <AnimatedHeadline
           as="h1"
-          text="The person behind 215 brands."
+          text="The team behind 215 brands."
           className="mt-4 font-serif text-display tracking-[-0.03em] max-w-4xl"
           stagger={0.05}
         />
         <SimpleReveal delay={0.4}>
           <p className="mt-5 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-            Lucas Vandenberg — Founder &amp; Strategist
+            Lucas Vandenberg — Founder
           </p>
         </SimpleReveal>
       </section>
@@ -75,23 +75,23 @@ export default function AboutPage() {
               figured out that Facebook wasn&rsquo;t just a place for college kids.
             </p>
             <p>
-              Since then, I&rsquo;ve managed campaigns for 215+ brands across 15 verticals.
+              Since then, Fifty &amp; Five has run campaigns for 215+ brands across 15 verticals.
               Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Axe. Discovery Channel.
               Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
             </p>
             <p>
-              At peak, Fifty &amp; Five had 5 offices and 22 employees. I&rsquo;ve run the full
+              At peak, Fifty &amp; Five had 5 offices and 22 employees. We&rsquo;ve run the full
               agency playbook — the hires, the overhead, the layers of account management between
-              the strategist and the client. And I made a deliberate choice to go back to what
-              actually works: one senior principal leading every engagement, backed by a small
-              network of trusted specialist partners when the work calls for their depth, and
+              the strategist and the client. We made a deliberate choice to go back to what
+              actually works: senior principals leading every engagement, backed by an in-house
+              bench of senior specialists when the work calls for their depth, and
               augmented by AI and automation instead of junior staff.
             </p>
             <p>
               The result is something most agencies can&rsquo;t offer: direct access to the person
               who&rsquo;s actually done this 215 times before. No handoffs. No account managers
               translating your feedback. No &ldquo;let me check with the team.&rdquo; Just the
-              strategist who built the plan, executing the plan, and adjusting the plan in real
+              senior team that built the plan, executing the plan, and adjusting the plan in real
               time.
             </p>
             <p>
@@ -234,7 +234,7 @@ export default function AboutPage() {
 
       <CTASection
         headline="Work with the person who built it."
-        body="No account managers. No handoffs. Just the strategist."
+        body="No account managers. No handoffs. Just the senior team."
         ctaLabel="Work With Me →"
       />
     </>
