@@ -169,7 +169,7 @@ export default function HomePage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text="One senior team. One strategy. Zero account-manager telephone."
+            text="Stop paying for agency theater. Start paying for the work."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
         </div>
