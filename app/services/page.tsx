@@ -7,7 +7,7 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: 'Services | Social Media, Content Strategy, Paid Media',
   description:
-    'Full-service social media management, content strategy, and paid media for brands that want senior-level execution without the agency markup. Retainers from $3,000/mo.',
+    'Full-service social media management, content strategy, and paid media for brands that want senior-level execution without the holding-company markup. Retainers from $3,000/mo.',
   alternates: {
     canonical: 'https://fiftyandfive.com/services',
   },
@@ -23,7 +23,7 @@ const CORE_SERVICES = [
     title: 'Social Media Management',
     tag: 'Retainer',
     body:
-      'Full-service social media management across Instagram, Facebook, TikTok, LinkedIn, and X. Content strategy, creation, scheduling, community management, and monthly reporting. Everything your social presence needs, managed by the same senior strategist every month.',
+      'Full-service social media management across Instagram, Facebook, TikTok, LinkedIn, and X. Content strategy, creation, scheduling, community management, and monthly reporting. Everything your social presence needs, managed by the same senior team every month.',
     meta: 'Typical engagement: 8–20 posts/mo per platform, community management, monthly strategy + reporting.',
   },
   {
@@ -57,8 +57,8 @@ export default function ServicesPage() {
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-2xl">
-            Senior-level social media management, content strategy, and paid media — without the
-            agency markup.
+            Senior-led social media management, content strategy, and paid media — without the
+            holding-company markup.
           </p>
         </SimpleReveal>
       </section>
