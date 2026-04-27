@@ -55,7 +55,7 @@ export default function HomePage() {
 
           <SimpleReveal delay={0.7}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Strategy and day-to-day from the same senior team who pitched you the work — backed by a
+              Strategy and day-to-day from the same senior team who pitched you the work — with
               deep benches in paid CTV, technical SEO, content production, and web when the brief calls
               for it. The team behind campaigns for Microsoft, Kendall-Jackson, and
               Blaze Pizza, working directly with you.
