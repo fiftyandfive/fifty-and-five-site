@@ -90,6 +90,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'enterprise-holdings',
+    heroImage: '/images/case-studies/enterprise-holdings.jpg',
     client: 'Enterprise Holdings',
     industry: 'Auto / Transportation',
     verticalLabel: 'Automotive',
@@ -111,6 +112,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'centennial-real-estate',
+    heroImage: '/images/case-studies/centennial-real-estate.jpg',
     client: 'Centennial Real Estate',
     industry: 'Retail / Real Estate',
     verticalLabel: 'Real Estate',
@@ -130,6 +132,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'resorts-world',
+    heroImage: '/images/case-studies/resorts-world.jpg',
     client: 'Resorts World',
     industry: 'Hospitality',
     verticalLabel: 'Hospitality',
@@ -149,6 +152,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'netgear-arlo',
+    heroImage: '/images/case-studies/netgear-arlo.jpg',
     client: 'NETGEAR / Arlo Cameras',
     industry: 'Tech / Consumer Electronics',
     verticalLabel: 'Tech',
@@ -168,6 +172,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'tupperware',
+    heroImage: '/images/case-studies/tupperware.jpg',
     client: 'Tupperware Global',
     industry: 'Retail / Consumer Goods',
     verticalLabel: 'Retail',
@@ -187,6 +192,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'axe-unilever',
+    heroImage: '/images/case-studies/axe-unilever.jpg',
     client: 'Axe / Unilever',
     industry: 'CPG / Personal Care',
     verticalLabel: 'Retail & CPG',
@@ -206,6 +212,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'polynesian-cultural-center',
+    heroImage: '/images/case-studies/polynesian-cultural-center.jpg',
     client: 'Polynesian Cultural Center',
     industry: 'Hospitality / Tourism',
     verticalLabel: 'Hospitality',
@@ -225,6 +232,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'microsoft',
+    heroImage: '/images/case-studies/microsoft.jpg',
     client: 'Microsoft (Partners in Learning)',
     industry: 'Technology / Education',
     verticalLabel: 'Tech',
@@ -244,6 +252,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'selectquote-insurance',
+    heroImage: '/images/case-studies/selectquote-insurance.jpg',
     client: 'SelectQuote Insurance',
     industry: 'Financial Services / Insurance',
     verticalLabel: 'Finance',
