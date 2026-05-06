@@ -93,7 +93,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <article className="max-w-[680px] text-[18px] leading-[1.75] text-text-primary/90">
             <SimpleReveal>
               <PlaceholderImage
-                aspect="21/9"
+                aspect="16/9"
                 colorKey={cs.verticalColor}
                 label={`${cs.client} — hero`}
                 className="rounded-glass mb-16"
