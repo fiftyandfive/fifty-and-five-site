@@ -18,6 +18,34 @@ export const metadata: Metadata = {
   },
 };
 
+const PILLARS = [
+  {
+    title: 'Strategy-first engagement',
+    body:
+      'Month one is discovery and positioning before any execution starts. We learn your brand, your market, and your competitive set before we post a single thing.',
+  },
+  {
+    title: 'Transparent AI integration',
+    body:
+      'We use AI tools like Claude openly as a strategic layer — not hidden behind the curtain. You know exactly where the thinking is human and where it’s augmented.',
+  },
+  {
+    title: 'Multicultural market mapping',
+    body:
+      'Every strategy deck includes cultural positioning analysis, with specific attention to Hispanic market opportunity in your target cities. If your brand serves a multicultural audience, the strategy reflects it from day one.',
+  },
+  {
+    title: 'Founder-forward partnerships',
+    body:
+      'You work directly with Lucas and Sia — not handed off to junior account managers. The people who pitch the work are the people who do the work.',
+  },
+  {
+    title: 'Performance + authenticity',
+    body:
+      'We measure ROI without sacrificing real storytelling and brand building for short-term metrics. The numbers matter — and so does the work that makes the numbers last.',
+  },
+];
+
 const CORE_SERVICES = [
   {
     title: 'Social Media Management',
@@ -81,6 +109,37 @@ export default function ServicesPage() {
                   </p>
                 </GlassCard>
               </TiltCard>
+            </SimpleReveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            What we stand on
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="Five pillars. Non-negotiable."
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {PILLARS.map((p, i) => (
+            <SimpleReveal key={p.title} delay={i * 0.08} className="h-full">
+              <GlassCard className="h-full flex flex-col">
+                <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                  {p.title}
+                </h3>
+                <p className="mt-4 text-body text-text-secondary">
+                  {p.body}
+                </p>
+              </GlassCard>
             </SimpleReveal>
           ))}
         </div>
