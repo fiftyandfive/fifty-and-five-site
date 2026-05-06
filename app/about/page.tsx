@@ -26,7 +26,6 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
   { year: '2013', text: 'Hong Kong Tourism Board — first travel-vertical engagement, opens the category.' },
   { year: '2016', text: 'Enterprise Holdings — 6 brands, 2 markets, simultaneously.' },
-  { year: '2018', text: 'Peak agency: 5 offices, 22 employees.' },
   { year: '2020', text: 'Kendall-Jackson partnership begins.' },
   { year: '2023', text: 'Strategic shift: senior-led, AI-augmented model.' },
   { year: '2026', text: 'Leaner. Faster. Sharper than ever.' },
@@ -80,12 +79,12 @@ export default function AboutPage() {
               Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
             </p>
             <p>
-              At peak, Fifty &amp; Five had 5 offices and 22 employees. We&rsquo;ve run the full
-              agency playbook — the hires, the overhead, the layers of account management between
-              the strategist and the client. We made a deliberate choice to go back to what
-              actually works: senior principals leading every engagement, backed by an in-house
-              bench of senior specialists when the work calls for their depth, and
-              augmented by AI and automation instead of junior staff.
+              We&rsquo;ve run the full agency playbook — the hires, the overhead, the layers of
+              account management between the strategist and the client. We made a deliberate
+              choice to build for what comes next: senior principals leading every engagement,
+              backed by an in-house bench of senior specialists when the work calls for their
+              depth, and augmented by AI as a strategic layer — not a junior-staff replacement.
+              The model is built for the next decade, not the last one.
             </p>
             <p>
               The result is something most agencies can&rsquo;t offer: direct access to the person
