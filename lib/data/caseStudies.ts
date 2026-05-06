@@ -66,6 +66,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'A decade-long retainer speaks for itself. You don\u2019t keep a wine brand as a client for nearly ten years unless the social presence is doing real commercial work, a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
     featured: true,
     size: 'standard',
+    heroImage: '/images/case-studies/mezzacorona.jpg',
   },
   {
     slug: 'blaze-pizza',
@@ -87,6 +88,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Managed the social presence during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history. The playbook built here, scalable content systems for multi-location brands, now informs every QSR and franchise engagement we take on.',
     featured: true,
     size: 'standard',
+    heroImage: '/images/case-studies/blaze-pizza.jpg',
   },
   {
     slug: 'enterprise-holdings',
