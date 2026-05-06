@@ -20,29 +20,34 @@ export const metadata: Metadata = {
 
 const PILLARS = [
   {
-    title: 'Strategy-first engagement',
+    kicker: 'Strategy first',
+    head: 'Month one is discovery. No exceptions.',
     body:
-      'Month one is discovery and positioning before any execution starts. We learn your brand, your market, and your competitive set before we post a single thing.',
+      'Before a logo moves or a campaign launches, we map the category, audit the field, and write the strategic spine the next year hangs from. If month one doesn’t land, we don’t continue — and you keep the work.',
   },
   {
-    title: 'Transparent AI integration',
+    kicker: 'AI, in the open',
+    head: 'We use Claude. We tell you where.',
     body:
-      'We use AI tools like Claude openly as a strategic layer — not hidden behind the curtain. You know exactly where the thinking is human and where it’s augmented.',
+      'Frontier models sit on the table, not under it. We use them for synthesis, drafting, and stress-testing — and ship a “how this was made” appendix on every major deliverable.',
   },
   {
-    title: 'Multicultural market mapping',
+    kicker: 'Multicultural by default',
+    head: 'Hispanic market mapped on day one.',
     body:
-      'Every strategy deck includes cultural positioning analysis, with specific attention to Hispanic market opportunity in your target cities. If your brand serves a multicultural audience, the strategy reflects it from day one.',
+      'Every strategy deck includes cultural positioning analysis for U.S. growth markets — Miami, Houston, LA, Phoenix, San Antonio. Not a translation line item.',
   },
   {
-    title: 'Founder-forward partnerships',
+    kicker: 'Founder-forward',
+    head: 'You work directly with us. That’s the deal.',
     body:
-      'You work directly with Lucas and Sia — not handed off to junior account managers. The people who pitch the work are the people who do the work.',
+      'No layered account team translating your meeting notes two weeks later. The principals on the pitch are the principals on the Tuesday call in month seven.',
   },
   {
-    title: 'Performance + authenticity',
+    kicker: 'Performance + authenticity',
+    head: 'ROI without selling the story.',
     body:
-      'We measure ROI without sacrificing real storytelling and brand building for short-term metrics. The numbers matter — and so does the work that makes the numbers last.',
+      'We measure CAC, LTV, attribution, and the rest — and we refuse to gut the brand to chase a quarter. Both numbers matter. Both get reported.',
   },
 ];
 
@@ -128,13 +133,13 @@ export default function ServicesPage() {
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {PILLARS.map((p, i) => (
-            <SimpleReveal key={p.title} delay={i * 0.08} className="h-full">
+            <SimpleReveal key={p.kicker} delay={i * 0.08} className="h-full">
               <GlassCard className="h-full flex flex-col">
                 <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                  {String(i + 1).padStart(2, '0')}
+                  {String(i + 1).padStart(2, '0')} · {p.kicker}
                 </div>
-                <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                  {p.title}
+                <h3 className="mt-4 font-serif text-[26px] leading-[1.1] tracking-[-0.02em]">
+                  {p.head}
                 </h3>
                 <p className="mt-4 text-body text-text-secondary">
                   {p.body}
