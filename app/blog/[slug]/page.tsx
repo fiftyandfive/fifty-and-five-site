@@ -184,7 +184,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div className="mx-auto max-w-3xl p-8 rounded-2xl bg-white/5 border border-white/10 text-center">
             <h2 className="text-xl font-semibold mb-2">Need help with your social strategy?</h2>
             <p className="text-white/50 mb-6 max-w-lg mx-auto">
-              Fifty &amp; Five has managed social for 130+ brands since 2008. Let&apos;s talk about what&apos;s next for yours.
+              Fifty &amp; Five has managed social for 215+ brands since 2008. Let&apos;s talk about what&apos;s next for yours.
             </p>
             <Link
               href="/contact"

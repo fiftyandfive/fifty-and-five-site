@@ -29,7 +29,7 @@ export default function BlogPage() {
           </h1>
           <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto">
             Social media strategy, AI automation, video content, and brand
-            storytelling — from an agency that&apos;s managed 130+ brands since 2008.
+            storytelling — from an agency that&apos;s managed 215+ brands since 2008.
           </p>
         </div>
       </section>
