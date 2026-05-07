@@ -274,10 +274,10 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="p-6 pt-6 flex-1 flex flex-col">
-                        <h3 className="font-serif text-[26px] leading-[1.1] tracking-[-0.02em]">
+                        <h3 className="font-serif text-[26px] leading-[1.1] tracking-[-0.02em] min-h-[1.1em]">
                           {cs.client}
                         </h3>
-                        <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
+                        <p className="mt-3 text-body text-text-secondary flex-1 line-clamp-3">{cs.tagline}</p>
                         <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
                           View Case Study
                           <span
