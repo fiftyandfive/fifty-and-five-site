@@ -38,6 +38,36 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Verticals', item: 'https://fiftyandfive.com/work' },
+              { '@type': 'ListItem', position: 3, name: v.name, item: `https://fiftyandfive.com/verticals/${v.slug}` },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            '@id': `https://fiftyandfive.com/verticals/${v.slug}`,
+            serviceType: `${v.name} Social Media Marketing`,
+            name: v.headline,
+            description: v.subhead,
+            provider: { '@id': 'https://fiftyandfive.com/#organization' },
+            areaServed: { '@type': 'Country', name: 'United States' },
+            audience: { '@type': 'BusinessAudience', audienceType: v.name },
+          }),
+        }}
+      />
       <section
         className="relative overflow-hidden pt-36 md:pt-44 pb-16 md:pb-20"
         style={{

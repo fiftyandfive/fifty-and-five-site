@@ -126,6 +126,40 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://fiftyandfive.com/blog' },
+              { '@type': 'ListItem', position: 3, name: post.title, item: `https://fiftyandfive.com/blog/${post.slug}` },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            dateModified: post.date,
+            author: {
+              '@type': 'Person',
+              name: 'Lucas Vandenberg',
+              url: 'https://fiftyandfive.com/about',
+            },
+            publisher: { '@id': 'https://fiftyandfive.com/#organization' },
+            mainEntityOfPage: `https://fiftyandfive.com/blog/${post.slug}`,
+          }),
+        }}
+      />
       <BlogPostJsonLd post={post} />
       <BreadcrumbJsonLd post={post} />
 

@@ -29,6 +29,73 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is Fifty & Five?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five is a boutique senior-led social media and content agency founded in 2008. The agency has managed social media for 215+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, Warner Bros., Tupperware, Resorts World, and Blaze Pizza.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Where is Fifty & Five located?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five is headquartered in Orlando, Florida, and serves clients across the United States, Latin America, Europe, Asia, and Oceania.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long has Fifty & Five been in business?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five was founded in 2008 by Lucas Vandenberg. The agency has been continuously operating for 18 years and has retained some clients, including Mezzacorona, for over a decade.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What industries does Fifty & Five specialize in?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five specializes in 10 verticals: Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, and Entertainment. Notable industry credentials include Kendall-Jackson, Mezzacorona, and Penfolds in wine; Resorts World and the Hong Kong, Korea, and Macau Tourism Boards in hospitality; Blaze Pizza and Wolfgang\'s Steakhouse in restaurant; and Microsoft, Warner Bros., Hasbro, NETGEAR/Arlo in tech and entertainment.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does Fifty & Five charge?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five retainers start at $3,000 per month for ad management and scale to $7,500 per month for full-service social media management with content production. Pricing is principal-led with no junior account management markups.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Fifty & Five different from other social media agencies?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five is one of the only boutique social media agencies with an enterprise client list including Microsoft, Hasbro, Warner Bros., Enterprise Holdings, and Tupperware. Every account is run senior-led with no junior team handoffs, the same model that has retained Fortune 500-tier clients for over a decade.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does Fifty & Five work with international brands?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Fifty & Five has worked with brands across 5 continents and 30+ countries, including Mezzacorona (Italy), Penfolds (Australia), Melora (New Zealand), Koenig (Germany), Happy Egg Co. (United Kingdom), Don Papa Rum (Philippines), and the Hong Kong, Korea, and Macau Tourism Boards.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {/* HERO */}
       <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary">
         <AuroraBackground />

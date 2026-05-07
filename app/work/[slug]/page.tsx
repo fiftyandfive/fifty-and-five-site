@@ -55,6 +55,36 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://fiftyandfive.com/work' },
+              { '@type': 'ListItem', position: 3, name: cs.client, item: `https://fiftyandfive.com/work/${cs.slug}` },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'CreativeWork',
+            '@id': `https://fiftyandfive.com/work/${cs.slug}`,
+            name: `${cs.client} case study`,
+            about: cs.industry,
+            description: cs.tagline,
+            author: { '@id': 'https://fiftyandfive.com/#organization' },
+            publisher: { '@id': 'https://fiftyandfive.com/#organization' },
+            keywords: [cs.client, cs.industry, cs.verticalLabel, ...cs.services, ...cs.platforms].join(', '),
+          }),
+        }}
+      />
       {/* HERO */}
       <section
         className="relative overflow-hidden pt-36 md:pt-44 pb-20 md:pb-28"

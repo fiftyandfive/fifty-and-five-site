@@ -7,7 +7,7 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: 'Services | Social Media, Content Strategy, Paid Media',
   description:
-    'Full-service social media management, content strategy, and paid media for brands that want senior-level execution without the holding-company markup. Retainers from $3,000/mo.',
+    'Senior-led social media management, content strategy, and paid media for brands that want execution without the holding-company markup. Retainers from $3,000/mo.',
   alternates: {
     canonical: 'https://fiftyandfive.com/services',
   },
