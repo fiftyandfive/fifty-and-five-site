@@ -11,6 +11,7 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
+import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
 import { Testimonials } from '@/components/ui/Testimonials';
 import { SITE } from '@/lib/constants';
@@ -18,13 +19,7 @@ import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
 export default function HomePage() {
-  const featuredSlugs = [
-    'kendall-jackson',
-    'blaze-pizza',
-    'enterprise-holdings',
-    'mezzacorona',
-    'microsoft',
-  ];
+  const featuredSlugs = ['blaze-pizza', 'resorts-world', 'kendall-jackson', 'enterprise-holdings'];
   const featured = featuredSlugs.map((s) => getCaseStudy(s)!).filter(Boolean);
 
   return (
@@ -323,12 +318,12 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 auto-rows-[minmax(280px,auto)] gap-5">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {featured.map((cs, i) => {
-            const span =
-              i === 0 ? 'md:col-span-2 md:row-span-2' : 'md:col-span-2 md:row-span-1';
+            const idx = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
+            const caseNumber = String(idx + 1).padStart(2, '0');
             return (
-              <SimpleReveal key={cs.slug} delay={i * 0.08} className={span}>
+              <SimpleReveal key={cs.slug} delay={i * 0.08}>
                 <Link href={`/work/${cs.slug}`} className="block h-full group">
                   <TiltCard tiltStrength={4} className="h-full">
                     <GlassCard className="h-full flex flex-col" padded={false}>
@@ -337,19 +332,20 @@ export default function HomePage() {
                         <DurationBadge>{cs.durationBadge}</DurationBadge>
                       </div>
                       <div className="px-6">
-                        <PlaceholderImage
-                          colorKey={cs.verticalColor}
-                          aspect={i === 0 ? '4/3' : '16/9'}
-                          label={cs.client}
-                          src={cs.heroImage}
-                          alt={`${cs.client}, ${cs.verticalLabel} case study`}
+                        <BrandColorHero
+                          client={cs.client}
+                          verticalLabel={cs.verticalLabel}
+                          verticalColor={cs.verticalColor}
+                          caseNumber={caseNumber}
+                          aspect="16/9"
+                          variant="compact"
                         />
                       </div>
                       <div className="p-6 pt-6 flex-1 flex flex-col">
-                        <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
+                        <h3 className="font-serif text-[26px] leading-[1.1] tracking-[-0.02em] min-h-[1.1em]">
                           {cs.client}
                         </h3>
-                        <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
+                        <p className="mt-3 text-body text-text-secondary flex-1 line-clamp-3">{cs.tagline}</p>
                         <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
                           View Case Study
                           <span
