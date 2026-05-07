@@ -36,29 +36,28 @@ export default function HomePage() {
         <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
           <SimpleReveal>
             <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.18em]">
-              {SITE.wordmark} — senior-led social, since 2008
+              {SITE.wordmark} — senior-led since 2008
             </div>
           </SimpleReveal>
 
           <AnimatedHeadline
             as="h1"
-            text={'215 brands.\n18 years.\nZero handoffs.'}
+            text={'The boutique agency\nFortune 500s use.'}
             className="mt-8 font-serif text-display text-text-primary max-w-5xl"
             stagger={0.06}
           />
 
           <SimpleReveal delay={0.55}>
             <p className="mt-6 font-mono text-caption uppercase text-accent tracking-[0.15em]">
-              Senior-led. Specialist-backed. No junior handoffs.
+              215+ brands · 5 continents · senior-led, no junior handoffs
             </p>
           </SimpleReveal>
 
           <SimpleReveal delay={0.7}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Strategy and day-to-day from the same senior team who pitched you the work — with
-              deep benches in paid CTV, technical SEO, content production, and web when the brief calls
-              for it. The team behind campaigns for Microsoft, Kendall-Jackson, and
-              Blaze Pizza, working directly with you.
+              Senior-led social and content for 215+ brands across 5 continents — Microsoft,
+              Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings. Same hands since 2008.
+              Decade-long retainers, not 6-month engagements.
             </p>
           </SimpleReveal>
 
@@ -90,8 +89,9 @@ export default function HomePage() {
 
       {/* STATS BAR */}
       <section className="container-edge py-28 md:py-36">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
           <Stat value={215} suffix="+" label="Brands Managed" />
+          <Stat value={5} label="Continents" />
           <Stat value={18} label="Years in Social" />
           <AlgorithmStat />
         </div>

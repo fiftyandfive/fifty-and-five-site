@@ -18,19 +18,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'Senior-led social and content strategy for 215+ brands since 2008 — Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza. Principal-led, specialist-backed, zero junior handoffs.',
+  description: 'The boutique agency Fortune 500s use. Senior-led social and content for 215+ brands across 5 continents since 2008 — Microsoft, Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior-Led Social Media Agency',
     description:
-      'Senior-led. Specialist-backed. No junior handoffs. 215+ brands since 2008.',
+      'The boutique agency Fortune 500s use. 215+ brands across 5 continents. Senior-led since 2008.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fifty & Five | Senior-Led Social Media Agency',
-    description: 'Senior-led. Specialist-backed. No junior handoffs. 215+ brands since 2008.',
+    description: 'The boutique agency Fortune 500s use. 215+ brands across 5 continents. Senior-led since 2008.',
   },
   icons: {
     icon: [
@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   alternateName: 'Fifty and Five',
                   url: 'https://fiftyandfive.com',
                   logo: 'https://fiftyandfive.com/logo.svg',
-                  description: 'Senior-led social media management and content strategy agency. 215+ brands since 2008.',
+                  description: 'The boutique agency Fortune 500s use. Senior-led social media and content for 215+ brands across 5 continents since 2008.',
                   foundingDate: '2009',
                   founder: {
                     '@type': 'Person',

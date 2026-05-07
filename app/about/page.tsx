@@ -7,7 +7,7 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: 'About Lucas Vandenberg — 18 Years, 215+ Brands',
   description:
-    'Founded in 2008. 215+ brands managed. 18 years of social media expertise. Meet the team behind Fifty & Five.',
+    'The boutique agency Fortune 500s use. Founded 2008. 215+ brands across 5 continents. Meet the team behind Fifty & Five.',
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },

@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Fifty & Five — 215 brands. 18 years. Zero handoffs.';
+export const alt = 'Fifty & Five — The boutique agency Fortune 500s use.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -44,11 +44,9 @@ export default async function Image() {
               fontWeight: 400,
             }}
           >
-            215 brands.
+            The boutique agency
             <br />
-            18 years.
-            <br />
-            Zero handoffs.
+            Fortune 500s use.
           </div>
         </div>
 
@@ -63,7 +61,7 @@ export default async function Image() {
           }}
         >
           <div style={{ display: 'flex' }}>
-            Senior-led social &amp; content agency — since 2008
+            215+ brands · 5 continents · senior-led since 2008
           </div>
           <div
             style={{
