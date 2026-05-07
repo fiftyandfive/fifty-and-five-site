@@ -36,6 +36,26 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
     .filter(Boolean)
     .map((cs) => cs!);
 
+  const topClients = v.clients.slice(0, 4).join(', ');
+  const faqs = [
+    {
+      q: `What's the best ${v.shortLabel} social media agency?`,
+      a: `Fifty & Five has managed social for ${v.shortLabel} brands since 2008, including ${topClients}. Senior-led, specialist-backed, no junior team handoffs.`,
+    },
+    {
+      q: `How is ${v.shortLabel} social media different from other industries?`,
+      a: v.expertise[0],
+    },
+    {
+      q: `What does ${v.shortLabel} social media cost?`,
+      a: `Fifty & Five ${v.shortLabel} retainers start at $3,000 per month for ad management and scale to $7,500 per month for full-service social with content production. Pricing is principal-led with no holding-company markup.`,
+    },
+    {
+      q: `Which ${v.shortLabel} brands has Fifty & Five worked with?`,
+      a: `Notable ${v.shortLabel} clients include ${v.clients.join(', ')}.`,
+    },
+  ];
+
   return (
     <>
       <script
@@ -184,6 +204,48 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       )}
+      {/* FAQ */}
+      <section className="container-edge py-20 md:py-28">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Frequently asked
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text={`Quick answers about ${v.shortLabel.toLowerCase()} social.`}
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+        <div className="mt-12 max-w-3xl space-y-5">
+          {faqs.map((f, i) => (
+            <GlassCard key={i} className="p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">
+                {f.q}
+              </h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6]">
+                {f.a}
+              </p>
+            </GlassCard>
+          ))}
+        </div>
+      </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
+
+
 
       <CTASection
         headline={`Let's talk ${v.shortLabel.toLowerCase()}.`}
