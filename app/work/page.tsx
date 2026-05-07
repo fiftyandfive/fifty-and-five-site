@@ -7,6 +7,8 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
+import { BrandColorHero } from '@/components/ui/BrandColorHero';
+import { CASE_STUDIES } from '@/lib/data/caseStudies';
 import { FilterBar } from '@/components/ui/FilterBar';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 
@@ -68,12 +70,13 @@ export default function WorkIndex() {
                       <DurationBadge>{cs.durationBadge}</DurationBadge>
                     </div>
                     <div className="px-6">
-                      <PlaceholderImage
-                        colorKey={cs.verticalColor}
+                      <BrandColorHero
+                        client={cs.client}
+                        verticalLabel={cs.verticalLabel}
+                        verticalColor={cs.verticalColor}
+                        caseNumber={String(CASE_STUDIES.findIndex((x) => x.slug === cs.slug) + 1).padStart(2, '0')}
                         aspect="16/9"
-                        label={cs.client}
-                        src={cs.heroImage}
-                        alt={`${cs.client} — ${cs.verticalLabel} case study`}
+                        variant="compact"
                       />
                     </div>
                     <div className="p-6 flex-1 flex flex-col">

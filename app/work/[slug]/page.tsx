@@ -7,6 +7,7 @@ import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
+import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 
 export function generateStaticParams() {
@@ -46,6 +47,11 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
   const next = getNextCaseStudy(cs.slug);
   const hex = VERTICAL_COLOR_HEX[cs.verticalColor];
+
+  const caseIndex = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
+  const caseNumber = String(caseIndex + 1).padStart(2, '0');
+  const nextIndex = next ? CASE_STUDIES.findIndex((c) => c.slug === next.slug) : -1;
+  const nextCaseNumber = nextIndex >= 0 ? String(nextIndex + 1).padStart(2, '0') : undefined;
 
   return (
     <>
@@ -92,13 +98,13 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 lg:gap-16">
           <article className="max-w-[680px] text-[18px] leading-[1.75] text-text-primary/90">
             <SimpleReveal>
-              <PlaceholderImage
+              <BrandColorHero
+                client={cs.client}
+                verticalLabel={cs.verticalLabel}
+                verticalColor={cs.verticalColor}
+                caseNumber={caseNumber}
                 aspect="16/9"
-                colorKey={cs.verticalColor}
-                label={`${cs.client} — hero`}
                 className="rounded-glass mb-16"
-                src={cs.heroImage}
-                alt={`${cs.client} case study hero`}
               />
             </SimpleReveal>
 
@@ -160,12 +166,13 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <TiltCard tiltStrength={4}>
             <GlassCard padded={false}>
               <div className="grid grid-cols-1 md:grid-cols-2">
-                <PlaceholderImage
+                <BrandColorHero
+                  client={next.client}
+                  verticalLabel={next.verticalLabel}
+                  verticalColor={next.verticalColor}
+                  caseNumber={nextCaseNumber}
                   aspect="16/10"
-                  colorKey={next.verticalColor}
-                  label={next.client}
-                  src={next.heroImage}
-                  alt={`${next.client} case study`}
+                  variant="compact"
                 />
                 <div className="p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-3 flex-wrap">

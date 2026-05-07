@@ -294,3 +294,16 @@ export const VERTICAL_COLOR_HEX: Record<string, string> = {
   realestate: '#B45309',
   automotive: '#64748B',
 };
+
+export const VERTICAL_COLOR_DEEP_HEX: Record<string, string> = {
+  wine: '#4A1A20',
+  hospitality: '#064E47',
+  restaurant: '#6B2806',
+  fitness: '#6B2244',
+  tech: '#2D2F73',
+  retail: '#6B4006',
+  entertainment: '#401F73',
+  healthcare: '#023E5C',
+  realestate: '#5C2C04',
+  automotive: '#2D3540',
+};
