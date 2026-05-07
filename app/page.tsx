@@ -92,6 +92,79 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* VERTICALS STRIP */}
+      <section className="container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Verticals
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="Deep expertise where it matters."
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+
+        {/* Apple TV-style tile lineup: horizontal scroll on mobile, 3-across on tablet, 5x2 grid on desktop */}
+        <div className="mt-12 -mx-6 md:mx-0">
+          <div
+            className="
+              flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6
+              md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:snap-none
+              lg:grid-cols-5
+            "
+          >
+            {VERTICALS.map((v, i) => (
+              <SimpleReveal
+                key={v.slug}
+                delay={(i % 5) * 0.06}
+                className="snap-start shrink-0 w-[82vw] sm:w-[60vw] md:w-auto"
+              >
+                <Link
+                  href={`/verticals/${v.slug}`}
+                  className="group relative block aspect-[4/3] w-full overflow-hidden rounded-[20px] transition-transform duration-300 will-change-transform hover:scale-[1.03] focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  aria-label={`Explore ${v.name} vertical`}
+                  style={{
+                    background: `linear-gradient(135deg, var(--color-${v.colorKey}) 0%, var(--color-${v.colorKey}) 40%, rgba(0,0,0,0.55) 100%)`,
+                    boxShadow:
+                      '0 1px 0 rgba(255,255,255,0.08) inset, 0 10px 30px rgba(0,0,0,0.35)',
+                  }}
+                >
+                  {/* gloss sheen */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-60 mix-blend-overlay"
+                    style={{
+                      background:
+                        'radial-gradient(120% 80% at 20% 0%, rgba(255,255,255,0.25) 0%, transparent 55%)',
+                    }}
+                  />
+                  {/* content */}
+                  <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
+                    <div className="flex items-start justify-between">
+                      <span className="font-mono text-[10px] md:text-caption uppercase tracking-[0.18em] text-white/80">
+                        {v.shortLabel}
+                      </span>
+                      <span
+                        aria-hidden
+                        className="font-mono text-[10px] md:text-caption uppercase tracking-[0.15em] text-white/70 transition-transform duration-300 group-hover:translate-x-0.5"
+                      >
+                        →
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="font-serif text-[20px] md:text-[22px] lg:text-[18px] xl:text-[20px] leading-[1.05] tracking-[-0.025em] text-white">
+                        {v.name}
+                      </h3>
+                    </div>
+                  </div>
+                </Link>
+              </SimpleReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PLATFORMS WE'VE OUTLASTED */}
       <PlatformGraveyard />
 
@@ -294,79 +367,6 @@ export default function HomePage() {
               </SimpleReveal>
             );
           })}
-        </div>
-      </section>
-
-      {/* VERTICALS STRIP */}
-      <section className="container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            Verticals
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Deep expertise where it matters."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-        </div>
-
-        {/* Apple TV-style tile lineup: horizontal scroll on mobile, 3-across on tablet, 5x2 grid on desktop */}
-        <div className="mt-12 -mx-6 md:mx-0">
-          <div
-            className="
-              flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide px-6
-              md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:snap-none
-              lg:grid-cols-5
-            "
-          >
-            {VERTICALS.map((v, i) => (
-              <SimpleReveal
-                key={v.slug}
-                delay={(i % 5) * 0.06}
-                className="snap-start shrink-0 w-[82vw] sm:w-[60vw] md:w-auto"
-              >
-                <Link
-                  href={`/verticals/${v.slug}`}
-                  className="group relative block aspect-[4/3] w-full overflow-hidden rounded-[20px] transition-transform duration-300 will-change-transform hover:scale-[1.03] focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                  aria-label={`Explore ${v.name} vertical`}
-                  style={{
-                    background: `linear-gradient(135deg, var(--color-${v.colorKey}) 0%, var(--color-${v.colorKey}) 40%, rgba(0,0,0,0.55) 100%)`,
-                    boxShadow:
-                      '0 1px 0 rgba(255,255,255,0.08) inset, 0 10px 30px rgba(0,0,0,0.35)',
-                  }}
-                >
-                  {/* gloss sheen */}
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-0 opacity-60 mix-blend-overlay"
-                    style={{
-                      background:
-                        'radial-gradient(120% 80% at 20% 0%, rgba(255,255,255,0.25) 0%, transparent 55%)',
-                    }}
-                  />
-                  {/* content */}
-                  <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
-                    <div className="flex items-start justify-between">
-                      <span className="font-mono text-[10px] md:text-caption uppercase tracking-[0.18em] text-white/80">
-                        {v.shortLabel}
-                      </span>
-                      <span
-                        aria-hidden
-                        className="font-mono text-[10px] md:text-caption uppercase tracking-[0.15em] text-white/70 transition-transform duration-300 group-hover:translate-x-0.5"
-                      >
-                        →
-                      </span>
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-[20px] md:text-[22px] lg:text-[18px] xl:text-[20px] leading-[1.05] tracking-[-0.025em] text-white">
-                        {v.name}
-                      </h3>
-                    </div>
-                  </div>
-                </Link>
-              </SimpleReveal>
-            ))}
-          </div>
         </div>
       </section>
 
