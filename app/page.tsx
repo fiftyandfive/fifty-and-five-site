@@ -19,7 +19,7 @@ import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
 export default function HomePage() {
-  const featuredSlugs = ['blaze-pizza', 'resorts-world', 'kendall-jackson'];
+  const featuredSlugs = ['blaze-pizza', 'resorts-world', 'kendall-jackson', 'enterprise-holdings'];
   const featured = featuredSlugs.map((s) => getCaseStudy(s)!).filter(Boolean);
 
   return (
@@ -250,7 +250,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {featured.map((cs, i) => {
             const idx = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
             const caseNumber = String(idx + 1).padStart(2, '0');
@@ -274,7 +274,7 @@ export default function HomePage() {
                         />
                       </div>
                       <div className="p-6 pt-6 flex-1 flex flex-col">
-                        <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
+                        <h3 className="font-serif text-[26px] leading-[1.1] tracking-[-0.02em]">
                           {cs.client}
                         </h3>
                         <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
