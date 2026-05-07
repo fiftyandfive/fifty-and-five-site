@@ -8,7 +8,6 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
-import { CASE_STUDIES } from '@/lib/data/caseStudies';
 import { FilterBar } from '@/components/ui/FilterBar';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 
