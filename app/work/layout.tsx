@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Work | Social Media Case Studies — Microsoft, Blaze Pizza & More',
+  title: 'Our Work | Social Media Case Studies, Microsoft, Blaze Pizza & More',
   description:
     'Case studies from 215+ brands: Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Tupperware, and more. Real work, real outcomes, one person accountable.',
   alternates: {

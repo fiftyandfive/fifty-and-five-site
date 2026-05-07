@@ -6,7 +6,7 @@ import { AuroraBackground } from '@/components/ui/AuroraBackground';
 import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Contact — Let\u2019s Talk',
+  title: 'Contact, Let\u2019s Talk',
   description:
     'No pitch decks. No proposals until we know it\u2019s a fit. Start a conversation with Fifty & Five.',
   alternates: {

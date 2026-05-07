@@ -35,13 +35,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Multi-Year Partnership',
     platforms: ['Instagram', 'Facebook', 'TikTok', 'Pinterest'],
     tagline:
-      'Multi-year social partnership across the Kendall-Jackson portfolio \u2014 lifestyle aspiration balanced with wine education.',
+      'Multi-year social partnership across the Kendall-Jackson portfolio, lifestyle aspiration balanced with wine education.',
     challenge:
       'Maintain relevance and engagement for one of the most established wine brands in the United States across platforms that have evolved dramatically since the brand first established its social presence. Honor the Kendall-Jackson heritage while keeping the feed from feeling like a wine club newsletter.',
     approach:
-      'Built a content strategy that balanced lifestyle aspiration with wine education \u2014 food pairings, vineyard storytelling, varietal education, and seasonal tentpoles (harvest, holiday, ros\u00e9 season). Managed community engagement across every platform with a unified voice that spoke with authority but never with condescension. Adapted to platform shifts (Reels, TikTok, Pinterest\u2019s resurgence) without chasing trends that didn\u2019t fit the brand.',
+      'Built a content strategy that balanced lifestyle aspiration with wine education, food pairings, vineyard storytelling, varietal education, and seasonal tentpoles (harvest, holiday, ros\u00e9 season). Managed community engagement across every platform with a unified voice that spoke with authority but never with condescension. Adapted to platform shifts (Reels, TikTok, Pinterest\u2019s resurgence) without chasing trends that didn\u2019t fit the brand.',
     outcome:
-      'A sustained multi-year retainer \u2014 the kind of partnership that only happens when results consistently exceed expectations. One of the longest-running social relationships in the wine industry at the boutique agency level. The brand\u2019s social presence now reads as the baseline against which competitor wine brands benchmark.',
+      'A sustained multi-year retainer, the kind of partnership that only happens when results consistently exceed expectations. One of the longest-running social relationships in the wine industry at the boutique agency level. The brand\u2019s social presence now reads as the baseline against which competitor wine brands benchmark.',
     featured: true,
     size: 'wide',
     heroImage: '/images/case-studies/kendall-jackson.jpg',
@@ -57,13 +57,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Decade-Long Partnership',
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      'A decade of consistent brand storytelling for an Italian wine portfolio in the U.S. market \u2014 one of the longest continuous engagements in the agency\u2019s history.',
+      'A decade of consistent brand storytelling for an Italian wine portfolio in the U.S. market, one of the longest continuous engagements in the agency\u2019s history.',
     challenge:
       'Build a meaningful English-language social presence for an Italian wine portfolio in a U.S. market already crowded with domestic and imported competition. Cultivate a community that understood the Trentino-Alto Adige story without turning every post into a wine-school lecture.',
     approach:
-      'A decade of consistent brand storytelling, community cultivation, and platform evolution. Built the brand\u2019s entire English-language social presence from the ground up. Adapted strategy through every major social media shift across the engagement \u2014 the switch from organic reach to paid, the rise of video, the Reels era, shoppable content, and the fragmentation across platforms.',
+      'A decade of consistent brand storytelling, community cultivation, and platform evolution. Built the brand\u2019s entire English-language social presence from the ground up. Adapted strategy through every major social media shift across the engagement, the switch from organic reach to paid, the rise of video, the Reels era, shoppable content, and the fragmentation across platforms.',
     outcome:
-      'A decade-long retainer speaks for itself. You don\u2019t keep a wine brand as a client for nearly ten years unless the social presence is doing real commercial work \u2014 a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
+      'A decade-long retainer speaks for itself. You don\u2019t keep a wine brand as a client for nearly ten years unless the social presence is doing real commercial work, a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
     featured: true,
     size: 'standard',
   },
@@ -84,7 +84,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach:
       'Built and executed the national social media program during Blaze\u2019s hyper-growth phase. Created content frameworks that scaled across hundreds of locations while maintaining brand personality. Balanced national campaign beats (LTOs, celebrity partnerships, cultural moments) with local-market responsiveness. Managed community through viral moments and the occasional operational crisis with the same steady hand.',
     outcome:
-      'Managed the social presence during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history. The playbook built here \u2014 scalable content systems for multi-location brands \u2014 now informs every QSR and franchise engagement we take on.',
+      'Managed the social presence during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history. The playbook built here, scalable content systems for multi-location brands, now informs every QSR and franchise engagement we take on.',
     featured: true,
     size: 'standard',
   },
@@ -100,13 +100,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: '6 Brands, 2 Markets',
     platforms: ['Instagram', 'Facebook', 'Twitter', 'LinkedIn'],
     tagline:
-      'Managed distinct social identities for 6 brands under one corporate umbrella \u2014 Enterprise, National, Alamo \u2014 across US and LATAM markets.',
+      'Managed distinct social identities for 6 brands under one corporate umbrella, Enterprise, National, Alamo, across US and LATAM markets.',
     challenge:
-      'Run social for six distinct brands under one corporate umbrella \u2014 Enterprise, National, Alamo and related entities \u2014 across U.S. and LATAM markets. Each brand had its own audience, tone, and competitive set. None of them could afford to sound like a generic rental-car chain.',
+      'Run social for six distinct brands under one corporate umbrella, Enterprise, National, Alamo and related entities, across U.S. and LATAM markets. Each brand had its own audience, tone, and competitive set. None of them could afford to sound like a generic rental-car chain.',
     approach:
-      'Built separate content strategies for each brand while maintaining corporate alignment on standards, compliance, and campaign alignment. Coordinated localization and community management across markets. Managed the complexity of multi-brand, multi-market execution with a small team \u2014 the kind of operation that usually requires a 20-person agency pod.',
+      'Built separate content strategies for each brand while maintaining corporate alignment on standards, compliance, and campaign alignment. Coordinated localization and community management across markets. Managed the complexity of multi-brand, multi-market execution with a small team, the kind of operation that usually requires a 20-person agency pod.',
     outcome:
-      'Demonstrated the ability to manage enterprise-scale complexity \u2014 six brands, multiple markets, distinct voices \u2014 without the overhead of a large agency team. The Enterprise engagement remains the single strongest proof point that this model scales beyond boutique work.',
+      'Demonstrated the ability to manage enterprise-scale complexity, six brands, multiple markets, distinct voices, without the overhead of a large agency team. The Enterprise engagement remains the single strongest proof point that this model scales beyond boutique work.',
     featured: true,
     size: 'standard',
   },
@@ -122,13 +122,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: '9 Properties',
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      'Distinct social identities for 9 shopping centers simultaneously \u2014 each with a unique tenant mix, demographic, and local personality.',
+      'Distinct social identities for 9 shopping centers simultaneously, each with a unique tenant mix, demographic, and local personality.',
     challenge:
-      'Create distinct social identities for nine separate shopping centers, each with unique tenant mixes, demographics, and local personalities. The generic "mall marketing" playbook wasn\u2019t going to work \u2014 a center in Texas doesn\u2019t speak the same way as a center in Southern California.',
+      'Create distinct social identities for nine separate shopping centers, each with unique tenant mixes, demographics, and local personalities. The generic "mall marketing" playbook wasn\u2019t going to work, a center in Texas doesn\u2019t speak the same way as a center in Southern California.',
     approach:
-      'Developed individualized content strategies for each property while building scalable workflows that made nine-account management feasible with a small team. Each property\u2019s social presence reflected its specific tenants, events, and community \u2014 while benefiting from centralized reporting and standards.',
+      'Developed individualized content strategies for each property while building scalable workflows that made nine-account management feasible with a small team. Each property\u2019s social presence reflected its specific tenants, events, and community, while benefiting from centralized reporting and standards.',
     outcome:
-      'Proved the multi-location playbook at scale \u2014 nine properties, each with its own voice, managed efficiently through systems-first execution. A template for every subsequent multi-property client engagement.',
+      'Proved the multi-location playbook at scale, nine properties, each with its own voice, managed efficiently through systems-first execution. A template for every subsequent multi-property client engagement.',
   },
   {
     slug: 'resorts-world',
@@ -142,11 +142,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Multi-Property',
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      'Luxury resort social for two very different properties \u2014 Bimini in the Bahamas and the Catskills in upstate New York.',
+      'Luxury resort social for two very different properties. Bimini in the Bahamas, plus the Catskills in upstate New York.',
     challenge:
-      'Build social presence for luxury resort properties across multiple locations with radically different characters \u2014 a tropical island paradise in the Bahamas and a mountain retreat in upstate New York. Make each feel like a place worth traveling for.',
+      'Build social presence for luxury resort properties across multiple locations with radically different characters, a tropical island paradise in the Bahamas and a mountain retreat in upstate New York. Make each feel like a place worth traveling for.',
     approach:
-      'Crafted aspirational lifestyle content that showcased each property\u2019s unique character \u2014 turquoise water and over-water villas for Bimini, fireplaces and foliage for the Catskills. Managed community with the understanding that resort DMs are often sales conversations worth thousands of dollars.',
+      'Crafted aspirational lifestyle content that showcased each property\u2019s unique character, turquoise water and over-water villas for Bimini, fireplaces and foliage for the Catskills. Managed community with the understanding that resort DMs are often sales conversations worth thousands of dollars.',
     outcome:
       'Built engaged communities around two very different resort experiences under one brand umbrella. Proof that hospitality social scales across property types when the strategy respects the specificity of the place.',
   },
@@ -168,7 +168,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach:
       'Built social momentum during Arlo\u2019s most critical growth phase, from sub-brand to independent company. Product launch support, community-building around a still-emerging smart home category, and positioning work that helped differentiate Arlo in an increasingly crowded field.',
     outcome:
-      'Arlo launched as a standalone company (NYSE: ARLO). We were part of the team that built its early social presence during the most critical growth window \u2014 a credential that still informs how we approach product launches for consumer tech clients.',
+      'Arlo launched as a standalone company (NYSE: ARLO). We were part of the team that built its early social presence during the most critical growth window, a credential that still informs how we approach product launches for consumer tech clients.',
   },
   {
     slug: 'tupperware',
@@ -182,13 +182,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Global Brand',
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      'Modernized the social presence of a 75-year-old consumer brand for contemporary audiences \u2014 without breaking what the community already loved.',
+      'Modernized the social presence of a 75-year-old consumer brand for contemporary audiences, without breaking what the community already loved.',
     challenge:
       'Modernize the social presence of a legacy consumer brand for contemporary audiences. Bridge 75 years of brand equity with social-first storytelling for a generation that grew up on Instagram instead of Tupperware parties.',
     approach:
-      'Refreshed content strategy to bridge Tupperware\u2019s heritage with modern social-first storytelling. Balanced nostalgia with relevance \u2014 respecting what the legacy community loved while giving new audiences a reason to follow.',
+      'Refreshed content strategy to bridge Tupperware\u2019s heritage with modern social-first storytelling. Balanced nostalgia with relevance, respecting what the legacy community loved while giving new audiences a reason to follow.',
     outcome:
-      'Grew Instagram following significantly while maintaining the brand\u2019s established identity and community trust. Proof that legacy brands don\u2019t need to be rebuilt from scratch \u2014 they need to be reframed.',
+      'Grew Instagram following significantly while maintaining the brand\u2019s established identity and community trust. Proof that legacy brands don\u2019t need to be rebuilt from scratch, they need to be reframed.',
   },
   {
     slug: 'axe-unilever',
@@ -202,13 +202,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: '2010 Campaign',
     platforms: ['Twitter', 'Facebook', 'Experiential'],
     tagline:
-      'Twitter takeover + experiential pop-ups + barber-shop brand activations \u2014 one of the earliest integrated social + experiential campaigns for a major CPG brand.',
+      'Twitter takeover + experiential pop-ups + barber-shop brand activations, one of the earliest integrated social + experiential campaigns for a major CPG brand.',
     challenge:
       'Launch a new Axe hair product line with cultural impact at a moment when "experiential marketing" wasn\u2019t yet an industry buzzword and social platforms were still figuring out what brands were allowed to do.',
     approach:
       'Executed a Twitter takeover, produced pop-up experiential events, and converted bars into branded barber-shop experiences. Culturally-embedded marketing before the category even had a name for itself.',
     outcome:
-      'One of the earliest examples of integrated social + experiential campaigns for a major CPG brand. Unilever-level execution \u2014 and a credential that predates most of the agencies currently pitching the same playbook.',
+      'One of the earliest examples of integrated social + experiential campaigns for a major CPG brand. Unilever-level execution, and a credential that predates most of the agencies currently pitching the same playbook.',
   },
   {
     slug: 'polynesian-cultural-center',
@@ -222,13 +222,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: "Hawaii's #1 Paid Attraction",
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      'Cultural storytelling that drove visitation for Hawaii\u2019s #1 paid attraction \u2014 without flattening the mission into a tourism brochure.',
+      'Cultural storytelling that drove visitation for Hawaii\u2019s #1 paid attraction, without flattening the mission into a tourism brochure.',
     challenge:
       'Drive awareness and visitation for Hawaii\u2019s #1 paid attraction. Balance the Center\u2019s cultural mission with the commercial reality that it\u2019s also a tourism business competing for visitor dollars.',
     approach:
-      'Cultural storytelling that honored the Center\u2019s mission while driving tourism engagement. Featured the performers, the artisans, and the stories \u2014 not just the luau photos. A nuanced approach most agencies miss entirely when briefed on a cultural-tourism account.',
+      'Cultural storytelling that honored the Center\u2019s mission while driving tourism engagement. Featured the performers, the artisans, and the stories, not just the luau photos. A nuanced approach most agencies miss entirely when briefed on a cultural-tourism account.',
     outcome:
-      'Built a social program that balanced cultural respect with tourism marketing \u2014 a nuance most agencies miss. The model for every subsequent cultural-heritage tourism client we\u2019ve taken on.',
+      'Built a social program that balanced cultural respect with tourism marketing, a nuance most agencies miss. The model for every subsequent cultural-heritage tourism client we\u2019ve taken on.',
   },
   {
     slug: 'microsoft',
@@ -242,11 +242,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Global Initiative',
     platforms: ['Twitter', 'Facebook'],
     tagline:
-      'Community building around Microsoft\u2019s global education initiative \u2014 translating enterprise edtech into content educators actually shared.',
+      'Community building around Microsoft\u2019s global education initiative, translating enterprise edtech into content educators actually shared.',
     challenge:
-      'Build community around Microsoft\u2019s education initiative. Translate the company\u2019s enterprise-scale education technology into content accessible and engaging for individual classroom educators \u2014 an audience notoriously skeptical of corporate marketing.',
+      'Build community around Microsoft\u2019s education initiative. Translate the company\u2019s enterprise-scale education technology into content accessible and engaging for individual classroom educators, an audience notoriously skeptical of corporate marketing.',
     approach:
-      'Translated Microsoft\u2019s education technology offerings into accessible, engaging social content for educators. Showcased real teachers, real classroom stories, and real outcomes \u2014 not product pitches dressed up as inspiration.',
+      'Translated Microsoft\u2019s education technology offerings into accessible, engaging social content for educators. Showcased real teachers, real classroom stories, and real outcomes, not product pitches dressed up as inspiration.',
     outcome:
       'Microsoft. The name speaks for itself. A credential that, on its own, ends most "have you worked with enterprise clients?" conversations.',
   },
@@ -262,9 +262,9 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Multi-Year',
     platforms: ['Facebook', 'Twitter', 'LinkedIn'],
     tagline:
-      'Humanized an insurance brand in a category notorious for being un-human \u2014 and kept the relationship long enough to prove it wasn\u2019t a fluke.',
+      'Humanized an insurance brand in a category notorious for being un-human, and kept the relationship long enough to prove it wasn\u2019t a fluke.',
     challenge:
-      'Humanize an insurance brand on social media \u2014 one of the hardest verticals in the category. Make the content relatable without trivializing the product (which is, ultimately, a financial instrument people actually need).',
+      'Humanize an insurance brand on social media, one of the hardest verticals in the category. Make the content relatable without trivializing the product (which is, ultimately, a financial instrument people actually need).',
     approach:
       'Built a content strategy that made insurance relatable without trivializing the product. Combined educational content, trust-building storytelling, and platform-native formats that earned attention in a feed where most insurance ads get scrolled past.',
     outcome:

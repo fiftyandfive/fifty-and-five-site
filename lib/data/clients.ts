@@ -4,13 +4,13 @@ export type ClientLogo = {
   asset?: string;
 };
 
-/** Google Favicon API — returns real favicons at up to 256px */
+/** Google Favicon API, returns real favicons at up to 256px */
 function favicon(domain: string) {
   return `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${domain}&size=128`;
 }
 
 /**
- * Client logos — served directly from Google's Favicon API.
+ * Client logos, served directly from Google's Favicon API.
  * Falls back to serif text wordmark in LogoTicker if the image fails.
  */
 export const CLIENT_LOGOS: ClientLogo[] = [

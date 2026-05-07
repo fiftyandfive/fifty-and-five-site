@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: '/api/',
       },
-      // Explicitly welcome AI crawlers (competitive advantage — most sites block these)
+      // Explicitly welcome AI crawlers (competitive advantage, most sites block these)
       {
         userAgent: 'GPTBot',
         allow: '/',

@@ -28,14 +28,14 @@ export async function generateMetadata({
       canonical: `https://fiftyandfive.com/work/${cs.slug}`,
     },
     openGraph: {
-      title: `${cs.client} — Social Media Case Study | Fifty & Five`,
+      title: `${cs.client}, Social Media Case Study | Fifty & Five`,
       description: cs.tagline,
       url: `https://fiftyandfive.com/work/${cs.slug}`,
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${cs.client} — Case Study | Fifty & Five`,
+      title: `${cs.client}, Case Study | Fifty & Five`,
       description: cs.tagline,
     },
   };
@@ -108,17 +108,17 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               />
             </SimpleReveal>
 
-            <Section label="01 — The Challenge" title="What the brand needed.">
+            <Section label="01, The Challenge" title="What the brand needed.">
               {cs.challenge}
             </Section>
 
-            <Section label="02 — The Approach" title="What Fifty & Five did.">
+            <Section label="02, The Approach" title="What Fifty & Five did.">
               {cs.approach}
             </Section>
 
             <PullQuote>{cs.tagline}</PullQuote>
 
-            <Section label="03 — The Outcome" title="What actually happened.">
+            <Section label="03, The Outcome" title="What actually happened.">
               {cs.outcome}
             </Section>
           </article>

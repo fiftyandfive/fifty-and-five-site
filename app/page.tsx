@@ -11,7 +11,6 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
-import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
 import { Testimonials } from '@/components/ui/Testimonials';
 import { SITE } from '@/lib/constants';
@@ -19,7 +18,13 @@ import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
 export default function HomePage() {
-  const featuredSlugs = ['blaze-pizza', 'resorts-world', 'kendall-jackson', 'enterprise-holdings'];
+  const featuredSlugs = [
+    'kendall-jackson',
+    'blaze-pizza',
+    'enterprise-holdings',
+    'mezzacorona',
+    'microsoft',
+  ];
   const featured = featuredSlugs.map((s) => getCaseStudy(s)!).filter(Boolean);
 
   return (
@@ -31,7 +36,7 @@ export default function HomePage() {
         <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
           <SimpleReveal>
             <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.18em]">
-              {SITE.wordmark} — senior-led since 2008
+              {SITE.wordmark}, senior-led since 2008
             </div>
           </SimpleReveal>
 
@@ -50,8 +55,9 @@ export default function HomePage() {
 
           <SimpleReveal delay={0.7}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Senior-led social and content for 215+ brands across 5 continents — Microsoft,
-              Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings. Same hands since 2008.
+              Senior-led social and content for 215+ brands across 5 continents. Microsoft,
+              Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings are who'd run
+              yours. Same hands since 2008.
               Decade-long retainers, not 6-month engagements.
             </p>
           </SimpleReveal>
@@ -62,7 +68,7 @@ export default function HomePage() {
                 href="/work"
                 variant="primary"
                 size="large"
-                trackName="Hero CTA — See the Work"
+                trackName="Hero CTA, See the Work"
               >
                 See the Work →
               </MagneticButton>
@@ -70,7 +76,7 @@ export default function HomePage() {
                 href="/contact"
                 variant="secondary"
                 size="large"
-                trackName="Hero CTA — Let's Talk"
+                trackName="Hero CTA, Let's Talk"
               >
                 Let&rsquo;s Talk
               </MagneticButton>
@@ -89,6 +95,210 @@ export default function HomePage() {
           <Stat value={5} label="Continents" />
           <Stat value={18} label="Years in Social" />
           <AlgorithmStat />
+        </div>
+      </section>
+
+      {/* PLATFORMS WE'VE OUTLASTED */}
+      <PlatformGraveyard />
+
+      {/* WHAT'S BROKEN, PAIN POINTS */}
+      <section className="relative container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            You&rsquo;ve been here before
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text={'Agencies break the same three ways.\nOurs doesn\u2019t.'}
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+          <SimpleReveal delay={0.0} className="h-full">
+            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                The bait-and-switch
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                The principal sold you. The junior delivers.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                You bought a senior strategist. You got a 26-year-old learning on your brand. The
+                person who pitched you hasn&rsquo;t been on a call in six months.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.12} className="h-full">
+            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                The layer cake
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                You ask a question. Three people forward the email.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                Account manager to traffic manager to coordinator to strategist. Your feedback gets
+                translated four times before it reaches the person doing the work.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.24} className="h-full">
+            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                The billing game
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
+                You&rsquo;re paying for hours. Not pattern recognition.
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                40% of a traditional agency&rsquo;s billable hours get eaten by coordination. You
+                wrote the check for strategy. You got a timesheet.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+        </div>
+      </section>
+
+      {/* WHAT YOU GET, BUYER-FORWARD SOLUTION CARDS */}
+      <section className="relative container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            What you actually get
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="Stop paying for agency theater. Start paying for the work."
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+          <SimpleReveal delay={0.0} className="h-full">
+            <TiltCard tiltStrength={5} className="h-full">
+              <GlassCard className="h-full flex flex-col">
+                <IconSingle />
+                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
+                  Answers on the first call.
+                </h3>
+                <p className="mt-4 text-body text-text-secondary">
+                  No &ldquo;let me check with the team.&rdquo; The person on the call is the person
+                  doing the work. You get the decision, not a scheduled follow-up to get the
+                  decision.
+                </p>
+              </GlassCard>
+            </TiltCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.12} className="h-full">
+            <TiltCard tiltStrength={5} className="h-full">
+              <GlassCard className="h-full flex flex-col">
+                <IconGrid />
+                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
+                  A strategy that adjusts in real time.
+                </h3>
+                <p className="mt-4 text-body text-text-secondary">
+                  Not a PDF you review quarterly. A living plan that flexes when the feed shifts,
+                  when a platform changes its rules, when a competitor moves, because the
+                  strategist is the one shipping.
+                </p>
+              </GlassCard>
+            </TiltCard>
+          </SimpleReveal>
+
+          <SimpleReveal delay={0.24} className="h-full">
+            <TiltCard tiltStrength={5} className="h-full">
+              <GlassCard className="h-full flex flex-col">
+                <IconSparkle />
+                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
+                  One name to hold accountable.
+                </h3>
+                <p className="mt-4 text-body text-text-secondary">
+                  One senior team. One direct line. The agency's reputation on every outcome, backed
+                  with an in-house bench of specialists when the work calls for depth outside social.
+                </p>
+              </GlassCard>
+            </TiltCard>
+          </SimpleReveal>
+        </div>
+
+        <div className="mt-10">
+          <Link
+            href="/services"
+            className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light transition-colors"
+          >
+            How we&rsquo;re different →
+          </Link>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS, CLUTCH QUOTES */}
+      <Testimonials />
+
+      {/* FEATURED WORK, BENTO GRID */}
+      <section className="container-edge py-24 md:py-32">
+        <div className="flex items-end justify-between gap-6 flex-wrap">
+          <div>
+            <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+              Selected Work
+            </div>
+            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em] max-w-3xl">
+              Campaigns for brands you know, built by the senior team that actually ran them.
+            </h2>
+          </div>
+          <Link
+            href="/work"
+            className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light transition-colors"
+          >
+            View all work →
+          </Link>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 auto-rows-[minmax(280px,auto)] gap-5">
+          {featured.map((cs, i) => {
+            const span =
+              i === 0 ? 'md:col-span-2 md:row-span-2' : 'md:col-span-2 md:row-span-1';
+            return (
+              <SimpleReveal key={cs.slug} delay={i * 0.08} className={span}>
+                <Link href={`/work/${cs.slug}`} className="block h-full group">
+                  <TiltCard tiltStrength={4} className="h-full">
+                    <GlassCard className="h-full flex flex-col" padded={false}>
+                      <div className="p-6 flex items-start justify-between gap-4">
+                        <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
+                        <DurationBadge>{cs.durationBadge}</DurationBadge>
+                      </div>
+                      <div className="px-6">
+                        <PlaceholderImage
+                          colorKey={cs.verticalColor}
+                          aspect={i === 0 ? '4/3' : '16/9'}
+                          label={cs.client}
+                          src={cs.heroImage}
+                          alt={`${cs.client}, ${cs.verticalLabel} case study`}
+                        />
+                      </div>
+                      <div className="p-6 pt-6 flex-1 flex flex-col">
+                        <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
+                          {cs.client}
+                        </h3>
+                        <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
+                        <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                          View Case Study
+                          <span
+                            aria-hidden
+                            className="transition-transform duration-300 group-hover:translate-x-0.5"
+                          >
+                            →
+                          </span>
+                        </div>
+                      </div>
+                    </GlassCard>
+                  </TiltCard>
+                </Link>
+              </SimpleReveal>
+            );
+          })}
         </div>
       </section>
 
@@ -162,211 +372,6 @@ export default function HomePage() {
               </SimpleReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* PLATFORMS WE'VE OUTLASTED */}
-      <PlatformGraveyard />
-
-      {/* WHAT'S BROKEN — PAIN POINTS */}
-      <section className="relative container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            You&rsquo;ve been here before
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text={'Agencies break the same three ways.\nOurs doesn\u2019t.'}
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-        </div>
-
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
-          <SimpleReveal delay={0.0} className="h-full">
-            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                The bait-and-switch
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                The principal sold you. The junior delivers.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                You bought a senior strategist. You got a 26-year-old learning on your brand. The
-                person who pitched you hasn&rsquo;t been on a call in six months.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.12} className="h-full">
-            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                The layer cake
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                You ask a question. Three people forward the email.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                Account manager to traffic manager to coordinator to strategist. Your feedback gets
-                translated four times before it reaches the person doing the work.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.24} className="h-full">
-            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                The billing game
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                You&rsquo;re paying for hours. Not pattern recognition.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                40% of a traditional agency&rsquo;s billable hours get eaten by coordination. You
-                wrote the check for strategy. You got a timesheet.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-        </div>
-      </section>
-
-      {/* WHAT YOU GET — BUYER-FORWARD SOLUTION CARDS */}
-      <section className="relative container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            What you actually get
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Stop paying for agency theater. Start paying for the work."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-        </div>
-
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
-          <SimpleReveal delay={0.0} className="h-full">
-            <TiltCard tiltStrength={5} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <IconSingle />
-                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  Answers on the first call.
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
-                  No &ldquo;let me check with the team.&rdquo; The person on the call is the person
-                  doing the work. You get the decision, not a scheduled follow-up to get the
-                  decision.
-                </p>
-              </GlassCard>
-            </TiltCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.12} className="h-full">
-            <TiltCard tiltStrength={5} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <IconGrid />
-                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  A strategy that adjusts in real time.
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
-                  Not a PDF you review quarterly. A living plan that flexes when the feed shifts,
-                  when a platform changes its rules, when a competitor moves — because the
-                  strategist is the one shipping.
-                </p>
-              </GlassCard>
-            </TiltCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.24} className="h-full">
-            <TiltCard tiltStrength={5} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <IconSparkle />
-                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  One name to hold accountable.
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
-                  One senior team. One direct line. The agency's reputation on every outcome — backed
-                  with an in-house bench of specialists when the work calls for depth outside social.
-                </p>
-              </GlassCard>
-            </TiltCard>
-          </SimpleReveal>
-        </div>
-
-        <div className="mt-10">
-          <Link
-            href="/services"
-            className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light transition-colors"
-          >
-            How we&rsquo;re different →
-          </Link>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS — CLUTCH QUOTES */}
-      <Testimonials />
-
-      {/* FEATURED WORK — BENTO GRID */}
-      <section className="container-edge py-24 md:py-32">
-        <div className="flex items-end justify-between gap-6 flex-wrap">
-          <div>
-            <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-              Selected Work
-            </div>
-            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em] max-w-3xl">
-              Campaigns for brands you know — built by the senior team that actually ran them.
-            </h2>
-          </div>
-          <Link
-            href="/work"
-            className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light transition-colors"
-          >
-            View all work →
-          </Link>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {featured.map((cs, i) => {
-            const idx = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
-            const caseNumber = String(idx + 1).padStart(2, '0');
-            return (
-              <SimpleReveal key={cs.slug} delay={i * 0.08}>
-                <Link href={`/work/${cs.slug}`} className="block h-full group">
-                  <TiltCard tiltStrength={4} className="h-full">
-                    <GlassCard className="h-full flex flex-col" padded={false}>
-                      <div className="p-6 flex items-start justify-between gap-4">
-                        <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
-                        <DurationBadge>{cs.durationBadge}</DurationBadge>
-                      </div>
-                      <div className="px-6">
-                        <BrandColorHero
-                          client={cs.client}
-                          verticalLabel={cs.verticalLabel}
-                          verticalColor={cs.verticalColor}
-                          caseNumber={caseNumber}
-                          aspect="16/9"
-                          variant="compact"
-                        />
-                      </div>
-                      <div className="p-6 pt-6 flex-1 flex flex-col">
-                        <h3 className="font-serif text-[26px] leading-[1.1] tracking-[-0.02em] min-h-[1.1em]">
-                          {cs.client}
-                        </h3>
-                        <p className="mt-3 text-body text-text-secondary flex-1 line-clamp-3">{cs.tagline}</p>
-                        <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
-                          View Case Study
-                          <span
-                            aria-hidden
-                            className="transition-transform duration-300 group-hover:translate-x-0.5"
-                          >
-                            →
-                          </span>
-                        </div>
-                      </div>
-                    </GlassCard>
-                  </TiltCard>
-                </Link>
-              </SimpleReveal>
-            );
-          })}
         </div>
       </section>
 

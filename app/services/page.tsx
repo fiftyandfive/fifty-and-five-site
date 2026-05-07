@@ -23,19 +23,19 @@ const PILLARS = [
     kicker: 'Strategy first',
     head: 'Month one is discovery. No exceptions.',
     body:
-      'Before a logo moves or a campaign launches, we map the category, audit the field, and write the strategic spine the next year hangs from. If month one doesn’t land, we don’t continue — and you keep the work.',
+      'Before a logo moves or a campaign launches, we map the category, audit the field, and write the strategic spine the next year hangs from. If month one doesn’t land, we don’t continue, and you keep the work.',
   },
   {
     kicker: 'AI, in the open',
     head: 'We use Claude. We tell you where.',
     body:
-      'Frontier models sit on the table, not under it. We use them for synthesis, drafting, and stress-testing — and ship a “how this was made” appendix on every major deliverable.',
+      'Frontier models sit on the table, not under it. We use them for synthesis, drafting, and stress-testing, and ship a “how this was made” appendix on every major deliverable.',
   },
   {
     kicker: 'Multicultural by default',
     head: 'Hispanic market mapped on day one.',
     body:
-      'Every strategy deck includes cultural positioning analysis for U.S. growth markets — Miami, Houston, LA, Phoenix, San Antonio. Not a translation line item.',
+      'Every strategy deck includes cultural positioning analysis for U.S. growth markets. Miami, Houston, LA, Phoenix, San Antonio. Not a translation line item.',
   },
   {
     kicker: 'Founder-forward',
@@ -47,7 +47,7 @@ const PILLARS = [
     kicker: 'Performance + authenticity',
     head: 'ROI without selling the story.',
     body:
-      'We measure CAC, LTV, attribution, and the rest — and we refuse to gut the brand to chase a quarter. Both numbers matter. Both get reported.',
+      'We measure CAC, LTV, attribution, and the rest, and we refuse to gut the brand to chase a quarter. Both numbers matter. Both get reported.',
   },
 ];
 
@@ -63,7 +63,7 @@ const CORE_SERVICES = [
     title: 'Content Strategy & Creation',
     tag: 'Retainer or Project',
     body:
-      'Platform-specific content that actually performs — not recycled blog posts reformatted for Instagram. Original content strategy built on 18 years of pattern recognition across 215+ brands. Photography and video direction included.',
+      'Platform-specific content that actually performs, not recycled blog posts reformatted for Instagram. Original content strategy built on 18 years of pattern recognition across 215+ brands. Photography and video direction included.',
     meta: 'Typical engagement: Monthly content calendars, original creative direction, platform-native content.',
   },
   {
@@ -90,7 +90,7 @@ export default function ServicesPage() {
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-2xl">
-            Senior-led social media management, content strategy, and paid media — without the
+            Senior-led social media management, content strategy, and paid media, without the
             holding-company markup.
           </p>
         </SimpleReveal>
@@ -162,7 +162,7 @@ export default function ServicesPage() {
           </div>
           <div className="md:col-span-8 prose-style space-y-6 text-body-lg text-text-secondary leading-[1.75]">
             <p>
-              Every engagement starts with a conversation — not a proposal. We&rsquo;ll talk about
+              Every engagement starts with a conversation, not a proposal. We&rsquo;ll talk about
               what you&rsquo;re trying to accomplish, where your current social presence stands, and
               whether Fifty &amp; Five is actually the right fit. If it is, you&rsquo;ll get a clear
               scope, a fixed monthly fee, and direct access to the person doing the work. No account
@@ -172,8 +172,8 @@ export default function ServicesPage() {
               Retainers typically range from{' '}
               <span className="text-text-primary">$3,000 to $7,500 per month</span> depending on
               scope, platforms, and whether paid media management is included. Project work is
-              available for brands that need a specific deliverable — audit, launch strategy, or
-              content sprint — without an ongoing commitment.
+              available for brands that need a specific deliverable, audit, launch strategy, or
+              content sprint, without an ongoing commitment.
             </p>
           </div>
         </div>
@@ -186,10 +186,10 @@ export default function ServicesPage() {
               What you won&rsquo;t find here
             </div>
             <ul className="mt-5 space-y-3 text-body text-text-secondary">
-              <li>— A 40-slide pitch deck.</li>
-              <li>— A team of six people where five are coordinators.</li>
-              <li>— A Slack channel that goes quiet after month two.</li>
-              <li>— A monthly report that takes longer to read than it took to write.</li>
+              <li>, A 40-slide pitch deck.</li>
+              <li>, A team of six people where five are coordinators.</li>
+              <li>, A Slack channel that goes quiet after month two.</li>
+              <li>, A monthly report that takes longer to read than it took to write.</li>
             </ul>
           </GlassCard>
           <GlassCard className="h-full flex flex-col">
@@ -197,12 +197,12 @@ export default function ServicesPage() {
               What you will find
             </div>
             <ul className="mt-5 space-y-3 text-body text-text-primary">
-              <li>— One phone number.</li>
-              <li>— One senior principal, start to finish.</li>
-              <li>— Specialists on the bench when the work calls for it.</li>
-              <li>— Direct answers.</li>
+              <li>, One phone number.</li>
+              <li>, One senior principal, start to finish.</li>
+              <li>, Specialists on the bench when the work calls for it.</li>
+              <li>, Direct answers.</li>
               <li>
-                — The kind of experience that usually requires a $30K/mo retainer — at a fraction of
+               , The kind of experience that usually requires a $30K/mo retainer, at a fraction of
                 the cost.
               </li>
             </ul>

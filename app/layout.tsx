@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'The boutique agency Fortune 500s use. Senior-led social and content for 215+ brands across 5 continents since 2008 — Microsoft, Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings.',
+  description: 'The boutique agency Fortune 500s use. Senior-led social and content for 215+ brands across 5 continents since 2008. Microsoft, Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior-Led Social Media Agency',

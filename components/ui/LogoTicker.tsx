@@ -3,14 +3,14 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { CLIENT_LOGOS } from '@/lib/data/clients';
 
-/** Minimum natural width (px) to keep the image — below this we show text. */
+/** Minimum natural width (px) to keep the image, below this we show text. */
 const MIN_LOGO_WIDTH = 48;
 
 function LogoItem({ name, asset }: { name: string; asset?: string }) {
   const [failed, setFailed] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  /** Fires on load — if the favicon is too small, switch to text wordmark. */
+  /** Fires on load, if the favicon is too small, switch to text wordmark. */
   const handleLoad = useCallback((e: React.SyntheticEvent<HTMLImageElement>) => {
     const img = e.currentTarget;
     if (img.naturalWidth < MIN_LOGO_WIDTH) {

@@ -5,7 +5,7 @@ import { CLIENT_LOGOS } from '@/lib/data/clients';
 /**
  * Fixed-bottom stock-ticker chrome. Reads like a trading-desk crawl:
  * mono 11px, tight tracking, muted, slow 80s scroll, accent arrow
- * between entries. No logos — by design. The absence of imagery is
+ * between entries. No logos, by design. The absence of imagery is
  * the elevation; client names in pure type sit more "senior agency"
  * than any favicon wall could.
  */
@@ -26,7 +26,7 @@ export function StockTicker() {
         className="pointer-events-none absolute inset-y-0 right-0 w-16 z-10"
         style={{ background: 'linear-gradient(to left, var(--color-bg-primary), transparent)' }}
       />
-      {/* Left-edge label — reads like a terminal channel name */}
+      {/* Left-edge label, reads like a terminal channel name */}
       <div className="absolute inset-y-0 left-0 z-20 flex items-center px-3 font-mono text-[10px] uppercase tracking-[0.18em] text-accent/80 border-r border-glass-border bg-bg-primary/80">
         LIVE <span className="ml-1.5 h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
       </div>

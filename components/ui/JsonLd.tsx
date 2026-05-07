@@ -44,7 +44,7 @@ export function CaseStudyJsonLd({
   const data = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
-    name: `${name} — Social Media Case Study`,
+    name: `${name}, Social Media Case Study`,
     description,
     url: `https://fiftyandfive.com${url}`,
     author: { '@id': 'https://fiftyandfive.com/#organization' },

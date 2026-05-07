@@ -28,7 +28,7 @@ export function BrandColorHero({
       className={`relative w-full overflow-hidden rounded-[inherit] ${className}`}
       style={{ aspectRatio: aspect, background: bg }}
       role="img"
-      aria-label={`${client} — ${verticalLabel} case study`}
+      aria-label={`${client}, ${verticalLabel} case study`}
     >
       <div
         className="absolute right-5 top-4 md:right-9 md:top-7 text-right font-mono leading-[1.7]"

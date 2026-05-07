@@ -5,7 +5,7 @@ import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About Lucas Vandenberg — 18 Years, 215+ Brands',
+  title: 'About Lucas Vandenberg, 18 Years, 215+ Brands',
   description:
     'The boutique agency Fortune 500s use. Founded 2008. 215+ brands across 5 continents. Meet the team behind Fifty & Five.',
   alternates: {
@@ -13,19 +13,19 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'About Lucas Vandenberg | 18 Years, 215+ Brands | Fifty & Five',
-    description: 'Founded by Lucas Vandenberg in 2009. 18 years building Fifty & Five into a boutique senior-led agency. 215+ brands, Orlando FL. From Microsoft to local restaurants.',
+    description: 'Founded by Lucas Vandenberg in 2009. 18 years building Fifty & Five into a boutique senior-led agency. 215+ brands. Orlando FL. From Microsoft to local restaurants.',
     url: 'https://fiftyandfive.com/about',
   },
 };
 
 const TIMELINE: { year: string; text: string }[] = [
-  { year: '2008', text: 'Started managing social media for brands — pre-Instagram, pre-"social media manager" as a job title.' },
+  { year: '2008', text: 'Started managing social media for brands, pre-Instagram, pre-"social media manager" as a job title.' },
   { year: '2009', text: 'Fifty & Five LLC formed.' },
-  { year: '2010', text: 'Axe / Unilever product launch — Twitter takeover + experiential activations.' },
-  { year: '2011', text: 'Mezzacorona retainer begins — a decade-long run as the brand\u2019s social lead.' },
+  { year: '2010', text: 'Axe / Unilever product launch, Twitter takeover + experiential activations.' },
+  { year: '2011', text: 'Mezzacorona retainer begins, a decade-long run as the brand\u2019s social lead.' },
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
-  { year: '2013', text: 'Hong Kong Tourism Board — first travel-vertical engagement, opens the category.' },
-  { year: '2016', text: 'Enterprise Holdings — 6 brands, 2 markets, simultaneously.' },
+  { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
+  { year: '2016', text: 'Enterprise Holdings, 6 brands, 2 markets, simultaneously.' },
   { year: '2020', text: 'Kendall-Jackson partnership begins.' },
   { year: '2023', text: 'Strategic shift: senior-led, AI-augmented model.' },
   { year: '2026', text: 'Leaner. Faster. Sharper than ever.' },
@@ -46,7 +46,7 @@ export default function AboutPage() {
         />
         <SimpleReveal delay={0.4}>
           <p className="mt-5 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-            Lucas Vandenberg — Founder
+            Lucas Vandenberg, Founder
           </p>
         </SimpleReveal>
       </section>
@@ -60,7 +60,7 @@ export default function AboutPage() {
                   aspect="3/4"
                   colorKey="tech"
                   src="/images/people/lucas.jpg"
-                  label="Portrait — Lucas Vandenberg"
+                  label="Portrait, Lucas Vandenberg"
                   className="rounded-[12px]"
                   alt="Lucas Vandenberg, Founder of Fifty & Five"
                 />
@@ -69,7 +69,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-7 text-body-lg text-text-secondary leading-[1.75] space-y-6">
             <p>
-              I started managing social media for brands in 2008 — before Instagram existed, before
+              I started managing social media for brands in 2008, before Instagram existed, before
               &ldquo;social media manager&rdquo; was a job title, and before most agencies had
               figured out that Facebook wasn&rsquo;t just a place for college kids.
             </p>
@@ -79,11 +79,11 @@ export default function AboutPage() {
               Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
             </p>
             <p>
-              We&rsquo;ve run the full agency playbook — the hires, the overhead, the layers of
+              We&rsquo;ve run the full agency playbook, the hires, the overhead, the layers of
               account management between the strategist and the client. We made a deliberate
               choice to build for what comes next: senior principals leading every engagement,
               backed by an in-house bench of senior specialists when the work calls for their
-              depth, and augmented by AI as a strategic layer — not a junior-staff replacement.
+              depth, and augmented by AI as a strategic layer, not a junior-staff replacement.
               The model is built for the next decade, not the last one.
             </p>
             <p>
@@ -96,7 +96,7 @@ export default function AboutPage() {
             <p>
               I&rsquo;m based in Orlando. I&rsquo;m the President of the SoDo Main Street Board.
               I&rsquo;ve got two kids (Penny and Koen, 11). And I still genuinely love this work
-              after 18 years — which, in this industry, is the rarest credential of all.
+              after 18 years, which, in this industry, is the rarest credential of all.
             </p>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
           />
           <p className="mt-6 text-body-lg text-text-secondary leading-[1.6] max-w-2xl">
             Lucas leads every engagement. When the work calls for depth outside social strategy,
-            Fifty &amp; Five brings in a short list of vetted specialists — each a principal in
+            Fifty &amp; Five brings in a short list of vetted specialists, each a principal in
             their own right, each running their own practice. You get the right senior for the
             work, sourced per engagement. No bench. No markup.
           </p>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 The technical partner when the stack is the bottleneck.
               </h3>
               <p className="mt-4 text-body text-text-secondary">
-                MIT-educated engineer-founder running a boutique digital-transformation studio —
+                MIT-educated engineer-founder running a boutique digital-transformation studio,
                 custom web builds, headless stacks, and AI-assisted automation. Brought in when
                 the site, the CMS, or the data plumbing needs senior hands.
               </p>
@@ -180,7 +180,7 @@ export default function AboutPage() {
               <p className="mt-4 text-body text-text-secondary">
                 A long-standing creative partner for branding and media buying, paired with a
                 video studio for event, short-form, and social-native content. Brought in when the
-                work needs craft — not just more assets in the queue.
+                work needs craft, not just more assets in the queue.
               </p>
             </GlassCard>
           </SimpleReveal>

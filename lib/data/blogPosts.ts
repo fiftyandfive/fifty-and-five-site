@@ -1,4 +1,4 @@
-// Auto-generated from Wix blog — 29 posts
+// Auto-generated from Wix blog, 29 posts
 // Run `node add-blog-section.mjs` to regenerate
 
 export interface BlogPost {
@@ -40,7 +40,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-19',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/UgWsOBYA4VE.webp',
-    excerpt: "Boutique fitness studios live and die by local community \u2014 and social media is the front door. A combined paid + organic playbook for studios spending $500\u2013$2,000/month.",
+    excerpt: "Boutique fitness studios live and die by local community, and social media is the front door. A combined paid + organic playbook for studios spending $500\u2013$2,000/month.",
     category: 'Social Media Strategy',
   },
   {
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-19',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/FuBgE---3sL.webp',
-    excerpt: "Managing social for 6 brands across 2 markets, or 9 properties with different demographics \u2014 that\u2019s where most agencies fall apart. The systems-first approach that makes it work.",
+    excerpt: "Managing social for 6 brands across 2 markets, or 9 properties with different demographics, that\u2019s where most agencies fall apart. The systems-first approach that makes it work.",
     category: 'Social Media Strategy',
   },
   {
@@ -80,7 +80,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-19',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/owDqV-vn9cO.webp',
-    excerpt: "Orlando isn\u2019t just a tourism market \u2014 it\u2019s THE tourism market. Hospitality brands here need an agency embedded in the market, not a remote team that treats Orlando like any other city.",
+    excerpt: "Orlando isn\u2019t just a tourism market, it\u2019s THE tourism market. Hospitality brands here need an agency embedded in the market, not a remote team that treats Orlando like any other city.",
     category: 'Agency',
   },
   {
@@ -90,7 +90,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-19',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/3ewi5oHyPON.webp',
-    excerpt: "AI can write captions and analyze performance \u2014 but it can\u2019t replace the strategist who knows why a brand should say one thing and not another. The practical reality of AI in social media in 2026.",
+    excerpt: "AI can write captions and analyze performance, but it can\u2019t replace the strategist who knows why a brand should say one thing and not another. The practical reality of AI in social media in 2026.",
     category: 'AI & Automation',
   },
   {
@@ -110,7 +110,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-04-19',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/JIotU0DwhLc.webp',
-    excerpt: "The hardest social media challenge isn\u2019t building from zero \u2014 it\u2019s modernizing a brand with 50+ years of equity without alienating the existing community.",
+    excerpt: "The hardest social media challenge isn\u2019t building from zero, it\u2019s modernizing a brand with 50+ years of equity without alienating the existing community.",
     category: 'Social Media Strategy',
   },
   {
@@ -120,7 +120,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-01-27',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/dGiEqaitHur.webp',
-    excerpt: "The travel agents who thrive in 2026 aren't just booking wizards — they're relationship architects. Five retention strategies that transform one-time clients into lifelong advocates.",
+    excerpt: "The travel agents who thrive in 2026 aren't just booking wizards, they're relationship architects. Five retention strategies that transform one-time clients into lifelong advocates.",
     category: 'Travel & Hospitality',
   },
   {
@@ -170,7 +170,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-01-07',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/6sBtl20JIo4.webp',
-    excerpt: "Each property tells a different story — and requires a completely different approach to reach its audience. How we speak both languages fluently.",
+    excerpt: "Each property tells a different story, and requires a completely different approach to reach its audience. How we speak both languages fluently.",
     category: 'Case Studies',
   },
   {
@@ -200,7 +200,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-11-14',
     minutesToRead: 5,
     heroImage: 'https://cdn.marblism.com/kAzJLEt17JU.webp',
-    excerpt: "With great AI power comes great responsibility to stay authentic. The spectacular wins and the cringe-worthy fails — and what separates them.",
+    excerpt: "With great AI power comes great responsibility to stay authentic. The spectacular wins and the cringe-worthy fails, and what separates them.",
     category: 'AI & Automation',
   },
   {
@@ -210,7 +210,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-08-18',
     minutesToRead: 4,
     heroImage: 'https://marblism-ai-agents-public.s3.us-west-2.amazonaws.com/public/apps/3af4e54e-6c6c-476b-ad8d-4508e6a30b56/sessions/f3efe3fe-b07d-42f5-80be-6c6997992b9a/agent-output/ba9cabcf-bbce-4b27-8574-2d88f585b894-image-update.webp',
-    excerpt: "From studying spirits to shaping brands — why wine, spirits, and beverage companies trust Fifty & Five with their social media presence.",
+    excerpt: "From studying spirits to shaping brands, why wine, spirits, and beverage companies trust Fifty & Five with their social media presence.",
     category: 'Agency',
   },
   {
@@ -250,7 +250,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-07-15',
     minutesToRead: 5,
     heroImage: 'https://static.wixstatic.com/media/c4e957_52aef91a03eb4424b7be42b145aebeae~mv2.webp',
-    excerpt: "The end of the polished era. Why raw, real content outperforms pixel-perfect posts — and how to embrace imperfection strategically.",
+    excerpt: "The end of the polished era. Why raw, real content outperforms pixel-perfect posts, and how to embrace imperfection strategically.",
     category: 'Social Media Strategy',
   },
   {
@@ -260,7 +260,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-07-08',
     minutesToRead: 5,
     heroImage: 'https://static.wixstatic.com/media/c4e957_a1364ed351f04536afcc71e4faf7a3a4~mv2.webp',
-    excerpt: "Selecting the right social media marketing agency isn't just a business decision — it's a strategic investment. Here's how to get it right.",
+    excerpt: "Selecting the right social media marketing agency isn't just a business decision, it's a strategic investment. Here's how to get it right.",
     category: 'Agency',
   },
   {
@@ -270,7 +270,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-07-01',
     minutesToRead: 5,
     heroImage: 'https://static.wixstatic.com/media/c4e957_6847563866624d05a7ae7adddb07e2cb~mv2.webp',
-    excerpt: "In a world where attention is the ultimate currency, short-form video isn't just surviving — it's thriving.",
+    excerpt: "In a world where attention is the ultimate currency, short-form video isn't just surviving, it's thriving.",
     category: 'Social Media Strategy',
   },
   {
@@ -290,7 +290,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-06-25',
     minutesToRead: 5,
     heroImage: 'https://static.wixstatic.com/media/c4e957_d9397fe75df24f51a107b7749ac426c4~mv2.webp',
-    excerpt: "From posting status updates to AI-powered everything — what the next wave of social media intelligence means for your brand.",
+    excerpt: "From posting status updates to AI-powered everything, what the next wave of social media intelligence means for your brand.",
     category: 'AI & Automation',
   },
   {

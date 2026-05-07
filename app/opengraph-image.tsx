@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'Fifty & Five — The boutique agency Fortune 500s use.';
+export const alt = 'Fifty & Five, The boutique agency Fortune 500s use.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

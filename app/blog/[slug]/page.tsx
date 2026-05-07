@@ -130,7 +130,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <BreadcrumbJsonLd post={post} />
 
       <main className="min-h-screen bg-black text-white">
-        {/* Hero Image — full width, no text overlay */}
+        {/* Hero Image, full width, no text overlay */}
         <section className="w-full">
           <div className="w-full max-h-[560px] overflow-hidden bg-neutral-900">
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -142,7 +142,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        {/* Title + Meta — clean dark background, always readable */}
+        {/* Title + Meta, clean dark background, always readable */}
         <section className="px-6 pt-10 pb-8">
           <div className="mx-auto max-w-3xl">
             {/* Breadcrumbs */}

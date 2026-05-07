@@ -65,7 +65,7 @@ export function ContactForm() {
       <Field label="Company / Brand" name="company" />
       <Field label="What are you looking for?" name="message" as="textarea" />
 
-      {/* Honeypot — hidden from users, bots fill it */}
+      {/* Honeypot, hidden from users, bots fill it */}
       <div aria-hidden className="hidden">
         <label>
           Website

@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: 'Invalid JSON' }, { status: 400 });
   }
 
-  // Honeypot — bots fill hidden fields. Silently accept and drop.
+  // Honeypot, bots fill hidden fields. Silently accept and drop.
   if (body.honey && body.honey.trim() !== '') {
     return NextResponse.json({ ok: true });
   }
@@ -57,7 +57,7 @@ export async function POST(req: Request) {
       from,
       to,
       replyTo: email,
-      subject: `New inquiry — ${name}${company ? ` (${company})` : ''}`,
+      subject: `New inquiry, ${name}${company ? ` (${company})` : ''}`,
       html: `
         <div style="font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.6;color:#111">
           <h2 style="margin:0 0 12px;font-family:Georgia,serif;font-weight:400">New inquiry via fiftyandfive.com</h2>

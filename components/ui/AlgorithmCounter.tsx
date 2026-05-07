@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 
 /**
  * Quiet counter for "Algorithm Updates Survived." Unlike the
- * coffee/cork counters, this one doesn't blur or tick fast — the
+ * coffee/cork counters, this one doesn't blur or tick fast, the
  * whole point is that the number is small, real, and earned.
  * It animates up once on view, then bumps +1 every 25–60s as a
  * subtle nod to the fact that something is always changing under us.

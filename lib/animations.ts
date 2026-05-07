@@ -1,5 +1,5 @@
 // Motion variants + spring configs
-// Framer Motion rebranded to "motion" — import from 'motion/react'
+// Framer Motion rebranded to "motion", import from 'motion/react'
 
 export const springSnappy = { stiffness: 400, damping: 25, mass: 0.5 };
 export const springSmooth = { stiffness: 100, damping: 20, mass: 0.8 };
