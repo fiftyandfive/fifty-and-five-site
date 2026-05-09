@@ -1,20 +1,16 @@
 import Link from 'next/link';
-import { AuroraBackground } from '@/components/ui/AuroraBackground';
-import { SpotlightEffect } from '@/components/ui/SpotlightEffect';
-import { MagneticButton } from '@/components/ui/MagneticButton';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { AlgorithmCounter } from '@/components/ui/AlgorithmCounter';
 import { PlatformGraveyard } from '@/components/ui/PlatformGraveyard';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
-import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
 import { Testimonials } from '@/components/ui/Testimonials';
-import { SITE } from '@/lib/constants';
+import { TypewriterHero } from '@/components/ui/TypewriterHero';
 import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
@@ -92,61 +88,7 @@ export default function HomePage() {
         }}
       />
       {/* HERO */}
-      <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary">
-        <AuroraBackground />
-        <SpotlightEffect />
-        <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
-          <SimpleReveal>
-            <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.18em]">
-              {SITE.wordmark}, senior-led since 2008
-            </div>
-          </SimpleReveal>
-
-          <AnimatedHeadline
-            as="h1"
-            text={'The boutique agency\nFortune 500s use.'}
-            className="mt-8 font-serif text-display text-text-primary max-w-5xl"
-            stagger={0.06}
-          />
-
-          <SimpleReveal delay={0.55}>
-            <p className="mt-6 font-mono text-caption uppercase text-accent tracking-[0.15em]">
-              215+ brands · 5 continents · senior-led, no junior handoffs
-            </p>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.7}>
-            <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-              Senior-led social and content for 215+ brands across 5 continents. Microsoft,
-              Kendall-Jackson, Hasbro, Mezzacorona, Enterprise Holdings are who'd run
-              yours. Same hands since 2008.
-              Decade-long retainers, not 6-month engagements.
-            </p>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.85}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <MagneticButton
-                href="/work"
-                variant="primary"
-                size="large"
-                trackName="Hero CTA, See the Work"
-              >
-                See the Work →
-              </MagneticButton>
-              <MagneticButton
-                href="/contact"
-                variant="secondary"
-                size="large"
-                trackName="Hero CTA, Let's Talk"
-              >
-                Let&rsquo;s Talk
-              </MagneticButton>
-            </div>
-          </SimpleReveal>
-        </div>
-        <ScrollIndicator />
-      </section>
+      <TypewriterHero />
 
       {/* Client list lives in the global StockTicker (fixed bottom chrome) */}
 
