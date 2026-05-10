@@ -6,9 +6,10 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { SITE } from '@/lib/constants';
 
 const SETUP_LINES = [
-  "You're paying for social this quarter.",
-  'What did it do last week?',
-  "If you can't answer in one sentence, that's the problem.",
+  'Your agency sent the monthly report.',
+  "You didn't open it.",
+  'You already know what it says.',
+  'Nothing changed.',
 ];
 
 const CHAR_DELAY = 50;
@@ -127,7 +128,7 @@ export function TypewriterHero() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, ease }}
             >
-              Activity isn&rsquo;t an outcome.
+              That&rsquo;s expensive silence.
             </motion.h1>
           )}
         </AnimatePresence>
@@ -141,8 +142,9 @@ export function TypewriterHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease }}
             >
-              We report what moved revenue, retention, and reach&nbsp;&mdash;
-              in language a CFO can defend without flinching.
+              You&rsquo;re posting five times a week because someone said you should.
+              We start with what converts and cut what doesn&rsquo;t&nbsp;&mdash;
+              even if that means posting less and spending smarter.
             </motion.p>
           )}
         </AnimatePresence>
