@@ -12,25 +12,25 @@ import { Analytics } from '@/components/layout/Analytics';
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
   title: {
-    default: 'Fifty & Five | Senior-Led Social Media Agency | Orlando, FL | 215+ Brands Since 2008',
+    default: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
     template: '%s | Fifty & Five',
   },
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'The boutique agency Fortune 500s use. Senior-led social and content for 215+ brands across 5 continents. Microsoft to Mezzacorona, since 2008.',
+  description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
   openGraph: {
     type: 'website',
-    title: 'Fifty & Five | Senior-Led Social Media Agency',
+    title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
     description:
-      'The boutique agency Fortune 500s use. 215+ brands across 5 continents. Senior-led since 2008.',
+      'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fifty & Five | Senior-Led Social Media Agency',
-    description: 'The boutique agency Fortune 500s use. 215+ brands across 5 continents. Senior-led since 2008.',
+    title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
+    description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
   },
   icons: {
     icon: [
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`dark ${GeistMono.variable}`}
     >
       <head>
-        
+
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
@@ -65,14 +65,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   url: 'https://fiftyandfive.com',
                   logo: 'https://fiftyandfive.com/logo.svg',
                   image: 'https://fiftyandfive.com/opengraph-image',
-                  description: 'The boutique agency Fortune 500s use. Senior-led social media and content for 215+ brands across 5 continents since 2008.',
+                  description: 'The boutique agency Fortune 500s call. Senior-led social media and content for 215+ brands across 5 continents since 2008.',
                   foundingDate: '2008',
                   email: 'lucas@fiftyandfive.com',
                   founder: {
                     '@type': 'Person',
                     '@id': 'https://fiftyandfive.com/#founder',
                     name: 'Lucas Vandenberg',
-                    jobTitle: 'Founder and Principal',
+                    jobTitle: 'Founding Principal',
                     url: 'https://fiftyandfive.com/about',
                     sameAs: ['https://www.linkedin.com/in/LucasV/'],
                   },
@@ -118,9 +118,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Influencer Marketing',
                     'Brand Strategy',
                   ],
-                  priceRange: '$3,000 - $7,500/mo',
+                  priceRange: '$1,500 - $50,000+/mo',
                   numberOfEmployees: { '@type': 'QuantitativeValue', value: '1-10' },
-                  slogan: 'The boutique agency Fortune 500s use.',
+                  slogan: 'The boutique agency Fortune 500s call.',
                   sameAs: [
                     'https://www.linkedin.com/company/fiftyandfive',
                     'https://www.linkedin.com/in/LucasV/',

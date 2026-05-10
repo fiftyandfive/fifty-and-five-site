@@ -6,6 +6,14 @@ import { trackEvent } from '@/components/layout/Analytics';
 
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
+const BUDGET_OPTIONS = [
+  'Under $3K',
+  '$3K–$10K',
+  '$10K–$25K',
+  '$25K+',
+  'Not sure yet',
+];
+
 export function ContactForm() {
   const [state, setState] = useState<State>('idle');
   const [error, setError] = useState<string | null>(null);
@@ -20,7 +28,7 @@ export function ContactForm() {
           Message received.
         </h3>
         <p className="mt-3 text-body text-text-secondary">
-          Typical response time: same day. Want to skip the back-and-forth? Book a time below.
+          Typical response time: same day. Want to skip the back-and-forth? Book a time above.
         </p>
       </div>
     );
@@ -38,6 +46,7 @@ export function ContactForm() {
           name: String(fd.get('name') || ''),
           email: String(fd.get('email') || ''),
           company: String(fd.get('company') || ''),
+          budget: String(fd.get('budget') || ''),
           message: String(fd.get('message') || ''),
           honey: String(fd.get('website') || ''),
         };
@@ -51,6 +60,7 @@ export function ContactForm() {
           if (!res.ok || !data.ok) throw new Error(data.error || 'Submission failed');
           trackEvent('Contact Form Submit', {
             company: payload.company || '(none)',
+            budget: payload.budget || '(none)',
           });
           setState('success');
         } catch (err) {
@@ -63,6 +73,28 @@ export function ContactForm() {
       <Field label="Name" name="name" required />
       <Field label="Email" name="email" type="email" required />
       <Field label="Company / Brand" name="company" />
+
+      <label className="block">
+        <span className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+          Monthly social budget <span className="text-accent">*</span>
+        </span>
+        <select
+          name="budget"
+          required
+          className="mt-2 w-full bg-transparent border border-glass-border rounded-lg px-4 py-3 text-body text-text-primary focus:outline-none focus:border-accent transition-colors appearance-none"
+          defaultValue=""
+        >
+          <option value="" disabled className="bg-bg-primary text-text-tertiary">
+            Select a range
+          </option>
+          {BUDGET_OPTIONS.map((opt) => (
+            <option key={opt} value={opt} className="bg-bg-primary text-text-primary">
+              {opt}
+            </option>
+          ))}
+        </select>
+      </label>
+
       <Field label="What are you looking for?" name="message" as="textarea" />
 
       {/* Honeypot, hidden from users, bots fill it */}
@@ -75,7 +107,7 @@ export function ContactForm() {
 
       <div className="pt-2 flex items-center gap-4 flex-wrap">
         <MagneticButton type="submit" variant="primary" size="large">
-          {state === 'submitting' ? 'Sending…' : 'Send It →'}
+          {state === 'submitting' ? 'Sending…' : 'Send →'}
         </MagneticButton>
         {state === 'error' && (
           <span className="text-meta text-[#FF6B6B]">
