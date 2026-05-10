@@ -1,102 +1,90 @@
 'use client';
 
 import Image from 'next/image';
-import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
+import Link from 'next/link';
+import { useRef } from 'react';
+import { motion, useInView } from 'motion/react';
 import {
   TESTIMONIALS,
   CLUTCH_PROFILE_URL,
   type Testimonial,
 } from '@/lib/data/testimonials';
 
-function Stars({ count = 5 }: { count?: number }) {
-  return (
-    <div className="flex items-center gap-0.5 text-accent" aria-label={`${count} out of 5 stars`}>
-      {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-          <path d="M12 2l2.9 6.9 7.1.5-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.4l7.1-.5L12 2z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
+function QuoteViewport({ t }: { t: Testimonial }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-function Card({ t, delay }: { t: Testimonial; delay: number }) {
   return (
-    <SimpleReveal delay={delay}>
-      <figure className="group relative h-full rounded-[20px] border border-glass-border bg-glass-bg p-7 md:p-8 flex flex-col">
-        <span
-          aria-hidden
-          className="absolute -top-3 left-6 font-serif text-[64px] leading-none text-accent/60 select-none"
-        >
-          &ldquo;
-        </span>
-        <Stars count={t.rating} />
-        <blockquote className="mt-5 font-serif text-[22px] md:text-[24px] leading-[1.25] tracking-[-0.02em] text-text-primary">
-          {t.quote}
-        </blockquote>
-        <div className="mt-auto pt-6">
-          <figcaption className="pt-5 border-t border-glass-border flex items-center gap-4">
+    <motion.div
+      ref={ref}
+      className="min-h-[100svh] flex items-center bg-[#F4F1EA]"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="container-edge py-24 md:py-32 w-full">
+        <div className="max-w-prose mx-auto text-center">
+          <hr className="border-t border-dashed border-[#171511]/20 my-0" />
+
+          <blockquote className="mt-10 font-serif text-[clamp(28px,5vw,64px)] leading-[1.15] tracking-[-0.02em] text-[#171511]">
+            &ldquo;{t.quote}&rdquo;
+          </blockquote>
+
+          <hr className="border-t border-dashed border-[#171511]/20 my-10" />
+
+          <div className="flex flex-col items-center gap-4">
             <Image
               src={t.avatarSrc}
               alt={t.author}
-              width={80}
-              height={80}
-              className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+              width={160}
+              height={160}
+              className="w-20 h-20 rounded-full object-cover"
             />
             <div>
               <a
                 href={t.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-[18px] tracking-[-0.02em] text-text-primary hover:underline"
+                className="font-mono text-[14px] uppercase tracking-[0.12em] text-[#171511] hover:text-accent transition-colors"
               >
-                {t.author}
+                {t.author} ↗
               </a>
-              <div className="mt-1 font-mono text-caption uppercase tracking-[0.12em] text-text-tertiary">
+              <div className="mt-1 text-[14px] text-[#171511]/60">
                 {t.title}
               </div>
             </div>
-          </figcaption>
-          <a
-            href={t.clutchUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.12em] text-accent hover:text-accent-light transition-colors"
-          >
-            Verified on Clutch ↗
-          </a>
+            <a
+              href={t.clutchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[11px] uppercase tracking-[0.12em] text-accent hover:opacity-70 transition-opacity"
+            >
+              VERIFIED ON CLUTCH ↗
+            </a>
+          </div>
+
+          <hr className="border-t border-dashed border-[#171511]/20 mt-10" />
         </div>
-      </figure>
-    </SimpleReveal>
+      </div>
+    </motion.div>
   );
 }
 
 export function Testimonials() {
   return (
-    <section className="container-edge py-24 md:py-32">
-      <div className="flex items-end justify-between flex-wrap gap-6">
-        <div>
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            5.0 on Clutch
-          </div>
-          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em] max-w-3xl">
-            What clients put in writing.
-          </h2>
-        </div>
-        <a
+    <section>
+      {TESTIMONIALS.map((t) => (
+        <QuoteViewport key={t.company} t={t} />
+      ))}
+      <div className="bg-[#F4F1EA] py-8 text-center">
+        <Link
           href={CLUTCH_PROFILE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light transition-colors"
+          className="font-mono text-[12px] uppercase tracking-[0.12em] text-[#171511]/50 hover:text-accent transition-colors"
         >
-          Read all reviews on Clutch →
-        </a>
-      </div>
-
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
-        {TESTIMONIALS.map((t, i) => (
-          <Card key={t.company} t={t} delay={i * 0.08} />
-        ))}
+          Read all reviews on Clutch ↗
+        </Link>
       </div>
     </section>
   );
