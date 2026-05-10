@@ -5,16 +5,21 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Services | Social Media, Content Strategy, Paid Media',
+  title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
   description:
-    'Senior-led social media management, content strategy, and paid media for brands that want execution without the holding-company markup. Retainers from $3,000/mo.',
+    'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
   alternates: {
     canonical: 'https://fiftyandfive.com/services',
   },
   openGraph: {
-    title: 'Services | Social Media Management & Content Strategy | Fifty & Five',
-    description: 'Social media management, content strategy, community management, and paid social advertising. Retainers from $3,000 to $7,500/mo. Principal-led, zero junior handoffs.',
+    title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
+    description: 'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
     url: 'https://fiftyandfive.com/services',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
+    description: 'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
   },
 };
 
@@ -38,10 +43,10 @@ const PILLARS = [
       'Every strategy deck includes cultural positioning analysis for U.S. growth markets. Miami, Houston, LA, Phoenix, San Antonio. Not a translation line item.',
   },
   {
-    kicker: 'Founder-forward',
+    kicker: 'Principal-led practices',
     head: 'You work directly with us. That’s the deal.',
     body:
-      'No layered account team translating your meeting notes two weeks later. The principals on the pitch are the principals on the Tuesday call in month seven.',
+      'Every engagement is staffed with a senior principal. The principal who pitches you is the principal on the Tuesday call in month seven.',
   },
   {
     kicker: 'Performance + authenticity',
@@ -72,6 +77,34 @@ const CORE_SERVICES = [
     body:
       'Meta, TikTok, and LinkedIn ad management for brands spending $1K–$25K/mo on paid social. Campaign strategy, creative direction, audience targeting, optimization, and transparent reporting. No hidden fees on ad spend.',
     meta: 'Typical engagement: Campaign strategy, creative, targeting, optimization, weekly reporting.',
+  },
+];
+
+const RETAINER_TIERS = [
+  {
+    tier: 'Studio',
+    range: '$1.5K – $2.5K',
+    proof: 'Boutique pilates · indie restaurants · neighborhood retail',
+  },
+  {
+    tier: 'Growth',
+    range: '$3K – $5K',
+    proof: 'Wine & spirits · mid-tier hospitality · lifestyle apparel',
+  },
+  {
+    tier: 'Premium',
+    range: '$6K – $10K',
+    proof: 'Premium wine · regional CPG · resort & destination',
+  },
+  {
+    tier: 'Scale',
+    range: '$15K – $25K',
+    proof: 'Multi-unit franchise programs · category-leading CPG',
+  },
+  {
+    tier: 'Enterprise',
+    range: '$30K – $50K+',
+    proof: 'Fortune 500 always-on · multi-brand, multi-market',
   },
 ];
 
@@ -150,6 +183,64 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* RETAINER LADDER — Change #9 */}
+      <section className="container-edge py-24 md:py-32">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            How we price
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="The Retainer Ladder. Five tiers. Same model."
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+        </div>
+
+        {/* Desktop table */}
+        <div className="mt-14 hidden md:block overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-glass-border">
+                <th className="text-left py-4 pr-6 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">Tier</th>
+                <th className="text-left py-4 pr-6 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">Monthly</th>
+                <th className="text-left py-4 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">Anchor Proof</th>
+              </tr>
+            </thead>
+            <tbody>
+              {RETAINER_TIERS.map((t) => (
+                <tr key={t.tier} className="border-b border-glass-border/50">
+                  <td className="py-5 pr-6 font-serif text-[22px] tracking-[-0.02em] text-text-primary">{t.tier}</td>
+                  <td className="py-5 pr-6 font-mono text-[15px] text-accent tracking-[0.02em]">{t.range}</td>
+                  <td className="py-5 text-body text-text-secondary">{t.proof}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Mobile cards */}
+        <div className="mt-14 md:hidden space-y-4">
+          {RETAINER_TIERS.map((t, i) => (
+            <SimpleReveal key={t.tier} delay={i * 0.06}>
+              <GlassCard>
+                <div className="font-serif text-[22px] tracking-[-0.02em] text-text-primary">{t.tier}</div>
+                <div className="mt-2 font-mono text-[15px] text-accent tracking-[0.02em]">{t.range}</div>
+                <div className="mt-3 text-body text-text-secondary">{t.proof}</div>
+              </GlassCard>
+            </SimpleReveal>
+          ))}
+        </div>
+
+        <SimpleReveal delay={0.3}>
+          <p className="mt-10 text-body text-text-secondary max-w-3xl leading-[1.7]">
+            A studio retainer at $2K/mo and an enterprise retainer at $50K+/mo do not run on
+            different operating principles inside Fifty &amp; Five. They run on the same Senior + AI
+            stack&nbsp;&mdash; the difference is volume, scope, and channel surface area.
+          </p>
+        </SimpleReveal>
+      </section>
+
+      {/* HOW WE WORK — updated to remove banned phrases */}
       <section className="container-edge py-24 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
@@ -165,15 +256,7 @@ export default function ServicesPage() {
               Every engagement starts with a conversation, not a proposal. We&rsquo;ll talk about
               what you&rsquo;re trying to accomplish, where your current social presence stands, and
               whether Fifty &amp; Five is actually the right fit. If it is, you&rsquo;ll get a clear
-              scope, a fixed monthly fee, and direct access to the person doing the work. No account
-              managers. No project coordinators. No surprise invoices.
-            </p>
-            <p>
-              Retainers typically range from{' '}
-              <span className="text-text-primary">$3,000 to $7,500 per month</span> depending on
-              scope, platforms, and whether paid media management is included. Project work is
-              available for brands that need a specific deliverable, audit, launch strategy, or
-              content sprint, without an ongoing commitment.
+              scope, a fixed monthly fee, and direct access to the senior team doing the work.
             </p>
           </div>
         </div>
@@ -181,37 +264,65 @@ export default function ServicesPage() {
 
       <section className="container-edge py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
-          <GlassCard className="h-full flex flex-col">
-            <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
-              What you won&rsquo;t find here
-            </div>
-            <ul className="mt-5 space-y-3 text-body text-text-secondary">
-              <li>, A 40-slide pitch deck.</li>
-              <li>, A team of six people where five are coordinators.</li>
-              <li>, A Slack channel that goes quiet after month two.</li>
-              <li>, A monthly report that takes longer to read than it took to write.</li>
-            </ul>
-          </GlassCard>
-          <GlassCard className="h-full flex flex-col">
-            <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-              What you will find
-            </div>
-            <ul className="mt-5 space-y-3 text-body text-text-primary">
-              <li>, One phone number.</li>
-              <li>, One senior principal, start to finish.</li>
-              <li>, Specialists on the bench when the work calls for it.</li>
-              <li>, Direct answers.</li>
-              <li>
-               , The kind of experience that usually requires a $30K/mo retainer, at a fraction of
-                the cost.
-              </li>
-            </ul>
-          </GlassCard>
+          <SimpleReveal className="h-full">
+            <GlassCard className="h-full flex flex-col">
+              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+                What you won&rsquo;t find here
+              </div>
+              <ul className="mt-5 space-y-4 text-body text-text-secondary">
+                <li className="flex gap-3 items-start">
+                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
+                  A 40-slide pitch deck.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
+                  A team of six people where five are coordinators.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
+                  A Slack channel that goes quiet after month two.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
+                  A monthly report that takes longer to read than it took to write.
+                </li>
+              </ul>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.1} className="h-full">
+            <GlassCard className="h-full flex flex-col">
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                What you will find
+              </div>
+              <ul className="mt-5 space-y-4 text-body text-text-primary">
+                <li className="flex gap-3 items-start">
+                  <span className="text-accent mt-1 shrink-0">✓</span>
+                  One phone number.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-accent mt-1 shrink-0">✓</span>
+                  One senior principal, start to finish.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-accent mt-1 shrink-0">✓</span>
+                  Specialists on the bench when the work calls for it.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-accent mt-1 shrink-0">✓</span>
+                  Direct answers.
+                </li>
+                <li className="flex gap-3 items-start">
+                  <span className="text-accent mt-1 shrink-0">✓</span>
+                  The kind of experience that usually requires a large-agency retainer, at a fraction of the cost.
+                </li>
+              </ul>
+            </GlassCard>
+          </SimpleReveal>
         </div>
       </section>
 
       <CTASection
-        headline="Let's see if it's a fit."
+        headline="Let&#8217;s see if it&#8217;s a fit."
         body="No proposals until we know it is. Just a conversation about what you're trying to build."
         ctaLabel="Start a Conversation →"
       />

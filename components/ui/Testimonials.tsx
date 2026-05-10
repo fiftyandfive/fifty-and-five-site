@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import {
   TESTIMONIALS,
@@ -30,17 +31,39 @@ function Card({ t, delay }: { t: Testimonial; delay: number }) {
           &ldquo;
         </span>
         <Stars count={t.rating} />
-        <blockquote className="mt-5 font-serif text-[22px] md:text-[24px] leading-[1.25] tracking-[-0.02em] text-text-primary">
+        <blockquote className="mt-5 font-serif text-[22px] md:text-[24px] leading-[1.25] tracking-[-0.02em] text-text-primary flex-1">
           {t.quote}
         </blockquote>
-        <figcaption className="mt-6 pt-5 border-t border-glass-border">
-          <div className="font-serif text-[18px] tracking-[-0.02em] text-text-primary">
-            {t.author}
-          </div>
-          <div className="mt-1 font-mono text-caption uppercase tracking-[0.12em] text-text-tertiary">
-            {t.title}
+        <figcaption className="mt-6 pt-5 border-t border-glass-border flex items-center gap-4">
+          <Image
+            src={t.avatarSrc}
+            alt={t.author}
+            width={80}
+            height={80}
+            className="w-10 h-10 rounded-full object-cover flex-shrink-0"
+          />
+          <div>
+            <a
+              href={t.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-serif text-[18px] tracking-[-0.02em] text-text-primary hover:underline"
+            >
+              {t.author}
+            </a>
+            <div className="mt-1 font-mono text-caption uppercase tracking-[0.12em] text-text-tertiary">
+              {t.title}
+            </div>
           </div>
         </figcaption>
+        <a
+          href={t.clutchUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.12em] text-accent hover:text-accent-light transition-colors"
+        >
+          Verified on Clutch ↗
+        </a>
       </figure>
     </SimpleReveal>
   );
@@ -68,7 +91,7 @@ export function Testimonials() {
         </a>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
         {TESTIMONIALS.map((t, i) => (
           <Card key={t.company} t={t} delay={i * 0.08} />
         ))}

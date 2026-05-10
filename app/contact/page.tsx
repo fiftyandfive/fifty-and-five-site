@@ -6,16 +6,21 @@ import { AuroraBackground } from '@/components/ui/AuroraBackground';
 import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Contact, Let\u2019s Talk',
+  title: 'Contact | Book a Working Session | Fifty & Five',
   description:
-    'No pitch decks. No proposals until we know it\u2019s a fit. Start a conversation with Fifty & Five.',
+    'No pitch decks. Same-day response. Paid pilot within 14 days. Book a 30-minute working session with the senior team.',
   alternates: {
     canonical: 'https://fiftyandfive.com/contact',
   },
   openGraph: {
-    title: 'Contact | Let\u2019s Talk Social Media Strategy | Fifty & Five',
-    description: 'Start a conversation about your social media strategy. Orlando-based, nationally serving 215+ brands. Typical response time: same day.',
+    title: 'Contact | Book a Working Session | Fifty & Five',
+    description: 'No pitch decks. Same-day response. Paid pilot within 14 days. Book a 30-minute working session with the senior team.',
     url: 'https://fiftyandfive.com/contact',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact | Book a Working Session | Fifty & Five',
+    description: 'No pitch decks. Same-day response. Paid pilot within 14 days. Book a 30-minute working session with the senior team.',
   },
 };
 
@@ -36,8 +41,8 @@ export default function ContactPage() {
           />
           <SimpleReveal delay={0.3}>
             <p className="mt-6 text-body-lg text-text-secondary max-w-2xl">
-              No pitch decks. No proposals until we know it&rsquo;s a fit. Just a conversation about
-              what you&rsquo;re trying to build and whether I can help.
+              No pitch decks. No proposals until we know it&rsquo;s a fit. Just a working session
+              about what you&rsquo;re building.
             </p>
           </SimpleReveal>
           <SimpleReveal delay={0.45}>
@@ -53,11 +58,28 @@ export default function ContactPage() {
 
       <section className="container-edge pb-32 pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Calendly FIRST — primary conversion path */}
           <SimpleReveal>
-            <ContactForm />
+            <div>
+              <CalendlyEmbed />
+              {/* Scarcity line — Change #8 */}
+              <p className="mt-6 text-body text-text-secondary text-center max-w-lg mx-auto">
+                We staff a limited number of new principal-led engagements per quarter.
+                Currently accepting Q3 2026 conversations.
+              </p>
+            </div>
           </SimpleReveal>
+
+          {/* Form SECOND — fallback path */}
           <SimpleReveal delay={0.15}>
-            <CalendlyEmbed />
+            <div>
+              <div className="mb-6 text-center lg:text-left">
+                <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                  Or send a note.
+                </div>
+              </div>
+              <ContactForm />
+            </div>
           </SimpleReveal>
         </div>
       </section>

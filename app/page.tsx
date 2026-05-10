@@ -1,12 +1,10 @@
 import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
-import { AlgorithmCounter } from '@/components/ui/AlgorithmCounter';
 import { PlatformGraveyard } from '@/components/ui/PlatformGraveyard';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
-import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
 import { Testimonials } from '@/components/ui/Testimonials';
@@ -56,7 +54,7 @@ export default function HomePage() {
                 name: 'What industries does Fifty & Five specialize in?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five specializes in 10 verticals: Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, and Entertainment. Notable industry credentials include Kendall-Jackson, Mezzacorona, and Penfolds in wine; Resorts World and the Hong Kong, Korea, and Macau Tourism Boards in hospitality; Blaze Pizza and Wolfgang\'s Steakhouse in restaurant; and Microsoft, Warner Bros., Hasbro, NETGEAR/Arlo in tech and entertainment.',
+                  text: 'Fifty & Five specializes in 10 verticals: Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, and Entertainment.',
                 },
               },
               {
@@ -64,7 +62,7 @@ export default function HomePage() {
                 name: 'How much does Fifty & Five charge?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five retainers start at $3,000 per month for ad management and scale to $7,500 per month for full-service social media management with content production. Pricing is principal-led with no junior account management markups.',
+                  text: 'Fifty & Five offers five retainer tiers from $1,500/mo (Studio) to $50,000+/mo (Enterprise). Every tier runs on the same Senior + AI operating model.',
                 },
               },
               {
@@ -72,7 +70,7 @@ export default function HomePage() {
                 name: 'What makes Fifty & Five different from other social media agencies?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five is one of the only boutique social media agencies with an enterprise client list including Microsoft, Hasbro, Warner Bros., Enterprise Holdings, and Tupperware. Every account is run senior-led with no junior team handoffs, the same model that has retained Fortune 500-tier clients for over a decade.',
+                  text: 'Fifty & Five is one of the only boutique social media agencies with an enterprise client list including Microsoft, Hasbro, Warner Bros., Enterprise Holdings, and Tupperware. Every account is run with senior-led practices and an AI-leveraged operating model.',
                 },
               },
               {
@@ -80,7 +78,7 @@ export default function HomePage() {
                 name: 'Does Fifty & Five work with international brands?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. Fifty & Five has worked with brands across 5 continents and 30+ countries, including Mezzacorona (Italy), Penfolds (Australia), Melora (New Zealand), Koenig (Germany), Happy Egg Co. (United Kingdom), Don Papa Rum (Philippines), and the Hong Kong, Korea, and Macau Tourism Boards.',
+                  text: 'Yes. Fifty & Five has worked with brands across 5 continents and 40+ countries, including Mezzacorona (Italy), Penfolds (Australia), Melora (New Zealand), Koenig (Germany), Happy Egg Co. (United Kingdom), Don Papa Rum (Philippines), and the Hong Kong, Korea, and Macau Tourism Boards.',
                 },
               },
             ],
@@ -90,151 +88,104 @@ export default function HomePage() {
       {/* HERO */}
       <TypewriterHero />
 
-      {/* Client list lives in the global StockTicker (fixed bottom chrome) */}
-
-      {/* STATS BAR */}
+      {/* STATS BAR — Change #6 */}
       <section className="container-edge py-28 md:py-36">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
           <Stat value={215} suffix="+" label="Brands Managed" />
-          <Stat value={5} label="Continents" />
-          <Stat value={18} label="Years in Social" />
-          <AlgorithmStat />
+          <div>
+            <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
+              <AnimatedCounter target={5} />
+            </div>
+            <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+              Continents · 40+ Countries
+            </div>
+          </div>
+          <Stat value={18} label="Years Social-First" />
+          <div>
+            <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
+              3+
+            </div>
+            <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+              Avg. Retainer Length (Yrs)
+            </div>
+          </div>
         </div>
       </section>
 
       {/* PLATFORMS WE'VE OUTLASTED */}
       <PlatformGraveyard />
 
-      {/* WHAT'S BROKEN, PAIN POINTS */}
-      <section className="relative container-edge py-24 md:py-32">
+      {/* THE RECEIPTS ROW — Duration depth */}
+      <section className="container-edge py-24 md:py-32">
         <div className="max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            You&rsquo;ve been here before
+            The moat
           </div>
           <AnimatedHeadline
             as="h2"
-            text={'Agencies break the same three ways.\nOurs doesn\u2019t.'}
+            text={'Most agencies sell projects.\nWe sell durations.'}
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
+          <SimpleReveal delay={0.15}>
+            <p className="mt-6 text-body-lg text-text-secondary leading-[1.6] max-w-2xl">
+              When we take a brand on, we don&rsquo;t show up for a quarter&nbsp;&mdash; we show up for a
+              decade. Once we hold the brand voice, the calendar cadence, the asset library, and the
+              institutional memory of which campaigns worked and why, replacing us costs the client
+              6&ndash;9 months of rebuild risk.
+            </p>
+          </SimpleReveal>
+          <SimpleReveal delay={0.25}>
+            <p className="mt-4 text-body text-text-tertiary leading-[1.7]">
+              That&rsquo;s why our retainers run long. Most of our clients are 3+ year partnerships.
+              The longest run more than ten.
+            </p>
+          </SimpleReveal>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
-          <SimpleReveal delay={0.0} className="h-full">
-            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                The bait-and-switch
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <SimpleReveal delay={0.0}>
+            <GlassCard className="h-full flex flex-col">
+              <div className="font-serif text-[48px] leading-none tracking-[-0.03em] text-accent">
+                10 yrs
               </div>
               <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                The principal sold you. The junior delivers.
+                Blaze Pizza
               </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                You bought a senior strategist. You got a 26-year-old learning on your brand. The
-                person who pitched you hasn&rsquo;t been on a call in six months.
+              <p className="mt-3 text-body text-text-secondary">
+                National restaurant program. Built and ran the social layer during Blaze&rsquo;s rise
+                to one of the fastest-growing chains in U.S. history.
               </p>
             </GlassCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.12} className="h-full">
-            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                The layer cake
+          <SimpleReveal delay={0.1}>
+            <GlassCard className="h-full flex flex-col">
+              <div className="font-serif text-[48px] leading-none tracking-[-0.03em] text-accent">
+                10 yrs
               </div>
               <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                You ask a question. Three people forward the email.
+                Mezzacorona
               </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                Account manager to traffic manager to coordinator to strategist. Your feedback gets
-                translated four times before it reaches the person doing the work.
+              <p className="mt-3 text-body text-text-secondary">
+                Italian wine portfolio. ~1M followers added across the portfolio over a decade-long
+                partnership.
               </p>
             </GlassCard>
           </SimpleReveal>
 
-          <SimpleReveal delay={0.24} className="h-full">
-            <GlassCard className="h-full flex flex-col border-l-2 border-l-accent/50">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                The billing game
+          <SimpleReveal delay={0.2}>
+            <GlassCard className="h-full flex flex-col">
+              <div className="font-serif text-[48px] leading-none tracking-[-0.03em] text-accent">
+                30+
               </div>
               <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
-                You&rsquo;re paying for hours. Not pattern recognition.
+                Wine &amp; Spirits Brands
               </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                40% of a traditional agency&rsquo;s billable hours get eaten by coordination. You
-                wrote the check for strategy. You got a timesheet.
+              <p className="mt-3 text-body text-text-secondary">
+                Across producers, distributors, and importers&nbsp;&mdash; the home vertical since 2008.
               </p>
             </GlassCard>
           </SimpleReveal>
-        </div>
-      </section>
-
-      {/* WHAT YOU GET, BUYER-FORWARD SOLUTION CARDS */}
-      <section className="relative container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            What you actually get
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Stop paying for agency theater. Start paying for the work."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-        </div>
-
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
-          <SimpleReveal delay={0.0} className="h-full">
-            <TiltCard tiltStrength={5} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <IconSingle />
-                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  Answers on the first call.
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
-                  No &ldquo;let me check with the team.&rdquo; The person on the call is the person
-                  doing the work. You get the decision, not a scheduled follow-up to get the
-                  decision.
-                </p>
-              </GlassCard>
-            </TiltCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.12} className="h-full">
-            <TiltCard tiltStrength={5} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <IconGrid />
-                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  A strategy that adjusts in real time.
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
-                  Not a PDF you review quarterly. A living plan that flexes when the feed shifts,
-                  when a platform changes its rules, when a competitor moves, because the
-                  strategist is the one shipping.
-                </p>
-              </GlassCard>
-            </TiltCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.24} className="h-full">
-            <TiltCard tiltStrength={5} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <IconSparkle />
-                <h3 className="mt-6 font-serif text-[26px] leading-[1.15] tracking-[-0.015em]">
-                  One name to hold accountable.
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
-                  One senior team. One direct line. The agency's reputation on every outcome, backed
-                  with an in-house bench of specialists when the work calls for depth outside social.
-                </p>
-              </GlassCard>
-            </TiltCard>
-          </SimpleReveal>
-        </div>
-
-        <div className="mt-10">
-          <Link
-            href="/services"
-            className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light transition-colors"
-          >
-            How we&rsquo;re different →
-          </Link>
         </div>
       </section>
 
@@ -320,7 +271,6 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Apple TV-style tile lineup: horizontal scroll on mobile, 3-across on tablet, 5x2 grid on desktop */}
         <div className="mt-12 -mx-6 md:mx-0">
           <div
             className="
@@ -345,7 +295,6 @@ export default function HomePage() {
                       '0 1px 0 rgba(255,255,255,0.08) inset, 0 10px 30px rgba(0,0,0,0.35)',
                   }}
                 >
-                  {/* gloss sheen */}
                   <div
                     aria-hidden
                     className="pointer-events-none absolute inset-0 opacity-60 mix-blend-overlay"
@@ -354,7 +303,6 @@ export default function HomePage() {
                         'radial-gradient(120% 80% at 20% 0%, rgba(255,255,255,0.25) 0%, transparent 55%)',
                     }}
                   />
-                  {/* content */}
                   <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-6">
                     <div className="flex items-start justify-between">
                       <span className="font-mono text-[10px] md:text-caption uppercase tracking-[0.18em] text-white/80">
@@ -396,43 +344,5 @@ function Stat({ value, suffix, label }: { value: number; suffix?: string; label:
         {label}
       </div>
     </div>
-  );
-}
-
-function AlgorithmStat() {
-  return (
-    <div>
-      <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
-        <AlgorithmCounter />
-      </div>
-      <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-        Algorithm Updates Survived
-      </div>
-    </div>
-  );
-}
-
-function IconSingle() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" className="text-accent">
-      <circle cx="12" cy="12" r="9" />
-      <circle cx="12" cy="12" r="3" />
-    </svg>
-  );
-}
-function IconGrid() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" className="text-accent">
-      {[0, 6, 12, 18].map((y) =>
-        [0, 6, 12, 18].map((x) => <circle key={`${x}-${y}`} cx={x + 3} cy={y + 3} r="1.2" />),
-      )}
-    </svg>
-  );
-}
-function IconSparkle() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
-      <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6" />
-    </svg>
   );
 }

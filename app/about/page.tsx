@@ -5,16 +5,21 @@ import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About Lucas Vandenberg, 18 Years, 215+ Brands',
+  title: 'About | 18 Years, 215 Brands | Fifty & Five',
   description:
-    'The boutique agency Fortune 500s use. Founded 2008. 215+ brands across 5 continents. Meet the team behind Fifty & Five.',
+    '215 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
-    title: 'About Lucas Vandenberg | 18 Years, 215+ Brands | Fifty & Five',
-    description: 'Founded by Lucas Vandenberg in 2009. 18 years building Fifty & Five into a boutique senior-led agency. 215+ brands. Orlando FL. From Microsoft to local restaurants.',
+    title: 'About | 18 Years, 215 Brands | Fifty & Five',
+    description: '215 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
     url: 'https://fiftyandfive.com/about',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About | 18 Years, 215 Brands | Fifty & Five',
+    description: '215 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   },
 };
 
@@ -22,7 +27,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2008', text: 'Started managing social media for brands, pre-Instagram, pre-"social media manager" as a job title.' },
   { year: '2009', text: 'Fifty & Five LLC formed.' },
   { year: '2010', text: 'Axe / Unilever product launch, Twitter takeover + experiential activations.' },
-  { year: '2011', text: 'Mezzacorona retainer begins, a decade-long run as the brand\u2019s social lead.' },
+  { year: '2011', text: 'Mezzacorona retainer begins, a decade-long run as the brand’s social lead.' },
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
   { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
   { year: '2016', text: 'Enterprise Holdings, 6 brands, 2 markets, simultaneously.' },
@@ -46,7 +51,7 @@ export default function AboutPage() {
         />
         <SimpleReveal delay={0.4}>
           <p className="mt-5 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-            Lucas Vandenberg, Founder
+            Lucas Vandenberg, Founding Principal
           </p>
         </SimpleReveal>
       </section>
@@ -62,24 +67,24 @@ export default function AboutPage() {
                   src="/images/people/lucas.jpg"
                   label="Portrait, Lucas Vandenberg"
                   className="rounded-[12px]"
-                  alt="Lucas Vandenberg, Founder of Fifty & Five"
+                  alt="Lucas Vandenberg, Founding Principal of Fifty & Five"
                 />
               </div>
             </SimpleReveal>
           </div>
           <div className="md:col-span-7 text-body-lg text-text-secondary leading-[1.75] space-y-6">
             <p>
-              I started managing social media for brands in 2008, before Instagram existed, before
-              &ldquo;social media manager&rdquo; was a job title, and before most agencies had
-              figured out that Facebook wasn&rsquo;t just a place for college kids.
+              Fifty &amp; Five started managing social media for brands in 2008, before Instagram
+              existed, before &ldquo;social media manager&rdquo; was a job title, and before most
+              agencies had figured out that Facebook wasn&rsquo;t just a place for college kids.
             </p>
             <p>
-              Since then, Fifty &amp; Five has run campaigns for 215+ brands across 15 verticals.
+              Since then, the team has run campaigns for 215+ brands across 15 verticals.
               Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Axe. Discovery Channel.
               Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
             </p>
             <p>
-              We&rsquo;ve run the full agency playbook, the hires, the overhead, the layers of
+              We&rsquo;ve run the full agency playbook&nbsp;&mdash; the hires, the overhead, the layers of
               account management between the strategist and the client. We made a deliberate
               choice to build for what comes next: senior principals leading every engagement,
               backed by an in-house bench of senior specialists when the work calls for their
@@ -87,17 +92,21 @@ export default function AboutPage() {
               The model is built for the next decade, not the last one.
             </p>
             <p>
-              The result is something most agencies can&rsquo;t offer: direct access to the person
-              who&rsquo;s actually done this 215 times before. No handoffs. No account managers
-              translating your feedback. No &ldquo;let me check with the team.&rdquo; Just the
-              senior team that built the plan, executing the plan, and adjusting the plan in real
-              time.
+              The result is something most agencies can&rsquo;t offer: direct access to the team
+              that&rsquo;s actually done this 215 times before. Senior-led practices, AI-leveraged.
+              Just the senior team that built the plan, executing the plan, and adjusting the plan
+              in real time.
             </p>
-            <p>
-              I&rsquo;m based in Orlando. I&rsquo;m the President of the SoDo Main Street Board.
+
+            {/* Attributed founder quote — "I" permitted here per brief */}
+            <blockquote className="border-l-2 border-accent/50 pl-6 italic text-text-primary">
+              &ldquo;I&rsquo;m based in Orlando. I&rsquo;m the President of the SoDo Main Street Board.
               I&rsquo;ve got two kids (Penny and Koen, 11). And I still genuinely love this work
-              after 18 years, which, in this industry, is the rarest credential of all.
-            </p>
+              after 18 years&nbsp;&mdash; which, in this industry, is the rarest credential of all.&rdquo;
+              <footer className="mt-3 not-italic font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+                &mdash; Lucas Vandenberg, Founding Principal
+              </footer>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -116,7 +125,7 @@ export default function AboutPage() {
             Lucas leads every engagement. When the work calls for depth outside social strategy,
             Fifty &amp; Five brings in a short list of vetted specialists, each a principal in
             their own right, each running their own practice. You get the right senior for the
-            work, sourced per engagement. No bench. No markup.
+            work, sourced per engagement.
           </p>
         </div>
 
@@ -154,22 +163,6 @@ export default function AboutPage() {
           </SimpleReveal>
 
           <SimpleReveal delay={0.16} className="h-full">
-            <GlassCard className="h-full flex flex-col">
-              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                Connected TV &amp; programmatic
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
-                The call when social alone won&rsquo;t move the number.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                Veteran ad-tech operators running a connected-TV advertising platform with
-                distribution across major smart-TV, SSP, and DSP partners. Brought in when the
-                brief calls for upper-funnel reach and measurable CTV pickup.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.24} className="h-full">
             <GlassCard className="h-full flex flex-col">
               <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
                 Creative &amp; video
@@ -232,9 +225,9 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        headline="Work with the person who built it."
-        body="No account managers. No handoffs. Just the senior team."
-        ctaLabel="Work With Me →"
+        headline="Work with the team that built it."
+        body="Senior-led practices, AI-leveraged. Just the senior team."
+        ctaLabel="Start a Conversation →"
       />
     </>
   );

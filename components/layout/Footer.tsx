@@ -91,8 +91,8 @@ export function Footer() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-glass-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-caption text-text-tertiary">
-          <div>© 2026 Fifty &amp; Five LLC</div>
-          <div>Built on too many glasses of wine and 18 years of strong opinions.</div>
+          <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
+          <div>Senior + AI · Since 2008 · 215 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
         </div>
       </div>
     </footer>

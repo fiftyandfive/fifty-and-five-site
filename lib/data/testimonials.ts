@@ -4,49 +4,44 @@ export type Testimonial = {
   title: string;
   company: string;
   rating: number;
-  // Optional: link to the specific review on Clutch
-  clutchUrl?: string;
+  avatarSrc: string;
+  linkedinUrl: string;
+  clutchUrl: string;
 };
 
-/**
- * Verified Clutch reviews. Ordered for narrative punch:
- * 1. Blaze Pizza leads with the hard stat (400% engagement).
- * 2. Barsha grounds it with craft + character.
- * 3. StreetStrider adds the "easy to work with" relational proof.
- * 4. Luxury Cosmetics closes with the one-line verdict.
- * Source: https://clutch.co/profile/fifty-five
- */
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      'They grew our engagement 400%. It doesn\u2019t feel like I\u2019m partnered with a large company, we have a real relationship, and we always have access to them.',
-    author: 'Director of Digital Growth',
-    title: 'Blaze Pizza',
+      'They grew our engagement 400%. It doesn’t feel like I’m partnered with a large company, we have a real relationship, and we always have access to them.',
+    author: 'Jerry Shen',
+    title: 'Director of Digital Growth, Blaze Pizza',
     company: 'Blaze Pizza',
     rating: 5,
+    avatarSrc: '/images/testimonials/jerry-shen.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/jerry-shen-18b33567/',
+    clutchUrl: 'https://clutch.co/go-to-review/53ab3856-8be0-447a-af60-829b9d354f0e/49452',
   },
   {
     quote:
-      'They\u2019ve grown our Instagram and Facebook presence, professional, creative, and a real pleasure to work with. The photos and videos they capture are beautiful and captivating.',
-    author: 'Co-Owner',
-    title: 'Barsha Life, LA Restaurant & Wine Bar',
+      'They’ve grown our Instagram and Facebook presence — professional, creative, and a real pleasure to work with. The photos and videos they capture are beautiful and captivating.',
+    author: 'Lenora Marouani',
+    title: 'Co-Owner, Barsha · LA Restaurant & Wine Bar',
     company: 'Barsha',
     rating: 5,
+    avatarSrc: '/images/testimonials/lenora-marouani.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/lenora-marouani-6b863a90/',
+    clutchUrl: 'https://clutch.co/go-to-review/53ab3856-8be0-447a-af60-829b9d354f0e/200533',
   },
   {
     quote:
       'Professional, organized, creative, smart, and consistently positive energy, which really matters when working with an agency. Thankful to have found this team.',
-    author: 'CMO',
-    title: 'StreetStrider',
+    author: 'Matt Kemper',
+    title: 'CMO, StreetStrider',
     company: 'StreetStrider',
     rating: 5,
-  },
-  {
-    quote: 'The team is exceptional, they overdeliver every time.',
-    author: 'Owner',
-    title: 'Luxury Cosmetics & Skincare Company',
-    company: 'Luxury Cosmetics',
-    rating: 5,
+    avatarSrc: '/images/testimonials/matt-kemper.jpg',
+    linkedinUrl: 'https://www.linkedin.com/in/matthew-kemper-levl/',
+    clutchUrl: 'https://clutch.co/go-to-review/53ab3856-8be0-447a-af60-829b9d354f0e/14204',
   },
 ];
 
