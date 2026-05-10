@@ -1,233 +1,197 @@
 import type { Metadata } from 'next';
-import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
-import { GlassCard } from '@/components/ui/GlassCard';
+import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About | 18 Years, 215 Brands | Fifty & Five',
+  title: 'About · Lucas Vandenberg · 18 Years · Fifty & Five',
   description:
-    '215 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
-  alternates: {
-    canonical: 'https://fiftyandfive.com/about',
-  },
+    'Eighteen years. 215+ brands. Principal-led, AI-augmented. The team behind the work.',
+  alternates: { canonical: 'https://fiftyandfive.com/about' },
   openGraph: {
-    title: 'About | 18 Years, 215 Brands | Fifty & Five',
-    description: '215 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
+    title: 'About · Lucas Vandenberg · 18 Years · Fifty & Five',
+    description: 'Eighteen years. 215+ brands. Principal-led, AI-augmented. The team behind the work.',
     url: 'https://fiftyandfive.com/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About | 18 Years, 215 Brands | Fifty & Five',
-    description: '215 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
+    title: 'About · Lucas Vandenberg · 18 Years · Fifty & Five',
+    description: 'Eighteen years. 215+ brands. Principal-led, AI-augmented. The team behind the work.',
   },
 };
 
-const TIMELINE: { year: string; text: string }[] = [
-  { year: '2008', text: 'Started managing social media for brands, pre-Instagram, pre-"social media manager" as a job title.' },
+const TIMELINE = [
+  { year: '2005', text: 'Lucas at Southern Wine & Spirits Corporate Marketing. First brush with three-tier-system brand work.' },
+  { year: '2008', text: 'Lucas starts managing social media for brands — pre-Instagram, pre-"social media manager" as a job title.' },
   { year: '2009', text: 'Fifty & Five LLC formed.' },
-  { year: '2010', text: 'Axe / Unilever product launch, Twitter takeover + experiential activations.' },
-  { year: '2011', text: 'Mezzacorona retainer begins, a decade-long run as the brand’s social lead.' },
-  { year: '2012', text: 'Blaze Pizza national social program launches.' },
-  { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
-  { year: '2016', text: 'Enterprise Holdings, 6 brands, 2 markets, simultaneously.' },
+  { year: '2010', text: 'Axe / Unilever product launch — Twitter takeover + experiential activations.' },
+  { year: '2011', text: 'Mezzacorona retainer begins. (10-year engagement.)' },
+  { year: '2012', text: 'Blaze Pizza national social program launches. (10-year engagement.)' },
+  { year: '2013', text: 'Hong Kong Tourism Board — first travel-vertical engagement, opens the category.' },
+  { year: '2016', text: 'Enterprise Holdings — 6 brands, 2 markets, simultaneously.' },
   { year: '2020', text: 'Kendall-Jackson partnership begins.' },
-  { year: '2023', text: 'Strategic shift: senior-led, AI-augmented model.' },
+  { year: '2023', text: 'Strategic shift: principal-led, AI-augmented model.' },
   { year: '2026', text: 'Leaner. Faster. Sharper than ever.' },
+];
+
+const SPECIALISTS = [
+  {
+    label: 'WEB & AI INFRASTRUCTURE',
+    headline: 'The technical partner when the stack is the bottleneck.',
+    body: 'MIT-educated engineer-founder running a boutique digital-transformation studio. Custom web builds, headless stacks, AI-assisted automation. Brought in when the site, the CMS, or the data plumbing needs senior hands.',
+  },
+  {
+    label: 'PERFORMANCE MARKETING',
+    headline: 'The call when every conversion matters.',
+    body: 'A performance principal with deep experience across paid search, technical SEO, CRO, and customer acquisition for Fortune 500 and emerging DTC brands. Brought in when the goal is measurable revenue, not reach.',
+  },
+  {
+    label: 'CREATIVE & VIDEO',
+    headline: 'Premium production, senior accountability.',
+    body: "A long-standing creative partner for branding and media buying, paired with a video studio for event, short-form, and social-native content. Brought in when the work needs craft, not just more assets in the queue.",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="container-edge pt-36 md:pt-44 pb-20">
-        <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+      {/* HERO */}
+      <section className="container-content pt-36 md:pt-44 pb-16">
+        <div className="font-receipt text-[12px] uppercase tracking-[0.15em] text-ff-stamp">
           About
         </div>
-        <AnimatedHeadline
-          as="h1"
-          text="The team behind 215 brands."
-          className="mt-4 font-serif text-display tracking-[-0.03em] max-w-4xl"
-          stagger={0.05}
-        />
-        <SimpleReveal delay={0.4}>
-          <p className="mt-5 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-            Lucas Vandenberg, Founding Principal
+        <h1 className="mt-6 font-editorial text-display text-ff-paper max-w-4xl">
+          The team behind 215 brands.
+        </h1>
+        <SimpleReveal delay={0.2}>
+          <p className="mt-6 text-body-lg text-ff-fade-50 max-w-2xl">
+            Eighteen years. Five continents. One principle: the principal who pitches
+            is the principal on every Tuesday call.
           </p>
         </SimpleReveal>
       </section>
 
-      <section className="container-edge pb-24">
+      {/* FOUNDER SECTION */}
+      <section className="container-content pb-24 md:pb-32">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14">
-          <div className="md:col-span-5">
+          <div className="md:col-span-4">
             <SimpleReveal>
-              <div className="glass rounded-glass p-3">
-                <PlaceholderImage
-                  aspect="3/4"
-                  colorKey="tech"
-                  src="/images/people/lucas.jpg"
-                  label="Portrait, Lucas Vandenberg"
-                  className="rounded-[12px]"
-                  alt="Lucas Vandenberg, Founding Principal of Fifty & Five"
-                />
-              </div>
+              <PlaceholderImage
+                aspect="3/4"
+                colorKey="tech"
+                src="/images/people/lucas.jpg"
+                label="Portrait, Lucas Vandenberg"
+                className="rounded"
+                alt="Lucas Vandenberg, Founding Principal of Fifty & Five"
+              />
             </SimpleReveal>
           </div>
-          <div className="md:col-span-7 text-body-lg text-text-secondary leading-[1.75] space-y-6">
-            <p>
-              Fifty &amp; Five started managing social media for brands in 2008, before Instagram
-              existed, before &ldquo;social media manager&rdquo; was a job title, and before most
-              agencies had figured out that Facebook wasn&rsquo;t just a place for college kids.
-            </p>
-            <p>
-              Since then, the team has run campaigns for 215+ brands across 15 verticals.
-              Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Axe. Discovery Channel.
-              Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
-            </p>
-            <p>
-              We&rsquo;ve run the full agency playbook&nbsp;&mdash; the hires, the overhead, the layers of
-              account management between the strategist and the client. We made a deliberate
-              choice to build for what comes next: senior principals leading every engagement,
-              backed by an in-house bench of senior specialists when the work calls for their
-              depth, and augmented by AI as a strategic layer, not a junior-staff replacement.
-              The model is built for the next decade, not the last one.
-            </p>
-            <p>
-              The result is something most agencies can&rsquo;t offer: direct access to the team
-              that&rsquo;s actually done this 215 times before. Senior-led practices, AI-leveraged.
-              Just the senior team that built the plan, executing the plan, and adjusting the plan
-              in real time.
-            </p>
-
-            {/* Attributed founder quote — "I" permitted here per brief */}
-            <blockquote className="border-l-2 border-accent/50 pl-6 italic text-text-primary">
-              &ldquo;I&rsquo;m based in Orlando. I&rsquo;m the President of the SoDo Main Street Board.
-              I&rsquo;ve got two kids (Penny and Koen, 11). And I still genuinely love this work
-              after 18 years&nbsp;&mdash; which, in this industry, is the rarest credential of all.&rdquo;
-              <footer className="mt-3 not-italic font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
-                &mdash; Lucas Vandenberg, Founding Principal
-              </footer>
-            </blockquote>
+          <div className="md:col-span-8">
+            <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-stamp mb-4">
+              FOUNDER
+            </div>
+            <h2 className="font-editorial text-[36px] md:text-[48px] leading-[1.05] text-ff-paper">
+              Lucas Vandenberg
+            </h2>
+            <div className="mt-6 space-y-5 text-body text-ff-fade-50 leading-[1.7]">
+              <p>
+                Lucas started managing social media for brands in 2008 — before Instagram
+                existed, before &ldquo;social media manager&rdquo; was a job title, before most agencies had
+                figured out that Facebook wasn&rsquo;t just for college kids.
+              </p>
+              <p>
+                Since then, Fifty &amp; Five has run campaigns for 215+ brands across 15 verticals.
+                Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Tupperware. NETGEAR.
+                Names you&rsquo;ve heard of, in industries you work in.
+              </p>
+              <p>
+                The agency made a deliberate choice to build for what comes next: principal-led
+                practices, an in-house bench of senior specialists when the work calls for their
+                depth, and AI as a strategic layer — not a junior-staff replacement. The model is
+                built for the next decade, not the last one.
+              </p>
+              <p>
+                The result is something most agencies can&rsquo;t offer: direct access to the people
+                who&rsquo;ve actually done this work 215 times before. No handoffs. No account managers
+                translating your feedback. No &ldquo;let me check with the team.&rdquo;
+              </p>
+              <p className="text-ff-paper">
+                Lucas is based in Orlando. Two kids, Penny and Koen.
+              </p>
+            </div>
+            <div className="mt-6 font-receipt text-[12px] text-ff-fade-50 tracking-[0.02em]">
+              Pre-agency: Southern Wine &amp; Spirits Corporate Marketing (2005).<br />
+              The Institute and other agency credits are F&amp;F engagements.
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            The Network
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Senior-led. Specialist-backed."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-          <p className="mt-6 text-body-lg text-text-secondary leading-[1.6] max-w-2xl">
-            Lucas leads every engagement. When the work calls for depth outside social strategy,
-            Fifty &amp; Five brings in a short list of vetted specialists, each a principal in
-            their own right, each running their own practice. You get the right senior for the
-            work, sourced per engagement.
-          </p>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
-          <SimpleReveal delay={0.0} className="h-full">
-            <GlassCard className="h-full flex flex-col">
-              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                Web &amp; AI infrastructure
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
-                The technical partner when the stack is the bottleneck.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                MIT-educated engineer-founder running a boutique digital-transformation studio,
-                custom web builds, headless stacks, and AI-assisted automation. Brought in when
-                the site, the CMS, or the data plumbing needs senior hands.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.08} className="h-full">
-            <GlassCard className="h-full flex flex-col">
-              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                Performance marketing
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
-                The call when every conversion matters.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                A performance marketing principal with deep experience across paid search, technical
-                SEO, CRO, and customer acquisition for Fortune 500 and emerging DTC brands. Brought
-                in when the goal is measurable revenue, not reach.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-
-          <SimpleReveal delay={0.16} className="h-full">
-            <GlassCard className="h-full flex flex-col">
-              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                Creative &amp; video
-              </div>
-              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
-                Premium production, senior accountability.
-              </h3>
-              <p className="mt-4 text-body text-text-secondary">
-                A long-standing creative partner for branding and media buying, paired with a
-                video studio for event, short-form, and social-native content. Brought in when the
-                work needs craft, not just more assets in the queue.
-              </p>
-            </GlassCard>
-          </SimpleReveal>
-        </div>
-
-        <p className="mt-10 max-w-3xl text-body text-text-tertiary leading-[1.7]">
-          These aren&rsquo;t employees. They aren&rsquo;t subcontractors billing hourly through
-          Fifty &amp; Five. They are working principals we trust with our own client
-          relationships, brought in only when the work genuinely calls for their depth.
+      {/* THE PRACTICE */}
+      <section className="container-content py-24 md:py-32">
+        <h2 className="font-editorial text-h2 text-ff-paper">
+          Principal-led. Specialist-backed.
+        </h2>
+        <p className="mt-4 text-body text-ff-fade-50 max-w-2xl leading-[1.7]">
+          Lucas leads every engagement. When the work calls for depth outside social and brand
+          strategy, F&amp;F brings in a short list of vetted specialists, each a principal in their
+          own right. You get the right senior for the work, sourced per engagement. No bench. No markup.
         </p>
-      </section>
 
-      <section className="container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            The Timeline
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Eighteen years, compressed."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
+        <div className="mt-12 space-y-0">
+          {SPECIALISTS.map((s, i) => (
+            <SimpleReveal key={s.label} delay={i * 0.08}>
+              <div className="border-t border-ff-fade-30 py-8">
+                <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-stamp">
+                  {s.label}
+                </div>
+                <h3 className="mt-3 font-editorial text-[24px] md:text-[28px] text-ff-paper leading-[1.2]">
+                  {s.headline}
+                </h3>
+                <p className="mt-3 text-body text-ff-fade-50 leading-[1.6] max-w-2xl">
+                  {s.body}
+                </p>
+              </div>
+            </SimpleReveal>
+          ))}
+          <hr className="receipt-divider" />
         </div>
 
-        <div className="mt-14 relative">
-          <div
-            aria-hidden
-            className="absolute left-[9px] md:left-1/2 top-0 bottom-0 w-px bg-glass-border"
-          />
-          <ul className="space-y-8">
-            {TIMELINE.map((t, i) => (
-              <SimpleReveal key={`${t.year}-${i}`} delay={Math.min(i * 0.04, 0.25)}>
-                <li className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-                  <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? 'md:text-right md:pr-12' : 'md:col-start-2 md:pl-12'}`}>
-                    <div className="font-serif text-[32px] tracking-[-0.02em] text-text-primary">
-                      {t.year}
-                    </div>
-                    <p className="mt-2 text-body text-text-secondary">{t.text}</p>
-                  </div>
-                  <span
-                    aria-hidden
-                    className="absolute left-[4px] md:left-1/2 top-2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-accent glow-accent"
-                  />
-                </li>
-              </SimpleReveal>
-            ))}
-          </ul>
-        </div>
+        <SimpleReveal delay={0.3}>
+          <p className="mt-8 font-editorial text-[18px] italic text-ff-fade-50 max-w-2xl">
+            These aren&rsquo;t employees. They aren&rsquo;t subcontractors. They are working principals
+            we trust with our own client relationships, brought in only when the work genuinely calls
+            for their depth.
+          </p>
+        </SimpleReveal>
       </section>
 
+      {/* TIMELINE */}
+      <section className="container-content py-24 md:py-32">
+        <hr className="receipt-divider mb-10" />
+        <div className="font-receipt text-[14px] uppercase tracking-[0.12em] text-ff-paper text-center">
+          EIGHTEEN YEARS, COMPRESSED.
+        </div>
+        <hr className="receipt-divider mt-10 mb-12" />
+
+        <div className="max-w-2xl mx-auto font-receipt text-[14px] tracking-[0.02em] space-y-4">
+          {TIMELINE.map((t, i) => (
+            <SimpleReveal key={`${t.year}-${i}`} delay={Math.min(i * 0.04, 0.3)}>
+              <div className="flex gap-4">
+                <span className="text-ff-data shrink-0 w-12">{t.year}</span>
+                <span className="flex-1 text-ff-fade-50">{t.text}</span>
+              </div>
+            </SimpleReveal>
+          ))}
+        </div>
+
+        <hr className="receipt-divider mt-12" />
+      </section>
+
+      {/* CTA */}
       <CTASection
-        headline="Work with the team that built it."
-        body="Senior-led practices, AI-leveraged. Just the senior team."
-        ctaLabel="Start a Conversation →"
+        headline={"Work with the team that built it."}
+        body={"No account managers. No handoffs.\nThe principals on the pitch are the principals on the work."}
       />
     </>
   );

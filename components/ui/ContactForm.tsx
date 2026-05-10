@@ -1,15 +1,24 @@
 'use client';
 
 import { useState } from 'react';
-import { MagneticButton } from './MagneticButton';
 import { trackEvent } from '@/components/layout/Analytics';
 
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
+const SERVICE_OPTIONS = [
+  'Organic Social Management',
+  'Paid Social / Ad Management',
+  'Content Production',
+  'Brand Strategy',
+  'Multi-practice retainer',
+  "Not sure yet — let's talk",
+];
+
 const BUDGET_OPTIONS = [
-  'Under $3K',
-  '$3K–$10K',
-  '$10K–$25K',
+  '$1.5K–$3K',
+  '$3K–$8K',
+  '$8K–$15K',
+  '$15K–$25K',
   '$25K+',
   'Not sure yet',
 ];
@@ -20,16 +29,13 @@ export function ContactForm() {
 
   if (state === 'success') {
     return (
-      <div className="glass rounded-glass p-8">
-        <div className="font-mono text-caption uppercase text-accent tracking-[0.1em]">
-          Got it
+      <div className="border border-ff-fade-30 rounded p-8">
+        <div className="font-editorial text-[28px] text-ff-paper">
+          Thanks. I&rsquo;ll write back today.
         </div>
-        <h3 className="mt-2 font-serif text-[32px] leading-[1.1] tracking-[-0.02em]">
-          Message received.
-        </h3>
-        <p className="mt-3 text-body text-text-secondary">
-          Typical response time: same day. Want to skip the back-and-forth? Book a time above.
-        </p>
+        <div className="mt-2 font-receipt text-[14px] text-ff-fade-50">
+          &mdash; Lucas
+        </div>
       </div>
     );
   }
@@ -40,12 +46,12 @@ export function ContactForm() {
         e.preventDefault();
         setState('submitting');
         setError(null);
-        const form = e.currentTarget;
-        const fd = new FormData(form);
+        const fd = new FormData(e.currentTarget);
         const payload = {
           name: String(fd.get('name') || ''),
           email: String(fd.get('email') || ''),
           company: String(fd.get('company') || ''),
+          service: String(fd.get('service') || ''),
           budget: String(fd.get('budget') || ''),
           message: String(fd.get('message') || ''),
           honey: String(fd.get('website') || ''),
@@ -58,9 +64,10 @@ export function ContactForm() {
           });
           const data = await res.json().catch(() => ({ ok: false }));
           if (!res.ok || !data.ok) throw new Error(data.error || 'Submission failed');
-          trackEvent('Contact Form Submit', {
+          trackEvent('form_submit_contact', {
             company: payload.company || '(none)',
             budget: payload.budget || '(none)',
+            service: payload.service || '(none)',
           });
           setState('success');
         } catch (err) {
@@ -68,36 +75,18 @@ export function ContactForm() {
           setError(err instanceof Error ? err.message : 'Something went wrong');
         }
       }}
-      className="glass rounded-glass p-8 md:p-10 space-y-5"
+      className="border border-ff-fade-30 rounded p-8 md:p-10 space-y-5"
     >
       <Field label="Name" name="name" required />
       <Field label="Email" name="email" type="email" required />
       <Field label="Company / Brand" name="company" />
 
-      <label className="block">
-        <span className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-          Monthly social budget <span className="text-accent">*</span>
-        </span>
-        <select
-          name="budget"
-          required
-          className="mt-2 w-full bg-transparent border border-glass-border rounded-lg px-4 py-3 text-body text-text-primary focus:outline-none focus:border-accent transition-colors appearance-none"
-          defaultValue=""
-        >
-          <option value="" disabled className="bg-bg-primary text-text-tertiary">
-            Select a range
-          </option>
-          {BUDGET_OPTIONS.map((opt) => (
-            <option key={opt} value={opt} className="bg-bg-primary text-text-primary">
-              {opt}
-            </option>
-          ))}
-        </select>
-      </label>
+      <SelectField label="What are you looking for?" name="service" options={SERVICE_OPTIONS} required />
+      <SelectField label="Estimated monthly budget" name="budget" options={BUDGET_OPTIONS} />
 
-      <Field label="What are you looking for?" name="message" as="textarea" />
+      <Field label="Project notes" name="message" as="textarea" />
 
-      {/* Honeypot, hidden from users, bots fill it */}
+      {/* Honeypot */}
       <div aria-hidden className="hidden">
         <label>
           Website
@@ -106,17 +95,21 @@ export function ContactForm() {
       </div>
 
       <div className="pt-2 flex items-center gap-4 flex-wrap">
-        <MagneticButton type="submit" variant="primary" size="large">
-          {state === 'submitting' ? 'Sending…' : 'Send →'}
-        </MagneticButton>
+        <button
+          type="submit"
+          disabled={state === 'submitting'}
+          className="bg-ff-stamp text-ff-paper font-receipt text-[14px] uppercase tracking-[0.05em] px-8 py-4 rounded hover:opacity-90 transition-opacity disabled:opacity-50"
+        >
+          {state === 'submitting' ? 'Sending…' : 'Send the receipt →'}
+        </button>
         {state === 'error' && (
-          <span className="text-meta text-[#FF6B6B]">
+          <span className="text-[14px] text-ff-stamp">
             {error || 'Something went wrong. Try again or email lucas@fiftyandfive.com.'}
           </span>
         )}
       </div>
-      <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-        Typical response time: same day
+      <p className="font-receipt text-[11px] uppercase tracking-[0.12em] text-ff-fade-50">
+        TYPICAL RESPONSE TIME: SAME DAY
       </p>
     </form>
   );
@@ -137,24 +130,59 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-        {label} {required && <span className="text-accent">*</span>}
+      <span className="font-receipt text-[12px] uppercase tracking-[0.1em] text-ff-fade-50">
+        {label} {required && <span className="text-ff-stamp">*</span>}
       </span>
       {as === 'textarea' ? (
         <textarea
           name={name}
           required={required}
           rows={4}
-          className="mt-2 w-full bg-transparent border border-glass-border rounded-lg px-4 py-3 text-body text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent transition-colors resize-none"
+          className="mt-2 w-full bg-transparent border border-ff-fade-30 rounded px-4 py-3 text-body text-ff-paper placeholder:text-ff-fade-50 focus:outline-none focus:border-ff-stamp transition-colors resize-none"
         />
       ) : (
         <input
           name={name}
           type={type}
           required={required}
-          className="mt-2 w-full bg-transparent border border-glass-border rounded-lg px-4 py-3 text-body text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent transition-colors"
+          className="mt-2 w-full bg-transparent border border-ff-fade-30 rounded px-4 py-3 text-body text-ff-paper placeholder:text-ff-fade-50 focus:outline-none focus:border-ff-stamp transition-colors"
         />
       )}
+    </label>
+  );
+}
+
+function SelectField({
+  label,
+  name,
+  options,
+  required,
+}: {
+  label: string;
+  name: string;
+  options: string[];
+  required?: boolean;
+}) {
+  return (
+    <label className="block">
+      <span className="font-receipt text-[12px] uppercase tracking-[0.1em] text-ff-fade-50">
+        {label} {required && <span className="text-ff-stamp">*</span>}
+      </span>
+      <select
+        name={name}
+        required={required}
+        className="mt-2 w-full bg-transparent border border-ff-fade-30 rounded px-4 py-3 text-body text-ff-paper focus:outline-none focus:border-ff-stamp transition-colors appearance-none"
+        defaultValue=""
+      >
+        <option value="" disabled className="bg-ff-bg text-ff-fade-50">
+          Select
+        </option>
+        {options.map((opt) => (
+          <option key={opt} value={opt} className="bg-ff-bg text-ff-paper">
+            {opt}
+          </option>
+        ))}
+      </select>
     </label>
   );
 }

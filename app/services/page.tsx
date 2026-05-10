@@ -1,330 +1,201 @@
 import type { Metadata } from 'next';
-import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
-import { GlassCard } from '@/components/ui/GlassCard';
-import { TiltCard } from '@/components/ui/TiltCard';
+import Link from 'next/link';
+import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { CTASection } from '@/components/layout/CTASection';
+import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
+  title: 'Services · Four Practices · Fifty & Five',
   description:
-    'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
-  alternates: {
-    canonical: 'https://fiftyandfive.com/services',
-  },
+    'Organic social, paid social, content production, brand strategy. AI as leverage. Senior judgment as the product. Retainers from $1.5K–$50K+/mo.',
+  alternates: { canonical: 'https://fiftyandfive.com/services' },
   openGraph: {
-    title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
-    description: 'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
+    title: 'Services · Four Practices · Fifty & Five',
+    description: 'Organic social, paid social, content production, brand strategy. AI as leverage. Senior judgment as the product. Retainers from $1.5K–$50K+/mo.',
     url: 'https://fiftyandfive.com/services',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
-    description: 'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
+    title: 'Services · Four Practices · Fifty & Five',
+    description: 'Organic social, paid social, content production, brand strategy. AI as leverage. Senior judgment as the product. Retainers from $1.5K–$50K+/mo.',
   },
 };
 
-const PILLARS = [
+const PRACTICES = [
   {
-    kicker: 'Strategy first',
-    head: 'Month one is discovery. No exceptions.',
-    body:
-      'Before a logo moves or a campaign launches, we map the category, audit the field, and write the strategic spine the next year hangs from. If month one doesn’t land, we don’t continue, and you keep the work.',
+    number: '01',
+    name: 'Organic Social',
+    body: 'Full-stack management across Instagram, TikTok, LinkedIn, X, YouTube. Strategy, content calendars, community management, monthly receipts. The same principal team every month — month seven looks like month one.',
   },
   {
-    kicker: 'AI, in the open',
-    head: 'We use Claude. We tell you where.',
-    body:
-      'Frontier models sit on the table, not under it. We use them for synthesis, drafting, and stress-testing, and ship a “how this was made” appendix on every major deliverable.',
+    number: '02',
+    name: 'Paid Social',
+    body: 'Meta, TikTok, LinkedIn ad management for brands spending $1K–$25K/mo. Creative, targeting, optimization, transparent reporting. No hidden fees on ad spend. Every dollar accounted for.',
   },
   {
-    kicker: 'Multicultural by default',
-    head: 'Hispanic market mapped on day one.',
-    body:
-      'Every strategy deck includes cultural positioning analysis for U.S. growth markets. Miami, Houston, LA, Phoenix, San Antonio. Not a translation line item.',
+    number: '03',
+    name: 'Content Production',
+    body: 'Photo, video, design — AI-augmented where it speeds the work, principal-led where craft matters. Platform-native content, not blog posts reformatted for Instagram.',
   },
   {
-    kicker: 'Principal-led practices',
-    head: 'You work directly with us. That’s the deal.',
-    body:
-      'Every engagement is staffed with a senior principal. The principal who pitches you is the principal on the Tuesday call in month seven.',
-  },
-  {
-    kicker: 'Performance + authenticity',
-    head: 'ROI without selling the story.',
-    body:
-      'We measure CAC, LTV, attribution, and the rest, and we refuse to gut the brand to chase a quarter. Both numbers matter. Both get reported.',
-  },
-];
-
-const CORE_SERVICES = [
-  {
-    title: 'Social Media Management',
-    tag: 'Retainer',
-    body:
-      'Full-service social media management across Instagram, Facebook, TikTok, LinkedIn, and X. Content strategy, creation, scheduling, community management, and monthly reporting. Everything your social presence needs, managed by the same senior team every month.',
-    meta: 'Typical engagement: 8–20 posts/mo per platform, community management, monthly strategy + reporting.',
-  },
-  {
-    title: 'Content Strategy & Creation',
-    tag: 'Retainer or Project',
-    body:
-      'Platform-specific content that actually performs, not recycled blog posts reformatted for Instagram. Original content strategy built on 18 years of pattern recognition across 215+ brands. Photography and video direction included.',
-    meta: 'Typical engagement: Monthly content calendars, original creative direction, platform-native content.',
-  },
-  {
-    title: 'Paid Social & Ad Management',
-    tag: 'Retainer',
-    body:
-      'Meta, TikTok, and LinkedIn ad management for brands spending $1K–$25K/mo on paid social. Campaign strategy, creative direction, audience targeting, optimization, and transparent reporting. No hidden fees on ad spend.',
-    meta: 'Typical engagement: Campaign strategy, creative, targeting, optimization, weekly reporting.',
+    number: '04',
+    name: 'Brand Strategy',
+    body: 'Positioning, messaging, GTM. Strategic spine the next year hangs from. Cultural positioning analysis included by default — Hispanic, multicultural growth markets mapped on day one.',
   },
 ];
 
 const RETAINER_TIERS = [
-  {
-    tier: 'Studio',
-    range: '$1.5K – $2.5K',
-    proof: 'Boutique pilates · indie restaurants · neighborhood retail',
-  },
-  {
-    tier: 'Growth',
-    range: '$3K – $5K',
-    proof: 'Wine & spirits · mid-tier hospitality · lifestyle apparel',
-  },
-  {
-    tier: 'Premium',
-    range: '$6K – $10K',
-    proof: 'Premium wine · regional CPG · resort & destination',
-  },
-  {
-    tier: 'Scale',
-    range: '$15K – $25K',
-    proof: 'Multi-unit franchise programs · category-leading CPG',
-  },
-  {
-    tier: 'Enterprise',
-    range: '$30K – $50K+',
-    proof: 'Fortune 500 always-on · multi-brand, multi-market',
-  },
+  { tier: 'STUDIO', range: '$1.5K–$2.5K', anchor: 'Boutique pilates · indie restaurants · neighborhood retail' },
+  { tier: 'GROWTH', range: '$3K–$5K', anchor: 'Wine & spirits · mid-tier hospitality · lifestyle apparel' },
+  { tier: 'PREMIUM', range: '$6K–$10K', anchor: 'Multi-year wine portfolios · regional CPG · resort & destination' },
+  { tier: 'SCALE', range: '$15K–$25K', anchor: 'National restaurant programs · multi-unit franchise' },
+  { tier: 'ENTERPRISE', range: '$30K–$50K+', anchor: 'Fortune 500 always-on · multi-brand portfolios' },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      <section className="container-edge pt-36 md:pt-44 pb-16">
-        <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+      {/* HERO */}
+      <section className="container-content pt-36 md:pt-44 pb-16">
+        <div className="font-receipt text-[12px] uppercase tracking-[0.15em] text-ff-stamp">
           Services
         </div>
-        <AnimatedHeadline
-          as="h1"
-          text="What We Do."
-          className="mt-4 font-serif text-display tracking-[-0.03em]"
-          stagger={0.05}
-        />
-        <SimpleReveal delay={0.3}>
-          <p className="mt-6 text-body-lg text-text-secondary max-w-2xl">
-            Senior-led social media management, content strategy, and paid media, without the
-            holding-company markup.
+        <h1 className="mt-6 font-editorial text-display text-ff-paper max-w-4xl">
+          Four practices.<br />
+          Senior judgment.<br />
+          AI as leverage.
+        </h1>
+        <SimpleReveal delay={0.2}>
+          <p className="mt-6 text-body-lg text-ff-fade-50 max-w-2xl">
+            We compress 40-hour weeks into 4. The savings stay with the client — as margin
+            or as velocity. AI eats the junior hour. Senior judgment keeps the work.
           </p>
+        </SimpleReveal>
+        <SimpleReveal delay={0.3}>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block bg-ff-stamp text-ff-paper font-receipt text-[14px] uppercase tracking-[0.05em] px-8 py-4 rounded hover:opacity-90 transition-opacity"
+          >
+            {SITE.cta}
+          </Link>
         </SimpleReveal>
       </section>
 
-      <section className="container-edge pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
-          {CORE_SERVICES.map((s, i) => (
-            <SimpleReveal key={s.title} delay={i * 0.08} className="h-full">
-              <TiltCard tiltStrength={4} className="h-full">
-                <GlassCard className="h-full flex flex-col">
-                  <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                    {s.tag}
-                  </div>
-                  <h3 className="mt-4 font-serif text-[28px] leading-[1.15] tracking-[-0.02em]">
-                    {s.title}
-                  </h3>
-                  <p className="mt-4 text-body text-text-secondary flex-1">{s.body}</p>
-                  <p className="mt-6 pt-6 border-t border-glass-border font-mono text-caption text-text-tertiary leading-[1.6]">
-                    {s.meta}
-                  </p>
-                </GlassCard>
-              </TiltCard>
-            </SimpleReveal>
-          ))}
-        </div>
-      </section>
-
-      <section className="container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            What we stand on
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Five pillars. Non-negotiable."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-        </div>
-
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {PILLARS.map((p, i) => (
-            <SimpleReveal key={p.kicker} delay={i * 0.08} className="h-full">
-              <GlassCard className="h-full flex flex-col">
-                <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                  {String(i + 1).padStart(2, '0')} · {p.kicker}
+      {/* FOUR PRACTICES */}
+      <section className="container-content pb-24 md:pb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {PRACTICES.map((p, i) => (
+            <SimpleReveal key={p.number} delay={i * 0.08} className="h-full">
+              <div className="h-full border-t border-b border-ff-fade-30 py-8 px-6 md:px-8">
+                <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-stamp">
+                  PRACTICE {p.number}
                 </div>
-                <h3 className="mt-4 font-serif text-[26px] leading-[1.1] tracking-[-0.02em]">
-                  {p.head}
-                </h3>
-                <p className="mt-4 text-body text-text-secondary">
+                <h2 className="mt-4 font-editorial text-[36px] md:text-[48px] leading-[1.05] tracking-[-0.02em] text-ff-paper">
+                  {p.name}
+                </h2>
+                <p className="mt-4 text-body text-ff-fade-50 leading-[1.6]">
                   {p.body}
                 </p>
-              </GlassCard>
+              </div>
             </SimpleReveal>
           ))}
         </div>
       </section>
 
-      {/* RETAINER LADDER — Change #9 */}
-      <section className="container-edge py-24 md:py-32">
-        <div className="max-w-3xl">
-          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            How we price
-          </div>
-          <AnimatedHeadline
-            as="h2"
-            text="The Retainer Ladder. Five tiers. Same model."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
+      {/* RETAINER LADDER */}
+      <section className="container-content py-24 md:py-32">
+        <hr className="receipt-divider mb-10" />
+        <div className="font-receipt text-[12px] uppercase tracking-[0.15em] text-ff-stamp">
+          THE RETAINER LADDER
         </div>
+        <p className="mt-4 text-body text-ff-fade-50 max-w-2xl">
+          The 60-Day Receipt is our default. For brands at different scales,
+          here&rsquo;s where you&rsquo;d land:
+        </p>
+        <hr className="receipt-divider my-10" />
 
         {/* Desktop table */}
-        <div className="mt-14 hidden md:block overflow-x-auto">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b border-glass-border">
-                <th className="text-left py-4 pr-6 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">Tier</th>
-                <th className="text-left py-4 pr-6 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">Monthly</th>
-                <th className="text-left py-4 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">Anchor Proof</th>
-              </tr>
-            </thead>
-            <tbody>
-              {RETAINER_TIERS.map((t) => (
-                <tr key={t.tier} className="border-b border-glass-border/50">
-                  <td className="py-5 pr-6 font-serif text-[22px] tracking-[-0.02em] text-text-primary">{t.tier}</td>
-                  <td className="py-5 pr-6 font-mono text-[15px] text-accent tracking-[0.02em]">{t.range}</td>
-                  <td className="py-5 text-body text-text-secondary">{t.proof}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="hidden md:block">
+          <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-fade-50">
+            <div className="grid grid-cols-[120px_140px_1fr] gap-4 pb-4 border-b border-ff-fade-30">
+              <span>TIER</span>
+              <span>MONTHLY</span>
+              <span>ANCHOR</span>
+            </div>
+          </div>
+          <div className="font-receipt text-[14px] tracking-[0.02em]">
+            {RETAINER_TIERS.map((t) => (
+              <div
+                key={t.tier}
+                className="grid grid-cols-[120px_140px_1fr] gap-4 py-4 border-b border-ff-fade-30/50 hover:text-ff-stamp transition-colors"
+              >
+                <span className="text-ff-paper">{t.tier}</span>
+                <span className="text-ff-data">{t.range}</span>
+                <span className="text-ff-fade-50">{t.anchor}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Mobile cards */}
-        <div className="mt-14 md:hidden space-y-4">
+        <div className="md:hidden space-y-4">
           {RETAINER_TIERS.map((t, i) => (
             <SimpleReveal key={t.tier} delay={i * 0.06}>
-              <GlassCard>
-                <div className="font-serif text-[22px] tracking-[-0.02em] text-text-primary">{t.tier}</div>
-                <div className="mt-2 font-mono text-[15px] text-accent tracking-[0.02em]">{t.range}</div>
-                <div className="mt-3 text-body text-text-secondary">{t.proof}</div>
-              </GlassCard>
+              <div className="border-t border-b border-ff-fade-30 py-5 px-4">
+                <div className="font-receipt text-[14px] text-ff-paper">{t.tier}</div>
+                <div className="mt-1 font-receipt text-[14px] text-ff-data">{t.range}</div>
+                <div className="mt-2 text-body text-ff-fade-50 text-[14px]">{t.anchor}</div>
+              </div>
             </SimpleReveal>
           ))}
         </div>
 
-        <SimpleReveal delay={0.3}>
-          <p className="mt-10 text-body text-text-secondary max-w-3xl leading-[1.7]">
-            A studio retainer at $2K/mo and an enterprise retainer at $50K+/mo do not run on
-            different operating principles inside Fifty &amp; Five. They run on the same Senior + AI
-            stack&nbsp;&mdash; the difference is volume, scope, and channel surface area.
+        <hr className="receipt-divider my-10" />
+        <SimpleReveal delay={0.2}>
+          <p className="font-editorial text-[20px] md:text-[24px] italic text-ff-fade-50 max-w-2xl">
+            Most boutiques say &ldquo;we can help you launch.&rdquo;
+            We say &ldquo;ask the company we already grew through ten years.&rdquo;
           </p>
         </SimpleReveal>
+        <hr className="receipt-divider mt-10" />
       </section>
 
-      {/* HOW WE WORK — updated to remove banned phrases */}
-      <section className="container-edge py-24 md:py-32">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
-            <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-              How we work
+      {/* WHAT WE DON'T DO */}
+      <section className="paper-bg">
+        <div className="container-content py-24 md:py-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-ink/50 mb-6">
+                WHAT YOU WON&rsquo;T FIND HERE
+              </div>
+              <ul className="space-y-4 font-body text-[16px] text-ff-ink/70">
+                <li className="flex gap-3"><span className="text-ff-ink/30 shrink-0">✕</span>A 40-slide pitch deck</li>
+                <li className="flex gap-3"><span className="text-ff-ink/30 shrink-0">✕</span>An account team where five of six are coordinators</li>
+                <li className="flex gap-3"><span className="text-ff-ink/30 shrink-0">✕</span>A Slack channel that goes quiet after month two</li>
+                <li className="flex gap-3"><span className="text-ff-ink/30 shrink-0">✕</span>A monthly report that takes longer to read than it took to write</li>
+                <li className="flex gap-3"><span className="text-ff-ink/30 shrink-0">✕</span>Junior staff translating your feedback two weeks later</li>
+              </ul>
             </div>
-            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
-              Conversation first. Proposal second.
-            </h2>
-          </div>
-          <div className="md:col-span-8 prose-style space-y-6 text-body-lg text-text-secondary leading-[1.75]">
-            <p>
-              Every engagement starts with a conversation, not a proposal. We&rsquo;ll talk about
-              what you&rsquo;re trying to accomplish, where your current social presence stands, and
-              whether Fifty &amp; Five is actually the right fit. If it is, you&rsquo;ll get a clear
-              scope, a fixed monthly fee, and direct access to the senior team doing the work.
-            </p>
+            <div>
+              <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-stamp mb-6">
+                WHAT YOU WILL FIND
+              </div>
+              <ul className="space-y-4 font-body text-[16px] text-ff-ink">
+                <li className="flex gap-3"><span className="text-ff-stamp shrink-0">✓</span>One number to call</li>
+                <li className="flex gap-3"><span className="text-ff-stamp shrink-0">✓</span>One principal team start to finish</li>
+                <li className="flex gap-3"><span className="text-ff-stamp shrink-0">✓</span>Specialists on the bench when the work calls for them</li>
+                <li className="flex gap-3"><span className="text-ff-stamp shrink-0">✓</span>Direct answers</li>
+                <li className="flex gap-3"><span className="text-ff-stamp shrink-0">✓</span>The kind of work that usually requires a large-agency retainer</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="container-edge py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
-          <SimpleReveal className="h-full">
-            <GlassCard className="h-full flex flex-col">
-              <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
-                What you won&rsquo;t find here
-              </div>
-              <ul className="mt-5 space-y-4 text-body text-text-secondary">
-                <li className="flex gap-3 items-start">
-                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
-                  A 40-slide pitch deck.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
-                  A team of six people where five are coordinators.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
-                  A Slack channel that goes quiet after month two.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-text-tertiary mt-1 shrink-0">✕</span>
-                  A monthly report that takes longer to read than it took to write.
-                </li>
-              </ul>
-            </GlassCard>
-          </SimpleReveal>
-          <SimpleReveal delay={0.1} className="h-full">
-            <GlassCard className="h-full flex flex-col">
-              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
-                What you will find
-              </div>
-              <ul className="mt-5 space-y-4 text-body text-text-primary">
-                <li className="flex gap-3 items-start">
-                  <span className="text-accent mt-1 shrink-0">✓</span>
-                  One phone number.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-accent mt-1 shrink-0">✓</span>
-                  One senior principal, start to finish.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-accent mt-1 shrink-0">✓</span>
-                  Specialists on the bench when the work calls for it.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-accent mt-1 shrink-0">✓</span>
-                  Direct answers.
-                </li>
-                <li className="flex gap-3 items-start">
-                  <span className="text-accent mt-1 shrink-0">✓</span>
-                  The kind of experience that usually requires a large-agency retainer, at a fraction of the cost.
-                </li>
-              </ul>
-            </GlassCard>
-          </SimpleReveal>
-        </div>
-      </section>
-
+      {/* CTA */}
       <CTASection
-        headline="Let&#8217;s see if it&#8217;s a fit."
-        body="No proposals until we know it is. Just a conversation about what you're trying to build."
-        ctaLabel="Start a Conversation →"
+        headline={"Let's see if it's a fit."}
+        body={"No proposals until we know it is.\nJust a conversation about what you're trying to build."}
       />
     </>
   );

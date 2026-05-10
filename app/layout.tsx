@@ -5,32 +5,30 @@ import { Navigation } from '@/components/layout/Navigation';
 import { Footer } from '@/components/layout/Footer';
 import { NoiseOverlay } from '@/components/ui/NoiseOverlay';
 import { StickyCtaButton } from '@/components/ui/StickyCtaButton';
-import { ExitIntentBar } from '@/components/ui/ExitIntentBar';
-import { StockTicker } from '@/components/ui/StockTicker';
 import { Analytics } from '@/components/layout/Analytics';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
   title: {
-    default: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
-    template: '%s | Fifty & Five',
+    default: 'Fifty & Five · Principal-Led Social Media Agency · 215+ Brands Since 2008',
+    template: '%s',
   },
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
+  description: 'Principal-led social media for 215+ brands across 5 continents. AI-augmented, senior-run. Retainers from $1.5K/mo. Same-day response.',
   openGraph: {
     type: 'website',
-    title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
+    title: 'Fifty & Five · Principal-Led Social Media Agency · 215+ Brands Since 2008',
     description:
-      'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
+      'Principal-led social media for 215+ brands across 5 continents. AI-augmented, senior-run. Retainers from $1.5K/mo. Same-day response.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
-    description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
+    title: 'Fifty & Five · Principal-Led Social Media Agency · 215+ Brands Since 2008',
+    description: 'Principal-led social media for 215+ brands across 5 continents. AI-augmented, senior-run. Retainers from $1.5K/mo. Same-day response.',
   },
   icons: {
     icon: [
@@ -118,7 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Influencer Marketing',
                     'Brand Strategy',
                   ],
-                  priceRange: '$1,500 - $50,000+/mo',
+                  priceRange: '$1,500–$50,000+/mo',
                   numberOfEmployees: { '@type': 'QuantitativeValue', value: '1-10' },
                   slogan: 'The boutique agency Fortune 500s call.',
                   sameAs: [
@@ -160,20 +158,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-bg-primary text-text-primary antialiased font-sans">
+      <body className="bg-ff-bg text-ff-paper antialiased font-body">
         <NoiseOverlay />
         <Navigation />
         <main className="relative z-[2]">{children}</main>
         <Footer />
-        {/* spacer so the fixed stock ticker doesn't obscure the footer */}
-        <div aria-hidden className="h-8" />
-        <StockTicker />
         <StickyCtaButton />
-        <ExitIntentBar />
         <Analytics />
       </body>
     </html>
