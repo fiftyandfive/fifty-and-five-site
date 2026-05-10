@@ -1,22 +1,27 @@
 export const SITE = {
   name: 'Fifty & Five',
-  wordmark: 'fifty & five',
-  tagline: 'The boutique agency Fortune 500s use. 215+ brands across 5 continents since 2008.',
+  wordmark: 'FIFTY & FIVE',
+  tagline: 'Principal-led social, content, and brand strategy. Since 2008.',
   email: 'lucas@fiftyandfive.com',
+  phone: '(310) 902-3246',
+  phoneHref: 'tel:+13109023246',
   location: 'Orlando, FL',
   url: 'https://fiftyandfive.com',
   social: {
     linkedin: 'https://www.linkedin.com/in/LucasV/',
     instagram: 'https://www.instagram.com/fiftyandfive/',
+    clutch: 'https://clutch.co/profile/fifty-five',
   },
   calendly: 'https://calendly.com/lucasv/30-minute-intro-call',
+  cta: 'Run the numbers with Lucas →',
+  ctaShort: 'Run the numbers →',
 };
 
 export const NAV_LINKS = [
   { href: '/work', label: 'Work' },
   { href: '/services', label: 'Services' },
-  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export const FOOTER_VERTICALS = [

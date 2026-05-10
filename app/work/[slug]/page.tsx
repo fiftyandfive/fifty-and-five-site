@@ -1,14 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { CASE_STUDIES, getCaseStudy, getNextCaseStudy, VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
-import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
-import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
-import { GlassCard } from '@/components/ui/GlassCard';
-import { TiltCard } from '@/components/ui/TiltCard';
-import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
+import { CASE_STUDIES, getCaseStudy, getNextCaseStudy } from '@/lib/data/caseStudies';
+import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
-import { MagneticButton } from '@/components/ui/MagneticButton';
+import { CTASection } from '@/components/layout/CTASection';
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((c) => ({ slug: c.slug }));
@@ -22,20 +18,20 @@ export async function generateMetadata({
   const cs = getCaseStudy(params.slug);
   if (!cs) return { title: 'Case Study Not Found' };
   return {
-    title: `${cs.client} | Case Study`,
+    title: `${cs.client} · Case Study · Fifty & Five`,
     description: cs.tagline,
     alternates: {
       canonical: `https://fiftyandfive.com/work/${cs.slug}`,
     },
     openGraph: {
-      title: `${cs.client}, Social Media Case Study | Fifty & Five`,
+      title: `${cs.client} · Social Media Case Study · Fifty & Five`,
       description: cs.tagline,
       url: `https://fiftyandfive.com/work/${cs.slug}`,
       type: 'article',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${cs.client}, Case Study | Fifty & Five`,
+      title: `${cs.client} · Case Study · Fifty & Five`,
       description: cs.tagline,
     },
   };
@@ -46,12 +42,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
   if (!cs) notFound();
 
   const next = getNextCaseStudy(cs.slug);
-  const hex = VERTICAL_COLOR_HEX[cs.verticalColor];
-
   const caseIndex = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
   const caseNumber = String(caseIndex + 1).padStart(2, '0');
-  const nextIndex = next ? CASE_STUDIES.findIndex((c) => c.slug === next.slug) : -1;
-  const nextCaseNumber = nextIndex >= 0 ? String(nextIndex + 1).padStart(2, '0') : undefined;
 
   return (
     <>
@@ -63,7 +55,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             '@type': 'BreadcrumbList',
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
-              { '@type': 'ListItem', position: 2, name: 'Our Work', item: 'https://fiftyandfive.com/work' },
+              { '@type': 'ListItem', position: 2, name: 'Work', item: 'https://fiftyandfive.com/work' },
               { '@type': 'ListItem', position: 3, name: cs.client, item: `https://fiftyandfive.com/work/${cs.slug}` },
             ],
           }),
@@ -85,48 +77,35 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           }),
         }}
       />
+
       {/* HERO */}
-      <section
-        className="relative overflow-hidden pt-36 md:pt-44 pb-20 md:pb-28"
-        style={{
-          background: `linear-gradient(180deg, ${hex}20 0%, ${hex}08 40%, var(--color-bg-primary) 100%)`,
-        }}
-      >
-        <div
-          aria-hidden
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: `radial-gradient(ellipse at 20% -20%, ${hex}40 0%, transparent 50%)`,
-            filter: 'blur(60px)',
-          }}
-        />
-        <div className="relative container-edge">
-          <Link
-            href="/work"
-            className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em] hover:text-text-primary"
-          >
-            ← Back to work
-          </Link>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
-            <DurationBadge>{cs.durationBadge}</DurationBadge>
-          </div>
-          <AnimatedHeadline
-            as="h1"
-            text={cs.client}
-            className="mt-6 font-serif text-display tracking-[-0.03em]"
-            stagger={0.04}
-          />
-          <SimpleReveal delay={0.3}>
-            <p className="mt-6 text-body-lg text-text-secondary max-w-3xl">{cs.tagline}</p>
-          </SimpleReveal>
+      <section className="container-content pt-36 md:pt-44 pb-10">
+        <Link
+          href="/work"
+          className="font-receipt text-[12px] uppercase tracking-[0.15em] text-ff-fade-50 hover:text-ff-paper transition-colors"
+        >
+          ← Back to work
+        </Link>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <span className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-stamp">
+            {cs.verticalLabel}
+          </span>
+          <span className="font-receipt text-[12px] uppercase tracking-[0.08em] text-ff-fade-50">
+            {cs.durationBadge}
+          </span>
         </div>
+        <h1 className="mt-6 font-editorial text-display text-ff-paper">
+          {cs.client}
+        </h1>
+        <SimpleReveal delay={0.2}>
+          <p className="mt-6 text-body-lg text-ff-fade-50 max-w-3xl">{cs.tagline}</p>
+        </SimpleReveal>
       </section>
 
       {/* BODY */}
-      <section className="container-edge pb-28 md:pb-36">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 lg:gap-16">
-          <article className="max-w-[680px] text-[18px] leading-[1.75] text-text-primary/90">
+      <section className="container-content pb-28 md:pb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 lg:gap-16">
+          <article className="max-w-[680px]">
             <SimpleReveal>
               <BrandColorHero
                 client={cs.client}
@@ -134,109 +113,118 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 verticalColor={cs.verticalColor}
                 caseNumber={caseNumber}
                 aspect="16/9"
-                className="rounded-glass mb-16"
+                className="mb-16"
               />
             </SimpleReveal>
 
-            <Section label="01, The Challenge" title="What the brand needed.">
+            <Section number="01" label="The Challenge" title="What the brand needed.">
               {cs.challenge}
             </Section>
 
-            <Section label="02, The Approach" title="What Fifty & Five did.">
+            <Section number="02" label="The Approach" title="What Fifty & Five did.">
               {cs.approach}
             </Section>
 
-            <PullQuote>{cs.tagline}</PullQuote>
+            <SimpleReveal>
+              <blockquote className="my-16 pl-6 border-l-2 border-ff-stamp font-editorial text-[28px] md:text-[34px] leading-[1.2] tracking-[-0.02em] text-ff-paper italic">
+                {cs.tagline}
+              </blockquote>
+            </SimpleReveal>
 
-            <Section label="03, The Outcome" title="What actually happened.">
+            <Section number="03" label="The Outcome" title="What actually happened.">
               {cs.outcome}
             </Section>
           </article>
 
+          {/* SIDEBAR */}
           <aside className="relative">
             <div className="lg:sticky lg:top-28">
-              <GlassCard>
-                <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
-                  Project
+              <div className="border border-ff-fade-30 p-6">
+                <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-stamp mb-5">
+                  Project Details
                 </div>
-                <dl className="mt-5 space-y-5 text-meta">
-                  <Row label="Industry" value={cs.industry} />
-                  <Row label="Duration" value={cs.duration} />
-                  <Row
-                    label="Services"
-                    value={cs.services.join(', ')}
-                  />
-                  <Row label="Platforms" value={cs.platforms.join(', ')} />
+                <dl className="space-y-4 font-receipt text-[13px] tracking-[0.02em]">
+                  <SidebarRow label="INDUSTRY" value={cs.industry} />
+                  <SidebarRow label="DURATION" value={cs.duration} />
+                  <SidebarRow label="SERVICES" value={cs.services.join(', ')} />
+                  <SidebarRow label="PLATFORMS" value={cs.platforms.join(', ')} />
                 </dl>
                 <div className="mt-8">
-                  <MagneticButton href="/contact" variant="primary" size="small" className="w-full">
-                    Start a Similar Project →
-                  </MagneticButton>
+                  <Link
+                    href="/contact"
+                    className="block w-full text-center bg-ff-stamp text-ff-paper font-receipt text-[13px] uppercase tracking-[0.05em] px-6 py-3 hover:opacity-90 transition-opacity"
+                  >
+                    Start a similar project →
+                  </Link>
                 </div>
-              </GlassCard>
+              </div>
             </div>
           </aside>
         </div>
       </section>
 
-      {/* NEXT */}
-      <section className="container-edge pb-32">
-        <div className="flex items-end justify-between gap-6 flex-wrap mb-8">
-          <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+      {/* NEXT CASE STUDY */}
+      <section className="container-content pb-16">
+        <hr className="receipt-divider mb-8" />
+        <div className="flex items-end justify-between gap-6 flex-wrap mb-6">
+          <div className="font-receipt text-[12px] uppercase tracking-[0.12em] text-ff-fade-50">
             Next case study
           </div>
           <Link
             href="/work"
-            className="font-mono text-meta uppercase tracking-[0.1em] text-accent hover:text-accent-light"
+            className="font-receipt text-[12px] uppercase tracking-[0.1em] text-ff-stamp hover:text-ff-paper transition-colors"
           >
             View all →
           </Link>
         </div>
         <Link href={`/work/${next.slug}`} className="block group">
-          <TiltCard tiltStrength={4}>
-            <GlassCard padded={false}>
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <BrandColorHero
-                  client={next.client}
-                  verticalLabel={next.verticalLabel}
-                  verticalColor={next.verticalColor}
-                  caseNumber={nextCaseNumber}
-                  aspect="16/10"
-                  variant="compact"
-                />
-                <div className="p-8 md:p-10 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <VerticalPill label={next.verticalLabel} colorKey={next.verticalColor} />
-                    <DurationBadge>{next.durationBadge}</DurationBadge>
-                  </div>
-                  <h3 className="mt-5 font-serif text-[40px] leading-[1.05] tracking-[-0.02em]">
-                    {next.client}
-                  </h3>
-                  <p className="mt-4 text-body text-text-secondary">{next.tagline}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
-                    Read case study
-                    <span
-                      aria-hidden
-                      className="transition-transform duration-300 group-hover:translate-x-0.5"
-                    >
-                      →
-                    </span>
-                  </div>
+          <div className="border border-ff-fade-30 hover:border-ff-stamp transition-colors">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <BrandColorHero
+                client={next.client}
+                verticalLabel={next.verticalLabel}
+                verticalColor={next.verticalColor}
+                aspect="16/10"
+                variant="compact"
+              />
+              <div className="p-8 md:p-10 flex flex-col justify-center">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="font-receipt text-[11px] uppercase tracking-[0.12em] text-ff-stamp">
+                    {next.verticalLabel}
+                  </span>
+                  <span className="font-receipt text-[11px] uppercase tracking-[0.08em] text-ff-fade-50">
+                    {next.durationBadge}
+                  </span>
+                </div>
+                <h3 className="mt-4 font-editorial text-[36px] md:text-[40px] leading-[1.05] text-ff-paper">
+                  {next.client}
+                </h3>
+                <p className="mt-3 text-body text-ff-fade-50">{next.tagline}</p>
+                <div className="mt-5 font-receipt text-[12px] uppercase tracking-[0.1em] text-ff-stamp group-hover:text-ff-paper transition-colors">
+                  Read case study →
                 </div>
               </div>
-            </GlassCard>
-          </TiltCard>
+            </div>
+          </div>
         </Link>
       </section>
+
+      {/* CTA */}
+      <CTASection
+        headline={"Let's build something like this."}
+        body={"Same principal. Same playbook.\nJust a conversation about what you're trying to build."}
+      />
     </>
   );
 }
 
 function Section({
+  number,
   label,
   title,
   children,
 }: {
+  number: string;
   label: string;
   title: string;
   children: React.ReactNode;
@@ -244,33 +232,25 @@ function Section({
   return (
     <SimpleReveal>
       <section className="mb-16">
-        <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-          {label}
+        <div className="font-receipt text-[12px] uppercase tracking-[0.15em] text-ff-stamp">
+          {number} · {label}
         </div>
-        <h2 className="mt-3 font-serif text-[32px] leading-[1.15] tracking-[-0.02em]">{title}</h2>
-        <p className="mt-5 text-body-lg text-text-secondary leading-[1.75]">{children}</p>
+        <h2 className="mt-3 font-editorial text-[32px] leading-[1.15] tracking-[-0.02em] text-ff-paper">
+          {title}
+        </h2>
+        <p className="mt-5 text-body-lg text-ff-fade-50 leading-[1.75]">{children}</p>
       </section>
     </SimpleReveal>
   );
 }
 
-function PullQuote({ children }: { children: React.ReactNode }) {
-  return (
-    <SimpleReveal>
-      <blockquote className="my-16 pl-6 border-l-2 border-accent font-serif text-[28px] md:text-[34px] leading-[1.2] tracking-[-0.02em] text-text-primary">
-        {children}
-      </blockquote>
-    </SimpleReveal>
-  );
-}
-
-function Row({ label, value }: { label: string; value: string }) {
+function SidebarRow({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+      <dt className="font-receipt text-[11px] uppercase tracking-[0.12em] text-ff-fade-50">
         {label}
       </dt>
-      <dd className="mt-1 text-meta text-text-primary">{value}</dd>
+      <dd className="mt-1 text-[13px] text-ff-paper">{value}</dd>
     </div>
   );
 }

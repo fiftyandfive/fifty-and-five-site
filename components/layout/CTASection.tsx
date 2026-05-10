@@ -1,6 +1,6 @@
-import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
-import { AuroraBackground } from '@/components/ui/AuroraBackground';
-import { MagneticButton } from '@/components/ui/MagneticButton';
+import Link from 'next/link';
+import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
+import { SITE } from '@/lib/constants';
 
 type Props = {
   headline?: string;
@@ -10,35 +10,34 @@ type Props = {
 };
 
 export function CTASection({
-  headline = 'Ready to work with the team that\u2019s done this 215 times?',
-  body = 'Most agency relationships start with a pitch deck. Ours starts with a conversation. No proposals until we know it\u2019s a fit.',
-  ctaLabel = 'Start a Conversation →',
+  headline = 'Most agency relationships start with a pitch deck.\nOurs starts with a conversation.',
+  body = 'No proposals until we know it’s a fit.\nThree engagements available this quarter.',
+  ctaLabel,
   ctaHref = '/contact',
 }: Props) {
   return (
-    <section className="relative overflow-hidden bg-bg-primary">
-      <AuroraBackground variant="warm" />
-      <div className="relative z-10 container-edge py-28 md:py-40 text-center">
-        <AnimatedHeadline
-          as="h2"
-          text={headline}
-          className="font-serif text-h1 tracking-[-0.02em] text-text-primary max-w-4xl mx-auto"
-        />
-        <SimpleReveal delay={0.2}>
-          <p className="mt-6 text-body-lg text-text-secondary max-w-2xl mx-auto">{body}</p>
+    <section className="paper-bg">
+      <div className="container-content py-24 md:py-32 text-center">
+        <SimpleReveal>
+          <h2 className="font-editorial text-h2 text-ff-ink max-w-3xl mx-auto whitespace-pre-line">
+            {headline}
+          </h2>
         </SimpleReveal>
-        <SimpleReveal delay={0.35}>
+        <SimpleReveal delay={0.15}>
+          <p className="mt-6 text-body-lg text-ff-ink/70 max-w-2xl mx-auto whitespace-pre-line">
+            {body}
+          </p>
+        </SimpleReveal>
+        <SimpleReveal delay={0.25}>
           <div className="mt-10 flex flex-col items-center gap-4">
-            <MagneticButton
+            <Link
               href={ctaHref}
-              variant="primary"
-              size="large"
-              trackName="Close CTA"
+              className="inline-block bg-ff-stamp text-ff-paper font-receipt text-[14px] uppercase tracking-[0.05em] px-8 py-4 rounded hover:opacity-90 transition-opacity"
             >
-              {ctaLabel}
-            </MagneticButton>
-            <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-              Typical response time: same day
+              {ctaLabel || SITE.cta}
+            </Link>
+            <p className="font-receipt text-[11px] uppercase tracking-[0.12em] text-ff-ink/40">
+              TYPICAL RESPONSE TIME: SAME DAY
             </p>
           </div>
         </SimpleReveal>
