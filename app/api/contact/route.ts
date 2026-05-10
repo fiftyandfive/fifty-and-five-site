@@ -7,7 +7,6 @@ type Payload = {
   name?: string;
   email?: string;
   company?: string;
-  service?: string;
   budget?: string;
   message?: string;
   honey?: string;
@@ -34,7 +33,6 @@ export async function POST(req: Request) {
   const name = (body.name || '').trim().slice(0, 200);
   const email = (body.email || '').trim().slice(0, 200);
   const company = (body.company || '').trim().slice(0, 200);
-  const service = (body.service || '').trim().slice(0, 200);
   const budget = (body.budget || '').trim().slice(0, 100);
   const message = (body.message || '').trim().slice(0, 5000);
 
@@ -47,7 +45,7 @@ export async function POST(req: Request) {
   const from = process.env.CONTACT_FROM_EMAIL || 'Fifty & Five <hello@fiftyandfive.com>';
 
   if (!apiKey) {
-    console.log('[contact] Resend not configured. Submission:', { name, email, company, service, budget, message });
+    console.log('[contact] Resend not configured. Submission:', { name, email, company, budget, message });
     return NextResponse.json({ ok: true, delivered: false });
   }
 
@@ -65,11 +63,10 @@ export async function POST(req: Request) {
           <p><strong>Name:</strong> ${esc(name)}</p>
           <p><strong>Email:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a></p>
           ${company ? `<p><strong>Company:</strong> ${esc(company)}</p>` : ''}
-          ${service ? `<p><strong>Service:</strong> ${esc(service)}</p>` : ''}
           ${budget ? `<p><strong>Monthly Budget:</strong> ${esc(budget)}</p>` : ''}
           ${
             message
-              ? `<p><strong>Looking for:</strong></p><blockquote style="margin:0;padding:12px 16px;border-left:3px solid #E33B0F;background:#f7f7f5">${esc(message).replace(/\n/g, '<br/>')}</blockquote>`
+              ? `<p><strong>Looking for:</strong></p><blockquote style="margin:0;padding:12px 16px;border-left:3px solid #6366F1;background:#f7f7f5">${esc(message).replace(/\n/g, '<br/>')}</blockquote>`
               : ''
           }
         </div>

@@ -53,17 +53,17 @@ export const CASE_STUDIES: CaseStudy[] = [
     verticalLabel: 'Wine & Spirits',
     verticalColor: 'wine',
     services: ['Social media management', 'Content creation', 'Community growth'],
-    duration: '10-year retainer',
-    durationBadge: '10-Year Partnership',
+    duration: 'Decade-long retainer',
+    durationBadge: 'Decade-Long Partnership',
     platforms: ['Instagram', 'Facebook'],
     tagline:
-      'Ten years of consistent brand storytelling for an Italian wine portfolio in the U.S. market, one of the longest continuous engagements in the agency\u2019s history.',
+      'A decade of consistent brand storytelling for an Italian wine portfolio in the U.S. market, one of the longest continuous engagements in the agency\u2019s history.',
     challenge:
       'Build a meaningful English-language social presence for an Italian wine portfolio in a U.S. market already crowded with domestic and imported competition. Cultivate a community that understood the Trentino-Alto Adige story without turning every post into a wine-school lecture.',
     approach:
-      'Ten years of consistent brand storytelling, community cultivation, and platform evolution. Built the brand\u2019s entire English-language social presence from the ground up. Adapted strategy through every major social media shift across the engagement, the switch from organic reach to paid, the rise of video, the Reels era, shoppable content, and the fragmentation across platforms.',
+      'A decade of consistent brand storytelling, community cultivation, and platform evolution. Built the brand\u2019s entire English-language social presence from the ground up. Adapted strategy through every major social media shift across the engagement, the switch from organic reach to paid, the rise of video, the Reels era, shoppable content, and the fragmentation across platforms.',
     outcome:
-      'A ten-year retainer speaks for itself. You don\u2019t keep a wine brand as a client for a decade unless the social presence is doing real commercial work, a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
+      'A decade-long retainer speaks for itself. You don\u2019t keep a wine brand as a client for nearly ten years unless the social presence is doing real commercial work, a case study in what consistency looks like when a brand stops reinventing its social strategy every two years.',
     featured: true,
     size: 'standard',
     heroImage: '/images/case-studies/mezzacorona.jpg',
@@ -75,8 +75,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     verticalLabel: 'Restaurant',
     verticalColor: 'restaurant',
     services: ['National social media program', 'Content strategy', 'Community management'],
-    duration: '2012\u20132022',
-    durationBadge: '10-Year Program',
+    duration: '2014\u20132021',
+    durationBadge: '7-Year Program',
     platforms: ['Instagram', 'Facebook', 'Twitter'],
     tagline:
       'Built and ran the national social media program during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history.',
@@ -85,7 +85,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     approach:
       'Built and executed the national social media program during Blaze\u2019s hyper-growth phase. Created content frameworks that scaled across hundreds of locations while maintaining brand personality. Balanced national campaign beats (LTOs, celebrity partnerships, cultural moments) with local-market responsiveness. Managed community through viral moments and the occasional operational crisis with the same steady hand.',
     outcome:
-      'Managed the social presence during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history. A ten-year engagement and the playbook built here, scalable content systems for multi-location brands, now informs every QSR and franchise engagement we take on.',
+      'Managed the social presence during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history. The playbook built here, scalable content systems for multi-location brands, now informs every QSR and franchise engagement we take on.',
     featured: true,
     size: 'standard',
     heroImage: '/images/case-studies/blaze-pizza.jpg',

@@ -2,9 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import Link from 'next/link';
+import { MagneticButton } from '@/components/ui/MagneticButton';
 import { SITE } from '@/lib/constants';
-import { trackEvent } from '@/components/layout/Analytics';
 
 const SETUP_LINES = [
   "You're paying for social this quarter.",
@@ -13,8 +12,8 @@ const SETUP_LINES = [
 ];
 
 const CHAR_DELAY = 50;
-const LINE_PAUSE = 800;
-const FADE_PAUSE = 1000;
+const LINE_PAUSE = 400;
+const FADE_PAUSE = 800;
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -31,7 +30,6 @@ export function TypewriterHero() {
   const [showCta, setShowCta] = useState(false);
   const [showTrust, setShowTrust] = useState(false);
   const [prefersReduced, setPrefersReduced] = useState(false);
-  const [showSkip, setShowSkip] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -45,23 +43,6 @@ export function TypewriterHero() {
       setShowCta(true);
       setShowTrust(true);
     }
-  }, []);
-
-  useEffect(() => {
-    if (prefersReduced) return;
-    const timer = setTimeout(() => setShowSkip(true), 1000);
-    return () => clearTimeout(timer);
-  }, [prefersReduced]);
-
-  const skipToEnd = useCallback(() => {
-    setCompletedLines(SETUP_LINES);
-    setCurrentText('');
-    setPhase('done');
-    setShowPunch(true);
-    setShowSub(true);
-    setShowCta(true);
-    setShowTrust(true);
-    setShowSkip(false);
   }, []);
 
   const advanceLine = useCallback(() => {
@@ -79,12 +60,11 @@ export function TypewriterHero() {
       setPhase('pausing');
       setTimeout(() => {
         setPhase('punch');
-        setShowSkip(false);
         setTimeout(() => setShowPunch(true), 100);
-        setTimeout(() => setShowSub(true), 500);
-        setTimeout(() => setShowCta(true), 900);
-        setTimeout(() => setShowTrust(true), 1200);
-        setTimeout(() => setPhase('done'), 1300);
+        setTimeout(() => setShowSub(true), 600);
+        setTimeout(() => setShowCta(true), 1000);
+        setTimeout(() => setShowTrust(true), 1300);
+        setTimeout(() => setPhase('done'), 1400);
       }, FADE_PAUSE);
     }
   }, [lineIndex]);
@@ -107,33 +87,33 @@ export function TypewriterHero() {
   const setupDimmed = phase === 'punch' || phase === 'done';
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-ff-bg">
-      <div className="relative z-10 container-content pt-32 pb-24 md:pt-40 md:pb-32 max-w-[1080px]">
-        {/* Setup lines */}
+    <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary">
+      <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
+        {/* Setup lines — typewriter */}
         <motion.div
-          className="min-h-[7rem] md:min-h-[6rem]"
-          animate={{ opacity: setupDimmed ? 0.3 : 1 }}
+          className="min-h-[8rem] md:min-h-[7rem]"
+          animate={{ opacity: setupDimmed ? 0.4 : 1 }}
           transition={{ duration: 0.5, ease }}
         >
           {completedLines.map((line, i) => (
             <div
               key={i}
-              className="font-receipt text-[14px] md:text-[16px] text-ff-fade-50 leading-[1.7] tracking-[0.01em]"
+              className="font-mono text-[15px] md:text-[17px] text-text-secondary leading-[1.7] tracking-[0.01em]"
             >
               {line}
             </div>
           ))}
 
           {phase === 'typing' && (
-            <div className="font-receipt text-[14px] md:text-[16px] text-ff-fade-50 leading-[1.7] tracking-[0.01em]">
+            <div className="font-mono text-[15px] md:text-[17px] text-text-secondary leading-[1.7] tracking-[0.01em]">
               {currentText}
-              <span className="inline-block w-[2px] h-[1.1em] bg-ff-stamp ml-[1px] align-middle animate-pulse" />
+              <span className="inline-block w-[2px] h-[1.1em] bg-accent ml-[1px] align-middle animate-pulse" />
             </div>
           )}
 
           {phase === 'pausing' && lineIndex < SETUP_LINES.length - 1 && (
-            <div className="font-receipt text-[14px] md:text-[16px] text-ff-fade-50 leading-[1.7] tracking-[0.01em]">
-              <span className="inline-block w-[2px] h-[1.1em] bg-ff-stamp ml-[1px] align-middle animate-pulse" />
+            <div className="font-mono text-[15px] md:text-[17px] text-text-secondary leading-[1.7] tracking-[0.01em]">
+              <span className="inline-block w-[2px] h-[1.1em] bg-accent ml-[1px] align-middle animate-pulse" />
             </div>
           )}
         </motion.div>
@@ -142,7 +122,7 @@ export function TypewriterHero() {
         <AnimatePresence>
           {showPunch && (
             <motion.h1
-              className="mt-8 md:mt-10 font-editorial font-bold text-hero text-ff-paper max-w-5xl"
+              className="mt-8 md:mt-10 font-serif text-[clamp(64px,10vw,140px)] leading-[1.0] tracking-[-0.04em] text-text-primary max-w-5xl"
               initial={{ opacity: 0, scale: 1.04, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.7, ease }}
@@ -156,7 +136,7 @@ export function TypewriterHero() {
         <AnimatePresence>
           {showSub && (
             <motion.p
-              className="mt-6 md:mt-8 text-[clamp(18px,2.5vw,24px)] leading-[1.5] text-ff-fade-50 max-w-2xl font-body"
+              className="mt-6 md:mt-8 text-[clamp(18px,2.5vw,28px)] leading-[1.45] text-text-secondary max-w-2xl"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease }}
@@ -167,22 +147,31 @@ export function TypewriterHero() {
           )}
         </AnimatePresence>
 
-        {/* CTA cluster */}
+        {/* CTAs */}
         <AnimatePresence>
           {showCta && (
             <motion.div
-              className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+              className="mt-10 flex flex-wrap items-center gap-4"
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease }}
             >
-              <Link
-                href="/contact"
-                onClick={() => trackEvent('cta_click_run_numbers')}
-                className="inline-block bg-ff-stamp text-ff-paper font-receipt text-[14px] uppercase tracking-[0.05em] px-8 py-4 rounded hover:opacity-90 transition-opacity"
+              <MagneticButton
+                href={SITE.calendly}
+                variant="primary"
+                size="large"
+                trackName="Hero CTA — Book Intro Call"
               >
-                {SITE.cta}
-              </Link>
+                Book a 30-min intro call &rarr;
+              </MagneticButton>
+              <MagneticButton
+                href="/work"
+                variant="secondary"
+                size="large"
+                trackName="Hero CTA — See the Work"
+              >
+                See the work &rarr;
+              </MagneticButton>
             </motion.div>
           )}
         </AnimatePresence>
@@ -191,30 +180,13 @@ export function TypewriterHero() {
         <AnimatePresence>
           {showTrust && (
             <motion.div
-              className="mt-8 font-receipt text-[11px] md:text-[12px] uppercase tracking-[0.15em] text-ff-fade-50"
+              className="mt-10 font-mono text-[11px] md:text-caption uppercase tracking-[0.2em] text-text-tertiary"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, ease }}
             >
-              ★★★★★ 5.0 on Clutch &middot; 18 receipts publicly verified
+              215 brands &middot; 5 continents &middot; Most clients 3+ years &middot; Since 2008
             </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Skip button */}
-        <AnimatePresence>
-          {showSkip && phase !== 'done' && (
-            <motion.button
-              type="button"
-              onClick={skipToEnd}
-              className="fixed bottom-6 left-6 font-receipt text-[11px] uppercase tracking-[0.1em] text-ff-fade-50 hover:text-ff-paper transition-colors z-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              aria-label="Skip animation"
-            >
-              Skip →
-            </motion.button>
           )}
         </AnimatePresence>
       </div>

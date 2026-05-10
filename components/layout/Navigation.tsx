@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { NAV_LINKS, SITE } from '@/lib/constants';
+import { MagneticButton } from '@/components/ui/MagneticButton';
 
 export function Navigation() {
   const pathname = usePathname();
@@ -31,15 +32,15 @@ export function Navigation() {
       <header
         className={`fixed top-0 inset-x-0 z-40 transition-[background,backdrop-filter,border-color] duration-300 ${
           scrolled
-            ? 'bg-[rgba(14,13,11,0.80)] backdrop-blur-[12px] border-b border-ff-fade-30'
+            ? 'bg-[rgba(10,10,12,0.65)] backdrop-blur-[12px] backdrop-saturate-150 border-b border-glass-border'
             : 'bg-transparent border-b border-transparent'
         }`}
       >
-        <div className="container-content flex items-center justify-between h-16 md:h-20">
+        <div className="container-edge flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="font-editorial text-[20px] md:text-[24px] text-ff-paper tracking-[0.02em]"
-            aria-label="Fifty & Five home"
+            className="font-serif text-[22px] md:text-[26px] text-text-primary tracking-[-0.03em] lowercase"
+            aria-label="fifty & five home"
           >
             {SITE.wordmark}
           </Link>
@@ -49,21 +50,18 @@ export function Navigation() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`font-receipt text-[13px] uppercase tracking-[0.1em] transition-colors duration-200 ${
+                className={`text-[14px] transition-colors duration-200 ${
                   pathname.startsWith(l.href)
-                    ? 'text-ff-paper'
-                    : 'text-ff-fade-50 hover:text-ff-paper'
+                    ? 'text-text-primary'
+                    : 'text-text-secondary hover:text-text-primary'
                 }`}
               >
                 {l.label}
               </Link>
             ))}
-            <a
-              href={SITE.phoneHref}
-              className="font-receipt text-[13px] text-ff-fade-50 hover:text-ff-paper transition-colors tracking-[0.02em]"
-            >
-              {SITE.phone}
-            </a>
+            <MagneticButton href="/contact" variant="primary" size="small">
+              Let&rsquo;s Talk
+            </MagneticButton>
           </nav>
 
           <button
@@ -73,12 +71,12 @@ export function Navigation() {
             onClick={() => setOpen((o) => !o)}
           >
             <motion.span
-              className="block w-6 h-[1.5px] bg-ff-paper origin-center"
+              className="block w-6 h-[1.5px] bg-text-primary origin-center"
               animate={open ? { rotate: 45, y: 3 } : { rotate: 0, y: 0 }}
               transition={{ type: 'spring', stiffness: 400, damping: 25 }}
             />
             <motion.span
-              className="block w-6 h-[1.5px] bg-ff-paper origin-center"
+              className="block w-6 h-[1.5px] bg-text-primary origin-center"
               animate={open ? { rotate: -45, y: -3 } : { rotate: 0, y: 0 }}
               transition={{ type: 'spring', stiffness: 400, damping: 25 }}
             />
@@ -93,9 +91,9 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-30 bg-ff-bg md:hidden"
+            className="fixed inset-0 z-30 bg-bg-primary md:hidden"
           >
-            <div className="h-full container-content pt-24 pb-10 flex flex-col">
+            <div className="h-full container-edge pt-24 pb-10 flex flex-col">
               <nav className="flex flex-col gap-6 flex-1">
                 {NAV_LINKS.map((l, i) => (
                   <motion.div
@@ -106,27 +104,22 @@ export function Navigation() {
                   >
                     <Link
                       href={l.href}
-                      className="font-editorial text-[48px] leading-none text-ff-paper tracking-[-0.02em]"
+                      className="font-serif text-[48px] leading-none text-text-primary tracking-[-0.02em]"
                     >
                       {l.label}
                     </Link>
                   </motion.div>
                 ))}
               </nav>
-              <div className="space-y-4">
-                <a
-                  href={SITE.phoneHref}
-                  className="block font-receipt text-[14px] text-ff-fade-50"
-                >
-                  {SITE.phone}
-                </a>
-                <Link
-                  href="/contact"
-                  className="block w-full text-center bg-ff-stamp text-ff-paper font-receipt text-[14px] uppercase tracking-[0.05em] py-4 rounded"
-                >
-                  Run the numbers →
-                </Link>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+              >
+                <MagneticButton href="/contact" variant="primary" size="large" className="w-full">
+                  Let&rsquo;s Talk →
+                </MagneticButton>
+              </motion.div>
             </div>
           </motion.div>
         )}

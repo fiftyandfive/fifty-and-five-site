@@ -2,37 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Typography: Crimson Pro (editorial) + JetBrains Mono (receipt) + Inter (body) via Google Fonts */
+/* Archivo Black (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
 
 :root {
-  --font-editorial: 'Crimson Pro', Georgia, 'Times New Roman', serif;
-  --font-receipt: 'JetBrains Mono', 'Courier New', monospace;
-  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Archivo Black', 'Inter', system-ui, sans-serif;
 
-  /* Receipt Design System — Warm Dark Palette */
-  --ff-bg: #0E0D0B;
-  --ff-paper: #F4F1EA;
-  --ff-ink: #171511;
-  --ff-stamp: #E33B0F;
-  --ff-data: #5C8A6B;
-  --ff-fade-50: #6B6660;
-  --ff-fade-30: #2D2A26;
+  /* Core Palette — Dark Mode Default */
+  --color-bg-primary: #0A0A0C;
+  --color-bg-secondary: #111114;
+  --color-bg-tertiary: #1A1A1F;
+  --color-bg-glass: rgba(255, 255, 255, 0.04);
 
-  /* Semantic mappings */
-  --color-bg-primary: var(--ff-bg);
-  --color-bg-secondary: #121110;
-  --color-bg-tertiary: #1A1917;
-  --color-text-primary: var(--ff-paper);
-  --color-text-secondary: var(--ff-fade-50);
-  --color-text-tertiary: #4A4742;
-  --color-accent: var(--ff-stamp);
-  --color-accent-light: #F04E24;
-  --color-data: var(--ff-data);
+  --color-text-primary: #F0F0EC;
+  --color-text-secondary: #8A8A82;
+  --color-text-tertiary: #5A5A54;
 
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-bg: rgba(255, 255, 255, 0.02);
+  --color-accent: #6366F1;
+  --color-accent-light: #818CF8;
+  --color-accent-glow: rgba(99, 102, 241, 0.15);
+  --color-accent-subtle: rgba(99, 102, 241, 0.08);
 
-  --noise-opacity: 0.02;
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-blur: 12px;
+
+  --color-wine: #9B2335;
+  --color-hospitality: #0D9488;
+  --color-restaurant: #EA580C;
+  --color-fitness: #EC4899;
+  --color-tech: #6366F1;
+  --color-retail: #F59E0B;
+  --color-entertainment: #8B5CF6;
+  --color-healthcare: #0284C7;
+  --color-realestate: #B45309;
+  --color-automotive: #64748B;
+
+  --noise-opacity: 0.03;
+
+  --aurora-1: #6366F1;
+  --aurora-2: #EC4899;
+  --aurora-3: #0D9488;
 }
 
 html {
@@ -54,56 +64,52 @@ html {
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
-  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: var(--ff-stamp);
+  background: var(--color-accent);
   color: white;
 }
 
-/* Receipt dotted divider */
-.receipt-divider {
-  border: none;
-  border-top: 1px dashed var(--ff-fade-30);
-  margin: 0;
+/* Display helper — Archivo Black is single-weight, tighten tracking hard */
+.font-display {
+  font-family: var(--font-serif), system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
 }
 
-.receipt-divider--paper {
-  border-top-color: rgba(23, 21, 17, 0.15);
+/* Archivo Black is already heavy — tighten tracking on headings */
+.font-serif {
+  letter-spacing: -0.025em;
 }
 
-/* Paper-inverted sections */
-.paper-bg {
-  background: var(--ff-paper);
-  color: var(--ff-ink);
+/* Glass surface */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  border: 1px solid var(--glass-border);
 }
 
-/* Stamp-red highlighter sweep */
-@keyframes highlighter-sweep {
-  from { background-size: 0% 100%; }
-  to { background-size: 100% 100%; }
+/* Glow on accent */
+.glow-accent {
+  box-shadow:
+    0 0 0 1px var(--color-accent),
+    0 0 20px var(--color-accent-glow),
+    0 0 60px rgba(99, 102, 241, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+.glow-accent:hover {
+  box-shadow:
+    0 0 0 1px var(--color-accent-light),
+    0 0 30px rgba(99, 102, 241, 0.25),
+    0 0 80px rgba(99, 102, 241, 0.1);
 }
 
-.stamp-highlight {
-  background-image: linear-gradient(var(--ff-stamp), var(--ff-stamp));
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 100% 40%;
-  padding: 0 4px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .stamp-highlight[data-animate="true"] {
-    background-size: 0% 40%;
-    animation: highlighter-sweep 0.3s ease-out forwards;
-  }
-}
-
-/* Noise overlay */
+/* Noise overlay class (fallback — SVG component does heavy lifting) */
 .noise-overlay {
   position: fixed;
   inset: 0;
@@ -113,31 +119,28 @@ body {
   mix-blend-mode: overlay;
 }
 
-/* Marquee */
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 30s linear infinite;
-}
-
-@keyframes marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-
-.marquee-track-reverse {
-  animation-direction: reverse;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-}
-
-/* Ticker (legacy compat) */
+/* Ticker helper */
 .ticker-track {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: ticker 40s linear infinite;
+}
+
+@keyframes ticker {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+}
+
+/* Aurora blobs mobile tuning */
+@media (max-width: 640px) {
+  .aurora-blob {
+    filter: blur(60px) !important;
+  }
+  .aurora-blob-3 { display: none; }
 }
 
 /* Disable hover tilts on touch */
@@ -147,7 +150,7 @@ body {
   }
 }
 
-/* Container */
+/* Utilities */
 .container-edge {
   max-width: 1280px;
   margin-inline: auto;
@@ -157,28 +160,26 @@ body {
   .container-edge { padding-inline: 2.5rem; }
 }
 
-/* Content container (narrower, 1080px per spec) */
-.container-content {
-  max-width: 1080px;
-  margin-inline: auto;
-  padding-inline: 1.5rem;
-}
-@media (min-width: 768px) {
-  .container-content { padding-inline: 2.5rem; }
+.vertical-bar-wine { border-left-color: var(--color-wine); }
+.vertical-bar-hospitality { border-left-color: var(--color-hospitality); }
+.vertical-bar-restaurant { border-left-color: var(--color-restaurant); }
+.vertical-bar-fitness { border-left-color: var(--color-fitness); }
+.vertical-bar-tech { border-left-color: var(--color-tech); }
+.vertical-bar-retail { border-left-color: var(--color-retail); }
+.vertical-bar-entertainment { border-left-color: var(--color-entertainment); }
+.vertical-bar-healthcare { border-left-color: var(--color-healthcare); }
+.vertical-bar-realestate { border-left-color: var(--color-realestate); }
+.vertical-bar-automotive { border-left-color: var(--color-automotive); }
+
+.hairline {
+  border-color: var(--glass-border);
 }
 
-/* Hide scrollbar */
+/* Hide scrollbar on horizontal snap rows (Apple TV lineup feel) */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
-}
-
-/* Strike-through red for receipt teardown */
-.strike-red {
-  text-decoration: line-through;
-  text-decoration-color: var(--ff-stamp);
-  text-decoration-thickness: 2px;
 }

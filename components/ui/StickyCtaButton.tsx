@@ -11,9 +11,9 @@ export function StickyCtaButton() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight;
-      const atBottom = window.innerHeight + y >= docHeight - 200;
-      setVisible(y > 400 && !atBottom);
+      const atBottom =
+        window.innerHeight + y >= document.documentElement.scrollHeight - 600;
+      setVisible(y > 600 && !atBottom);
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -32,10 +32,19 @@ export function StickyCtaButton() {
         >
           <Link
             href="/contact"
-            onClick={() => trackEvent('cta_click_run_numbers')}
-            className="inline-block bg-ff-stamp text-ff-paper font-receipt text-[13px] uppercase tracking-[0.05em] px-5 py-3 rounded shadow-[0_2px_8px_rgba(227,59,15,0.25)] hover:opacity-90 transition-opacity"
+            onClick={() => trackEvent('Sticky CTA Click')}
+            className="group glass glow-accent inline-flex items-center gap-3 rounded-full pl-3 pr-5 py-2.5 text-[13px] font-medium text-text-primary"
           >
-            Run the numbers →
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-accent text-white font-serif text-[15px]">
+              55
+            </span>
+            <span>Let&rsquo;s talk</span>
+            <span
+              className="transition-transform duration-300 group-hover:translate-x-0.5 text-accent-light"
+              aria-hidden
+            >
+              →
+            </span>
           </Link>
         </motion.div>
       )}
