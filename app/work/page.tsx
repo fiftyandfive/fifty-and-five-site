@@ -47,7 +47,7 @@ export default function WorkIndex() {
         />
         <SimpleReveal delay={0.2}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-2xl">
-            Here&rsquo;s a selection. Every case study links to one person. Every outcome is real
+            Here&rsquo;s a selection. Every outcome is real
             work, not a recycled pitch-deck statistic.
           </p>
         </SimpleReveal>

@@ -46,7 +46,7 @@ const PILLARS = [
     kicker: 'Principal-led practices',
     head: 'You work directly with us. That’s the deal.',
     body:
-      'Every engagement is staffed with a senior principal. The principal who pitches you is the principal on the Tuesday call in month seven.',
+      'Every engagement is led by senior leadership. The team that pitches you is the team on the Tuesday call in month seven.',
   },
   {
     kicker: 'Performance + authenticity',
@@ -301,11 +301,11 @@ export default function ServicesPage() {
                 </li>
                 <li className="flex gap-3 items-start">
                   <span className="text-accent mt-1 shrink-0">✓</span>
-                  One senior principal, start to finish.
+                  A dedicated team, start to finish.
                 </li>
                 <li className="flex gap-3 items-start">
                   <span className="text-accent mt-1 shrink-0">✓</span>
-                  Specialists on the bench when the work calls for it.
+                  Senior leadership on every account.
                 </li>
                 <li className="flex gap-3 items-start">
                   <span className="text-accent mt-1 shrink-0">✓</span>
