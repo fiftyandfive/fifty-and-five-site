@@ -36,7 +36,7 @@ const TIERS = [
       { text: 'Scheduling', highlight: false },
       { text: 'Monthly snapshot', highlight: false },
     ],
-    stripeUrl: 'https://buy.stripe.com/autopilot-starter',
+    stripeUrl: 'https://buy.stripe.com/00w3cv2Ule2U8rD82L7Vm0b',
     popular: false,
   },
   {
@@ -51,7 +51,7 @@ const TIERS = [
       { text: 'Scheduling', highlight: false },
       { text: 'Monthly snapshot', highlight: false },
     ],
-    stripeUrl: 'https://buy.stripe.com/autopilot-pro',
+    stripeUrl: 'https://buy.stripe.com/eVq28r1Qhgb2cHT5UD7Vm0c',
     popular: true,
   },
   {
@@ -66,7 +66,7 @@ const TIERS = [
       { text: 'Scheduling', highlight: false },
       { text: 'Monthly snapshot', highlight: false },
     ],
-    stripeUrl: 'https://buy.stripe.com/autopilot-max',
+    stripeUrl: 'https://buy.stripe.com/dRmbJ1fH73oggY96YH7Vm0a',
     popular: false,
   },
 ];
