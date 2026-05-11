@@ -6,15 +6,15 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { SITE } from '@/lib/constants';
 
 const SETUP_LINES = [
-  'Your agency sent the monthly report.',
-  "You didn't open it.",
-  'You already know what it says.',
-  'Nothing changed.',
+  'What did your social media do last week?',
+  'Not impressions. Not reach.',
+  'One thing your CFO would call a result.',
+  'Take your time.',
 ];
 
 const CHAR_DELAY = 50;
-const LINE_PAUSE = 400;
-const FADE_PAUSE = 800;
+const LINE_PAUSE = 700;
+const FADE_PAUSE = 1000;
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -30,6 +30,7 @@ export function TypewriterHero() {
   const [showSub, setShowSub] = useState(false);
   const [showCta, setShowCta] = useState(false);
   const [showTrust, setShowTrust] = useState(false);
+  const [showSkip, setShowSkip] = useState(false);
   const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
@@ -44,6 +45,24 @@ export function TypewriterHero() {
       setShowCta(true);
       setShowTrust(true);
     }
+  }, []);
+
+  useEffect(() => {
+    if (prefersReduced || phase === 'done') return;
+    const timer = setTimeout(() => setShowSkip(true), 1000);
+    return () => clearTimeout(timer);
+  }, [prefersReduced, phase]);
+
+  const skipToEnd = useCallback(() => {
+    setCompletedLines(SETUP_LINES);
+    setCurrentText('');
+    setPhase('punch');
+    setShowSkip(false);
+    setShowPunch(true);
+    setTimeout(() => setShowSub(true), 300);
+    setTimeout(() => setShowCta(true), 700);
+    setTimeout(() => setShowTrust(true), 1000);
+    setTimeout(() => setPhase('done'), 1100);
   }, []);
 
   const advanceLine = useCallback(() => {
@@ -61,11 +80,12 @@ export function TypewriterHero() {
       setPhase('pausing');
       setTimeout(() => {
         setPhase('punch');
+        setShowSkip(false);
         setTimeout(() => setShowPunch(true), 100);
-        setTimeout(() => setShowSub(true), 600);
-        setTimeout(() => setShowCta(true), 1000);
-        setTimeout(() => setShowTrust(true), 1300);
-        setTimeout(() => setPhase('done'), 1400);
+        setTimeout(() => setShowSub(true), 400);
+        setTimeout(() => setShowCta(true), 800);
+        setTimeout(() => setShowTrust(true), 1100);
+        setTimeout(() => setPhase('done'), 1200);
       }, FADE_PAUSE);
     }
   }, [lineIndex]);
@@ -88,32 +108,36 @@ export function TypewriterHero() {
   const setupDimmed = phase === 'punch' || phase === 'done';
 
   return (
-    <section className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary">
+    <section
+      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary"
+      aria-label="What did your social media do last week? Not impressions. Not reach. One thing your CFO would call a result. We'll wait. We run social. You build business."
+    >
       <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
         {/* Setup lines — typewriter */}
         <motion.div
           className="min-h-[8rem] md:min-h-[7rem]"
-          animate={{ opacity: setupDimmed ? 0.4 : 1 }}
+          aria-hidden="true"
+          animate={{ opacity: setupDimmed ? 0.3 : 1 }}
           transition={{ duration: 0.5, ease }}
         >
           {completedLines.map((line, i) => (
             <div
               key={i}
-              className="font-mono text-[15px] md:text-[17px] text-text-secondary leading-[1.7] tracking-[0.01em]"
+              className="font-mono text-[clamp(10.5px,2.8vw,17px)] text-text-secondary leading-[1.7] tracking-[0.01em]"
             >
               {line}
             </div>
           ))}
 
           {phase === 'typing' && (
-            <div className="font-mono text-[15px] md:text-[17px] text-text-secondary leading-[1.7] tracking-[0.01em]">
+            <div className="font-mono text-[clamp(10.5px,2.8vw,17px)] text-text-secondary leading-[1.7] tracking-[0.01em]">
               {currentText}
               <span className="inline-block w-[2px] h-[1.1em] bg-accent ml-[1px] align-middle animate-pulse" />
             </div>
           )}
 
           {phase === 'pausing' && lineIndex < SETUP_LINES.length - 1 && (
-            <div className="font-mono text-[15px] md:text-[17px] text-text-secondary leading-[1.7] tracking-[0.01em]">
+            <div className="font-mono text-[clamp(10.5px,2.8vw,17px)] text-text-secondary leading-[1.7] tracking-[0.01em]">
               <span className="inline-block w-[2px] h-[1.1em] bg-accent ml-[1px] align-middle animate-pulse" />
             </div>
           )}
@@ -123,28 +147,26 @@ export function TypewriterHero() {
         <AnimatePresence>
           {showPunch && (
             <motion.h1
-              className="mt-8 md:mt-10 font-serif text-[clamp(64px,10vw,140px)] leading-[1.0] tracking-[-0.04em] text-text-primary max-w-5xl"
+              className="mt-8 md:mt-10 font-serif text-[clamp(56px,10vw,140px)] leading-[1.0] tracking-[-0.04em] text-text-primary max-w-5xl"
               initial={{ opacity: 0, scale: 1.04, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.7, ease }}
+              transition={{ duration: 0.4, ease }}
             >
-              That&rsquo;s expensive silence.
+              We&rsquo;ll wait.
             </motion.h1>
           )}
         </AnimatePresence>
 
-        {/* Sub-headline */}
+        {/* Tagline */}
         <AnimatePresence>
           {showSub && (
             <motion.p
-              className="mt-6 md:mt-8 text-[clamp(18px,2.5vw,28px)] leading-[1.45] text-text-secondary max-w-2xl"
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease }}
+              className="mt-6 md:mt-8 text-[clamp(20px,3vw,32px)] leading-[1.35] text-text-secondary max-w-2xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.2, ease }}
             >
-              You&rsquo;re posting five times a week because someone said you should.
-              We start with what converts and cut what doesn&rsquo;t&nbsp;&mdash;
-              even if that means posting less and spending smarter.
+              We run social. You build business.
             </motion.p>
           )}
         </AnimatePresence>
@@ -164,7 +186,7 @@ export function TypewriterHero() {
                 size="large"
                 trackName="Hero CTA — Book Intro Call"
               >
-                Book a 30-min intro call &rarr;
+                Run the numbers &rarr;
               </MagneticButton>
               <MagneticButton
                 href="/work"
@@ -187,8 +209,25 @@ export function TypewriterHero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, ease }}
             >
-              215 brands &middot; 5 continents &middot; Most clients 3+ years &middot; Since 2008
+              ★★★★★ 5.0 on Clutch &middot; 18 receipts publicly verified
             </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Skip button */}
+        <AnimatePresence>
+          {showSkip && phase !== 'done' && (
+            <motion.button
+              onClick={skipToEnd}
+              className="fixed bottom-6 left-6 z-50 font-mono text-[10px] uppercase tracking-[0.12em] text-text-tertiary hover:text-text-secondary transition-colors px-3 py-2 rounded border border-glass-border bg-bg-primary/80 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              aria-label="Skip animation"
+            >
+              Skip &rarr;
+            </motion.button>
           )}
         </AnimatePresence>
       </div>
