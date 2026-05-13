@@ -239,6 +239,87 @@ export default function AutopilotPage() {
         </p>
       </section>
 
+      {/* Launch Audit */}
+      <section className="container-edge py-10 md:py-14">
+        <div className="flex items-center gap-2.5 mb-6">
+          <span className="ap-mono text-[#7A746B]">Before you subscribe · optional</span>
+          <span className="flex-1 h-px bg-[rgba(244,241,235,0.12)]" />
+        </div>
+
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="ap-display text-[clamp(32px,5vw,48px)] font-bold tracking-[-0.03em] leading-[1.05]">
+            Launch Audit
+          </h2>
+
+          <p className="mt-3 ap-body text-[18px] md:text-[20px] text-[#C7C2B8] leading-[1.4]">
+            Know exactly what to post before month one.
+          </p>
+
+          <p className="mt-6 ap-body text-[15px] leading-[1.6] text-[#F4F1EB]/80 max-w-xl mx-auto">
+            A one-time strategy sprint that defines your niche, finds the gap
+            your competitors are missing, and maps your first 90 days of posts.
+            Delivered as a tight PDF, not a deck.
+          </p>
+        </div>
+
+        <div className="mt-8 max-w-lg mx-auto border border-[rgba(244,241,235,0.12)] bg-[#171513] rounded-lg p-5 md:p-6">
+          <p className="ap-mono text-[9px] tracking-[0.16em] uppercase text-[#7A746B] font-medium mb-3">
+            You get
+          </p>
+          <ul className="space-y-2.5 text-[14px] text-[#F4F1EB]">
+            <li className="flex gap-2.5 items-start">
+              <span className="text-[#D9583E] font-semibold shrink-0 mt-px">✓</span>
+              <span>
+                <strong className="font-semibold">Blue-ocean niche analysis</strong>{' '}
+                <span className="text-[#C7C2B8]">— the angle your category isn't claiming yet</span>
+              </span>
+            </li>
+            <li className="flex gap-2.5 items-start">
+              <span className="text-[#D9583E] font-semibold shrink-0 mt-px">✓</span>
+              <span>
+                <strong className="font-semibold">Competitor gap report</strong>{' '}
+                <span className="text-[#C7C2B8]">— three rivals dissected, openings flagged</span>
+              </span>
+            </li>
+            <li className="flex gap-2.5 items-start">
+              <span className="text-[#D9583E] font-semibold shrink-0 mt-px">✓</span>
+              <span>
+                <strong className="font-semibold">90-day posting roadmap</strong>{' '}
+                <span className="text-[#C7C2B8]">— week-by-week cadence, pillars, and KPIs</span>
+              </span>
+            </li>
+          </ul>
+
+          <div className="mt-5 pt-4 border-t border-dashed border-[rgba(244,241,235,0.12)] text-center">
+            <div className="text-[28px] md:text-[32px] font-bold tracking-[-0.03em] leading-none ap-display">
+              $497
+              <span className="text-[13px] text-[#C7C2B8] font-normal tracking-normal ml-1">
+                one-time
+              </span>
+            </div>
+            <p className="ap-mono text-[9px] tracking-[0.14em] uppercase text-[#7A746B] mt-1.5">
+              Delivered in 7 days
+            </p>
+          </div>
+
+          <a
+            href="https://buy.stripe.com/cNidRbb6E22w6uc0KV8ww07"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 block text-center ap-mono text-[10px] tracking-[0.14em] uppercase font-semibold py-2.5 rounded border border-[#D9583E] text-[#D9583E] bg-transparent hover:bg-[#D9583E] hover:text-[#1A0A06] transition-colors"
+          >
+            Buy the Audit →
+          </a>
+        </div>
+
+        <p className="mt-4 text-center ap-mono text-[9px] tracking-[0.05em] text-[#7A746B]">
+          Stacks on any Autopilot tier. Or buy it solo to take with you.
+        </p>
+        <p className="mt-2 text-center ap-serif-italic text-[12px] text-[#7A746B]">
+          Built by senior strategists. Sharpened by AI. Same hands since 2008.
+        </p>
+      </section>
+
       {/* Social Proof */}
       <section className="container-edge py-10 md:py-14">
         <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-5">
