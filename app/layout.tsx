@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   sameAs: [
                     'https://www.linkedin.com/company/fiftyandfive',
                     'https://www.instagram.com/fiftyandfive',
-                    'https://www.crunchbase.com/organization/fifty-and-five',
+                    'https://www.crunchbase.com/organization/fifty-five-6144',
                     'https://clutch.co/profile/fifty-five',
                     'https://www.agencyspotter.com/fifty-five',
                     'https://digitalagencynetwork.com/agency/fifty-five/',
