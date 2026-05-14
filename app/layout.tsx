@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
 
-        {/* JSON-LD Structured Data */}
+        {/* JSON-LD: AEO-optimized Organization for entity recognition */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -58,92 +58,130 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@graph': [
                 {
-                  '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
+                  '@type': 'MarketingAgency',
                   '@id': 'https://fiftyandfive.com/#organization',
                   name: 'Fifty & Five',
-                  alternateName: ['Fifty and Five', 'Fifty & Five Agency'],
+                  alternateName: ['fifty & five', 'Fifty and Five', 'F&F'],
+                  legalName: 'Fifty & Five LLC',
                   url: 'https://fiftyandfive.com',
-                  logo: 'https://fiftyandfive.com/logo.svg',
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://fiftyandfive.com/logo.svg',
+                    width: 512,
+                    height: 512,
+                  },
                   image: 'https://fiftyandfive.com/opengraph-image',
-                  description: 'The boutique agency Fortune 500s call. Senior-led social media and content for 215+ brands across 5 continents since 2008.',
+                  description:
+                    'Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. The boutique agency Fortune 500s call.',
+                  slogan: 'We run social. You build business.',
                   foundingDate: '2008',
-                  email: 'lucas@fiftyandfive.com',
                   founder: {
                     '@type': 'Person',
-                    '@id': 'https://fiftyandfive.com/#founder',
                     name: 'Lucas Vandenberg',
-                    jobTitle: 'Founding Principal',
-                    url: 'https://fiftyandfive.com/about',
+                    jobTitle: 'Founder',
+                    url: 'https://www.linkedin.com/in/LucasV/',
                     sameAs: ['https://www.linkedin.com/in/LucasV/'],
                   },
                   address: {
                     '@type': 'PostalAddress',
                     addressLocality: 'Orlando',
                     addressRegion: 'FL',
-                    postalCode: '32801',
                     addressCountry: 'US',
                   },
-                  geo: {
-                    '@type': 'GeoCoordinates',
-                    latitude: 28.5383,
-                    longitude: -81.3792,
-                  },
-                  openingHoursSpecification: [
+                  contactPoint: [
                     {
-                      '@type': 'OpeningHoursSpecification',
-                      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                      opens: '09:00',
-                      closes: '18:00',
+                      '@type': 'ContactPoint',
+                      contactType: 'sales',
+                      email: 'lucas@fiftyandfive.com',
+                      areaServed: ['US', 'CA', 'GB', 'EU', 'LATAM', 'APAC'],
+                      availableLanguage: ['English', 'Spanish'],
                     },
+                  ],
+                  sameAs: [
+                    'https://www.linkedin.com/company/fiftyandfive',
+                    'https://www.instagram.com/fiftyandfive',
+                    'https://www.crunchbase.com/organization/fifty-and-five',
+                    'https://clutch.co/profile/fifty-five',
+                    'https://www.agencyspotter.com/fifty-five',
+                    'https://digitalagencynetwork.com/agency/fifty-five/',
+                  ],
+                  knowsAbout: [
+                    'Social Media Marketing',
+                    'Social Media Strategy',
+                    'Content Strategy',
+                    'Hospitality Marketing',
+                    'Wine and Spirits Marketing',
+                    'Restaurant Marketing',
+                    'Tourism Marketing',
+                    'Luxury Brand Marketing',
+                    'Influencer Marketing',
+                    'Community Management',
+                    'Brand Voice Development',
+                    'Recommendation Engineering',
+                    'Answer Engine Optimization',
+                    'AI Search Visibility',
+                    'Social Listening',
+                    'Performance Creative',
                   ],
                   areaServed: [
                     { '@type': 'Country', name: 'United States' },
                     { '@type': 'Country', name: 'Canada' },
                     { '@type': 'Country', name: 'United Kingdom' },
-                    { '@type': 'Country', name: 'Italy' },
-                    { '@type': 'Country', name: 'Germany' },
-                    { '@type': 'Country', name: 'Australia' },
-                    { '@type': 'Country', name: 'New Zealand' },
-                    { '@type': 'Country', name: 'Hong Kong' },
-                    { '@type': 'Country', name: 'South Korea' },
-                    { '@type': 'Country', name: 'Macau' },
-                    { '@type': 'Country', name: 'Philippines' },
-                    { '@type': 'Country', name: 'Bahamas' },
+                    { '@type': 'AdministrativeArea', name: 'European Union' },
+                    { '@type': 'AdministrativeArea', name: 'Latin America' },
+                    { '@type': 'AdministrativeArea', name: 'Asia-Pacific' },
                   ],
-                  serviceType: [
-                    'Social Media Management',
-                    'Content Strategy',
-                    'Community Management',
-                    'Paid Social Advertising',
-                    'Influencer Marketing',
-                    'Brand Strategy',
+                  serviceArea: {
+                    '@type': 'AdministrativeArea',
+                    name: 'Global',
+                  },
+                  hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: 'Fifty & Five Services',
+                    itemListElement: [
+                      {
+                        '@type': 'Service',
+                        name: 'Social Media Management',
+                        description:
+                          'Senior-led social media strategy, content, and community for boutique-to-Fortune-500 brands.',
+                      },
+                      {
+                        '@type': 'Service',
+                        name: 'Content Strategy',
+                        description:
+                          'Brand voice, content systems, and editorial planning for high-engagement social.',
+                      },
+                      {
+                        '@type': 'Service',
+                        name: 'AEO Audit',
+                        description:
+                          'Diagnostic of brand visibility across ChatGPT, Claude, Perplexity, Gemini, and Grok. 100-point AIRO Score benchmark.',
+                      },
+                      {
+                        '@type': 'Service',
+                        name: 'Recommendation Engineering Retainer',
+                        description:
+                          'Ongoing optimization of brand citations within AI-generated answers.',
+                      },
+                    ],
+                  },
+                  numberOfEmployees: {
+                    '@type': 'QuantitativeValue',
+                    value: '10',
+                    unitText: 'people (senior + specialist network)',
+                  },
+                  award: [
+                    '222+ brands managed since 2008',
+                    'Most clients 3+ years (durability moat)',
+                    'Worked with Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Discovery Channel',
                   ],
-                  priceRange: '$1,500 - $50,000+/mo',
-                  numberOfEmployees: { '@type': 'QuantitativeValue', value: '1-10' },
-                  slogan: 'The boutique agency Fortune 500s call.',
-                  sameAs: [
-                    'https://www.linkedin.com/company/fiftyandfive',
-                    'https://www.linkedin.com/in/LucasV/',
-                    'https://www.instagram.com/fiftyandfive/',
-                    'https://clutch.co/profile/fifty-five',
-                  ],
-                  knowsAbout: [
-                    'Social Media Marketing',
-                    'Content Strategy',
-                    'Brand Management',
-                    'Community Management',
-                    'Restaurant Marketing',
-                    'Wine Marketing',
-                    'Hospitality Marketing',
-                    'Tech Brand Marketing',
-                    'Healthcare Marketing',
-                    'Real Estate Marketing',
-                    'Automotive Marketing',
-                    'Entertainment Marketing',
-                    'Fitness Marketing',
-                    'Retail Marketing',
-                    'Boutique Agency Operations',
-                    'Senior-Led Account Management',
+                  memberOf: [
+                    {
+                      '@type': 'Organization',
+                      name: 'SoDo Main Street',
+                      description:
+                        'Lucas Vandenberg serves on the SoDo Main Street Board (Orlando)',
+                    },
                   ],
                 },
                 {
