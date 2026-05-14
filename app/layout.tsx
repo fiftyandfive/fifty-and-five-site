@@ -104,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'https://clutch.co/profile/fifty-five',
                     'https://www.agencyspotter.com/fifty-five',
                     'https://digitalagencynetwork.com/agency/fifty-five/',
+                    'https://www.wikidata.org/wiki/Q139799286',
                   ],
                   knowsAbout: [
                     'Social Media Marketing',
