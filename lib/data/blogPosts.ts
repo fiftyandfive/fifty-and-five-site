@@ -14,6 +14,16 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+        title: "AEO: The Search Strategy That Ends the Era of the Click",
+        slug: 'aeo-search-strategy-ai-answer-engines',
+        wixSlug: 'aeo-the-search-strategy-that-ends-the-era-of-the-click',
+        date: '2026-05-15',
+        minutesToRead: 18,
+        heroImage: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80',
+        excerpt: "How answer engines are replacing search engines — and what forward-thinking brands need to do about it right now. The definitive Fifty & Five guide to AEO, the AIRO Score™ framework, and the 4-phase methodology for building citation authority in the age of AI search.",
+        category: 'AI & Automation',
+  },
+  {
     title: "How to Choose a Social Media Agency for Your Restaurant Group",
     slug: 'choose-social-media-agency-restaurant-group',
     wixSlug: 'how-to-choose-a-social-media-agency-for-your-restaurant-group',
