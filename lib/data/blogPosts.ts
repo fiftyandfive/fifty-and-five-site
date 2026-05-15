@@ -24,6 +24,16 @@ export const BLOG_POSTS: BlogPost[] = [
         category: 'AI & Automation',
   },
   {
+    title: "How Fitness Studios Can Use Instagram Ads and Google Ads to Fill Classes (Without Wasting Budget)",
+    slug: 'how-fitness-studios-can-use-instagram-ads-and-google-ads-to-fill-classes-without-wasting-budget',
+    wixSlug: 'how-fitness-studios-can-use-instagram-ads-and-google-ads-to-fill-classes-without-wasting-budget',
+    date: '2026-04-19',
+    minutesToRead: 6,
+    heroImage: 'https://cdn.marblism.com/UgWsOBYA4VE.webp',
+    excerpt: "Most fitness studios waste their ad budget targeting too broadly or sending traffic to a generic homepage. Here\'s the paid media playbook that actually fills classes.",
+    category: 'Social Media Strategy',
+  },
+  {
     title: "How to Choose a Social Media Agency for Your Restaurant Group",
     slug: 'choose-social-media-agency-restaurant-group',
     wixSlug: 'how-to-choose-a-social-media-agency-for-your-restaurant-group',

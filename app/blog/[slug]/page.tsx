@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { BLOG_POSTS, getBlogPost } from '@/lib/data/blogPosts';
+import { getBlogContent } from '@/lib/data/blogContent';
 
 // ── SEO: Generate metadata for each post ────────────────────────────────────
 export async function generateMetadata({
@@ -206,11 +207,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         {/* Article Body */}
         <article className="px-6 pb-16">
-          <div className="mx-auto max-w-3xl prose prose-invert prose-lg">
-            <p className="text-xl text-white/70 leading-relaxed">
-              {post.excerpt}
-            </p>
-          </div>
+          <div
+            className="mx-auto max-w-3xl prose prose-invert prose-lg"
+            dangerouslySetInnerHTML={{
+              __html: getBlogContent(post.wixSlug) || `<p class="text-xl text-white/70 leading-relaxed">${post.excerpt}</p>`,
+            }}
+          />
         </article>
 
         {/* CTA */}
