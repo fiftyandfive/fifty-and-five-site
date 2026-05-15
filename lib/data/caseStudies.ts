@@ -287,7 +287,9 @@ export function getNextCaseStudy(slug: string) {
 export const VERTICAL_COLOR_HEX: Record<string, string> = {
   wine: '#9B2335',
   hospitality: '#0D9488',
+  tourism: '#0E7490',
   restaurant: '#EA580C',
+  luxury: '#A16207',
   fitness: '#EC4899',
   tech: '#6366F1',
   retail: '#F59E0B',
@@ -300,7 +302,9 @@ export const VERTICAL_COLOR_HEX: Record<string, string> = {
 export const VERTICAL_COLOR_DEEP_HEX: Record<string, string> = {
   wine: '#4A1A20',
   hospitality: '#064E47',
+  tourism: '#064E5A',
   restaurant: '#6B2806',
+  luxury: '#523204',
   fitness: '#6B2244',
   tech: '#2D2F73',
   retail: '#6B4006',

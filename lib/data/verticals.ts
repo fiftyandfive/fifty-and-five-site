@@ -1,9 +1,11 @@
 export type VerticalSlug =
   | 'wine-spirits'
   | 'hospitality'
+  | 'tourism'
   | 'restaurant'
-  | 'fitness'
-  | 'tech'
+  | 'luxury'
+  | 'fitness-wellness'
+  | 'tech-saas'
   | 'retail-cpg'
   | 'healthcare'
   | 'real-estate'
@@ -13,7 +15,9 @@ export type VerticalSlug =
 export type VerticalColorKey =
   | 'wine'
   | 'hospitality'
+  | 'tourism'
   | 'restaurant'
+  | 'luxury'
   | 'fitness'
   | 'tech'
   | 'retail'
@@ -32,10 +36,8 @@ export type Vertical = {
   expertise: string[];
   featuredCaseStudies: string[];
   shortLabel: string;
-  /**
-   * Optional hero image path relative to /public (e.g. '/images/verticals/wine-spirits.jpg').
-   * When unset, the vertical page uses the gradient-only hero.
-   */
+  faqs?: { q: string; a: string }[];
+  metaDescription?: string;
   heroImage?: string;
 };
 
@@ -91,13 +93,56 @@ export const VERTICALS: Vertical[] = [
     featuredCaseStudies: ['resorts-world', 'polynesian-cultural-center'],
   },
   {
+    slug: 'tourism',
+    name: 'Tourism & Destinations',
+    shortLabel: 'Tourism',
+    colorKey: 'tourism',
+    headline: 'Tourism & Destination Social Media Marketing',
+    subhead:
+      'Destination marketing that drives bookings, not just impressions. Senior-led social for resorts, attractions, and travel brands since 2008.',
+    metaDescription:
+      'Tourism social media agency. Destination marketing for resorts, attractions, and travel brands — Polynesian Cultural Center, Resorts World, and 222+ brands since 2008.',
+    clients: [
+      'Polynesian Cultural Center',
+      'Resorts World Bimini',
+      'Resorts World Catskills',
+      'Hong Kong Tourism Board',
+      'Korea Tourism Board',
+      'Macau Tourism Office',
+      'Newport Beach Tourism',
+      'Pali Hotels',
+    ],
+    expertise: [
+      'Destination-level storytelling that converts: from awareness to itinerary to booking.',
+      'Multi-market campaigns across 5 continents — we know how to localize without diluting the brand.',
+      'Crisis-ready: weather events, travel advisories, brand reputation — we\u2019ve operated through all of it.',
+    ],
+    featuredCaseStudies: ['polynesian-cultural-center', 'resorts-world'],
+    faqs: [
+      {
+        q: 'What destination marketing experience does Fifty & Five have?',
+        a: 'We\u2019ve run social for Polynesian Cultural Center, Resorts World, and other destination brands across 5 continents since 2008.',
+      },
+      {
+        q: 'How does Fifty & Five handle multi-market tourism campaigns?',
+        a: 'Localization without dilution: we adapt creative, channels, and messaging per market while protecting the global brand. We\u2019ve operated campaigns across 40+ countries.',
+      },
+      {
+        q: 'Does Fifty & Five handle crisis communications for tourism brands?',
+        a: 'Yes — weather events, travel advisories, and reputation moments are baked into our retainer playbook. Senior crisis comms is on the bench, not outsourced.',
+      },
+    ],
+  },
+  {
     slug: 'restaurant',
     name: 'Restaurant & Food',
     shortLabel: 'Restaurant',
     colorKey: 'restaurant',
-    headline: 'Social Media for Restaurants & Food Brands',
+    headline: 'Restaurant Social Media Marketing',
     subhead:
-      'From QSR chains scaling nationally to independent top-100 restaurants, social media that drives covers and conversions, not just likes.',
+      'Senior-led social for restaurant brands \u2014 local, regional, and national. 222+ brands across 5 continents since 2008.',
+    metaDescription:
+      'Restaurant social media agency. Senior-led social for QSR, fast-casual, and fine dining \u2014 Blaze Pizza and 222+ brands since 2008.',
     clients: [
       'Blaze Pizza',
       "Shakey's Pizza",
@@ -109,45 +154,118 @@ export const VERTICALS: Vertical[] = [
       "Lenny and Larry's",
     ],
     expertise: [
-      'Restaurant social is where craft meets commerce. The feed has to look delicious. The stories have to feel human. The ads have to move traffic. And the community management has to catch complaints before they become one-star reviews.',
-      'We\u2019ve run national programs for fast-growth QSR brands (Blaze Pizza at scale) and built individualized presence for iconic independents (Wolfgang\u2019s, Roscoe\u2019s). Same playbook, different dials.',
-      'Multi-location brands are their own puzzle, brand consistency vs. local flavor. We\u2019ve built the content systems that let hundreds of locations feel on-brand without flattening every neighborhood\u2019s personality.',
+      'We\u2019ve run social for QSR (Blaze Pizza) and fine-dining concepts \u2014 same senior team, different playbook.',
+      'Local + national balance: store-level campaigns that feed national brand equity.',
+      'Food content that actually drives covers and orders \u2014 not just likes.',
     ],
     featuredCaseStudies: ['blaze-pizza'],
+    faqs: [
+      {
+        q: 'What kind of restaurant brands does Fifty & Five work with?',
+        a: 'We\u2019ve run social for QSR (Blaze Pizza), fine-dining concepts, and food brands across our 222+ brand portfolio since 2008. Senior-led on every account \u2014 no junior bench.',
+      },
+      {
+        q: 'How does Fifty & Five drive covers and orders, not just likes?',
+        a: 'Every campaign ladders back to a bookable action \u2014 table reservations, app orders, store visits. We measure behavior change, not vanity metrics.',
+      },
+      {
+        q: 'Does Fifty & Five work with single-location restaurants or only national chains?',
+        a: 'Both. We\u2019ve operated local store-level campaigns through to national QSR rollouts. Our hourly rate is the same \u2014 senior-led.',
+      },
+    ],
   },
   {
-    slug: 'fitness',
+    slug: 'luxury',
+    name: 'Luxury Brands',
+    shortLabel: 'Luxury',
+    colorKey: 'luxury',
+    headline: 'Luxury Brand Social Media Marketing',
+    subhead:
+      'Premium brand voice. Senior-led execution. No junior bench. The boutique agency luxury brands call.',
+    metaDescription:
+      'Luxury brand social media agency. Premium voice protection, senior-led execution \u2014 Kendall-Jackson and 222+ brands since 2008.',
+    clients: [
+      'Kendall-Jackson',
+      'Penfolds',
+      'Resorts World Bimini',
+      'Polynesian Cultural Center',
+      'Club Sportiva',
+      'Pali Hotels',
+      'Saint Jane Beauty',
+      'Hammit',
+    ],
+    expertise: [
+      'Voice protection: every post passes through a senior strategist before it ships. No content-mill output.',
+      'Worked with Kendall-Jackson and other premium brands \u2014 we understand restraint as much as reach.',
+      'Brand-equity-first metrics: we don\u2019t trade taste for engagement.',
+    ],
+    featuredCaseStudies: ['kendall-jackson'],
+    faqs: [
+      {
+        q: 'What luxury brand experience does Fifty & Five have?',
+        a: 'We\u2019ve run social for Kendall-Jackson and premium brands across our 222-brand portfolio. Every post passes through a senior strategist \u2014 no junior bench, no content-mill output.',
+      },
+      {
+        q: 'How does Fifty & Five protect luxury brand voice?',
+        a: 'Senior-led on every account. Brand voice frameworks are written by principals, not coordinators. We treat restraint as a craft.',
+      },
+      {
+        q: 'What\u2019s Fifty & Five\u2019s approach to luxury content metrics?',
+        a: 'Brand-equity-first. We don\u2019t trade taste for engagement, and we don\u2019t ship work that erodes premium positioning to chase platform algorithms.',
+      },
+    ],
+  },
+  {
+    slug: 'fitness-wellness',
     name: 'Fitness & Wellness',
     shortLabel: 'Fitness',
     colorKey: 'fitness',
-    headline: 'Social Media for Fitness & Wellness Brands',
+    headline: 'Fitness & Wellness Social Media Marketing',
     subhead:
-      'From national franchises to boutique studios and premium endurance brands, social strategies that drive memberships, not just followers.',
+      'Senior-led social for fitness brands \u2014 boutique studios to national franchises. Conversion-grade content that actually fills classes.',
+    metaDescription:
+      'Fitness social media agency. Senior-led social for boutique studios to national franchises \u2014 Bodybar Pilates and 222+ brands since 2008.',
     clients: [
       'Orangetheory Fitness',
+      'BODYBar SoDo',
       'Chris & Heidi Powell',
       'Cervelo',
       'Title Boxing Club',
       'BASI Pilates',
-      'BODYBar SoDo',
       'CKO Kickboxing',
       'StreetStrider',
     ],
     expertise: [
-      'Fitness social media is about transformation, not just the workout, but the identity shift. Members join because they want to become someone. The content has to reflect that aspiration without feeling fake.',
-      'We\u2019ve built content frameworks for franchise models and independent studios alike. The franchise playbook requires scalable templates that local owners can execute. The boutique studio playbook requires the opposite, intimate, owner-led, local-flavor storytelling.',
-      'We understand the fitness membership funnel: awareness \u2192 trial class \u2192 conversion \u2192 retention. Most agencies optimize only the top of that funnel. We optimize the whole thing, because retention is where the margin lives.',
+      'Studio-level + national-brand expertise \u2014 we\u2019ve operated both stacks for Bodybar Pilates.',
+      'Class-fill conversion mechanics built in: every post ladders back to a bookable action.',
+      'Influencer + UGC + paid social orchestration \u2014 no single-channel bets.',
     ],
     featuredCaseStudies: [],
+    faqs: [
+      {
+        q: 'What fitness brands has Fifty & Five worked with?',
+        a: 'Bodybar Pilates and other fitness/wellness brands. Senior-led on every account \u2014 we\u2019ve operated both studio-level and national-franchise stacks.',
+      },
+      {
+        q: 'How does Fifty & Five drive class-fill conversions for fitness brands?',
+        a: 'Every post ladders back to a bookable action \u2014 class signups, free trials, app downloads. Conversion mechanics are baked into the content calendar.',
+      },
+      {
+        q: 'What\u2019s Fifty & Five\u2019s approach to fitness influencer marketing?',
+        a: 'Influencer + UGC + paid social orchestrated together \u2014 no single-channel bets. We measure trial-to-paid conversion, not follower counts.',
+      },
+    ],
   },
   {
-    slug: 'tech',
+    slug: 'tech-saas',
     name: 'Tech & SaaS',
     shortLabel: 'Tech',
     colorKey: 'tech',
-    headline: 'Social Media for Tech & SaaS Brands',
+    headline: 'Tech & SaaS Social Media Marketing',
     subhead:
-      'Enterprise software, consumer electronics, smart home, and security software, from Microsoft to NETGEAR/Arlo to Avast.',
+      'Social that translates technical depth into pipeline. We\u2019ve run social for Microsoft, SAP, NetGear, and 200+ brands across 5 continents.',
+    metaDescription:
+      'Tech & SaaS social media agency. B2B + B2C fluency \u2014 Microsoft, NetGear/Arlo, SAP, and 222+ brands since 2008. Now offering AEO.',
     clients: [
       'Microsoft',
       'SAP',
@@ -159,11 +277,25 @@ export const VERTICALS: Vertical[] = [
       'SkyBell',
     ],
     expertise: [
-      'Tech social needs translators, people who can take an engineering team\u2019s roadmap and turn it into content a non-technical audience actually cares about. Not blog posts reformatted for Instagram. Platform-native storytelling that earns attention in a hostile feed.',
-      'We\u2019ve supported product launches (Arlo from NETGEAR sub-brand to NYSE-listed standalone), global education initiatives (Microsoft Partners in Learning), and security software positioning for Avast and Webroot. The throughline: clarity over cleverness.',
-      'Smart home is its own category, half hardware sale, half post-install community management. We ran that playbook for Chamberlain and SkyBell while the category was still forming. The result: content that answers the questions a new owner is about to ask.',
+      'We translate technical content into demand signal \u2014 without dumbing it down.',
+      'B2B + B2C fluency: we\u2019ve run consumer launches (Arlo) and enterprise GTM (Microsoft) from the same playbook.',
+      'Now also offering Answer Engine Optimization (AEO) \u2014 tech brands win the AI-search consideration set, not just the SERP.',
     ],
     featuredCaseStudies: ['microsoft', 'netgear-arlo'],
+    faqs: [
+      {
+        q: 'What tech brands has Fifty & Five worked with?',
+        a: 'Microsoft, SAP, NetGear/Arlo, and over 200 other brands since 2008. We\u2019ve operated both B2B enterprise GTM and consumer tech launches from the same senior team.',
+      },
+      {
+        q: 'Does Fifty & Five do AEO (Answer Engine Optimization) for tech brands?',
+        a: 'Yes \u2014 we offer dedicated AEO audits and Recommendation Engineering retainers. Tech brands need to win the AI-search consideration set, not just rank in Google.',
+      },
+      {
+        q: 'How does Fifty & Five translate technical content for social?',
+        a: 'We don\u2019t dumb it down \u2014 we translate technical depth into demand signal using audience-specific frameworks. B2B fluency without B2C feel.',
+      },
+    ],
   },
   {
     slug: 'retail-cpg',

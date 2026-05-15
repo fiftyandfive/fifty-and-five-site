@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { CTASection } from '@/components/layout/CTASection';
+import { VERTICALS } from '@/lib/data/verticals';
+import { VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
 
 export const metadata: Metadata = {
   title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
@@ -318,6 +321,35 @@ export default function ServicesPage() {
               </ul>
             </GlassCard>
           </SimpleReveal>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="container-edge py-20 md:py-28">
+        <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+          Industries we serve
+        </div>
+        <AnimatedHeadline
+          as="h2"
+          text="Deep expertise where it matters."
+          className="mt-4 font-serif text-h2 tracking-[-0.02em] max-w-3xl"
+        />
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {VERTICALS.map((v) => {
+            const hex = VERTICAL_COLOR_HEX[v.colorKey];
+            return (
+              <Link key={v.slug} href={`/verticals/${v.slug}`}>
+                <div
+                  className="glass rounded-glass px-4 py-5 transition-colors hover:border-white/20"
+                  style={{ borderLeft: `3px solid ${hex}` }}
+                >
+                  <div className="font-serif text-[18px] leading-[1.15] tracking-[-0.015em] text-text-primary">
+                    {v.name}
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
