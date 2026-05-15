@@ -52,6 +52,12 @@ export default function ContactPage() {
                 {SITE.email}
               </a>
             </p>
+            <p className="mt-2 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+              Or call &mdash;{' '}
+              <a href="tel:+13109023246" className="text-accent hover:text-accent-light">
+                (310) 902-3246
+              </a>
+            </p>
           </SimpleReveal>
         </div>
       </section>
