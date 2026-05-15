@@ -29,7 +29,7 @@ export const BLOG_POSTS: BlogPost[] = [
     wixSlug: 'how-fitness-studios-can-use-instagram-ads-and-google-ads-to-fill-classes-without-wasting-budget',
     date: '2026-04-19',
     minutesToRead: 6,
-    heroImage: 'https://cdn.marblism.com/UgWsOBYA4VE.webp',
+    heroImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80',
     excerpt: "Most fitness studios waste their ad budget targeting too broadly or sending traffic to a generic homepage. Here\'s the paid media playbook that actually fills classes.",
     category: 'Social Media Strategy',
   },

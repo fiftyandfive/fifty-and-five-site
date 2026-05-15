@@ -102,17 +102,13 @@ export default function BlogPage() {
             style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--glass-border)' }}
           >
             {/* Image — fixed height, cover */}
-            <div className="relative overflow-hidden" style={{ height: 320 }}>
+            <div className="relative overflow-hidden flex items-center justify-center" style={{ height: 320, background: 'var(--color-bg-tertiary)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={featured.heroImage}
                 alt={featured.title}
-                className="w-full h-full transition-transform duration-700 group-hover:scale-105"
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-              />
-              <div
-                className="absolute inset-0 pointer-events-none"
-                style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.15) 0%, transparent 60%)' }}
+                className="w-full h-full"
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
               />
             </div>
             {/* Content */}
@@ -168,20 +164,15 @@ export default function BlogPage() {
                   border: '1px solid var(--glass-border)',
                 }}
               >
-                {/* Fixed-height image box — all cards match */}
-                <div className="relative overflow-hidden flex-shrink-0" style={{ height: 200, background: 'var(--color-bg-tertiary)' }}>
+                {/* Fixed-height image box — object-contain shows full image */}
+                <div className="relative overflow-hidden flex-shrink-0 flex items-center justify-center" style={{ height: 210, background: 'var(--color-bg-tertiary)' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={post.heroImage}
                     alt={post.title}
-                    className="w-full h-full transition-transform duration-500 group-hover:scale-105"
-                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    className="w-full h-full"
+                    style={{ objectFit: 'contain', objectPosition: 'center' }}
                     loading="lazy"
-                  />
-                  {/* subtle category tint overlay */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
-                    style={{ background: 'linear-gradient(to top, rgba(17,17,20,0.6), transparent)' }}
                   />
                 </div>
 

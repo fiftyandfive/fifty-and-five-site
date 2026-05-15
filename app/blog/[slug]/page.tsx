@@ -159,7 +159,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             src={post.heroImage}
             alt={post.title}
             className="w-full h-full"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: 'contain', objectPosition: 'center' }}
           />
           {/* gradient fade to page bg */}
           <div
