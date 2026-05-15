@@ -65,11 +65,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Fifty and Five',
                     'fifty & five',
                     'Fifty & Five Agency',
-                    'Fifty & Five LLC',
                     'F&F',
                   ],
-                  legalName: 'Fifty & Five LLC',
                   url: 'https://fiftyandfive.com',
+                  telephone: '+1-310-902-3246',
                   logo: {
                     '@type': 'ImageObject',
                     url: 'https://fiftyandfive.com/logo.svg',
@@ -90,14 +89,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   },
                   address: {
                     '@type': 'PostalAddress',
+                    streetAddress: '1001 N Orange Ave',
                     addressLocality: 'Orlando',
                     addressRegion: 'FL',
+                    postalCode: '32801',
                     addressCountry: 'US',
                   },
                   contactPoint: [
                     {
                       '@type': 'ContactPoint',
                       contactType: 'sales',
+                      telephone: '+1-310-902-3246',
                       email: 'lucas@fiftyandfive.com',
                       areaServed: ['US', 'CA', 'GB', 'EU', 'LATAM', 'APAC'],
                       availableLanguage: ['English', 'Spanish'],
