@@ -12,8 +12,8 @@ const SETUP_LINES = [
   'Take your time.',
 ];
 
-const CHAR_DELAY = 50;
-const LINE_PAUSE = 700;
+const CHAR_DELAY = 65;
+const LINE_PAUSE = 800;
 const FADE_PAUSE = 1000;
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
@@ -110,35 +110,77 @@ export function TypewriterHero() {
   return (
     <section
       className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary"
-      aria-label="What did your social media do last week? Not impressions. Not reach. One thing your CFO would call a result. We'll wait. We run social. You build business."
+      aria-label="What did your social media do last week? Not impressions. Not reach. One thing your CFO would call a result. We'll wait. We do the storytelling. You run the business."
     >
       <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
-        {/* Setup lines — typewriter */}
+        {/* Setup lines — 1980s CRT typewriter */}
         <motion.div
-          className="min-h-[8rem] md:min-h-[7rem]"
+          className="min-h-[8rem] md:min-h-[7rem] relative"
           aria-hidden="true"
-          animate={{ opacity: setupDimmed ? 0.3 : 1 }}
+          animate={{ opacity: setupDimmed ? 0.15 : 1 }}
           transition={{ duration: 0.5, ease }}
         >
+          {/* CRT scanline overlay */}
+          {!setupDimmed && (
+            <div
+              className="absolute inset-0 pointer-events-none z-10"
+              style={{
+                backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px)',
+                mixBlendMode: 'multiply',
+              }}
+            />
+          )}
+
           {completedLines.map((line, i) => (
             <div
               key={i}
-              className="font-mono text-[clamp(10.5px,2.8vw,17px)] text-text-secondary leading-[1.7] tracking-[0.01em]"
+              className="font-mono text-[clamp(11px,2.8vw,17px)] leading-[1.8] tracking-[0.04em] uppercase"
+              style={{
+                color: '#4ade80',
+                textShadow: '0 0 8px rgba(74,222,128,0.4), 0 0 2px rgba(74,222,128,0.2)',
+              }}
             >
-              {line}
+              <span className="opacity-50 mr-2">&gt;</span>{line}
             </div>
           ))}
 
           {phase === 'typing' && (
-            <div className="font-mono text-[clamp(10.5px,2.8vw,17px)] text-text-secondary leading-[1.7] tracking-[0.01em]">
-              {currentText}
-              <span className="inline-block w-[2px] h-[1.1em] bg-accent ml-[1px] align-middle animate-pulse" />
+            <div
+              className="font-mono text-[clamp(11px,2.8vw,17px)] leading-[1.8] tracking-[0.04em] uppercase"
+              style={{
+                color: '#4ade80',
+                textShadow: '0 0 8px rgba(74,222,128,0.4), 0 0 2px rgba(74,222,128,0.2)',
+              }}
+            >
+              <span className="opacity-50 mr-2">&gt;</span>{currentText}
+              <span
+                className="inline-block w-[0.6em] h-[1.1em] ml-[1px] align-middle"
+                style={{
+                  background: '#4ade80',
+                  boxShadow: '0 0 6px rgba(74,222,128,0.5)',
+                  animation: 'crt-blink 1s step-end infinite',
+                }}
+              />
             </div>
           )}
 
           {phase === 'pausing' && lineIndex < SETUP_LINES.length - 1 && (
-            <div className="font-mono text-[clamp(10.5px,2.8vw,17px)] text-text-secondary leading-[1.7] tracking-[0.01em]">
-              <span className="inline-block w-[2px] h-[1.1em] bg-accent ml-[1px] align-middle animate-pulse" />
+            <div
+              className="font-mono text-[clamp(11px,2.8vw,17px)] leading-[1.8] tracking-[0.04em] uppercase"
+              style={{
+                color: '#4ade80',
+                textShadow: '0 0 8px rgba(74,222,128,0.4), 0 0 2px rgba(74,222,128,0.2)',
+              }}
+            >
+              <span className="opacity-50 mr-2">&gt;</span>
+              <span
+                className="inline-block w-[0.6em] h-[1.1em] ml-[1px] align-middle"
+                style={{
+                  background: '#4ade80',
+                  boxShadow: '0 0 6px rgba(74,222,128,0.5)',
+                  animation: 'crt-blink 1s step-end infinite',
+                }}
+              />
             </div>
           )}
         </motion.div>
@@ -166,7 +208,7 @@ export function TypewriterHero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2, ease }}
             >
-              We run social. You build business.
+              We do the storytelling. You run the business.
             </motion.p>
           )}
         </AnimatePresence>
