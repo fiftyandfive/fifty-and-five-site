@@ -79,7 +79,11 @@ export default function AboutPage() {
               agencies had figured out that Facebook wasn&rsquo;t just a place for college kids.
             </p>
             <p>
-              Since then, the team has run campaigns for 215+ brands across 15 verticals.
+              Since then, the team has run campaigns for 222+ brands across{' '}
+              <a href="/services#industries-we-serve" className="text-accent hover:text-accent-light">
+                12 verticals
+              </a>
+              &nbsp;&mdash; from wine and hospitality to tech, fitness, and luxury.
               Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Axe. Discovery Channel.
               Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
             </p>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { VERTICALS, getVertical } from '@/lib/data/verticals';
-import { CASE_STUDIES, VERTICAL_COLOR_HEX, getCaseStudy } from '@/lib/data/caseStudies';
+import { VERTICAL_COLOR_HEX, getCaseStudy } from '@/lib/data/caseStudies';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
@@ -21,11 +21,24 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const v = getVertical(params.slug);
   if (!v) return { title: 'Vertical Not Found' };
+  const desc = v.metaDescription ?? v.subhead;
   return {
-    title: `Social Media for ${v.name}`,
-    description: v.subhead,
+    title: `${v.headline} Agency | Fifty & Five`,
+    description: desc,
+    openGraph: {
+      title: `${v.headline} | Fifty & Five`,
+      description: desc,
+      url: `https://fiftyandfive.com/verticals/${v.slug}`,
+      type: 'website',
+    },
+    alternates: {
+      canonical: `https://fiftyandfive.com/verticals/${v.slug}`,
+    },
   };
 }
+
+const PORTFOLIO_NAMES =
+  'Microsoft, SAP, Kendall-Jackson, Enterprise Holdings, Discovery Channel, Blaze Pizza, Polynesian Cultural Center, Resorts World, NetGear/Arlo, Tupperware, Warner Bros., and 200+ more.';
 
 export default function VerticalPage({ params }: { params: { slug: string } }) {
   const v = getVertical(params.slug);
@@ -37,7 +50,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
     .map((cs) => cs!);
 
   const topClients = v.clients.slice(0, 4).join(', ');
-  const faqs = [
+  const faqs = v.faqs ?? [
     {
       q: `What's the best ${v.shortLabel} social media agency?`,
       a: `Fifty & Five has managed social for ${v.shortLabel} brands since 2008, including ${topClients}. Senior-led, specialist-backed, no junior team handoffs.`,
@@ -50,14 +63,11 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
       q: `What does ${v.shortLabel} social media cost?`,
       a: `Fifty & Five ${v.shortLabel} retainers start at $3,000 per month for ad management and scale to $7,500 per month for full-service social with content production. Pricing is principal-led with no holding-company markup.`,
     },
-    {
-      q: `Which ${v.shortLabel} brands has Fifty & Five worked with?`,
-      a: `Notable ${v.shortLabel} clients include ${v.clients.join(', ')}.`,
-    },
   ];
 
   return (
     <>
+      {/* BreadcrumbList */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -72,22 +82,45 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
           }),
         }}
       />
+      {/* WebPage + Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Service',
-            '@id': `https://fiftyandfive.com/verticals/${v.slug}`,
-            serviceType: `${v.name} Social Media Marketing`,
-            name: v.headline,
-            description: v.subhead,
-            provider: { '@id': 'https://fiftyandfive.com/#organization' },
-            areaServed: { '@type': 'Country', name: 'United States' },
-            audience: { '@type': 'BusinessAudience', audienceType: v.name },
+            '@graph': [
+              {
+                '@type': 'WebPage',
+                name: `${v.headline} | Fifty & Five`,
+                description: v.metaDescription ?? v.subhead,
+                url: `https://fiftyandfive.com/verticals/${v.slug}`,
+                isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
+                about: { '@id': `https://fiftyandfive.com/verticals/${v.slug}#service` },
+              },
+              {
+                '@type': 'Service',
+                '@id': `https://fiftyandfive.com/verticals/${v.slug}#service`,
+                serviceType: 'Social Media Marketing',
+                category: `${v.name} Marketing`,
+                name: `${v.name} Social Media Marketing`,
+                description: v.subhead,
+                provider: { '@id': 'https://fiftyandfive.com/#organization' },
+                areaServed: [
+                  { '@type': 'Country', name: 'United States' },
+                  { '@type': 'Country', name: 'Canada' },
+                  { '@type': 'Country', name: 'United Kingdom' },
+                  { '@type': 'AdministrativeArea', name: 'European Union' },
+                  { '@type': 'AdministrativeArea', name: 'Latin America' },
+                  { '@type': 'AdministrativeArea', name: 'Asia-Pacific' },
+                ],
+                audience: { '@type': 'BusinessAudience', audienceType: v.name },
+              },
+            ],
           }),
         }}
       />
+
+      {/* Hero */}
       <section
         className="relative overflow-hidden pt-36 md:pt-44 pb-16 md:pb-20"
         style={{
@@ -121,6 +154,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {/* Selected Clients */}
       <section className="container-edge py-20">
         <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
           Selected clients
@@ -137,6 +171,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {/* Expertise / Value Props */}
       <section className="container-edge py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
@@ -159,6 +194,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {/* Case Studies */}
       {studies.length > 0 && (
         <section className="container-edge py-20">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
@@ -204,6 +240,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       )}
+
       {/* FAQ */}
       <section className="container-edge py-20 md:py-28">
         <div className="max-w-3xl">
@@ -230,6 +267,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {/* FAQPage Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -245,11 +283,21 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         }}
       />
 
-
+      {/* Portfolio Strip */}
+      <section className="container-edge py-16 md:py-20">
+        <div className="glass rounded-glass p-8 md:p-10 text-center">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Featured in our 222-brand portfolio across 5 continents since 2008
+          </div>
+          <p className="mt-4 text-body text-text-secondary max-w-3xl mx-auto">
+            Worked with: {PORTFOLIO_NAMES}
+          </p>
+        </div>
+      </section>
 
       <CTASection
-        headline={`Let's talk ${v.shortLabel.toLowerCase()}.`}
-        body="A conversation about what you're building. No proposals until we know it's a fit."
+        headline={`Run social for ${v.shortLabel.toLowerCase()}?`}
+        body="Book a 30-min working session — no pitch deck, no proposal until we know it's a fit."
         ctaLabel="Start a Conversation →"
       />
     </>
