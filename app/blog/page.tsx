@@ -7,10 +7,20 @@ import { BLOG_POSTS, BLOG_CATEGORIES } from '@/lib/data/blogPosts';
 function formatDate(dateStr: string) {
   return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', {
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
   });
 }
+
+const CATEGORY_COLORS: Record<string, string> = {
+  'AI & Automation': '#6366F1',
+  'Wine & Beverage': '#9B2335',
+  'Travel & Hospitality': '#0D9488',
+  'Restaurant': '#EA580C',
+  'Social Media Strategy': '#8B5CF6',
+  'Case Studies': '#F59E0B',
+  'Agency': '#6366F1',
+};
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -19,85 +29,217 @@ export default function BlogPage() {
     ? BLOG_POSTS.filter((p) => p.category === activeCategory)
     : BLOG_POSTS;
 
-  return (
-    <main className="min-h-screen bg-black text-white">
-      {/* Hero */}
-      <section className="relative py-24 px-6">
-        <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl font-bold tracking-tight md:text-6xl">
-            The Fifty & Five Blog
-          </h1>
-          <p className="mt-6 text-lg text-white/60 max-w-2xl mx-auto">
-            Social media strategy, AI automation, video content, and brand
-            storytelling, from an agency that&apos;s managed 215+ brands since 2008.
-          </p>
-        </div>
-      </section>
+  const featured = filteredPosts[0];
+  const rest = filteredPosts.slice(1);
 
-      {/* Category Filter */}
-      <section className="px-6 pb-8">
-        <div className="mx-auto max-w-6xl flex flex-wrap gap-3 justify-center">
+  return (
+    <main className="min-h-screen" style={{ background: 'var(--color-bg-primary)', color: 'var(--color-text-primary)' }}>
+
+      {/* ── Page Header ─────────────────────────────────────────────────── */}
+      <section className="container-edge pt-36 md:pt-44 pb-14">
+        <div
+          className="font-mono uppercase mb-4"
+          style={{ fontSize: 11, letterSpacing: '0.15em', color: 'var(--color-accent-light)' }}
+        >
+          Insights &amp; Strategy
+        </div>
+        <h1
+          className="font-serif"
+          style={{ fontSize: 'clamp(36px, 5.5vw, 64px)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.08, maxWidth: 680 }}
+        >
+          The Fifty &amp; Five Blog
+        </h1>
+        <p className="mt-5" style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--color-text-secondary)', maxWidth: 520 }}>
+          Social strategy, AI automation, and brand storytelling from an agency that&apos;s managed 215+ brands since 2008.
+        </p>
+
+        {/* Category filter */}
+        <div className="mt-10 flex flex-wrap gap-2">
           <button
             onClick={() => setActiveCategory(null)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              !activeCategory
-                ? 'bg-white text-black'
-                : 'bg-white/10 text-white/60 hover:bg-white/20'
-            }`}
+            className="px-4 py-2 rounded-full transition-all"
+            style={{
+              fontSize: 13,
+              fontWeight: 500,
+              background: !activeCategory ? 'var(--color-accent)' : 'var(--glass-bg)',
+              border: `1px solid ${!activeCategory ? 'var(--color-accent)' : 'var(--glass-border)'}`,
+              color: !activeCategory ? '#fff' : 'var(--color-text-secondary)',
+              cursor: 'pointer',
+            }}
           >
             All Posts
           </button>
-          {BLOG_CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeCategory === cat
-                  ? 'bg-white text-black'
-                  : 'bg-white/10 text-white/60 hover:bg-white/20'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+          {BLOG_CATEGORIES.map((cat) => {
+            const active = activeCategory === cat;
+            const color = CATEGORY_COLORS[cat] ?? 'var(--color-accent)';
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className="px-4 py-2 rounded-full transition-all"
+                style={{
+                  fontSize: 13,
+                  fontWeight: 500,
+                  background: active ? `${color}22` : 'var(--glass-bg)',
+                  border: `1px solid ${active ? `${color}66` : 'var(--glass-border)'}`,
+                  color: active ? color : 'var(--color-text-secondary)',
+                  cursor: 'pointer',
+                }}
+              >
+                {cat}
+              </button>
+            );
+          })}
         </div>
       </section>
 
-      {/* Post Grid */}
-      <section className="px-6 pb-24">
-        <div className="mx-auto max-w-6xl grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredPosts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="group block rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-white/30 transition-all"
-            >
-              {/* Hero Image */}
-              <div className="relative overflow-hidden bg-black/40">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={post.heroImage}
-                  alt={post.title}
-                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
+      {/* ── Featured Post ────────────────────────────────────────────────── */}
+      {featured && (
+        <section className="container-edge pb-12">
+          <Link
+            href={`/blog/${featured.slug}`}
+            className="group grid md:grid-cols-2 gap-0 rounded-[20px] overflow-hidden transition-all duration-300"
+            style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--glass-border)' }}
+          >
+            {/* Image — fixed height, cover */}
+            <div className="relative overflow-hidden" style={{ height: 320 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={featured.heroImage}
+                alt={featured.title}
+                className="w-full h-full transition-transform duration-700 group-hover:scale-105"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+              />
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.15) 0%, transparent 60%)' }}
+              />
+            </div>
+            {/* Content */}
+            <div className="p-8 md:p-10 flex flex-col justify-center">
+              <div className="flex items-center gap-2 mb-4">
+                <span
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full"
+                  style={{
+                    fontSize: 10,
+                    fontWeight: 600,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    background: `${CATEGORY_COLORS[featured.category] ?? '#6366F1'}22`,
+                    border: `1px solid ${CATEGORY_COLORS[featured.category] ?? '#6366F1'}44`,
+                    color: CATEGORY_COLORS[featured.category] ?? 'var(--color-accent-light)',
+                  }}
+                >
+                  {featured.category}
+                </span>
+                <span style={{ fontSize: 12, color: 'var(--color-text-tertiary)' }}>
+                  {featured.minutesToRead} min read
+                </span>
               </div>
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-xs text-white/40 mb-3">
-                  <span className="bg-white/10 px-2 py-1 rounded">{post.category}</span>
-                  <span>{formatDate(post.date)}</span>
-                  <span>{post.minutesToRead} min read</span>
+              <h2
+                className="font-serif transition-colors group-hover:text-accent"
+                style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--color-text-primary)' }}
+              >
+                {featured.title}
+              </h2>
+              <p className="mt-3 line-clamp-3" style={{ fontSize: 14, lineHeight: 1.65, color: 'var(--color-text-secondary)' }}>
+                {featured.excerpt}
+              </p>
+              <div className="mt-6" style={{ fontSize: 12, color: 'var(--color-text-tertiary)' }}>
+                {formatDate(featured.date)}
+              </div>
+            </div>
+          </Link>
+        </section>
+      )}
+
+      {/* ── Post Grid ────────────────────────────────────────────────────── */}
+      <section className="container-edge pb-28">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {rest.map((post) => {
+            const color = CATEGORY_COLORS[post.category] ?? '#6366F1';
+            return (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col rounded-[16px] overflow-hidden transition-all duration-300"
+                style={{
+                  background: 'var(--color-bg-secondary)',
+                  border: '1px solid var(--glass-border)',
+                }}
+              >
+                {/* Fixed-height image box — all cards match */}
+                <div className="relative overflow-hidden flex-shrink-0" style={{ height: 200, background: 'var(--color-bg-tertiary)' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.heroImage}
+                    alt={post.title}
+                    className="w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    loading="lazy"
+                  />
+                  {/* subtle category tint overlay */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
+                    style={{ background: 'linear-gradient(to top, rgba(17,17,20,0.6), transparent)' }}
+                  />
                 </div>
-                <h2 className="text-lg font-semibold leading-snug group-hover:text-blue-400 transition-colors">
-                  {post.title}
-                </h2>
-                <p className="mt-2 text-sm text-white/50 line-clamp-3">
-                  {post.excerpt}
-                </p>
-              </div>
-            </Link>
-          ))}
+
+                {/* Card body */}
+                <div className="flex flex-col flex-1 p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span
+                      className="inline-block rounded-full px-2.5 py-0.5"
+                      style={{
+                        fontSize: 10,
+                        fontWeight: 600,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        background: `${color}18`,
+                        color: color === '#6366F1' ? 'var(--color-accent-light)' : color,
+                        border: `1px solid ${color}33`,
+                      }}
+                    >
+                      {post.category}
+                    </span>
+                    <span style={{ fontSize: 11, color: 'var(--color-text-tertiary)' }}>
+                      {post.minutesToRead} min
+                    </span>
+                  </div>
+
+                  <h2
+                    className="font-serif leading-snug flex-1 transition-colors"
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 900,
+                      letterSpacing: '-0.01em',
+                      lineHeight: 1.3,
+                      color: 'var(--color-text-primary)',
+                    }}
+                  >
+                    {post.title}
+                  </h2>
+
+                  <p className="mt-2 line-clamp-2" style={{ fontSize: 13, lineHeight: 1.55, color: 'var(--color-text-tertiary)' }}>
+                    {post.excerpt}
+                  </p>
+
+                  <div
+                    className="mt-4 pt-4 flex items-center justify-between"
+                    style={{ borderTop: '1px solid var(--glass-border)', fontSize: 11, color: 'var(--color-text-tertiary)' }}
+                  >
+                    <time dateTime={post.date}>{formatDate(post.date)}</time>
+                    <span
+                      className="transition-colors group-hover:text-accent-light"
+                      style={{ color: 'var(--color-accent)' }}
+                    >
+                      Read →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </section>
     </main>

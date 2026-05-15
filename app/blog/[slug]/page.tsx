@@ -150,13 +150,16 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <main className="min-h-screen" style={{ background: 'var(--color-bg-primary)' }}>
 
         {/* ── Hero Image ──────────────────────────────────────────────────── */}
-        <div className="relative w-full overflow-hidden" style={{ maxHeight: 480, background: 'var(--color-bg-secondary)' }}>
+        <div
+          className="relative w-full overflow-hidden"
+          style={{ height: 'clamp(260px, 38vw, 480px)', background: 'var(--color-bg-secondary)' }}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={post.heroImage}
             alt={post.title}
-            className="w-full object-cover"
-            style={{ maxHeight: 480, objectPosition: 'center' }}
+            className="w-full h-full"
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           {/* gradient fade to page bg */}
           <div
