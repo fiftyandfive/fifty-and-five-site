@@ -7,9 +7,9 @@ import { SITE } from '@/lib/constants';
 
 const SETUP_LINES = [
   'What did your social media do last week?',
-  'Not impressions. Not reach.',
+  'Not impressions. Not reach. Not "brand awareness."',
   'One thing your CFO would call a result.',
-  'Take your time.',
+  '...',
 ];
 
 const CHAR_DELAY = 65;
@@ -110,7 +110,7 @@ export function TypewriterHero() {
   return (
     <section
       className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary"
-      aria-label="What did your social media do last week? Not impressions. Not reach. One thing your CFO would call a result. We'll wait. We do the storytelling. You run the business."
+      aria-label="What did your social media do last week? Not impressions. Not reach. Not brand awareness. One thing your CFO would call a result. Exactly. We do the storytelling. You run the business."
     >
       <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
         {/* Setup lines — 1980s CRT typewriter */}
@@ -194,7 +194,7 @@ export function TypewriterHero() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.4, ease }}
             >
-              We&rsquo;ll wait.
+              Exactly.
             </motion.h1>
           )}
         </AnimatePresence>
