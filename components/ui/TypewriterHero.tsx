@@ -208,7 +208,7 @@ export function TypewriterHero() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2, ease }}
             >
-              We do the storytelling. You run the business.
+              We do the storytelling.<br />You run the business.
             </motion.p>
           )}
         </AnimatePresence>
