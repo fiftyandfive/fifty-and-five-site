@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   image: 'https://fiftyandfive.com/opengraph-image',
                   description:
                     'Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. The boutique agency Fortune 500s call.',
-                  slogan: 'We run social. You build business.',
+                  slogan: 'We do the storytelling. You run the business.',
                   foundingDate: '2008',
                   founder: {
                     '@type': 'Person',
