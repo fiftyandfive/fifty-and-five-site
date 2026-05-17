@@ -111,7 +111,7 @@ export function ContactForm() {
         </MagneticButton>
         {state === 'error' && (
           <span className="text-meta text-[#FF6B6B]">
-            {error || 'Something went wrong. Try again or email lucas@fiftyandfive.com.'}
+            {error || 'Something went wrong. Try again or email hello@fiftyandfive.com.'}
           </span>
         )}
       </div>
