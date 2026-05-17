@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { NAV_LINKS, SITE } from '@/lib/constants';
 import { MagneticButton } from '@/components/ui/MagneticButton';
+import { BrandLogo } from '@/components/ui/BrandLogo';
 
 export function Navigation() {
   const pathname = usePathname();
@@ -37,12 +38,8 @@ export function Navigation() {
         }`}
       >
         <div className="container-edge flex items-center justify-between h-16 md:h-20">
-          <Link
-            href="/"
-            className="font-serif text-[22px] md:text-[26px] text-text-primary tracking-[-0.03em] lowercase"
-            aria-label="fifty & five home"
-          >
-            {SITE.wordmark}
+          <Link href="/" aria-label="Fifty & Five home">
+            <BrandLogo height={22} className="md:scale-110 origin-left" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
