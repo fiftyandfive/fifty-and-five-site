@@ -101,13 +101,13 @@ function formatDate(dateStr: string) {
 
 // Category → accent color map (matches site verticals)
 const CATEGORY_COLORS: Record<string, string> = {
-  'AI & Automation': '#6366F1',
+  'AI & Automation': '#C41E3A',
   'Wine & Beverage': '#9B2335',
   'Travel & Hospitality': '#0D9488',
   'Restaurant': '#EA580C',
-  'Social Media Strategy': '#8B5CF6',
+  'Social Media Strategy': '#E2334F',
   'Case Studies': '#F59E0B',
-  'Agency': '#6366F1',
+  'Agency': '#C41E3A',
 };
 
 // ── Page ────────────────────────────────────────────────────────────────────
@@ -124,7 +124,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     (p) => p.category === post.category && p.slug !== post.slug,
   ).slice(0, 3);
 
-  const categoryColor = CATEGORY_COLORS[post.category] ?? '#6366F1';
+  const categoryColor = CATEGORY_COLORS[post.category] ?? '#C41E3A';
 
   return (
     <>
@@ -191,7 +191,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 fontWeight: 600,
-                color: categoryColor === '#6366F1' ? 'var(--color-accent-light)' : categoryColor,
+                color: categoryColor === '#C41E3A' ? 'var(--color-accent-light)' : categoryColor,
               }}
             >
               <span

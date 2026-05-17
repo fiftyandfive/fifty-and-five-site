@@ -66,7 +66,7 @@ export async function POST(req: Request) {
           ${budget ? `<p><strong>Monthly Budget:</strong> ${esc(budget)}</p>` : ''}
           ${
             message
-              ? `<p><strong>Looking for:</strong></p><blockquote style="margin:0;padding:12px 16px;border-left:3px solid #6366F1;background:#f7f7f5">${esc(message).replace(/\n/g, '<br/>')}</blockquote>`
+              ? `<p><strong>Looking for:</strong></p><blockquote style="margin:0;padding:12px 16px;border-left:3px solid #C41E3A;background:#f7f7f5">${esc(message).replace(/\n/g, '<br/>')}</blockquote>`
               : ''
           }
         </div>

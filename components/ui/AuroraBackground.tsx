@@ -6,7 +6,7 @@ type Props = {
 export function AuroraBackground({ variant = 'default', className = '' }: Props) {
   const c1 = variant === 'warm' ? '#F59E0B' : 'var(--aurora-1)';
   const c2 = variant === 'warm' ? '#EC4899' : 'var(--aurora-2)';
-  const c3 = variant === 'warm' ? '#8B5CF6' : 'var(--aurora-3)';
+  const c3 = variant === 'warm' ? '#E2334F' : 'var(--aurora-3)';
 
   return (
     <div

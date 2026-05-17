@@ -22,7 +22,7 @@ export function VerticalPill({
   label: string;
   colorKey: string;
 }) {
-  const hex = VERTICAL_COLOR_HEX[colorKey] ?? '#6366F1';
+  const hex = VERTICAL_COLOR_HEX[colorKey] ?? '#C41E3A';
   return (
     <span
       className="inline-flex items-center whitespace-nowrap rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-[0.08em] border"

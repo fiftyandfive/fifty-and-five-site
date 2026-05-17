@@ -18,10 +18,10 @@
   --color-text-secondary: #8A8A82;
   --color-text-tertiary: #5A5A54;
 
-  --color-accent: #6366F1;
-  --color-accent-light: #818CF8;
-  --color-accent-glow: rgba(99, 102, 241, 0.15);
-  --color-accent-subtle: rgba(99, 102, 241, 0.08);
+  --color-accent: #C41E3A;
+  --color-accent-light: #E2334F;
+  --color-accent-glow: rgba(196, 30, 58, 0.15);
+  --color-accent-subtle: rgba(196, 30, 58, 0.08);
 
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-bg: rgba(255, 255, 255, 0.03);
@@ -31,16 +31,16 @@
   --color-hospitality: #0D9488;
   --color-restaurant: #EA580C;
   --color-fitness: #EC4899;
-  --color-tech: #6366F1;
+  --color-tech: #C41E3A;
   --color-retail: #F59E0B;
-  --color-entertainment: #8B5CF6;
+  --color-entertainment: #E2334F;
   --color-healthcare: #0284C7;
   --color-realestate: #B45309;
   --color-automotive: #64748B;
 
   --noise-opacity: 0.03;
 
-  --aurora-1: #6366F1;
+  --aurora-1: #C41E3A;
   --aurora-2: #EC4899;
   --aurora-3: #0D9488;
 }
@@ -99,14 +99,14 @@ body {
   box-shadow:
     0 0 0 1px var(--color-accent),
     0 0 20px var(--color-accent-glow),
-    0 0 60px rgba(99, 102, 241, 0.05);
+    0 0 60px rgba(196, 30, 58, 0.05);
   transition: box-shadow 0.3s ease;
 }
 .glow-accent:hover {
   box-shadow:
     0 0 0 1px var(--color-accent-light),
-    0 0 30px rgba(99, 102, 241, 0.25),
-    0 0 80px rgba(99, 102, 241, 0.1);
+    0 0 30px rgba(196, 30, 58, 0.25),
+    0 0 80px rgba(196, 30, 58, 0.1);
 }
 
 /* Noise overlay class (fallback — SVG component does heavy lifting) */
@@ -336,7 +336,7 @@ body {
 }
 
 .blog-prose code {
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(196, 30, 58, 0.12);
   color: var(--color-accent-light);
   padding: 0.15em 0.45em;
   border-radius: 4px;
