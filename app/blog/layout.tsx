@@ -3,14 +3,14 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Blog | Social Media Strategy, AI & Content Marketing',
   description:
-    'Social media strategy, AI automation, and brand storytelling insights from Fifty & Five, the boutique agency Fortune 500s use. 215+ brands since 2008.',
+    'Social media strategy, AI automation, and brand storytelling insights from Fifty & Five, the boutique agency Fortune 500s use. 222+ brands since 2008.',
   alternates: {
     canonical: 'https://fiftyandfive.com/blog',
   },
   openGraph: {
     title: 'Blog | Fifty & Five, Social Media & Content Agency',
     description:
-      'Expert insights on social media strategy, AI tools, video content, and hospitality marketing from an agency that\'s managed 215+ brands.',
+      'Expert insights on social media strategy, AI tools, video content, and hospitality marketing from an agency that\'s managed 222+ brands.',
     url: 'https://fiftyandfive.com/blog',
     type: 'website',
   },

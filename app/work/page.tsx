@@ -42,7 +42,7 @@ export default function WorkIndex() {
         </div>
         <AnimatedHeadline
           as="h1"
-          text="215+ brands across 15 verticals since 2008."
+          text="222+ brands across 15 verticals since 2008."
           className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-4xl"
         />
         <SimpleReveal delay={0.2}>

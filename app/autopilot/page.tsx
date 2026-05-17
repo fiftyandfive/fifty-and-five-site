@@ -108,7 +108,7 @@ export default function AutopilotPage() {
         <div className="flex items-center gap-2.5 mb-5">
           <span className="block w-6 h-px bg-[#D9583E]" />
           <span className="ap-mono text-[#D9583E]">
-            A productized service. From the team behind 215+ brands.
+            A productized service. From the team behind 222+ brands.
           </span>
         </div>
 
@@ -128,7 +128,7 @@ export default function AutopilotPage() {
         <div className="mt-4 flex flex-wrap gap-x-0 ap-mono text-[#C7C2B8]">
           <span>Senior-led since 2008</span>
           <span className="mx-2 text-[#D9583E]">&middot;</span>
-          <span>215+ brands</span>
+          <span>222+ brands</span>
           <span className="mx-2 text-[#D9583E]">&middot;</span>
           <span>5 continents</span>
           <span className="mx-2 text-[#D9583E]">&middot;</span>

@@ -112,6 +112,7 @@ export function TypewriterHero() {
       className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary"
       aria-label="What did your social media do last week? Not impressions. Not reach. Not brand awareness. One thing your CFO would call a result. Exactly. We do the storytelling. You run the business."
     >
+      <h1 className="sr-only">Fifty &amp; Five — Senior-Led Boutique Social Media Agency</h1>
       <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
         {/* Setup lines — 1980s CRT typewriter */}
         <motion.div
@@ -188,14 +189,14 @@ export function TypewriterHero() {
         {/* Punch headline */}
         <AnimatePresence>
           {showPunch && (
-            <motion.h1
+            <motion.div
               className="mt-8 md:mt-10 font-serif text-[clamp(56px,10vw,140px)] leading-[1.0] tracking-[-0.04em] text-text-primary max-w-5xl"
               initial={{ opacity: 0, scale: 1.04, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.4, ease }}
             >
               Exactly.
-            </motion.h1>
+            </motion.div>
           )}
         </AnimatePresence>
 

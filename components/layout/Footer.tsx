@@ -11,7 +11,8 @@ export function Footer() {
             <Link href="/" aria-label="Fifty & Five home">
               <BrandLogo height={26} />
             </Link>
-            <p className="mt-4 text-meta text-text-secondary max-w-[220px]">{SITE.tagline}</p>
+            <p className="mt-4 text-meta text-text-primary font-medium">We do the storytelling.<br />You run the business.</p>
+            <p className="mt-2 text-meta text-text-secondary max-w-[220px]">{SITE.tagline}</p>
           </div>
 
           <div>
@@ -90,7 +91,7 @@ export function Footer() {
 
         <div className="mt-14 pt-6 border-t border-glass-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-caption text-text-tertiary">
           <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
-          <div>Senior + AI · Since 2008 · 215 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
+          <div>Senior + AI · Since 2008 · 222 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
         </div>
       </div>
     </footer>

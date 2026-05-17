@@ -64,13 +64,13 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Social Media Strategy',
   },
   {
-    title: "What 215+ Brands Taught Us About Social Media Strategy That Actually Works",
+    title: "What 222+ Brands Taught Us About Social Media Strategy That Actually Works",
     slug: '215-brands-social-media-strategy-that-works',
     wixSlug: 'what-215-brands-taught-us-about-social-media-strategy-that-actually-works',
     date: '2026-04-19',
     minutesToRead: 4,
     heroImage: 'https://cdn.marblism.com/5h7rJY5IGn7.webp',
-    excerpt: "After managing social for 215+ brands across 15+ verticals since 2008, certain patterns become undeniable. The principles that consistently separate real presence from burning budget.",
+    excerpt: "After managing social for 222+ brands across 15+ verticals since 2008, certain patterns become undeniable. The principles that consistently separate real presence from burning budget.",
     category: 'Agency',
   },
   {
