@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FOOTER_VERTICALS, NAV_LINKS, SITE } from '@/lib/constants';
+import { BrandLogo } from '@/components/ui/BrandLogo';
 
 export function Footer() {
   return (
@@ -7,11 +8,8 @@ export function Footer() {
       <div className="container-edge py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8">
           <div className="md:col-span-1">
-            <Link
-              href="/"
-              className="font-serif text-[28px] tracking-[-0.03em] text-text-primary lowercase"
-            >
-              {SITE.wordmark}
+            <Link href="/" aria-label="Fifty & Five home">
+              <BrandLogo height={26} />
             </Link>
             <p className="mt-4 text-meta text-text-secondary max-w-[220px]">{SITE.tagline}</p>
           </div>
