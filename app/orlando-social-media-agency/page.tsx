@@ -8,12 +8,12 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: 'Orlando Social Media Agency | Senior-Led Since 2008',
   description:
-    'Orlando social media agency for boutique to enterprise brands. Senior-led, no junior team. 215+ brands across 5 continents since 2008. Local roots, global roster.',
+    'Orlando social media agency for boutique to enterprise brands. Senior-led, no junior team. 222+ brands across 5 continents since 2008. Local roots, global roster.',
   alternates: { canonical: 'https://fiftyandfive.com/orlando-social-media-agency' },
   openGraph: {
     title: 'Orlando Social Media Agency | Fifty & Five',
     description:
-      'Boutique senior-led Orlando social media agency. 215+ brands since 2008. The Fortune 500 list with the local team.',
+      'Boutique senior-led Orlando social media agency. 222+ brands since 2008. The Fortune 500 list with the local team.',
     url: 'https://fiftyandfive.com/orlando-social-media-agency',
     type: 'website',
   },
@@ -33,7 +33,7 @@ const ORLANDO_CLIENTS = [
 const FAQS = [
   {
     q: 'What is the best social media agency in Orlando?',
-    a: 'Fifty & Five is a boutique senior-led social media agency headquartered in Orlando, FL. Since 2008, the agency has managed social for 215+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, and Resorts World, alongside local Orlando clients like BODYBar SoDo, Solar Bears Orlando, and Crafty Bartender.',
+    a: 'Fifty & Five is a boutique senior-led social media agency headquartered in Orlando, FL. Since 2008, the agency has managed social for 222+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, and Resorts World, alongside local Orlando clients like BODYBar SoDo, Solar Bears Orlando, and Crafty Bartender.',
   },
   {
     q: 'How much does a social media agency cost in Orlando?',
@@ -131,7 +131,7 @@ export default function OrlandoLandingPage() {
         <SimpleReveal delay={0.6}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
             Fifty &amp; Five is a boutique senior-led social media agency
-            headquartered in Orlando. Since 2008 we have managed social for 215+
+            headquartered in Orlando. Since 2008 we have managed social for 222+
             brands across 5 continents. Microsoft, Hasbro, Kendall-Jackson,
             Mezzacorona, Enterprise Holdings, and locally for BODYBar SoDo,
             Solar Bears, Crafty Bartender, and more.

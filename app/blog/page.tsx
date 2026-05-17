@@ -50,7 +50,7 @@ export default function BlogPage() {
           The Fifty &amp; Five Blog
         </h1>
         <p className="mt-5" style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--color-text-secondary)', maxWidth: 520 }}>
-          Social strategy, AI automation, and brand storytelling from an agency that&apos;s managed 215+ brands since 2008.
+          Social strategy, AI automation, and brand storytelling from an agency that&apos;s managed 222+ brands since 2008.
         </p>
 
         {/* Category filter */}

@@ -61,7 +61,7 @@ export default async function Image() {
           }}
         >
           <div style={{ display: 'flex' }}>
-            215+ brands · 5 continents · senior-led since 2008
+            222+ brands · 5 continents · senior-led since 2008
           </div>
           <div
             style={{

@@ -18,19 +18,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
+  description: 'We do the storytelling. You run the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
     description:
-      'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
+      'We do the storytelling. You run the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
-    description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
+    description: 'We do the storytelling. You run the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
   },
   icons: {
     icon: [
@@ -83,7 +83,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     name: 'Lucas Vandenberg',
                     jobTitle: 'Founder',
                     url: 'https://www.linkedin.com/in/LucasV/',
-                    sameAs: ['https://www.linkedin.com/in/LucasV/'],
+                    sameAs: [
+                      'https://www.linkedin.com/in/LucasV/',
+                      'https://www.wikidata.org/wiki/Q139801129',
+                    ],
                   },
                   address: {
                     '@type': 'PostalAddress',
@@ -110,7 +113,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'https://clutch.co/profile/fifty-five',
                     'https://www.agencyspotter.com/fifty-five',
                     'https://digitalagencynetwork.com/agency/fifty-five/',
-                    'https://www.wikidata.org/wiki/Q139799286',
                   ],
                   knowsAbout: [
                     'Social Media Marketing',

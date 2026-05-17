@@ -71,7 +71,7 @@ const CORE_SERVICES = [
     title: 'Content Strategy & Creation',
     tag: 'Retainer or Project',
     body:
-      'Platform-specific content that actually performs, not recycled blog posts reformatted for Instagram. Original content strategy built on 18 years of pattern recognition across 215+ brands. Photography and video direction included.',
+      'Platform-specific content that actually performs, not recycled blog posts reformatted for Instagram. Original content strategy built on 18 years of pattern recognition across 222+ brands. Photography and video direction included.',
     meta: 'Typical engagement: Monthly content calendars, original creative direction, platform-native content.',
   },
   {

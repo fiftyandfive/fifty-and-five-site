@@ -30,7 +30,7 @@ export default function HomePage() {
                 name: 'What is Fifty & Five?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five is a boutique senior-led social media and content agency founded in 2008. The agency has managed social media for 215+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, Warner Bros., Tupperware, Resorts World, and Blaze Pizza.',
+                  text: 'Fifty & Five is a boutique senior-led social media and content agency founded in 2008. The agency has managed social media for 222+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, Warner Bros., Tupperware, Resorts World, and Blaze Pizza.',
                 },
               },
               {
@@ -91,7 +91,7 @@ export default function HomePage() {
       {/* STATS BAR — Change #6 */}
       <section className="container-edge py-28 md:py-36">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
-          <Stat value={215} suffix="+" label="Brands Managed" />
+          <Stat value={222} suffix="+" label="Brands Managed" />
           <div>
             <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
               <AnimatedCounter target={5} />
