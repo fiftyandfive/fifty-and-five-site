@@ -33,7 +33,10 @@ export const metadata: Metadata = {
     description: 'The boutique agency Fortune 500s call. 215 brands across 5 continents. Most clients 3+ years. Senior + AI operating model. From $3K/mo.',
   },
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/favicon.png', type: 'image/png', sizes: '64x64' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
   },
 };
 
