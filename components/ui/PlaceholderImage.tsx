@@ -22,7 +22,7 @@ export function PlaceholderImage({
   src,
   alt,
 }: Props) {
-  const hex = VERTICAL_COLOR_HEX[colorKey] ?? '#6366F1';
+  const hex = VERTICAL_COLOR_HEX[colorKey] ?? '#C41E3A';
 
   if (src) {
     return (

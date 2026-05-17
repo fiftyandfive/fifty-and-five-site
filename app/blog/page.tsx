@@ -13,13 +13,13 @@ function formatDate(dateStr: string) {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-  'AI & Automation': '#6366F1',
+  'AI & Automation': '#C41E3A',
   'Wine & Beverage': '#9B2335',
   'Travel & Hospitality': '#0D9488',
   'Restaurant': '#EA580C',
-  'Social Media Strategy': '#8B5CF6',
+  'Social Media Strategy': '#E2334F',
   'Case Studies': '#F59E0B',
-  'Agency': '#6366F1',
+  'Agency': '#C41E3A',
 };
 
 export default function BlogPage() {
@@ -121,8 +121,8 @@ export default function BlogPage() {
                     fontWeight: 600,
                     letterSpacing: '0.1em',
                     textTransform: 'uppercase',
-                    background: `${CATEGORY_COLORS[featured.category] ?? '#6366F1'}22`,
-                    border: `1px solid ${CATEGORY_COLORS[featured.category] ?? '#6366F1'}44`,
+                    background: `${CATEGORY_COLORS[featured.category] ?? '#C41E3A'}22`,
+                    border: `1px solid ${CATEGORY_COLORS[featured.category] ?? '#C41E3A'}44`,
                     color: CATEGORY_COLORS[featured.category] ?? 'var(--color-accent-light)',
                   }}
                 >
@@ -153,7 +153,7 @@ export default function BlogPage() {
       <section className="container-edge pb-28">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {rest.map((post) => {
-            const color = CATEGORY_COLORS[post.category] ?? '#6366F1';
+            const color = CATEGORY_COLORS[post.category] ?? '#C41E3A';
             return (
               <Link
                 key={post.slug}
@@ -187,7 +187,7 @@ export default function BlogPage() {
                         letterSpacing: '0.08em',
                         textTransform: 'uppercase',
                         background: `${color}18`,
-                        color: color === '#6366F1' ? 'var(--color-accent-light)' : color,
+                        color: color === '#C41E3A' ? 'var(--color-accent-light)' : color,
                         border: `1px solid ${color}33`,
                       }}
                     >
