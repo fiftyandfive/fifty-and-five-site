@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       '@type': 'ContactPoint',
                       contactType: 'sales',
                       telephone: '+1-310-902-3246',
-                      email: 'lucas@fiftyandfive.com',
+                      email: 'hello@fiftyandfive.com',
                       areaServed: ['US', 'CA', 'GB', 'EU', 'LATAM', 'APAC'],
                       availableLanguage: ['English', 'Spanish'],
                     },
