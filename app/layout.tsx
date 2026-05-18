@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { GeistMono } from 'geist/font/mono';
 import { Navigation } from '@/components/layout/Navigation';
 import { Footer } from '@/components/layout/Footer';
@@ -212,6 +213,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-bg-primary text-text-primary antialiased font-sans">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FTFXV7P7T8"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FTFXV7P7T8');
+          `}
+        </Script>
         <NoiseOverlay />
         <Navigation />
         <main className="relative z-[2]">{children}</main>
