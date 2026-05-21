@@ -214,7 +214,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-bg-primary text-text-primary antialiased font-sans">
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FTFXV7P7T8"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GR56TJNPEJ"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -222,7 +222,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FTFXV7P7T8');
+            gtag('config', 'G-GR56TJNPEJ');
           `}
         </Script>
         <NoiseOverlay />
