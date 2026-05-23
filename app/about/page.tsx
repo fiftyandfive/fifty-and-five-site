@@ -90,15 +90,15 @@ export default function AboutPage() {
             <p>
               We&rsquo;ve run the full agency playbook&nbsp;&mdash; the hires, the overhead, the layers of
               account management between the strategist and the client. We made a deliberate
-              choice to build for what comes next: senior principals leading every engagement,
-              backed by an in-house bench of senior specialists when the work calls for their
-              depth, and augmented by AI as a strategic layer, not a junior-staff replacement.
+              choice to build for what comes next: a senior team running every engagement,
+              a deep bench of specialists when the work calls for their expertise, and AI as
+              a strategic layer, not a junior-staff replacement.
               The model is built for the next decade, not the last one.
             </p>
             <p>
               The result is something most agencies can&rsquo;t offer: direct access to the team
-              that&rsquo;s actually done this 222 times before. Senior-led practices, AI-leveraged.
-              Just the senior team that built the plan, executing the plan, and adjusting the plan
+              that&rsquo;s actually done this 222+ times before. Senior practices, AI-leveraged.
+              The team that built the plan executes the plan and adjusts the plan
               in real time.
             </p>
 
@@ -122,14 +122,14 @@ export default function AboutPage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text="Senior-led. Specialist-backed."
+            text="Senior team. Deep bench."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
           <p className="mt-6 text-body-lg text-text-secondary leading-[1.6] max-w-2xl">
-            Lucas leads every engagement. When the work calls for depth outside social strategy,
-            Fifty &amp; Five brings in a short list of vetted specialists, each a principal in
-            their own right, each running their own practice. You get the right senior for the
-            work, sourced per engagement.
+            Every engagement is run by senior strategists who&rsquo;ve done this hundreds of times.
+            When the work calls for depth beyond social strategy, the team expands with a vetted
+            network of specialists&mdash;each a principal in their own practice, each brought in
+            for the specific expertise the project demands.
           </p>
         </div>
 
@@ -184,9 +184,9 @@ export default function AboutPage() {
         </div>
 
         <p className="mt-10 max-w-3xl text-body text-text-tertiary leading-[1.7]">
-          These aren&rsquo;t employees. They aren&rsquo;t subcontractors billing hourly through
-          Fifty &amp; Five. They are working principals we trust with our own client
-          relationships, brought in only when the work genuinely calls for their depth.
+          These are working principals we trust with our own client
+          relationships&mdash;not subcontractors billing hourly, but senior operators
+          brought in when the work genuinely calls for their depth.
         </p>
       </section>
 
