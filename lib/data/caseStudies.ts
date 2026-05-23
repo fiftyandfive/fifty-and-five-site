@@ -286,6 +286,58 @@ export const CASE_STUDIES: CaseStudy[] = [
     outcome:
       'Multi-year relationship built on consistent performance in one of social media\u2019s most challenging verticals. Proof that the playbook works even where most agencies refuse to pitch.',
   },
+  {
+    slug: 'barsha',
+    client: 'Barsha',
+    industry: 'Restaurant / Wine Bar',
+    verticalLabel: 'Hospitality',
+    verticalColor: 'hospitality',
+    services: ['Social media management', 'Content creation', 'Influencer seeding', 'PR amplification'],
+    duration: 'Multi-year',
+    durationBadge: 'LA Times Top 101',
+    platforms: ['Instagram', 'Facebook'],
+    tagline:
+      'Organic social and influencer seeding that helped land Barsha on the LA Times Top 101 Restaurants list two years running.',
+    challenge:
+      'Build visibility for an independent LA restaurant and wine bar in one of the most competitive dining markets in the country. No paid media budget. No PR agency. Just the food, the wine list, and whatever social could do.',
+    approach:
+      'Built an Instagram-first content strategy around Barsha’s Mediterranean-meets-California menu and curated natural wine program. Seeded content to food writers, local influencers, and neighborhood tastemakers organically—no pay-for-play, no gifted-meal programs. Every post was shot to make the scroll stop. Let the food and the room do the talking.',
+    outcome:
+      'Barsha landed on the LA Times Top 101 Restaurants list two years running. BuzzFeed, Thrillist, and NBC LA followed—all organic, no PR retainer. The kind of result that proves social media can drive real-world press when the content is good enough to share on its own.',
+    testimonial: {
+      quote: 'They’ve grown our Instagram and Facebook presence — professional, creative, and a real pleasure to work with. The photos and videos they capture are beautiful and captivating.',
+      author: 'Lenora Marouani',
+      title: 'Co-Owner, Barsha',
+      avatarSrc: '/images/testimonials/lenora-marouani.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/lenora-marouani-6b863a90/',
+    },
+  },
+  {
+    slug: 'streetstrider',
+    client: 'StreetStrider',
+    industry: 'Fitness / Consumer Product',
+    verticalLabel: 'Fitness',
+    verticalColor: 'fitness',
+    services: ['Social media management', 'Influencer marketing', 'Content strategy', 'Community building'],
+    duration: 'Multi-year',
+    durationBadge: '100+ Creator Deals',
+    platforms: ['Instagram', 'Facebook', 'YouTube', 'TikTok'],
+    tagline:
+      'Built an influencer engine from zero—Natalie Jill, Olympic medalists, and 100+ creator partnerships for an outdoor fitness brand.',
+    challenge:
+      'Launch and scale social for an outdoor fitness product with no existing influencer relationships, no creator pipeline, and a product category most people had never heard of. Build awareness from scratch in a market dominated by Peloton, Mirror, and gym culture.',
+    approach:
+      'Built a full influencer engine from the ground up. Identified, pitched, and closed 100+ creator partnerships across fitness, wellness, and outdoor lifestyle verticals. Landed Natalie Jill, Olympic medalists, and CrossFit athletes as organic ambassadors. Created a content system that turned every creator partnership into reusable social assets—workout clips, testimonials, unboxings—that fed the organic feed for months after each deal closed.',
+    outcome:
+      'Scaled from zero influencer relationships to 100+ active creator partnerships. Built a repeatable creator pipeline that became the brand’s primary acquisition channel. Proved that influencer marketing works for niche fitness products when you match the creator to the community, not just the follower count.',
+    testimonial: {
+      quote: 'Professional, organized, creative, smart, and consistently positive energy, which really matters when working with an agency. Thankful to have found this team.',
+      author: 'Matt Kemper',
+      title: 'CMO, StreetStrider',
+      avatarSrc: '/images/testimonials/matt-kemper.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/matthew-kemper-levl/',
+    },
+  },
 ];
 
 export function getCaseStudy(slug: string) {

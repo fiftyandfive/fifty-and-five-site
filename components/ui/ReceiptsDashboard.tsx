@@ -22,7 +22,7 @@ const TILES: Tile[] = [
     client: 'Lenora Marouani',
     title: 'Co-Owner, Barsha',
     vertical: 'Hospitality / Wine',
-    href: '/work',
+    href: '/work/barsha',
     avatarSrc: '/images/testimonials/lenora-marouani.jpg',
   },
   {
@@ -31,7 +31,7 @@ const TILES: Tile[] = [
     client: 'Matt Kemper',
     title: 'CMO, StreetStrider',
     vertical: 'Fitness / Wellness',
-    href: '/work',
+    href: '/work/streetstrider',
     avatarSrc: '/images/testimonials/matt-kemper.jpg',
   },
   {
