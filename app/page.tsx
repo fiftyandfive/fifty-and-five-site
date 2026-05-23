@@ -7,7 +7,7 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
-import { Testimonials } from '@/components/ui/Testimonials';
+import { ReceiptsDashboard } from '@/components/ui/ReceiptsDashboard';
 import { TypewriterHero } from '@/components/ui/TypewriterHero';
 import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
@@ -191,8 +191,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS, CLUTCH QUOTES */}
-      <Testimonials />
+      {/* RECEIPTS DASHBOARD */}
+      <ReceiptsDashboard />
 
       {/* FEATURED WORK, BENTO GRID */}
       <section className="container-edge py-24 md:py-32">
