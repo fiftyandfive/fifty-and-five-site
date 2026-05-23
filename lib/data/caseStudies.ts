@@ -21,6 +21,13 @@ export type CaseStudy = {
    * When unset, falls back to the gradient PlaceholderImage.
    */
   heroImage?: string;
+  testimonial?: {
+    quote: string;
+    author: string;
+    title: string;
+    avatarSrc: string;
+    linkedinUrl: string;
+  };
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -89,6 +96,13 @@ export const CASE_STUDIES: CaseStudy[] = [
     featured: true,
     size: 'standard',
     heroImage: '/images/case-studies/blaze-pizza.jpg',
+    testimonial: {
+      quote: 'They grew our engagement 400%. It doesn’t feel like I’m partnered with a large company, we have a real relationship, and we always have access to them.',
+      author: 'Jerry Shen',
+      title: 'Director of Digital Growth, Blaze Pizza',
+      avatarSrc: '/images/testimonials/jerry-shen.jpg',
+      linkedinUrl: 'https://www.linkedin.com/in/jerry-shen-18b33567/',
+    },
   },
   {
     slug: 'enterprise-holdings',

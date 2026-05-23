@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
@@ -8,31 +9,39 @@ type Tile = {
   headline: string;
   subhead: string;
   client: string;
+  title: string;
   vertical: string;
   href: string;
+  avatarSrc: string;
 };
 
 const TILES: Tile[] = [
   {
     headline: 'LA Times Top 101 — 2 years running',
     subhead: 'Plus BuzzFeed, Thrillist, NBC LA — all organic.',
-    client: 'Lenora Mauroni — Barsha',
+    client: 'Lenora Marouani',
+    title: 'Co-Owner, Barsha',
     vertical: 'Hospitality / Wine',
     href: '/work',
+    avatarSrc: '/images/testimonials/lenora-marouani.jpg',
   },
   {
     headline: 'Influencer engine from zero',
     subhead: 'Natalie Jill, Olympic medalists, 100+ creator deals.',
-    client: 'Matt Kemper — StreetStrider',
+    client: 'Matt Kemper',
+    title: 'CMO, StreetStrider',
     vertical: 'Fitness / Wellness',
     href: '/work',
+    avatarSrc: '/images/testimonials/matt-kemper.jpg',
   },
   {
     headline: 'Day-zero to 300+ locations',
     subhead: '10 years. 600+ daily messages. LeBron & Schwarzenegger integrations.',
-    client: 'Jerry Shen — Blaze Pizza',
+    client: 'Jerry Shen',
+    title: 'Director of Digital Growth, Blaze Pizza',
     vertical: 'Food / Restaurant',
     href: '/work/blaze-pizza',
+    avatarSrc: '/images/testimonials/jerry-shen.jpg',
   },
 ];
 
@@ -63,10 +72,19 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
             {tile.subhead}
           </p>
 
-          <div className="mt-8 pt-6 border-t border-[#1F1F23]">
-            <div className="text-[13px] text-text-secondary">{tile.client}</div>
-            <div className="mt-1 font-mono text-[11px] uppercase tracking-[0.12em] text-text-tertiary">
-              {tile.vertical}
+          <div className="mt-8 pt-6 border-t border-[#1F1F23] flex items-center gap-3">
+            <Image
+              src={tile.avatarSrc}
+              alt={tile.client}
+              width={40}
+              height={40}
+              className="w-10 h-10 rounded-full object-cover"
+            />
+            <div>
+              <div className="text-[13px] text-text-secondary">{tile.client}</div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.12em] text-text-tertiary">
+                {tile.vertical}
+              </div>
             </div>
           </div>
 

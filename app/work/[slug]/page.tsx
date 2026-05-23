@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -151,6 +152,36 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             <Section label="03, The Outcome" title="What actually happened.">
               {cs.outcome}
             </Section>
+
+            {cs.testimonial && (
+              <SimpleReveal>
+                <div className="mb-16 rounded-[12px] border border-glass-border bg-bg-secondary p-8 md:p-10">
+                  <blockquote className="font-serif text-[22px] md:text-[26px] leading-[1.3] tracking-[-0.02em] text-text-primary">
+                    &ldquo;{cs.testimonial.quote}&rdquo;
+                  </blockquote>
+                  <div className="mt-6 flex items-center gap-3">
+                    <Image
+                      src={cs.testimonial.avatarSrc}
+                      alt={cs.testimonial.author}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <a
+                        href={cs.testimonial.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[14px] text-text-primary hover:text-accent transition-colors"
+                      >
+                        {cs.testimonial.author} ↗
+                      </a>
+                      <div className="text-[13px] text-text-tertiary">{cs.testimonial.title}</div>
+                    </div>
+                  </div>
+                </div>
+              </SimpleReveal>
+            )}
           </article>
 
           <aside className="relative">
