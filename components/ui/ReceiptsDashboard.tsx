@@ -18,14 +18,14 @@ const TILES: Tile[] = [
     subhead: 'Plus BuzzFeed, Thrillist, NBC LA — all organic.',
     client: 'Lenora Mauroni — Barsha',
     vertical: 'Hospitality / Wine',
-    href: '/work/barsha',
+    href: '/work',
   },
   {
     headline: 'Influencer engine from zero',
     subhead: 'Natalie Jill, Olympic medalists, 100+ creator deals.',
     client: 'Matt Kemper — StreetStrider',
     vertical: 'Fitness / Wellness',
-    href: '/work/streetstrider',
+    href: '/work',
   },
   {
     headline: 'Day-zero to 300+ locations',
@@ -46,9 +46,10 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
       initial={{ opacity: 0, y: 12 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="h-full"
     >
       <Link href={tile.href} className="group block h-full">
-        <div className="relative h-full rounded-[12px] border border-[#1F1F23] bg-[#0A0A0C] p-6 md:p-8 transition-[box-shadow] duration-200 ease-in-out group-hover:shadow-[inset_0_0_20px_rgba(196,30,58,0.08)] cursor-pointer">
+        <div className="relative h-full flex flex-col rounded-[12px] border border-[#1F1F23] bg-[#0A0A0C] p-6 md:p-8 transition-[box-shadow] duration-200 ease-in-out group-hover:shadow-[inset_0_0_20px_rgba(196,30,58,0.08)] cursor-pointer">
           <div aria-hidden className="flex gap-1 mb-6">
             <span className="block w-[5px] h-[5px] bg-accent rotate-45 opacity-40" />
             <span className="block w-[5px] h-[5px] bg-accent rotate-45 opacity-25" />
@@ -58,7 +59,7 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
             {tile.headline}
           </h3>
 
-          <p className="mt-4 text-[15px] leading-[1.5] text-[#A0A0A8]">
+          <p className="mt-4 text-[15px] leading-[1.5] text-[#A0A0A8] flex-1">
             {tile.subhead}
           </p>
 
@@ -94,7 +95,7 @@ export function ReceiptsDashboard() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {TILES.map((tile, i) => (
-            <MetricTile key={tile.href} tile={tile} index={i} />
+            <MetricTile key={i} tile={tile} index={i} />
           ))}
         </div>
       </div>
