@@ -88,28 +88,30 @@ export default function HomePage() {
       {/* HERO */}
       <TypewriterHero />
 
-      {/* STATS BAR — Change #6 */}
+      {/* STATS BAR */}
       <section className="container-edge py-28 md:py-36">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
-          <Stat value={222} suffix="+" label="Brands Managed" />
-          <div>
-            <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
-              <AnimatedCounter target={5} />
+        <SimpleReveal y={8} duration={0.4} margin="-30%">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6 text-center">
+            <Stat value={222} suffix="+" label="Brands Managed" />
+            <div>
+              <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
+                <AnimatedCounter target={5} />
+              </div>
+              <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                Continents · 40+ Countries
+              </div>
             </div>
-            <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-              Continents · 40+ Countries
+            <Stat value={18} label="Years Social-First" />
+            <div>
+              <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
+                3+
+              </div>
+              <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                Avg. Retainer Length (Yrs)
+              </div>
             </div>
           </div>
-          <Stat value={18} label="Years Social-First" />
-          <div>
-            <div className="font-serif text-[clamp(48px,7vw,84px)] leading-none tracking-[-0.03em] text-text-primary">
-              3+
-            </div>
-            <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-              Avg. Retainer Length (Yrs)
-            </div>
-          </div>
-        </div>
+        </SimpleReveal>
       </section>
 
       {/* PLATFORMS WE'VE OUTLASTED */}
