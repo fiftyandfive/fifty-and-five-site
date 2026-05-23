@@ -10,7 +10,7 @@ type Props = {
 };
 
 export function CTASection({
-  headline = 'Ready to work with the team that\u2019s done this 215 times?',
+  headline = 'Ready to work with the team that\u2019s done this 222 times?',
   body = 'Most agency relationships start with a pitch deck. Ours starts with a conversation. No proposals until we know it\u2019s a fit.',
   ctaLabel = 'Start a Conversation →',
   ctaHref = '/contact',

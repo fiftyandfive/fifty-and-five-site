@@ -42,9 +42,6 @@ const nextConfig = {
       { source: '/post/legacy-brands-on-social-media-how-to-modernize-without-losing-your-community', destination: '/blog/legacy-brand-social-media-modernize-without-losing-community', permanent: true },
       ];
     },
-  images: {
-    formats: ['image/avif', 'image/webp'],
-  },
 };
 
 export default nextConfig;

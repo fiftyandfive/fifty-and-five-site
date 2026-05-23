@@ -22,7 +22,7 @@ export function CalendlyEmbed() {
           styles={{ height: 680 }}
           pageSettings={{
             backgroundColor: '111114',
-            primaryColor: '6366F1',
+            primaryColor: 'C41E3A',
             textColor: 'F0F0EC',
             hideEventTypeDetails: false,
             hideLandingPageDetails: false,

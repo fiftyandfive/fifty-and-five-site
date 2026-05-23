@@ -97,7 +97,7 @@ export default function AboutPage() {
             </p>
             <p>
               The result is something most agencies can&rsquo;t offer: direct access to the team
-              that&rsquo;s actually done this 215 times before. Senior-led practices, AI-leveraged.
+              that&rsquo;s actually done this 222 times before. Senior-led practices, AI-leveraged.
               Just the senior team that built the plan, executing the plan, and adjusting the plan
               in real time.
             </p>
