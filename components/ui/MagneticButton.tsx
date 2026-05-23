@@ -23,9 +23,9 @@ const base =
   'relative inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap select-none';
 
 const sizes: Record<Size, string> = {
-  default: 'px-7 py-3.5 text-[15px]',
-  small: 'px-5 py-2 text-[13px]',
-  large: 'px-9 py-4 text-[16px]',
+  default: 'px-7 py-3.5 text-[15px] min-h-[44px]',
+  small: 'px-5 py-2.5 text-[13px] min-h-[44px]',
+  large: 'px-9 py-4 text-[16px] min-h-[48px]',
 };
 
 const variants: Record<Variant, string> = {

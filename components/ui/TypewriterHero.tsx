@@ -32,21 +32,21 @@ function ParallaxDiamonds({ reducedMotion }: { reducedMotion: boolean }) {
 
   if (reducedMotion) {
     return (
-      <div ref={ref} className="absolute right-[8%] md:right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
-        <div className="w-3 h-3 md:w-4 md:h-4 bg-accent rotate-45 opacity-20" />
-        <div className="w-2 h-2 md:w-3 md:h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2" />
+      <div ref={ref} className="hidden md:block absolute right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
+        <div className="w-4 h-4 bg-accent rotate-45 opacity-20" />
+        <div className="w-3 h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2" />
       </div>
     );
   }
 
   return (
-    <div ref={ref} className="absolute right-[8%] md:right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
+    <div ref={ref} className="hidden md:block absolute right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
       <motion.div
-        className="w-3 h-3 md:w-4 md:h-4 bg-accent rotate-45 opacity-20"
+        className="w-4 h-4 bg-accent rotate-45 opacity-20"
         style={{ y: y1 }}
       />
       <motion.div
-        className="w-2 h-2 md:w-3 md:h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2"
+        className="w-3 h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2"
         style={{ y: y2 }}
       />
     </div>
