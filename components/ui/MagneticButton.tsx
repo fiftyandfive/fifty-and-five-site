@@ -1,9 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { motion, useMotionValue, useSpring } from 'motion/react';
-import { useRef, type ReactNode } from 'react';
-import { springSnappy } from '@/lib/animations';
+import { useRef, useState, useCallback, useEffect, type ReactNode } from 'react';
 import { trackEvent } from '@/components/layout/Analytics';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
@@ -18,12 +16,11 @@ type Props = {
   size?: Size;
   className?: string;
   ariaLabel?: string;
-  /** Plausible event name to fire on click */
   trackName?: string;
 };
 
 const base =
-  'relative inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors duration-200 whitespace-nowrap select-none';
+  'relative inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap select-none';
 
 const sizes: Record<Size, string> = {
   default: 'px-7 py-3.5 text-[15px]',
@@ -50,43 +47,117 @@ export function MagneticButton({
   ariaLabel,
   trackName,
 }: Props) {
-  const handleClick = () => {
+  const ref = useRef<HTMLElement | null>(null);
+  const [tx, setTx] = useState(0);
+  const [ty, setTy] = useState(0);
+  const [hovered, setHovered] = useState(false);
+  const [pressed, setPressed] = useState(false);
+  const [overshoot, setOvershoot] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    setReducedMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }, []);
+
+  const isFinePointer = useCallback(() => {
+    return typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches;
+  }, []);
+
+  const handleClick = useCallback(() => {
     if (trackName) trackEvent(trackName, href ? { to: href } : undefined);
     onClick?.();
-  };
+  }, [trackName, href, onClick]);
 
-  const ref = useRef<HTMLElement | null>(null);
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const sx = useSpring(x, springSnappy);
-  const sy = useSpring(y, springSnappy);
-
-  const onMouseMove = (e: React.MouseEvent) => {
-    if (typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches) return;
+  const onMouseMove = useCallback((e: React.MouseEvent) => {
+    if (reducedMotion || !isFinePointer()) return;
     const el = ref.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
-    const dx = e.clientX - (rect.left + rect.width / 2);
-    const dy = e.clientY - (rect.top + rect.height / 2);
-    x.set(dx * 0.2);
-    y.set(dy * 0.2);
-  };
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dx = e.clientX - cx;
+    const dy = e.clientY - cy;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const radius = 80;
+    if (dist > radius) return;
+    const factor = (1 - dist / radius) * 6;
+    const angle = Math.atan2(dy, dx);
+    setTx(Math.cos(angle) * factor);
+    setTy(Math.sin(angle) * factor);
+  }, [reducedMotion, isFinePointer]);
 
-  const onMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
+  const onMouseEnter = useCallback(() => setHovered(true), []);
+  const onMouseLeave = useCallback(() => {
+    setHovered(false);
+    setPressed(false);
+    setTx(0);
+    setTy(0);
+  }, []);
 
-  const content = (
-    <motion.span
-      className="inline-flex items-center gap-2"
-      style={{ x: sx, y: sy }}
-    >
-      {children}
-    </motion.span>
-  );
+  const onMouseDown = useCallback(() => {
+    if (!reducedMotion) setPressed(true);
+  }, [reducedMotion]);
+
+  const onMouseUp = useCallback(() => {
+    if (reducedMotion) return;
+    setPressed(false);
+    setOvershoot(true);
+    setTimeout(() => setOvershoot(false), 200);
+  }, [reducedMotion]);
+
+  const isPrimary = variant === 'primary';
+
+  const scale = pressed ? 0.96 : overshoot ? 1.02 : 1;
+  const buttonStyle: React.CSSProperties = reducedMotion
+    ? { backgroundColor: pressed && isPrimary ? '#A01830' : undefined }
+    : {
+        transform: `translate(${tx}px, ${ty}px) scale(${scale})`,
+        transition: pressed
+          ? 'transform 100ms ease-out, background-color 100ms ease-out'
+          : overshoot
+            ? 'transform 150ms ease-out, background-color 200ms ease-out'
+            : 'transform 200ms ease-out, background-color 200ms ease-out',
+        backgroundColor: pressed && isPrimary ? '#A01830' : undefined,
+      };
+
+  const diamondStyle: React.CSSProperties = reducedMotion
+    ? { transform: 'rotate(45deg)' }
+    : {
+        transform: hovered ? 'rotate(90deg)' : 'rotate(45deg)',
+        transition: 'transform 250ms ease-in-out',
+      };
 
   const cls = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
+
+  const diamond = (
+    <span
+      aria-hidden
+      className="inline-block w-[7px] h-[7px] bg-current"
+      style={diamondStyle}
+    />
+  );
+
+  const content = (
+    <>
+      {isPrimary && diamond}
+      {children}
+      {isPrimary && (
+        <span
+          aria-hidden
+          className="inline-block w-[7px] h-[7px] bg-current"
+          style={diamondStyle}
+        />
+      )}
+    </>
+  );
+
+  const eventHandlers = {
+    onMouseMove,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseDown,
+    onMouseUp,
+  };
 
   if (href) {
     return (
@@ -94,10 +165,10 @@ export function MagneticButton({
         href={href}
         ref={ref as React.Ref<HTMLAnchorElement>}
         onClick={handleClick}
-        onMouseMove={onMouseMove}
-        onMouseLeave={onMouseLeave}
         aria-label={ariaLabel}
         className={cls}
+        style={buttonStyle}
+        {...eventHandlers}
       >
         {content}
       </Link>
@@ -109,10 +180,10 @@ export function MagneticButton({
       ref={ref as React.Ref<HTMLButtonElement>}
       type={type}
       onClick={handleClick}
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
       aria-label={ariaLabel}
       className={cls}
+      style={buttonStyle}
+      {...eventHandlers}
     >
       {content}
     </button>
