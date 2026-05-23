@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { SITE } from '@/lib/constants';
 
@@ -19,6 +19,39 @@ const FADE_PAUSE = 1000;
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
 type Phase = 'typing' | 'pausing' | 'punch' | 'done';
+
+function ParallaxDiamonds({ reducedMotion }: { reducedMotion: boolean }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -80]);
+
+  if (reducedMotion) {
+    return (
+      <div ref={ref} className="hidden md:block absolute right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
+        <div className="w-4 h-4 bg-accent rotate-45 opacity-20" />
+        <div className="w-3 h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2" />
+      </div>
+    );
+  }
+
+  return (
+    <div ref={ref} className="hidden md:block absolute right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
+      <motion.div
+        className="w-4 h-4 bg-accent rotate-45 opacity-20"
+        style={{ y: y1 }}
+      />
+      <motion.div
+        className="w-3 h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2"
+        style={{ y: y2 }}
+      />
+    </div>
+  );
+}
 
 export function TypewriterHero() {
   const [phase, setPhase] = useState<Phase>('typing');
@@ -113,6 +146,9 @@ export function TypewriterHero() {
       aria-label="What did your social media do last week? Not impressions. Not reach. Not brand awareness. One thing your CFO would call a result. Exactly. We do the storytelling. You run the business."
     >
       <h1 className="sr-only">Fifty &amp; Five — Senior-Led Boutique Social Media Agency</h1>
+
+      <ParallaxDiamonds reducedMotion={prefersReduced} />
+
       <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
         {/* Setup lines — 1980s CRT typewriter */}
         <motion.div
