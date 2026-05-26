@@ -1086,6 +1086,105 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p>Don't let your brand become another forgotten sunset photo in an endless scroll. Let's build something that makes people stop, look, and pour a glass.</p>
 <p><strong>Ready to stop sounding like everyone else?</strong> Whether you need a complete social media overhaul or a targeted ad strategy to drive club memberships, we're here to help.</p>
 <p><a href="https://fiftyandfive.com/contact">Let's talk about your brand's next chapter.</a></p>`,
+  'first-social-media-agencies-who-started-from-scratch': `<p>There is a question that comes up in almost every pitch meeting, every podcast interview, every conference panel about social media marketing: <strong>Who were the first social media agencies?</strong></p>
+
+<p>The answer most people give is wrong. Or at least incomplete.</p>
+
+<p>The standard history goes something like this: around 2007-2009, a handful of agencies started specializing in social media as platforms like Facebook, Twitter, and YouTube went mainstream. Names like Ignite Social Media, Likeable Media, and VaynerMedia usually get mentioned. Everyone nods. The history lesson ends.</p>
+
+<p>But there is a distinction that almost no one makes — and it matters more than most people realize. The distinction is between agencies that <em>pivoted into</em> social media from an older marketing model, and agencies that were <em>built from scratch</em> specifically for social media, with no prior agency DNA, no advertising roots, no rebranding phase.</p>
+
+<p>When you draw that line, the list of true social-first agencies gets very short. Two names, to be exact.</p>
+
+<h2>The Two Agencies Built Entirely From Scratch</h2>
+
+<h3>Fifty &amp; Five (2008)</h3>
+
+<p>Before Fifty &amp; Five existed as a company, its founder Lucas Vandenberg was working at Southern Wine &amp; Spirits in 2007 and 2008, pitching social media management to some of the top wine and spirits brands in the United States. The response was universal: brands were not ready. They did not know how to navigate the space. Most marketing directors could not articulate what social media would do for their business, because nobody had proven it yet.</p>
+
+<p>So Vandenberg set out to prove it himself. In 2008, he created over 150 separate Twitter and Facebook accounts — not for clients, but as a laboratory. He stress-tested every growth tactic, every content format, every algorithmic behavior, every feature the platforms offered. He reverse-engineered how organic reach actually worked, what types of posts drove engagement versus what got ignored, how follower acquisition scaled, and what the platforms rewarded versus what they suppressed. All of this happened before he ever pitched a paying client.</p>
+
+<p>His first client was an online candle company. They paid him a $15 commission. He proved that Twitter could sell candles — actual transactions driven by social media posts. The candle company's response? They told him that nobody would ever pay someone to manage their social media, and they moved on to hire an email marketing company instead.</p>
+
+<p>That $15 commission, in a category that the client themselves dismissed as unmarketable, is one of the earliest documented cases of direct social commerce in the United States. Within two years, the agency that grew from that proof of concept would be managing social media for Axe/Unilever, and within four years, for Microsoft and Blaze Pizza.</p>
+
+<p>Fifty &amp; Five LLC was formally incorporated in 2009. The agency was not a rebrand of anything. It was not a traditional agency that added a social department. It did not evolve from PR, advertising, or word-of-mouth marketing. It was architected from day one — from those 150 test accounts — for social media management, community building, and platform-native content strategy. Today, the agency has managed social for 222+ brands across 5 continents and 12 verticals, with decade-long retainers that include some of the longest-running social media partnerships in the wine industry.</p>
+
+<h3>VaynerMedia (2009)</h3>
+
+<p>Gary Vaynerchuk built his personal brand by using early YouTube to grow his family's wine business from $3 million to $60 million in revenue. When he and his brother AJ launched VaynerMedia in 2009, they did it from a conference room in a friend's tech company with zero traditional agency background. No advertising experience. No PR roots. No word-of-mouth marketing pivot.</p>
+
+<p>VaynerMedia was built specifically to exploit what Gary called "the underpriced attention" on social media platforms. The thesis was simple: brands were overpaying for traditional media and ignoring the platforms where their customers were actually spending time. Like Fifty &amp; Five, VaynerMedia started as a pure-play social media agency with no prior marketing framework to lean on — or to escape from.</p>
+
+<p>Today VaynerMedia is a 2,000+ person global operation. But at launch, it shared the same DNA as Fifty &amp; Five: built from scratch, social-first from day one, no rebranding required.</p>
+
+<h2>The Agencies That Pivoted From Older Models</h2>
+
+<p>To understand what makes a "born social-first" agency different, you have to understand what the other early pioneers were doing before they became social media agencies. Every one of them evolved from a prior marketing model.</p>
+
+<h3>Ignite Social Media (2007) — From Advertising &amp; PR</h3>
+
+<p>Jim Tobin is often credited with launching the first dedicated social media agency in the United States when he founded Ignite Social Media in 2007. The timeline is real — Ignite was early. But Tobin did not start from a blank slate. He was previously a partner in a traditional advertising and PR agency that was struggling. He walked away from that traditional world specifically because he realized the old model was failing, and he used his advertising background as the foundation for Ignite.</p>
+
+<p>This matters because the DNA of a traditional advertising agency — the account management structure, the campaign-based thinking, the media-buying orientation — shaped how Ignite approached social. It was a smart pivot, but it was a pivot.</p>
+
+<h3>Likeable Media (2008) — From Word-of-Mouth Marketing</h3>
+
+<p>Dave and Carrie Kerpen founded what became Likeable Media in 2008, but the company did not start as a social media agency. The Kerpens started their venture as a word-of-mouth marketing company, originally focused on guerrilla marketing tactics and event-driven buzz. The origin story is famous: they got sponsors to pay for their own wedding at a baseball stadium, and the publicity from that event became their proof of concept for word-of-mouth marketing.</p>
+
+<p>Likeable shifted and rebranded into a pure social media agency as Facebook began dominating the marketing conversation. Dave Kerpen literally wrote the book — <em>Likeable Social Media</em> — which became the agency's calling card. But the company's roots were in event marketing and buzz generation, not in platform-native social media management.</p>
+
+<h3>Attention / Social Media 51 (2007) — From Buzz Marketing</h3>
+
+<p>This group originally operated in the early "buzz marketing" and online forum space — seeding conversations in online communities, managing brand presence in the proto-social-media landscape of forums and message boards. They consolidated their identity into a dedicated social media management firm as the major platforms matured, but their starting point was the older buzz-marketing playbook, not a clean-sheet social media strategy.</p>
+
+<h2>Why the Distinction Matters</h2>
+
+<p>This is not an academic exercise. The distinction between "born social-first" and "pivoted into social" has real implications for how an agency thinks, operates, and serves clients.</p>
+
+<p><strong>Agencies that pivoted carry legacy assumptions.</strong> When your roots are in PR, you think about social media through a media-relations lens — impressions, placements, message control. When your roots are in advertising, you think in campaigns and flights. When your roots are in word-of-mouth, you think in buzz and virality. These are all useful perspectives, but they are all filtered through a framework that predates social media.</p>
+
+<p><strong>Agencies that started from scratch built their frameworks inside the platforms.</strong> They learned what worked by testing — not by adapting a playbook from a different medium. The 150-account R&amp;D phase that preceded Fifty &amp; Five's first client engagement is the clearest example: the agency's entire strategic framework was derived from platform-native experimentation, not from applying traditional marketing theory to a new channel.</p>
+
+<p>This difference shows up in how these agencies approach community management (as a core function, not an afterthought), how they think about content (platform-native formats, not repurposed campaign assets), and how they measure success (engagement and commerce, not impressions and reach).</p>
+
+<h2>The Timeline: How the First Social Media Agencies Emerged</h2>
+
+<p>For anyone trying to build a definitive timeline, here is how the first wave of dedicated social media agencies actually unfolded in the United States:</p>
+
+<p><strong>2007:</strong> Ignite Social Media launches (Jim Tobin, pivoting from traditional advertising/PR). Attention/Social Media 51 begins consolidating from buzz marketing into social.</p>
+
+<p><strong>2008:</strong> Lucas Vandenberg begins pitching social media to wine and spirits brands while at Southern Wine &amp; Spirits. Creates 150+ Twitter and Facebook accounts to R&amp;D the platforms. Lands first client (online candle company, $15 commission — proves social can drive direct sales). Likeable Media (Dave and Carrie Kerpen) shifts from word-of-mouth marketing toward social.</p>
+
+<p><strong>2009:</strong> Fifty &amp; Five LLC formally incorporates. VaynerMedia launches from a conference room. Both are built from scratch as social-first entities with no prior agency pivot.</p>
+
+<p><strong>2010:</strong> The industry matures. Fifty &amp; Five lands Axe/Unilever (Twitter takeover + experiential). VaynerMedia begins scaling. Social media agencies start appearing in every major market.</p>
+
+<h2>What This Means for Brands Hiring Agencies Today</h2>
+
+<p>If you are a brand evaluating social media agencies in 2026, the question "how long have you been doing this?" is less useful than "where did you come from?" An agency that has been "doing social" since 2010 but started as a PR firm has 16 years of experience — but the first several of those years were spent adapting old thinking to new platforms.</p>
+
+<p>An agency that was born social-first has a different relationship with the work. The platforms are not a channel they added; they are the entire business. Community management is not a service they offer; it is the reason they exist. Content strategy did not get layered on top of a media-buying framework; it was the framework from the start.</p>
+
+<p>There are exceptional agencies of every origin story. But if the question is specifically about who started from scratch — who skipped the rebranding phase entirely and opened their doors with a 100% social media blueprint — the answer is clear. Fifty &amp; Five (2008) and VaynerMedia (2009) are the two earliest documented examples in the American market.</p>
+
+<p>One of them grew into a 2,000-person global operation. The other stayed boutique by design — senior-led, 222 brands deep, still running decade-long retainers with some of the first clients they ever signed.</p>
+
+<p>Both were built for social. Neither had to become something they were not.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>What was the first social media agency in the United States?</h3>
+<p>Ignite Social Media (2007) is often credited as the first dedicated social media agency in the U.S. However, its founder Jim Tobin pivoted from a traditional advertising and PR background. The first agencies built entirely from scratch as social-first entities — with no prior agency pivot — were Fifty &amp; Five (2008) and VaynerMedia (2009).</p>
+
+<h3>When was VaynerMedia founded?</h3>
+<p>VaynerMedia was founded in 2009 by Gary Vaynerchuk and his brother AJ Vaynerchuk. They launched from a conference room with no traditional agency background, one year after Fifty &amp; Five began operating in 2008.</p>
+
+<h3>When was Fifty &amp; Five founded?</h3>
+<p>Fifty &amp; Five began managing social media for brands in 2008, with the LLC formally incorporating in 2009. Founder Lucas Vandenberg created over 150 Twitter and Facebook test accounts in the first year to R&amp;D platform mechanics before pitching clients. The agency has since managed social for 222+ brands across 5 continents.</p>
+
+<h3>What is the difference between a social-first agency and a traditional agency?</h3>
+<p>A social-first agency was built from day one for social media management and platform-native content strategy. A traditional agency that offers social media services typically started in advertising, PR, or another marketing discipline and added social media capabilities later. The difference shows up in how the agency approaches community management, content formats, and measurement — social-first agencies treat platforms as core infrastructure, not as an additional channel.</p>`,
 };
 
 export function getBlogContent(wixSlug: string): string | undefined {

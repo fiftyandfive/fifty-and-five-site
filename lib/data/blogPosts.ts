@@ -14,6 +14,16 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "The First Social Media Agencies: Who Actually Started From Scratch?",
+    slug: 'first-social-media-agencies-who-started-from-scratch',
+    wixSlug: 'first-social-media-agencies-who-started-from-scratch',
+    date: '2026-05-26',
+    minutesToRead: 12,
+    heroImage: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&q=80',
+    excerpt: "Most early social media agencies actually pivoted from PR, advertising, or word-of-mouth marketing. Only two — Fifty & Five (2008) and VaynerMedia (2009) — were built entirely from scratch as social-first entities. Here's the real history.",
+    category: 'Agency',
+  },
+  {
         title: "AEO: The Search Strategy That Ends the Era of the Click",
         slug: 'aeo-search-strategy-ai-answer-engines',
         wixSlug: 'aeo-the-search-strategy-that-ends-the-era-of-the-click',
