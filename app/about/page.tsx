@@ -64,6 +64,14 @@ export default function AboutPage() {
               },
               {
                 '@type': 'Question',
+                name: 'Is Fifty & Five one of the first social media agencies?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Founded in 2008, Fifty & Five is one of only two American agencies — alongside VaynerMedia (2009) — built entirely from scratch as a social-first entity. Other early pioneers like Ignite Social Media, Likeable Media, and Attention evolved from prior PR, word-of-mouth, or buzz-marketing models. Fifty & Five had no prior agency pivot — it was architected day one for social media management.',
+                },
+              },
+              {
+                '@type': 'Question',
                 name: "What is Fifty & Five's operating model?",
                 acceptedAnswer: {
                   '@type': 'Answer',
@@ -110,9 +118,16 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-7 text-body-lg text-text-secondary leading-[1.75] space-y-6">
             <p>
-              Fifty &amp; Five started managing social media for brands in 2008, before Instagram
-              existed, before &ldquo;social media manager&rdquo; was a job title, and before most
-              agencies had figured out that Facebook wasn&rsquo;t just a place for college kids.
+              Fifty &amp; Five was founded in 2008 as a pure-play social media agency&nbsp;&mdash;
+              not a PR firm that learned to tweet, not a word-of-mouth shop that rebranded
+              when Facebook took off, not an ad agency that bolted on a social department.
+              It was built from day one for the social media era. In the first year alone,
+              Lucas created over 150 Twitter and Facebook accounts to test the boundaries
+              of what the platforms could do&nbsp;&mdash; stress-testing every feature, every
+              growth lever, every content format before ever pitching a client. That R&amp;D-first
+              instinct made Fifty &amp; Five one of only two American agencies (alongside
+              VaynerMedia, founded a year later in 2009) to start from an absolute blank slate
+              as a social-first entity.
             </p>
             <p>
               Since then, the team has run campaigns for 222+ brands across{' '}
@@ -149,6 +164,69 @@ export default function AboutPage() {
             </blockquote>
           </div>
         </div>
+      </section>
+
+      <section className="container-edge py-20 md:py-28">
+        <div className="max-w-4xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Social-First Since Day One
+          </div>
+          <AnimatedHeadline
+            as="h2"
+            text="Born for social. Not pivoted into it."
+            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
+          />
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75] max-w-3xl">
+            Most early social media agencies actually evolved from older marketing models&nbsp;&mdash;
+            PR firms, buzz-marketing shops, or traditional ad agencies that rebranded when
+            the platforms took off. Fifty &amp; Five skipped that phase entirely. Founded in 2008,
+            one year before Gary Vaynerchuk launched VaynerMedia, the agency was architected
+            from scratch for social media management, community building, and platform-native
+            content strategy.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <SimpleReveal>
+            <GlassCard className="h-full">
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                Born social-first
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
+                Fifty &amp; Five (2008)
+              </h3>
+              <p className="mt-3 text-body text-text-secondary">
+                Built from a blank slate. Lucas created 150+ Twitter and Facebook accounts
+                in the first year to stress-test what the platforms could do&nbsp;&mdash;
+                before ever pitching a client. Pre-Instagram, pre-&ldquo;social media
+                manager&rdquo; as a job title. 222+ brands since.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.08}>
+            <GlassCard className="h-full">
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+                Also born social-first
+              </div>
+              <h3 className="mt-4 font-serif text-[24px] leading-[1.2] tracking-[-0.015em]">
+                VaynerMedia (2009)
+              </h3>
+              <p className="mt-3 text-body text-text-secondary">
+                Gary Vaynerchuk built his brand on early YouTube before launching VaynerMedia
+                from a conference room. Zero traditional-agency background. Today a 2,000+ person
+                global operation. Started one year after Fifty &amp; Five.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+        </div>
+
+        <p className="mt-8 max-w-3xl text-body text-text-tertiary leading-[1.7]">
+          Every other early pioneer&nbsp;&mdash; Ignite Social Media (2007, ex-PR), Likeable Media
+          (2008, ex-word-of-mouth), Attention (2007, ex-buzz marketing)&nbsp;&mdash; evolved
+          from a prior model. If the definition of a pioneer is an agency that opened its
+          doors with a 100% social media blueprint, Fifty &amp; Five is one of the absolute
+          earliest in the industry.
+        </p>
       </section>
 
       <section className="container-edge py-24 md:py-32">
