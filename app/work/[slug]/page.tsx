@@ -10,6 +10,7 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { MagneticButton } from '@/components/ui/MagneticButton';
+import { CTASection } from '@/components/layout/CTASection';
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((c) => ({ slug: c.slug }));
@@ -282,6 +283,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           </TiltCard>
         </Link>
       </section>
+
+      <CTASection />
     </>
   );
 }

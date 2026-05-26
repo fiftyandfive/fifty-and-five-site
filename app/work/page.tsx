@@ -10,6 +10,7 @@ import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { FilterBar } from '@/components/ui/FilterBar';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
+import { MagneticButton } from '@/components/ui/MagneticButton';
 
 const FILTERS = [
   { value: 'all', label: 'All' },
@@ -98,6 +99,26 @@ export default function WorkIndex() {
               </Link>
             </SimpleReveal>
           ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container-edge py-20 md:py-28 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="font-serif text-h2 tracking-[-0.02em]">
+            Want results like these?
+          </h2>
+          <p className="mt-4 text-body-lg text-text-secondary">
+            Book a 30-min working session — no pitch deck, no proposal until we know it's a fit.
+          </p>
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <MagneticButton href="/contact" variant="primary" size="large">
+              Start a Conversation →
+            </MagneticButton>
+            <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+              Typical response: same day
+            </p>
+          </div>
         </div>
       </section>
     </>

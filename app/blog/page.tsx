@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { BLOG_POSTS, BLOG_CATEGORIES } from '@/lib/data/blogPosts';
+import { MagneticButton } from '@/components/ui/MagneticButton';
 
 function formatDate(dateStr: string) {
   return new Date(dateStr + 'T00:00:00').toLocaleDateString('en-US', {
@@ -267,6 +268,34 @@ export default function BlogPage() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container-edge pb-28 text-center">
+        <div
+          className="relative overflow-hidden rounded-[20px] p-10 md:p-14"
+          style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--glass-border)' }}
+        >
+          <div className="relative z-10">
+            <h2
+              className="font-serif"
+              style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 900, letterSpacing: '-0.025em', lineHeight: 1.15 }}
+            >
+              Want strategy like this for your brand?
+            </h2>
+            <p className="mt-4 text-body text-text-secondary max-w-md mx-auto">
+              Senior-led social media management from an agency that's been doing this since 2008.
+            </p>
+            <div className="mt-8 flex flex-col items-center gap-3">
+              <MagneticButton href="/contact" variant="primary" size="large">
+                Start a Conversation →
+              </MagneticButton>
+              <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+                Typical response: same day
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

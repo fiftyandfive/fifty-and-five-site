@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { BLOG_POSTS, getBlogPost } from '@/lib/data/blogPosts';
 import { getBlogContent } from '@/lib/data/blogContent';
+import { MagneticButton } from '@/components/ui/MagneticButton';
 
 // ── Pull quote extraction + injection ───────────────────────────────────────
 function processContent(rawHtml: string): string {
@@ -308,17 +309,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 No pitch deck until we know it&apos;s a fit. Let&apos;s start with a conversation.
               </p>
               <div className="mt-8 flex flex-col items-center gap-3">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all"
-                  style={{
-                    background: 'var(--color-accent)',
-                    fontSize: 15,
-                    boxShadow: '0 0 0 1px var(--color-accent), 0 0 24px rgba(99,102,241,0.3)',
-                  }}
-                >
+                <MagneticButton href="/contact" variant="primary" size="large">
                   Start a Conversation →
-                </Link>
+                </MagneticButton>
                 <p
                   className="font-mono uppercase"
                   style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--color-text-tertiary)' }}
