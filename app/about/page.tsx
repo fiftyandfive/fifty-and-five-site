@@ -39,6 +39,42 @@ const TIMELINE: { year: string; text: string }[] = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Who founded Fifty & Five?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five was founded in 2008 by Lucas Vandenberg. The agency is headquartered in Orlando, Florida, and has managed social media for 222+ brands across 5 continents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How many brands has Fifty & Five worked with?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five has managed social media for 222+ brands since 2008, including Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Warner Bros., Tupperware, and Resorts World.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: "What is Fifty & Five's operating model?",
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five uses a Senior + AI operating model. Every engagement is run by senior strategists with a vetted network of specialists. The agency uses AI tools like Claude as a strategic layer, not a junior-staff replacement.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <section className="container-edge pt-36 md:pt-44 pb-20">
         <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
           About

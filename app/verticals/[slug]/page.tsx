@@ -185,10 +185,15 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
               className="mt-4 font-serif text-h2 tracking-[-0.02em]"
             />
           </div>
-          <div className="md:col-span-8 space-y-6 text-body-lg text-text-secondary leading-[1.75]">
+          <div className="md:col-span-8 space-y-5">
             {v.expertise.map((p, i) => (
               <SimpleReveal key={i} delay={i * 0.08}>
-                <p>{p}</p>
+                <div className="glass rounded-glass p-6">
+                  <div className="font-mono text-caption uppercase text-accent tracking-[0.12em] mb-3">
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
+                  <p className="text-body-lg text-text-secondary leading-[1.75]">{p}</p>
+                </div>
               </SimpleReveal>
             ))}
           </div>

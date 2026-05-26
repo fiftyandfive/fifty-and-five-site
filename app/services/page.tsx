@@ -353,6 +353,95 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Glossary — AEO-extractable definitions */}
+      <section className="container-edge py-20 md:py-28">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Glossary
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Terms we use. Defined.
+          </h2>
+        </div>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <SimpleReveal className="h-full">
+            <GlassCard className="h-full flex flex-col">
+              <h3 className="font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
+                Answer Engine Optimization (AEO)
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                AEO is the practice of optimizing a brand&rsquo;s content and digital presence so that AI search engines&mdash;ChatGPT, Claude, Perplexity, Gemini, and Grok&mdash;cite the brand in their generated answers. Unlike traditional SEO, AEO focuses on structured, self-contained statements that LLMs can extract and quote directly.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.08} className="h-full">
+            <GlassCard className="h-full flex flex-col">
+              <h3 className="font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
+                AIRO Score
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                The AIRO Score is a 100-point benchmark developed by Fifty &amp; Five that measures a brand&rsquo;s visibility across AI-generated search results. It evaluates citation frequency, answer accuracy, and competitive positioning across five major AI platforms: ChatGPT, Claude, Perplexity, Gemini, and Grok.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.16} className="h-full">
+            <GlassCard className="h-full flex flex-col">
+              <h3 className="font-serif text-[22px] leading-[1.2] tracking-[-0.015em]">
+                Recommendation Engineering
+              </h3>
+              <p className="mt-4 text-body text-text-secondary">
+                Recommendation Engineering is the ongoing optimization of a brand&rsquo;s digital footprint so that AI models recommend the brand when users ask for suggestions. It combines structured data, third-party citations, review management, and content strategy to increase the probability of being cited in AI-generated recommendations.
+              </p>
+            </GlassCard>
+          </SimpleReveal>
+        </div>
+      </section>
+
+      {/* FAQPage schema for Services */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is Answer Engine Optimization (AEO)?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'AEO is the practice of optimizing a brand’s content and digital presence so that AI search engines—ChatGPT, Claude, Perplexity, Gemini, and Grok—cite the brand in their generated answers. Unlike traditional SEO, AEO focuses on structured, self-contained statements that LLMs can extract and quote directly.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is an AIRO Score?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The AIRO Score is a 100-point benchmark developed by Fifty & Five that measures a brand’s visibility across AI-generated search results. It evaluates citation frequency, answer accuracy, and competitive positioning across five major AI platforms: ChatGPT, Claude, Perplexity, Gemini, and Grok.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is Recommendation Engineering?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Recommendation Engineering is the ongoing optimization of a brand’s digital footprint so that AI models recommend the brand when users ask for suggestions. It combines structured data, third-party citations, review management, and content strategy to increase the probability of being cited in AI-generated recommendations.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does Fifty & Five charge?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five offers five retainer tiers: Studio ($1,500–$2,500/mo), Growth ($3,000–$5,000/mo), Performance ($7,500–$12,000/mo), Scale ($15,000–$25,000/mo), and Enterprise ($30,000–$50,000+/mo). Every tier runs on the same Senior + AI operating model.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <CTASection
         headline="Let&#8217;s see if it&#8217;s a fit."
         body="No proposals until we know it is. Just a conversation about what you're trying to build."

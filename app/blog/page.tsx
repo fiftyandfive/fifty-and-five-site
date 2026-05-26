@@ -35,6 +35,42 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen" style={{ background: 'var(--color-bg-primary)', color: 'var(--color-text-primary)' }}>
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What topics does the Fifty & Five blog cover?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The Fifty & Five blog covers social media strategy, AI and automation in marketing, wine and beverage marketing, travel and hospitality social, restaurant marketing, and case studies from the agency\'s 222+ brand portfolio.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Does Fifty & Five publish original research?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Fifty & Five publishes original insights on social media strategy, answer engine optimization (AEO), and AI-driven marketing based on 18 years of managing social for 222+ brands across 12 verticals.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How often does Fifty & Five publish new content?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Fifty & Five publishes new blog posts and strategy insights on a regular basis, covering trends in social media, AI marketing, and vertical-specific strategies for wine, hospitality, fitness, and tech brands.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* ── Page Header ─────────────────────────────────────────────────── */}
       <section className="container-edge pt-36 md:pt-44 pb-14">
         <div

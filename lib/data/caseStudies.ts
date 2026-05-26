@@ -28,6 +28,7 @@ export type CaseStudy = {
     avatarSrc: string;
     linkedinUrl: string;
   };
+  metrics?: string[];
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -52,6 +53,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     featured: true,
     size: 'wide',
     heroImage: '/images/case-studies/kendall-jackson.jpg',
+    metrics: [
+      'Multi-year retainer — one of the longest-running wine social partnerships at the boutique agency level',
+      'Content strategy spanning Instagram, Facebook, TikTok, and Pinterest',
+      'Unified voice across varietal education, food pairings, vineyard storytelling, and seasonal campaigns',
+    ],
   },
   {
     slug: 'mezzacorona',
@@ -74,6 +80,11 @@ export const CASE_STUDIES: CaseStudy[] = [
     featured: true,
     size: 'standard',
     heroImage: '/images/case-studies/mezzacorona.jpg',
+    metrics: [
+      'Decade-long retainer — one of the longest continuous agency engagements in the wine category',
+      'Built entire English-language social presence from the ground up for a U.S. market entry',
+      'Adapted strategy through every major platform shift: organic-to-paid, Reels, TikTok, shoppable content',
+    ],
   },
   {
     slug: 'blaze-pizza',
@@ -103,6 +114,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       avatarSrc: '/images/testimonials/jerry-shen.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/jerry-shen-18b33567/',
     },
+    metrics: [
+      '400% engagement growth across national social channels',
+      '7-year retainer managing social through hyper-growth from emerging concept to household name',
+      'Scalable content system across hundreds of franchise locations',
+    ],
   },
   {
     slug: 'enterprise-holdings',
@@ -125,6 +141,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Demonstrated the ability to manage enterprise-scale complexity, six brands, multiple markets, distinct voices, without the overhead of a large agency team. The Enterprise engagement remains the single strongest proof point that this model scales beyond boutique work.',
     featured: true,
     size: 'standard',
+    metrics: [
+      '6 distinct brands managed simultaneously under one corporate umbrella',
+      'Cross-market coordination across U.S. and LATAM',
+      'Enterprise-scale execution with a boutique-size team — no 20-person agency pod',
+    ],
   },
   {
     slug: 'centennial-real-estate',
@@ -311,6 +332,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       avatarSrc: '/images/testimonials/lenora-marouani.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/lenora-marouani-6b863a90/',
     },
+    metrics: [
+      'LA Times Top 101 Restaurants — two years running',
+      'Featured in BuzzFeed, Thrillist, and NBC LA — all organic, no PR retainer',
+      'Zero paid media budget — all growth from organic social and influencer seeding',
+    ],
   },
   {
     slug: 'streetstrider',
@@ -337,6 +363,11 @@ export const CASE_STUDIES: CaseStudy[] = [
       avatarSrc: '/images/testimonials/matt-kemper.jpg',
       linkedinUrl: 'https://www.linkedin.com/in/matthew-kemper-levl/',
     },
+    metrics: [
+      '100+ creator partnerships built from zero — Natalie Jill, Olympic medalists, CrossFit athletes',
+      'Influencer engine became the brand’s primary acquisition channel',
+      'Repeatable creator pipeline spanning fitness, wellness, and outdoor lifestyle verticals',
+    ],
   },
 ];
 

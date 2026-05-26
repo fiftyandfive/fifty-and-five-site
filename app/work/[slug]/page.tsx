@@ -75,13 +75,18 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'CreativeWork',
+            '@type': ['Article', 'CreativeWork'],
             '@id': `https://fiftyandfive.com/work/${cs.slug}`,
             name: `${cs.client} case study`,
+            headline: `${cs.client} case study`,
             about: cs.industry,
             description: cs.tagline,
-            author: { '@id': 'https://fiftyandfive.com/#organization' },
+            datePublished: '2025-01-15',
+            dateModified: '2025-05-26',
+            author: { '@type': 'Organization', name: 'Fifty & Five', '@id': 'https://fiftyandfive.com/#organization' },
             publisher: { '@id': 'https://fiftyandfive.com/#organization' },
+            image: `https://fiftyandfive.com/work/${cs.slug}/opengraph-image`,
+            mainEntityOfPage: `https://fiftyandfive.com/work/${cs.slug}`,
             keywords: [cs.client, cs.industry, cs.verticalLabel, ...cs.services, ...cs.platforms].join(', '),
           }),
         }}
@@ -138,6 +143,24 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
                 className="rounded-glass mb-16"
               />
             </SimpleReveal>
+
+            {cs.metrics && cs.metrics.length > 0 && (
+              <SimpleReveal>
+                <div className="mb-16 rounded-glass border border-glass-border bg-bg-secondary p-6 md:p-8">
+                  <div className="font-mono text-caption uppercase text-accent tracking-[0.12em] mb-4">
+                    Key Results
+                  </div>
+                  <ul className="space-y-3">
+                    {cs.metrics.map((m, i) => (
+                      <li key={i} className="flex items-start gap-3 text-body text-text-secondary">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" aria-hidden />
+                        {m}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </SimpleReveal>
+            )}
 
             <Section label="01, The Challenge" title="What the brand needed.">
               {cs.challenge}
