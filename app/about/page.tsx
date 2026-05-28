@@ -5,35 +5,35 @@ import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About | 18 Years, 222 Brands | Fifty & Five',
+  title: 'About | 17 Years, 222 Brands | Fifty & Five',
   description:
     '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
-    title: 'About | 18 Years, 222 Brands | Fifty & Five',
+    title: 'About | 17 Years, 222 Brands | Fifty & Five',
     description: '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
     url: 'https://fiftyandfive.com/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About | 18 Years, 222 Brands | Fifty & Five',
+    title: 'About | 17 Years, 222 Brands | Fifty & Five',
     description: '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   },
 };
 
 const TIMELINE: { year: string; text: string }[] = [
-  { year: '2008', text: 'Started managing social media for brands, pre-Instagram, pre-"social media manager" as a job title.' },
-  { year: '2009', text: 'Fifty & Five LLC formed.' },
+  { year: '2007', text: "Southern Wine & Spirits · Corporate Marketing. Built the company's first marketing department. 15% avg. lift in case sales. Zero prior wine experience." },
+  { year: '2008', text: 'First social-media engagements · pre-LLC · pre-Instagram.' },
+  { year: '2009', text: 'Fifty & Five LLC formed (July).' },
   { year: '2010', text: 'Axe / Unilever product launch, Twitter takeover + experiential activations.' },
-  { year: '2011', text: 'Mezzacorona retainer begins, a decade-long run as the brand’s social lead.' },
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
   { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
-  { year: '2016', text: 'Enterprise Holdings, 6 brands, 2 markets, simultaneously.' },
-  { year: '2020', text: 'Kendall-Jackson partnership begins.' },
-  { year: '2023', text: 'Strategic shift: senior-led, AI-augmented model.' },
-  { year: '2026', text: 'Leaner. Faster. Sharper than ever.' },
+  { year: '2016', text: 'Mezzacorona portfolio · 9-year retainer · ~1M followers added.' },
+  { year: '2020', text: 'Kendall-Jackson · year 1 · decade-long engagement.' },
+  { year: '2024', text: 'AI operating-model retrofit · 10× output per operator hour.' },
+  { year: '2026', text: '222+ brands · senior + AI model in market.' },
 ];
 
 export default function AboutPage() {
@@ -98,6 +98,35 @@ export default function AboutPage() {
             Lucas Vandenberg, Founding Principal
           </p>
         </SimpleReveal>
+
+        <SimpleReveal delay={0.5}>
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
+            <div>
+              <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
+                222+
+              </div>
+              <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                Brands served since 2008
+              </div>
+            </div>
+            <div>
+              <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
+                17
+              </div>
+              <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                Years of compounding pattern recognition
+              </div>
+            </div>
+            <div>
+              <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
+                3+
+              </div>
+              <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+                Average years per retained client
+              </div>
+            </div>
+          </div>
+        </SimpleReveal>
       </section>
 
       <section className="container-edge pb-24">
@@ -118,46 +147,47 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-7 text-body-lg text-text-secondary leading-[1.75] space-y-6">
             <p>
-              Fifty &amp; Five was founded in 2008 as a pure-play social media agency&nbsp;&mdash;
-              not a PR firm that learned to tweet, not a word-of-mouth shop that rebranded
-              when Facebook took off, not an ad agency that bolted on a social department.
-              It was built from day one for the social media era. In the first year alone,
-              Lucas created over 150 Twitter and Facebook accounts to test the boundaries
-              of what the platforms could do&nbsp;&mdash; stress-testing every feature, every
-              growth lever, every content format before ever pitching a client. That R&amp;D-first
-              instinct made Fifty &amp; Five one of only two American agencies (alongside
-              VaynerMedia, founded a year later in 2009) to start from an absolute blank slate
-              as a social-first entity.
+              Lucas Vandenberg has spent his career in rooms he wasn&rsquo;t supposed to be
+              in&nbsp;&mdash; and outperforming everyone who was.
             </p>
             <p>
-              Since then, the team has run campaigns for 222+ brands across{' '}
-              <a href="/services#industries-we-serve" className="text-accent hover:text-accent-light">
-                12 verticals
-              </a>
-              &nbsp;&mdash; from wine and hospitality to tech, fitness, and luxury.
-              Microsoft. Kendall-Jackson. Enterprise Holdings. Blaze Pizza. Axe. Discovery Channel.
-              Tupperware. NETGEAR. Names you&rsquo;ve heard of, in industries you work in.
+              Before Fifty &amp; Five existed, he spent a decade acquiring credentials nobody
+              asked for and doing the work nobody assigned him. At 23, as a procurement analyst
+              at Northrop Grumman, he was handed a Boeing rebuy for B-2 Stealth Bomber parts
+              with instructions to rubber-stamp it through. He read the blueprints instead.
+              Recognized a cross-program overlap from the F-35. Ran a competitive bid. Saved the
+              government $6.28 million per purchase. His boss only asked him to push it through.
             </p>
             <p>
-              We&rsquo;ve run the full agency playbook&nbsp;&mdash; the hires, the overhead, the layers of
-              account management between the strategist and the client. We made a deliberate
-              choice to build for what comes next: a senior team running every engagement,
-              a deep bench of specialists when the work calls for their expertise, and AI as
-              a strategic layer, not a junior-staff replacement.
-              The model is built for the next decade, not the last one.
+              That&rsquo;s not a defense-industry story. That&rsquo;s the F&amp;F operating
+              model&nbsp;&mdash; fifteen years before the agency existed.
             </p>
             <p>
-              The result is something most agencies can&rsquo;t offer: direct access to the team
-              that&rsquo;s actually done this 222+ times before. Senior practices, AI-leveraged.
-              The team that built the plan executes the plan and adjusts the plan
-              in real time.
+              In 2007, he joined Southern Wine &amp; Spirits to help build their first-ever
+              marketing department. He walked in with zero wine industry experience. In two years
+              he was running trade marketing across Walgreens, Kroger, CVS, and
+              Target&nbsp;&mdash; 15% average lift in case sales across 200+ new account
+              distributions. The domain was learnable. The operating system was already there.
+            </p>
+            <p>
+              In July 2009, Lucas founded Fifty &amp; Five on the relationships and receipts
+              he&rsquo;d spent a decade earning. The wine &amp; spirits vertical came
+              first&nbsp;&mdash; 34 brands, anchored by a 9-year run with Mezzacorona that added
+              roughly one million followers across the portfolio. Then hospitality, fitness, tech,
+              food &amp; beverage, tourism. Kendall-Jackson for a decade. Blaze Pizza across 300+
+              locations. Resorts World. Hong Kong Tourism Board.
+            </p>
+            <p>
+              222 clients across 17 years isn&rsquo;t volume. It&rsquo;s proof that the operating
+              system transfers&nbsp;&mdash; and that senior judgment, compounded across industries,
+              is the one thing AI can amplify but never replace.
             </p>
 
-            {/* Attributed founder quote — "I" permitted here per brief */}
             <blockquote className="border-l-2 border-accent/50 pl-6 italic text-text-primary">
-              &ldquo;I&rsquo;m based in Orlando. I&rsquo;m the President of the SoDo Main Street Board.
-              I&rsquo;ve got two kids (Penny and Koen, 11). And I still genuinely love this work
-              after 18 years&nbsp;&mdash; which, in this industry, is the rarest credential of all.&rdquo;
+              &ldquo;The agencies built around billable junior hours are structurally broken.
+              Brands don&rsquo;t need more bodies. They need more pattern
+              recognition&nbsp;&mdash; and an operator at the top of the stack who can translate
+              it into work that ships.&rdquo;
               <footer className="mt-3 not-italic font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
                 &mdash; Lucas Vandenberg, Founding Principal
               </footer>
@@ -311,7 +341,7 @@ export default function AboutPage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text="Eighteen years, compressed."
+            text="Seventeen years, compressed."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
         </div>
