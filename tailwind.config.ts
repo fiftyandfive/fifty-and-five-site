@@ -39,6 +39,10 @@ const config: Config = {
           border: 'var(--glass-border)',
           bg: 'var(--glass-bg)',
         },
+        gold: {
+          DEFAULT: 'var(--color-gold)',
+          muted: 'var(--color-gold-muted)',
+        },
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
@@ -46,20 +50,20 @@ const config: Config = {
         mono: ['var(--font-geist-mono)', '"JetBrains Mono"', 'monospace'],
       },
       fontSize: {
-        display: ['clamp(56px, 8vw, 96px)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
-        h1: ['clamp(40px, 5vw, 64px)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        h2: ['clamp(32px, 4vw, 48px)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        h3: ['clamp(24px, 3vw, 32px)', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        'body-lg': ['20px', { lineHeight: '1.6' }],
-        body: ['16px', { lineHeight: '1.7' }],
-        meta: ['14px', { lineHeight: '1.5', letterSpacing: '0.01em' }],
-        caption: ['12px', { lineHeight: '1.4', letterSpacing: '0.04em' }],
+        display: ['clamp(60px, 9vw, 110px)', { lineHeight: '0.98', letterSpacing: '-0.02em' }],
+        h1: ['clamp(44px, 6vw, 72px)', { lineHeight: '1.05', letterSpacing: '-0.015em' }],
+        h2: ['clamp(34px, 4.5vw, 54px)', { lineHeight: '1.1', letterSpacing: '-0.015em' }],
+        h3: ['clamp(26px, 3vw, 36px)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        'body-lg': ['20px', { lineHeight: '1.65' }],
+        body: ['16px', { lineHeight: '1.75' }],
+        meta: ['14px', { lineHeight: '1.5', letterSpacing: '0.02em' }],
+        caption: ['11px', { lineHeight: '1.4', letterSpacing: '0.06em' }],
       },
       maxWidth: {
-        container: '1280px',
+        container: '1320px',
       },
       borderRadius: {
-        glass: '16px',
+        glass: '10px',
       },
       backdropBlur: {
         glass: '12px',
