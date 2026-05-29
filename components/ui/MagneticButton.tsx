@@ -20,7 +20,7 @@ type Props = {
 };
 
 const base =
-  'relative inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap select-none';
+  'relative inline-flex items-center justify-center gap-2 rounded-full font-medium whitespace-nowrap select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary';
 
 const sizes: Record<Size, string> = {
   default: 'px-7 py-3.5 text-[15px] min-h-[44px]',

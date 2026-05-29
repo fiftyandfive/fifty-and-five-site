@@ -33,8 +33,10 @@ export function TypewriterHero() {
   const [showPayoff, setShowPayoff] = useState(false);
   const [showCollage, setShowCollage] = useState(false);
   const [prefersReduced, setPrefersReduced] = useState(false);
+  const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    setHasHydrated(true);
     if (typeof window === 'undefined') return;
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mq.matches) {
@@ -162,12 +164,12 @@ export function TypewriterHero() {
               )}
             </motion.div>
 
-            {/* Payoff — always in DOM for contrast/accessibility, animated in */}
+            {/* Payoff — visible by default (no JS gate), animated in via class */}
             <div
               className="transition-all duration-700"
               style={{
-                opacity: showPayoff ? 1 : 0,
-                transform: showPayoff ? 'none' : 'translateY(12px)',
+                opacity: showPayoff || !hasHydrated ? 1 : 0,
+                transform: showPayoff || !hasHydrated ? 'none' : 'translateY(12px)',
               }}
             >
               <div
@@ -232,8 +234,8 @@ export function TypewriterHero() {
           <div
             className="hidden md:grid grid-cols-2 gap-[14px] transition-all duration-[900ms]"
             style={{
-              opacity: showCollage ? 1 : 0,
-              transform: showCollage ? 'none' : 'translateY(20px)',
+              opacity: showCollage || !hasHydrated ? 1 : 0,
+              transform: showCollage || !hasHydrated ? 'none' : 'translateY(20px)',
               transitionTimingFunction: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
               transitionDelay: '150ms',
             }}
