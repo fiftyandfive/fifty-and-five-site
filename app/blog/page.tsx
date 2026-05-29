@@ -138,14 +138,14 @@ export default function BlogPage() {
             className="group grid md:grid-cols-2 gap-0 rounded-[20px] overflow-hidden transition-all duration-300"
             style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--glass-border)' }}
           >
-            {/* Image — fixed height, cover */}
-            <div className="relative overflow-hidden flex items-center justify-center" style={{ height: 320, background: 'var(--color-bg-tertiary)' }}>
+            {/* Image — tall, cover */}
+            <div className="relative overflow-hidden" style={{ minHeight: 360, background: 'var(--color-bg-tertiary)' }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={featured.heroImage}
                 alt={featured.title}
                 className="w-full h-full"
-                style={{ objectFit: 'contain', objectPosition: 'center' }}
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
             {/* Content */}
@@ -195,20 +195,20 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col rounded-[16px] overflow-hidden transition-all duration-300"
+                className="group flex flex-col rounded-[16px] overflow-hidden transition-all duration-300 hover:border-[rgba(245,242,236,0.2)]"
                 style={{
                   background: 'var(--color-bg-secondary)',
                   border: '1px solid var(--glass-border)',
                 }}
               >
-                {/* Fixed-height image box — object-contain shows full image */}
-                <div className="relative overflow-hidden flex-shrink-0 flex items-center justify-center" style={{ height: 210, background: 'var(--color-bg-tertiary)' }}>
+                {/* Image — cover, taller for hi-res photos */}
+                <div className="relative overflow-hidden flex-shrink-0" style={{ height: 240, background: 'var(--color-bg-tertiary)' }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={post.heroImage}
                     alt={post.title}
-                    className="w-full h-full"
-                    style={{ objectFit: 'contain', objectPosition: 'center' }}
+                    className="w-full h-full transition-transform duration-500 group-hover:scale-[1.04]"
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
                     loading="lazy"
                   />
                 </div>

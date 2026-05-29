@@ -111,6 +111,22 @@ const CATEGORY_COLORS: Record<string, string> = {
   'Agency': '#C41E3A',
 };
 
+function extractFaqs(html: string): { question: string; answer: string }[] {
+  const faqs: { question: string; answer: string }[] = [];
+  const faqRe = /<h3>(?!FAQ)(.*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g;
+  let started = false;
+  let m: RegExpExecArray | null;
+  while ((m = faqRe.exec(html)) !== null) {
+    const q = m[1].replace(/<[^>]*>/g, '').trim();
+    const a = m[2].replace(/<[^>]*>/g, '').trim();
+    if (q.endsWith('?')) started = true;
+    if (started && q.endsWith('?') && a.length > 10) {
+      faqs.push({ question: q, answer: a });
+    }
+  }
+  return faqs;
+}
+
 // ── Page ────────────────────────────────────────────────────────────────────
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = getBlogPost(params.slug);
@@ -126,10 +142,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   ).slice(0, 3);
 
   const categoryColor = CATEGORY_COLORS[post.category] ?? '#C41E3A';
+  const faqs = rawContent ? extractFaqs(rawContent) : [];
 
   return (
     <>
-      {/* JSON-LD */}
+      {/* Article JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -147,6 +164,22 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           }),
         }}
       />
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.question,
+                acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              })),
+            }),
+          }}
+        />
+      )}
 
       <main className="min-h-screen" style={{ background: 'var(--color-bg-primary)' }}>
 
@@ -160,7 +193,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             src={post.heroImage}
             alt={post.title}
             className="w-full h-full"
-            style={{ objectFit: 'contain', objectPosition: 'center' }}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
           {/* gradient fade to page bg */}
           <div
