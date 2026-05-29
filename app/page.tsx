@@ -119,6 +119,9 @@ export default function HomePage() {
         </SimpleReveal>
       </section>
 
+      {/* SELECTED WORK — creative proof */}
+      <SelectedWork />
+
       {/* PLATFORMS WE'VE OUTLASTED */}
       <PlatformGraveyard />
 
@@ -334,9 +337,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* SELECTED WORK — real photography */}
-      <SelectedWork />
 
       {/* THE CLOSE */}
       <CTASection />
