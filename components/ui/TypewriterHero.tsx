@@ -20,8 +20,8 @@ const ease = [0.25, 0.46, 0.45, 0.94] as const;
 type Phase = 'typing' | 'pausing' | 'reveal' | 'done';
 
 const HERO_IMAGES = [
-  { src: '/images/work/kj-breckenridge-hero.jpg', alt: 'Kendall-Jackson winter shoot, Breckenridge', badge: 'KJ · Breckenridge' },
-  { src: '/images/work/blaze-lebron.jpg', alt: 'LeBron James carrying Blaze Pizza boxes', badge: 'Blaze · LeBron James', position: 'center 22%' },
+  { src: '/images/work/kendall-jackson-breckenridge-lifestyle.jpg', alt: 'Kendall-Jackson winter shoot, Breckenridge', badge: 'KJ · Breckenridge' },
+  { src: '/images/work/lebron-blaze.jpg', alt: 'LeBron James carrying Blaze Pizza boxes', badge: 'Blaze · LeBron James', position: 'center 22%' },
 ];
 
 export function TypewriterHero() {

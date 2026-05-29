@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 
 const WORK_ITEMS = [
-  { src: '/images/work/kj-breckenridge-1.jpg', alt: 'Kendall-Jackson Breckenridge winter shoot', caption: 'Kendall-Jackson · Breckenridge', slug: 'kendall-jackson' },
-  { src: '/images/work/barsha-prawns.png', alt: 'Barsha plated prawns and wine', caption: 'Barsha · LA Times 101 Best Restaurants', slug: 'barsha-wine-bar' },
-  { src: '/images/work/kj-breckenridge-2.jpg', alt: 'Kendall-Jackson Breckenridge winter shoot', caption: 'Kendall-Jackson · Wine & Spirits', slug: 'kendall-jackson' },
-  { src: '/images/work/resorts-world-liljon.jpg', alt: 'Resorts World Bimini Lil Jon concert sweepstakes', caption: 'Resorts World · Lil Jon Sweepstakes', slug: 'resorts-world' },
+  { src: '/images/work/kendall-jackson-breckenridge-01.jpg', alt: 'Kendall-Jackson Breckenridge winter shoot', caption: 'Kendall-Jackson · Breckenridge', slug: 'kendall-jackson' },
+  { src: '/images/work/barsha.jpg', alt: 'Barsha plated prawns and wine', caption: 'Barsha · LA Times 101 Best Restaurants', slug: 'barsha-wine-bar' },
+  { src: '/images/work/kendall-jackson-breckenridge-02.jpg', alt: 'Kendall-Jackson Breckenridge winter shoot', caption: 'Kendall-Jackson · Wine & Spirits', slug: 'kendall-jackson' },
+  { src: '/images/work/resorts-world-lil-jon.jpg', alt: 'Resorts World Bimini Lil Jon concert sweepstakes', caption: 'Resorts World · Lil Jon Sweepstakes', slug: 'resorts-world' },
   { src: '/images/work/enterprise-road.jpg', alt: 'Enterprise Rent-A-Car open road', caption: 'Enterprise · Automotive', slug: 'enterprise-holdings' },
-  { src: '/images/work/enterprise-coast.jpg', alt: 'Enterprise Rent-A-Car coastal overlook', caption: 'Enterprise · Travel', slug: 'enterprise-holdings' },
+  { src: '/images/work/enterprise-coastal.jpg', alt: 'Enterprise Rent-A-Car coastal overlook', caption: 'Enterprise · Travel', slug: 'enterprise-holdings' },
 ];
 
 export function SelectedWork() {
