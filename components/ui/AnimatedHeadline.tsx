@@ -27,14 +27,15 @@ export function AnimatedHeadline({
   return (
     <Tag
       className={className}
+      aria-label={text.replace(/\n/g, ' ')}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: '-10%' }}
       transition={{ staggerChildren: stagger, delayChildren: delay }}
     >
       {lines.map((line, lineIdx) => (
-        <span key={lineIdx} className="block">
-          {line.split(' ').map((word) => {
+        <span key={lineIdx} className="block" aria-hidden="true">
+          {line.split(' ').map((word, wordIdx) => {
             const key = wordIndex++;
             return (
               <span
@@ -55,6 +56,7 @@ export function AnimatedHeadline({
                 >
                   {word}
                 </motion.span>
+                {wordIdx < line.split(' ').length - 1 && ' '}
               </span>
             );
           })}

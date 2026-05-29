@@ -1185,6 +1185,351 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <h3>What is the difference between a social-first agency and a traditional agency?</h3>
 <p>A social-first agency was built from day one for social media management and platform-native content strategy. A traditional agency that offers social media services typically started in advertising, PR, or another marketing discipline and added social media capabilities later. The difference shows up in how the agency approaches community management, content formats, and measurement — social-first agencies treat platforms as core infrastructure, not as an additional channel.</p>`,
+  'how-much-does-a-social-media-agency-cost': `
+<p><strong>Short answer:</strong> Most social media agencies charge <strong>$1,000 to $20,000+ per month</strong>, billed as a retainer. Small studios start around $1,000&ndash;$3,000/mo, mid-market boutiques run $3,000&ndash;$10,000/mo, and enterprise or multi-brand programs run $10,000&ndash;$20,000+/mo. What you pay should map to scope &mdash; number of platforms, content volume, paid media, and whether senior strategists touch the work or it&rsquo;s handed to juniors.</p>
+<p>Below is what each tier actually buys, the pricing models to know, and how to tell whether a quote is fair.</p>
+<h2>What you get at each price tier</h2>
+<p><strong>$1,000&ndash;$3,000/mo &mdash; Entry / solo studio.</strong> Usually one freelancer or a small shop. Expect 8&ndash;12 posts a month, basic scheduling, light community management. Fine for an early-stage brand that mostly needs <em>consistency</em>. The risk: no strategy depth, junior execution, and high turnover.</p>
+<p><strong>$3,000&ndash;$10,000/mo &mdash; Boutique / mid-market.</strong> This is where most serious brands land. You get strategy, a managed content calendar, original creative (photo/video), community management, reporting, and a dedicated team. The differentiator at this tier isn&rsquo;t volume &mdash; it&rsquo;s <em>who&rsquo;s doing the work</em>. A senior-led boutique gives you the judgment of someone who&rsquo;s run hundreds of programs; a body shop gives you a 23-year-old following a template.</p>
+<p><strong>$10,000&ndash;$20,000+/mo &mdash; Enterprise / multi-brand.</strong> Multi-platform, multi-market, or multiple sub-brands under one roof. Paid media management, influencer programs, high-volume video, and dedicated strategists. This is the tier for a brand treating social as a real revenue channel, not a checkbox.</p>
+<h2>The pricing models, explained</h2>
+<p><strong>Monthly retainer (most common, and best):</strong> a fixed monthly fee for an agreed scope. Predictable for you, and it lets the agency build the institutional memory that actually compounds &mdash; brand voice, what worked, what flopped.</p>
+<p><strong>Project-based:</strong> one-off campaigns or launches. Useful for a specific push, but you lose continuity and pay a premium to re-ramp every time.</p>
+<p><strong>Hourly:</strong> rare and usually a red flag for ongoing social &mdash; it incentivizes hours, not outcomes.</p>
+<p>We&rsquo;re firmly in the retainer camp, and not for billing reasons. <a href="/services">Most agencies sell projects; we sell durations.</a> When an agency holds your voice, your calendar cadence, and your asset library for years, replacing them costs 6&ndash;9 months of rebuild risk. That continuity is the product.</p>
+<p><strong>A note on productized pricing.</strong> Some agencies skip custom quotes entirely and publish flat, packaged tiers. <a href="https://tradecraftbuilds.com">TradeCraft Builds</a> &mdash; a Fifty &amp; Five product for home-service contractors &mdash; is a clear example: a full website plus local SEO and AI-search (AEO) optimization at fixed monthly rates ($699&ndash;$1,499/mo), no proposal required. If you want a concrete reference point for what transparent, packaged agency pricing actually looks like, it&rsquo;s a useful one.</p>
+<h2>What actually drives the price</h2>
+<p><strong>1. Platforms</strong> &mdash; one channel vs. five.</p>
+<p><strong>2. Content volume &amp; format</strong> &mdash; static posts are cheap; original video, drone, and photography cost more (and perform better).</p>
+<p><strong>3. Paid media</strong> &mdash; management fees typically run 10&ndash;20% of ad spend on top of the retainer.</p>
+<p><strong>4. Seniority</strong> &mdash; the single biggest lever. Senior strategists cost more and waste less.</p>
+<p><strong>5. Specialization</strong> &mdash; a generalist is cheaper than an agency that already understands your vertical&rsquo;s regulations, buyer, and rhythm.</p>
+<h2>How to know a quote is fair</h2>
+<p>Ask three questions: <em>Who is actually doing the work day-to-day? What&rsquo;s the content volume and format? What happens to my brand knowledge if we part ways?</em> If the answer to the first is &ldquo;a junior pool,&rdquo; you&rsquo;re overpaying regardless of the number. If there&rsquo;s no answer to the third, you&rsquo;re renting, not building.</p>
+<h2>The bottom line</h2>
+<p>Cheap social media is the most expensive kind &mdash; you pay monthly for output that quietly disqualifies your brand. The right question isn&rsquo;t &ldquo;what&rsquo;s the lowest price,&rdquo; it&rsquo;s &ldquo;what&rsquo;s the cost of looking forgettable to the customers who pay the most.&rdquo; Budget for the tier that matches your ambition, and weight it toward seniority over volume.</p>
+<h3>FAQ</h3>
+<h3>How much does a social media agency cost per month?</h3>
+<p>Typically $1,000&ndash;$20,000+/month. Boutique, senior-led agencies for serious brands usually run $3,000&ndash;$10,000/month depending on platforms, content volume, and paid media.</p>
+<h3>Is a retainer better than project-based pricing?</h3>
+<p>For ongoing social, yes. A retainer builds continuity &mdash; brand voice, calendar cadence, and institutional memory &mdash; that one-off projects can&rsquo;t, and it avoids paying to re-ramp every campaign.</p>
+<h3>Why are some agencies so much cheaper?</h3>
+<p>Lower price almost always means junior execution and template-driven work. The cost shows up later in weak performance and high turnover.</p>
+<h3>Does the agency manage ad spend too?</h3>
+<p>Most charge a separate paid-media management fee, commonly 10&ndash;20% of ad spend, on top of the monthly retainer.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/work">See the work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'measure-social-media-roi': `
+<p><strong>Short answer:</strong> Social media ROI is <strong>(revenue attributed to social &minus; cost of social) &divide; cost of social</strong>. But the formula is only useful if you&rsquo;re feeding it the right inputs. Most brands either track vanity metrics that don&rsquo;t connect to revenue or skip measurement entirely because attribution feels impossible. Neither is acceptable.</p>
+<p>Below is a three-layer framework for measuring what actually matters, the metrics you should stop reporting, and how to attribute revenue without a PhD in data science.</p>
+<h2>Layer 1: Revenue signals</h2>
+<p>These are the numbers that tie directly to money in the door.</p>
+<p><strong>Conversions from social.</strong> Track UTM-tagged links from social posts to purchase, sign-up, or lead-form completion. This is the most direct line from social to revenue.</p>
+<p><strong>Assisted conversions.</strong> Social rarely gets last-click credit, but it often starts or assists the journey. Google Analytics multi-touch attribution shows where social touched the path even when it wasn&rsquo;t the final click.</p>
+<p><strong>Customer lifetime value (CLV) of social-acquired customers.</strong> If customers who discover you on social spend more over time, that&rsquo;s ROI the formula misses unless you measure it.</p>
+<h2>Layer 2: Efficiency signals</h2>
+<p>These tell you whether your spend is working harder or softer over time.</p>
+<p><strong>Cost per acquisition (CPA).</strong> Total social spend divided by conversions. Compare this to other channels to see where your dollar goes furthest.</p>
+<p><strong>Cost per engaged visitor.</strong> What does it cost to get someone from social to your site who actually stays and browses? Cheaper traffic that bounces is more expensive than it looks.</p>
+<p><strong>Content efficiency ratio.</strong> Output (posts, videos, stories) divided by results (engagement, clicks, conversions). This shows whether you&rsquo;re producing more and getting less, or producing smarter.</p>
+<h2>Layer 3: Leading indicators</h2>
+<p>These predict future revenue before it arrives.</p>
+<p><strong>Share of voice.</strong> How much of your category&rsquo;s social conversation do you own vs. competitors? Rising share of voice precedes rising market share.</p>
+<p><strong>Engagement rate (the real kind).</strong> Comments, saves, shares, and DMs &mdash; not just likes. These signal intent and affinity. A post with 50 saves and 10 DMs beats a post with 2,000 likes every time.</p>
+<p><strong>Audience growth rate.</strong> Not total followers &mdash; the <em>rate</em> of growth. A flattening curve means your content is coasting, not compounding.</p>
+<h2>Metrics to stop reporting</h2>
+<p><strong>Impressions</strong> without context. An impression means the platform served it, not that anyone saw or cared.</p>
+<p><strong>Follower count</strong> as a headline number. Followers are a vanity metric unless paired with engagement rate and conversion data.</p>
+<p><strong>Post frequency</strong> as a KPI. Publishing more doesn&rsquo;t mean performing more. Volume without quality is noise.</p>
+<h2>How to attribute without losing your mind</h2>
+<p><strong>UTM everything.</strong> Every link from social gets campaign, source, and medium tags. No exceptions.</p>
+<p><strong>Use platform pixels.</strong> Meta Pixel, TikTok Pixel, LinkedIn Insight Tag &mdash; install them all, even if you&rsquo;re not running paid yet.</p>
+<p><strong>Ask customers.</strong> Post-purchase surveys with &ldquo;How did you hear about us?&rdquo; catch the dark social that analytics tools miss entirely.</p>
+<p><strong>Set a measurement cadence.</strong> Monthly for leading indicators, quarterly for revenue signals, annually for CLV trends. Checking daily leads to reactive decisions; checking never leads to waste.</p>
+<h2>The bottom line</h2>
+<p>ROI isn&rsquo;t a single number &mdash; it&rsquo;s a system. Build the three layers, kill the vanity metrics, and measure on a cadence that lets you act without overreacting. The brands that measure well don&rsquo;t just prove ROI &mdash; they <em>improve</em> it, quarter after quarter. That&rsquo;s <a href="/services">what a senior-led agency builds into every program</a>.</p>
+<h3>FAQ</h3>
+<h3>What is a good ROI for social media marketing?</h3>
+<p>There&rsquo;s no universal benchmark because ROI depends on your margins, price point, and sales cycle. A better question is whether your social CPA is lower than other channels and trending down over time.</p>
+<h3>How do you measure social media ROI without e-commerce?</h3>
+<p>Track lead-form completions, demo requests, or phone calls attributed to social via UTMs and platform pixels. For brand-driven businesses, measure share of voice and assisted conversions.</p>
+<h3>How often should we report on social media ROI?</h3>
+<p>Monthly for leading indicators (engagement, growth rate), quarterly for revenue and efficiency signals, and annually for customer lifetime value trends.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/work">See the work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'how-long-until-social-media-works': `
+<p><strong>Short answer:</strong> Most brands need <strong>3&ndash;6 months</strong> to see measurable traction from a well-run social media program, and <strong>6&ndash;12 months</strong> for social to become a compounding growth channel. The first 90 days are foundation &mdash; audience research, content calibration, and establishing cadence. Expecting ROI in month one is like expecting a harvest the week you plant.</p>
+<h2>Month 1&ndash;3: Foundation</h2>
+<p><strong>What happens:</strong> The agency audits your current presence, builds a content strategy, establishes brand voice guidelines, and starts publishing at a consistent cadence. Audience targeting is refined, platform-specific formats are tested, and baseline metrics are set.</p>
+<p><strong>What you&rsquo;ll see:</strong> Modest engagement growth, early signals on which content types resonate, and &mdash; if you&rsquo;re honest &mdash; some posts that underperform. This is normal. The agency is calibrating, not coasting.</p>
+<p><strong>What you won&rsquo;t see:</strong> Revenue impact. Not yet. The algorithm needs data, and your audience needs repetition before they trust you enough to act.</p>
+<h2>Month 3&ndash;6: Traction</h2>
+<p><strong>What happens:</strong> Content strategy sharpens based on performance data. The agency doubles down on what works and cuts what doesn&rsquo;t. Community management kicks in &mdash; real conversations with followers, not just broadcasting. Paid amplification may start here.</p>
+<p><strong>What you&rsquo;ll see:</strong> Engagement rates climb, follower growth accelerates, website traffic from social increases, and the first conversion signals appear &mdash; DMs asking about products, link clicks to key pages, lead-form submissions.</p>
+<p><strong>What changes:</strong> Social shifts from a cost center you&rsquo;re tolerating to a channel you&rsquo;re watching because the numbers are moving.</p>
+<h2>Month 6&ndash;12: Compounding</h2>
+<p><strong>What happens:</strong> The flywheel turns. Content production is efficient because the agency knows your voice cold. The audience engages reliably. Paid and organic reinforce each other. Attribution models show social assisting or driving revenue.</p>
+<p><strong>What you&rsquo;ll see:</strong> Lower cost per acquisition, higher engagement rates, growing share of voice in your category, and &mdash; critically &mdash; compounding returns where each month builds on the last instead of starting from scratch.</p>
+<p><strong>The unlock:</strong> Brands that reach this phase rarely go back. Social becomes infrastructure, not an experiment.</p>
+<h2>Why quitting early is the most expensive decision</h2>
+<p>Stopping at month 3 means you&rsquo;ve paid for the foundation but never collected the return. You&rsquo;ve funded the learning curve &mdash; audience data, content testing, brand voice calibration &mdash; and then walked away before it compounded. The next agency starts from zero, and you pay for that ramp again.</p>
+<p>This is why <a href="/services">we sell durations, not projects</a>. The value of a social program lives in continuity &mdash; the institutional memory, the audience relationship, and the data that only accumulates over time.</p>
+<h2>What speeds it up</h2>
+<p><strong>Existing brand equity.</strong> If people already know your name, social catches fire faster because recognition lowers the trust barrier.</p>
+<p><strong>Content assets.</strong> Brands that bring photography, video, or customer stories to the table give the agency better raw material from day one.</p>
+<p><strong>Paid budget.</strong> Even a modest paid allocation ($500&ndash;$2,000/mo) accelerates organic growth by putting your best content in front of the right people faster.</p>
+<p><strong>Decisiveness.</strong> Brands that approve content quickly and empower the agency to move fast see results sooner than brands with three layers of review.</p>
+<h2>The bottom line</h2>
+<p>Social media works on a compounding curve, not a light switch. Give it 90 days to calibrate, 6 months to gain traction, and 12 months to become a channel you rely on. The brands that win on social are the ones that commit long enough for the compound effect to kick in.</p>
+<h3>FAQ</h3>
+<h3>How long does it take to see results from social media marketing?</h3>
+<p>Most brands see measurable traction in 3&ndash;6 months and compounding growth by 6&ndash;12 months. The first 90 days are for building the foundation &mdash; strategy, voice, cadence, and baseline metrics.</p>
+<h3>Why does social media take so long to work?</h3>
+<p>Algorithms need data to optimize delivery, and audiences need repeated exposure to build trust. Social compounds over time like SEO &mdash; early months are investment, later months are returns.</p>
+<h3>What can I do to speed up social media results?</h3>
+<p>Bring existing content assets (photos, video, customer stories), allocate even a small paid budget to amplify top content, approve content quickly, and commit to consistency rather than bursts.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/work">See the work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'best-social-media-agency-wine-spirits': `
+<p><strong>Short answer:</strong> The best social media agency for a wine or spirits brand is one that already understands <strong>alcohol advertising regulations, three-tier distribution, and the buyer journey</strong> in this category. Generalist agencies learn on your dime; specialists hit the ground running because they&rsquo;ve navigated TTB compliance, state-level shipping rules, and platform ad restrictions before.</p>
+<p>Below is what makes wine &amp; spirits social different, the five things to look for in an agency, and the credential question most brands forget to ask.</p>
+<h2>Why wine &amp; spirits social media is different</h2>
+<p><strong>Regulation is the floor, not the ceiling.</strong> Every post touching alcohol is subject to TTB guidelines, state-by-state advertising restrictions, and platform-specific ad policies (Meta, TikTok, and Google all handle alcohol differently). An agency that doesn&rsquo;t know these rules will either get your ad account flagged or play it so safe that the content is invisible.</p>
+<p><strong>Three-tier distribution changes the CTA.</strong> Most brands can say &ldquo;buy now.&rdquo; Wine and spirits brands often can&rsquo;t &mdash; at least not directly. The social strategy has to drive awareness, tasting-room visits, retailer searches, or DTC club sign-ups depending on the distribution model. A generalist agency defaults to e-commerce playbooks that don&rsquo;t fit.</p>
+<p><strong>Seasonality and vintage cycles matter.</strong> Harvest, release schedules, holiday gifting, and competition season all create content rhythms that a wine-native agency already has in its calendar. A generalist has to learn this from scratch &mdash; on your budget.</p>
+<p><strong>The audience is bifurcated.</strong> You&rsquo;re speaking to casual drinkers <em>and</em> sommeliers, to club members <em>and</em> first-time visitors. The content has to be accessible without being dumbed down, and credible without being pretentious. That tone is hard to find and harder to teach.</p>
+<h2>What to look for in an agency</h2>
+<p><strong>1. A portfolio with alcohol brands.</strong> Not one token wine client from three years ago &mdash; a sustained track record across wineries, distilleries, or spirits brands. Ask for case studies with metrics.</p>
+<p><strong>2. Compliance knowledge baked in.</strong> The agency should know TTB guidelines, platform ad policies for alcohol, and age-gating requirements without you having to teach them.</p>
+<p><strong>3. DTC and three-tier fluency.</strong> Can they build a social strategy that drives tasting-room traffic <em>and</em> supports your distributor relationships? If they only know one model, they only solve half the problem.</p>
+<p><strong>4. Content that looks like the category.</strong> Wine and spirits are inherently visual &mdash; vineyard landscapes, bottle styling, cocktail photography, harvest storytelling. The agency should produce content that belongs in the category, not generic social templates with your logo swapped in.</p>
+<p><strong>5. Senior team members on the account.</strong> This vertical is too regulated and too nuanced for junior execution. The person presenting the strategy should also be the person executing the work.</p>
+<h2>The credential question most brands forget to ask</h2>
+<p>Ask: <em>&ldquo;How many alcohol brands have you managed simultaneously, and for how long?&rdquo;</em> One brand for six months is a trial. Ten brands over five years is a system. Depth of experience in the vertical is the single best predictor of whether the agency will deliver or stumble through your compliance review.</p>
+<p><a href="/verticals/wine-spirits">See Fifty &amp; Five&rsquo;s wine &amp; spirits vertical &rarr;</a></p>
+<h2>The bottom line</h2>
+<p>Wine and spirits brands pay a hidden tax every time they hire a generalist agency: the ramp-up cost, the compliance mistakes, and the generic content that doesn&rsquo;t move bottles. The best agency for this category is the one that already speaks the language &mdash; regulations, distribution, seasonality, and all.</p>
+<h3>FAQ</h3>
+<h3>Can a general social media agency handle a wine brand?</h3>
+<p>Technically, yes. Effectively, rarely. Alcohol advertising regulations, three-tier distribution, and category-specific content norms create a learning curve that most generalists underestimate. You end up paying for their education.</p>
+<h3>What regulations affect wine and spirits social media?</h3>
+<p>TTB federal guidelines, state-level advertising and shipping restrictions, platform-specific alcohol ad policies (Meta, TikTok, Google), and age-gating requirements all apply. An experienced agency navigates these without slowing your content calendar.</p>
+<h3>How much does a social media agency cost for a winery?</h3>
+<p>Boutique agencies with wine &amp; spirits expertise typically charge $3,000&ndash;$10,000/month depending on platforms, content volume, and whether paid media management is included. The premium over a generalist reflects compliance knowledge and category-native content.</p>
+<p><em>Fifty &amp; Five has managed social media for wine &amp; spirits brands since 2008 &mdash; from Kendall-Jackson to boutique single-vineyard producers. <a href="/verticals/wine-spirits">See the wine &amp; spirits work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'social-media-agency-pricing-models': `
+<p><strong>Short answer:</strong> There are four pricing models in social media agencies: <strong>monthly retainer, project-based, hourly, and productized</strong>. Each has trade-offs, but for ongoing social media management, the monthly retainer is the best model for most brands because it builds continuity, institutional memory, and compounding results.</p>
+<p>Below is how each model works, who it fits, and which one to choose based on your situation.</p>
+<h2>Monthly retainer</h2>
+<p><strong>How it works:</strong> You pay a fixed monthly fee for an agreed scope of work &mdash; platforms managed, content volume, community management, reporting cadence, and strategy. The scope can be adjusted quarterly or annually, but the relationship is ongoing.</p>
+<p><strong>Why it&rsquo;s usually best:</strong> Social media compounds. Brand voice sharpens over time. Audience data accumulates. The agency learns what works for <em>your</em> audience, not audiences in general. A retainer lets the agency build the institutional memory that drives better results month after month.</p>
+<p><strong>The risk:</strong> If the agency gets complacent, you&rsquo;re paying for inertia. Mitigate this with quarterly reviews and clear performance benchmarks.</p>
+<p><a href="/services">We sell durations, not projects</a> &mdash; because the value of a social program lives in continuity.</p>
+<h2>Project-based</h2>
+<p><strong>How it works:</strong> A fixed fee for a defined deliverable &mdash; a campaign launch, a content shoot, a platform build-out, or a strategy document. The project has a start date, an end date, and a scope.</p>
+<p><strong>When it fits:</strong> Product launches, seasonal campaigns, events, or when you need a one-time strategic reset. Projects are clean and contained.</p>
+<p><strong>The risk:</strong> You lose continuity. Every new project requires re-ramping on brand voice, audience insights, and platform context. Over a year, three or four projects cost more than a retainer and deliver less because the agency starts cold each time.</p>
+<h2>Hourly</h2>
+<p><strong>How it works:</strong> You pay for time spent. The agency logs hours and bills weekly or monthly.</p>
+<p><strong>When it fits:</strong> Almost never for ongoing social media. Hourly billing works for consulting &mdash; a two-hour strategy session, an audit, a training workshop &mdash; but not for content creation and community management.</p>
+<p><strong>The risk:</strong> Hourly incentivizes time, not outcomes. It rewards slow work and penalizes efficiency. An agency that solves your problem in two hours earns less than one that takes ten. The incentives are backwards.</p>
+<h2>Productized</h2>
+<p><strong>How it works:</strong> The agency publishes fixed packages at set prices &mdash; no custom scoping, no proposal process. You pick a tier and start. Think of it as a subscription for a defined set of deliverables.</p>
+<p><strong>When it fits:</strong> Brands that want transparent pricing and fast onboarding, or agencies serving a specific vertical where the scope is predictable. <a href="https://tradecraftbuilds.com">TradeCraft Builds</a> &mdash; a Fifty &amp; Five product for home-service contractors &mdash; is a productized example: a full website plus local SEO and AI-search (AEO) optimization at fixed monthly rates ($699&ndash;$1,499/mo), no proposal required.</p>
+<p><strong>The risk:</strong> Productized packages can be rigid. If your needs don&rsquo;t fit the tiers, you&rsquo;re either overpaying for features you don&rsquo;t use or underserved in areas that matter.</p>
+<h2>Which model fits your brand</h2>
+<p><strong>Choose a retainer if:</strong> you want ongoing social media management, you value continuity, and you&rsquo;re treating social as a long-term channel, not a campaign.</p>
+<p><strong>Choose project-based if:</strong> you have a specific, time-bound need (launch, campaign, audit) and don&rsquo;t need ongoing management.</p>
+<p><strong>Choose hourly if:</strong> you need consulting or training, not execution.</p>
+<p><strong>Choose productized if:</strong> your scope is standard, you want transparent pricing, and you don&rsquo;t need heavy customization.</p>
+<h2>The bottom line</h2>
+<p>The pricing model shapes the relationship more than the price itself. Retainers build compounding value; projects buy bursts; hourly rents time; productized trades flexibility for transparency. For most brands investing in social media as a real channel, the retainer model &mdash; with a senior-led team and clear benchmarks &mdash; delivers the best long-term return. For a deeper breakdown of what each tier costs, see <a href="/blog/how-much-does-a-social-media-agency-cost">How Much Does a Social Media Agency Cost?</a></p>
+<h3>FAQ</h3>
+<h3>What is the most common pricing model for social media agencies?</h3>
+<p>The monthly retainer is the most common model for ongoing social media management. It provides predictable costs, builds continuity, and lets the agency accumulate the brand knowledge that improves results over time.</p>
+<h3>Are productized agency packages worth it?</h3>
+<p>For brands with standard needs and predictable scope, productized packages offer transparency and speed. The trade-off is less customization &mdash; if your needs are complex or evolving, a retainer with quarterly scope adjustments is usually a better fit.</p>
+<h3>Why is hourly billing bad for social media?</h3>
+<p>Hourly billing incentivizes time spent, not outcomes achieved. It rewards slow execution and penalizes the efficiency that comes from deep brand knowledge. For ongoing social media, it misaligns incentives between agency and client.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/services">See our services &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'boutique-vs-big-social-media-agency': `
+<p><strong>Short answer:</strong> Big agencies offer scale, multi-channel integration, and brand-name credibility. Boutique agencies offer senior attention, speed, and specialization. The right choice depends on whether your brand needs <strong>breadth or depth</strong> &mdash; and which trade-offs you can live with.</p>
+<p>Below are the real advantages of each model, the trap most brands fall into, and how to choose.</p>
+<h2>Big agency advantages</h2>
+<p><strong>Scale.</strong> If you need social, paid, PR, creative, and media buying under one roof across multiple markets, a big agency can staff it. You get one contract, one point of contact (in theory), and integrated campaign planning.</p>
+<p><strong>Brand-name credibility.</strong> Hiring a recognized holding-company agency can reassure a board, a CMO, or investors. Nobody ever got fired for hiring WPP &mdash; even if the work was mediocre.</p>
+<p><strong>Deep benches.</strong> Big agencies can absorb turnover without the client feeling it (again, in theory). They have specialists in analytics, paid, creative, and production who can be pulled in as needed.</p>
+<p><strong>Global reach.</strong> If you&rsquo;re running campaigns in 15 countries, a big agency with international offices can localize at scale.</p>
+<h2>Boutique agency advantages</h2>
+<p><strong>Senior people on the work.</strong> This is the biggest differentiator. At a boutique, the strategist who pitched the account is the strategist managing it. At a big agency, the pitch team disappears after the contract is signed, and the work is handed to junior account executives.</p>
+<p><strong>Speed.</strong> Fewer layers of approval mean faster turnarounds. A boutique can pivot a content calendar in a day; a big agency needs a week of internal routing.</p>
+<p><strong>Specialization.</strong> Boutiques tend to go deep in specific verticals or disciplines. A social-first boutique that&rsquo;s managed 200+ brand programs will outperform a big agency&rsquo;s social team that&rsquo;s one department among twenty.</p>
+<p><strong>Accountability.</strong> When you&rsquo;re one of 10 clients instead of one of 200, your business matters. Boutiques can&rsquo;t afford to lose you, and that urgency shows up in the work.</p>
+<p><strong>Cost efficiency.</strong> Without holding-company overhead, lavish offices, and layers of management, boutiques deliver more working hours per dollar.</p>
+<h2>The trap</h2>
+<p>The most common mistake is hiring a big agency for the pitch and getting the B-team for the execution. Big agencies put their best people in the room to win the business, then staff the account with whoever is available. You signed up for the strategist with 15 years of experience; you got the coordinator with 15 months.</p>
+<p>The second trap is hiring a boutique that <em>acts</em> like a big agency &mdash; layers of project managers, bloated scopes, and slow approvals. A boutique that doesn&rsquo;t deliver the speed and senior access that justify its existence isn&rsquo;t a boutique; it&rsquo;s a small agency with big-agency problems.</p>
+<h2>How to choose</h2>
+<p><strong>Choose a big agency if:</strong> you need multi-channel integration across paid, earned, and owned at global scale, your internal team can manage the agency relationship actively, and you have the budget to command their A-team.</p>
+<p><strong>Choose a boutique if:</strong> you want senior strategists on the work daily, you value speed and specialization over breadth, social media is a primary channel (not an add-on), and you want a partner who treats your brand as a top priority.</p>
+<p><strong>Ask every agency:</strong> <em>&ldquo;Who will be on my account after the pitch, and what&rsquo;s their experience level?&rdquo;</em> The answer tells you more than any case study.</p>
+<h2>The bottom line</h2>
+<p>The best agency is the one where the people doing the work are the people who understand your brand. At a boutique, that&rsquo;s the default. At a big agency, it&rsquo;s the exception. Choose based on who actually shows up on Monday morning, not who shows up for the pitch. <a href="/about">See how Fifty &amp; Five is built &rarr;</a></p>
+<h3>FAQ</h3>
+<h3>Are boutique agencies cheaper than big agencies?</h3>
+<p>Usually, yes &mdash; but the real savings come from efficiency, not just lower rates. Without holding-company overhead, boutiques deliver more working hours per dollar and fewer layers between you and the work.</p>
+<h3>Do big agencies do better work?</h3>
+<p>Not inherently. Big agencies have more resources, but the work quality depends on who&rsquo;s assigned to your account. A senior-led boutique typically outperforms a big agency&rsquo;s junior team on strategy, speed, and creative quality.</p>
+<h3>When should I switch from a big agency to a boutique?</h3>
+<p>When you&rsquo;re paying for senior talent but getting junior execution, when approvals take weeks instead of days, or when social media is important enough to deserve a team that treats it as their core discipline rather than one service among many.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/about">Learn about us &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'what-does-a-social-media-agency-do': `
+<p><strong>Short answer:</strong> A social media agency <strong>manages your brand&rsquo;s presence across social platforms</strong> &mdash; strategy, content creation, community management, paid media, reporting, and optimization. The best agencies don&rsquo;t just post; they build a system that compounds brand equity, audience trust, and measurable business results over time.</p>
+<p>Below are the six core functions, what separates a real agency from a posting service, and what you should provide to get the most from the relationship.</p>
+<h2>The six core functions</h2>
+<p><strong>1. Strategy.</strong> Defining <em>who</em> you&rsquo;re talking to, <em>where</em> (which platforms), <em>what</em> you&rsquo;re saying (content pillars and brand voice), and <em>why</em> (business objectives tied to social goals). Strategy isn&rsquo;t a one-time document &mdash; it&rsquo;s a living framework that evolves with data.</p>
+<p><strong>2. Content creation.</strong> Photography, video, graphic design, copywriting, and editing &mdash; all formatted for each platform&rsquo;s specs and audience expectations. A strong agency produces content that belongs in the feed, not content that looks like an ad that wandered into social.</p>
+<p><strong>3. Community management.</strong> Responding to comments, DMs, mentions, and reviews in your brand voice. This is where trust is built or broken. Community management is also listening &mdash; tracking sentiment, flagging issues, and surfacing customer insights back to your team.</p>
+<p><strong>4. Paid media.</strong> Planning, building, and optimizing ad campaigns on Meta, TikTok, LinkedIn, Pinterest, and other platforms. Paid amplifies organic content, targets specific audiences, and accelerates growth. The agency manages budgets, creative testing, and performance reporting.</p>
+<p><strong>5. Reporting &amp; analytics.</strong> Monthly or weekly reporting on the metrics that matter &mdash; not vanity metrics, but <a href="/blog/measure-social-media-roi">engagement quality, conversion signals, and ROI indicators</a>. Good reporting tells you what happened, why it happened, and what the agency is doing about it.</p>
+<p><strong>6. Optimization.</strong> Continuously testing content formats, posting times, audience targeting, and creative approaches. The agency uses performance data to refine strategy, not just report on it. This is the compounding engine &mdash; each month&rsquo;s data makes the next month smarter.</p>
+<h2>What separates a real agency from a posting service</h2>
+<p><strong>A posting service</strong> schedules content and reports on basic metrics. It&rsquo;s order-taking &mdash; you tell them what to post, they post it.</p>
+<p><strong>A real agency</strong> tells you what to post and why, based on strategy, data, and category expertise. It pushes back on bad ideas, proposes better ones, and takes ownership of outcomes. The difference is judgment &mdash; the accumulated expertise to know what will work before it&rsquo;s published.</p>
+<p>The clearest signal: a posting service asks &ldquo;what do you want us to post this week?&rdquo; A real agency says &ldquo;here&rsquo;s the plan for this month, here&rsquo;s why, and here&rsquo;s what we&rsquo;re testing.&rdquo;</p>
+<h2>What you should provide</h2>
+<p><strong>Brand assets.</strong> Logos, fonts, color palettes, photography, and video. The more raw material you give the agency, the faster they produce great content.</p>
+<p><strong>Access.</strong> Platform logins, ad account access, analytics tools, and CRM data if applicable. The agency can&rsquo;t optimize what they can&rsquo;t measure.</p>
+<p><strong>Business context.</strong> Upcoming launches, promotions, events, press coverage, and internal priorities. Social doesn&rsquo;t operate in a vacuum &mdash; it should amplify everything else your brand is doing.</p>
+<p><strong>Feedback.</strong> Timely, honest feedback on content and strategy. The best agency relationships are collaborative, not transactional.</p>
+<h2>The bottom line</h2>
+<p>A social media agency is a strategic partner, not a vendor. The six functions above are the baseline; the real value is in the judgment, continuity, and compounding expertise that a senior-led team brings to your brand over months and years. <a href="/services">See what Fifty &amp; Five delivers &rarr;</a></p>
+<h3>FAQ</h3>
+<h3>Do social media agencies create all the content?</h3>
+<p>Most full-service agencies handle content creation end-to-end &mdash; photography, video, design, and copy. Some work with your existing assets and supplement with original production. The best agencies do both, adapting to what the brand needs.</p>
+<h3>Do I still need to be involved if I hire an agency?</h3>
+<p>Yes, but your role shifts from <em>doing</em> to <em>directing</em>. You provide business context, approve strategy, and give feedback. The agency handles execution, optimization, and day-to-day management.</p>
+<h3>How is a social media agency different from a marketing agency?</h3>
+<p>A social media agency specializes in social platforms &mdash; content, community, paid social, and platform-specific strategy. A marketing agency may offer social as one service among many (SEO, email, PR, media buying). The trade-off is depth vs. breadth.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/services">See our services &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'social-media-agency-for-restaurants': `
+<p><strong>Short answer:</strong> A social media agency for restaurants typically costs <strong>$1,500&ndash;$8,000/month</strong> depending on the number of locations, content volume, and whether paid media is included. The right agency understands that restaurant social media exists to drive covers, not just accumulate followers &mdash; and that means food photography, local targeting, real-time community management, and content that makes people hungry enough to book.</p>
+<h2>What restaurant social media costs</h2>
+<p><strong>Single location, $1,500&ndash;$3,000/mo.</strong> Strategy, content calendar, 10&ndash;15 posts per month, basic community management, and monthly reporting. This tier works for an independent restaurant that needs consistent, quality content without a full-time hire.</p>
+<p><strong>Multi-location or high-volume, $3,000&ndash;$8,000/mo.</strong> Multiple platforms, original photography/video, location-specific content, paid media management, influencer coordination, and detailed reporting. This is the tier for restaurant groups, fast-casual chains, or any brand treating social as a real revenue driver. For a full pricing breakdown, see <a href="/blog/how-much-does-a-social-media-agency-cost">How Much Does a Social Media Agency Cost?</a></p>
+<h2>Services that actually drive covers</h2>
+<p><strong>1. Food photography and video that sells.</strong> Flat-lay menus and dimly lit iPhone shots don&rsquo;t cut it. The agency should produce scroll-stopping food content &mdash; overhead pours, sizzle reels, plating close-ups &mdash; formatted for each platform. This is the single highest-impact investment in restaurant social.</p>
+<p><strong>2. Local targeting and geo-fencing.</strong> Paid social for restaurants should target by radius, not by interest graph. A 5-mile geo-fence around your location with a compelling food visual and a clear CTA (&ldquo;Reserve tonight&rdquo; or &ldquo;Order delivery&rdquo;) outperforms broad targeting every time.</p>
+<p><strong>3. Real-time community management.</strong> Restaurants get reviews, complaints, and questions in real time. The agency needs to monitor and respond within hours, not days &mdash; especially on Google Business and Yelp where responses are public and permanent.</p>
+<p><strong>4. Menu and seasonal content.</strong> New dishes, seasonal specials, chef features, and behind-the-scenes kitchen content create a narrative that keeps the feed alive and gives regulars a reason to come back. This content should feel like the restaurant, not like a template.</p>
+<h2>The multi-location challenge</h2>
+<p>Running social for multiple restaurant locations is a different discipline than managing a single account. Each location needs localized content, location-specific promotions, and community management that reflects the local market &mdash; while maintaining brand consistency across the portfolio. For a deeper dive, see <a href="/blog/multi-location-social-media-playbook-scale-local">the multi-location social media playbook</a>.</p>
+<h2>The bottom line</h2>
+<p>Restaurant social media lives or dies on one question: does the content make people want to eat there? Everything else &mdash; follower count, impressions, engagement rate &mdash; is a proxy for that. Hire an agency that produces food content worth craving, targets locally, and responds in real time.</p>
+<h3>FAQ</h3>
+<h3>How much should a restaurant spend on social media?</h3>
+<p>Single locations typically invest $1,500&ndash;$3,000/month for agency management. Multi-location restaurant groups run $3,000&ndash;$8,000/month depending on content volume, platforms, and paid media.</p>
+<h3>Do restaurants need a social media agency or can they do it in-house?</h3>
+<p>In-house works if you have a dedicated person with photography skills, copywriting ability, and time to manage community daily. Most restaurants don&rsquo;t &mdash; the GM or marketing manager is already stretched. An agency provides consistency and quality without adding headcount.</p>
+<h3>What social media platforms are best for restaurants?</h3>
+<p>Instagram and TikTok for food content and discovery, Google Business Profile for local search and reviews, and Facebook for community events and local targeting. The right mix depends on your audience and market.</p>
+<p><em>Fifty &amp; Five has managed social media for restaurant brands from fast-casual chains to fine dining since 2008. <a href="/verticals/restaurant">See the restaurant work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'social-media-agency-vs-freelancer': `
+<p><strong>Short answer:</strong> A freelancer gives you one person&rsquo;s skills at a lower cost. An agency gives you a team, a system, and continuity at a higher cost. The right choice depends on your <strong>budget, complexity, and how much you can manage the relationship yourself</strong>.</p>
+<p>Below are the honest pros and cons of each, a cost comparison, and how to decide.</p>
+<h2>Freelancer: pros and cons</h2>
+<p><strong>Pros:</strong></p>
+<p><strong>Lower cost.</strong> Freelancers typically charge $500&ndash;$3,000/month for social media management, depending on experience and scope. No overhead, no account managers, no markups.</p>
+<p><strong>Direct communication.</strong> You talk to the person doing the work. No layers, no telephone game, no account executive translating your feedback.</p>
+<p><strong>Flexibility.</strong> Freelancers can often start quickly, adjust scope on the fly, and work on your schedule.</p>
+<p><strong>Cons:</strong></p>
+<p><strong>Single point of failure.</strong> If your freelancer gets sick, goes on vacation, or disappears, your social goes dark. There&rsquo;s no backup.</p>
+<p><strong>Limited skill set.</strong> One person rarely excels at strategy, photography, video, copywriting, paid media, and analytics. You get their strengths and work around their gaps.</p>
+<p><strong>No system.</strong> Most freelancers don&rsquo;t have the processes, tools, or templates that an agency builds over years. You&rsquo;re often providing the structure yourself.</p>
+<p><strong>Turnover risk.</strong> Freelancers move on &mdash; to full-time jobs, bigger clients, or new careers. When they leave, your brand knowledge leaves with them.</p>
+<h2>Agency: pros and cons</h2>
+<p><strong>Pros:</strong></p>
+<p><strong>Team depth.</strong> An agency brings strategists, content creators, designers, community managers, and paid media specialists. You get the right skill for each task.</p>
+<p><strong>Continuity.</strong> If one team member leaves, the agency retains your brand knowledge, assets, and strategy. The institution survives individual turnover.</p>
+<p><strong>Systems and tools.</strong> Agencies have established workflows for content approval, scheduling, reporting, and crisis management. You benefit from processes refined across dozens of clients.</p>
+<p><strong>Accountability.</strong> A contract, an account lead, and structured reporting create accountability that&rsquo;s harder to enforce with a freelancer.</p>
+<p><strong>Cons:</strong></p>
+<p><strong>Higher cost.</strong> Agencies typically charge $3,000&ndash;$20,000+/month. You&rsquo;re paying for the team, the systems, and the overhead.</p>
+<p><strong>Potential for junior execution.</strong> Not all agencies are senior-led. Some sell you senior talent in the pitch and deliver junior execution day-to-day.</p>
+<p><strong>Slower communication.</strong> Layers between you and the creator can slow feedback loops and dilute creative direction.</p>
+<h2>Cost comparison</h2>
+<p><strong>Freelancer:</strong> $500&ndash;$3,000/month. Best value for simple, single-platform needs with a hands-on client.</p>
+<p><strong>Boutique agency:</strong> $3,000&ndash;$10,000/month. Best value for multi-platform programs where strategy, quality, and continuity matter.</p>
+<p><strong>Large agency:</strong> $10,000&ndash;$20,000+/month. Best for enterprise, multi-market, or multi-brand programs.</p>
+<p>For a full pricing breakdown, see <a href="/blog/how-much-does-a-social-media-agency-cost">How Much Does a Social Media Agency Cost?</a></p>
+<h2>How to choose</h2>
+<p><strong>Choose a freelancer if:</strong> your budget is under $3,000/month, you only need one or two platforms, you can provide strategic direction yourself, and you&rsquo;re comfortable managing the relationship closely.</p>
+<p><strong>Choose an agency if:</strong> you need multiple platforms, original content production, paid media, and strategic leadership. You want continuity that survives individual turnover, and you&rsquo;re investing in social as a serious growth channel.</p>
+<p><strong>The hybrid option:</strong> Some brands start with a freelancer for execution and hire an agency for strategy and oversight. This works if the freelancer and agency communicate well &mdash; and falls apart if they don&rsquo;t.</p>
+<h2>The bottom line</h2>
+<p>A great freelancer beats a mediocre agency, and a great agency beats a great freelancer at scale. The question isn&rsquo;t which model is better in the abstract &mdash; it&rsquo;s which model matches your budget, complexity, and management capacity right now.</p>
+<h3>FAQ</h3>
+<h3>Is a freelancer cheaper than a social media agency?</h3>
+<p>Yes, typically 50&ndash;70% less expensive. Freelancers charge $500&ndash;$3,000/month vs. $3,000&ndash;$20,000+ for agencies. But the comparison isn&rsquo;t apples-to-apples &mdash; agencies provide team depth, systems, and continuity that a single freelancer can&rsquo;t.</p>
+<h3>Can a freelancer handle multiple social media platforms?</h3>
+<p>A skilled freelancer can manage 2&ndash;3 platforms, but quality often drops as scope expands. If you need 4+ platforms with original content, paid media, and community management, a team is usually necessary.</p>
+<h3>What happens if my freelancer quits?</h3>
+<p>You lose your brand knowledge, content pipeline, and momentum. An agency retains institutional memory even through individual turnover, which is one of the strongest arguments for the agency model as your program matures.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/work">See the work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'do-you-need-a-social-media-agency': `
+<p><strong>Short answer:</strong> You need a social media agency when <strong>social is important enough to your business to demand professional execution, but not important enough to justify building a full in-house team</strong>. That describes most mid-market brands, multi-location businesses, and companies where social drives revenue but isn&rsquo;t the only channel.</p>
+<p>Below are seven signs you need an agency, the questions to ask before hiring one, and when you might not need one at all.</p>
+<h2>7 signs you need a social media agency</h2>
+<p><strong>1. Your posting is inconsistent.</strong> Weeks of silence followed by a burst of posts is worse than not posting at all. Inconsistency signals to algorithms and audiences that your brand isn&rsquo;t serious about the channel.</p>
+<p><strong>2. Your content looks like everyone else&rsquo;s.</strong> Generic templates, stock photos, and recycled quotes blend into the feed. If your content could belong to any brand in your category, it&rsquo;s not working.</p>
+<p><strong>3. You&rsquo;re not responding to comments and DMs.</strong> Unanswered messages and reviews are visible to everyone. Every ignored DM is a customer deciding you don&rsquo;t care.</p>
+<p><strong>4. You have no strategy, just posts.</strong> Posting without a plan is publishing without purpose. If you can&rsquo;t articulate who your social content is for, what it should make them feel, and what action it should drive, you need strategic leadership.</p>
+<p><strong>5. Your team is stretched thin.</strong> The marketing manager, the intern, or the owner is &ldquo;handling social&rdquo; on top of their actual job. Social gets the scraps of their time and attention, and the results reflect it.</p>
+<p><strong>6. You&rsquo;re spending on ads with no clear return.</strong> Boosting posts without targeting strategy, creative testing, or conversion tracking is burning money. An agency turns ad spend into a measurable channel.</p>
+<p><strong>7. You know social matters but can&rsquo;t prove it.</strong> If leadership asks &ldquo;what are we getting from social?&rdquo; and you can&rsquo;t answer with data, you need an agency that builds measurement into every program.</p>
+<h2>Questions to ask before hiring</h2>
+<p><strong>&ldquo;Do I need an agency or a freelancer?&rdquo;</strong> If your needs are simple (one platform, basic posting, low volume), a freelancer may suffice. If you need multi-platform strategy, original content, paid media, and reporting, an agency is the better fit. See <a href="/blog/social-media-agency-vs-freelancer">Social Media Agency vs. Freelancer</a> for a full comparison.</p>
+<p><strong>&ldquo;Do I need a boutique or a big agency?&rdquo;</strong> If you want senior people on the work, speed, and specialization, a boutique is usually the answer. If you need global scale and multi-channel integration, a big agency may be necessary. See <a href="/blog/boutique-vs-big-social-media-agency">Boutique vs. Big Agency</a> for the trade-offs.</p>
+<p><strong>&ldquo;What should I budget?&rdquo;</strong> Most brands investing seriously in social should budget $3,000&ndash;$10,000/month for a quality boutique agency. If that&rsquo;s not feasible, start with a freelancer and graduate to an agency as revenue grows.</p>
+<h2>When you might NOT need an agency</h2>
+<p><strong>You have a skilled in-house team.</strong> If you already have a social media manager with strategy, creative, and analytics skills &mdash; and they have the time and tools to do the job &mdash; an agency adds cost without adding capability.</p>
+<p><strong>Your brand isn&rsquo;t ready.</strong> If you don&rsquo;t have basic brand assets (logo, photography, messaging), product-market fit, or clarity on your audience, hiring an agency is premature. Fix the foundation first.</p>
+<p><strong>Social isn&rsquo;t a relevant channel.</strong> Some B2B businesses or niche industries genuinely don&rsquo;t need a social presence. If your customers don&rsquo;t discover, research, or engage with brands on social, invest elsewhere.</p>
+<h2>The bottom line</h2>
+<p>An agency is worth it when social media is important to your business but underperforming because it lacks strategy, consistency, or professional execution. The cost of an agency is real; the cost of mediocre social &mdash; missed customers, weak brand perception, wasted ad spend &mdash; is usually higher.</p>
+<h3>FAQ</h3>
+<h3>How do I know if I need a social media agency?</h3>
+<p>If your posting is inconsistent, your content is generic, you&rsquo;re not responding to engagement, or you can&rsquo;t measure results, you likely need professional help. The clearest sign is when social is important to your business but underperforming.</p>
+<h3>Can I start with a freelancer and switch to an agency later?</h3>
+<p>Yes, and many brands do. Start with a freelancer for execution, develop your brand voice and audience, then graduate to an agency when you need multi-platform strategy, team depth, and scalable systems.</p>
+<h3>What&rsquo;s the minimum budget for a social media agency?</h3>
+<p>Quality boutique agencies typically start around $3,000/month. Below that, you&rsquo;re likely getting junior execution or limited scope. If your budget is under $3,000/month, a skilled freelancer is often a better investment.</p>
+<p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008. <a href="/contact">Start a conversation &rarr;</a>.</em></p>`,
+  'best-social-media-agency-hospitality-resorts': `
+<p><strong>Short answer:</strong> The best social media agency for a hospitality or resort brand is one that understands <strong>the guest journey, seasonal booking cycles, property-level content, and the difference between selling rooms and selling experiences</strong>. Generalist agencies default to product marketing playbooks; hospitality-native agencies know that social media for hotels and resorts is about aspiration, timing, and trust.</p>
+<p>Below is why hospitality social is different, the five things to look for in an agency, and the multi-property test that separates specialists from generalists.</p>
+<h2>Why hospitality social media is different</h2>
+<p><strong>You&rsquo;re selling a feeling, not a product.</strong> A hotel room is a commodity &mdash; four walls and a bed. What you&rsquo;re actually selling is the experience of being there: the view, the pool, the restaurant, the escape. Social content has to make someone <em>feel</em> the stay before they book it. That requires a level of visual storytelling and emotional precision that most generalist agencies can&rsquo;t deliver.</p>
+<p><strong>Booking windows drive content strategy.</strong> Hospitality has defined booking windows &mdash; leisure travelers plan 30&ndash;90 days out, group and event business plans 6&ndash;12 months out. The content calendar must align with these windows, not just post on a generic schedule. An agency that doesn&rsquo;t understand booking cycles will produce beautiful content that doesn&rsquo;t convert because the timing is wrong.</p>
+<p><strong>Reviews and reputation are the product.</strong> In hospitality, social media and reputation management are inseparable. A single unanswered negative review on Google or TripAdvisor can cost thousands in lost bookings. The agency must monitor and respond across social and review platforms in real time, in a tone that reflects the property&rsquo;s brand.</p>
+<p><strong>Every property has a personality.</strong> A boutique hotel in Napa and a beach resort in Miami need completely different content, voice, and targeting &mdash; even if they&rsquo;re owned by the same company. The agency must create property-level content that feels authentic to each location, not generic hospitality content with the logo swapped out.</p>
+<h2>What to look for in an agency</h2>
+<p><strong>1. A hospitality portfolio.</strong> Not one hotel client from years ago &mdash; a current, active roster of hotels, resorts, or hospitality brands with case studies and metrics. Ask to see content they&rsquo;ve produced and results they&rsquo;ve driven.</p>
+<p><strong>2. Visual storytelling capability.</strong> Hospitality social lives and dies on imagery. The agency should produce or direct photography and video that captures the experience of a property &mdash; not just the amenities list. Drone footage, guest perspective videos, and atmospheric content that makes someone stop scrolling and start dreaming.</p>
+<p><strong>3. Booking-window awareness.</strong> The agency should plan content and paid campaigns around your booking windows, not just post on a regular cadence. Ask how they time campaigns relative to booking lead times for leisure, group, and event business.</p>
+<p><strong>4. Reputation management integration.</strong> Social media and review management should be handled together, not siloed. The agency should monitor Google, TripAdvisor, and social mentions, respond in brand voice, and escalate issues before they become crises. See <a href="/blog/hotel-social-media-sells-rooms-not-likes">Hotel Social Media Sells Rooms, Not Likes</a> for a deeper take on what hospitality social should actually accomplish.</p>
+<p><strong>5. Multi-property experience.</strong> If you manage multiple properties, the agency must demonstrate they can create distinct, property-level content while maintaining brand consistency across the portfolio. This is a fundamentally different challenge than managing a single account.</p>
+<h2>The multi-property test</h2>
+<p>Ask any agency you&rsquo;re considering: <em>&ldquo;Show me content you&rsquo;ve produced for two different properties under the same brand. How did you differentiate them while maintaining brand consistency?&rdquo;</em></p>
+<p>A generalist will show you the same templates with different photos. A hospitality specialist will show you content that feels like it was made <em>by</em> each property &mdash; because the voice, imagery, and targeting were built from each location&rsquo;s unique identity.</p>
+<p><a href="/work/resorts-world">See Fifty &amp; Five&rsquo;s Resorts World case study &rarr;</a></p>
+<h2>The bottom line</h2>
+<p>Hospitality brands pay a premium every time they hire a generalist agency that doesn&rsquo;t understand booking windows, property-level content, or the role of reviews in the guest journey. The best agency for this category already thinks like a hotelier &mdash; selling the experience, timing content to booking cycles, and protecting your reputation across every platform guests touch.</p>
+<h3>FAQ</h3>
+<h3>What makes hospitality social media different from other industries?</h3>
+<p>Hospitality sells experiences, not products. Content must create aspiration and align with booking windows. Reputation management is inseparable from social strategy, and multi-property brands need location-specific content &mdash; not generic templates.</p>
+<h3>How much does a social media agency cost for a hotel or resort?</h3>
+<p>Boutique agencies with hospitality expertise typically charge $3,000&ndash;$10,000/month per property, depending on content volume, platforms, and paid media. Multi-property portfolios often negotiate volume pricing.</p>
+<h3>Should each hotel property have its own social media accounts?</h3>
+<p>Usually, yes. Each property has a distinct personality, location, and guest base. Property-level accounts allow targeted content and local community management. A brand-level account can complement property accounts but shouldn&rsquo;t replace them.</p>
+<p><em>Fifty &amp; Five has managed social media for hospitality brands from boutique hotels to integrated resorts since 2008. <a href="/verticals/hospitality">See the hospitality work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
 };
 
 export function getBlogContent(wixSlug: string): string | undefined {
