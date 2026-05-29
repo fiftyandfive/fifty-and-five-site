@@ -12,8 +12,8 @@ const SETUP_LINES = [
   'ONE THING YOUR CFO WOULD CALL A RESULT.',
 ];
 
-const CHAR_DELAY = 14;
-const LINE_PAUSE = 130;
+const CHAR_DELAY = 35;
+const LINE_PAUSE = 400;
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
