@@ -232,10 +232,10 @@ export function TypewriterHero() {
 
           {/* RIGHT — creative proof collage */}
           <div
-            className="hidden md:grid grid-cols-2 gap-[14px] transition-all duration-[900ms]"
+            className="grid grid-cols-2 gap-[14px] transition-all duration-[900ms]"
             style={{
-              opacity: showCollage || !hasHydrated ? 1 : 0,
-              transform: showCollage || !hasHydrated ? 'none' : 'translateY(20px)',
+              opacity: showCollage ? 1 : 0,
+              transform: showCollage ? 'none' : 'translateY(20px)',
               transitionTimingFunction: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
               transitionDelay: '150ms',
             }}
