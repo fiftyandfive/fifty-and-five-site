@@ -9,6 +9,8 @@ import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
 import { ReceiptsDashboard } from '@/components/ui/ReceiptsDashboard';
 import { TypewriterHero } from '@/components/ui/TypewriterHero';
+import { BrandMarquee } from '@/components/ui/BrandMarquee';
+import { SelectedWork } from '@/components/ui/SelectedWork';
 import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
@@ -87,6 +89,9 @@ export default function HomePage() {
       />
       {/* HERO */}
       <TypewriterHero />
+
+      {/* BIG-BRAND MARQUEE */}
+      <BrandMarquee />
 
       {/* STATS BAR */}
       <section className="container-edge py-28 md:py-36">
@@ -329,6 +334,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* SELECTED WORK — real photography */}
+      <SelectedWork />
 
       {/* THE CLOSE */}
       <CTASection />

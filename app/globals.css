@@ -2,32 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Instrument Serif (display) + Inter (body) via Google Fonts <link>. Geist Mono via next/font. */
+/* Fraunces (display serif) + Inter (body) + IBM Plex Mono (terminal/labels) via Google Fonts. */
 
 :root {
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Instrument Serif', 'Georgia', serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  /* Core Palette — Dark Luxury */
-  --color-bg-primary: #08080A;
-  --color-bg-secondary: #0F0F12;
-  --color-bg-tertiary: #17171C;
+  /* Core Palette — Dark Editorial */
+  --color-bg-primary: #0A0A0C;
+  --color-bg-secondary: #121217;
+  --color-bg-tertiary: #16161C;
   --color-bg-glass: rgba(255, 255, 255, 0.03);
 
-  --color-text-primary: #F5F3EE;
-  --color-text-secondary: #9A9890;
-  --color-text-tertiary: #5E5C56;
+  --color-text-primary: #F5F2EC;
+  --color-text-secondary: #B7B3AB;
+  --color-text-tertiary: #76736D;
 
   --color-accent: #C41E3A;
-  --color-accent-light: #E2334F;
+  --color-accent-light: #E63950;
   --color-accent-glow: rgba(196, 30, 58, 0.12);
   --color-accent-subtle: rgba(196, 30, 58, 0.06);
 
-  --color-gold: #C6A15B;
-  --color-gold-muted: #9A845C;
-  --color-gold-glow: rgba(198, 161, 91, 0.10);
+  --color-terminal: #5BE38B;
+  --color-paper: #F5F2EC;
+  --color-paper-dim: #B7B3AB;
+  --color-muted: #76736D;
 
-  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(245, 242, 236, 0.12);
   --glass-bg: rgba(255, 255, 255, 0.02);
   --glass-blur: 16px;
 
@@ -85,17 +87,16 @@ body {
   color: white;
 }
 
-/* Display helper — Instrument Serif is elegant, let it breathe */
+/* Display helper — Fraunces, medium weight, editorial feel */
 .font-display {
   font-family: var(--font-serif), Georgia, serif;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -0.02em;
-  font-style: italic;
 }
 
-/* Serif headings — refined tracking */
+/* Serif headings */
 .font-serif {
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 /* Glass surface — refined luxury */

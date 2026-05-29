@@ -1,57 +1,28 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import Image from 'next/image';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { SITE } from '@/lib/constants';
 
 const SETUP_LINES = [
-  'What did your social media do last week?',
-  'Not impressions. Not reach. Not "brand awareness."',
-  'One thing your CFO would call a result.',
-  '...',
+  'WHAT DID YOUR SOCIAL MEDIA DO LAST WEEK?',
+  'NOT IMPRESSIONS. NOT REACH. NOT "BRAND AWARENESS."',
+  'ONE THING YOUR CFO WOULD CALL A RESULT.',
 ];
 
-const CHAR_DELAY = 65;
-const LINE_PAUSE = 800;
-const FADE_PAUSE = 1000;
+const CHAR_DELAY = 14;
+const LINE_PAUSE = 130;
 
 const ease = [0.25, 0.46, 0.45, 0.94] as const;
 
-type Phase = 'typing' | 'pausing' | 'punch' | 'done';
+type Phase = 'typing' | 'pausing' | 'reveal' | 'done';
 
-function ParallaxDiamonds({ reducedMotion }: { reducedMotion: boolean }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  });
-
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -120]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, -80]);
-
-  if (reducedMotion) {
-    return (
-      <div ref={ref} className="hidden md:block absolute right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
-        <div className="w-4 h-4 bg-accent rotate-45 opacity-20" />
-        <div className="w-3 h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2" />
-      </div>
-    );
-  }
-
-  return (
-    <div ref={ref} className="hidden md:block absolute right-[12%] top-1/2 -translate-y-1/2 pointer-events-none z-[1]" aria-hidden>
-      <motion.div
-        className="w-4 h-4 bg-accent rotate-45 opacity-20"
-        style={{ y: y1 }}
-      />
-      <motion.div
-        className="w-3 h-3 bg-accent rotate-45 opacity-12 mt-3 ml-2"
-        style={{ y: y2 }}
-      />
-    </div>
-  );
-}
+const HERO_IMAGES = [
+  { src: '/images/work/kj-breckenridge-hero.jpg', alt: 'Kendall-Jackson winter shoot, Breckenridge', badge: 'KJ · Breckenridge' },
+  { src: '/images/work/blaze-lebron.jpg', alt: 'LeBron James carrying Blaze Pizza boxes', badge: 'Blaze · LeBron James', position: 'center 22%' },
+];
 
 export function TypewriterHero() {
   const [phase, setPhase] = useState<Phase>('typing');
@@ -59,11 +30,8 @@ export function TypewriterHero() {
   const [charIndex, setCharIndex] = useState(0);
   const [completedLines, setCompletedLines] = useState<string[]>([]);
   const [currentText, setCurrentText] = useState('');
-  const [showPunch, setShowPunch] = useState(false);
-  const [showSub, setShowSub] = useState(false);
-  const [showCta, setShowCta] = useState(false);
-  const [showTrust, setShowTrust] = useState(false);
-  const [showSkip, setShowSkip] = useState(false);
+  const [showPayoff, setShowPayoff] = useState(false);
+  const [showCollage, setShowCollage] = useState(false);
   const [prefersReduced, setPrefersReduced] = useState(false);
 
   useEffect(() => {
@@ -73,29 +41,16 @@ export function TypewriterHero() {
       setPrefersReduced(true);
       setCompletedLines(SETUP_LINES);
       setPhase('done');
-      setShowPunch(true);
-      setShowSub(true);
-      setShowCta(true);
-      setShowTrust(true);
+      setShowPayoff(true);
+      setShowCollage(true);
     }
   }, []);
 
-  useEffect(() => {
-    if (prefersReduced || phase === 'done') return;
-    const timer = setTimeout(() => setShowSkip(true), 1000);
-    return () => clearTimeout(timer);
-  }, [prefersReduced, phase]);
-
-  const skipToEnd = useCallback(() => {
-    setCompletedLines(SETUP_LINES);
-    setCurrentText('');
-    setPhase('punch');
-    setShowSkip(false);
-    setShowPunch(true);
-    setTimeout(() => setShowSub(true), 300);
-    setTimeout(() => setShowCta(true), 700);
-    setTimeout(() => setShowTrust(true), 1000);
-    setTimeout(() => setPhase('done'), 1100);
+  const finishSequence = useCallback(() => {
+    setPhase('reveal');
+    setTimeout(() => setShowPayoff(true), 100);
+    setTimeout(() => setShowCollage(true), 250);
+    setTimeout(() => setPhase('done'), 800);
   }, []);
 
   const advanceLine = useCallback(() => {
@@ -111,17 +66,9 @@ export function TypewriterHero() {
       }, LINE_PAUSE);
     } else {
       setPhase('pausing');
-      setTimeout(() => {
-        setPhase('punch');
-        setShowSkip(false);
-        setTimeout(() => setShowPunch(true), 100);
-        setTimeout(() => setShowSub(true), 400);
-        setTimeout(() => setShowCta(true), 800);
-        setTimeout(() => setShowTrust(true), 1100);
-        setTimeout(() => setPhase('done'), 1200);
-      }, FADE_PAUSE);
+      setTimeout(finishSequence, 200);
     }
-  }, [lineIndex]);
+  }, [lineIndex, finishSequence]);
 
   useEffect(() => {
     if (phase !== 'typing' || prefersReduced) return;
@@ -138,177 +85,212 @@ export function TypewriterHero() {
     }
   }, [phase, charIndex, lineIndex, advanceLine, prefersReduced]);
 
-  const setupDimmed = phase === 'punch' || phase === 'done';
+  const setupDimmed = phase === 'reveal' || phase === 'done';
 
   return (
     <section
-      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-bg-primary"
-      aria-label="What did your social media do last week? Not impressions. Not reach. Not brand awareness. One thing your CFO would call a result. Exactly. We do the storytelling. You run the business."
+      className="relative min-h-[100svh] flex items-center overflow-hidden bg-bg-primary"
+      aria-label="Fifty and Five. We do the storytelling. You run the business. 222 brands, 18 years social-first, senior team since 2008."
     >
       <h1 className="sr-only">Fifty &amp; Five — Senior-Led Boutique Social Media Agency</h1>
 
-      <ParallaxDiamonds reducedMotion={prefersReduced} />
+      {/* Crimson radial glow */}
+      <div
+        aria-hidden
+        className="absolute pointer-events-none"
+        style={{
+          top: '-10%',
+          right: '-5%',
+          width: 680,
+          height: 680,
+          background: 'radial-gradient(circle, rgba(196,30,58,0.16), transparent 62%)',
+          filter: 'blur(8px)',
+        }}
+      />
 
-      <div className="relative z-10 container-edge pt-32 pb-24 md:pt-40 md:pb-32">
-        {/* Setup lines — 1980s CRT typewriter */}
-        <motion.div
-          className="min-h-[8rem] md:min-h-[7rem] relative"
-          aria-hidden="true"
-          animate={{ opacity: setupDimmed ? 0.15 : 1 }}
-          transition={{ duration: 0.5, ease }}
-        >
-          {/* CRT scanline overlay */}
-          {!setupDimmed && (
-            <div
-              className="absolute inset-0 pointer-events-none z-10"
-              style={{
-                backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.08) 2px, rgba(0,0,0,0.08) 4px)',
-                mixBlendMode: 'multiply',
-              }}
-            />
-          )}
-
-          {completedLines.map((line, i) => (
-            <div
-              key={i}
-              className="font-mono text-[clamp(11px,2.8vw,17px)] leading-[1.8] tracking-[0.04em] uppercase"
-              style={{
-                color: '#4ade80',
-                textShadow: '0 0 8px rgba(74,222,128,0.4), 0 0 2px rgba(74,222,128,0.2)',
-              }}
-            >
-              <span className="opacity-50 mr-2">&gt;</span>{line}
-            </div>
-          ))}
-
-          {phase === 'typing' && (
-            <div
-              className="font-mono text-[clamp(11px,2.8vw,17px)] leading-[1.8] tracking-[0.04em] uppercase"
-              style={{
-                color: '#4ade80',
-                textShadow: '0 0 8px rgba(74,222,128,0.4), 0 0 2px rgba(74,222,128,0.2)',
-              }}
-            >
-              <span className="opacity-50 mr-2">&gt;</span>{currentText}
-              <span
-                className="inline-block w-[0.6em] h-[1.1em] ml-[1px] align-middle"
-                style={{
-                  background: '#4ade80',
-                  boxShadow: '0 0 6px rgba(74,222,128,0.5)',
-                  animation: 'crt-blink 1s step-end infinite',
-                }}
-              />
-            </div>
-          )}
-
-          {phase === 'pausing' && lineIndex < SETUP_LINES.length - 1 && (
-            <div
-              className="font-mono text-[clamp(11px,2.8vw,17px)] leading-[1.8] tracking-[0.04em] uppercase"
-              style={{
-                color: '#4ade80',
-                textShadow: '0 0 8px rgba(74,222,128,0.4), 0 0 2px rgba(74,222,128,0.2)',
-              }}
-            >
-              <span className="opacity-50 mr-2">&gt;</span>
-              <span
-                className="inline-block w-[0.6em] h-[1.1em] ml-[1px] align-middle"
-                style={{
-                  background: '#4ade80',
-                  boxShadow: '0 0 6px rgba(74,222,128,0.5)',
-                  animation: 'crt-blink 1s step-end infinite',
-                }}
-              />
-            </div>
-          )}
-        </motion.div>
-
-        {/* Punch headline */}
-        <AnimatePresence>
-          {showPunch && (
+      <div className="relative z-10 container-edge w-full py-[120px] md:py-0">
+        <div className="grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-10 md:gap-[54px] items-center">
+          {/* LEFT — terminal beat + payoff */}
+          <div>
+            {/* Terminal lines */}
             <motion.div
-              className="mt-8 md:mt-10 font-serif text-[clamp(56px,10vw,140px)] leading-[1.0] tracking-[-0.04em] text-text-primary max-w-5xl"
-              initial={{ opacity: 0, scale: 1.04, y: 12 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
+              className="min-h-[120px] mb-[30px]"
+              aria-hidden="true"
+              animate={{ opacity: setupDimmed ? 0.15 : 1 }}
               transition={{ duration: 0.4, ease }}
             >
-              Exactly.
+              {completedLines.map((line, i) => (
+                <div
+                  key={i}
+                  className="font-mono text-[15px] leading-[1.9] whitespace-pre-wrap"
+                  style={{ color: 'var(--color-terminal)' }}
+                >
+                  <span style={{ color: 'var(--color-accent-light)' }}>&gt; </span>{line}
+                </div>
+              ))}
+
+              {phase === 'typing' && (
+                <div
+                  className="font-mono text-[15px] leading-[1.9] whitespace-pre-wrap"
+                  style={{ color: 'var(--color-terminal)' }}
+                >
+                  <span style={{ color: 'var(--color-accent-light)' }}>&gt; </span>{currentText}
+                  <span
+                    className="inline-block w-[9px] h-[17px] ml-[2px] align-[-3px]"
+                    style={{
+                      background: 'var(--color-terminal)',
+                      animation: 'crt-blink 1s steps(1) infinite',
+                    }}
+                  />
+                </div>
+              )}
+
+              {phase === 'pausing' && lineIndex < SETUP_LINES.length - 1 && (
+                <div
+                  className="font-mono text-[15px] leading-[1.9] whitespace-pre-wrap"
+                  style={{ color: 'var(--color-terminal)' }}
+                >
+                  <span style={{ color: 'var(--color-accent-light)' }}>&gt; </span>
+                  <span
+                    className="inline-block w-[9px] h-[17px] ml-[2px] align-[-3px]"
+                    style={{
+                      background: 'var(--color-terminal)',
+                      animation: 'crt-blink 1s steps(1) infinite',
+                    }}
+                  />
+                </div>
+              )}
             </motion.div>
-          )}
-        </AnimatePresence>
 
-        {/* Tagline */}
-        <AnimatePresence>
-          {showSub && (
-            <motion.p
-              className="mt-6 md:mt-8 text-[clamp(20px,3vw,32px)] leading-[1.35] text-text-secondary max-w-2xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2, ease }}
+            {/* Payoff — always in DOM for contrast/accessibility, animated in */}
+            <div
+              className="transition-all duration-700"
+              style={{
+                opacity: showPayoff ? 1 : 0,
+                transform: showPayoff ? 'none' : 'translateY(12px)',
+              }}
             >
-              We do the storytelling.<br />You run the business.
-            </motion.p>
-          )}
-        </AnimatePresence>
-
-        {/* CTAs */}
-        <AnimatePresence>
-          {showCta && (
-            <motion.div
-              className="mt-10 flex flex-wrap items-center gap-4"
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease }}
-            >
-              <MagneticButton
-                href={SITE.calendly}
-                variant="primary"
-                size="large"
-                trackName="Hero CTA — Book Intro Call"
+              <div
+                className="font-serif"
+                style={{
+                  fontSize: 'clamp(64px, 9vw, 120px)',
+                  lineHeight: 0.9,
+                  letterSpacing: '-0.02em',
+                  fontWeight: 500,
+                  color: 'var(--color-paper)',
+                }}
               >
-                Run the numbers &rarr;
-              </MagneticButton>
-              <MagneticButton
-                href="/work"
-                variant="secondary"
-                size="large"
-                trackName="Hero CTA — See the Work"
+                Exactly<span style={{ color: 'var(--color-accent)' }}>.</span>
+              </div>
+
+              <p
+                className="font-serif mt-[22px]"
+                style={{
+                  fontSize: 'clamp(20px, 2.4vw, 27px)',
+                  fontWeight: 400,
+                  lineHeight: 1.3,
+                  color: 'var(--color-paper)',
+                }}
               >
-                See the work &rarr;
-              </MagneticButton>
-            </motion.div>
-          )}
-        </AnimatePresence>
+                We do the storytelling.{' '}
+                <span style={{ color: 'var(--color-paper-dim)' }}>You run the business.</span>
+              </p>
 
-        {/* Trust line */}
-        <AnimatePresence>
-          {showTrust && (
-            <motion.div
-              className="mt-10 font-mono text-[11px] md:text-caption uppercase tracking-[0.2em] text-text-tertiary"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, ease }}
-            >
-              ★★★★★ 5.0 on Clutch &middot; 18 receipts publicly verified
-            </motion.div>
-          )}
-        </AnimatePresence>
+              <div className="mt-[34px] flex flex-wrap gap-[14px]">
+                <MagneticButton
+                  href={SITE.calendly}
+                  variant="primary"
+                  size="large"
+                  trackName="Hero CTA — Run the numbers"
+                >
+                  ◆ Run the numbers →
+                </MagneticButton>
+                <MagneticButton
+                  href="/work"
+                  variant="secondary"
+                  size="large"
+                  trackName="Hero CTA — See the work"
+                >
+                  See the work →
+                </MagneticButton>
+              </div>
 
-        {/* Skip button */}
-        <AnimatePresence>
-          {showSkip && phase !== 'done' && (
-            <motion.button
-              onClick={skipToEnd}
-              className="fixed bottom-6 left-6 z-50 font-mono text-[10px] uppercase tracking-[0.12em] text-text-tertiary hover:text-text-secondary transition-colors px-3 py-2 rounded border border-glass-border bg-bg-primary/80 backdrop-blur-sm"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              aria-label="Skip animation"
-            >
-              Skip &rarr;
-            </motion.button>
-          )}
-        </AnimatePresence>
+              <div
+                className="mt-[26px] font-mono uppercase"
+                style={{
+                  fontSize: 11,
+                  letterSpacing: '0.12em',
+                  color: 'var(--color-muted)',
+                }}
+              >
+                222+ brands · 18 years social-first · senior team since 2008
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT — creative proof collage */}
+          <div
+            className="hidden md:grid grid-cols-2 gap-[14px] transition-all duration-[900ms]"
+            style={{
+              opacity: showCollage ? 1 : 0,
+              transform: showCollage ? 'none' : 'translateY(20px)',
+              transitionTimingFunction: 'cubic-bezier(0.2, 0.7, 0.2, 1)',
+              transitionDelay: '150ms',
+            }}
+          >
+            {HERO_IMAGES.map((img, i) => (
+              <div
+                key={i}
+                className="relative rounded-[14px] overflow-hidden"
+                style={{
+                  border: '1px solid var(--glass-border)',
+                  background: 'var(--color-bg-secondary)',
+                  boxShadow: '0 26px 60px -30px rgba(0,0,0,0.8)',
+                }}
+              >
+                <div style={{ paddingTop: '100%' }} />
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover z-[3]"
+                  style={{ objectPosition: img.position || 'center' }}
+                  sizes="(max-width: 920px) 50vw, 280px"
+                  priority={i === 0}
+                  unoptimized
+                />
+                <div
+                  className="absolute top-3 left-3 z-[4] font-mono uppercase px-2 py-1 rounded-[6px]"
+                  style={{
+                    fontSize: 9,
+                    letterSpacing: '0.14em',
+                    color: 'var(--color-paper)',
+                    background: 'rgba(10,10,12,0.6)',
+                    backdropFilter: 'blur(4px)',
+                    border: '1px solid var(--glass-border)',
+                  }}
+                >
+                  {img.badge}
+                </div>
+                {/* Fallback placeholder if image doesn't load */}
+                <div
+                  className="absolute inset-0 z-[1] flex flex-col justify-end p-[18px]"
+                  style={{
+                    background: 'repeating-linear-gradient(135deg, rgba(196,30,58,0.05) 0 12px, transparent 12px 24px), linear-gradient(160deg, var(--color-bg-tertiary), var(--color-bg-secondary))',
+                  }}
+                >
+                  <div className="absolute inset-[14px] border border-dashed rounded-lg" style={{ borderColor: 'rgba(245,242,236,0.18)' }} />
+                  <span className="relative font-mono text-[11px] tracking-[0.04em]" style={{ color: 'var(--color-accent-light)' }}>
+                    {img.badge}
+                  </span>
+                  <span className="relative text-[12.5px] mt-1" style={{ color: 'var(--color-paper-dim)' }}>
+                    {img.alt}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

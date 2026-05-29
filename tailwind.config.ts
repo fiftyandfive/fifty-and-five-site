@@ -46,8 +46,8 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'Inter', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-serif)', 'Georgia', 'serif'],
-        mono: ['var(--font-geist-mono)', '"JetBrains Mono"', 'monospace'],
+        serif: ['var(--font-serif)', 'Fraunces', 'Georgia', 'serif'],
+        mono: ['var(--font-mono)', '"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
       fontSize: {
         display: ['clamp(60px, 9vw, 110px)', { lineHeight: '0.98', letterSpacing: '-0.02em' }],

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifty &amp; Five — Hero Redesign Mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0C; --bg2:#121217; --bg3:#16161C;
+    --paper:#F5F2EC; --paper-dim:#B7B3AB; --muted:#76736D;
+    --crimson:#C41E3A; --crimson-bright:#E63950; --crimson-deep:#7C1322;
+    --term:#5BE38B;
+    --line:rgba(245,242,236,.12); --line-soft:rgba(245,242,236,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--paper);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .serif{font-family:'Fraunces',Georgia,serif}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+  nav{position:absolute;top:0;left:0;right:0;z-index:20}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .logo{font-family:'Fraunces',serif;font-size:23px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:3px}
+  .logo .amp{color:var(--crimson)}
+  .nav-links{display:flex;gap:30px;font-size:14px;color:var(--paper-dim)}
+  .nav-cta{background:var(--crimson);color:#fff;font-size:13px;padding:11px 20px;border-radius:30px;display:flex;align-items:center;gap:8px;font-weight:500}
+  .nav-cta .d{color:#fff}
+  @media(max-width:860px){.nav-links{display:none}}
+
+  .hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:120px 0 70px;overflow:hidden}
+  .hero::before{content:"";position:absolute;top:-10%;right:-5%;width:680px;height:680px;background:radial-gradient(circle,rgba(196,30,58,.16),transparent 62%);pointer-events:none;filter:blur(8px)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;width:100%;position:relative}
+
+  .term-block{font-family:'IBM Plex Mono',monospace;font-size:15px;line-height:1.9;color:var(--term);margin-bottom:30px;min-height:120px}
+  .term-line{white-space:pre-wrap}
+  .term-line .pmt{color:var(--crimson-bright)}
+  .caret{display:inline-block;width:9px;height:17px;background:var(--term);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+
+  .payoff{transition:opacity .7s ease,transform .7s ease}
+  .payoff.in{opacity:1;transform:none}
+  h1.exact{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(64px,9vw,120px);line-height:.9;letter-spacing:-.02em;color:var(--paper)}
+  h1.exact .dot{color:var(--crimson)}
+  .brandline{font-family:'Fraunces',serif;font-size:clamp(20px,2.4vw,27px);font-weight:400;color:var(--paper);margin-top:22px;line-height:1.3}
+  .brandline span{color:var(--paper-dim)}
+  .cta-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;padding:15px 26px;border-radius:32px;cursor:pointer;transition:.18s;border:1px solid transparent}
+  .btn-crimson{background:var(--crimson);color:#fff}
+  .btn-crimson:hover{background:var(--crimson-bright);transform:translateY(-1px)}
+  .btn-ghost{border-color:var(--line);color:var(--paper)}
+  .btn-ghost:hover{border-color:var(--paper);}
+  .micro{margin-top:26px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+  .collage{transition:opacity .9s .15s ease,transform .9s .15s cubic-bezier(.2,.7,.2,1);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px}
+  .collage.in{opacity:1;transform:none}
+  .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg2);box-shadow:0 26px 60px -30px rgba(0,0,0,.8)}
+  .tile.tall{grid-row:span 2}
+  .tile.wide .ratio{padding-top:100%}
+  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3}
+  .tile .ph{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;background:repeating-linear-gradient(135deg,rgba(196,30,58,.05) 0 12px,transparent 12px 24px),linear-gradient(160deg,var(--bg3),var(--bg2));}
+  .tile .ph::before{content:"";position:absolute;inset:14px;border:1px dashed rgba(245,242,236,.18);border-radius:8px}
+  .tile .ph .drop{position:relative;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--crimson-bright);letter-spacing:.04em}
+  .tile .ph .what{position:relative;font-size:12.5px;color:var(--paper-dim);margin-top:4px}
+  .tile .badge{position:absolute;top:12px;left:12px;z-index:4;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:rgba(10,10,12,.6);backdrop-filter:blur(4px);border:1px solid var(--line);padding:4px 8px;border-radius:6px}
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:40px}.collage{max-width:520px}}
+
+  .work{padding:90px 0;border-top:1px solid var(--line)}
+  .work-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:34px;flex-wrap:wrap;gap:16px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--crimson);display:block;margin-bottom:14px}
+  .work-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,3.6vw,40px);line-height:1.05;max-width:640px}
+  .work-link{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson-bright)}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .wtile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+  .wtile .ratio{display:block;padding-top:118%}
+  .wtile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3}
+  .wtile .cap{position:absolute;left:0;right:0;bottom:0;z-index:4;padding:14px;background:linear-gradient(transparent,rgba(10,10,12,.85));font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper)}
+  @media(max-width:880px){.work-grid{grid-template-columns:1fr 1fr}}
+
+  .brands{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:32px 0;overflow:hidden;background:var(--bg)}
+  .brands-lbl{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+  .marquee-wrap{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+  .marquee{display:inline-flex;align-items:center;white-space:nowrap;animation:scroll-x 48s linear infinite;will-change:transform}
+  .marquee span{font-family:'Fraunces',serif;font-size:23px;color:var(--paper-dim);opacity:.82}
+  .marquee .dot{color:var(--crimson);font-size:9px;padding:0 26px;opacity:.7}
+  @keyframes scroll-x{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-in">
+    <div class="logo">Fifty <span class="amp">&amp;</span> Five</div>
+    <div class="nav-links"><span>Work</span><span>Services</span><span>Blog</span><span>About</span></div>
+    <div class="nav-cta"><span class="d">&#9670;</span> Let's Talk <span class="d">&#9670;</span></div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="term-block" id="term"></div>
+      <div class="payoff" id="payoff">
+        <h1 class="exact">Exactly<span class="dot">.</span></h1>
+        <p class="brandline">We do the storytelling. <span>You run the business.</span></p>
+        <div class="cta-row">
+          <a class="btn btn-crimson" href="#">&#9670; Run the numbers &#8594;</a>
+          <a class="btn btn-ghost" href="#">See the work &#8594;</a>
+        </div>
+        <div class="micro">222+ brands · 18 years social-first · senior team since 2008</div>
+      </div>
+    </div>
+
+    <div class="collage" id="collage">
+      <div class="tile wide">
+        <span class="badge">KJ · Breckenridge</span>
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/8hite5y3nwa6frc4osszb/IMG_7726.jpg?rlkey=snfdr2ahooynnklr60ps1zqu9" alt="Kendall-Jackson winter shoot, Breckenridge" onerror="this.style.display='none'">
+        <div class="ph"><span class="drop">IMG_7726.jpg (linked)</span><span class="what">Kendall-Jackson · Breckenridge winter shoot</span></div>
+      </div>
+      <div class="tile wide">
+        <span class="badge">Blaze · LeBron James</span>
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/w057fyquygtn5wr4olxho/190814_LRMR_LEBRON_BLAZE_PIZZA-25.jpg?rlkey=ovyvvt7b56sl9dyerh3lqiqu2" alt="LeBron James carrying Blaze Pizza boxes" style="object-position:center 22%" onerror="this.style.display='none'">
+        <div class="ph"><span class="drop">LeBron x Blaze (linked)</span><span class="what">Blaze Pizza · LeBron James</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="brands-lbl">222+ brands · 18 years · five continents</div>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>Warner Bros.</span><span class="dot">&#9670;</span><span>Microsoft</span><span class="dot">&#9670;</span><span>SAP</span><span class="dot">&#9670;</span><span>Hasbro</span><span class="dot">&#9670;</span><span>Bain &amp; Company</span><span class="dot">&#9670;</span><span>Discovery Channel</span><span class="dot">&#9670;</span><span>Enterprise</span><span class="dot">&#9670;</span><span>Toys R Us</span><span class="dot">&#9670;</span><span>Resorts World</span><span class="dot">&#9670;</span><span>Penfolds</span><span class="dot">&#9670;</span><span>Kendall-Jackson</span><span class="dot">&#9670;</span><span>Unilever</span><span class="dot">&#9670;</span><span>AutoNation</span><span class="dot">&#9670;</span><span>The Irvine Company</span><span class="dot">&#9670;</span><span>Wolfgang's Steakhouse</span><span class="dot">&#9670;</span><span>Blaze Pizza</span><span class="dot">&#9670;</span>
+      <span>Warner Bros.</span><span class="dot">&#9670;</span><span>Microsoft</span><span class="dot">&#9670;</span><span>SAP</span><span class="dot">&#9670;</span><span>Hasbro</span><span class="dot">&#9670;</span><span>Bain &amp; Company</span><span class="dot">&#9670;</span><span>Discovery Channel</span><span class="dot">&#9670;</span><span>Enterprise</span><span class="dot">&#9670;</span><span>Toys R Us</span><span class="dot">&#9670;</span><span>Resorts World</span><span class="dot">&#9670;</span><span>Penfolds</span><span class="dot">&#9670;</span><span>Kendall-Jackson</span><span class="dot">&#9670;</span><span>Unilever</span><span class="dot">&#9670;</span><span>AutoNation</span><span class="dot">&#9670;</span><span>The Irvine Company</span><span class="dot">&#9670;</span><span>Wolfgang's Steakhouse</span><span class="dot">&#9670;</span><span>Blaze Pizza</span><span class="dot">&#9670;</span>
+    </div>
+  </div>
+</section>
+
+<section class="work">
+  <div class="wrap">
+    <div class="work-head">
+      <div>
+        <span class="eyebrow">Selected Work</span>
+        <h2 class="serif">Campaigns for brands you know, built by the team that ran them.</h2>
+      </div>
+      <span class="work-link">View all work &#8594;</span>
+    </div>
+    <div class="work-grid">
+      <div class="wtile">
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/qsnr6y8rgbzz3rtnk223w/IMG_7719.jpg?rlkey=f1tbrl6sfdw59hhhm5e0osxz5" alt="Kendall-Jackson Breckenridge winter shoot" onerror="this.style.display='none'">
+        <div class="cap">Kendall-Jackson · Breckenridge</div>
+      </div>
+      <div class="wtile">
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/fppuixgovjkigkbjmqz2f/IMG_6236.png?rlkey=k9yslbq70pthos4be8efu4v7l" alt="Barsha plated prawns and wine" onerror="this.style.display='none'">
+        <div class="cap">Barsha · LA Times 101 Best Restaurants</div>
+      </div>
+      <div class="wtile">
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/gmgvkgrzbr9ec5dzgp29u/IMG_7911.jpg?rlkey=ec2trvyqqrppv3quhuohtzzxk" alt="Kendall-Jackson Breckenridge winter shoot" onerror="this.style.display='none'">
+        <div class="cap">Kendall-Jackson · Wine &amp; Spirits</div>
+      </div>
+      <div class="wtile">
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/tsuci5fwpo0m0mzxpnitj/FB-Post-2.jpg?rlkey=ec7zb0huw810nngpktydc75jz" alt="Resorts World Bimini Lil Jon concert sweepstakes" onerror="this.style.display='none'">
+        <div class="cap">Resorts World · Lil Jon Sweepstakes</div>
+      </div>
+      <div class="wtile">
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/lm67ooddeh93v7wx73ti9/01-09-17-FB.jpg?rlkey=eihauharq1qawi6tlfbs35py4" alt="Enterprise Rent-A-Car open road" onerror="this.style.display='none'">
+        <div class="cap">Enterprise · Automotive</div>
+      </div>
+      <div class="wtile">
+        <span class="ratio"></span>
+        <img src="https://dl.dropboxusercontent.com/scl/fi/gp5d6vy7k0je0mjrbhqjd/1.18.17-TW.jpg?rlkey=8sk3kc4ykr6hx12d2z5ls1itj" alt="Enterprise Rent-A-Car coastal overlook" onerror="this.style.display='none'">
+        <div class="cap">Enterprise · Travel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  var lines=[
+    {p:"> ",t:"WHAT DID YOUR SOCIAL MEDIA DO LAST WEEK?"},
+    {p:"> ",t:'NOT IMPRESSIONS. NOT REACH. NOT "BRAND AWARENESS."'},
+    {p:"> ",t:"ONE THING YOUR CFO WOULD CALL A RESULT."}
+  ];
+  var term=document.getElementById('term');
+  var li=0,ci=0, SPEED=14;
+  function build(){
+    term.innerHTML=lines.map(function(l,idx){
+      return '<div class="term-line"><span class="pmt">'+l.p+'</span><span id="tl'+idx+'"></span></div>';
+    }).join('')+'<span class="caret" id="caret"></span>';
+  }
+  build();
+  function type(){
+    if(li>=lines.length){ finish(); return; }
+    var span=document.getElementById('tl'+li);
+    var full=lines[li].t;
+    if(ci<=full.length){ span.textContent=full.slice(0,ci); ci++; setTimeout(type,SPEED); }
+    else { li++; ci=0; setTimeout(type, 130); }
+  }
+  function finish(){
+    var c=document.getElementById('caret'); if(c) c.style.display='none';
+    document.getElementById('payoff').classList.add('in');
+    document.getElementById('collage').classList.add('in');
+  }
+  setTimeout(type, 350);
+</script>
+</body>
+</html>

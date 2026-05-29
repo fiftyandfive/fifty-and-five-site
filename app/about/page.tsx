@@ -5,20 +5,20 @@ import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About | 17 Years, 222 Brands | Fifty & Five',
+  title: 'About | 18 Years, 222 Brands | Fifty & Five',
   description:
     '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
-    title: 'About | 17 Years, 222 Brands | Fifty & Five',
+    title: 'About | 18 Years, 222 Brands | Fifty & Five',
     description: '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
     url: 'https://fiftyandfive.com/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About | 17 Years, 222 Brands | Fifty & Five',
+    title: 'About | 18 Years, 222 Brands | Fifty & Five',
     description: '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   },
 };
@@ -111,7 +111,7 @@ export default function AboutPage() {
             </div>
             <div>
               <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
-                17
+                18
               </div>
               <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
                 Years of compounding pattern recognition
@@ -178,7 +178,7 @@ export default function AboutPage() {
               locations. Resorts World. Hong Kong Tourism Board.
             </p>
             <p>
-              222 clients across 17 years isn&rsquo;t volume. It&rsquo;s proof that the operating
+              222 clients across 18 years isn&rsquo;t volume. It&rsquo;s proof that the operating
               system transfers&nbsp;&mdash; and that senior judgment, compounded across industries,
               is the one thing AI can amplify but never replace.
             </p>
@@ -341,7 +341,7 @@ export default function AboutPage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text="Seventeen years, compressed."
+            text="Eighteen years, compressed."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
         </div>
