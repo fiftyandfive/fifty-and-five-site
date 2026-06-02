@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { MagneticButton } from './MagneticButton';
-import { trackEvent } from '@/components/layout/Analytics';
+import { trackEvent, gtagEvent } from '@/components/layout/Analytics';
 
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -61,6 +61,11 @@ export function ContactForm() {
           trackEvent('Contact Form Submit', {
             company: payload.company || '(none)',
             budget: payload.budget || '(none)',
+          });
+          gtagEvent('generate_lead', {
+            event_category: 'contact',
+            event_label: payload.company || '(none)',
+            value: 1,
           });
           setState('success');
         } catch (err) {

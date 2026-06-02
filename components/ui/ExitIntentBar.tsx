@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { trackEvent } from '@/components/layout/Analytics';
+import { trackEvent, gtagEvent } from '@/components/layout/Analytics';
 
 const KEY = 'fifty-and-five-exit-intent-v1';
 
@@ -62,6 +62,11 @@ export function ExitIntentBar() {
                     const fd = new FormData(e.currentTarget);
                     const email = String(fd.get('email') || '');
                     trackEvent('Exit Intent Submit');
+                    gtagEvent('generate_lead', {
+                      event_category: 'exit_intent',
+                      event_label: 'audit_checklist',
+                      value: 1,
+                    });
                     // Fire-and-forget to the contact endpoint with a tag
                     fetch('/api/contact', {
                       method: 'POST',

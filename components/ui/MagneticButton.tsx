@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRef, useState, useCallback, useEffect, type ReactNode } from 'react';
-import { trackEvent } from '@/components/layout/Analytics';
+import { trackEvent, gtagEvent } from '@/components/layout/Analytics';
 
 type Variant = 'primary' | 'secondary' | 'ghost';
 type Size = 'default' | 'small' | 'large';
@@ -65,6 +65,9 @@ export function MagneticButton({
 
   const handleClick = useCallback(() => {
     if (trackName) trackEvent(trackName, href ? { to: href } : undefined);
+    if (href?.includes('calendly.com')) {
+      gtagEvent('book_call', { event_category: 'cta', event_label: trackName || 'calendly_cta', value: 1 });
+    }
     onClick?.();
   }, [trackName, href, onClick]);
 

@@ -19,3 +19,10 @@ export function trackEvent(name: string, props?: Record<string, string | number 
     .plausible;
   p?.(name, props ? { props } : undefined);
 }
+
+// Helper for firing GA4 events via gtag
+export function gtagEvent(name: string, params?: Record<string, string | number | boolean>) {
+  if (typeof window === 'undefined') return;
+  const g = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+  g?.('event', name, params);
+}

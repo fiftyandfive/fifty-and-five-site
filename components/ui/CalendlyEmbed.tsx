@@ -1,11 +1,23 @@
 'use client';
 
-import { InlineWidget } from 'react-calendly';
+import { InlineWidget, useCalendlyEventListener } from 'react-calendly';
+import { trackEvent, gtagEvent } from '@/components/layout/Analytics';
 
 const DEFAULT_URL = 'https://calendly.com/lucasv/30-minute-intro-call';
 
 export function CalendlyEmbed() {
   const url = process.env.NEXT_PUBLIC_CALENDLY_URL || DEFAULT_URL;
+
+  useCalendlyEventListener({
+    onEventScheduled: () => {
+      trackEvent('Calendly Booking Confirmed');
+      gtagEvent('book_call', {
+        event_category: 'calendly',
+        event_label: 'inline_widget',
+        value: 1,
+      });
+    },
+  });
 
   return (
     <div className="glass rounded-glass p-8 md:p-10">
