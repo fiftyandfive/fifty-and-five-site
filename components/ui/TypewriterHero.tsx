@@ -92,7 +92,7 @@ export function TypewriterHero() {
   return (
     <section
       className="relative min-h-[100svh] flex items-center overflow-hidden bg-bg-primary"
-      aria-label="Fifty and Five. We do the storytelling. You run the business. 222 brands, 18 years social-first, senior team since 2008."
+      aria-label="Fifty and Five. We do the storytelling. You build the business. 222 brands, 18 years social-first, senior team since 2008."
     >
       <h1 className="sr-only">Fifty &amp; Five — Senior-Led Boutique Social Media Agency</h1>
 
@@ -195,7 +195,7 @@ export function TypewriterHero() {
                 }}
               >
                 We do the storytelling.{' '}
-                <span style={{ color: 'var(--color-paper-dim)' }}>You run the business.</span>
+                <span style={{ color: 'var(--color-paper-dim)' }}>You build the business.</span>
               </p>
 
               <div className="mt-[34px] flex flex-wrap gap-[14px]">

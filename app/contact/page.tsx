@@ -88,6 +88,10 @@ export default function ContactPage() {
             </div>
           </SimpleReveal>
         </div>
+
+        <div className="mt-16 text-center font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+          Fifty &amp; Five · 1001 N Orange Ave, Orlando, FL 32801 · (310) 902-3246 · hello@fiftyandfive.com
+        </div>
       </section>
     </>
   );

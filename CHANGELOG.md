@@ -6,7 +6,7 @@
 - Replaced slow typewriter (~5s) with fast terminal beat (~2s): 14ms char delay, 130ms line pause
 - New layout: 2-column grid — terminal + payoff left, photo collage right
 - "Exactly." payoff in paper-white (#F5F2EC) with crimson period — full contrast on dark bg
-- Brand line: "We do the storytelling. You run the business." (paper-dim second half)
+- Brand line: "We do the storytelling. You build the business." (paper-dim second half)
 - CTAs always visible: `hasHydrated` pattern renders CTAs/payoff on SSR and no-JS; animation takes over after hydration
 - Primary CTA: solid crimson (#C41E3A) with white text, MagneticButton component
 - Secondary CTA: ghost outline variant

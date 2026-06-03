@@ -19,19 +19,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'We do the storytelling. You run the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
+  description: 'We do the storytelling. You build the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
     description:
-      'We do the storytelling. You run the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
+      'We do the storytelling. You build the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
-    description: 'We do the storytelling. You run the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
+    description: 'We do the storytelling. You build the business. Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. From $3K/mo.',
   },
   icons: {
     icon: [
@@ -77,8 +77,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   image: 'https://fiftyandfive.com/opengraph-image',
                   description:
                     'Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. The boutique agency Fortune 500s call.',
-                  slogan: 'We do the storytelling. You run the business.',
-                  foundingDate: '2008',
+                  slogan: 'We do the storytelling. You build the business.',
+                  foundingDate: '2009-07',
                   founder: {
                     '@type': 'Person',
                     name: 'Lucas Vandenberg',
@@ -86,7 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     url: 'https://www.linkedin.com/in/LucasV/',
                     sameAs: [
                       'https://www.linkedin.com/in/LucasV/',
-                      'https://www.wikidata.org/wiki/Q139801129',
                     ],
                   },
                   address: {
@@ -110,6 +109,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   sameAs: [
                     'https://www.linkedin.com/company/fiftyandfive',
                     'https://www.instagram.com/fiftyandfive',
+                    'https://www.facebook.com/fiftyandfive',
+                    'https://x.com/FiftyandFive',
+                    'https://maps.google.com/?cid=17642359949703277975',
                     'https://www.crunchbase.com/organization/fifty-five-6144',
                     'https://clutch.co/profile/fifty-five',
                     'https://www.agencyspotter.com/fifty-five',
