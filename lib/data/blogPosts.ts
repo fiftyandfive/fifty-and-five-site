@@ -19,7 +19,7 @@ export const BLOG_POSTS: BlogPost[] = [
     wixSlug: 'yelp-ai-local-discovery-citations',
     date: '2026-08-12',
     minutesToRead: 7,
-    heroImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=85',
+    heroImage: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=85',
     excerpt: "Yelp earned 512,680 AI citations in a single quarter — 3.4× more than every competitor combined. New data from 28 million AI responses reveals why review platforms are the new front door for local businesses.",
     category: 'AI & Automation',
   },
