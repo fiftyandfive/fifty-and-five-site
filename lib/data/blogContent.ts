@@ -2,6 +2,74 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'yelp-ai-local-discovery-citations': `
+<p>A new study just dropped that should change how every local business thinks about marketing in 2026. Foundation Inc, in partnership with AI visibility analytics firm AirOps, tracked <strong>over 28 million AI-generated responses</strong> to local business queries across ChatGPT, Gemini, Perplexity, and Google AI Mode during Q4 2025. The results are staggering &mdash; and they point to a fundamental shift in how consumers find local businesses.</p>
+<p>The headline: <strong>Yelp earned 512,680 AI citations in a single quarter</strong> &mdash; more than every other local discovery platform combined, and 3.4&times; more than the next closest competitor.</p>
+<p>If you run a local business &mdash; a restaurant, hotel, salon, service company &mdash; this data should reshape your marketing priorities immediately. Here&rsquo;s what the numbers mean and what to do about them.</p>
+
+<h2>The Data: Yelp Dominates AI Answers by a Massive Margin</h2>
+<p>The Foundation Inc study compared six major local discovery platforms across AI citation volume. The competitive ranking for Q4 2025:</p>
+<ol>
+<li><strong>Yelp: 512,680 citations</strong></li>
+<li>BBB (Better Business Bureau): 149,710</li>
+<li>Angi: 145,633</li>
+<li>Thumbtack: 56,004</li>
+<li>HomeAdvisor: 33,582</li>
+<li>Nextdoor: 10,308</li>
+</ol>
+<p>Yelp didn&rsquo;t just win &mdash; it dominated. On Google AI Mode alone, Yelp captured <strong>72.5% of all citations</strong> in the competitive set. On Perplexity, Yelp holds a <strong>62.1% share</strong> with a 4.9&times; lead over the next closest competitor.</p>
+<p>The growth trajectory is equally dramatic. Between September and November 2025, Yelp&rsquo;s AI citations grew <strong>19&times;</strong> &mdash; far outpacing the overall market&rsquo;s roughly 3&times; growth over the same period.</p>
+
+<h2>Why AI Systems Trust Yelp More Than Any Other Local Platform</h2>
+<p>This isn&rsquo;t random. AI answer engines &mdash; whether that&rsquo;s ChatGPT, Perplexity, Gemini, or Google&rsquo;s AI Mode &mdash; are trained to cite sources they can trust. When someone asks &ldquo;best Italian restaurant near me&rdquo; or &ldquo;top-rated plumber in Austin,&rdquo; the AI needs to pull from somewhere credible. It consistently pulls from Yelp because Yelp offers exactly what AI systems need:</p>
+<ul>
+<li><strong>Structured data.</strong> Clean, machine-readable business information &mdash; categories, hours, location, services &mdash; that AI models can parse and reference with confidence.</li>
+<li><strong>Authentic reviews.</strong> Millions of verified human reviews that give AI systems real signals about quality, not just marketing claims.</li>
+<li><strong>Complete business profiles.</strong> Photos, menus, service lists, and contact information that let AI generate detailed, useful recommendations.</li>
+<li><strong>Verified human signals.</strong> Consumers don&rsquo;t trust AI alone &mdash; they trust AI recommendations backed by real people. AI systems know this, which is why they over-index on review platforms.</li>
+</ul>
+<p>This is the trust loop: AI cites Yelp because consumers trust reviews. Consumers trust AI answers that cite reviews. The platforms with the richest human signal data win.</p>
+
+<h2>57% of Consumers Now Use AI for Local Discovery</h2>
+<p>This isn&rsquo;t a niche behavior. <strong>More than half of consumers</strong> are now using AI tools to find local businesses on a monthly basis. They&rsquo;re asking ChatGPT for restaurant recommendations. They&rsquo;re using Perplexity to find a contractor. They&rsquo;re getting Google AI Mode summaries before they ever scroll to the blue links.</p>
+<p>The old funnel &mdash; Google search &rarr; click through results &rarr; visit website &rarr; convert &mdash; is being replaced by a new one: AI query &rarr; AI answer with citations &rarr; direct action. If your business isn&rsquo;t showing up in that AI answer, you&rsquo;re invisible at the exact moment the buyer is ready to choose.</p>
+
+<h2>Category Queries Are Where the Action Is &mdash; Not Brand Search</h2>
+<p>Here&rsquo;s the data point that should make every local business owner rethink their strategy: <strong>91% to 97% of Yelp&rsquo;s AI citations come from unbranded, category-level queries.</strong></p>
+<p>That means queries like:</p>
+<ul>
+<li>&ldquo;Best sushi restaurant in Orlando&rdquo;</li>
+<li>&ldquo;Top-rated HVAC company near me&rdquo;</li>
+<li>&ldquo;Good hair salon downtown&rdquo;</li>
+<li>&ldquo;Best hotel in Napa Valley&rdquo;</li>
+</ul>
+<p>Brand-name queries &mdash; where someone already knows your name &mdash; account for only <strong>3% to 9%</strong> of AI citations. If your visibility strategy is built around branded search, you&rsquo;re optimizing for the smallest slice of the pie.</p>
+<p>The businesses winning AI citations are the ones that show up when a buyer <em>doesn&rsquo;t yet know their name</em> and is asking AI to help them decide. That&rsquo;s the discovery moment. That&rsquo;s where market share is being won and lost right now.</p>
+
+<h2>What This Means for Your Business: 5 Action Items</h2>
+<p>The implications of this data are clear and immediate. Here&rsquo;s what to do:</p>
+
+<h3>1. Treat Your Yelp Profile Like Your Homepage</h3>
+<p>Your Yelp listing is no longer a secondary marketing asset &mdash; it&rsquo;s your primary visibility channel in AI discovery. Complete every field. Upload high-quality photos regularly. Respond to every review (yes, every one). Keep hours, menus, and service descriptions current. The businesses with the most complete, active Yelp profiles are the ones AI systems cite with confidence.</p>
+
+<h3>2. Invest in Review Generation &mdash; Especially Recent Reviews</h3>
+<p>AI systems weight recency. A business with 200 reviews from three years ago loses to a business with 50 reviews from the last 90 days. Build a systematic review request process into your operations. After every service, every meal, every checkout &mdash; ask. Make it easy. Recent, substantive reviews are the fuel that powers AI citations.</p>
+
+<h3>3. Own Your Category, Not Just Your Brand</h3>
+<p>Since 91&ndash;97% of AI citations come from category queries, your optimization needs to target categories, not just your brand name. Make sure your Yelp categories are accurate and specific. If you&rsquo;re a wine bar, don&rsquo;t just list &ldquo;bar&rdquo; &mdash; list &ldquo;wine bar,&rdquo; &ldquo;small plates,&rdquo; &ldquo;date night.&rdquo; The more specific your category signals, the more likely AI surfaces you for the right queries.</p>
+
+<h3>4. Don&rsquo;t Ignore Other Review Platforms</h3>
+<p>Yelp dominates, but AI systems pull from multiple sources. Google Business Profile, TripAdvisor (for hospitality), industry-specific directories &mdash; each adds a node to your entity graph in AI&rsquo;s model of the world. Consistent information across all of these platforms builds the &ldquo;entity confidence&rdquo; that AI needs to cite you.</p>
+
+<h3>5. Start Monitoring Your AI Visibility Now</h3>
+<p>Most businesses have no idea whether they&rsquo;re showing up in AI answers. Start testing: ask ChatGPT, Perplexity, and Google AI Mode the category queries that matter to your business. &ldquo;Best [your category] in [your city].&rdquo; Are you there? Are your competitors? This is the new competitive intelligence &mdash; and the brands tracking it now will have a compounding advantage over those who start later.</p>
+
+<h2>The Bigger Picture: AI Is the New Front Door</h2>
+<p>This Yelp data is a case study in a larger shift: <strong>AI answer engines are becoming the primary discovery layer for local businesses.</strong> Google AI Mode and Perplexity alone account for 95% of all local discovery citation volume. The traditional search results page &mdash; with its ten blue links &mdash; is becoming a secondary channel.</p>
+<p>The pattern matters more than any single platform. Today it&rsquo;s Yelp dominating AI citations. Tomorrow the specific platforms may shift. But the underlying dynamic won&rsquo;t: AI systems will always prioritize structured data, authentic human signals, and verified business information. The businesses that build those assets now are building for the next decade of discovery.</p>
+<p>At Fifty &amp; Five, this is exactly what our <a href="/blog/aeo-search-strategy-ai-answer-engines">Answer Engine Optimization (AEO)</a> practice is built to address. Our <strong>AIRO Score&trade;</strong> framework measures your brand&rsquo;s readiness to be cited by AI across five pillars &mdash; including the review platform and citation velocity signals that this Yelp data validates as the most critical factors in local discovery.</p>
+<p>The businesses that treat AI visibility as a 2027 problem are already losing ground to the ones acting now. The citations are being made. The question is whether your business is in them.</p>
+<p><strong>Want to know your AIRO Score&trade;? <a href="/contact">Start with a discovery audit.</a></strong></p>`,
   '7-mistakes-you-39-re-making-with-ai-social-content-and-how-to-fix-them-without-losing-authenticity': `
 <p>The AI revolution in social media isn't coming: it's here. From ChatGPT crafting captions to Canva's Magic Design generating visuals in seconds, creators and brands are riding the wave of unprecedented creative possibilities. But here's the thing: with great power comes great responsibility to stay authentic.</p>
 <p>As someone who's witnessed brands transform their entire content strategies overnight, I've seen the spectacular wins <em>and</em> the cringe-worthy fails. The difference? Knowing how to harness AI as your creative partner, not your replacement.</p>

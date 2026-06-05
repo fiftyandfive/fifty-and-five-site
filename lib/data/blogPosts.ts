@@ -14,6 +14,16 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "Yelp Just Won the AI Local Discovery Race — Here's What That Means for Your Business",
+    slug: 'yelp-ai-local-discovery-citations',
+    wixSlug: 'yelp-ai-local-discovery-citations',
+    date: '2026-08-12',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1600&q=85',
+    excerpt: "Yelp earned 512,680 AI citations in a single quarter — 3.4× more than every competitor combined. New data from 28 million AI responses reveals why review platforms are the new front door for local businesses.",
+    category: 'AI & Automation',
+  },
+  {
     title: "Best Social Media Agency for Hospitality & Resorts: What to Look For",
     slug: 'best-social-media-agency-hospitality-resorts',
     wixSlug: 'best-social-media-agency-hospitality-resorts',
