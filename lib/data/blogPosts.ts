@@ -14,6 +14,26 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "Hollywood's $300K-to-$3K Problem Is Already Here for Branded Content",
+    slug: 'hollywood-ai-production-costs-branded-content',
+    wixSlug: 'hollywood-ai-production-costs-branded-content',
+    date: '2026-08-19',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1600&q=85',
+    excerpt: "AI is slashing entertainment production costs by 90%. But Hollywood has a moat in human star power — advertising doesn't. What the Moneywise data means for every brand still budgeting for traditional shoots.",
+    category: 'AI & Automation',
+  },
+  {
+    title: "Yelp Just Won the AI Local Discovery Race — Here's What That Means for Your Business",
+    slug: 'yelp-ai-local-discovery-citations',
+    wixSlug: 'yelp-ai-local-discovery-citations',
+    date: '2026-08-12',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=85',
+    excerpt: "Yelp earned 512,680 AI citations in a single quarter — 3.4× more than every competitor combined. New data from 28 million AI responses reveals why review platforms are the new front door for local businesses.",
+    category: 'AI & Automation',
+  },
+  {
     title: "Best Social Media Agency for Hospitality & Resorts: What to Look For",
     slug: 'best-social-media-agency-hospitality-resorts',
     wixSlug: 'best-social-media-agency-hospitality-resorts',
