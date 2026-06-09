@@ -2,6 +2,67 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'hollywood-ai-production-costs-branded-content': `
+<p>A <a href="https://moneywise.com/life/entertainment/hollywood-ai-actors-entertainment-production-costs" target="_blank" rel="noopener">Moneywise investigation</a> published this month lays out the numbers Hollywood has been whispering about for two years: Jeffrey Katzenberg&rsquo;s WndrCo is now producing 30-minute shows for <strong>$3,000</strong> using AI. The same format used to cost <strong>$300,000</strong> with human actors. That&rsquo;s a 99% cost reduction.</p>
+<p>Ben Affleck sold his AI startup InterPositive to Netflix for up to <strong>$600 million</strong>. Martin Scorsese is advising Black Forest Labs, valued at <strong>$3.25 billion</strong>. Short-form AI-produced content has grown into a <strong>$1.3 billion industry</strong>. And the studios cutting costs the fastest &mdash; Disney, Sony, Bad Robot &mdash; are simultaneously cutting staff by the thousands.</p>
+<p>The entertainment industry is undergoing the most dramatic production cost collapse in its history. But if you run a brand, the more important story isn&rsquo;t what&rsquo;s happening in Hollywood. It&rsquo;s what&rsquo;s <em>already happened</em> in advertising.</p>
+
+<h2>Hollywood Has a Moat. Advertising Doesn&rsquo;t.</h2>
+<p>Here&rsquo;s the distinction that matters for every brand thinking about content production in 2026: Hollywood has a moat that advertising doesn&rsquo;t.</p>
+<p>That moat is <strong>human attachment to performers</strong>. Audiences go to see Tom Hanks, not &ldquo;AI Actor #7.&rdquo; Only about <strong>30% of audiences</strong> fully trust digital actors to deliver authentic performances. The emotional connection to real humans in narrative storytelling is deep, and it&rsquo;s not going away soon.</p>
+<p>Advertising has no such moat.</p>
+<p>Nobody watches a UGC-style product review and thinks, &ldquo;I need to know this is a real person with a real SAG card.&rdquo; Nobody looks at a brand spokesperson in a social ad and feels the same attachment they feel to a movie star. The content that brands produce every day &mdash; product demos, testimonial-style spots, lifestyle footage, educational content &mdash; is functional. It works because of the message, the offer, and the targeting. Not because of the human delivering it.</p>
+<p>That&rsquo;s why the displacement in branded content isn&rsquo;t coming. <strong>It&rsquo;s already here.</strong></p>
+
+<h2>The Numbers Behind the Shift</h2>
+<p>The Moneywise piece quotes entertainment lawyer Paul Menes: &ldquo;The studios, platforms, investors, and where applicable their shareholders, will reap those financial benefits.&rdquo; He&rsquo;s talking about Hollywood &mdash; but the same dynamic plays out in brand content.</p>
+<p>Here&rsquo;s where the cost savings are showing up across entertainment production, according to Netflix&rsquo;s InterPositive projections:</p>
+<ul>
+<li><strong>Visual effects:</strong> down ~50%</li>
+<li><strong>Background actors:</strong> down ~70%</li>
+<li><strong>Set dressing:</strong> down ~40%</li>
+<li><strong>Art department:</strong> down ~30%</li>
+<li><strong>Additional production units:</strong> down ~40%</li>
+</ul>
+<p>A single background crowd scene that used to cost six figures in casting, transport, wardrobe, and per diem is now a render that costs the price of GPU time. Studios are reporting savings of <strong>up to 90% per project</strong> on synthetic-actor productions.</p>
+<p>Translate that to brand content &mdash; where budgets are smaller, margins are tighter, and the content lifecycle is measured in days, not years &mdash; and the pressure to adopt is even more acute.</p>
+
+<h2>What&rsquo;s Disappearing First</h2>
+<p>It&rsquo;s not the A-list work. Not the Super Bowl spot with a celebrity. Not the brand film that runs at Cannes. Those productions still demand human craft, human talent, and human judgment.</p>
+<p>What&rsquo;s disappearing is the <strong>volume work</strong> &mdash; the content that actors, voiceover artists, and production crews used to survive on between the marquee jobs:</p>
+<ul>
+<li><strong>UGC-style reads</strong> for social ads</li>
+<li><strong>Background and scale content</strong> for campaigns</li>
+<li><strong>Brand spokesperson spots</strong> that used to require three days of studio time</li>
+<li><strong>Localized versions</strong> &mdash; what used to be 12 separate shoots for 12 markets is now one prompt</li>
+<li><strong>Reshoots for minor copy changes</strong> that used to cost a full day of production</li>
+</ul>
+<p>This is the work that&rsquo;s already gone. Not &ldquo;going&rdquo; &mdash; <strong>gone</strong>. Brands that were spending $15,000&ndash;$30,000 per video shoot for social content are now producing equivalent output for a fraction of that cost. The $300,000-to-$3,000 math that Moneywise reports for entertainment? The ratio is just as dramatic at the advertising and branded-content level.</p>
+
+<h2>The Job Market Is Feeling It</h2>
+<p>The human cost is real. The Moneywise piece reports that AI could eliminate <strong>over 200,000 entertainment jobs by the end of 2026</strong>. Los Angeles County has already lost <strong>40,000+ entertainment industry jobs</strong> since 2022, with production activity sinking to its lowest level since 1995.</p>
+<p>The new SAG-AFTRA four-year contract (ratified June 2026 with 91.42% approval) requires that AI-generated synthetic performers demonstrate &ldquo;significant additional value&rdquo; over a live actor. Companies need an &ldquo;articulable business reason&rdquo; to scan a performer for a digital replica. But the union can&rsquo;t strike over synthetic actors until 2030 &mdash; by which point the technology will be several generations more advanced.</p>
+<p>In advertising and content marketing, there are no union protections at all. The shift is unmediated and accelerating.</p>
+
+<h2>What This Means for Brands Right Now</h2>
+<p>If you&rsquo;re a CMO or marketing director reading this, the question isn&rsquo;t whether AI will change your content production economics. It already has. The question is how you adapt without losing what makes your brand distinctive.</p>
+
+<h3>1. Audit your production spend honestly</h3>
+<p>How much are you spending per asset on social content, product videos, and paid creative? If you&rsquo;re still running traditional shoot-edit-deliver workflows for high-volume social content, you&rsquo;re almost certainly overpaying relative to what&rsquo;s now possible.</p>
+
+<h3>2. Separate the craft work from the volume work</h3>
+<p>Not everything should be AI-generated. Your brand film, your hero campaign, your founder story &mdash; those benefit from human craft, real emotion, and authentic storytelling. But the 47th product demo variation for a retargeting campaign? The localized version of a testimonial ad for a different metro? That&rsquo;s volume work, and AI handles it at a fraction of the cost and turnaround time.</p>
+
+<h3>3. Invest the savings in strategy, not just more volume</h3>
+<p>The biggest trap in the AI content cost collapse is using it to produce <em>more</em> mediocre content instead of <em>better</em> content. The brands winning right now are the ones using AI production savings to invest more in strategy, creative direction, and the high-touch work that actually builds brand equity.</p>
+
+<h3>4. Don&rsquo;t wait for the technology to be &ldquo;ready&rdquo;</h3>
+<p>It&rsquo;s ready. Hollywood is using it for $50 million projects. Netflix paid $600 million for an AI production company. If the technology is good enough for Martin Scorsese&rsquo;s storyboarding process, it&rsquo;s good enough for your social media content calendar.</p>
+
+<h2>The Bottom Line</h2>
+<p>Hollywood&rsquo;s $300K-to-$3K moment is dramatic, but it&rsquo;s a trailing indicator for what&rsquo;s already happened in branded content. The cost structure of content production has fundamentally changed. The brands that acknowledge this and adapt &mdash; separating craft from volume, investing savings into strategy, and meeting the market where the technology already is &mdash; will outperform the ones still pretending it&rsquo;s 2023.</p>
+<p>At Fifty &amp; Five, we&rsquo;re building AI-generated video and content for <a href="/work">222+ brands</a> &mdash; not to replace human creativity, but to redirect it. The shoots that used to eat your entire quarterly budget now fund the strategic work that actually moves the needle.</p>
+<p><strong>Ready to rethink your content production economics? <a href="/contact">Let&rsquo;s talk.</a></strong></p>`,
   'yelp-ai-local-discovery-citations': `
 <p>A new study just dropped that should change how every local business thinks about marketing in 2026. Foundation Inc, in partnership with AI visibility analytics firm AirOps, tracked <strong>over 28 million AI-generated responses</strong> to local business queries across ChatGPT, Gemini, Perplexity, and Google AI Mode during Q4 2025. The results are staggering &mdash; and they point to a fundamental shift in how consumers find local businesses.</p>
 <p>The headline: <strong>Yelp earned 512,680 AI citations in a single quarter</strong> &mdash; more than every other local discovery platform combined, and 3.4&times; more than the next closest competitor.</p>
