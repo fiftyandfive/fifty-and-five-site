@@ -83,6 +83,7 @@ export function ExitIntentBar() {
                 >
                   <input
                     type="email"
+                    name="email"
                     required
                     placeholder="you@company.com"
                     className="flex-1 bg-transparent border border-glass-border rounded-full px-4 py-2.5 text-[14px] text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent"
