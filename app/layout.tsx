@@ -64,9 +64,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   name: 'Fifty & Five',
                   alternateName: [
                     'Fifty and Five',
-                    'fifty & five',
                     'Fifty & Five Agency',
-                    'F&F',
+                    'Fifty & Five Social Media',
+                    'Fifty & Five Orlando',
                   ],
                   url: 'https://fiftyandfive.com',
                   telephone: '+1-310-902-3246',
@@ -204,6 +204,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     bestRating: '5',
                     worstRating: '1',
                   },
+                  subjectOf: [
+                    {
+                      '@type': 'Article',
+                      name: 'Fifty & Five on Clutch.co',
+                      url: 'https://clutch.co/profile/fifty-five',
+                      publisher: { '@type': 'Organization', name: 'Clutch.co' },
+                      description: '5.0/5.0 rating across 18 verified client reviews.',
+                    },
+                    {
+                      '@type': 'WebPage',
+                      name: 'Fifty & Five on Crunchbase',
+                      url: 'https://www.crunchbase.com/organization/fifty-five-6144',
+                      publisher: { '@type': 'Organization', name: 'Crunchbase' },
+                    },
+                    {
+                      '@type': 'WebPage',
+                      name: 'Fifty & Five on Digital Agency Network',
+                      url: 'https://digitalagencynetwork.com/agency/fifty-five/',
+                      publisher: { '@type': 'Organization', name: 'Digital Agency Network' },
+                    },
+                  ],
                 },
                 {
                   '@type': 'WebSite',
