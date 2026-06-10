@@ -104,7 +104,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       contactType: 'sales',
                       telephone: '+1-310-902-3246',
                       email: 'hello@fiftyandfive.com',
-                      areaServed: ['US', 'CA', 'GB', 'EU', 'LATAM', 'APAC'],
+                      areaServed: [
+                        { '@type': 'Country', name: 'United States' },
+                        { '@type': 'Country', name: 'Canada' },
+                        { '@type': 'Country', name: 'United Kingdom' },
+                        { '@type': 'AdministrativeArea', name: 'European Union' },
+                        { '@type': 'AdministrativeArea', name: 'Latin America' },
+                        { '@type': 'AdministrativeArea', name: 'Asia-Pacific' },
+                      ],
                       availableLanguage: ['English', 'Spanish'],
                     },
                   ],
@@ -121,21 +128,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ],
                   knowsAbout: [
                     'Social Media Marketing',
-                    'Social Media Strategy',
-                    'Content Strategy',
-                    'Hospitality Marketing',
                     'Wine and Spirits Marketing',
-                    'Restaurant Marketing',
-                    'Tourism Marketing',
-                    'Luxury Brand Marketing',
-                    'Influencer Marketing',
-                    'Community Management',
-                    'Brand Voice Development',
+                    'Franchise Social Media',
+                    'Hospitality Marketing',
                     'Recommendation Engineering',
-                    'Answer Engine Optimization',
-                    'AI Search Visibility',
-                    'Social Listening',
-                    'Performance Creative',
                   ],
                   areaServed: [
                     { '@type': 'Country', name: 'United States' },
@@ -181,14 +177,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   },
                   numberOfEmployees: {
                     '@type': 'QuantitativeValue',
-                    value: '10',
-                    unitText: 'people (senior + specialist network)',
+                    value: 10,
+                    unitText: 'employees',
                   },
-                  award: [
-                    '222+ brands managed since 2008',
-                    'Most clients 3+ years (durability moat)',
-                    'Worked with Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Discovery Channel',
-                  ],
                   memberOf: [
                     {
                       '@type': 'Organization',
@@ -232,14 +223,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   url: 'https://fiftyandfive.com',
                   name: 'Fifty & Five',
                   publisher: { '@id': 'https://fiftyandfive.com/#organization' },
-                  potentialAction: {
-                    '@type': 'SearchAction',
-                    target: {
-                      '@type': 'EntryPoint',
-                      urlTemplate: 'https://fiftyandfive.com/blog?q={search_term_string}',
-                    },
-                    'query-input': 'required name=search_term_string',
-                  },
                 },
                 {
                   '@type': 'LocalBusiness',

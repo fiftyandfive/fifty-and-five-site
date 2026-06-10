@@ -434,7 +434,7 @@ export default function ServicesPage() {
                 name: 'How much does Fifty & Five charge?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five offers five retainer tiers: Studio ($1,500–$2,500/mo), Growth ($3,000–$5,000/mo), Performance ($7,500–$12,000/mo), Scale ($15,000–$25,000/mo), and Enterprise ($30,000–$50,000+/mo). Every tier runs on the same Senior + AI operating model.',
+                  text: 'Fifty & Five offers five retainer tiers: Studio ($1,500–$2,500/mo), Growth ($3,000–$5,000/mo), Premium ($6,000–$10,000/mo), Scale ($15,000–$25,000/mo), and Enterprise ($30,000–$50,000+/mo). Every tier runs on the same Senior + AI operating model.',
                 },
               },
             ],

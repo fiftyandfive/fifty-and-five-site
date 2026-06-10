@@ -76,14 +76,12 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': ['Article', 'CreativeWork'],
+            '@type': 'CreativeWork',
             '@id': `https://fiftyandfive.com/work/${cs.slug}`,
             name: `${cs.client} case study`,
             headline: `${cs.client} case study`,
             about: cs.industry,
             description: cs.tagline,
-            datePublished: '2025-01-15',
-            dateModified: '2025-05-26',
             author: { '@type': 'Organization', name: 'Fifty & Five', '@id': 'https://fiftyandfive.com/#organization' },
             publisher: { '@id': 'https://fiftyandfive.com/#organization' },
             image: `https://fiftyandfive.com/work/${cs.slug}/opengraph-image`,
