@@ -30,7 +30,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2010', text: 'Axe / Unilever product launch, Twitter takeover + experiential activations.' },
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
   { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
-  { year: '2016', text: 'Mezzacorona portfolio · 9-year retainer · ~1M followers added.' },
+  { year: '2016', text: 'Gruppo Mezzacorona · 10-year retainer · 5+ brands in portfolio · ~1M followers added.' },
   { year: '2020', text: 'Kendall-Jackson · multi-year partnership begins.' },
   { year: '2024', text: 'AI operating-model retrofit · 10× output per operator hour.' },
   { year: '2026', text: '222+ brands · senior + AI model in market.' },
@@ -174,8 +174,8 @@ export default function AboutPage() {
             </p>
             <p>
               In July 2009, Lucas founded Fifty &amp; Five. The wine &amp; spirits vertical came
-              first&nbsp;&mdash; 34 brands, anchored by a 9-year run with Mezzacorona that added
-              roughly one million followers across the portfolio. Then hospitality, fitness, tech,
+              first&nbsp;&mdash; 34 brands, anchored by a 10-year run with Gruppo Mezzacorona
+              across 5+ brands in their portfolio, adding roughly one million followers. Then hospitality, fitness, tech,
               food &amp; beverage, tourism. Kendall-Jackson. Blaze Pizza across 300+
               locations. Enterprise Holdings. Resorts World. Hong Kong Tourism Board.
             </p>
