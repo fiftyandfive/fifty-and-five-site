@@ -49,7 +49,7 @@ export const VERTICALS: Vertical[] = [
     colorKey: 'wine',
     headline: 'Wine & Spirits Social Media Agency',
     subhead:
-      '15+ wine and spirits brands managed since 2011. Decade-long retainer with Mezzacorona. Multi-year partnership with Kendall-Jackson. This isn\u2019t a vertical we dabble in, it\u2019s one we\u2019ve lived in.',
+      '15+ wine and spirits brands managed since 2011. 10-year retainer with Gruppo Mezzacorona across 5+ brands. Multi-year partnership with Kendall-Jackson. This isn\u2019t a vertical we dabble in, it\u2019s one we\u2019ve lived in.',
     clients: [
       'Kendall-Jackson',
       'Mezzacorona',
@@ -63,7 +63,7 @@ export const VERTICALS: Vertical[] = [
     expertise: [
       'Wine social media has rules. Compliance nuance around what you can and can\u2019t say. Age-gating on every platform. Seasonal rhythms dictated by harvest, the holidays, ros\u00e9 season, and shelf-reset cycles. We\u2019ve been building against those constraints for over a decade.',
       'The best wine content lives in the middle ground between education and aspiration. Most agencies treat wine like any other consumer brand. It isn\u2019t. Wine brings baggage, intimidation, pretension, the fear of getting it wrong, and the social presence either compounds that or dissolves it. We\u2019ve been dissolving it since 2011.',
-      'Ten years with Mezzacorona. Multi-year with Kendall-Jackson. These aren\u2019t vanity partnerships. They\u2019re the kind of relationships you only keep by reliably moving bottles off the shelf, season after season, vintage after vintage.',
+      'Ten years with Gruppo Mezzacorona across 5+ brands in their portfolio. Multi-year with Kendall-Jackson. These aren\u2019t vanity partnerships. They\u2019re the kind of relationships you only keep by reliably moving bottles off the shelf, season after season, vintage after vintage.',
     ],
     featuredCaseStudies: ['kendall-jackson', 'mezzacorona'],
     faqs: [
