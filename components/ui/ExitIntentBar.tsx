@@ -34,7 +34,7 @@ export function ExitIntentBar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 120, opacity: 0 }}
           transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="fixed bottom-4 inset-x-4 md:inset-x-auto md:right-6 md:bottom-6 md:w-[460px] z-50"
+          className="fixed bottom-14 inset-x-4 md:inset-x-auto md:right-6 md:bottom-6 md:w-[460px] z-50"
         >
           <div className="glass rounded-glass p-5 md:p-6 shadow-2xl">
             {!submitted ? (

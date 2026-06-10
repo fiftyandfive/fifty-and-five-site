@@ -11,6 +11,7 @@ import { ReceiptsDashboard } from '@/components/ui/ReceiptsDashboard';
 import { TypewriterHero } from '@/components/ui/TypewriterHero';
 import { BrandMarquee } from '@/components/ui/BrandMarquee';
 import { SelectedWork } from '@/components/ui/SelectedWork';
+import { Testimonials } from '@/components/ui/Testimonials';
 import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
@@ -56,7 +57,7 @@ export default function HomePage() {
                 name: 'What industries does Fifty & Five specialize in?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five specializes in 10 verticals: Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, and Entertainment.',
+                  text: 'Fifty & Five specializes in 15+ verticals, including Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, Entertainment, Luxury, and Education.',
                 },
               },
               {
@@ -201,6 +202,9 @@ export default function HomePage() {
 
       {/* RECEIPTS DASHBOARD */}
       <ReceiptsDashboard />
+
+      {/* TESTIMONIALS */}
+      <Testimonials />
 
       {/* FEATURED WORK, BENTO GRID */}
       <section className="container-edge py-24 md:py-32">

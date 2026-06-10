@@ -8,7 +8,7 @@ import { VERTICALS } from '@/lib/data/verticals';
 import { VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
 
 export const metadata: Metadata = {
-  title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
+  title: 'Services | Social, Paid, Content, Brand',
   description:
     'Four senior-led practices. AI-leveraged operating model. Retainers from $1.5K to $50K+/mo. Same model at every tier.',
   alternates: {
