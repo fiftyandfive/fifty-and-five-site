@@ -237,7 +237,7 @@ export default function OrlandoLandingPage() {
       <CTASection
         headline="Let's talk Orlando."
         body="A conversation about what you're building, no proposal until we know it's a fit."
-        ctaLabel="Start a Conversation →"
+        ctaLabel="Talk to our founder →"
       />
     </>
   );

@@ -445,7 +445,7 @@ export default function ServicesPage() {
       <CTASection
         headline="Let&#8217;s see if it&#8217;s a fit."
         body="No proposals until we know it is. Just a conversation about what you're trying to build."
-        ctaLabel="Start a Conversation →"
+        ctaLabel="Get a custom proposal in 30 minutes →"
       />
     </>
   );

@@ -375,7 +375,7 @@ export default function AboutPage() {
       <CTASection
         headline="Work with the team that built it."
         body="Senior-led practices, AI-leveraged. Just the senior team."
-        ctaLabel="Start a Conversation →"
+        ctaLabel="Join 222 brands that chose us →"
       />
     </>
   );

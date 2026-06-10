@@ -343,7 +343,11 @@ export default function HomePage() {
       </section>
 
       {/* THE CLOSE */}
-      <CTASection />
+      <CTASection
+        headline="Ready to work with the team that's done this 222 times?"
+        body="Most agency relationships start with a pitch deck. Ours starts with a conversation. No proposals until we know it's a fit."
+        ctaLabel="See how we'd approach your brand →"
+      />
     </>
   );
 }

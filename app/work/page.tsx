@@ -113,7 +113,7 @@ export default function WorkIndex() {
           </p>
           <div className="mt-8 flex flex-col items-center gap-3">
             <MagneticButton href="/contact" variant="primary" size="large">
-              Start a Conversation →
+              Talk to our founder about your brand →
             </MagneticButton>
             <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
               Typical response: same day
