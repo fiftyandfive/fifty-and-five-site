@@ -58,7 +58,7 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
       className="h-full"
     >
       <Link href={tile.href} className="group block h-full">
-        <div className="relative h-full flex flex-col rounded-[12px] border border-[#1F1F23] bg-[#0A0A0C] p-6 md:p-8 transition-[box-shadow] duration-200 ease-in-out group-hover:shadow-[inset_0_0_20px_rgba(196,30,58,0.08)] cursor-pointer">
+        <div className="relative h-full flex flex-col rounded-[12px] border border-glass-border bg-bg-primary p-6 md:p-8 transition-[box-shadow] duration-200 ease-in-out group-hover:shadow-[inset_0_0_20px_rgba(196,30,58,0.08)] cursor-pointer">
           <div aria-hidden className="flex gap-1 mb-6">
             <span className="block w-[5px] h-[5px] bg-accent rotate-45 opacity-40" />
             <span className="block w-[5px] h-[5px] bg-accent rotate-45 opacity-25" />
@@ -68,11 +68,11 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
             {tile.headline}
           </h3>
 
-          <p className="mt-4 text-[15px] leading-[1.5] text-[#A0A0A8] flex-1">
+          <p className="mt-4 text-[15px] leading-[1.5] text-text-secondary flex-1">
             {tile.subhead}
           </p>
 
-          <div className="mt-8 pt-6 border-t border-[#1F1F23] flex items-center gap-3">
+          <div className="mt-8 pt-6 border-t border-glass-border flex items-center gap-3">
             <Image
               src={tile.avatarSrc}
               alt={tile.client}
@@ -100,7 +100,7 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
 
 export function ReceiptsDashboard() {
   return (
-    <section className="bg-[#0A0A0C] py-16 md:py-[120px]">
+    <section className="bg-bg-primary py-16 md:py-[120px]">
       <div className="max-w-[1200px] mx-auto px-6 md:px-8">
         <div className="mb-10 md:mb-14">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">

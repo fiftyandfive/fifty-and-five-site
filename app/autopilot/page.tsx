@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Autopilot Social | 20 Posts/Mo from $500 | Fifty & Five',
+  title: 'Autopilot Social | 20 Posts/Mo from $500',
   description:
     'Your social on autopilot. 20 image posts a month, up to 4 platforms. The same senior team Fortune 500s use, productized for boutique brands. From $500/mo.',
   alternates: {

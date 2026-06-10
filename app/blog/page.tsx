@@ -56,7 +56,7 @@ export default function BlogPage() {
                 name: 'Does Fifty & Five publish original research?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. Fifty & Five publishes original insights on social media strategy, answer engine optimization (AEO), and AI-driven marketing based on 18 years of managing social for 222+ brands across 12 verticals.',
+                  text: 'Yes. Fifty & Five publishes original insights on social media strategy, answer engine optimization (AEO), and AI-driven marketing based on 18 years of managing social for 222+ brands across 15+ verticals.',
                 },
               },
               {

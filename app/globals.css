@@ -17,7 +17,7 @@
 
   --color-text-primary: #F5F2EC;
   --color-text-secondary: #B7B3AB;
-  --color-text-tertiary: #76736D;
+  --color-text-tertiary: #8F8B84;
 
   --color-accent: #C41E3A;
   --color-accent-light: #E63950;
@@ -27,7 +27,7 @@
   --color-terminal: #5BE38B;
   --color-paper: #F5F2EC;
   --color-paper-dim: #B7B3AB;
-  --color-muted: #76736D;
+  --color-muted: #8F8B84;
 
   --glass-border: rgba(245, 242, 236, 0.12);
   --glass-bg: rgba(255, 255, 255, 0.02);

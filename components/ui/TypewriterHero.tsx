@@ -259,7 +259,7 @@ export function TypewriterHero() {
                   style={{ objectPosition: img.position || 'center' }}
                   sizes="(max-width: 920px) 50vw, 280px"
                   priority={i === 0}
-                  unoptimized
+                  quality={85}
                 />
                 <div
                   className="absolute top-3 left-3 z-[4] font-mono uppercase px-2 py-1 rounded-[6px]"

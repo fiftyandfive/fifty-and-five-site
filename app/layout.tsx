@@ -80,7 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   description:
                     'Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. The boutique agency Fortune 500s call.',
                   slogan: 'We do the storytelling. You build the business.',
-                  foundingDate: '2009-07',
+                  foundingDate: '2008',
                   founder: {
                     '@type': 'Person',
                     name: 'Lucas Vandenberg',
@@ -211,6 +211,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   url: 'https://fiftyandfive.com',
                   name: 'Fifty & Five',
                   publisher: { '@id': 'https://fiftyandfive.com/#organization' },
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: {
+                      '@type': 'EntryPoint',
+                      urlTemplate: 'https://fiftyandfive.com/blog?q={search_term_string}',
+                    },
+                    'query-input': 'required name=search_term_string',
+                  },
                 },
                 {
                   '@type': 'LocalBusiness',

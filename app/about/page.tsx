@@ -5,7 +5,7 @@ import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'About | 18 Years, 222 Brands | Fifty & Five',
+  title: 'About | 18 Years, 222 Brands',
   description:
     '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
   alternates: {
@@ -375,7 +375,7 @@ export default function AboutPage() {
       <CTASection
         headline="Work with the team that built it."
         body="Senior-led practices, AI-leveraged. Just the senior team."
-        ctaLabel="Start a Conversation →"
+        ctaLabel="Join 222 brands that chose us →"
       />
     </>
   );
