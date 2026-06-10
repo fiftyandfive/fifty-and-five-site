@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!v) return { title: 'Vertical Not Found' };
   const desc = v.metaDescription ?? v.subhead;
   return {
-    title: `${v.headline} Agency | Fifty & Five`,
+    title: `${v.headline} | Fifty & Five`,
     description: desc,
     openGraph: {
       title: `${v.headline} | Fifty & Five`,
@@ -305,7 +305,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
       <CTASection
         headline={`Run social for ${v.shortLabel.toLowerCase()}?`}
         body="Book a 30-min working session — no pitch deck, no proposal until we know it's a fit."
-        ctaLabel="Start a Conversation →"
+        ctaLabel={`Get a ${v.shortLabel.toLowerCase()} social strategy →`}
       />
     </>
   );

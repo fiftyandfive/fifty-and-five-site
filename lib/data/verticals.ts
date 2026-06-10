@@ -47,7 +47,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Wine & Spirits',
     shortLabel: 'Wine & Spirits',
     colorKey: 'wine',
-    headline: 'Wine and Spirits Social Media Marketing',
+    headline: 'Wine & Spirits Social Media Agency',
     subhead:
       '15+ wine and spirits brands managed since 2011. Decade-long retainer with Mezzacorona. Multi-year partnership with Kendall-Jackson. This isn\u2019t a vertical we dabble in, it\u2019s one we\u2019ve lived in.',
     clients: [
@@ -86,7 +86,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Hospitality & Tourism',
     shortLabel: 'Hospitality',
     colorKey: 'hospitality',
-    headline: 'Hospitality Social Media Marketing',
+    headline: 'Hospitality Social Media Agency',
     subhead:
       'Luxury resorts, cultural attractions, and national tourism boards across the US, Caribbean, and Asia-Pacific.',
     clients: [
@@ -125,7 +125,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Tourism & Destinations',
     shortLabel: 'Tourism',
     colorKey: 'tourism',
-    headline: 'Tourism & Destination Social Media Marketing',
+    headline: 'Tourism & Destination Social Media Agency',
     subhead:
       'Destination marketing that drives bookings, not just impressions. Senior-led social for resorts, attractions, and travel brands since 2008.',
     metaDescription:
@@ -166,7 +166,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Restaurant & Food',
     shortLabel: 'Restaurant',
     colorKey: 'restaurant',
-    headline: 'Restaurant Social Media Marketing',
+    headline: 'Restaurant Social Media Agency',
     subhead:
       'Senior-led social for restaurant brands \u2014 local, regional, and national. 222+ brands across 5 continents since 2008.',
     metaDescription:
@@ -207,7 +207,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Luxury Brands',
     shortLabel: 'Luxury',
     colorKey: 'luxury',
-    headline: 'Luxury Brand Social Media Marketing',
+    headline: 'Luxury Brand Social Media Agency',
     subhead:
       'Premium brand voice. Senior-led execution. No junior bench. The boutique agency luxury brands call.',
     metaDescription:
@@ -248,7 +248,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Fitness & Wellness',
     shortLabel: 'Fitness',
     colorKey: 'fitness',
-    headline: 'Fitness & Wellness Social Media Marketing',
+    headline: 'Fitness & Wellness Social Media Agency',
     subhead:
       'Senior-led social for fitness brands \u2014 boutique studios to national franchises. Conversion-grade content that actually fills classes.',
     metaDescription:
@@ -289,7 +289,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Tech & SaaS',
     shortLabel: 'Tech',
     colorKey: 'tech',
-    headline: 'Tech & SaaS Social Media Marketing',
+    headline: 'Tech & SaaS Social Media Agency',
     subhead:
       'Social that translates technical depth into pipeline. We\u2019ve run social for Microsoft, SAP, NetGear, and 200+ brands across 5 continents.',
     metaDescription:
@@ -330,7 +330,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Retail & CPG',
     shortLabel: 'Retail & CPG',
     colorKey: 'retail',
-    headline: 'Retail & CPG Social Media Marketing',
+    headline: 'Retail & CPG Social Media Agency',
     subhead:
       'From iconic retail brands to DTC challengers, social strategies that move product, not just impressions.',
     clients: [
@@ -369,7 +369,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Healthcare',
     shortLabel: 'Healthcare',
     colorKey: 'healthcare',
-    headline: 'Healthcare Social Media Marketing',
+    headline: 'Healthcare Social Media Agency',
     subhead:
       'Hospitals, behavioral health systems, and healthcare brands, social content built for a category where trust is the product.',
     clients: [
@@ -408,7 +408,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Real Estate',
     shortLabel: 'Real Estate',
     colorKey: 'realestate',
-    headline: 'Real Estate Social Media Marketing',
+    headline: 'Real Estate Social Media Agency',
     subhead:
       'Regional malls, lifestyle centers, and marquee property brands, social that drives foot traffic and lease-up velocity, not just vanity engagement.',
     clients: [
@@ -447,7 +447,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Automotive',
     shortLabel: 'Automotive',
     colorKey: 'automotive',
-    headline: 'Automotive Social Media Marketing',
+    headline: 'Automotive Social Media Agency',
     subhead:
       'Rental giants, dealer networks, and transportation brands, social strategies built for a category where every impression has a measurable downstream.',
     clients: [
@@ -486,7 +486,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Entertainment',
     shortLabel: 'Entertainment',
     colorKey: 'entertainment',
-    headline: 'Entertainment & Media Social Media Marketing',
+    headline: 'Entertainment & Media Social Media Agency',
     subhead:
       'Cable networks, live-sports venues, game franchises, and entertainment properties, social content built to drive tune-in, tickets, and watch time.',
     clients: [

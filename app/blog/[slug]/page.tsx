@@ -143,6 +143,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   const categoryColor = CATEGORY_COLORS[post.category] ?? '#C41E3A';
   const faqs = rawContent ? extractFaqs(rawContent) : [];
+  const plainText = rawContent
+    ? rawContent.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
+    : post.excerpt;
+  const wordCount = plainText.split(/\s+/).length;
 
   return (
     <>
@@ -161,6 +165,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             publisher: { '@id': 'https://fiftyandfive.com/#organization' },
             mainEntityOfPage: `https://fiftyandfive.com/blog/${post.slug}`,
             image: post.heroImage,
+            inLanguage: 'en-US',
+            wordCount,
+            articleBody: plainText.slice(0, 500),
+            keywords: [post.category, 'social media', 'Fifty & Five'].join(', '),
           }),
         }}
       />
@@ -343,7 +351,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </p>
               <div className="mt-8 flex flex-col items-center gap-3">
                 <MagneticButton href="/contact" variant="primary" size="large">
-                  Start a Conversation →
+                  Get a senior strategist on your brand →
                 </MagneticButton>
                 <p
                   className="font-mono uppercase"
