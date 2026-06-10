@@ -224,3 +224,4 @@ A productized social media management offering: 20 image posts/month, up to 4 pl
 - Services: https://fiftyandfive.com/services
 - Contact: https://fiftyandfive.com/contact
 - Blog: https://fiftyandfive.com/blog
+- Press: https://fiftyandfive.com/press
