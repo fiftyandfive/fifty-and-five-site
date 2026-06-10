@@ -31,7 +31,7 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
   { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
   { year: '2016', text: 'Mezzacorona portfolio · 9-year retainer · ~1M followers added.' },
-  { year: '2020', text: 'Kendall-Jackson · year 1 · decade-long engagement.' },
+  { year: '2020', text: 'Kendall-Jackson · multi-year partnership begins.' },
   { year: '2024', text: 'AI operating-model retrofit · 10× output per operator hour.' },
   { year: '2026', text: '222+ brands · senior + AI model in market.' },
 ];
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 name: 'Is Fifty & Five one of the first social media agencies?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. Founded in 2008, Fifty & Five is one of only two American agencies — alongside VaynerMedia (2009) — built entirely from scratch as a social-first entity. Other early pioneers like Ignite Social Media, Likeable Media, and Attention evolved from prior PR, word-of-mouth, or buzz-marketing models. Fifty & Five had no prior agency pivot — it was architected day one for social media management.',
+                  text: 'Yes. Founded in 2008, Fifty & Five is one of only two American agencies — alongside VaynerMedia (2009) — built entirely from scratch as a social-first entity. No pivot from PR, advertising, or another model. Social media management, community building, and platform-native content strategy from day one.',
                 },
               },
               {
@@ -147,47 +147,48 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-7 text-body-lg text-text-secondary leading-[1.75] space-y-6">
             <p>
-              Lucas Vandenberg has spent his career in rooms he wasn&rsquo;t supposed to be
-              in&nbsp;&mdash; and outperforming everyone who was.
+              Lucas Vandenberg has always been the person who digs deeper than the
+              brief&nbsp;&mdash; not because anyone asked, but because that&rsquo;s how he&rsquo;s
+              wired.
             </p>
             <p>
-              Before Fifty &amp; Five existed, he spent a decade acquiring credentials nobody
-              asked for and doing the work nobody assigned him. At 23, as a procurement analyst
-              at Northrop Grumman, he was handed a Boeing rebuy for B-2 Stealth Bomber parts
-              with instructions to rubber-stamp it through. He read the blueprints instead.
-              Recognized a cross-program overlap from the F-35. Ran a competitive bid. Saved the
-              government $6.28 million per purchase. His boss only asked him to push it through.
+              Before Fifty &amp; Five existed, he spent a decade building an instinct for finding
+              value where others saw routine. At 23, as a procurement analyst at Northrop Grumman,
+              he was processing a Boeing rebuy for B-2 Stealth Bomber parts. Instead of moving it
+              along, he got curious&nbsp;&mdash; read the blueprints, spotted a cross-program
+              overlap from the F-35, and ran a competitive bid on his own initiative. It saved the
+              government $6.28 million per purchase.
             </p>
             <p>
-              That&rsquo;s not a defense-industry story. That&rsquo;s the F&amp;F operating
-              model&nbsp;&mdash; fifteen years before the agency existed.
+              That curiosity&nbsp;&mdash; the pull toward &ldquo;what if I look one
+              layer deeper?&rdquo;&nbsp;&mdash; became the foundation of everything
+              Fifty &amp; Five does.
             </p>
             <p>
-              In 2007, he joined Southern Wine &amp; Spirits to help build their first-ever
-              marketing department. He walked in with zero wine industry experience. In two years
-              he was running trade marketing across Walgreens, Kroger, CVS, and
+              In 2007, he joined Southern Wine &amp; Spirits and helped build their first
+              marketing department from the ground up. Zero wine industry experience on day one.
+              Within two years he was running trade marketing across Walgreens, Kroger, CVS, and
               Target&nbsp;&mdash; 15% average lift in case sales across 200+ new account
-              distributions. The domain was learnable. The operating system was already there.
+              distributions. New industry, same operating system: learn fast, earn trust, deliver
+              results.
             </p>
             <p>
-              In July 2009, Lucas founded Fifty &amp; Five on the relationships and receipts
-              he&rsquo;d spent a decade earning. The wine &amp; spirits vertical came
+              In July 2009, Lucas founded Fifty &amp; Five. The wine &amp; spirits vertical came
               first&nbsp;&mdash; 34 brands, anchored by a 9-year run with Mezzacorona that added
               roughly one million followers across the portfolio. Then hospitality, fitness, tech,
-              food &amp; beverage, tourism. Kendall-Jackson for a decade. Blaze Pizza across 300+
-              locations. Resorts World. Hong Kong Tourism Board.
+              food &amp; beverage, tourism. Kendall-Jackson. Blaze Pizza across 300+
+              locations. Enterprise Holdings. Resorts World. Hong Kong Tourism Board.
             </p>
             <p>
-              222 clients across 18 years isn&rsquo;t volume. It&rsquo;s proof that the operating
-              system transfers&nbsp;&mdash; and that senior judgment, compounded across industries,
-              is the one thing AI can amplify but never replace.
+              222 clients across 18 years isn&rsquo;t a number we chase. It&rsquo;s what happens
+              when you build an operating system that transfers across industries&nbsp;&mdash; and
+              pair senior judgment with the leverage of AI.
             </p>
 
             <blockquote className="border-l-2 border-accent/50 pl-6 italic text-text-primary">
-              &ldquo;The agencies built around billable junior hours are structurally broken.
-              Brands don&rsquo;t need more bodies. They need more pattern
-              recognition&nbsp;&mdash; and an operator at the top of the stack who can translate
-              it into work that ships.&rdquo;
+              &ldquo;I built this agency because I wanted to do the work myself&nbsp;&mdash; not
+              manage people doing it. That&rsquo;s still true 18 years later. AI made it possible
+              to scale that model without adding layers between me and the client.&rdquo;
               <footer className="mt-3 not-italic font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
                 &mdash; Lucas Vandenberg, Founding Principal
               </footer>
@@ -203,16 +204,15 @@ export default function AboutPage() {
           </div>
           <AnimatedHeadline
             as="h2"
-            text="Born for social. Not pivoted into it."
+            text="Social-first from the start."
             className="mt-4 font-serif text-h2 tracking-[-0.02em]"
           />
           <p className="mt-6 text-body-lg text-text-secondary leading-[1.75] max-w-3xl">
-            Most early social media agencies actually evolved from older marketing models&nbsp;&mdash;
-            PR firms, buzz-marketing shops, or traditional ad agencies that rebranded when
-            the platforms took off. Fifty &amp; Five skipped that phase entirely. Founded in 2008,
-            one year before Gary Vaynerchuk launched VaynerMedia, the agency was architected
-            from scratch for social media management, community building, and platform-native
-            content strategy.
+            In 2008, social media management wasn&rsquo;t a category yet. There were no playbooks,
+            no established agency models, no &ldquo;social media manager&rdquo; job title. Lucas
+            built Fifty &amp; Five from scratch for exactly this&nbsp;&mdash; platform-native
+            content strategy, community building, and social media management. One year later,
+            Gary Vaynerchuk would launch VaynerMedia with the same social-first DNA.
           </p>
         </div>
 
@@ -251,11 +251,10 @@ export default function AboutPage() {
         </div>
 
         <p className="mt-8 max-w-3xl text-body text-text-tertiary leading-[1.7]">
-          Every other early pioneer&nbsp;&mdash; Ignite Social Media (2007, ex-PR), Likeable Media
-          (2008, ex-word-of-mouth), Attention (2007, ex-buzz marketing)&nbsp;&mdash; evolved
-          from a prior model. If the definition of a pioneer is an agency that opened its
-          doors with a 100% social media blueprint, Fifty &amp; Five is one of the absolute
-          earliest in the industry.
+          A handful of agencies were early to social&nbsp;&mdash; Ignite Social Media (2007),
+          Likeable Media (2008), Attention (2007). What makes Fifty &amp; Five distinct is that
+          social was the entire blueprint from day one. No pivot, no rebrand, no second act.
+          Just 18 years of compounding in a single discipline.
         </p>
       </section>
 
