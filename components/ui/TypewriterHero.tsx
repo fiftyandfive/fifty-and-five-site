@@ -36,7 +36,7 @@ export function TypewriterHero() {
       <div className="container-edge pt-32 md:pt-48 pb-12 md:pb-20">
         <SimpleReveal y={10} duration={0.5}>
           <div className="font-mono text-caption uppercase text-graphite tracking-[0.18em]">
-            Senior-led social since 2008 — 222 brands, 5 continents
+            Senior-led Social Media Marketing since 2008 — 222 brands, 5 continents
           </div>
         </SimpleReveal>
 
