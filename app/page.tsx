@@ -11,7 +11,6 @@ import { ReceiptsDashboard } from '@/components/ui/ReceiptsDashboard';
 import { TypewriterHero } from '@/components/ui/TypewriterHero';
 import { BrandMarquee } from '@/components/ui/BrandMarquee';
 import { SelectedWork } from '@/components/ui/SelectedWork';
-import { Testimonials } from '@/components/ui/Testimonials';
 import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
@@ -202,9 +201,6 @@ export default function HomePage() {
 
       {/* RECEIPTS DASHBOARD */}
       <ReceiptsDashboard />
-
-      {/* TESTIMONIALS */}
-      <Testimonials />
 
       {/* FEATURED WORK, BENTO GRID */}
       <section className="container-edge py-24 md:py-32">
