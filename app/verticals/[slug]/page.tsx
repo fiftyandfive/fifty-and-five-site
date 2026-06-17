@@ -24,13 +24,18 @@ export async function generateMetadata({
   if (!v) return { title: 'Vertical Not Found' };
   const desc = v.metaDescription ?? v.subhead;
   return {
-    title: `${v.headline} | Fifty & Five`,
+    title: v.headline,
     description: desc,
     openGraph: {
       title: `${v.headline} | Fifty & Five`,
       description: desc,
       url: `https://fiftyandfive.com/verticals/${v.slug}`,
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${v.headline} | Fifty & Five`,
+      description: desc,
     },
     alternates: {
       canonical: `https://fiftyandfive.com/verticals/${v.slug}`,
@@ -192,7 +197,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
                   <div className="font-mono text-caption uppercase text-accent tracking-[0.12em] mb-3">
                     {String(i + 1).padStart(2, '0')}
                   </div>
-                  <p className="text-body-lg text-text-secondary leading-[1.75]">{p}</p>
+                  <p className="text-body-lg text-text-secondary leading-[1.75]" dangerouslySetInnerHTML={{ __html: p }} />
                 </div>
               </SimpleReveal>
             ))}

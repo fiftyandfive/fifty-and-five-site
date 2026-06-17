@@ -76,7 +76,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'CreativeWork',
+            '@type': 'Article',
             '@id': `https://fiftyandfive.com/work/${cs.slug}`,
             name: `${cs.client} case study`,
             headline: `${cs.client} case study`,
