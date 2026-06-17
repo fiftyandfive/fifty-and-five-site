@@ -1717,7 +1717,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
   'wine-spirits-social-media-2026': `
 <p>Most wine and spirits brands are running social media the way they ran it in 2017. Pretty bottle shot, vague caption about &ldquo;craftsmanship,&rdquo; a hashtag nobody searches, post on Tuesday because someone read that Tuesday is the day. Then they wonder why the account does nothing for the business.</p>
 
-<p>We have run social for beverage brands since 2008, across more than 30 wine and spirits labels including Kendall-Jackson, Penfolds, and a decade-long Mezzacorona partnership. Here is what actually moves the needle now, and what to stop wasting money on.</p>
+<p>We have run social for beverage brands since 2008, across more than 30 <a href="/verticals/wine-spirits">wine and spirits</a> labels including Kendall-Jackson, Penfolds, and a decade-long Mezzacorona partnership. Here is what actually moves the needle now, and what to stop wasting money on.</p>
 
 <h2>Do wine and spirits brands even need social media?</h2>
 
@@ -1729,7 +1729,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <h2>The compliance trap that quietly kills beverage accounts</h2>
 
-<p>This is where most brands and most generalist agencies get burned. Alcohol social has rules that other categories do not: mandatory age-gating, platform-specific advertising restrictions, responsibility messaging, and a hard line between trade communication and consumer communication that you cannot blur. Post the wrong creator partnership without age-gating and you can lose the account or draw a regulator&rsquo;s attention. An agency that learned beverage on the job will find this out the expensive way. An agency that has run wine and spirits since 2008 builds it in from the first post. Compliance is not a constraint we work around. It is part of the craft.</p>
+<p>This is where most brands and most generalist agencies get burned. Alcohol social has rules that other categories do not: mandatory age-gating, platform-specific advertising restrictions, responsibility messaging, and a hard line between trade communication and consumer communication that you cannot blur. Post the wrong creator partnership without age-gating and you can lose the account or draw a regulator&rsquo;s attention. An agency that learned beverage on the job will find this out the expensive way. An agency that has run wine and spirits since 2008 builds it in from the first post. <strong>Compliance is not a constraint we work around. It is part of the craft.</strong></p>
 
 <h2>Organic versus paid: where the money actually goes</h2>
 
@@ -1737,7 +1737,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <h2>How to tell if your agency actually knows wine and spirits</h2>
 
-<p>Ask three questions. First, can they name the compliance rules for your category and platforms without looking them up? Second, do they understand three-tier distribution and why a distributor cares about your follower growth? Third, can they show beverage work that ran for years, not a one-off campaign? Long retainers are the tell. Beverage brands that stay with an agency for three, five, ten years do it because that agency holds the brand voice and the institutional memory of what worked. That is not luck. That is the moat.</p>
+<p>Ask three questions. First, can they name the compliance rules for your category and platforms without looking them up? Second, do they understand three-tier distribution and why a distributor cares about your follower growth? Third, can they show beverage work that ran for years, not a one-off campaign? <strong>Long retainers are the tell. Beverage brands that stay with an agency for three, five, ten years do it because that agency holds the brand voice and the institutional memory of what worked.</strong> That is not luck. That is the moat.</p>
 
 <h2>The receipts</h2>
 
@@ -1756,7 +1756,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h3>Should wine and spirits brands focus on organic or paid social?</h3>
 <p>Both, connected. Organic builds brand voice, content library, and trade proof and reveals which messages land. Paid scales the winning creatives and handles compliant direct-to-consumer reach. Run separately they cost more and teach less.</p>`,
   'wine-spirits-influencer-marketing': `
-<p>Influencer marketing for beverage brands is where a lot of money goes to die quietly. A brand pays a creator with a big number next to their name, gets one post, sees a spike of likes from people who will never buy the product, and calls it a campaign. We have structured and run more than 100 creator deals across beverage and lifestyle brands, including programs that put Olympic medalists and names like Natalie Jill in front of the right audiences. Here is what we learned, including the parts that cost us to learn.</p>
+<p>Influencer marketing for beverage brands is where a lot of money goes to die quietly. A brand pays a creator with a big number next to their name, gets one post, sees a spike of likes from people who will never buy the product, and calls it a campaign. We have structured and run more than 100 creator deals across <a href="/verticals/wine-spirits">beverage and lifestyle brands</a>, including programs that put Olympic medalists and names like Natalie Jill in front of the right audiences. Here is what we learned, including the parts that cost us to learn.</p>
 
 <h2>Follower count is the worst way to pick a creator</h2>
 
@@ -1764,11 +1764,11 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <h2>The compliance rules apply to the creator, not just the brand</h2>
 
-<p>This is the trap that catches beverage brands the hardest. When a creator posts about your spirit or wine, that post has to follow the same alcohol marketing rules your brand account does. Age-gating. No content that appeals to minors. Responsibility messaging where required. The creator does not automatically know any of this, and if they get it wrong, it is your brand that wears it. Every creator deal we run includes the compliance guardrails in the brief, not as an afterthought. The brands that skip this step are one bad post away from a problem.</p>
+<p>This is the trap that catches beverage brands the hardest. When a creator posts about your spirit or wine, that post has to follow the same alcohol marketing rules your brand account does. Age-gating. No content that appeals to minors. Responsibility messaging where required. The creator does not automatically know any of this, and if they get it wrong, it is your brand that wears it. <strong>Every creator deal we run includes the compliance guardrails in the brief, not as an afterthought.</strong> The brands that skip this step are one bad post away from a problem.</p>
 
 <h2>Structure the deal for content rights, not just a post</h2>
 
-<p>The single most common mistake we see is paying a creator for one post and walking away. The post disappears down the feed in 48 hours and you have nothing to show for the spend. The fix is to structure deals so you own usage rights to the content. A good creator deal gives you a library of authentic, on-brand assets you can run as paid ads, repurpose across platforms, and use for months. The post is the smallest part of the value. The rights are the asset.</p>
+<p>The single most common mistake we see is paying a creator for one post and walking away. The post disappears down the feed in 48 hours and you have nothing to show for the spend. The fix is to structure deals so you own usage rights to the content. A good creator deal gives you a library of authentic, on-brand assets you can run as paid ads, repurpose across platforms, and use for months. <strong>The post is the smallest part of the value. The rights are the asset.</strong></p>
 
 <h2>Measure what moves the business, not what moves the ego</h2>
 
