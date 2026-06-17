@@ -36,7 +36,7 @@ export function ExitIntentBar() {
           transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="fixed bottom-14 inset-x-4 md:inset-x-auto md:right-6 md:bottom-6 md:w-[460px] z-50"
         >
-          <div className="glass rounded-glass p-5 md:p-6 bg-bone-white">
+          <div className="rounded-glass p-5 md:p-6 border border-glass-border bg-bone-white shadow-lg" style={{ background: 'var(--color-bone-white)' }}>
             {!submitted ? (
               <>
                 <div className="flex items-start justify-between gap-4">

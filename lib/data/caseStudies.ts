@@ -369,6 +369,32 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Repeatable creator pipeline spanning fitness, wellness, and outdoor lifestyle verticals',
     ],
   },
+  {
+    slug: 'central-florida-talent',
+    client: 'Central Florida Talent',
+    industry: 'Talent & Entertainment',
+    verticalLabel: 'Entertainment',
+    verticalColor: 'entertainment',
+    services: ['Website design & build (Next.js)', 'SEO', 'Answer Engine Optimization (AEO)', 'Structured data & entity strategy'],
+    duration: '2025–2026',
+    durationBadge: 'Website + AEO Build',
+    platforms: ['Next.js', 'Google', 'ChatGPT', 'Perplexity'],
+    tagline:
+      'Built a 30-year Orlando talent agency a modern website engineered to be found — and cited — by both search engines and AI.',
+    challenge:
+      'Central Florida Talent has been Orlando’s longest-operating SAG-AFTRA franchised agency since 1994 — three decades of placements, from Stranger Things to national Disney and Lay’s campaigns. But its digital presence didn’t reflect its standing. The bigger shift: casting directors, prospective talent, and now AI assistants are all first filters. When someone asks an AI “who’s a good talent agency in Florida,” the answer is built from structured, verifiable content a site explicitly provides. CFT needed a site as authoritative online — to both Google and the AI layer above it — as the agency is on set.',
+    approach:
+      'We rebuilt CFT on a modern, server-rendered Next.js foundation — fast, crawlable, clean — then engineered it for both traditional search and Answer Engine Optimization (AEO), the emerging layer where AI assistants decide which businesses to name. The work centered on making CFT answerable. We built a structured FAQ layer addressing the exact questions prospects and LLMs ask (“Does the agency charge upfront fees?”, “Is it SAG-AFTRA franchised?”, “How do I submit?”) and marked it up with FAQPage schema so machines read it as labeled Q&A. We published verifiable entity signals — SAG-AFTRA Agency ID 000347, FL license TA# 498, named credits — that build the machine-readable trust both Google’s E-E-A-T standards and AI models require before citing a source. And we layered in LocalBusiness/EmploymentAgency and WebSite schema for a complete structured-data stack.',
+    outcome:
+      'CFT’s site now carries a complete AEO foundation — verified live in the page source: three JSON-LD schema blocks including FAQPage, a structured answer layer, and published license and credential facts. It’s a website built not just to rank, but to be cited by the AI tools an increasing share of clients and talent now use to find representation. The playbook built here — modern framework + structured answer content + verifiable entity signals — is now how Fifty & Five approaches every local-authority and professional-services brand that needs to win both Google and the AI layer above it.',
+    metrics: [
+      'Full AEO schema stack live: EmploymentAgency (LocalBusiness), WebSite, and FAQPage structured data',
+      'Structured FAQ layer answering the literal questions prospects and AI assistants ask',
+      'Published entity signals for machine-readable trust: SAG-AFTRA Agency ID 000347, FL license TA# 498',
+      '463 backlinks across 241 referring domains (Ahrefs)',
+      'Modern Next.js build — fast, server-rendered, and fully crawlable',
+    ],
+  },
 ];
 
 export function getCaseStudy(slug: string) {

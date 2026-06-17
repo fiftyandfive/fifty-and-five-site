@@ -1,4 +1,4 @@
-// Blog posts: 40 total (29 from Wix + 11 new)
+// Blog posts: 43 total (29 from Wix + 14 new)
 // Run `node add-blog-section.mjs` to regenerate
 
 export interface BlogPost {
@@ -102,6 +102,36 @@ export const BLOG_POSTS: BlogPost[] = [
     heroImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=85',
     excerpt: "Retainer, project, hourly, or productized? A clear breakdown of social media agency pricing models — what each costs, who it fits, and which to avoid.",
     category: 'Agency',
+  },
+  {
+    title: "Wine and Spirits Influencer Marketing: What 100+ Creator Deals Taught Us",
+    slug: 'wine-spirits-influencer-marketing',
+    wixSlug: 'wine-spirits-influencer-marketing',
+    date: '2026-06-24',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1600&q=85',
+    excerpt: "Lessons from running 100+ creator deals for beverage and lifestyle brands: how to pick creators, structure deals, stay compliant, and measure what actually matters.",
+    category: 'Wine & Beverage',
+  },
+  {
+    title: "Your Website Ranks on Google. But Does ChatGPT Know You Exist?",
+    slug: 'aeo-how-to-get-cited-by-ai-search',
+    wixSlug: 'aeo-how-to-get-cited-by-ai-search',
+    date: '2026-06-19',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1600&q=85',
+    excerpt: "Most websites are invisible to AI answer engines like ChatGPT and Perplexity. Here's the Answer Engine Optimization (AEO) playbook we used to make a client a source AI can cite — and how to know if you have the same opening.",
+    category: 'AI & Automation',
+  },
+  {
+    title: "How Wine and Spirits Brands Should Actually Use Social Media in 2026",
+    slug: 'wine-spirits-social-media-2026',
+    wixSlug: 'wine-spirits-social-media-2026',
+    date: '2026-06-17',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1504279577054-acfeccf8fc52?w=1600&q=85',
+    excerpt: "A senior-led wine and spirits agency on what actually works on social for beverage brands in 2026: organic vs paid, the compliance trap, and how to vet an agency.",
+    category: 'Wine & Beverage',
   },
   {
     title: "Best Social Media Agency for Wine & Spirits Brands: What to Look For",
