@@ -33,7 +33,7 @@ export function StickyCtaButton() {
           <Link
             href="/contact"
             onClick={() => trackEvent('Sticky CTA Click')}
-            className="group glass glow-accent inline-flex items-center gap-3 rounded-full pl-3 pr-5 py-2.5 text-[13px] font-medium text-text-primary"
+            className="group glass bg-bone-white inline-flex items-center gap-3 rounded-full pl-3 pr-5 py-2.5 text-[13px] font-medium text-text-primary"
           >
             <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-accent text-white font-serif text-[15px]">
               55

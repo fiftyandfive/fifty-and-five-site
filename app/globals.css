@@ -2,65 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Fraunces (display serif) + Inter (body) + IBM Plex Mono (terminal/labels) via Google Fonts. */
+/* Creative Giants — oversized editorial poster on warm cream paper.
+   Single-family system (Inter, substituting Switzer): weight 300 for all
+   display/headline work, 400 for body and UI. Fifty & Five red retained as
+   the chromatic accent + CTA color. */
 
 :root {
+  /* One family for everything — display, body, eyebrows. */
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-serif: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Core Palette — Dark Editorial */
-  --color-bg-primary: #0A0A0C;
-  --color-bg-secondary: #121217;
-  --color-bg-tertiary: #16161C;
-  --color-bg-glass: rgba(255, 255, 255, 0.03);
+  /* Core Palette — Light Editorial (warm paper) */
+  --color-bone-white: #fffef7;
+  --color-ink-black: #000000;
+  --color-graphite: #666666;
+  --color-ash: #aaaaaa;
+  --color-charcoal-scale: #4d4c4a;
 
-  --color-text-primary: #F5F2EC;
-  --color-text-secondary: #B7B3AB;
-  --color-text-tertiary: #8F8B84;
+  --color-bg-primary: #fffef7;   /* page canvas */
+  --color-bg-secondary: #faf8ef; /* faint warm panel */
+  --color-bg-tertiary: #f1efe4;  /* image placeholders */
+  --color-bg-glass: transparent;
 
+  --color-text-primary: #000000;   /* ink black */
+  --color-text-secondary: #666666; /* graphite */
+  --color-text-tertiary: #8c8a82;  /* muted meta */
+
+  /* Brand red retained as the accent + CTA */
   --color-accent: #C41E3A;
   --color-accent-light: #E63950;
-  --color-accent-glow: rgba(196, 30, 58, 0.12);
+  --color-accent-glow: rgba(196, 30, 58, 0.10);
   --color-accent-subtle: rgba(196, 30, 58, 0.06);
 
-  --color-terminal: #5BE38B;
-  --color-paper: #F5F2EC;
-  --color-paper-dim: #B7B3AB;
-  --color-muted: #8F8B84;
+  --color-terminal: #03624c;
+  --color-paper: #fffef7;
+  --color-paper-dim: #666666;
+  --color-muted: #8c8a82;
 
-  --glass-border: rgba(245, 242, 236, 0.12);
-  --glass-bg: rgba(255, 255, 255, 0.02);
-  --glass-blur: 16px;
+  /* Hairlines instead of glass — soft ash on cream */
+  --glass-border: rgba(0, 0, 0, 0.14);
+  --glass-bg: transparent;
+  --glass-blur: 0px;
 
+  /* Chromatic accent palette — rationed, borders + single-card hits only */
+  --color-magenta-bloom: #8a0467;
+  --color-forest-teal: #03624c;
+  --color-powder-blue: #a5c8eb;
+  --color-candy-pink: #ffacea;
+  --color-mint-wash: #a5ebd6;
+  --color-navy-ink: #101731;
+  --color-signal-yellow: #ffd001;
+
+  /* Vertical accents — kept for case-study brand heroes (chromatic hits) */
   --color-wine: #9B2335;
-  --color-hospitality: #0D9488;
+  --color-hospitality: #03624c;
   --color-restaurant: #EA580C;
-  --color-fitness: #EC4899;
+  --color-fitness: #8a0467;
   --color-tech: #C41E3A;
-  --color-retail: #F59E0B;
+  --color-retail: #ffd001;
   --color-entertainment: #E2334F;
-  --color-healthcare: #0284C7;
+  --color-healthcare: #a5c8eb;
   --color-realestate: #B45309;
-  --color-automotive: #64748B;
+  --color-automotive: #101731;
 
-  --noise-opacity: 0.025;
+  --noise-opacity: 0;
 
-  --aurora-1: #C41E3A;
-  --aurora-2: #9A845C;
-  --aurora-3: #0D9488;
+  --aurora-1: transparent;
+  --aurora-2: transparent;
+  --aurora-3: transparent;
 
-  --radius-card: 10px;
-  --radius-pill: 999px;
+  /* Shapes — sharp editorial surfaces, pill-only interactive radii */
+  --radius-card: 0px;
+  --radius-pill: 1440px;
 
-  --section-y: 140px;
-  --section-y-md: 100px;
-  --section-y-sm: 72px;
+  --section-y: 112px;
+  --section-y-md: 80px;
+  --section-y-sm: 56px;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -77,6 +100,7 @@ html {
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -84,57 +108,40 @@ body {
 
 ::selection {
   background: var(--color-accent);
-  color: white;
+  color: #fffef7;
 }
 
-/* Display helper — Fraunces, medium weight, editorial feel */
-.font-display {
-  font-family: var(--font-serif), Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-/* Serif headings */
+/* Display / headline helper — hairline weight 300, tight carved tracking.
+   The signature: never bold a headline. */
+.font-display,
 .font-serif {
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: -0.03em;
 }
 
-/* Glass surface — refined luxury */
+/* Headlines scale their tracking tighter as they grow (handled per-size in
+   the Tailwind fontSize tokens); this is the floor. */
+
+/* Flat editorial "card" — no glass, no blur, no shadow. Hairline only.
+   Radius is controlled by utility classes (rounded-glass = 0 for cards,
+   rounded-full for pills), not forced here. */
 .glass {
   background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(130%);
-  backdrop-filter: blur(var(--glass-blur)) saturate(130%);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
   border: 1px solid var(--glass-border);
 }
 
-/* Glow on accent — subtle luxury */
+/* Accent pill helper — flat red, no glow (system has no shadows). */
 .glow-accent {
-  box-shadow:
-    0 0 0 1px var(--color-accent),
-    0 0 24px var(--color-accent-glow),
-    0 0 80px rgba(196, 30, 58, 0.04);
-  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.glow-accent:hover {
-  box-shadow:
-    0 0 0 1px var(--color-accent-light),
-    0 0 36px rgba(196, 30, 58, 0.2),
-    0 0 100px rgba(196, 30, 58, 0.08);
+  box-shadow: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-/* Gold editorial accent */
-.text-gold { color: var(--color-gold); }
-.text-gold-muted { color: var(--color-gold-muted); }
-.border-gold { border-color: var(--color-gold); }
-
-/* Noise overlay class (fallback — SVG component does heavy lifting) */
+/* Noise overlay — disabled in the light system. */
 .noise-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  opacity: var(--noise-opacity);
-  mix-blend-mode: overlay;
+  display: none;
 }
 
 /* Ticker helper */
@@ -158,14 +165,6 @@ body {
   .ticker-track { animation: none; }
 }
 
-/* Aurora blobs mobile tuning */
-@media (max-width: 640px) {
-  .aurora-blob {
-    filter: blur(60px) !important;
-  }
-  .aurora-blob-3 { display: none; }
-}
-
 /* Disable hover tilts on touch */
 @media (hover: none) {
   .tilt-card {
@@ -173,17 +172,17 @@ body {
   }
 }
 
-/* Utilities */
+/* Utilities — near-full-bleed editorial canvas */
 .container-edge {
-  max-width: 1320px;
+  max-width: 1600px;
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
 @media (min-width: 768px) {
-  .container-edge { padding-inline: 3rem; }
+  .container-edge { padding-inline: 2.5rem; }
 }
 @media (min-width: 1280px) {
-  .container-edge { padding-inline: 3.5rem; }
+  .container-edge { padding-inline: 3rem; }
 }
 
 .vertical-bar-wine { border-left-color: var(--color-wine); }
@@ -201,7 +200,7 @@ body {
   border-color: var(--glass-border);
 }
 
-/* Hide scrollbar on horizontal snap rows (Apple TV lineup feel) */
+/* Hide scrollbar on horizontal snap rows */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -210,11 +209,12 @@ body {
   display: none;
 }
 
-/* ── Blog Article Prose ──────────────────────────────────────────────────── */
+/* ── Blog Article Prose — light editorial ─────────────────────────────────── */
 .blog-prose {
-  font-size: 17px;
-  line-height: 1.85;
-  color: rgba(240, 240, 236, 0.72);
+  font-size: 18px;
+  line-height: 1.8;
+  color: #2a2a28;
+  font-weight: 400;
 }
 
 .blog-prose p {
@@ -222,17 +222,17 @@ body {
 }
 
 .blog-prose > p:first-of-type {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.7;
-  color: rgba(240, 240, 236, 0.85);
+  color: #1a1a18;
 }
 
 .blog-prose h2 {
   font-family: var(--font-serif);
-  font-size: clamp(20px, 2.8vw, 28px);
-  font-weight: 900;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
   color: var(--color-text-primary);
   margin-top: 3.5rem;
   margin-bottom: 1.1rem;
@@ -242,44 +242,44 @@ body {
 
 .blog-prose h3 {
   font-family: var(--font-serif);
-  font-size: clamp(17px, 2.2vw, 21px);
-  font-weight: 900;
-  letter-spacing: -0.015em;
-  color: var(--color-accent-light);
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--color-ink-black);
   margin-top: 2.25rem;
   margin-bottom: 0.75rem;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .blog-prose h4 {
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-text-secondary);
+  color: var(--color-graphite);
   margin-top: 1.75rem;
   margin-bottom: 0.5rem;
 }
 
 .blog-prose a {
-  color: var(--color-accent-light);
+  color: var(--color-accent);
   text-decoration: underline;
-  text-decoration-color: rgba(129, 140, 248, 0.35);
+  text-decoration-color: rgba(196, 30, 58, 0.35);
   text-underline-offset: 3px;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 .blog-prose a:hover {
-  color: #fff;
-  text-decoration-color: rgba(129, 140, 248, 0.8);
+  color: var(--color-ink-black);
+  text-decoration-color: rgba(0, 0, 0, 0.5);
 }
 
 .blog-prose strong {
-  color: var(--color-text-primary);
-  font-weight: 650;
+  color: var(--color-ink-black);
+  font-weight: 600;
 }
 
 .blog-prose em {
-  color: rgba(240, 240, 236, 0.8);
+  color: #3a3a38;
   font-style: italic;
 }
 
@@ -306,7 +306,6 @@ body {
   height: 6px;
   background: var(--color-accent);
   border-radius: 50%;
-  opacity: 0.8;
 }
 
 .blog-prose ol {
@@ -330,8 +329,8 @@ body {
   position: absolute;
   left: 0;
   color: var(--color-accent);
-  font-weight: 700;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 14px;
   font-family: var(--font-sans);
   top: 0.08em;
 }
@@ -340,15 +339,15 @@ body {
   border-left: 2px solid var(--color-accent);
   padding: 0.5rem 0 0.5rem 1.5rem;
   margin: 2rem 0;
-  color: rgba(240, 240, 236, 0.6);
+  color: #3a3a38;
   font-style: italic;
   font-size: 1.05em;
 }
 
 .blog-prose pre {
-  background: var(--color-bg-tertiary);
+  background: #f1efe4;
   border: 1px solid var(--glass-border);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 1.25rem 1.5rem;
   overflow-x: auto;
   margin-bottom: 1.6rem;
@@ -357,44 +356,43 @@ body {
 }
 
 .blog-prose code {
-  background: rgba(196, 30, 58, 0.12);
-  color: var(--color-accent-light);
+  background: rgba(196, 30, 58, 0.10);
+  color: var(--color-accent);
   padding: 0.15em 0.45em;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 0.88em;
 }
 
 /* Pull quote — injected automatically into blog content */
 .blog-pull-quote {
   position: relative;
-  padding: 1.75rem 1.75rem 1.75rem 2.25rem;
+  padding: 1.75rem 0 1.75rem 2.25rem;
   margin: 3rem 0;
-  background: var(--color-accent-subtle);
+  background: transparent;
   border-left: 3px solid var(--color-accent);
-  border-radius: 0 12px 12px 0;
+  border-radius: 0;
   font-family: var(--font-serif);
-  font-size: clamp(17px, 2.2vw, 21px);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.4;
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
   color: var(--color-text-primary);
 }
 
 .blog-pull-quote::before {
   content: '\201C';
   position: absolute;
-  top: -0.15em;
+  top: -0.05em;
   left: 0.6rem;
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 1;
   color: var(--color-accent);
-  opacity: 0.5;
+  opacity: 0.35;
   font-family: Georgia, serif;
 }
 
 @media (min-width: 768px) {
   .blog-pull-quote {
-    margin: 3.5rem -2rem;
-    padding: 2rem 2.5rem 2rem 3rem;
+    margin: 3.5rem 0;
   }
 }

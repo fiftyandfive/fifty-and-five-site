@@ -52,8 +52,8 @@ export function TiltCard({ children, className = '', tiltStrength = 8 }: Props) 
         className="pointer-events-none absolute inset-0 rounded-[inherit]"
         style={{
           background:
-            'radial-gradient(circle at var(--tilt-mx,50%) var(--tilt-my,50%), rgba(255,255,255,0.08) 0%, transparent 50%)',
-          mixBlendMode: 'overlay',
+            'radial-gradient(circle at var(--tilt-mx,50%) var(--tilt-my,50%), rgba(0,0,0,0.04) 0%, transparent 50%)',
+          mixBlendMode: 'multiply',
         }}
       />
     </motion.div>

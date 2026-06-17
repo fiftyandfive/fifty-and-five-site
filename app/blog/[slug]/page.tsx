@@ -214,9 +214,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <header className="container-edge pt-10 pb-8">
           {/* Breadcrumbs */}
           <nav className="flex items-center gap-2 mb-6" style={{ fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-text-tertiary)', fontFamily: 'var(--font-sans)' }}>
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-ink-black transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/blog" className="hover:text-ink-black transition-colors">Blog</Link>
             <span>/</span>
             <span style={{ color: 'var(--color-text-secondary)' }}>{post.category}</span>
           </nav>
@@ -248,12 +248,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <h1
             className="font-serif"
             style={{
-              fontSize: 'clamp(30px, 5vw, 56px)',
-              fontWeight: 900,
-              letterSpacing: '-0.03em',
-              lineHeight: 1.1,
+              fontSize: 'clamp(34px, 5.5vw, 72px)',
+              fontWeight: 300,
+              letterSpacing: '-0.04em',
+              lineHeight: 1.02,
               color: 'var(--color-text-primary)',
-              maxWidth: '900px',
+              maxWidth: '960px',
             }}
           >
             {post.title}
@@ -302,20 +302,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
         <section className="container-edge pb-20">
           <div
-            className="relative overflow-hidden rounded-[20px] p-10 md:p-14 text-center"
+            className="relative overflow-hidden p-10 md:p-14 text-center"
             style={{
               background: 'var(--color-bg-secondary)',
               border: '1px solid var(--glass-border)',
             }}
           >
-            {/* Aurora accent blob */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                inset: 0,
-                background: 'radial-gradient(ellipse 60% 50% at 50% 80%, rgba(99,102,241,0.12) 0%, transparent 70%)',
-              }}
-            />
             <div className="relative z-10">
               <div
                 className="font-mono uppercase mb-4"
@@ -326,12 +318,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <h2
                 className="font-serif"
                 style={{
-                  fontSize: 'clamp(24px, 3.5vw, 36px)',
-                  fontWeight: 900,
-                  letterSpacing: '-0.025em',
-                  lineHeight: 1.15,
+                  fontSize: 'clamp(28px, 4vw, 54px)',
+                  fontWeight: 300,
+                  letterSpacing: '-0.03em',
+                  lineHeight: 1.05,
                   color: 'var(--color-text-primary)',
-                  maxWidth: 560,
+                  maxWidth: 620,
                   marginInline: 'auto',
                 }}
               >
@@ -378,7 +370,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 <Link
                   key={r.slug}
                   href={`/blog/${r.slug}`}
-                  className="group block rounded-[16px] overflow-hidden transition-all duration-300"
+                  className="group block overflow-hidden transition-colors duration-300 hover:border-ink-black"
                   style={{
                     background: 'var(--color-bg-secondary)',
                     border: '1px solid var(--glass-border)',
@@ -404,9 +396,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     <h3
                       className="font-serif leading-snug transition-colors group-hover:text-accent"
                       style={{
-                        fontSize: 15,
-                        fontWeight: 900,
-                        letterSpacing: '-0.01em',
+                        fontSize: 18,
+                        fontWeight: 300,
+                        letterSpacing: '-0.02em',
                         color: 'var(--color-text-primary)',
                       }}
                     >

@@ -58,7 +58,7 @@ function MetricTile({ tile, index }: { tile: Tile; index: number }) {
       className="h-full"
     >
       <Link href={tile.href} className="group block h-full">
-        <div className="relative h-full flex flex-col rounded-[12px] border border-glass-border bg-bg-primary p-6 md:p-8 transition-[box-shadow] duration-200 ease-in-out group-hover:shadow-[inset_0_0_20px_rgba(196,30,58,0.08)] cursor-pointer">
+        <div className="relative h-full flex flex-col border border-glass-border bg-bg-primary p-6 md:p-8 transition-colors duration-200 ease-in-out group-hover:border-ink-black cursor-pointer">
           <div aria-hidden className="flex gap-1 mb-6">
             <span className="block w-[5px] h-[5px] bg-accent rotate-45 opacity-40" />
             <span className="block w-[5px] h-[5px] bg-accent rotate-45 opacity-25" />

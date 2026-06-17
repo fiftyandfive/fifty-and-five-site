@@ -45,7 +45,7 @@ export function BlogPageContent() {
         </div>
         <h1
           className="font-serif"
-          style={{ fontSize: 'clamp(36px, 5.5vw, 64px)', fontWeight: 900, letterSpacing: '-0.03em', lineHeight: 1.08, maxWidth: 680 }}
+          style={{ fontSize: 'clamp(40px, 6vw, 84px)', fontWeight: 300, letterSpacing: '-0.04em', lineHeight: 1.0, maxWidth: 760 }}
         >
           The Fifty &amp; Five Blog
         </h1>
@@ -98,7 +98,7 @@ export function BlogPageContent() {
         <section className="container-edge pb-12">
           <Link
             href={`/blog/${featured.slug}`}
-            className="group grid md:grid-cols-2 gap-0 rounded-[20px] overflow-hidden transition-all duration-300"
+            className="group grid md:grid-cols-2 gap-0 overflow-hidden transition-colors duration-300 hover:border-ink-black"
             style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--glass-border)' }}
           >
             {/* Image — tall, cover */}
@@ -134,7 +134,7 @@ export function BlogPageContent() {
               </div>
               <h2
                 className="font-serif transition-colors group-hover:text-accent"
-                style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.2, color: 'var(--color-text-primary)' }}
+                style={{ fontSize: 'clamp(22px, 2.8vw, 34px)', fontWeight: 300, letterSpacing: '-0.03em', lineHeight: 1.1, color: 'var(--color-text-primary)' }}
               >
                 {featured.title}
               </h2>
@@ -158,7 +158,7 @@ export function BlogPageContent() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex flex-col rounded-[16px] overflow-hidden transition-all duration-300 hover:border-[rgba(245,242,236,0.2)]"
+                className="group flex flex-col overflow-hidden transition-colors duration-300 hover:border-ink-black"
                 style={{
                   background: 'var(--color-bg-secondary)',
                   border: '1px solid var(--glass-border)',
@@ -201,10 +201,10 @@ export function BlogPageContent() {
                   <h2
                     className="font-serif leading-snug flex-1 transition-colors"
                     style={{
-                      fontSize: 15,
-                      fontWeight: 900,
-                      letterSpacing: '-0.01em',
-                      lineHeight: 1.3,
+                      fontSize: 18,
+                      fontWeight: 300,
+                      letterSpacing: '-0.02em',
+                      lineHeight: 1.25,
                       color: 'var(--color-text-primary)',
                     }}
                   >
@@ -237,13 +237,13 @@ export function BlogPageContent() {
       {/* CTA */}
       <section className="container-edge pb-28 text-center">
         <div
-          className="relative overflow-hidden rounded-[20px] p-10 md:p-14"
+          className="relative overflow-hidden p-10 md:p-14"
           style={{ background: 'var(--color-bg-secondary)', border: '1px solid var(--glass-border)' }}
         >
           <div className="relative z-10">
             <h2
               className="font-serif"
-              style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 900, letterSpacing: '-0.025em', lineHeight: 1.15 }}
+              style={{ fontSize: 'clamp(28px, 4vw, 54px)', fontWeight: 300, letterSpacing: '-0.03em', lineHeight: 1.05 }}
             >
               Want strategy like this for your brand?
             </h2>

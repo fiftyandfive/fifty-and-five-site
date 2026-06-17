@@ -301,12 +301,10 @@ export default function HomePage() {
               >
                 <Link
                   href={`/verticals/${v.slug}`}
-                  className="group relative block aspect-[4/3] w-full overflow-hidden rounded-[20px] transition-transform duration-300 will-change-transform hover:scale-[1.03] focus-visible:scale-[1.03] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="group relative block aspect-[4/3] w-full overflow-hidden transition-transform duration-300 will-change-transform hover:scale-[1.02] focus-visible:scale-[1.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                   aria-label={`Explore ${v.name} vertical`}
                   style={{
                     background: `linear-gradient(135deg, var(--color-${v.colorKey}) 0%, var(--color-${v.colorKey}) 40%, rgba(0,0,0,0.55) 100%)`,
-                    boxShadow:
-                      '0 1px 0 rgba(255,255,255,0.08) inset, 0 10px 30px rgba(0,0,0,0.35)',
                   }}
                 >
                   <div

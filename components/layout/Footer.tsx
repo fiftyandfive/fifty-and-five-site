@@ -4,7 +4,7 @@ import { BrandLogo } from '@/components/ui/BrandLogo';
 
 export function Footer() {
   return (
-    <footer className="relative bg-bg-secondary border-t border-glass-border mt-32">
+    <footer className="relative bg-bg-primary border-t border-glass-border mt-32">
       <div className="container-edge py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-8">
           <div className="md:col-span-1">

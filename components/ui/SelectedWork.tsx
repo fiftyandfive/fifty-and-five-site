@@ -35,10 +35,11 @@ export function SelectedWork() {
             <h2
               className="font-serif"
               style={{
-                fontWeight: 500,
-                fontSize: 'clamp(28px, 3.6vw, 40px)',
+                fontWeight: 300,
+                fontSize: 'clamp(28px, 3.6vw, 48px)',
+                letterSpacing: '-0.03em',
                 lineHeight: 1.05,
-                maxWidth: 640,
+                maxWidth: 680,
               }}
             >
               Campaigns for brands you know, built by the team that ran them.
@@ -62,7 +63,7 @@ export function SelectedWork() {
             <SimpleReveal key={i} delay={Math.min(i * 0.06, 0.3)}>
               <Link href={`/work/${item.slug}`} className="group block">
                 <div
-                  className="relative rounded-[14px] overflow-hidden"
+                  className="relative overflow-hidden"
                   style={{
                     border: '1px solid var(--glass-border)',
                     background: 'var(--color-bg-secondary)',

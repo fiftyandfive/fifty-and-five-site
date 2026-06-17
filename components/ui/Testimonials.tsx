@@ -17,20 +17,20 @@ function QuoteViewport({ t }: { t: Testimonial }) {
   return (
     <motion.div
       ref={ref}
-      className="min-h-[100svh] flex items-center bg-[#F4F1EA]"
+      className="min-h-[100svh] flex items-center bg-bone-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.6 }}
     >
       <div className="container-edge py-24 md:py-32 w-full">
         <div className="max-w-prose mx-auto text-center">
-          <hr className="border-t border-dashed border-[#171511]/20 my-0" />
+          <hr className="border-t border-dashed border-[#000000]/20 my-0" />
 
-          <blockquote className="mt-10 font-serif text-[clamp(28px,5vw,64px)] leading-[1.15] tracking-[-0.02em] text-[#171511]">
+          <blockquote className="mt-10 font-serif text-[clamp(28px,5vw,64px)] leading-[1.15] tracking-[-0.02em] text-[#000000]">
             &ldquo;{t.quote}&rdquo;
           </blockquote>
 
-          <hr className="border-t border-dashed border-[#171511]/20 my-10" />
+          <hr className="border-t border-dashed border-[#000000]/20 my-10" />
 
           <div className="flex flex-col items-center gap-4">
             <Image
@@ -45,11 +45,11 @@ function QuoteViewport({ t }: { t: Testimonial }) {
                 href={t.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[14px] uppercase tracking-[0.12em] text-[#171511] hover:text-accent transition-colors"
+                className="font-mono text-[14px] uppercase tracking-[0.12em] text-[#000000] hover:text-accent transition-colors"
               >
                 {t.author} ↗
               </a>
-              <div className="mt-1 text-[14px] text-[#171511]/60">
+              <div className="mt-1 text-[14px] text-[#000000]/60">
                 {t.title}
               </div>
             </div>
@@ -63,7 +63,7 @@ function QuoteViewport({ t }: { t: Testimonial }) {
             </a>
           </div>
 
-          <hr className="border-t border-dashed border-[#171511]/20 mt-10" />
+          <hr className="border-t border-dashed border-[#000000]/20 mt-10" />
         </div>
       </div>
     </motion.div>
@@ -76,12 +76,12 @@ export function Testimonials() {
       {TESTIMONIALS.map((t) => (
         <QuoteViewport key={t.company} t={t} />
       ))}
-      <div className="bg-[#F4F1EA] py-8 text-center">
+      <div className="bg-bone-white py-8 text-center">
         <Link
           href={CLUTCH_PROFILE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-[12px] uppercase tracking-[0.12em] text-[#171511]/50 hover:text-accent transition-colors"
+          className="font-mono text-[12px] uppercase tracking-[0.12em] text-[#000000]/50 hover:text-accent transition-colors"
         >
           Read all reviews on Clutch ↗
         </Link>
