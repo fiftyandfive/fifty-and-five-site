@@ -33,7 +33,7 @@ export function Navigation() {
       <header
         className={`fixed top-0 inset-x-0 z-40 transition-[background,backdrop-filter,border-color] duration-300 ${
           scrolled
-            ? 'bg-[rgba(10,10,12,0.65)] backdrop-blur-[12px] backdrop-saturate-150 border-b border-glass-border'
+            ? 'bg-[rgba(255,254,247,0.8)] backdrop-blur-[12px] backdrop-saturate-150 border-b border-glass-border'
             : 'bg-transparent border-b border-transparent'
         }`}
       >

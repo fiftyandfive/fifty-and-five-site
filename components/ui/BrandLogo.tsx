@@ -11,7 +11,7 @@ export function BrandLogo({ className = '', height = 26 }: Props) {
 
   return (
     <Image
-      src="/images/brand/logo-white.png"
+      src="/images/brand/logo-cardinal.png"
       alt="Fifty & Five"
       width={width}
       height={height}

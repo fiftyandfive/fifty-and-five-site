@@ -14,10 +14,10 @@ export const GlassCard = forwardRef<HTMLDivElement, Props>(function GlassCard(
     <div
       ref={ref}
       className={[
-        'glass rounded-glass relative overflow-hidden transition-all duration-300',
+        'glass rounded-glass relative overflow-hidden transition-colors duration-300',
         padded ? 'p-8' : '',
         interactive
-          ? 'hover:[background:rgba(255,255,255,0.06)] hover:border-white/[0.12] hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)]'
+          ? 'hover:border-ink-black'
           : '',
         className,
       ]

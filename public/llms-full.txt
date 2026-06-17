@@ -132,7 +132,7 @@ All tiers use the same Senior + AI operating model. No junior account managers.
 
 # Autopilot (Productized Tier)
 
-A productized social media management offering: 20 image posts/month, up to 4 platforms.
+A productized social media management offering: 20 image posts/month, up to 4 platforms. See https://fiftyandfive.com/autopilot
 
 ## Autopilot Starter — $500/mo intro, $999/mo from month 4
 - Instagram only

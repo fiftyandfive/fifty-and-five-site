@@ -46,7 +46,7 @@ export function PlaceholderImage({
       className={`relative w-full overflow-hidden rounded-[inherit] ${className}`}
       style={{
         aspectRatio: aspect,
-        background: `linear-gradient(135deg, ${hex}22 0%, ${hex}0A 40%, #0A0A0C 100%)`,
+        background: `linear-gradient(135deg, ${hex}33 0%, ${hex}14 45%, var(--color-bg-tertiary) 100%)`,
       }}
     >
       <div
@@ -62,7 +62,7 @@ export function PlaceholderImage({
         className="absolute inset-0"
         style={{
           backgroundImage:
-            'linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)',
+            'linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
         }}
       />
