@@ -1659,6 +1659,141 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h3>Should each hotel property have its own social media accounts?</h3>
 <p>Usually, yes. Each property has a distinct personality, location, and guest base. Property-level accounts allow targeted content and local community management. A brand-level account can complement property accounts but shouldn&rsquo;t replace them.</p>
 <p><em>Fifty &amp; Five has managed social media for hospitality brands from boutique hotels to integrated resorts since 2008. <a href="/verticals/hospitality">See the hospitality work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'aeo-how-to-get-cited-by-ai-search': `
+<p>Here&rsquo;s a test. Open ChatGPT or Perplexity and ask it to recommend the best business in your category and city. Watch which names come up &mdash; and which don&rsquo;t.</p>
+
+<p>For most businesses, the answer is sobering: the AI has nothing specific to say about them. Not because they&rsquo;re not good. Because their website gave it nothing to quote.</p>
+
+<p>That gap &mdash; between being <em>findable</em> and being <em>citable</em> &mdash; is the biggest shift in how customers discover businesses since Google launched. And almost nobody is building for it yet. Here&rsquo;s the playbook we use to close it.</p>
+
+<h2>SEO gets you found. AEO gets you quoted.</h2>
+
+<p>Quick definitions, because the second one is new to most people:</p>
+
+<p><strong>SEO (Search Engine Optimization)</strong> is the game you know &mdash; ranking in Google&rsquo;s blue links. Still essential. Not going anywhere.</p>
+
+<p><strong>AEO (Answer Engine Optimization)</strong> is the new game &mdash; getting your business <em>named and cited</em> inside the answers ChatGPT, Perplexity, Google AI Overviews, and Gemini generate. When someone asks an AI &ldquo;who should I hire,&rdquo; AEO determines whether you&rsquo;re in the answer or invisible.</p>
+
+<p>Here&rsquo;s why it matters: AI answer engines don&rsquo;t rank ten links and let the user choose. They synthesize <em>one answer</em> and name a few sources. Coming up in that answer is the new page one. Not being mentioned at all is the new page ten. The businesses that win are the ones that hand the AI clean, structured, verifiable facts it can confidently repeat.</p>
+
+<p>Almost no one does this yet. Which is exactly why it works right now.</p>
+
+<h2>What AEO actually looks like (a real build)</h2>
+
+<p>We recently rebuilt the website for <a href="/work/central-florida-talent">Central Florida Talent</a> &mdash; Orlando&rsquo;s longest-operating SAG-AFTRA franchised talent agency, a 30-year business with credits from <em>Stranger Things</em> to national Disney campaigns. A great agency that, like most, had a website built for an earlier era of the internet.</p>
+
+<p>We rebuilt it on three principles. Each one is repeatable for any local-authority business &mdash; agency, law firm, medical practice, B2B service.</p>
+
+<p><strong>1. A modern, crawlable foundation.</strong> We moved the site to Next.js &mdash; fast, server-rendered, clean markup. AI crawlers and Google both reward speed and structure. This is table stakes, and most sites still fail it.</p>
+
+<p><strong>2. A structured answer layer.</strong> We built FAQ content answering the exact questions real prospects &mdash; and LLMs &mdash; ask: <em>Do you charge upfront fees? Are you SAG-AFTRA franchised? How do I submit?</em> Then we marked it up with <code>FAQPage</code> schema, which literally labels for a machine: &ldquo;here is a question and here is its answer.&rdquo; If your site doesn&rsquo;t explicitly answer the question in a format AI can parse, it can&rsquo;t cite you answering it.</p>
+
+<p><strong>3. Verifiable entity signals.</strong> We published the facts that make a business machine-readable and trustworthy: license IDs, franchise credentials, named production credits, consistent contact info. This is what both Google&rsquo;s E-E-A-T standards and AI models look for to verify you&rsquo;re legitimate before they&rsquo;ll stake an answer on you.</p>
+
+<p>The result: a website built not just to rank, but to be <em>quoted</em> by the AI tools a growing share of customers now use to decide who to hire.</p>
+
+<h2>How to know if you have the same opening</h2>
+
+<p>Three quick gut-checks:</p>
+
+<ul>
+<li><strong>Ask an AI to recommend businesses like yours.</strong> Are you named? If nobody in your category is, the space is wide open.</li>
+<li><strong>Look at your homepage and FAQ.</strong> Is there structured content answering real customer questions &mdash; and is it marked up as schema, or just visual text? AI can only cite what it can parse.</li>
+<li><strong>Check your &ldquo;entity facts.&rdquo;</strong> Are your credentials, licenses, locations, and proof points published as clear, consistent text &mdash; or buried in images and PDFs machines can&rsquo;t read?</li>
+</ul>
+
+<p>If those land wrong, you&rsquo;re not behind &mdash; you&rsquo;re early. The window where AEO is cheap and uncontested won&rsquo;t stay open forever.</p>
+
+<p><em>Fifty &amp; Five is a senior-led boutique social and content agency &mdash; 222+ brands across five continents since 2008. We build brand presence that wins both search and the AI layer above it. <a href="/contact">Let&rsquo;s talk &rarr;</a></em></p>
+
+<h3>How do I check if AI answer engines recommend my business?</h3>
+<p>Open ChatGPT or Perplexity and ask it to recommend the best business in your category and city. If you are not named, your website is not giving AI tools the structured, verifiable content they need to cite you in answers.</p>
+
+<h3>What is the difference between SEO and AEO?</h3>
+<p>SEO ranks you in Google&rsquo;s blue links. AEO (Answer Engine Optimization) gets your business named and cited inside the answers ChatGPT, Perplexity, Google AI Overviews, and Gemini generate. AI engines synthesize one answer and name a few sources, so appearing in that answer is the new page one.</p>
+
+<h3>What does a website need for Answer Engine Optimization?</h3>
+<p>Three things: a modern, crawlable foundation (fast, server-rendered, clean markup), a structured answer layer with FAQ content marked up as schema so machines can parse it, and verifiable entity signals like license IDs, credentials, and consistent contact info that AI models use to confirm legitimacy before citing a source.</p>`,
+  'wine-spirits-social-media-2026': `
+<p>Most wine and spirits brands are running social media the way they ran it in 2017. Pretty bottle shot, vague caption about &ldquo;craftsmanship,&rdquo; a hashtag nobody searches, post on Tuesday because someone read that Tuesday is the day. Then they wonder why the account does nothing for the business.</p>
+
+<p>We have run social for beverage brands since 2008, across more than 30 wine and spirits labels including Kendall-Jackson, Penfolds, and a decade-long Mezzacorona partnership. Here is what actually moves the needle now, and what to stop wasting money on.</p>
+
+<h2>Do wine and spirits brands even need social media?</h2>
+
+<p>Yes, but not for the reason most people think. The job of social for a beverage brand is rarely direct sales. You cannot ship a bottle through a comment section, and three-tier distribution means the person buying on Instagram is not the person you actually sell to. The real job is three things: keeping the brand top of mind so the consumer asks for it by name at the shelf and the bar, giving distributors and trade buyers proof the brand has consumer pull, and feeding the content library your whole marketing operation runs on. A brand with a strong, consistent feed closes distributor meetings faster. That is the receipt that matters.</p>
+
+<h2>What works for a wine label is not what works for a spirits brand</h2>
+
+<p>Wine sells on place, story, and occasion. The mountain, the vintage, the dinner table. Spirits sell on identity, ritual, and the serve. The cocktail, the bar, the night out. Run the same content strategy across both and one of them will always feel off. Wine content should slow down and build aspiration. Spirits content should speed up and show the moment. Get the tempo wrong and the audience scrolls past, no matter how good the photography is.</p>
+
+<h2>The compliance trap that quietly kills beverage accounts</h2>
+
+<p>This is where most brands and most generalist agencies get burned. Alcohol social has rules that other categories do not: mandatory age-gating, platform-specific advertising restrictions, responsibility messaging, and a hard line between trade communication and consumer communication that you cannot blur. Post the wrong creator partnership without age-gating and you can lose the account or draw a regulator&rsquo;s attention. An agency that learned beverage on the job will find this out the expensive way. An agency that has run wine and spirits since 2008 builds it in from the first post. Compliance is not a constraint we work around. It is part of the craft.</p>
+
+<h2>Organic versus paid: where the money actually goes</h2>
+
+<p>The honest split for most beverage brands is this. Organic builds the brand&rsquo;s voice, library, and trade proof. Paid does the heavy lifting on reach and any direct-to-consumer push where it is legal. The mistake is treating them as separate budgets run by separate people. The brands that win use organic to find which messages and creatives land, then put paid behind the winners. If your agency is running organic and paid as two disconnected programs, you are paying twice and learning half as much.</p>
+
+<h2>How to tell if your agency actually knows wine and spirits</h2>
+
+<p>Ask three questions. First, can they name the compliance rules for your category and platforms without looking them up? Second, do they understand three-tier distribution and why a distributor cares about your follower growth? Third, can they show beverage work that ran for years, not a one-off campaign? Long retainers are the tell. Beverage brands that stay with an agency for three, five, ten years do it because that agency holds the brand voice and the institutional memory of what worked. That is not luck. That is the moat.</p>
+
+<h2>The receipts</h2>
+
+<p>We added close to a million followers across the Mezzacorona portfolio over a decade. We have run the Kendall-Jackson portfolio across lifestyle and wine education. On the hospitality side, Barsha landed the LA Times Top 101 Restaurants two years running, plus BuzzFeed, Thrillist, and NBC LA, all organic. Wine and spirits has been our home vertical since 2008, not a line item we added when the category got hot.</p>
+
+<p>If your social feels like it is running on a 2017 playbook, that is fixable. We do the storytelling. You build the business.</p>
+
+<p><em><a href="/contact">See how we would approach your label &rarr;</a></em></p>
+
+<h3>Do wine and spirits brands need social media?</h3>
+<p>Yes. For beverage brands the job of social media is brand recall at the shelf and bar, proof of consumer pull for distributors and trade buyers, and building the content library the rest of marketing runs on, rather than direct sales, which three-tier distribution limits.</p>
+
+<h3>What is the biggest mistake in wine and spirits social media?</h3>
+<p>Ignoring alcohol marketing compliance. Beverage social requires age-gating, platform-specific advertising restrictions, responsibility messaging, and a clear separation between trade and consumer communication. Generalist agencies often learn these rules the expensive way.</p>
+
+<h3>Should wine and spirits brands focus on organic or paid social?</h3>
+<p>Both, connected. Organic builds brand voice, content library, and trade proof and reveals which messages land. Paid scales the winning creatives and handles compliant direct-to-consumer reach. Run separately they cost more and teach less.</p>`,
+  'wine-spirits-influencer-marketing': `
+<p>Influencer marketing for beverage brands is where a lot of money goes to die quietly. A brand pays a creator with a big number next to their name, gets one post, sees a spike of likes from people who will never buy the product, and calls it a campaign. We have structured and run more than 100 creator deals across beverage and lifestyle brands, including programs that put Olympic medalists and names like Natalie Jill in front of the right audiences. Here is what we learned, including the parts that cost us to learn.</p>
+
+<h2>Follower count is the worst way to pick a creator</h2>
+
+<p>The number on a creator&rsquo;s profile tells you almost nothing about whether they will sell your product. We have seen 50,000-follower accounts outperform million-follower accounts on every metric that mattered, because the smaller creator&rsquo;s audience actually trusted them on the category. For wine and spirits, fit beats reach almost every time. A creator whose audience already cares about wine, cocktails, food, or the lifestyle around them will move more product than a celebrity whose followers tune out the second a bottle appears. Pick for relevance and trust, then look at reach.</p>
+
+<h2>The compliance rules apply to the creator, not just the brand</h2>
+
+<p>This is the trap that catches beverage brands the hardest. When a creator posts about your spirit or wine, that post has to follow the same alcohol marketing rules your brand account does. Age-gating. No content that appeals to minors. Responsibility messaging where required. The creator does not automatically know any of this, and if they get it wrong, it is your brand that wears it. Every creator deal we run includes the compliance guardrails in the brief, not as an afterthought. The brands that skip this step are one bad post away from a problem.</p>
+
+<h2>Structure the deal for content rights, not just a post</h2>
+
+<p>The single most common mistake we see is paying a creator for one post and walking away. The post disappears down the feed in 48 hours and you have nothing to show for the spend. The fix is to structure deals so you own usage rights to the content. A good creator deal gives you a library of authentic, on-brand assets you can run as paid ads, repurpose across platforms, and use for months. The post is the smallest part of the value. The rights are the asset.</p>
+
+<h2>Measure what moves the business, not what moves the ego</h2>
+
+<p>Likes feel good and mean little. For beverage creator programs the metrics that matter are saves and shares, which signal genuine intent, traffic to where the consumer can actually find or buy the product, and over time, whether trade buyers and distributors are noticing the brand&rsquo;s momentum. We track creator programs against business signals, not vanity numbers. If a campaign drove a million impressions and zero of them remember the brand name a week later, it did not work, no matter how the screenshot looks.</p>
+
+<h2>Build a roster, not a series of one-night stands</h2>
+
+<p>The brands that win at creator marketing treat it like a long-term roster, not a series of one-off transactions. A creator who works with your brand three or four times becomes a genuine advocate, learns the brand voice, and produces better content each round. We build creator relationships the same way we build client relationships: for the long haul. That is how you go from renting attention to owning a community.</p>
+
+<h2>The receipts</h2>
+
+<p>More than 100 creator deals structured and run. Olympic medalists and established names like Natalie Jill placed in front of audiences that actually converted. An influencer engine built from zero for StreetStrider, the work that earned a CMO&rsquo;s on-record praise. This is not theory. It is what we have done.</p>
+
+<p>Creator marketing works when it is built on fit, compliance, content rights, and real measurement. Get those four right and it becomes one of the most efficient things a beverage brand can do. Get them wrong and it is the fastest way to spend a budget on nothing.</p>
+
+<p><em><a href="/contact">See how we would build your creator program &rarr;</a></em></p>
+
+<h3>How should wine and spirits brands choose influencers?</h3>
+<p>Choose for audience relevance and trust in the category before reach. Smaller creators whose audiences genuinely care about wine, spirits, or the surrounding lifestyle often outperform much larger accounts on the metrics that move product.</p>
+
+<h3>Do alcohol marketing compliance rules apply to influencer posts?</h3>
+<p>Yes. Creator posts about a wine or spirits brand must follow the same rules as the brand&rsquo;s own content, including age-gating, no appeal to minors, and responsibility messaging. The brand is responsible for getting this into every creator brief.</p>
+
+<h3>How do you measure influencer marketing for beverage brands?</h3>
+<p>Track saves and shares as intent signals, traffic to where consumers can find the product, content usage rights gained, and whether trade buyers and distributors notice the brand&rsquo;s momentum, rather than likes and raw impressions.</p>`,
 };
 
 export function getBlogContent(wixSlug: string): string | undefined {
