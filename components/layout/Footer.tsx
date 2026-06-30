@@ -89,23 +89,22 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Oversized outlined wordmark — editorial poster footer */}
-        <div className="mt-16 md:mt-24 overflow-hidden" aria-hidden>
-          <div
-            className="select-none whitespace-nowrap font-serif leading-[0.82] text-center"
-            style={{
-              fontSize: 'clamp(72px, 16.5vw, 280px)',
-              fontWeight: 300,
-              letterSpacing: '-0.04em',
-              color: 'transparent',
-              WebkitTextStroke: '1px rgba(196, 30, 58, 0.38)',
-            }}
-          >
-            Fifty &amp; Five
-          </div>
+        {/* Oversized outlined logo — editorial poster footer, cropped top & bottom */}
+        <div
+          className="mt-16 md:mt-24 overflow-hidden select-none flex items-center justify-center"
+          aria-hidden
+          style={{ height: 'clamp(64px, 13vw, 210px)' }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/brand/logo-outline.svg"
+            alt=""
+            className="block w-full shrink-0"
+            style={{ height: 'auto', opacity: 0.5 }}
+          />
         </div>
 
-        <div className="mt-10 md:mt-12 pt-6 border-t border-glass-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-caption text-text-tertiary">
+        <div className="mt-8 md:mt-10 pt-6 border-t border-glass-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-caption text-text-tertiary">
           <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
           <div>Senior + AI · Since 2008 · 222 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
         </div>
