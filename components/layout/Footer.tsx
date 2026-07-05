@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FOOTER_VERTICALS, NAV_LINKS, SITE } from '@/lib/constants';
 import { BrandLogo } from '@/components/ui/BrandLogo';
+import { NewsletterSignup } from '@/components/ui/NewsletterSignup';
 
 export function Footer() {
   return (
@@ -87,6 +88,11 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* The Receipt — newsletter capture */}
+        <div className="mt-14 pt-10 border-t border-glass-border">
+          <NewsletterSignup source="footer" className="max-w-md" />
         </div>
 
         {/* Oversized outlined logo — editorial poster footer, cropped top & bottom */}

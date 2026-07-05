@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { CASE_STUDIES, getCaseStudy, getNextCaseStudy, VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
+import { CASE_STUDIES, CASE_STUDY_TITLE_HOOKS, getCaseStudy, getNextCaseStudy, VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -23,8 +23,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const cs = getCaseStudy(params.slug);
   if (!cs) return { title: 'Case Study Not Found' };
+  const hook = CASE_STUDY_TITLE_HOOKS[cs.slug];
   return {
-    title: `${cs.client} | Case Study`,
+    title: hook
+      ? { absolute: `${cs.client} Social Media Case Study | ${hook}` }
+      : `${cs.client} | Case Study`,
     description: cs.tagline,
     alternates: {
       canonical: `https://fiftyandfive.com/work/${cs.slug}`,

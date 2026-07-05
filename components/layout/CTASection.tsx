@@ -1,6 +1,7 @@
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { AuroraBackground } from '@/components/ui/AuroraBackground';
 import { MagneticButton } from '@/components/ui/MagneticButton';
+import { SITE } from '@/lib/constants';
 
 type Props = {
   headline?: string;
@@ -29,14 +30,32 @@ export function CTASection({
         </SimpleReveal>
         <SimpleReveal delay={0.35}>
           <div className="mt-10 flex flex-col items-center gap-4">
-            <MagneticButton
-              href={ctaHref}
-              variant="primary"
-              size="large"
-              trackName="Close CTA"
+            <div className="flex flex-wrap items-center justify-center gap-3.5">
+              <MagneticButton
+                href={ctaHref}
+                variant="primary"
+                size="large"
+                trackName="Close CTA"
+              >
+                {ctaLabel}
+              </MagneticButton>
+              {ctaHref !== SITE.calendly && (
+                <MagneticButton
+                  href={SITE.calendly}
+                  variant="secondary"
+                  size="large"
+                  trackName="Close CTA - Run the numbers"
+                >
+                  Run the numbers →
+                </MagneticButton>
+              )}
+            </div>
+            <a
+              href="/audit"
+              className="text-meta text-text-secondary underline underline-offset-4 decoration-ash hover:text-ink-black transition-colors"
             >
-              {ctaLabel}
-            </MagneticButton>
+              Get your free brand audit →
+            </a>
             <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
               Typical response time: same day
             </p>
