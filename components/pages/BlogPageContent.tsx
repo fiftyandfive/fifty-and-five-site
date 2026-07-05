@@ -26,9 +26,10 @@ const CATEGORY_COLORS: Record<string, string> = {
 export function BlogPageContent() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
+  const sortedPosts = [...BLOG_POSTS].sort((a, b) => b.date.localeCompare(a.date));
   const filteredPosts = activeCategory
-    ? BLOG_POSTS.filter((p) => p.category === activeCategory)
-    : BLOG_POSTS;
+    ? sortedPosts.filter((p) => p.category === activeCategory)
+    : sortedPosts;
 
   const featured = filteredPosts[0];
   const rest = filteredPosts.slice(1);

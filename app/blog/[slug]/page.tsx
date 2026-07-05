@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { BLOG_POSTS, getBlogPost } from '@/lib/data/blogPosts';
 import { getBlogContent } from '@/lib/data/blogContent';
 import { MagneticButton } from '@/components/ui/MagneticButton';
+import { SITE } from '@/lib/constants';
 
 // ── Pull quote extraction + injection ───────────────────────────────────────
 function processContent(rawHtml: string): string {
@@ -342,9 +343,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 No pitch deck until we know it&apos;s a fit. Let&apos;s start with a conversation.
               </p>
               <div className="mt-8 flex flex-col items-center gap-3">
-                <MagneticButton href="/contact" variant="primary" size="large">
-                  Get a senior strategist on your brand →
-                </MagneticButton>
+                <div className="flex flex-wrap items-center justify-center gap-3.5">
+                  <MagneticButton href="/contact" variant="primary" size="large">
+                    Get a senior strategist on your brand →
+                  </MagneticButton>
+                  <MagneticButton href={SITE.calendly} variant="secondary" size="large">
+                    Run the numbers →
+                  </MagneticButton>
+                </div>
                 <p
                   className="font-mono uppercase"
                   style={{ fontSize: 11, letterSpacing: '0.12em', color: 'var(--color-text-tertiary)' }}

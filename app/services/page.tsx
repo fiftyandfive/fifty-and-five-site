@@ -340,7 +340,7 @@ export default function ServicesPage() {
             return (
               <Link key={v.slug} href={`/verticals/${v.slug}`}>
                 <div
-                  className="glass rounded-glass px-4 py-5 transition-colors hover:border-white/20"
+                  className="glass rounded-glass px-4 py-5 transition-colors hover:border-ink-black"
                   style={{ borderLeft: `3px solid ${hex}` }}
                 >
                   <div className="font-serif text-[18px] leading-[1.15] tracking-[-0.015em] text-text-primary">

@@ -397,6 +397,26 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 ];
 
+// Short title hooks for case-study <title> tags:
+// "{Client} Social Media Case Study | {hook}"
+export const CASE_STUDY_TITLE_HOOKS: Record<string, string> = {
+  'kendall-jackson': 'Multi-Year Wine Portfolio Partnership',
+  'mezzacorona': 'A Decade-Long Wine Retainer',
+  'blaze-pizza': 'Day Zero to 300+ Locations',
+  'enterprise-holdings': '6 Brands, 2 Markets, One Team',
+  'centennial-real-estate': '9 Properties, 9 Local Voices',
+  'resorts-world': 'Boutique Charm to Mega-Resort',
+  'netgear-arlo': 'Sub-Brand to Standalone Launch',
+  'tupperware': 'Legacy Brand, Modern Feed',
+  'axe-unilever': 'Twitter Takeover, 2010',
+  'polynesian-cultural-center': "Hawaii's #1 Paid Attraction",
+  'microsoft': 'Enterprise Education at Scale',
+  'selectquote-insurance': 'Humanizing Insurance on Social',
+  'barsha': 'LA Times Top 101, Two Years Running',
+  'streetstrider': '100+ Creator Deals From Zero',
+  'central-florida-talent': 'A Website Built for AI Search',
+};
+
 export function getCaseStudy(slug: string) {
   return CASE_STUDIES.find((c) => c.slug === slug);
 }

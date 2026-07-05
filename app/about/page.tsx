@@ -25,8 +25,7 @@ export const metadata: Metadata = {
 
 const TIMELINE: { year: string; text: string }[] = [
   { year: '2007', text: "Southern Wine & Spirits · Corporate Marketing. Built the company's first marketing department. 15% avg. lift in case sales. Zero prior wine experience." },
-  { year: '2008', text: 'First social-media engagements · pre-LLC · pre-Instagram.' },
-  { year: '2009', text: 'Fifty & Five LLC formed (July).' },
+  { year: '2008', text: 'Founded. First social-media engagements · pre-Instagram. (LLC formalized July 2009.)' },
   { year: '2010', text: 'Axe / Unilever product launch, Twitter takeover + experiential activations.' },
   { year: '2012', text: 'Blaze Pizza national social program launches.' },
   { year: '2013', text: 'Hong Kong Tourism Board, first travel-vertical engagement, opens the category.' },
@@ -173,7 +172,7 @@ export default function AboutPage() {
               results.
             </p>
             <p>
-              In July 2009, Lucas founded Fifty &amp; Five. The wine &amp; spirits vertical came
+              Lucas founded Fifty &amp; Five in 2008, formalizing the LLC in July 2009. The wine &amp; spirits vertical came
               first&nbsp;&mdash; 34 brands, anchored by a 10-year run with Gruppo Mezzacorona
               across 5+ brands in their portfolio, adding roughly one million followers. Then hospitality, fitness, tech,
               food &amp; beverage, tourism. Kendall-Jackson. Blaze Pizza across 300+
