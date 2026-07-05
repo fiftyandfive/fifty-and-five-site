@@ -1,5 +1,5 @@
 // Minimal in-memory rate limiter for lead-capture routes.
-// Per-instance only (resets on cold start) — a tripwire against casual
+// Per-instance only (resets on cold start): a tripwire against casual
 // abuse, not a hard guarantee. Keyed by client IP.
 
 type Bucket = { count: number; resetAt: number };
