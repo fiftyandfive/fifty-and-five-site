@@ -50,6 +50,8 @@ export const VERTICALS: Vertical[] = [
     headline: 'Wine & Spirits Social Media Agency',
     subhead:
       '34+ wine and spirits brands managed since 2008. 10-year retainer with Gruppo Mezzacorona across 5+ brands. Multi-year partnership with Kendall-Jackson. This isn\u2019t a vertical we dabble in, it\u2019s one we\u2019ve lived in.',
+    metaDescription:
+      '34+ wine and spirits brands managed since 2008. 10-year Gruppo Mezzacorona retainer across 5+ brands. Multi-year Kendall-Jackson partnership.',
     clients: [
       'Kendall-Jackson',
       'Mezzacorona',
@@ -129,7 +131,7 @@ export const VERTICALS: Vertical[] = [
     subhead:
       'Destination marketing that drives bookings, not just impressions. Senior-led social for resorts, attractions, and travel brands since 2008.',
     metaDescription:
-      'Tourism social media agency. Destination marketing for resorts, attractions, and travel brands — Polynesian Cultural Center, Resorts World, and 222+ brands since 2008.',
+      'Tourism social media agency. Destination marketing for resorts, attractions, and travel brands. Polynesian Cultural Center, Resorts World, 222+ brands since 2008.',
     clients: [
       'Polynesian Cultural Center',
       'Resorts World Bimini',
