@@ -27,6 +27,33 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      {/* ContactPage + BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'ContactPage',
+                name: 'Contact Fifty & Five',
+                description:
+                  'No pitch decks. Same-day response. Book a 30-minute working session with the senior team.',
+                url: 'https://fiftyandfive.com/contact',
+                isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
+                about: { '@id': 'https://fiftyandfive.com/#organization' },
+              },
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
+                  { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://fiftyandfive.com/contact' },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
       <section className="relative overflow-hidden">
         <AuroraBackground />
         <div className="relative z-10 container-edge pt-36 md:pt-44 pb-10">

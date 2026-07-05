@@ -61,6 +61,14 @@ function processContent(rawHtml: string): string {
 }
 
 // ── SEO metadata ────────────────────────────────────────────────────────────
+// Excerpts double as card copy and can run long; clamp the meta description
+// to ~160 chars at a word boundary so Google does not rewrite it.
+function clampDescription(text: string): string {
+  if (text.length <= 160) return text;
+  const cut = text.slice(0, 157);
+  return `${cut.slice(0, cut.lastIndexOf(' '))}…`;
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -70,7 +78,7 @@ export async function generateMetadata({
   if (!post) return {};
   return {
     title: post.title,
-    description: post.excerpt,
+    description: clampDescription(post.excerpt),
     alternates: { canonical: `https://fiftyandfive.com/blog/${post.slug}` },
     openGraph: {
       title: post.title,
@@ -152,6 +160,21 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      {/* BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://fiftyandfive.com/blog' },
+              { '@type': 'ListItem', position: 3, name: post.title, item: `https://fiftyandfive.com/blog/${post.slug}` },
+            ],
+          }),
+        }}
+      />
       {/* Article JSON-LD */}
       <script
         type="application/ld+json"
