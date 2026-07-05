@@ -59,7 +59,7 @@ export function TypewriterHero() {
         </SimpleReveal>
 
         <SimpleReveal y={12} duration={0.5} delay={0.28}>
-          <div className="mt-10 md:mt-12 flex flex-wrap gap-3.5">
+          <div className="mt-10 md:mt-12 flex flex-wrap items-center gap-3.5">
             <MagneticButton
               href={SITE.calendly}
               variant="primary"
@@ -77,6 +77,12 @@ export function TypewriterHero() {
               See the work →
             </MagneticButton>
           </div>
+          <a
+            href="/audit"
+            className="mt-5 inline-block text-meta text-text-secondary underline underline-offset-4 decoration-ash hover:text-ink-black transition-colors"
+          >
+            Get your free brand audit →
+          </a>
         </SimpleReveal>
       </div>
 

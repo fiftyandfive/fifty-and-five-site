@@ -50,6 +50,12 @@ export function CTASection({
                 </MagneticButton>
               )}
             </div>
+            <a
+              href="/audit"
+              className="text-meta text-text-secondary underline underline-offset-4 decoration-ash hover:text-ink-black transition-colors"
+            >
+              Get your free brand audit →
+            </a>
             <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
               Typical response time: same day
             </p>

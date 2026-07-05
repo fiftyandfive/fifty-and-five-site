@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { BLOG_POSTS, getBlogPost } from '@/lib/data/blogPosts';
 import { getBlogContent } from '@/lib/data/blogContent';
 import { MagneticButton } from '@/components/ui/MagneticButton';
+import { NewsletterSignup } from '@/components/ui/NewsletterSignup';
 import { SITE } from '@/lib/constants';
 
 // ── Pull quote extraction + injection ───────────────────────────────────────
@@ -298,6 +299,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             style={{ maxWidth: 700 }}
             dangerouslySetInnerHTML={{ __html: bodyHtml }}
           />
+          <div className="mt-14 pt-10 border-t" style={{ borderColor: 'var(--glass-border)', maxWidth: 700 }}>
+            <NewsletterSignup source="blog" className="max-w-md" />
+          </div>
         </article>
 
         {/* ── CTA ──────────────────────────────────────────────────────────── */}
