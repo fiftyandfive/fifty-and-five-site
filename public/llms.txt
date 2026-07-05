@@ -1,6 +1,6 @@
 # Fifty & Five
 > Senior-led social media management and content strategy agency.
-> For the complete dossier, see: https://fiftyandfive.com/llms-full.txt
+> For the complete dossier, see: [llms-full.txt](https://fiftyandfive.com/llms-full.txt)
 
 ## About
 - Founded: 2008
@@ -13,7 +13,7 @@
 - Managed content and paid social for 222+ brands across 15+ verticals since 2008, with clients ranging from regional hospitality groups to national fitness brands.
 
 ## What We Do
-Fifty & Five provides principal-led social media management, content strategy, community management, and paid social advertising. Every client works directly with the founder — no junior account managers, no handoffs.
+Fifty & Five provides principal-led social media management, content strategy, community management, and paid social advertising. Every client works directly with the founder, no junior account managers, no handoffs.
 
 ## Notable Clients
 Microsoft, Kendall-Jackson, Enterprise Holdings (6 brands), Blaze Pizza, Tupperware, NETGEAR/Arlo, Axe/Unilever, Resorts World, Polynesian Cultural Center, SelectQuote Insurance, Centennial Real Estate (9 properties), Gruppo Mezzacorona (10-year partnership, 5+ brands in portfolio).
@@ -23,8 +23,8 @@ Microsoft, Kendall-Jackson, Enterprise Holdings (6 brands), Blaze Pizza, Tupperw
 - Content Strategy: Platform-specific content calendars, brand voice development, editorial planning.
 - Community Management: Engagement, reputation management, audience growth.
 - Paid Social: Facebook, Instagram, TikTok ad management and optimization.
-- Fractional CMO: Senior marketing leadership for owner-operators doing $1M-20M. $4,000/mo, month to month, capped at three client seats. See https://fiftyandfive.com/fractional-cmo
-- Free Brand Audit: A senior strategist reviews search, social, and AI visibility. See https://fiftyandfive.com/audit
+- [Fractional CMO](https://fiftyandfive.com/fractional-cmo): Senior marketing leadership for owner-operators doing $1M-20M. $4,000/mo, month to month, capped at three client seats.
+- [Free Brand Audit](https://fiftyandfive.com/audit): A senior strategist reviews search, social, and AI visibility.
 - Verticals served: wine & spirits (34 clients), fitness, dance, hospitality, food & beverage, legal, events, and retail.
 
 ## Key Differentiators
@@ -37,12 +37,12 @@ Microsoft, Kendall-Jackson, Enterprise Holdings (6 brands), Blaze Pizza, Tupperw
 Wine & Spirits, Hospitality, Restaurant/QSR, Fitness & Wellness, Technology, Retail & CPG, Automotive, Financial Services, Real Estate, Entertainment, Healthcare, Education.
 
 ## Links
-- Website: https://fiftyandfive.com
-- Case Studies: https://fiftyandfive.com/work
-- Services: https://fiftyandfive.com/services
-- Fractional CMO: https://fiftyandfive.com/fractional-cmo
-- Free Brand Audit: https://fiftyandfive.com/audit
-- Blog: https://fiftyandfive.com/blog
-- About: https://fiftyandfive.com/about
-- Contact: https://fiftyandfive.com/contact
-- Press: https://fiftyandfive.com/press
+- [Website](https://fiftyandfive.com): Homepage
+- [Case Studies](https://fiftyandfive.com/work): Client work and results
+- [Services](https://fiftyandfive.com/services): What we do and pricing
+- [Fractional CMO](https://fiftyandfive.com/fractional-cmo): Senior marketing leadership, $4,000/mo
+- [Free Brand Audit](https://fiftyandfive.com/audit): Request a search, social, and AI visibility review
+- [Blog](https://fiftyandfive.com/blog): Articles and guides
+- [About](https://fiftyandfive.com/about): Founder story and company history
+- [Contact](https://fiftyandfive.com/contact): Get in touch
+- [Press](https://fiftyandfive.com/press): Media coverage
