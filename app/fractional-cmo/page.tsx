@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { MagneticButton } from '@/components/ui/MagneticButton';
@@ -39,19 +40,19 @@ const SEAT_MENU = [
 const FAQS = [
   {
     q: 'Why not hire a full-time marketer?',
-    a: 'A real CMO is $200K+. A coordinator is $65K and needs managing. A seat is senior judgment plus a production system at a third of the cost.',
+    a: 'You could. A real CMO runs $200K+. A coordinator runs $65K and still needs managing. A seat gives you senior judgment plus a production system, at a third of the cost.',
   },
   {
     q: 'What if we already have a marketing person?',
-    a: 'Better. The seat gives them direction, systems, and a senior sounding board.',
+    a: 'Keep them. The seat gives them direction, systems, and a senior sounding board instead of guessing alone.',
   },
   {
     q: 'What results should we expect?',
-    a: 'Month one is foundation fixes you can see. Ninety days in, you have a working system and a scoreboard. Ask our clients: most stay 3+ years.',
+    a: 'Fast, then compounding. Month one is foundation fixes you can see. Ninety days in, you have a working system and a scoreboard. Ask our clients: most stay 3+ years.',
   },
   {
     q: 'Is there a contract?',
-    a: 'Month to month, 30-day notice. The work earns the renewal.',
+    a: 'No lock-in. Month to month, 30-day notice. That is the guarantee: the work has to earn the renewal every single month.',
   },
 ];
 
@@ -157,6 +158,9 @@ export default function FractionalCmoPage() {
             >
               Claim the open seat →
             </MagneticButton>
+            <p className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+              One of three seats. When it&rsquo;s full, it&rsquo;s full.
+            </p>
           </div>
         </SimpleReveal>
       </section>
@@ -169,15 +173,47 @@ export default function FractionalCmoPage() {
               Who this is for
             </div>
             <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
-              Built on referrals. Behind on digital.
+              Built on referrals. Buried in your own calendar.
             </h2>
           </div>
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
-              You built a business on referrals and reputation. Your digital presence is ten years
-              behind your work. You do not need a $200K CMO or another junior hire to manage. You
-              need senior judgment plus a system that ships.
+              You built a business on referrals and reputation, and marketing became the thing you
+              do at 11pm. Your digital presence is ten years behind your work, and every hour you
+              spend fixing it is an hour off running the business. You do not need a $200K CMO or
+              another junior hire to manage. You need senior judgment plus a system that ships,
+              off your plate.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who this is NOT for */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
+              Who this is not for
+            </div>
+            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+              Three kinds of company this isn&rsquo;t built for.
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <ul className="space-y-4 text-body-lg text-text-secondary leading-[1.6] max-w-2xl">
+              <li>
+                Pre-revenue or early-stage. The seat is built for $1M-20M operators with a real
+                business to protect, not a startup still validating an idea.
+              </li>
+              <li>
+                Anyone who wants to manage a marketer day to day. If you want to approve every
+                post, hire a coordinator instead.
+              </li>
+              <li>
+                Anyone who wants content volume without strategy. That is a retainer, not a seat.
+                See <Link href="/services" className="text-accent hover:text-accent-light underline underline-offset-2">Services</Link> for that.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -240,6 +276,15 @@ export default function FractionalCmoPage() {
             Projects (site rebuilds, ad management at scale) priced separately so the seat stays
             strategic.
           </p>
+          <div className="mt-6 pt-6 border-t border-glass-border">
+            <div className="font-mono text-caption uppercase text-accent tracking-[0.12em]">
+              The de-risker
+            </div>
+            <p className="mt-2 text-body text-text-secondary leading-[1.6]">
+              No contract. Thirty days is the whole commitment. If the work is not earning its
+              keep, you walk. No penalty, no hard feelings.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -322,7 +367,7 @@ export default function FractionalCmoPage() {
           A 30-minute call. Your numbers, your bottleneck, and whether the seat makes sense. No
           deck, no pressure.
         </p>
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-col items-center gap-3">
           <MagneticButton
             href={SITE.calendly}
             variant="primary"
@@ -331,6 +376,9 @@ export default function FractionalCmoPage() {
           >
             Claim the open seat →
           </MagneticButton>
+          <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+            One of three seats. When it&rsquo;s full, it&rsquo;s full.
+          </p>
         </div>
       </section>
     </>
