@@ -2,6 +2,101 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'how-often-update-website-seo-aeo': `
+<p>Quick gut check: when was the last time anything on your website actually changed? Not a typo fix &mdash; a real update. New proof, new content, new structure.</p>
+
+<p>If the honest answer is somewhere past six months, you are not just due for a refresh. You are actively losing ground on two fronts at once: traditional search, and the AI answer engines that are quietly taking a bigger share of how people find businesses.</p>
+
+<h2>Why six to twelve months is the real deadline</h2>
+
+<p>Google&rsquo;s crawlers and AI models both use freshness as a trust signal. A site that has not changed in a year reads as either abandoned or irrelevant &mdash; even if the business behind it is thriving. Competitors who publish, update, and add proof points regularly get rewarded with more frequent crawling, more indexed pages, and more chances to be the source an AI model cites. Six to twelve months is not an arbitrary number. It is roughly the point where a stale site starts losing visibility faster than a refreshed one gains it.</p>
+
+<h2>What &ldquo;behind&rdquo; actually looks like</h2>
+
+<p>Three quick checks. If any of these are true, the clock has already run out.</p>
+
+<ul>
+<li><strong>Your last blog post, case study, or news update predates your last haircut.</strong> Static content signals a static business to both Google and AI crawlers.</li>
+<li><strong>Your site does not answer the questions people actually ask.</strong> No FAQ content, no structured Q&amp;A, nothing an AI model can lift and cite directly.</li>
+<li><strong>Your credentials, licenses, and proof points are buried in a PDF or an image.</strong> Machines cannot read what they cannot parse. If it is not plain text, it does not count.</li>
+</ul>
+
+<h2>SEO decay is the part everyone already knows about</h2>
+
+<p>Rankings are not static. Competitors publish, algorithms shift, and a page that ranked well a year ago slowly slides as fresher, more complete pages take its place. This part of the problem is old news &mdash; most businesses at least know they should be doing something about it, even if they are not.</p>
+
+<h2>AEO decay is the part almost nobody is tracking yet</h2>
+
+<p>Answer Engine Optimization &mdash; getting named and cited inside answers from ChatGPT, Perplexity, and Google AI Overviews &mdash; runs on the same freshness logic, and almost no one is watching it. We wrote a full breakdown of <a href="/blog/aeo-how-to-get-cited-by-ai-search">how AEO works and how to get cited</a>, but the short version for this piece: AI models favor sources that are current, structured, and verifiable. A site frozen in place is not just outdated. It is actively being passed over in favor of a competitor&rsquo;s site that got rebuilt or refreshed in the last year.</p>
+
+<h2>The update cycle that actually holds up</h2>
+
+<p>You do not need to rebuild the site every six months. You need to touch it with intent on that cadence:</p>
+
+<ul>
+<li><strong>Every month:</strong> new proof &mdash; a case study, a review, a result, a piece of content that did not exist before.</li>
+<li><strong>Every quarter:</strong> a real look at what is ranking, what is not, and whether your FAQ and structured content still match what people are actually asking.</li>
+<li><strong>Every 6-12 months:</strong> a full audit of the technical foundation &mdash; site speed, crawlability, schema markup, and whether the site is still built the way search and AI engines reward today, not the way they did when it launched.</li>
+</ul>
+
+<p>If nobody owns that cadence, it does not happen. That is usually not a tools problem. It is a senior-judgment problem &mdash; someone has to decide what changes and why, on a schedule, whether or not it feels urgent that week.</p>
+
+<p><em>This is exactly the kind of ongoing ownership a <a href="/fractional-cmo">fractional CMO seat</a> is built to hold. <a href="/contact">Let&rsquo;s look at where your site stands &rarr;</a></em></p>
+
+<h3>How often should a website be updated for SEO?</h3>
+<p>At minimum, every 6 to 12 months for a full technical and content audit, with smaller updates &mdash; new proof, new content &mdash; happening monthly. Sites that go longer than a year without a real update typically see rankings slide as fresher competitor pages take their place.</p>
+
+<h3>What is the difference between SEO decay and AEO decay?</h3>
+<p>SEO decay is a drop in Google search rankings over time as competitors publish fresher, more complete pages. AEO decay is the AI-search equivalent: losing citations inside ChatGPT, Perplexity, and Google AI Overview answers because your site is not current, structured, or verifiable enough for AI models to trust and quote.</p>
+
+<h3>How do I know if my website is falling behind on AI search?</h3>
+<p>Check three things: whether your last real content update was more than six months ago, whether your site has structured FAQ content an AI can quote directly, and whether your credentials and proof points are published as plain text rather than buried in images or PDFs.</p>`,
+  'do-you-need-a-fractional-cmo': `
+<p>Here&rsquo;s a question worth sitting with for a minute: who is actually setting your marketing strategy right now?</p>
+
+<p>If the honest answer is &ldquo;me, at 11pm, between everything else,&rdquo; or &ldquo;whoever posted last,&rdquo; you are not alone. Most $1M-20M companies get to a point where the marketing that built the business &mdash; referrals, reputation, word of mouth &mdash; stops being enough, and nobody senior is driving what comes next.</p>
+
+<p>The instinct is to either hire (a $200K+ CMO, or a $65K coordinator who still needs managing) or keep duct-taping it together yourself. There is a third option most owners have not priced out. Here are seven signs it is worth a look.</p>
+
+<h2>1. Marketing happens after hours, not during them</h2>
+<p>If strategy gets decided at 11pm because it never made it onto the calendar during business hours, that is not a discipline problem. That is a resourcing problem. The business has outgrown &ldquo;whenever I get to it.&rdquo;</p>
+
+<h2>2. You are comparing a $200K salary to doing nothing</h2>
+<p>Those are rarely the only two options, but they are the only two most owners have priced out. A full-time CMO runs $200K+ before benefits and equity. A marketing coordinator runs closer to $65K &mdash; and still needs someone senior telling them what to do. Neither is wrong. Both are worth comparing against a fractional seat before you sign an offer letter.</p>
+
+<h2>3. Your digital presence is ten years behind your work</h2>
+<p>Referral-built businesses are especially prone to this. The work is excellent and the website, social, and search presence have not caught up, because nobody with senior marketing judgment has owned them. Every hour you spend trying to fix that yourself is an hour off running the business.</p>
+
+<h2>4. You have a marketing person, but no marketing direction</h2>
+<p>A coordinator or junior hire can execute. Most cannot set strategy, and should not be expected to. If your in-house person is guessing at priorities instead of working from a plan, the gap is not headcount. It is seniority.</p>
+
+<h2>5. You want strategy, not another person to manage</h2>
+<p>Hiring in-house means onboarding, managing, and eventually replacing someone. A fractional CMO seat is built to skip that: senior judgment on call, without adding a body to the org chart you have to run.</p>
+
+<h2>6. You are doing $1M-20M in revenue</h2>
+<p>Below that, most businesses genuinely do not need senior marketing leadership yet &mdash; the founder can still hold it. Above $20M, most companies have the budget for a full in-house team. In between is where a fractional seat earns its cost.</p>
+
+<h2>7. You want the option to walk away</h2>
+<p>A full-time hire is a long commitment either way it goes. If what you actually want is senior help with the option to leave in 30 days if it is not working, that rules out a hire &mdash; and it rules out any fractional arrangement that locks you into an annual contract.</p>
+
+<h2>What a fractional CMO seat actually includes</h2>
+<p>Worth being precise here, because &ldquo;fractional CMO&rdquo; gets used loosely. At Fifty &amp; Five, a seat is an advisory relationship, not embedded production: a monthly strategy session, a written brief on what moved and what is next, one prioritized recommendation scoped and ready to execute, and direct text access in between. Hands-on execution &mdash; content production, ad management, website builds &mdash; is real work, priced and scoped separately, so the seat stays strategic instead of turning into another vendor bill in disguise.</p>
+
+<h2>What it costs</h2>
+<p>Seats run $4,000-$6,500 a month, scoped to the business and how much oversight it needs &mdash; roughly a third of a full-time CMO&rsquo;s salary, on a month-to-month basis with no contract. <strong>We cap it at three seats at a time, because senior attention does not scale past that without becoming the exact problem a fractional seat is supposed to solve.</strong></p>
+
+<p>None of this replaces a marketing person you already trust &mdash; it gives them direction. And it is not for everyone: pre-revenue companies, anyone who wants to approve every post, and anyone who wants content volume without strategy are better served elsewhere.</p>
+
+<p><em>If two or more of the seven signs above sound familiar, it is worth a conversation. <a href="/fractional-cmo">See how the seat works &rarr;</a></em></p>
+
+<h3>What does a fractional CMO cost compared to a full-time hire?</h3>
+<p>A full-time CMO typically costs $200,000 or more per year before benefits and equity. A fractional CMO seat runs $4,000-$6,500 per month &mdash; roughly a third of the cost &mdash; on a month-to-month basis with no long-term contract.</p>
+
+<h3>What size company needs a fractional CMO?</h3>
+<p>Fractional CMOs are typically the best fit for owner-operated companies doing $1M to $20M in annual revenue &mdash; large enough that marketing run on instinct is costing real money, but not yet large enough to justify a full in-house executive team.</p>
+
+<h3>Does a fractional CMO replace my marketing coordinator or in-house hire?</h3>
+<p>No. A fractional CMO adds senior strategic direction; your existing marketing person still executes. Most companies keep their in-house hire and use the fractional seat to give them a plan and a senior sounding board instead of guessing alone.</p>`,
   'hollywood-ai-production-costs-branded-content': `
 <p>A <a href="https://moneywise.com/life/entertainment/hollywood-ai-actors-entertainment-production-costs" target="_blank" rel="noopener">Moneywise investigation</a> published this month lays out the numbers Hollywood has been whispering about for two years: Jeffrey Katzenberg&rsquo;s WndrCo is now producing 30-minute shows for <strong>$3,000</strong> using AI. The same format used to cost <strong>$300,000</strong> with human actors. That&rsquo;s a 99% cost reduction.</p>
 <p>Ben Affleck sold his AI startup InterPositive to Netflix for up to <strong>$600 million</strong>. Martin Scorsese is advising Black Forest Labs, valued at <strong>$3.25 billion</strong>. Short-form AI-produced content has grown into a <strong>$1.3 billion industry</strong>. And the studios cutting costs the fastest &mdash; Disney, Sony, Bad Robot &mdash; are simultaneously cutting staff by the thousands.</p>

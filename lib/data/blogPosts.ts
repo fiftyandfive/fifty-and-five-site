@@ -1,4 +1,4 @@
-// Blog posts: 43 total (29 from Wix + 14 new)
+// Blog posts: 45 total (29 from Wix + 16 new)
 // Run `node add-blog-section.mjs` to regenerate
 
 export interface BlogPost {
@@ -13,6 +13,26 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: "How Often Should You Update Your Website for SEO and AEO?",
+    slug: 'how-often-update-website-seo-aeo',
+    wixSlug: 'how-often-update-website-seo-aeo',
+    date: '2026-07-08',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=85',
+    excerpt: "If your website hasn't changed in 6-12 months, it's not just stale — it's losing ground on Google and disappearing from AI answer engines. The real update cycle, and what to check first.",
+    category: 'AI & Automation',
+  },
+  {
+    title: "Do You Need a Fractional CMO? 7 Signs It's Time",
+    slug: 'do-you-need-a-fractional-cmo',
+    wixSlug: 'do-you-need-a-fractional-cmo',
+    date: '2026-07-06',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=85',
+    excerpt: "Not every $1M-20M company needs a $200K CMO. Here are 7 clear signs your marketing has outgrown DIY — and what a fractional seat actually solves that a coordinator can't.",
+    category: 'Agency',
+  },
   {
     title: "Hollywood's $300K-to-$3K Problem Is Already Here for Branded Content",
     slug: 'hollywood-ai-production-costs-branded-content',
