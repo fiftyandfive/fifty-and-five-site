@@ -135,17 +135,18 @@ export default function FractionalCmoPage() {
         <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
           Fractional CMO
         </div>
+        {/* SWAP IN ONCE SEAT 1 SIGNS: "One seat filled. Two are open." */}
         <AnimatedHeadline
           as="h1"
-          text="I run marketing for three companies. One seat is open."
+          text="I only take on three companies at a time. Seats are open."
           className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-4xl"
           stagger={0.04}
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl">
             Senior marketing leadership for owner-operators doing $1M-20M. Strategy, oversight,
-            and a full delivery system. Not another vendor. Your marketing department, run by the
-            operator behind 222 brands.
+            and judgment on call, not another vendor to manage. Your marketing department, run by
+            the operator behind 222 brands.
           </p>
         </SimpleReveal>
         <SimpleReveal delay={0.4}>
