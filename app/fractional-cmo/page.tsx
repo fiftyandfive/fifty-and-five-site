@@ -10,14 +10,14 @@ import { SITE } from '@/lib/constants';
 export const metadata: Metadata = {
   title: { absolute: 'Fractional CMO for $1M-20M Companies | Fifty & Five' },
   description:
-    'Senior marketing leadership for owner-operators doing $1M-20M. $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
+    'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
   alternates: {
     canonical: 'https://fiftyandfive.com/fractional-cmo',
   },
   openGraph: {
     title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
     description:
-      'Senior marketing leadership for owner-operators doing $1M-20M. $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
+      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
     url: 'https://fiftyandfive.com/fractional-cmo',
     type: 'website',
   },
@@ -25,22 +25,21 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
     description:
-      'Senior marketing leadership for owner-operators doing $1M-20M. $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
+      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
   },
 };
 
 const SEAT_MENU = [
-  { when: 'Week 1', what: 'performance pull and monthly scorecard across search, social, ads, and AI visibility' },
-  { when: 'Week 2', what: 'one strategic move shipped (campaign, offer, partnership push)' },
-  { when: 'Week 3', what: 'content and asset drop through our production system' },
-  { when: 'Week 4', what: 'monthly report and next-month plan, in plain numbers' },
-  { when: 'Anytime', what: 'a senior operator one text away' },
+  { when: 'Every month', what: 'a 60-90 minute strategy session. Not a status meeting.' },
+  { when: 'Every month', what: "a written Marketing Command Brief: what moved, what I'm flagging, what's next." },
+  { when: 'Every month', what: 'one prioritized strategic recommendation, scoped and ready to execute.' },
+  { when: 'On call', what: 'direct text access to me. Not a support queue.' },
 ];
 
 const FAQS = [
   {
     q: 'Why not hire a full-time marketer?',
-    a: 'You could. A real CMO runs $200K+. A coordinator runs $65K and still needs managing. A seat gives you senior judgment plus a production system, at a third of the cost.',
+    a: 'You could. A real CMO runs $200K+. A coordinator runs $65K and still needs managing. A seat gives you senior judgment on call, at a third of the cost.',
   },
   {
     q: 'What if we already have a marketing person?',
@@ -96,7 +95,7 @@ export default function FractionalCmoPage() {
                 '@type': 'WebPage',
                 name: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
                 description:
-                  'Senior marketing leadership for owner-operators doing $1M-20M. $4,000/mo, month to month. Run by the operator behind 222 brands.',
+                  'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands.',
                 url: 'https://fiftyandfive.com/fractional-cmo',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/fractional-cmo#service' },
@@ -108,13 +107,18 @@ export default function FractionalCmoPage() {
                 category: 'Marketing Leadership',
                 name: 'Fractional CMO',
                 description:
-                  'Senior marketing leadership for owner-operators doing $1M-20M. Strategy, oversight, and a full delivery system. Capped at three seats.',
+                  'Senior marketing leadership for owner-operators doing $1M-20M. Strategy, oversight, and judgment on call. Capped at three seats.',
                 provider: { '@id': 'https://fiftyandfive.com/#organization' },
                 offers: {
                   '@type': 'Offer',
-                  price: '4000',
-                  priceCurrency: 'USD',
-                  description: '$4,000 per month, month to month. Projects priced separately.',
+                  priceSpecification: {
+                    '@type': 'PriceSpecification',
+                    minPrice: '4000',
+                    maxPrice: '6500',
+                    priceCurrency: 'USD',
+                  },
+                  description:
+                    '$4,000-$6,500 per month, scoped to your business, month to month. Projects priced separately.',
                 },
                 areaServed: [
                   { '@type': 'Country', name: 'United States' },
@@ -157,7 +161,7 @@ export default function FractionalCmoPage() {
               size="large"
               trackName="Fractional CMO Hero CTA"
             >
-              Claim the open seat →
+              Claim an open seat →
             </MagneticButton>
             <p className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
               One of three seats. When it&rsquo;s full, it&rsquo;s full.
@@ -182,8 +186,7 @@ export default function FractionalCmoPage() {
               You built a business on referrals and reputation, and marketing became the thing you
               do at 11pm. Your digital presence is ten years behind your work, and every hour you
               spend fixing it is an hour off running the business. You do not need a $200K CMO or
-              another junior hire to manage. You need senior judgment plus a system that ships,
-              off your plate.
+              another junior hire to manage. You need senior judgment on call, off your plate.
             </p>
           </div>
         </div>
@@ -270,8 +273,20 @@ export default function FractionalCmoPage() {
             Pricing
           </div>
           <div className="mt-5 flex flex-wrap items-baseline gap-3">
-            <span className="font-serif text-h1 tracking-[-0.03em] text-text-primary">$4,000</span>
-            <span className="text-body-lg text-text-secondary">/mo. Month to month.</span>
+            <span className="font-serif text-h1 tracking-[-0.03em] text-text-primary">$4,000-$6,500</span>
+            <span className="text-body-lg text-text-secondary">
+              /mo, scoped to your business and how much oversight you need. Month to month.
+            </span>
+          </div>
+          <div className="mt-6 pt-6 border-t border-glass-border">
+            <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+              Not included in the seat
+            </div>
+            <p className="mt-2 text-body text-text-secondary leading-[1.6]">
+              Hands-on execution: content production, ad management, website builds. That is real
+              work, priced and scoped separately so the seat stays strategic advice, not another
+              vendor bill in disguise.
+            </p>
           </div>
           <p className="mt-5 text-body-lg text-text-secondary leading-[1.7]">
             Projects (site rebuilds, ad management at scale) priced separately so the seat stays
@@ -375,7 +390,7 @@ export default function FractionalCmoPage() {
             size="large"
             trackName="Fractional CMO Close CTA"
           >
-            Claim the open seat →
+            Claim an open seat →
           </MagneticButton>
           <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
             One of three seats. When it&rsquo;s full, it&rsquo;s full.
