@@ -181,14 +181,15 @@ A productized social media management offering: 20 image posts/month, up to 4 pl
 - Ongoing optimization of brand citations in AI-generated answers
 - Continuous monitoring and improvement of how AI models reference and recommend the brand
 
-## Fractional CMO: $4,000/mo
+## Fractional CMO: $4,000-$6,500/mo
 - Senior marketing leadership for owner-operators doing $1M-20M revenue
+- Advisory seat, scoped to the business and how much oversight it needs
 - Month to month, 30-day notice; capped at three client seats so senior attention holds
-- Week 1: performance pull and monthly scorecard across search, social, ads, and AI visibility
-- Week 2: one strategic move shipped (campaign, offer, partnership push)
-- Week 3: content and asset drop through the production system
-- Week 4: monthly report and next-month plan in plain numbers
-- Projects (site rebuilds, ad management at scale) priced separately
+- Every month: a 60-90 minute strategy session (not a status meeting)
+- Every month: a written Marketing Command Brief covering what moved, what is flagged, what is next
+- Every month: one prioritized strategic recommendation, scoped and ready to execute
+- On call: direct text access to the principal, not a support queue
+- Not included: hands-on execution (content production, ad management, website builds) is priced and scoped separately so the seat stays strategic
 - Details: [Fractional CMO](https://fiftyandfive.com/fractional-cmo)
 
 ## Free Brand Audit
