@@ -2,6 +2,138 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'social-media-automotive-mobility-brands': `
+<p>Here is the thing most agencies miss about automotive and mobility brands: you are almost never running one brand. You are running a portfolio. A parent company, a family of sub-brands, regional entities, each with its own audience and competitive set, all under one roof and one budget.</p>
+
+<p>Get that wrong and every brand ends up sounding like the same generic rental-car chain. Get it right and each one holds its own identity while the whole portfolio runs lean. We know this because we did it.</p>
+
+<h2>The multi-brand problem nobody prices in</h2>
+
+<p>We ran social for <a href="/work/enterprise-holdings">Enterprise Holdings</a> across six distinct brands under one corporate umbrella &mdash; Enterprise, National, Alamo, and related entities &mdash; spanning US and LATAM markets. Six brands. Two markets. Distinct voices. One team.</p>
+
+<p>Each brand had its own audience, tone, and competitive position. National speaks to the frequent business traveler. Alamo speaks to the leisure and family market. Enterprise carries the broadest reach. None of them could afford to sound interchangeable, because the moment a portfolio&rsquo;s brands blur together, the parent company is paying multiple times for one voice.</p>
+
+<h2>Why the &ldquo;big agency pod&rdquo; is the wrong answer here</h2>
+
+<p>The instinct for a multi-brand automotive account is to throw bodies at it &mdash; a 20-person agency pod, one junior team per brand. That is how you get inconsistency, drift, and a coordination tax that eats the budget before a single post ships.</p>
+
+<p>The Enterprise engagement is the single strongest proof we have that the opposite model works: enterprise-scale complexity &mdash; six brands, multiple markets, distinct voices &mdash; handled by a senior team without the overhead of a large agency pod. <strong>Complexity does not require headcount. It requires senior judgment that holds the whole portfolio in view at once.</strong></p>
+
+<h2>What actually works for automotive and mobility social</h2>
+
+<p>Three things separate automotive brands that win on social from the ones that post car photos into the void:</p>
+
+<ul>
+<li><strong>A distinct voice per brand, enforced from the top.</strong> Not a shared template with the logo swapped. Each brand needs a documented tone and a person senior enough to protect it across markets.</li>
+<li><strong>Market-aware content, not just translated content.</strong> Running US and LATAM is not a translation job. The competitive set, the cultural references, and the platform mix differ. Content built for one market and pushed to another reads as exactly what it is.</li>
+<li><strong>Portfolio-level reporting.</strong> The parent company does not care about six separate dashboards. It cares whether the portfolio is moving. Reporting has to roll up.</li>
+</ul>
+
+<h2>How to vet an agency for a multi-brand automotive account</h2>
+
+<p>Ask two questions. First: can they show multi-brand work that actually ran, not a one-brand case study with a promise to scale? Second: who holds the voice &mdash; a senior operator, or a rotating cast of juniors? For a portfolio account, continuity of senior judgment is the whole game. It is the difference between six brands that feel distinct and six brands that feel like one tired chain.</p>
+
+<p>We have run social since 2008 for 222+ brands across five continents, and the Enterprise portfolio remains the proof point that this model scales past boutique work without losing what makes boutique work good.</p>
+
+<p><em>Running a portfolio of automotive or mobility brands? <a href="/verticals/automotive">See how we approach the category &rarr;</a> or <a href="/contact">start a conversation &rarr;</a></em></p>
+
+<h3>Can one agency manage multiple automotive brands at once?</h3>
+<p>Yes, and for a brand portfolio it is often better than splitting the work across teams. We ran six distinct brands &mdash; Enterprise, National, Alamo and related entities &mdash; across US and LATAM markets with a single senior team, keeping each brand&rsquo;s voice distinct while rolling reporting up to the parent company.</p>
+
+<h3>Why do automotive sub-brands need different social strategies?</h3>
+<p>Each sub-brand serves a different audience and competitive set &mdash; business travelers, leisure and family markets, and broad-reach segments do not respond to the same content. When sub-brands share one generic voice, the parent company pays multiple times for a single undifferentiated presence.</p>
+
+<h3>Does managing a multi-brand account require a large agency team?</h3>
+<p>No. The Enterprise Holdings engagement showed that enterprise-scale complexity &mdash; six brands, multiple markets, distinct voices &mdash; can be handled by a senior team without a 20-person agency pod. Complexity is a judgment problem, not a headcount problem.</p>`,
+  'fractional-cmo-vs-full-time-vs-agency-cost': `
+<p>If your marketing has outgrown running on instinct, you have four real options: hire a full-time CMO, hire a coordinator, retain an agency, or take a fractional CMO seat. Most owners only ever price out the first two, decide both are wrong, and go back to doing it themselves at 11pm.</p>
+
+<p>Here is the honest comparison, costs and trade-offs, no sales spin.</p>
+
+<h2>Option 1: The full-time CMO</h2>
+
+<p>A real chief marketing officer runs <strong>$200,000 or more per year</strong> before benefits, bonus, and equity. For that, you get senior strategy and full ownership &mdash; but you also get a fixed cost, a hire to manage, and, for most $1M-20M companies, more executive than the business can keep busy. It is the right answer above a certain size. Below it, you are buying a seat you cannot fill.</p>
+
+<h2>Option 2: The marketing coordinator</h2>
+
+<p>A coordinator runs closer to <strong>$65,000</strong>. Affordable, and genuinely useful &mdash; for execution. The catch: a coordinator executes a plan, they do not set one. If nobody senior is handing them strategy and priorities, you have paid $65K for someone to guess, and the guessing shows. This is the most common expensive mistake we see: a junior hire asked to do a senior job.</p>
+
+<h2>Option 3: The agency retainer</h2>
+
+<p>An agency gives you a team and production capacity. Good ones deliver real work; the trade-off is that you are often one account among many, sometimes handed to junior staff after a senior pitch. Retainers make sense when you need volume &mdash; content produced, campaigns run, paid managed. We run those too, from $3,000/mo. But a retainer is production. It is not the same as having senior judgment that owns your strategy.</p>
+
+<h2>Option 4: The fractional CMO seat</h2>
+
+<p>A <a href="/fractional-cmo">fractional CMO seat</a> runs <strong>$4,000-$6,500 per month</strong>, scoped to the business and how much oversight it needs &mdash; roughly a third of a full-time CMO&rsquo;s salary. It is an advisory relationship, not embedded production: a monthly strategy session, a written brief on what moved and what is next, one prioritized recommendation scoped and ready to execute, and direct text access in between.</p>
+
+<p>The point is not that it is cheaper. It is that it is the right <em>shape</em> for a company that needs senior direction without needing &mdash; or being able to fill &mdash; a full-time executive. <strong>You are buying judgment, not headcount.</strong> Hands-on execution is priced separately, so the seat stays strategic instead of quietly turning into another vendor bill.</p>
+
+<h2>The comparison, side by side</h2>
+
+<ul>
+<li><strong>Full-time CMO</strong> &mdash; $200K+/yr. Full ownership, fixed cost, a hire to manage. Fits companies past roughly $20M.</li>
+<li><strong>Coordinator</strong> &mdash; ~$65K/yr. Executes, does not strategize. Needs senior direction to be worth it.</li>
+<li><strong>Agency retainer</strong> &mdash; from $3,000/mo. Team and production capacity. Best when you need volume shipped.</li>
+<li><strong>Fractional seat</strong> &mdash; $4,000-$6,500/mo, month to month. Senior strategy on call, no body to manage. Fits $1M-20M owner-operators.</li>
+</ul>
+
+<h2>Which one fits you</h2>
+
+<p>If you are doing $1M-20M, built the business on referrals, and the gap is <em>direction</em> rather than <em>hands</em> &mdash; nobody senior owning where marketing goes next &mdash; the fractional seat is usually the tightest fit. If you already have execution handled and just need more of it, an agency retainer. If you are past $20M with the budget for a full team, hire the CMO. And a coordinator is a fine addition to any of these, as long as someone senior is telling them what to do.</p>
+
+<p>None of these are mutually exclusive. The most common setup we see work: a fractional seat setting strategy, a coordinator or agency executing it, and the owner finally out of the 11pm marketing shift.</p>
+
+<p><em>Not sure which fits? The first conversation sorts it out. <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/services">compare it against our retainers &rarr;</a></em></p>
+
+<h3>How much does a fractional CMO cost vs. a full-time CMO?</h3>
+<p>A full-time CMO costs $200,000 or more per year before benefits and equity. A fractional CMO seat runs $4,000-$6,500 per month &mdash; roughly a third of the cost &mdash; on a month-to-month basis, because it provides senior strategic direction rather than a full-time executive hire you have to manage.</p>
+
+<h3>Is a fractional CMO better than an agency?</h3>
+<p>They solve different problems. An agency provides a team and production capacity &mdash; content, campaigns, paid media. A fractional CMO provides senior strategy and direction without embedded execution. Many companies use both: the fractional seat sets strategy and an agency or in-house coordinator executes it.</p>
+
+<h3>What size company should hire a fractional CMO instead of a full-time one?</h3>
+<p>Owner-operated companies doing roughly $1M to $20M in revenue are the best fit. Below that, the founder can usually still hold marketing themselves; above roughly $20M, a company typically has the budget and workload to justify a full-time CMO and in-house team.</p>`,
+  'social-media-retail-cpg-brands': `
+<p>Retail and consumer packaged goods brands play a game most other categories do not: you are fighting for shelf recall and cultural relevance at the same time. The customer has to remember you in the aisle <em>and</em> feel like you belong in their feed. Miss either one and the product moves slower, no matter how good it is.</p>
+
+<p>The two hardest versions of this are the heritage brand that needs to feel current without alienating its base, and the launch that needs cultural impact from a standing start. We have run both.</p>
+
+<h2>The heritage problem: current without breaking what people love</h2>
+
+<p>We modernized the social presence of <a href="/work/tupperware">Tupperware</a> &mdash; a 75-year-old consumer brand &mdash; for contemporary audiences without breaking what the existing community already loved. That last part is the whole challenge.</p>
+
+<p>The instinct with a legacy brand is to blow it up and start over, chasing a younger audience with content that has nothing to do with the brand&rsquo;s equity. That torches decades of loyalty for a shot at relevance. The actual job is to bridge: honor 75 years of brand equity while telling stories in a social-first way for a generation that grew up on Instagram instead of Tupperware parties. <strong>Balance nostalgia with relevance. Respect what the legacy community loves while giving new audiences a reason to follow.</strong> That is a judgment call made a hundred times a month, not a template.</p>
+
+<h2>The launch problem: cultural impact from a standing start</h2>
+
+<p>The other end of the spectrum is launching something new and needing it to land culturally, fast. We ran one of the earliest integrated social-plus-experiential campaigns for a major CPG brand &mdash; a Twitter takeover plus experiential pop-ups plus barber-shop brand activations for <a href="/work/axe-unilever">Axe / Unilever</a>.</p>
+
+<p>This was at a moment when &ldquo;experiential marketing&rdquo; was not yet an industry buzzword and social platforms were still figuring out what brands were even allowed to do. Unilever-level execution, and a credential that predates most of the agencies now pitching the same playbook. The lesson that carried forward: for CPG, social works best when it is not trapped on the screen. The feed and the physical activation feed each other.</p>
+
+<h2>What retail and CPG brands actually need from social</h2>
+
+<ul>
+<li><strong>Shelf recall, not just engagement.</strong> The job of a CPG feed is often to make someone remember you at the point of purchase. Vanity metrics that never translate to the aisle are a distraction.</li>
+<li><strong>A voice that respects existing equity.</strong> Especially for heritage brands, the community you already have is worth more than the one you are chasing. Modernize the delivery, not the soul.</li>
+<li><strong>Integration with the physical world.</strong> Retail and CPG live on shelves, in stores, at events. The brands that win treat social and experiential as one motion, not two budgets.</li>
+</ul>
+
+<h2>How to vet an agency for a retail or CPG brand</h2>
+
+<p>Ask whether they have modernized a legacy brand without torching its base, and whether they have run social that connected to something physical &mdash; a shelf, a store, an activation. Plenty of agencies can make a pretty feed. Far fewer understand that for CPG, the feed is a means to shelf recall and cultural staying power, not the end itself.</p>
+
+<p>We have done this since 2008, across 222+ brands including Tupperware, Axe/Unilever, and NETGEAR&rsquo;s Arlo through its evolution from a product line to an NYSE-listed standalone brand. Heritage or launch, the principle holds: respect the equity, connect to the real world, and make people remember you where it counts.</p>
+
+<p><em>Building a retail or CPG brand&rsquo;s presence? <a href="/verticals/retail-cpg">See how we approach the category &rarr;</a> or <a href="/contact">start a conversation &rarr;</a></em></p>
+
+<h3>How is social media for CPG brands different from other industries?</h3>
+<p>CPG social has to drive shelf recall and cultural relevance at once &mdash; the customer needs to remember the brand at the point of purchase and feel it belongs in their feed. It works best when integrated with the physical world (stores, shelves, experiential activations) rather than treated as a screen-only channel.</p>
+
+<h3>How do you modernize a legacy consumer brand on social media without losing its community?</h3>
+<p>By bridging rather than replacing: honor the brand&rsquo;s existing equity while telling stories in a social-first format for newer audiences. We did this for Tupperware, a 75-year-old brand, balancing nostalgia with relevance so the legacy community stayed while new audiences had a reason to follow.</p>
+
+<h3>Should retail and CPG brands combine social with experiential marketing?</h3>
+<p>Yes. For CPG especially, social and experiential reinforce each other. One of our earliest campaigns for Axe/Unilever combined a Twitter takeover with experiential pop-ups and barber-shop activations &mdash; an integrated approach that predated the trend and still outperforms screen-only strategies.</p>`,
   'how-often-update-website-seo-aeo': `
 <p>Quick gut check: when was the last time anything on your website actually changed? Not a typo fix &mdash; a real update. New proof, new content, new structure.</p>
 
