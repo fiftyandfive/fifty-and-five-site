@@ -1,4 +1,4 @@
-// Blog posts: 45 total (29 from Wix + 16 new)
+// Blog posts: 48 total (29 from Wix + 19 new)
 // Run `node add-blog-section.mjs` to regenerate
 
 export interface BlogPost {
@@ -13,6 +13,36 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: "Social Media for Automotive and Mobility Brands: A Multi-Brand Playbook",
+    slug: 'social-media-automotive-mobility-brands',
+    wixSlug: 'social-media-automotive-mobility-brands',
+    date: '2026-07-14',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=85',
+    excerpt: "Automotive and mobility brands rarely run just one brand, they run a portfolio. Lessons from managing six brands across US and LATAM markets under one corporate umbrella, without sounding like a generic rental-car chain.",
+    category: 'Social Media Strategy',
+  },
+  {
+    title: "Fractional CMO vs. Full-Time vs. Agency: The Real Cost Comparison",
+    slug: 'fractional-cmo-vs-full-time-vs-agency-cost',
+    wixSlug: 'fractional-cmo-vs-full-time-vs-agency-cost',
+    date: '2026-07-12',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=85',
+    excerpt: "A $200K full-time CMO, a $65K coordinator, an agency retainer, or a fractional seat? A straight breakdown of what each actually costs, what you get, and which fits a $1M-20M company, no sales spin.",
+    category: 'Agency',
+  },
+  {
+    title: "Social Media for Retail and CPG Brands: Heritage Meets the Feed",
+    slug: 'social-media-retail-cpg-brands',
+    wixSlug: 'social-media-retail-cpg-brands',
+    date: '2026-07-10',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1600&q=85',
+    excerpt: "Retail and CPG brands live or die on shelf recall and cultural relevance. Lessons from modernizing a 75-year-old consumer brand and running early integrated social-plus-experiential campaigns for a major CPG name.",
+    category: 'Social Media Strategy',
+  },
   {
     title: "How Often Should You Update Your Website for SEO and AEO?",
     slug: 'how-often-update-website-seo-aeo',
