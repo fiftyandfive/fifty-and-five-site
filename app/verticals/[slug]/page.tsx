@@ -7,8 +7,6 @@ import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
-import { BrandColorHero } from '@/components/ui/BrandColorHero';
-import { CASE_STUDIES } from '@/lib/data/caseStudies';
 import { CTASection } from '@/components/layout/CTASection';
 
 export function generateStaticParams() {
@@ -215,23 +213,18 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
             {studies.map((cs) => (
               <Link key={cs.slug} href={`/work/${cs.slug}`} className="block h-full group">
                 <TiltCard tiltStrength={4} className="h-full">
-                  <GlassCard padded={false} className="h-full flex flex-col">
-                    <div className="p-6 flex items-center justify-between gap-4">
-                      <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
-                      <DurationBadge>{cs.durationBadge}</DurationBadge>
-                    </div>
-                    <div className="px-6">
-                      <BrandColorHero
-                        client={cs.client}
-                        verticalLabel={cs.verticalLabel}
-                        verticalColor={cs.verticalColor}
-                        caseNumber={String(CASE_STUDIES.findIndex((x) => x.slug === cs.slug) + 1).padStart(2, '0')}
-                        aspect="16/9"
-                        variant="compact"
-                      />
-                    </div>
-                    <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
+                  <GlassCard padded={false} className="h-full flex overflow-hidden">
+                    <div
+                      className="w-1.5 shrink-0 self-stretch transition-all duration-300 group-hover:w-2"
+                      style={{ background: VERTICAL_COLOR_HEX[cs.verticalColor] ?? '#C41E3A' }}
+                      aria-hidden
+                    />
+                    <div className="flex-1 flex flex-col p-6">
+                      <div className="flex items-center justify-between gap-4">
+                        <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
+                        <DurationBadge>{cs.durationBadge}</DurationBadge>
+                      </div>
+                      <h3 className="mt-7 font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
                         {cs.client}
                       </h3>
                       <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
