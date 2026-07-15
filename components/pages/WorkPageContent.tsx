@@ -2,11 +2,10 @@
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
-import { CASE_STUDIES } from '@/lib/data/caseStudies';
+import { CASE_STUDIES, VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
-import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { FilterBar } from '@/components/ui/FilterBar';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { MagneticButton } from '@/components/ui/MagneticButton';
@@ -59,45 +58,43 @@ export function WorkPageContent() {
 
       <section className="container-edge pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
-          {items.map((cs, i) => (
-            <SimpleReveal key={cs.slug} delay={Math.min(i * 0.05, 0.3)} className="h-full">
-              <Link href={`/work/${cs.slug}`} className="block h-full group">
-                <TiltCard tiltStrength={4} className="h-full">
-                  <GlassCard padded={false} className="h-full flex flex-col overflow-hidden">
-                    <div className="p-6 flex items-start justify-between gap-4">
-                      <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
-                      <DurationBadge>{cs.durationBadge}</DurationBadge>
-                    </div>
-                    <div className="px-6">
-                      <BrandColorHero
-                        client={cs.client}
-                        verticalLabel={cs.verticalLabel}
-                        verticalColor={cs.verticalColor}
-                        caseNumber={String(CASE_STUDIES.findIndex((x) => x.slug === cs.slug) + 1).padStart(2, '0')}
-                        aspect="16/9"
-                        variant="compact"
+          {items.map((cs, i) => {
+            const hex = VERTICAL_COLOR_HEX[cs.verticalColor] ?? '#C41E3A';
+            return (
+              <SimpleReveal key={cs.slug} delay={Math.min(i * 0.05, 0.3)} className="h-full">
+                <Link href={`/work/${cs.slug}`} className="block h-full group">
+                  <TiltCard tiltStrength={4} className="h-full">
+                    <GlassCard padded={false} className="h-full flex overflow-hidden">
+                      <div
+                        className="w-1.5 shrink-0 self-stretch transition-all duration-300 group-hover:w-2"
+                        style={{ background: hex }}
+                        aria-hidden
                       />
-                    </div>
-                    <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
-                        {cs.client}
-                      </h3>
-                      <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
-                      <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
-                        View Case Study
-                        <span
-                          aria-hidden
-                          className="transition-transform duration-300 group-hover:translate-x-0.5"
-                        >
-                          →
-                        </span>
+                      <div className="flex-1 flex flex-col p-6">
+                        <div className="flex items-start justify-between gap-4">
+                          <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
+                          <DurationBadge>{cs.durationBadge}</DurationBadge>
+                        </div>
+                        <h3 className="mt-7 font-serif text-[28px] leading-[1.1] tracking-[-0.02em]">
+                          {cs.client}
+                        </h3>
+                        <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
+                        <div className="mt-6 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                          View Case Study
+                          <span
+                            aria-hidden
+                            className="transition-transform duration-300 group-hover:translate-x-0.5"
+                          >
+                            →
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </GlassCard>
-                </TiltCard>
-              </Link>
-            </SimpleReveal>
-          ))}
+                    </GlassCard>
+                  </TiltCard>
+                </Link>
+              </SimpleReveal>
+            );
+          })}
         </div>
       </section>
 
