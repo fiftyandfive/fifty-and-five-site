@@ -8,7 +8,6 @@ import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
-import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { CTASection } from '@/components/layout/CTASection';
 
@@ -52,11 +51,10 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
   const next = getNextCaseStudy(cs.slug);
   const hex = VERTICAL_COLOR_HEX[cs.verticalColor];
+  const nextHex = VERTICAL_COLOR_HEX[next.verticalColor];
 
   const caseIndex = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
   const caseNumber = String(caseIndex + 1).padStart(2, '0');
-  const nextIndex = next ? CASE_STUDIES.findIndex((c) => c.slug === next.slug) : -1;
-  const nextCaseNumber = nextIndex >= 0 ? String(nextIndex + 1).padStart(2, '0') : undefined;
 
   return (
     <>
@@ -136,14 +134,17 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 lg:gap-16">
           <article className="max-w-[680px] text-[18px] leading-[1.75] text-text-primary/90">
             <SimpleReveal>
-              <BrandColorHero
-                client={cs.client}
-                verticalLabel={cs.verticalLabel}
-                verticalColor={cs.verticalColor}
-                caseNumber={caseNumber}
-                aspect="16/9"
-                className="rounded-glass mb-16"
-              />
+              <div className="mb-16 flex items-stretch overflow-hidden rounded-glass border border-glass-border bg-bg-secondary">
+                <div className="w-1 shrink-0" style={{ background: hex }} aria-hidden />
+                <div className="flex flex-1 items-center justify-between gap-4 px-5 py-3.5">
+                  <span className="font-mono text-caption uppercase tracking-[0.18em] text-text-tertiary">
+                    Case {caseNumber}
+                  </span>
+                  <span className="font-mono text-caption uppercase tracking-[0.18em] text-text-secondary">
+                    {cs.verticalLabel}
+                  </span>
+                </div>
+              </div>
             </SimpleReveal>
 
             {cs.metrics && cs.metrics.length > 0 && (
@@ -250,34 +251,29 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </div>
         <Link href={`/work/${next.slug}`} className="block group">
           <TiltCard tiltStrength={4}>
-            <GlassCard padded={false}>
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <BrandColorHero
-                  client={next.client}
-                  verticalLabel={next.verticalLabel}
-                  verticalColor={next.verticalColor}
-                  caseNumber={nextCaseNumber}
-                  aspect="16/10"
-                  variant="compact"
-                />
-                <div className="p-8 md:p-10 flex flex-col justify-center">
-                  <div className="flex items-center gap-3 flex-wrap">
-                    <VerticalPill label={next.verticalLabel} colorKey={next.verticalColor} />
-                    <DurationBadge>{next.durationBadge}</DurationBadge>
-                  </div>
-                  <h3 className="mt-5 font-serif text-[40px] leading-[1.05] tracking-[-0.02em]">
-                    {next.client}
-                  </h3>
-                  <p className="mt-4 text-body text-text-secondary">{next.tagline}</p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
-                    Read case study
-                    <span
-                      aria-hidden
-                      className="transition-transform duration-300 group-hover:translate-x-0.5"
-                    >
-                      →
-                    </span>
-                  </div>
+            <GlassCard padded={false} className="flex overflow-hidden">
+              <div
+                className="w-1.5 shrink-0 self-stretch transition-all duration-300 group-hover:w-2.5"
+                style={{ background: nextHex }}
+                aria-hidden
+              />
+              <div className="flex-1 p-8 md:p-10 flex flex-col justify-center">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <VerticalPill label={next.verticalLabel} colorKey={next.verticalColor} />
+                  <DurationBadge>{next.durationBadge}</DurationBadge>
+                </div>
+                <h3 className="mt-5 font-serif text-[40px] leading-[1.05] tracking-[-0.02em]">
+                  {next.client}
+                </h3>
+                <p className="mt-4 text-body text-text-secondary">{next.tagline}</p>
+                <div className="mt-6 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                  Read case study
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
                 </div>
               </div>
             </GlassCard>
