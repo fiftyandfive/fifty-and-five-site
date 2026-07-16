@@ -5,21 +5,21 @@ import { AuditForm } from '@/components/ui/AuditForm';
 export const metadata: Metadata = {
   title: 'Free Brand Audit',
   description:
-    'A senior strategist reviews your search, social, and AI visibility. Real findings in your inbox within 2 business days. No pitch attached.',
+    'A senior strategist reviews your search, social, and AI visibility, then sends real findings to your inbox within 2 business days. No pitch, no obligation.',
   alternates: {
     canonical: 'https://fiftyandfive.com/audit',
   },
   openGraph: {
     title: 'Free Brand Audit | Fifty & Five',
     description:
-      'A senior strategist reviews your search, social, and AI visibility. Real findings in your inbox within 2 business days. No pitch attached.',
+      'A senior strategist reviews your search, social, and AI visibility, then sends real findings to your inbox within 2 business days. No pitch, no obligation.',
     url: 'https://fiftyandfive.com/audit',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Free Brand Audit | Fifty & Five',
     description:
-      'A senior strategist reviews your search, social, and AI visibility. Real findings in your inbox within 2 business days. No pitch attached.',
+      'A senior strategist reviews your search, social, and AI visibility, then sends real findings to your inbox within 2 business days. No pitch, no obligation.',
   },
 };
 

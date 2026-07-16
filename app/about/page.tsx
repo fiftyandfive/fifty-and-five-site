@@ -7,19 +7,19 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: 'About | 18 Years, 222 Brands',
   description:
-    '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
+    '222+ brands across five continents since 2008. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.',
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
     title: 'About | 18 Years, 222 Brands | Fifty & Five',
-    description: '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
+    description: '222+ brands across five continents since 2008. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.',
     url: 'https://fiftyandfive.com/about',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About | 18 Years, 222 Brands | Fifty & Five',
-    description: '222 brands across 5 continents since 2008. Senior practices, AI-leveraged operating model, decade-long retainers.',
+    description: '222+ brands across five continents since 2008. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.',
   },
 };
 
