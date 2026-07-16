@@ -43,18 +43,27 @@ export function TypewriterHero() {
         <SimpleReveal y={14} duration={0.6} delay={0.08}>
           <p
             aria-hidden
-            className="mt-8 md:mt-10 font-serif text-display text-ink-black max-w-[16ch]"
+            className="mt-8 md:mt-10 font-serif text-display text-ink-black max-w-[20ch]"
           >
-            We do the storytelling<span className="text-accent">.</span>
+            CMO strategy<span className="text-accent">.</span>
           </p>
         </SimpleReveal>
 
         <SimpleReveal y={14} duration={0.6} delay={0.16}>
           <p
             aria-hidden
-            className="font-serif text-display text-graphite max-w-[18ch]"
+            className="font-serif text-display text-graphite max-w-[20ch]"
           >
-            You build the business<span className="text-accent">.</span>
+            Agency execution<span className="text-accent">.</span>
+          </p>
+        </SimpleReveal>
+
+        <SimpleReveal y={14} duration={0.6} delay={0.24}>
+          <p
+            aria-hidden
+            className="font-serif text-display text-ink-black max-w-[22ch]"
+          >
+            ROI you can defend<span className="text-accent">.</span>
           </p>
         </SimpleReveal>
 
