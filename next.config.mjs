@@ -4,9 +4,7 @@ const nextConfig = {
     images: {
       formats: ['image/avif', 'image/webp'],
       remotePatterns: [
-        { protocol: 'https', hostname: 'cdn.marblism.com' },
         { protocol: 'https', hostname: 'static.wixstatic.com' },
-        { protocol: 'https', hostname: 'marblism-ai-agents-public.s3.us-west-2.amazonaws.com' },
       ],
     },
     async redirects() {
