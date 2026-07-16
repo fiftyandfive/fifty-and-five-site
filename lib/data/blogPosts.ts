@@ -315,7 +315,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: "What 222+ Brands Taught Us About Social Media Strategy That Actually Works",
-    slug: '215-brands-social-media-strategy-that-works',
+    slug: '222-brands-social-media-strategy-that-works',
     wixSlug: 'what-215-brands-taught-us-about-social-media-strategy-that-actually-works',
     date: '2026-05-05',
     minutesToRead: 4,
@@ -587,7 +587,7 @@ export const WIX_SLUG_MAP: Record<string, string> = {
   'how-to-choose-a-social-media-agency-for-your-restaurant-group': 'choose-social-media-agency-restaurant-group',
   'wine-brand-social-media-why-most-wineries-sound-the-same-online-and-how-to-fix-it': 'wine-brand-social-media-wineries-sound-same-fix',
   'social-media-for-boutique-fitness-studios-a-paid-organic-playbook': 'social-media-boutique-fitness-studios-paid-organic-playbook',
-  'what-215-brands-taught-us-about-social-media-strategy-that-actually-works': '215-brands-social-media-strategy-that-works',
+  'what-215-brands-taught-us-about-social-media-strategy-that-actually-works': '222-brands-social-media-strategy-that-works',
   'why-hotels-need-social-media-that-sells-rooms-not-just-gets-likes': 'hotel-social-media-sells-rooms-not-likes',
   'the-multi-location-social-media-playbook-how-to-scale-without-losing-local': 'multi-location-social-media-playbook-scale-local',
   'orlando-social-media-agency-why-local-expertise-matters-for-hospitality-brands': 'orlando-social-media-agency-hospitality-brands',
