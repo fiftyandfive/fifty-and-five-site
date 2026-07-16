@@ -245,7 +245,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     opens: '09:00',
                     closes: '18:00',
                   },
-                  priceRange: '$$',
+                  priceRange: '$$$$',
                 },
               ],
             }),
