@@ -12,7 +12,7 @@ export function Footer() {
             <Link href="/" aria-label="Fifty & Five home">
               <BrandLogo height={26} />
             </Link>
-            <p className="mt-4 text-meta text-text-primary font-medium">We do the storytelling.<br />You build the business.</p>
+            <p className="mt-4 text-meta text-text-primary font-medium">CMO strategy. Agency execution.<br />ROI you can defend.</p>
             <p className="mt-2 text-meta text-text-secondary max-w-[220px]">{SITE.tagline}</p>
           </div>
 
