@@ -188,13 +188,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         'Lucas Vandenberg serves on the SoDo Main Street Board (Orlando)',
                     },
                   ],
-                  aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '5.0',
-                    reviewCount: '18',
-                    bestRating: '5',
-                    worstRating: '1',
-                  },
                   subjectOf: [
                     {
                       '@type': 'Article',
@@ -253,33 +246,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     closes: '18:00',
                   },
                   priceRange: '$$',
-                },
-                {
-                  '@type': 'Review',
-                  author: { '@type': 'Person', name: 'Jerry Shen' },
-                  reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-                  itemReviewed: { '@id': 'https://fiftyandfive.com/#organization' },
-                  reviewBody:
-                    'They grew our engagement 400%. It doesn’t feel like I’m partnered with a large company, we have a real relationship, and we always have access to them.',
-                  publisher: { '@type': 'Organization', name: 'Clutch.co' },
-                },
-                {
-                  '@type': 'Review',
-                  author: { '@type': 'Person', name: 'Lenora Marouani' },
-                  reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-                  itemReviewed: { '@id': 'https://fiftyandfive.com/#organization' },
-                  reviewBody:
-                    'They’ve grown our Instagram and Facebook presence — professional, creative, and a real pleasure to work with. The photos and videos they capture are beautiful and captivating.',
-                  publisher: { '@type': 'Organization', name: 'Clutch.co' },
-                },
-                {
-                  '@type': 'Review',
-                  author: { '@type': 'Person', name: 'Matt Kemper' },
-                  reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-                  itemReviewed: { '@id': 'https://fiftyandfive.com/#organization' },
-                  reviewBody:
-                    'Professional, organized, creative, smart, and consistently positive energy, which really matters when working with an agency. Thankful to have found this team.',
-                  publisher: { '@type': 'Organization', name: 'Clutch.co' },
                 },
               ],
             }),
