@@ -4,6 +4,8 @@ import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Autopilot Social | 20 Posts/Mo from $500',
+  // Dormant product — kept accessible but withheld from search and AI indexing.
+  robots: { index: false, follow: false },
   description:
     'Your social on autopilot. 20 image posts a month, up to 4 platforms. The same senior team Fortune 500s use, productized for boutique brands. From $500/mo.',
   alternates: {
