@@ -65,7 +65,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
     },
     {
       q: `What does ${v.shortLabel} social media cost?`,
-      a: `Fifty & Five ${v.shortLabel} retainers start at $3,000 per month for ad management and scale to $7,500 per month for full-service social with content production. Pricing is principal-led with no holding-company markup.`,
+      a: `Fifty & Five ${v.shortLabel} retainers start at $3,000 per month for ad management and scale to $50,000+ per month for full-service, always-on programs with content production. Pricing is principal-led with no holding-company markup.`,
     },
   ];
 
