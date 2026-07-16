@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { AuditForm } from '@/components/ui/AuditForm';
 
@@ -71,6 +72,15 @@ export default function AuditPage() {
               </ul>
               <p className="mt-6 pt-6 border-t border-glass-border font-mono text-caption text-text-tertiary leading-[1.6]">
                 Audit lands in your inbox within 2 business days.
+              </p>
+              <p className="mt-4 text-body text-text-secondary leading-[1.6]">
+                Rather run it yourself first?{' '}
+                <Link
+                  href="/audit-checklist"
+                  className="text-accent hover:text-accent-light underline underline-offset-2"
+                >
+                  See the DIY brand audit checklist &rarr;
+                </Link>
               </p>
             </div>
           </aside>
