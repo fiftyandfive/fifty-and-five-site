@@ -110,9 +110,25 @@ export function Footer() {
           />
         </div>
 
-        <div className="mt-8 md:mt-10 pt-6 border-t border-glass-border flex flex-col md:flex-row md:items-center md:justify-between gap-3 font-mono text-caption text-text-tertiary">
-          <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
-          <div>Senior + AI · Since 2008 · 222 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
+        <div className="mt-8 md:mt-10 pt-6 border-t border-glass-border font-mono text-caption text-text-tertiary">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 mb-5">
+            <Link href="/orlando-social-media-agency" className="hover:text-text-primary transition-colors">
+              Orlando Social Media Agency
+            </Link>
+            <Link href="/franchise-social-media-agency" className="hover:text-text-primary transition-colors">
+              Franchise Social Media Agency
+            </Link>
+            <Link href="/fractional-cmo" className="hover:text-text-primary transition-colors">
+              Fractional CMO
+            </Link>
+            <Link href="/press" className="hover:text-text-primary transition-colors">
+              Press
+            </Link>
+          </div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+            <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
+            <div>Senior + AI · Since 2008 · 222 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
+          </div>
         </div>
       </div>
     </footer>
