@@ -5,13 +5,12 @@ import { PlatformGraveyard } from '@/components/ui/PlatformGraveyard';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { TiltCard } from '@/components/ui/TiltCard';
 import { DurationBadge, VerticalPill } from '@/components/ui/DurationBadge';
-import { BrandColorHero } from '@/components/ui/BrandColorHero';
 import { CTASection } from '@/components/layout/CTASection';
 import { ReceiptsDashboard } from '@/components/ui/ReceiptsDashboard';
 import { TypewriterHero } from '@/components/ui/TypewriterHero';
 import { BrandMarquee } from '@/components/ui/BrandMarquee';
 import { SelectedWork } from '@/components/ui/SelectedWork';
-import { CASE_STUDIES, getCaseStudy } from '@/lib/data/caseStudies';
+import { VERTICAL_COLOR_HEX, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
 export default function HomePage() {
@@ -223,29 +222,23 @@ export default function HomePage() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {featured.map((cs, i) => {
-            const idx = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
-            const caseNumber = String(idx + 1).padStart(2, '0');
+            const hex = VERTICAL_COLOR_HEX[cs.verticalColor] ?? '#C41E3A';
             return (
               <SimpleReveal key={cs.slug} delay={i * 0.08}>
                 <Link href={`/work/${cs.slug}`} className="block h-full group">
                   <TiltCard tiltStrength={4} className="h-full">
-                    <GlassCard className="h-full flex flex-col" padded={false}>
-                      <div className="p-6 flex items-start justify-between gap-4">
-                        <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
-                        <DurationBadge>{cs.durationBadge}</DurationBadge>
-                      </div>
-                      <div className="px-6">
-                        <BrandColorHero
-                          client={cs.client}
-                          verticalLabel={cs.verticalLabel}
-                          verticalColor={cs.verticalColor}
-                          caseNumber={caseNumber}
-                          aspect="16/9"
-                          variant="compact"
-                        />
-                      </div>
-                      <div className="p-6 pt-6 flex-1 flex flex-col">
-                        <h3 className="font-serif text-[26px] leading-[1.1] tracking-[-0.02em] min-h-[1.1em]">
+                    <GlassCard className="h-full flex overflow-hidden" padded={false}>
+                      <div
+                        className="w-1.5 shrink-0 self-stretch transition-all duration-300 group-hover:w-2"
+                        style={{ background: hex }}
+                        aria-hidden
+                      />
+                      <div className="flex-1 flex flex-col p-6">
+                        <div className="flex items-start justify-between gap-4">
+                          <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
+                          <DurationBadge>{cs.durationBadge}</DurationBadge>
+                        </div>
+                        <h3 className="mt-7 font-serif text-[26px] leading-[1.1] tracking-[-0.02em]">
                           {cs.client}
                         </h3>
                         <p className="mt-3 text-body text-text-secondary flex-1 line-clamp-3">{cs.tagline}</p>
