@@ -1,4 +1,4 @@
-// Blog posts: 48 total (29 from Wix + 19 new)
+// Blog posts: 51 total (29 from Wix + 22 new)
 // Run `node add-blog-section.mjs` to regenerate
 
 export interface BlogPost {
@@ -13,6 +13,36 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: "Social Media for Real Estate: The Multi-Property Playbook",
+    slug: 'social-media-real-estate-multi-property',
+    wixSlug: 'social-media-real-estate-multi-property',
+    date: '2026-07-16',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1600&q=85',
+    excerpt: "Managing social for one property is hard. Doing it for nine at once, each with a different tenant mix and local personality, is a systems problem. Lessons from running 9 shopping centers under one brand without sounding like a generic mall.",
+    category: 'Social Media Strategy',
+  },
+  {
+    title: "How Talent and Entertainment Brands Get Found in 2026: Search, Social, and AI",
+    slug: 'talent-entertainment-brands-get-found-search-social-ai',
+    wixSlug: 'talent-entertainment-brands-get-found-search-social-ai',
+    date: '2026-07-15',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=85',
+    excerpt: "Casting directors, prospective talent, and now AI assistants are all first filters. What it took to make a 30-year Orlando talent agency findable — and citable — by both Google and ChatGPT.",
+    category: 'AI & Automation',
+  },
+  {
+    title: "Social Media for Luxury Resorts: Aspiration That Sells Rooms",
+    slug: 'social-media-luxury-resorts-hospitality',
+    wixSlug: 'social-media-luxury-resorts-hospitality',
+    date: '2026-07-14',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1600&q=85',
+    excerpt: "Luxury resort social isn't about posting pretty photos — it's aspiration engineered to book rooms, where a single DM can be a five-figure conversation. Lessons from running social for two very different luxury properties under one brand.",
+    category: 'Travel & Hospitality',
+  },
   {
     title: "Social Media for Automotive and Mobility Brands: A Multi-Brand Playbook",
     slug: 'social-media-automotive-mobility-brands',
