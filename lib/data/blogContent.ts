@@ -2,6 +2,123 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'social-media-real-estate-multi-property': `
+<p>Running social for a single property is a content problem. Running it for nine at once is a systems problem &mdash; and most agencies find that out the expensive way, by trying to scale a one-property playbook and watching every account blur into the same generic feed.</p>
+
+<p>Retail and commercial real estate almost never means one location. It means a portfolio of properties, each with its own tenants, its own trade area, its own local personality. Here is what actually works when you have to give every one of them a distinct voice without a distinct team for each.</p>
+
+<h2>Why the &ldquo;mall marketing&rdquo; template fails</h2>
+
+<p>We ran social for <a href="/work/centennial-real-estate">Centennial Real Estate</a> across nine separate shopping centers simultaneously &mdash; each with a unique tenant mix, demographic, and community. The instinct with a portfolio like that is to build one content template and swap the logo. It does not work. A center in Texas does not speak the way a center in Southern California does. The tenants are different, the events are different, the local culture is different. A shared template flattens all of that into a voice that belongs to no one.</p>
+
+<p><strong>The generic mall-marketing playbook is the single most common reason multi-property social underperforms.</strong> Shoppers can tell when a feed is run from a spreadsheet three states away.</p>
+
+<h2>Distinct voice per property, shared system underneath</h2>
+
+<p>The answer is not &ldquo;hire nine teams.&rdquo; It is to separate the two things that actually differ from the things that do not. What differs: each property&rsquo;s tenants, events, community, and tone. What can be shared: the workflow, the reporting standard, the content cadence, the approval process.</p>
+
+<p>For Centennial we built individualized content strategies for each property &mdash; reflecting its specific tenants, events, and community &mdash; on top of scalable workflows that made nine-account management feasible with a small team. Each center&rsquo;s presence felt genuinely local; the operation behind it was centralized and efficient. That is the whole trick: <strong>local on the surface, systematized underneath.</strong></p>
+
+<h2>What multi-property real estate social actually needs</h2>
+
+<ul>
+<li><strong>A trade-area voice, not a corporate one.</strong> Each property should sound like it belongs to its neighborhood &mdash; its tenants, its events, its regulars &mdash; not like a regional marketing department.</li>
+<li><strong>Systems-first execution.</strong> If managing property #9 is nine times the work of property #1, the model is broken. Workflows and templates for the repeatable parts free up attention for the parts that must be local.</li>
+<li><strong>Centralized reporting.</strong> Ownership does not want nine dashboards. It wants to know the portfolio is moving, with the ability to drill into any single property.</li>
+</ul>
+
+<h2>How to vet an agency for a property portfolio</h2>
+
+<p>Ask one question: can they show multi-property work that actually ran &mdash; not a single-location case study with a promise to scale? Managing one great account proves nothing about managing nine. The Centennial engagement became our template for every subsequent multi-property client, because proving the model at nine properties is what tells you it holds at scale.</p>
+
+<p>We have run social since 2008 for 222+ brands, and multi-location portfolios are where systems-first execution earns its keep.</p>
+
+<p><em>Managing social across a property portfolio? <a href="/verticals/real-estate">See how we approach real estate &rarr;</a> or <a href="/contact">start a conversation &rarr;</a></em></p>
+
+<h3>Can one agency run social media for multiple properties at once?</h3>
+<p>Yes, and for a portfolio it is usually better than splitting the work across teams. We ran nine shopping centers for Centennial Real Estate simultaneously, giving each a distinct local voice while managing all nine through shared workflows and centralized reporting with a small team.</p>
+
+<h3>Why does each property need its own social strategy?</h3>
+<p>Each property has a different tenant mix, demographic, and local community &mdash; a center in Texas does not speak the way one in Southern California does. A single shared template flattens those differences into a generic voice that shoppers recognize as impersonal, which undercuts the local relevance that drives foot traffic.</p>
+
+<h3>How do you manage social for many properties without a huge team?</h3>
+<p>By separating what must be local (each property&rsquo;s tenants, events, and tone) from what can be systematized (workflow, cadence, reporting standards). Individualized content strategies sit on top of scalable workflows, so adding properties does not multiply the workload one-for-one.</p>`,
+  'talent-entertainment-brands-get-found-search-social-ai': `
+<p>Here is how people find a talent agency, a production company, or an entertainment brand in 2026: they ask. They ask Google, they ask a colleague, and increasingly they ask an AI assistant &mdash; &ldquo;who&rsquo;s a good talent agency in Florida?&rdquo; Casting directors, prospective talent, and now ChatGPT are all first filters. If you are not in the answer, you are not in the running.</p>
+
+<p>For entertainment and talent brands, reputation has always traveled by word of mouth. The problem is that word of mouth now has a machine layer on top of it &mdash; and that layer only repeats what your digital presence explicitly gives it.</p>
+
+<h2>The gap between being good and being found</h2>
+
+<p><a href="/work/central-florida-talent">Central Florida Talent</a> has been Orlando&rsquo;s longest-operating SAG-AFTRA franchised agency since 1994 &mdash; three decades of placements, from <em>Stranger Things</em> to national Disney and Lay&rsquo;s campaigns. Elite on set. But its digital presence did not reflect its standing, and that gap costs real business when the first filter is a search box or an AI prompt.</p>
+
+<p>The bigger shift is who &mdash; or what &mdash; is doing the filtering. When someone asks an AI &ldquo;who&rsquo;s a good talent agency in Florida,&rdquo; the answer is assembled from structured, verifiable content a website explicitly provides. No structured content, no citation. <strong>A great reputation the machine cannot read is a reputation the machine cannot repeat.</strong></p>
+
+<h2>What it takes to be findable and citable</h2>
+
+<p>We rebuilt CFT on a modern, server-rendered Next.js foundation &mdash; fast, crawlable, clean &mdash; then engineered it for both traditional search and Answer Engine Optimization (AEO), the emerging layer where AI assistants decide which businesses to name. Three moves did the work, and they generalize to any entertainment or professional brand:</p>
+
+<ul>
+<li><strong>A structured answer layer.</strong> We built FAQ content addressing the exact questions prospects and LLMs ask &mdash; &ldquo;Does the agency charge upfront fees? Is it SAG-AFTRA franchised? How do I submit?&rdquo; &mdash; and marked it up with FAQPage schema so machines read it as labeled question-and-answer, not decorative text.</li>
+<li><strong>Verifiable entity signals.</strong> We published the facts that build machine-readable trust: SAG-AFTRA Agency ID 000347, FL license TA# 498, named credits. Both Google&rsquo;s E-E-A-T standards and AI models look for this kind of verifiable proof before they will stake an answer on you.</li>
+<li><strong>A complete structured-data stack.</strong> LocalBusiness/EmploymentAgency, WebSite, and FAQPage schema together, so the whole site reads as a coherent, citable entity.</li>
+</ul>
+
+<h2>The result</h2>
+
+<p>CFT&rsquo;s site now carries a full AEO foundation, verifiable live in the page source: three JSON-LD schema blocks including FAQPage, a structured answer layer, published license and credential facts, and 463 backlinks across 241 referring domains. It is a website built not just to rank, but to be <em>cited</em> by the AI tools an increasing share of clients and talent now use to find representation.</p>
+
+<p>The playbook built here &mdash; modern framework, structured answer content, verifiable entity signals &mdash; is now how we approach every local-authority and professional-services brand that needs to win both Google and the AI layer above it. For a fuller breakdown of that layer, see <a href="/blog/aeo-how-to-get-cited-by-ai-search">our AEO playbook</a>.</p>
+
+<p><em>Run an entertainment, talent, or production brand that&rsquo;s better than its search results? <a href="/verticals/entertainment">See how we approach the category &rarr;</a> or <a href="/contact">start a conversation &rarr;</a></em></p>
+
+<h3>How do entertainment and talent brands show up in AI search results?</h3>
+<p>AI assistants assemble answers from structured, verifiable content a website provides &mdash; FAQ content marked up with schema, published credentials, and clean crawlable markup. For Central Florida Talent we built a full AEO foundation (FAQPage schema, entity signals like the SAG-AFTRA Agency ID and state license) so the agency can be named when someone asks an AI for a talent agency in Florida.</p>
+
+<h3>Why isn&rsquo;t a good reputation enough to get found online?</h3>
+<p>Reputation travels by word of mouth, but search engines and AI assistants can only repeat what your site explicitly and verifiably states. A strong reputation that is not published as structured, machine-readable content is invisible to the tools casting directors, talent, and clients now use as their first filter.</p>
+
+<h3>What is AEO for a talent or entertainment brand?</h3>
+<p>Answer Engine Optimization (AEO) is engineering a site to be named and cited inside AI-generated answers. For a talent brand that means structured FAQ content answering the real questions prospects ask, published credentials (franchise IDs, licenses, credits), and a complete schema stack &mdash; the signals AI models need before they will recommend you.</p>`,
+  'social-media-luxury-resorts-hospitality': `
+<p>Luxury resort social media looks, from the outside, like the easiest job in marketing. Point a camera at turquoise water, post, repeat. In practice it is one of the hardest &mdash; because the job is not to show a beautiful place. It is to make someone rearrange their life and their budget to travel to it. Aspiration, engineered to book rooms.</p>
+
+<p>And the stakes per interaction are unusually high. In luxury hospitality, a single Instagram DM is often a five-figure conversation. Treat the account like a billboard and you leave real revenue in the inbox.</p>
+
+<h2>Two properties, two completely different dreams</h2>
+
+<p>We ran social for <a href="/work/resorts-world">Resorts World</a> across two luxury properties with radically different characters &mdash; a tropical island retreat in Bimini, the Bahamas, and a mountain retreat in the Catskills of upstate New York. Same brand umbrella. Almost nothing else in common.</p>
+
+<p>The mistake would be a unified &ldquo;luxury&rdquo; content look pasted across both. Luxury is not a filter or a font &mdash; it is specificity. So the content diverged completely: turquoise water and over-water villas for Bimini, fireplaces and foliage for the Catskills. <strong>Each property had to feel like a place worth traveling for, on its own terms.</strong> The luxury is in how precisely you capture what makes <em>that</em> place singular, not in a shared coat of gloss.</p>
+
+<h2>The DM is a sales floor, not a comment section</h2>
+
+<p>This is where most luxury hospitality accounts leave money on the table. On a resort account, the direct messages are not community chit-chat &mdash; they are booking conversations worth thousands of dollars each. Someone asking &ldquo;what&rsquo;s availability like in March?&rdquo; is a qualified lead mid-decision. Community management has to be run with that understanding: fast, informed, and treated as the front end of the sales process, because it is.</p>
+
+<h2>What luxury resort social actually requires</h2>
+
+<ul>
+<li><strong>Aspiration with intent.</strong> Beautiful is table stakes. The content has to move someone from admiring to booking &mdash; occasion, season, and offer woven in, not just scenery.</li>
+<li><strong>Respect for the specificity of place.</strong> A portfolio of luxury properties needs each one to feel singular. Sameness is the opposite of luxury.</li>
+<li><strong>DMs run like a sales floor.</strong> Resort inquiries are high-value leads. The response time and quality of a DM directly affects bookings.</li>
+</ul>
+
+<h2>How to vet an agency for a luxury property</h2>
+
+<p>Ask whether they understand that resort social is a revenue channel, not a brand-awareness exercise &mdash; and whether they can hold two properties&rsquo; distinct identities without collapsing them into one generic luxury look. Plenty of agencies can make a pretty grid. Far fewer treat the inbox as a sales floor and the feed as a booking engine.</p>
+
+<p>We have run hospitality social since 2008 across resorts, attractions, and hotels, and the principle holds every time: luxury social scales across property types only when the strategy respects the specificity of the place.</p>
+
+<p><em>Building a luxury resort or hospitality brand&rsquo;s presence? <a href="/verticals/luxury">See how we approach luxury &rarr;</a> or <a href="/contact">start a conversation &rarr;</a></em></p>
+
+<h3>How is social media for luxury resorts different from other hotels?</h3>
+<p>Luxury resort social has to sell aspiration that converts to high-value bookings, and its direct messages are often five-figure sales conversations rather than casual community chat. The content must capture what makes each specific property singular &mdash; sameness reads as the opposite of luxury &mdash; and the inbox must be run like a sales floor.</p>
+
+<h3>Should a resort brand use the same content across all its properties?</h3>
+<p>No. Luxury is specificity. We ran two Resorts World properties &mdash; Bimini in the Bahamas and the Catskills in upstate New York &mdash; with completely distinct content because each had to feel like a place worth traveling for on its own terms. A unified &ldquo;luxury look&rdquo; pasted across different properties flattens exactly what makes each one desirable.</p>
+
+<h3>Why do resort social media DMs matter so much?</h3>
+<p>On a luxury resort account, direct messages are frequently booking conversations worth thousands of dollars each. An inquiry about availability is a qualified lead mid-decision, so community management functions as the front end of the sales process &mdash; response speed and quality directly affect revenue.</p>`,
   'social-media-automotive-mobility-brands': `
 <p>Here is the thing most agencies miss about automotive and mobility brands: you are almost never running one brand. You are running a portfolio. A parent company, a family of sub-brands, regional entities, each with its own audience and competitive set, all under one roof and one budget.</p>
 
