@@ -21,6 +21,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   'Social Media Strategy': '#E2334F',
   'Case Studies': '#F59E0B',
   'Agency': '#C41E3A',
+  'Entertainment': '#7C3AED',
 };
 
 export function BlogPageContent() {

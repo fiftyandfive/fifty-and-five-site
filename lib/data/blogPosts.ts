@@ -1,4 +1,4 @@
-// Blog posts: 51 total (29 from Wix + 22 new)
+// Blog posts: 52 total (29 from Wix + 23 new)
 // Run `node add-blog-section.mjs` to regenerate
 
 export interface BlogPost {
@@ -13,6 +13,16 @@ export interface BlogPost {
 }
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: "Most Actors Don't Need to Shoot a Demo Reel. They Need to Edit One.",
+    slug: 'actors-demo-reel-edit-not-shoot',
+    wixSlug: 'actors-demo-reel-edit-not-shoot',
+    date: '2026-07-16',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1600&q=85',
+    excerpt: "If you already have footage, you don't need to shoot a demo reel — you need it cut. The difference between producing and editing a reel, and why flat pricing beats the hourly maze.",
+    category: 'Entertainment',
+  },
   {
     title: "Social Media for Real Estate: The Multi-Property Playbook",
     slug: 'social-media-real-estate-multi-property',
