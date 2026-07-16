@@ -8,19 +8,19 @@ import { SITE } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Contact | Book a Working Session',
   description:
-    'No pitch decks. Same-day response. Paid pilot within 14 days. Book a 30-minute working session with the senior team.',
+    'No pitch decks, no junior handoffs. Same-day response, a paid pilot within 14 days. Book a 30-minute working session with the senior team that runs the work.',
   alternates: {
     canonical: 'https://fiftyandfive.com/contact',
   },
   openGraph: {
     title: 'Contact | Book a Working Session | Fifty & Five',
-    description: 'No pitch decks. Same-day response. Paid pilot within 14 days. Book a 30-minute working session with the senior team.',
+    description: 'No pitch decks, no junior handoffs. Same-day response, a paid pilot within 14 days. Book a 30-minute working session with the senior team that runs the work.',
     url: 'https://fiftyandfive.com/contact',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact | Book a Working Session | Fifty & Five',
-    description: 'No pitch decks. Same-day response. Paid pilot within 14 days. Book a 30-minute working session with the senior team.',
+    description: 'No pitch decks, no junior handoffs. Same-day response, a paid pilot within 14 days. Book a 30-minute working session with the senior team that runs the work.',
   },
 };
 
