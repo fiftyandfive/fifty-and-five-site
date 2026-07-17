@@ -2,6 +2,170 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'we-made-their-ads-worse': `
+<p>A DTC apparel brand came to us underwater on paid media.</p>
+
+<p>Not underperforming. <strong>Underwater</strong> &mdash; every dollar spent on ads came back as less than a dollar in revenue. Before cost of goods. Before processing. Before anyone touched a box.</p>
+
+<p>The previous agency had a diagnosis ready: creative fatigue. New angles. More variants. Refresh the hooks.</p>
+
+<p>They were wrong, and the account had been saying so for months.</p>
+
+<h2>The numbers that should have stopped everyone</h2>
+
+<p>The inherited account had <strong>healthy click-through</strong> and <strong>cheap CPMs</strong>. Volume was fine &mdash; hundreds of thousands of impressions a month.</p>
+
+<p>And almost nobody bought.</p>
+
+<p>For every 100 people who wanted the product enough to click, roughly 99 left without buying.</p>
+
+<p>That is not a creative problem. Creative&rsquo;s job is to earn the click &mdash; and the creative was doing its job. Something downstream was eating every one of those clicks, and no number of new hooks was going to touch it.</p>
+
+<h2>Why nobody caught it</h2>
+
+<p>Because the person looking at it was a media buyer.</p>
+
+<p>When your only lever is the ad account, every problem looks like an ad problem. Bad ROAS? Test new creative. Still bad? New audiences. Still bad? New placements.</p>
+
+<p>You can run that loop for a year. We have watched brands do exactly that. The loop <em>feels</em> like work &mdash; always a fresh test, always a chart moving. Meanwhile the actual leak sits three steps downstream, untouched, because it is not in the tool the buyer opens every morning.</p>
+
+<p><strong>Diagnosing that the ad is not the problem requires someone whose job is not the ad.</strong></p>
+
+<h2>What we actually did</h2>
+
+<p>We took the seat as a fractional CMO, not a media buyer. The mandate was the revenue system, not the ad account. Five workstreams, run in parallel over six weeks.</p>
+
+<h3>1. Rebuilt the paid media architecture</h3>
+
+<p>The inherited structure bought broad national reach for a product with concentrated regional demand &mdash; paying full retail to show a local product to people with no reason to care.</p>
+
+<ul>
+<li>Killed the inherited campaign structure entirely</li>
+<li>Rebuilt around the geography where the brand had genuine real-world equity &mdash; the market where people already knew the name</li>
+<li>Split catalog/DPA prospecting and bundle offers into distinct strategic bets rather than creative variants inside one pool</li>
+<li>Rebuilt retargeting on intent tiers instead of one undifferentiated audience blob</li>
+</ul>
+
+<h3>2. Rebuilt the email and SMS lifecycle</h3>
+
+<p>The channel that costs nothing to run had gone dormant. Paid was being asked to close customers with zero support from owned.</p>
+
+<ul>
+<li>Full flow rebuild: abandoned checkout, welcome, post-purchase, re-engagement</li>
+<li>Rewrote sequences against the actual drop-off points instead of platform-default templates</li>
+<li>Reactivated the list as a revenue channel instead of a newsletter</li>
+</ul>
+
+<h3>3. Rebuilt brand and offer strategy</h3>
+
+<ul>
+<li>Repositioned around what made the brand defensible instead of category-generic apparel language</li>
+<li>Restructured the offer ladder so bundles were a deliberate margin play, not a discount reflex</li>
+<li>Rebuilt where paid traffic landed &mdash; curated, intent-matched destinations instead of dumping every click onto a generic collection page and hoping</li>
+</ul>
+
+<h3>4. Ran the field activation ourselves</h3>
+
+<p>This is the part most agencies will not do, and it is why the fractional CMO seat is different from a retainer.</p>
+
+<p>The brand has a cause-driven product line with a real community behind it. Community lines do not sell through cold paid traffic &mdash; they sell in rooms, at events, in front of people who already care. So we went.</p>
+
+<ul>
+<li><strong>On-site at the category&rsquo;s flagship event</strong> &mdash; running the booth, selling, talking to customers</li>
+<li><strong>Shot content on the floor</strong>: creator video, customer interviews, founder interviews, b-roll</li>
+<li>Turned three days of in-person presence into an owned content library that feeds social, email, and paid for months afterward</li>
+<li>Brought back qualitative signal &mdash; the actual words customers use &mdash; that then rewrote the ad copy and email subject lines</li>
+</ul>
+
+<p><strong>That single weekend produced nearly a third of the brand&rsquo;s six-week revenue.</strong> Not one dollar of it came from ads &mdash; that product line is deliberately excluded from paid.</p>
+
+<p>A media buyer would never have found that revenue, because it is not in Ads Manager. That is the entire argument for the seat.</p>
+
+<h3>5. Installed measurement discipline</h3>
+
+<ul>
+<li>Attribution standard enforced at the API level on every new ad. Not a checklist item someone remembers &mdash; architecture</li>
+<li>Weekly reconciliation across ad platform, storefront, and email, so the numbers agree <em>before</em> anyone makes a decision on them</li>
+<li>Killed the reporting theater. Replaced it with two questions: what did we spend, what came back</li>
+</ul>
+
+<h2>The results &mdash; six weeks, same ad budget</h2>
+
+<p>Media spend was held <strong>flat</strong> &mdash; within 1% of the inherited baseline. Every number below is efficiency and system, not budget.</p>
+
+<p><strong>Store-wide ecommerce:</strong></p>
+
+<ul>
+<li><strong>Total store revenue:</strong> +156%</li>
+<li><strong>Orders:</strong> +139%</li>
+<li><strong>Average order value:</strong> +7%</li>
+</ul>
+
+<p><strong>Paid media:</strong></p>
+
+<ul>
+<li><strong>Return on ad spend:</strong> +64%</li>
+<li><strong>Revenue from paid:</strong> +62%</li>
+<li><strong>Orders from paid:</strong> +46%</li>
+<li><strong>Customer acquisition cost:</strong> &minus;32%</li>
+<li><strong>Click-to-purchase rate:</strong> +111%</li>
+</ul>
+
+<p>The account went from returning less than a dollar per dollar to comfortably more than a dollar per dollar &mdash; on identical spend. That is the difference between a media program that bleeds every month and one that funds itself.</p>
+
+<h2>The part that sounds like a mistake</h2>
+
+<p>We made the ads <strong>worse at being ads.</strong></p>
+
+<ul>
+<li>Click-through rate went <strong>down 12%</strong></li>
+<li>CPM went <strong>up 26%</strong></li>
+</ul>
+
+<p>On pure attention-buying, the previous agency beat us. They bought more clicks for less money. Graded on the metrics a media buyer reports, we lost.</p>
+
+<p><strong>Every dollar of gain came after the click.</strong> Click-to-purchase conversion more than doubled &mdash; <strong>+111%</strong>.</p>
+
+<p>We bought fewer, more expensive clicks from people who were actually going to buy, then built a system that closed them.</p>
+
+<p>That is the whole case study.</p>
+
+<h2>The honest caveat</h2>
+
+<p>The baseline and current windows sit in different seasons for this category. Some of that lift is the calendar, not us &mdash; and we cannot fully isolate it with one year of data. We are not going to pretend otherwise.</p>
+
+<p>We are telling you because the numbers that <em>are</em> season-resistant are the ones that matter anyway: <strong>CAC down 32%</strong> and <strong>click-to-purchase up 111%</strong>. Seasons move volume and CPMs. They do not double the rate at which a click becomes a buyer.</p>
+
+<p>If an agency hands you a number with no caveat attached, they either have not looked hard enough or they are hoping you will not.</p>
+
+<h2>How to tell if this is you</h2>
+
+<p>Pull two numbers right now:</p>
+
+<ul>
+<li><strong>Your click-through rate on cold traffic.</strong> Above ~1.2%? Your creative is working.</li>
+<li><strong>Your click-to-purchase rate.</strong> Under ~1.5%? Your creative is not your problem.</li>
+</ul>
+
+<p>Good click-through and bad economics means <strong>more creative testing is tuition, not strategy.</strong> You are paying Meta full retail to keep rediscovering that your funnel leaks.</p>
+
+<p><strong>The fastest tell: check your retargeting ROAS in isolation.</strong> If retargeting &mdash; the warmest traffic you own, people who already saw the product and came back &mdash; is not dramatically outperforming cold, the problem is definitionally not targeting and definitionally not creative. Those people already got targeted. They already saw the creative. They still did not buy.</p>
+
+<p>That number is your smoke alarm. Most brands never look at it on its own.</p>
+
+<h2>Stop optimizing the ad</h2>
+
+<p>The ad account is the most instrumented, most obsessed-over, most dashboard-covered part of most DTC businesses. It is also, frequently, the part that already works.</p>
+
+<p>And some of your best revenue is not in there at all. Ours showed up in a room, over three days, from a product line we deliberately never advertised.</p>
+
+<p>Buying cheaper attention is a media-buying skill.</p>
+
+<p><strong>Deciding the attention is not the problem is a CMO one.</strong></p>
+
+<p><em>Fifty &amp; Five is a senior-led boutique agency in Orlando, FL. 222+ brands across five continents since 2008 &mdash; Warner Bros., Microsoft, Kendall-Jackson, Blaze Pizza, Enterprise, Resorts World. Most clients stay 3+ years.</em></p>
+
+<p><em>If your paid program has healthy click-through and unhealthy economics, <a href="/contact">let&rsquo;s talk</a> &mdash; that is the exact shape of problem we take. Or <a href="/audit">get a free brand audit</a>.</em></p>`,
   'actors-demo-reel-edit-not-shoot': `
 <p>Here is the mistake that costs actors the most money on a demo reel: they assume they need to <em>shoot</em> one.</p>
 
