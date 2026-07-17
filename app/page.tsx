@@ -207,7 +207,7 @@ export default function HomePage() {
           <SimpleReveal delay={0.2}>
             <GlassCard className="h-full flex flex-col">
               <div className="font-serif text-[48px] leading-none tracking-[-0.03em] text-accent">
-                30+
+                34+
               </div>
               <h3 className="mt-4 font-serif text-[24px] leading-[1.15] tracking-[-0.015em]">
                 Wine &amp; Spirits Brands
