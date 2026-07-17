@@ -13,25 +13,25 @@ import { Analytics } from '@/components/layout/Analytics';
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
   title: {
-    default: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
+    default: 'Fifty & Five | Fractional CMO + Senior-Led Social Since 2008',
     template: '%s | Fifty & Five',
   },
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'CMO strategy. Agency execution. ROI you can defend. Senior-led boutique social media agency, 222+ brands across five continents since 2008. From $3K/mo.',
+  description: 'CMO strategy. Agency execution. ROI you can defend. Most CMOs have run one brand. We\'ve led marketing for over 222+, across five continents since 2008. Fractional CMO seats and senior-led social retainers from $3K/mo.',
   openGraph: {
     type: 'website',
-    title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
+    title: 'Fifty & Five | Fractional CMO + Senior-Led Social Since 2008',
     description:
-      'CMO strategy. Agency execution. ROI you can defend. Senior-led boutique social media agency, 222+ brands across five continents since 2008. From $3K/mo.',
+      'CMO strategy. Agency execution. ROI you can defend. Most CMOs have run one brand. We\'ve led marketing for over 222+, across five continents since 2008. Fractional CMO seats and senior-led social retainers from $3K/mo.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fifty & Five | Senior-Led Boutique Agency Since 2008',
-    description: 'CMO strategy. Agency execution. ROI you can defend. Senior-led boutique social media agency, 222+ brands across five continents since 2008. From $3K/mo.',
+    title: 'Fifty & Five | Fractional CMO + Senior-Led Social Since 2008',
+    description: 'CMO strategy. Agency execution. ROI you can defend. Most CMOs have run one brand. We\'ve led marketing for over 222+, across five continents since 2008. Fractional CMO seats and senior-led social retainers from $3K/mo.',
   },
   icons: {
     icon: [
@@ -70,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Fifty & Five Agency',
                     'Fifty & Five Social Media',
                     'Fifty & Five Orlando',
+                    'Fifty & Five Fractional CMO',
                   ],
                   url: 'https://fiftyandfive.com',
                   telephone: '+1-310-902-3246',
@@ -87,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   founder: {
                     '@type': 'Person',
                     name: 'Lucas Vandenberg',
-                    jobTitle: 'Founder',
+                    jobTitle: ['Founder', 'Fractional CMO'],
                     url: 'https://www.linkedin.com/in/LucasV/',
                     sameAs: [
                       'https://www.linkedin.com/in/LucasV/',
@@ -135,6 +136,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Franchise Social Media',
                     'Hospitality Marketing',
                     'Recommendation Engineering',
+                    'Fractional CMO',
+                    'Marketing Leadership',
+                    'Marketing Strategy',
+                    'Brand Strategy',
                   ],
                   areaServed: [
                     { '@type': 'Country', name: 'United States' },
@@ -211,6 +216,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       url: 'https://digitalagencynetwork.com/agency/fifty-five/',
                       publisher: { '@type': 'Organization', name: 'Digital Agency Network' },
                     },
+                  ],
+                },
+                {
+                  '@type': 'Service',
+                  '@id': 'https://fiftyandfive.com/#fractional-cmo-service',
+                  serviceType: 'Fractional CMO',
+                  name: 'Fractional CMO',
+                  description:
+                    'Senior marketing leadership for owner-operators: strategy, budget, channel mix, and agency oversight, owning the number rather than the deliverable.',
+                  provider: { '@id': 'https://fiftyandfive.com/#organization' },
+                  areaServed: [
+                    { '@type': 'Country', name: 'United States' },
+                    { '@type': 'Country', name: 'Canada' },
                   ],
                 },
                 {

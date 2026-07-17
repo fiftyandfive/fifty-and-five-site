@@ -10,14 +10,14 @@ import { SITE } from '@/lib/constants';
 export const metadata: Metadata = {
   title: { absolute: 'Fractional CMO for $1M-20M Companies | Fifty & Five' },
   description:
-    'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
+    'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
   alternates: {
     canonical: 'https://fiftyandfive.com/fractional-cmo',
   },
   openGraph: {
     title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
     description:
-      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
+      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
     url: 'https://fiftyandfive.com/fractional-cmo',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
     description:
-      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands. One seat is open.',
+      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
   },
 };
 
@@ -52,6 +52,10 @@ const FAQS = [
   {
     q: 'Is there a contract?',
     a: 'No lock-in. Month to month, 30-day notice. That is the guarantee: the work has to earn the renewal every single month.',
+  },
+  {
+    q: 'Why hire Fifty & Five instead of a fractional CMO?',
+    a: 'Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. Fifty & Five does both: senior marketing leadership that owns the number, plus the team that runs the work. A CMO typically runs one brand over a career. Fifty & Five has led marketing for 222+ brands across five continents since 2008.',
   },
 ];
 
@@ -107,7 +111,7 @@ export default function FractionalCmoPage() {
                 category: 'Marketing Leadership',
                 name: 'Fractional CMO',
                 description:
-                  'Senior marketing leadership for owner-operators doing $1M-20M. Strategy, oversight, and judgment on call. Capped at three seats.',
+                  'Senior marketing leadership for owner-operators doing $1M-20M. Strategy, oversight, and judgment on call.',
                 provider: { '@id': 'https://fiftyandfive.com/#organization' },
                 offers: {
                   '@type': 'Offer',
@@ -139,21 +143,25 @@ export default function FractionalCmoPage() {
         <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
           Fractional CMO
         </div>
-        {/* SWAP IN ONCE SEAT 1 SIGNS: "One seat filled. Two are open." */}
         <AnimatedHeadline
           as="h1"
-          text="I only take on three companies at a time. Seats are open."
+          text="Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. We do both."
           className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-4xl"
-          stagger={0.04}
+          stagger={0.03}
         />
         <SimpleReveal delay={0.3}>
-          <p className="mt-6 text-body-lg text-text-secondary max-w-3xl">
-            Senior marketing leadership for owner-operators doing $1M-20M. Strategy, oversight,
-            and judgment on call, not another vendor to manage. Your marketing department, run by
-            the operator behind 222 brands.
+          <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
+            We run the function and own the number. The team runs the work. Strategy, budget,
+            channel mix, agency oversight, and a coach for you and your team, so they get sharper
+            instead of more dependent.
           </p>
         </SimpleReveal>
-        <SimpleReveal delay={0.4}>
+        <SimpleReveal delay={0.36}>
+          <p className="mt-5 font-serif text-h3 tracking-[-0.015em] text-text-primary max-w-3xl">
+            Most CMOs have run one brand. We&rsquo;ve led marketing for over 222.
+          </p>
+        </SimpleReveal>
+        <SimpleReveal delay={0.44}>
           <div className="mt-10">
             <MagneticButton
               href={SITE.calendly}
@@ -161,11 +169,8 @@ export default function FractionalCmoPage() {
               size="large"
               trackName="Fractional CMO Hero CTA"
             >
-              Claim an open seat →
+              Book a working session →
             </MagneticButton>
-            <p className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
-              One of three seats. When it&rsquo;s full, it&rsquo;s full.
-            </p>
           </div>
         </SimpleReveal>
       </section>
@@ -246,21 +251,22 @@ export default function FractionalCmoPage() {
         </div>
       </section>
 
-      {/* Why three seats */}
+      {/* Why it works */}
       <section className="container-edge py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-4">
             <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-              Why three seats
+              Why it works
             </div>
             <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
-              Scarcity is the quality control.
+              You get the strategy and the hands.
             </h2>
           </div>
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
-              Senior attention does not scale. Three seats is the cap so quality holds. When the
-              third fills, the door closes until a client graduates.
+              Most fractional CMOs hand you a plan and leave you to execute it. Most agencies
+              execute without a plan. We own the number and run the function, and the team runs
+              the work, so nothing falls in the gap between strategy and delivery.
             </p>
           </div>
         </div>
@@ -377,10 +383,10 @@ export default function FractionalCmoPage() {
       {/* Close CTA */}
       <section className="container-edge py-20 md:py-28 text-center">
         <h2 className="font-serif text-h1 tracking-[-0.02em] text-text-primary max-w-3xl mx-auto">
-          One seat. First conversation decides fit.
+          One conversation decides fit.
         </h2>
         <p className="mt-6 text-body-lg text-text-secondary max-w-2xl mx-auto">
-          A 30-minute call. Your numbers, your bottleneck, and whether the seat makes sense. No
+          A 30-minute call. Your numbers, your bottleneck, and whether it makes sense. No
           deck, no pressure.
         </p>
         <div className="mt-10 flex flex-col items-center gap-3">
@@ -390,11 +396,8 @@ export default function FractionalCmoPage() {
             size="large"
             trackName="Fractional CMO Close CTA"
           >
-            Claim an open seat →
+            Book a working session →
           </MagneticButton>
-          <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-            One of three seats. When it&rsquo;s full, it&rsquo;s full.
-          </p>
         </div>
       </section>
     </>

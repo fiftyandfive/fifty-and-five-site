@@ -1445,7 +1445,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p> </p>
 <h2>A Marketing Agency Built for Orlando's Hospitality Ecosystem</h2>
 <p> </p>
-<p>Fifty &amp; Five is a full-service social media and digital marketing agency based in Orlando, with over 15 years of experience working specifically with hospitality, restaurant, hotel, and lifestyle brands. We've dedicated 35% of our business focus to the hospitality and leisure sector: not because it's trendy, but because we genuinely understand the nuances that make or break success in this industry.</p>
+<p>Fifty &amp; Five is a full-service social media and digital marketing agency based in Orlando, with over 18 years of experience working specifically with hospitality, restaurant, hotel, and lifestyle brands. We've dedicated 35% of our business focus to the hospitality and leisure sector: not because it's trendy, but because we genuinely understand the nuances that make or break success in this industry.</p>
 <p>We help hospitality businesses:</p>
 <ul>
 <li><strong>Increase brand visibility</strong> in hyper-competitive local markets</li>
@@ -2065,7 +2065,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <h2>Do wine and spirits brands even need social media?</h2>
 
-<p>Yes, but not for the reason most people think. The job of social for a beverage brand is rarely direct sales. You cannot ship a bottle through a comment section, and three-tier distribution means the person buying on Instagram is not the person you actually sell to. The real job is three things: keeping the brand top of mind so the consumer asks for it by name at the shelf and the bar, giving distributors and trade buyers proof the brand has consumer pull, and feeding the content library your whole marketing operation runs on. A brand with a strong, consistent feed closes distributor meetings faster. That is the receipt that matters.</p>
+<p>Yes, but not for the reason most people think. The job of social for a beverage brand is rarely direct sales. You cannot ship a bottle through a comment section, and three-tier distribution means the person buying on Instagram is not the person you actually sell to. The real job is three things: keeping the brand top of mind so the consumer asks for it by name at the shelf and the bar, giving distributors and trade buyers proof the brand has consumer pull, and feeding the content library your whole marketing operation runs on. A brand with a strong, consistent feed closes distributor meetings faster. That is the proof that matters.</p>
 
 <h2>What works for a wine label is not what works for a spirits brand</h2>
 
@@ -2087,7 +2087,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <p>We added close to a million followers across the Mezzacorona portfolio over a decade. We have run the Kendall-Jackson portfolio across lifestyle and wine education. On the hospitality side, Barsha landed the LA Times Top 101 Restaurants two years running, plus BuzzFeed, Thrillist, and NBC LA, all organic. Wine and spirits has been our home vertical since 2008, not a line item we added when the category got hot.</p>
 
-<p>If your social feels like it is running on a 2017 playbook, that is fixable. We do the storytelling. You build the business.</p>
+<p>If your social feels like it is running on a 2017 playbook, that is fixable.</p>
 
 <p><em><a href="/contact">See how we would approach your label &rarr;</a></em></p>
 
