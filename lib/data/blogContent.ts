@@ -2,6 +2,71 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'actors-demo-reel-edit-not-shoot': `
+<p>Here is the mistake that costs actors the most money on a demo reel: they assume they need to <em>shoot</em> one.</p>
+
+<p>Most of the time, they don&rsquo;t. If you have been working &mdash; bookings, co-star spots, student films, a strong self-tape or two &mdash; the footage for a great reel already exists. You do not need a soundstage or a scene partner. You need someone to cut what you already have into ninety seconds a casting director will actually watch.</p>
+
+<p>That distinction &mdash; <strong>editing</strong> a reel versus <strong>producing</strong> one &mdash; is where this market quietly overcharges. It is also why we built a service to fix it. More on that below.</p>
+
+<h2>Producing a reel and editing a reel are two different products</h2>
+
+<p>Some services shoot new footage for you: they write scenes, bring in a reader, light it, and film it. That is production, and it is genuinely the right call if you are brand new with nothing on tape. It is also expensive, slow, and for most actors, unnecessary.</p>
+
+<p>Editing is the other job entirely: taking clips you already own and cutting them into a broadcast-ready reel &mdash; the right moments in the right order, a clean name-and-contact slate, and color and audio cleanup so five clips from five shoots stop looking like five clips from five shoots. Most working and semi-working actors need the second thing and accidentally pay for the first.</p>
+
+<h2>What a real reel edit actually includes</h2>
+
+<p>A reel is not a highlight montage set to music. A proper edit does specific, deliberate work:</p>
+
+<ul>
+<li><strong>Selection and order.</strong> Your strongest, most castable moment first &mdash; casting often decides in the first fifteen seconds whether to keep watching.</li>
+<li><strong>A name-and-contact slate.</strong> So the person who just liked your work knows who you are and how to reach you or your rep.</li>
+<li><strong>Color and audio cleanup.</strong> Mismatched footage should not look and sound mismatched.</li>
+<li><strong>The right length.</strong> Tight enough to hold attention, long enough to show range.</li>
+</ul>
+
+<h2>The real problem: nobody will tell you the price</h2>
+
+<p>Here is the part of the demo-reel market that actually needs fixing. Ask what a reel costs and you get a conditional. Some editors bill by the hour, so the total depends on how long it takes &mdash; which you learn afterward. Some bill per clip, so a five-clip reel and a nine-clip reel are different invoices. Some quote &ldquo;starting from&rdquo; a floor that only ever moves up.</p>
+
+<p>For an actor deciding whether to spend on a reel at all, &ldquo;it depends&rdquo; is the worst possible answer. <strong>Flat pricing is the fix: one number, set before the work starts, that does not move.</strong></p>
+
+<h2>How TalentReel Direct works</h2>
+
+<p>That is exactly what we built <a href="https://talentreeldirect.com" target="_blank" rel="noopener">TalentReel Direct, a flat-rate demo reel editing service</a>, to do. The flow is deliberately simple:</p>
+
+<ul>
+<li>Send a headshot and 2 to 10 clips &mdash; or just paste links from YouTube, Vimeo, iSpot, Actors Access, or Casting Networks.</li>
+<li>A real editor (not a template) cuts a broadcast-ready reel with a name-and-contact slate, plus color and audio cleanup.</li>
+<li>It comes back in five days as a downloadable file and a shareable link, with one revision round included.</li>
+<li>The files stay yours. No subscription, no licensing games.</li>
+</ul>
+
+<p>And the pricing is the whole point, because you know it before you commit:</p>
+
+<ul>
+<li><strong>The Reel &mdash; $199 flat.</strong> The core edit, start to finish.</li>
+<li><strong>The Reel + Social &mdash; $279.</strong> Adds three subtitled vertical clips cut for Instagram and TikTok, because reps and casting look there too now.</li>
+<li><strong>The Career Pack &mdash; $399.</strong> Adds a 30-minute strategy call, an Actors Access / Casting Networks profile review, and rush turnaround.</li>
+</ul>
+
+<p>Add-ons stay just as clear: a 48-hour rush is +$79, a second reel is +$99. That is the entire menu &mdash; no hourly meter, no per-clip math, no &ldquo;starting from.&rdquo; Standard turnaround is five days; the rush brings it to 48 hours.</p>
+
+<h2>Why a marketing agency is telling you this</h2>
+
+<p>We are <a href="/verticals/entertainment">Fifty &amp; Five</a>. We rebuilt the digital presence for <a href="/work/central-florida-talent">Central Florida Talent</a>, a 30-year SAG-AFTRA agency, so we spend real time around actors and the tools they use to get seen. The demo reel kept surfacing as the step where good talent lost money and time for no reason &mdash; overpaying to produce what they only needed edited, and never getting a straight price. So we built <a href="https://talentreeldirect.com" target="_blank" rel="noopener">TalentReel Direct</a> to make that one step honest: real editing, a flat price, and files you keep.</p>
+
+<p><em>If you already have footage and just need it cut into something you can send tomorrow, that is exactly what it is for.</em></p>
+
+<h3>Do I need to shoot new footage for a demo reel?</h3>
+<p>Usually not. If you have prior bookings, co-star work, student films, or strong self-tapes, an editor can cut a professional reel from footage you already own. Shooting new scenes is only necessary when you have little or nothing on tape &mdash; that is production, a separate and more expensive service.</p>
+
+<h3>What is the difference between editing a demo reel and producing one?</h3>
+<p>Producing a reel means shooting new footage: scenes, a reader, lighting, filming. Editing a reel means cutting clips you already have into a broadcast-ready piece with a contact slate and color and audio cleanup. Most working actors need editing, not production. TalentReel Direct edits reels; it does not shoot them.</p>
+
+<h3>How much does a demo reel edit cost?</h3>
+<p>TalentReel Direct uses flat pricing: The Reel is $199, The Reel + Social is $279 (adds three subtitled vertical clips), and The Career Pack is $399 (adds a strategy call, a casting-profile review, and rush turnaround). A 48-hour rush is +$79 and a second reel is +$99. Standard turnaround is five days.</p>`,
   'social-media-real-estate-multi-property': `
 <p>Running social for a single property is a content problem. Running it for nine at once is a systems problem &mdash; and most agencies find that out the expensive way, by trying to scale a one-property playbook and watching every account blur into the same generic feed.</p>
 
@@ -1380,7 +1445,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p> </p>
 <h2>A Marketing Agency Built for Orlando's Hospitality Ecosystem</h2>
 <p> </p>
-<p>Fifty &amp; Five is a full-service social media and digital marketing agency based in Orlando, with over 15 years of experience working specifically with hospitality, restaurant, hotel, and lifestyle brands. We've dedicated 35% of our business focus to the hospitality and leisure sector: not because it's trendy, but because we genuinely understand the nuances that make or break success in this industry.</p>
+<p>Fifty &amp; Five is a full-service social media and digital marketing agency based in Orlando, with over 18 years of experience working specifically with hospitality, restaurant, hotel, and lifestyle brands. We've dedicated 35% of our business focus to the hospitality and leisure sector: not because it's trendy, but because we genuinely understand the nuances that make or break success in this industry.</p>
 <p>We help hospitality businesses:</p>
 <ul>
 <li><strong>Increase brand visibility</strong> in hyper-competitive local markets</li>
@@ -2000,7 +2065,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <h2>Do wine and spirits brands even need social media?</h2>
 
-<p>Yes, but not for the reason most people think. The job of social for a beverage brand is rarely direct sales. You cannot ship a bottle through a comment section, and three-tier distribution means the person buying on Instagram is not the person you actually sell to. The real job is three things: keeping the brand top of mind so the consumer asks for it by name at the shelf and the bar, giving distributors and trade buyers proof the brand has consumer pull, and feeding the content library your whole marketing operation runs on. A brand with a strong, consistent feed closes distributor meetings faster. That is the receipt that matters.</p>
+<p>Yes, but not for the reason most people think. The job of social for a beverage brand is rarely direct sales. You cannot ship a bottle through a comment section, and three-tier distribution means the person buying on Instagram is not the person you actually sell to. The real job is three things: keeping the brand top of mind so the consumer asks for it by name at the shelf and the bar, giving distributors and trade buyers proof the brand has consumer pull, and feeding the content library your whole marketing operation runs on. A brand with a strong, consistent feed closes distributor meetings faster. That is the proof that matters.</p>
 
 <h2>What works for a wine label is not what works for a spirits brand</h2>
 
@@ -2022,7 +2087,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 
 <p>We added close to a million followers across the Mezzacorona portfolio over a decade. We have run the Kendall-Jackson portfolio across lifestyle and wine education. On the hospitality side, Barsha landed the LA Times Top 101 Restaurants two years running, plus BuzzFeed, Thrillist, and NBC LA, all organic. Wine and spirits has been our home vertical since 2008, not a line item we added when the category got hot.</p>
 
-<p>If your social feels like it is running on a 2017 playbook, that is fixable. We do the storytelling. You build the business.</p>
+<p>If your social feels like it is running on a 2017 playbook, that is fixable.</p>
 
 <p><em><a href="/contact">See how we would approach your label &rarr;</a></em></p>
 

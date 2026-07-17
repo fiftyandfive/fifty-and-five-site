@@ -63,7 +63,7 @@ export default function HomePage() {
                 name: 'How much does Fifty & Five charge?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five offers four retainer tiers from $3,000/mo (Growth) to $50,000+/mo (Enterprise). Every tier runs on the same Senior + AI operating model.',
+                  text: 'New retainers start at $3,000/mo. Fractional CMO seats are priced separately and scoped to the function, not the deliverable.',
                 },
               },
               {
@@ -80,6 +80,14 @@ export default function HomePage() {
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'Yes. Fifty & Five has worked with brands across 5 continents and 40+ countries, including Mezzacorona (Italy), Penfolds (Australia), Melora (New Zealand), Koenig (Germany), Happy Egg Co. (United Kingdom), Don Papa Rum (Philippines), and the Hong Kong, Korea, and Macau Tourism Boards.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why hire Fifty & Five instead of a fractional CMO?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. Fifty & Five does both: senior marketing leadership that owns the number, plus the team that runs the work. A CMO typically runs one brand over a career. Fifty & Five has led marketing for 222+ brands across five continents since 2008.',
                 },
               },
             ],
@@ -115,6 +123,20 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </SimpleReveal>
+      </section>
+
+      {/* PATTERN RECOGNITION — positioning statement */}
+      <section className="container-edge py-20 md:py-28">
+        <SimpleReveal y={10} duration={0.5}>
+          <p className="font-serif text-h2 md:text-h1 tracking-[-0.02em] text-text-primary max-w-4xl leading-[1.15]">
+            A CMO learns one brand&rsquo;s lessons over a career. We&rsquo;ve watched 222 brands make every mistake there is.
+          </p>
+        </SimpleReveal>
+        <SimpleReveal y={10} duration={0.5} delay={0.1}>
+          <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.7]">
+            You&rsquo;re not buying a title. You&rsquo;re buying the pattern recognition.
+          </p>
         </SimpleReveal>
       </section>
 

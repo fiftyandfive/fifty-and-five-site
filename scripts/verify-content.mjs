@@ -94,7 +94,7 @@ if (fcmo) {
   const entities = faq && faq.mainEntity ? faq.mainEntity : [];
   const text = textContent(fcmo);
   const mismatch = entities.filter((q) => !text.includes(q.acceptedAnswer.text.slice(0, 60)));
-  check('/fractional-cmo FAQ schema answers match visible text', entities.length === 4 && mismatch.length === 0);
+  check('/fractional-cmo FAQ schema answers match visible text', entities.length === 5 && mismatch.length === 0);
 } else check('/fractional-cmo prerendered output exists', false);
 
 // ── 5. One FAQPage max on every prerendered page ───────────────────────

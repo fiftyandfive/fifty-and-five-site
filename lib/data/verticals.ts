@@ -293,7 +293,7 @@ export const VERTICALS: Vertical[] = [
     colorKey: 'tech',
     headline: 'Tech & SaaS Social Media Agency',
     subhead:
-      'Social that translates technical depth into pipeline. We\u2019ve run social for Microsoft, SAP, NetGear, and 200+ brands across 5 continents.',
+      'Social that translates technical depth into pipeline. We\u2019ve run social for Microsoft, SAP, NetGear, and 222+ brands across 5 continents.',
     metaDescription:
       'Tech & SaaS social media agency. B2B + B2C fluency \u2014 Microsoft, NetGear/Arlo, SAP, and 222+ brands since 2008. Now offering AEO.',
     clients: [

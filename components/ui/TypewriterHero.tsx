@@ -27,9 +27,9 @@ const HERO_IMAGES = [
 
 export function TypewriterHero() {
   return (
-    <section className="relative bg-bg-primary" aria-label="Fifty & Five — senior-led boutique social media agency since 2008">
+    <section className="relative bg-bg-primary" aria-label="Fifty & Five — fractional CMO and senior-led social since 2008">
       <h1 className="sr-only">
-        Fifty &amp; Five — Senior-Led Boutique Social Media Agency
+        Fifty &amp; Five — Fractional CMO + Senior-Led Social
       </h1>
 
       {/* Poster headline block */}
@@ -40,21 +40,36 @@ export function TypewriterHero() {
           </div>
         </SimpleReveal>
 
-        <SimpleReveal y={14} duration={0.6} delay={0.08}>
+        <SimpleReveal y={12} duration={0.6} delay={0.06}>
+          <p className="mt-7 md:mt-9 font-serif text-h3 md:text-h2 text-ink-black max-w-[26ch] tracking-[-0.015em] leading-[1.15]">
+            Most CMOs have run one brand. We&rsquo;ve led marketing for over 222<span className="text-accent">.</span>
+          </p>
+        </SimpleReveal>
+
+        <SimpleReveal y={14} duration={0.6} delay={0.14}>
           <p
             aria-hidden
-            className="mt-8 md:mt-10 font-serif text-display text-ink-black max-w-[16ch]"
+            className="mt-6 md:mt-8 font-serif text-display text-ink-black max-w-[20ch]"
           >
-            We do the storytelling<span className="text-accent">.</span>
+            CMO strategy<span className="text-accent">.</span>
           </p>
         </SimpleReveal>
 
         <SimpleReveal y={14} duration={0.6} delay={0.16}>
           <p
             aria-hidden
-            className="font-serif text-display text-graphite max-w-[18ch]"
+            className="font-serif text-display text-graphite max-w-[20ch]"
           >
-            You build the business<span className="text-accent">.</span>
+            Agency execution<span className="text-accent">.</span>
+          </p>
+        </SimpleReveal>
+
+        <SimpleReveal y={14} duration={0.6} delay={0.24}>
+          <p
+            aria-hidden
+            className="font-serif text-display text-ink-black max-w-[22ch]"
+          >
+            ROI you can defend<span className="text-accent">.</span>
           </p>
         </SimpleReveal>
 
