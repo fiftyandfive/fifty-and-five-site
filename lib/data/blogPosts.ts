@@ -14,6 +14,16 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "We Made Their Ads Worse. Store Revenue Went Up 156%.",
+    slug: 'we-made-their-ads-worse',
+    wixSlug: 'we-made-their-ads-worse',
+    date: '2026-07-17',
+    minutesToRead: 8,
+    heroImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=85',
+    excerpt: "Their click-through was healthy. Their CPMs were cheap. They were still underwater on every dollar. The previous agency called it a creative problem. It wasn't.",
+    category: 'Fractional CMO',
+  },
+  {
     title: "Most Actors Don't Need to Shoot a Demo Reel. They Need to Edit One.",
     slug: 'actors-demo-reel-edit-not-shoot',
     wixSlug: 'actors-demo-reel-edit-not-shoot',

@@ -22,6 +22,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   'Case Studies': '#F59E0B',
   'Agency': '#C41E3A',
   'Entertainment': '#7C3AED',
+  'Fractional CMO': '#0F766E',
 };
 
 export function BlogPageContent() {
