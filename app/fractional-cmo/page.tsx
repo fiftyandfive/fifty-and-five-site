@@ -433,6 +433,12 @@ export default function FractionalCmoPage() {
           A 30-minute call. Your numbers, your bottleneck, and whether it makes sense. No
           deck, no pressure.
         </p>
+        <p className="mt-3 text-meta text-text-tertiary">
+          Based in Central Florida?{' '}
+          <Link href="/fractional-cmo-orlando" className="text-accent hover:text-accent-light underline underline-offset-2">
+            Meet the operator behind the seat
+          </Link>.
+        </p>
         <div className="mt-10 flex flex-col items-center gap-3">
           <MagneticButton
             href={SITE.calendly}
