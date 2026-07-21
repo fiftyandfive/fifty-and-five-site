@@ -121,6 +121,18 @@ export function Footer() {
             <Link href="/fractional-cmo" className="hover:text-text-primary transition-colors">
               Fractional CMO
             </Link>
+            <Link href="/fractional-cmo-orlando" className="hover:text-text-primary transition-colors">
+              Fractional CMO Orlando
+            </Link>
+            <Link href="/social-media-marketing-agency-florida" className="hover:text-text-primary transition-colors">
+              Florida Social Media Agency
+            </Link>
+            <Link href="/hospitality-social-media-agency" className="hover:text-text-primary transition-colors">
+              Hospitality Social Media Agency
+            </Link>
+            <Link href="/wine-social-media-marketing-agency" className="hover:text-text-primary transition-colors">
+              Wine &amp; Spirits Social Media Agency
+            </Link>
             <Link href="/press" className="hover:text-text-primary transition-colors">
               Press
             </Link>

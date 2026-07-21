@@ -87,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   foundingDate: '2008',
                   founder: {
                     '@type': 'Person',
+                    '@id': 'https://fiftyandfive.com/#lucas-vandenberg',
                     name: 'Lucas Vandenberg',
                     jobTitle: ['Founder', 'Fractional CMO'],
                     url: 'https://www.linkedin.com/in/LucasV/',

@@ -300,6 +300,21 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
+      {(v.slug === 'wine-spirits' || v.slug === 'hospitality') && (
+        <section className="container-edge pb-16 md:pb-20 text-center">
+          <p className="text-body text-text-secondary">
+            Hiring an agency for this vertical?{' '}
+            <Link
+              href={v.slug === 'wine-spirits' ? '/wine-social-media-marketing-agency' : '/hospitality-social-media-agency'}
+              className="text-accent hover:text-accent-light underline underline-offset-2"
+            >
+              See our {v.shortLabel.toLowerCase()} agency page
+            </Link>
+            {' '}for pricing and FAQs.
+          </p>
+        </section>
+      )}
+
       <CTASection
         headline={`Run social for ${v.shortLabel.toLowerCase()}?`}
         body="Book a 30-min working session — no pitch deck, no proposal until we know it's a fit."
