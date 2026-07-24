@@ -270,7 +270,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2026-05-29',
     minutesToRead: 5,
     heroImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=85',
-    excerpt: "Most social media agencies charge $1,000 to $20,000+ per month, billed as a retainer. Here’s what each tier actually buys, why retainers beat project work, and how to know what you should pay in 2026.",
+    excerpt: "Social media retainers run $3,000 to $50,000+ per month depending on scope and seniority. Here’s what each tier actually buys, why retainers beat project work, and how to know what you should pay in 2026.",
     category: 'Agency',
   },
   {
