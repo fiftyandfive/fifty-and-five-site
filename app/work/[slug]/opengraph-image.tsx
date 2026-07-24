@@ -100,7 +100,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           }}
         >
           <div style={{ display: 'flex' }}>
-            The boutique agency Fortune 500s use, since 2008
+            The boutique agency Fortune 500s call, since 2008
           </div>
           <div
             style={{

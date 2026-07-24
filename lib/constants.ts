@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Fifty & Five',
   wordmark: 'fifty & five',
-  tagline: 'The boutique agency Fortune 500s use. 222+ brands across 5 continents since 2008.',
+  tagline: 'The boutique agency Fortune 500s call. 222+ brands across 5 continents since 2008.',
   email: 'hello@fiftyandfive.com',
   location: 'Orlando, FL',
   url: 'https://fiftyandfive.com',

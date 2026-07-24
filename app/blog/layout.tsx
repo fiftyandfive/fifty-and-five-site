@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Blog | Social Media Strategy, AI & Content Marketing',
   description:
-    'Social media strategy, AI automation, and brand storytelling insights from Fifty & Five, the boutique agency Fortune 500s use. 222+ brands since 2008.',
+    'Social media strategy, AI automation, and brand storytelling insights from Fifty & Five, the boutique agency Fortune 500s call. 222+ brands since 2008.',
   alternates: {
     canonical: 'https://fiftyandfive.com/blog',
   },

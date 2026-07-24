@@ -184,11 +184,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       },
                     ],
                   },
-                  numberOfEmployees: {
-                    '@type': 'QuantitativeValue',
-                    value: 10,
-                    unitText: 'employees',
-                  },
                   memberOf: [
                     {
                       '@type': 'Organization',
