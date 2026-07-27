@@ -163,6 +163,21 @@ export const BLOG_CONTENT: Record<string, string> = {
 
 <p><strong>Deciding the attention is not the problem is a CMO one.</strong></p>
 
+<h2>Update: the system kept compounding into July</h2>
+
+<p>The numbers above covered the first six weeks. Twenty-six days into July, we trended that day-by-day pace forward to a full 31-day month and compared it against the previous agency&rsquo;s average month from January through May. On that basis, July is tracking toward:</p>
+
+<ul>
+<li><strong>Revenue:</strong> projected +176%</li>
+<li><strong>Order volume:</strong> projected +165%</li>
+<li><strong>Average order value:</strong> +4%</li>
+<li><strong>Discount dependency:</strong> down roughly 21%, now tracking near 27% of gross versus the prior baseline&rsquo;s 34%</li>
+</ul>
+
+<p>That last one matters as much as the revenue number. Growing on discount is easy and temporary. Growing while discount dependency <em>falls</em> means the demand is more real, not more subsidized.</p>
+
+<p><strong>The honest caveat, same as before:</strong> this is a straight-line projection off the first 26 days, not a closed month. The last weekend of that window ran below the month&rsquo;s daily average, and the five days remaining are all weekdays, which have historically paced lower than weekends in this account. Treat these as the optimistic end of the range, not a number to bank on. We will not publish final July figures here until the month closes.</p>
+
 <p><em>Fifty &amp; Five is a senior-led boutique agency in Orlando, FL. 222+ brands across five continents since 2008 &mdash; Warner Bros., Microsoft, Kendall-Jackson, Blaze Pizza, Enterprise, Resorts World. Most clients stay 3+ years.</em></p>
 
 <p><em>If your paid program has healthy click-through and unhealthy economics, <a href="/contact">let&rsquo;s talk</a> &mdash; that is the exact shape of problem we take. Or <a href="/audit">get a free brand audit</a>.</em></p>`,

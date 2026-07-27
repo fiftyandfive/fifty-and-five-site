@@ -303,7 +303,7 @@ export default function FractionalCmoPage() {
                 </div>
               </div>
               <div className="mt-8 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
-                Read the case study
+                Read the case study, now with a July update
                 <span
                   aria-hidden
                   className="transition-transform duration-300 group-hover:translate-x-0.5"
