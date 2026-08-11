@@ -14,6 +14,36 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "How Much Does Franchise Social Media Management Cost? (2026 Guide)",
+    slug: 'franchise-social-media-management-cost',
+    wixSlug: 'franchise-social-media-management-cost',
+    date: '2026-08-11',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600&q=85',
+    excerpt: "One brand, hundreds of locations, and a corporate team that can't be everywhere. What franchise social media management actually costs in 2026, and what separates a real program from a template with a location tag.",
+    category: 'Agency',
+  },
+  {
+    title: "Why Wine and Hospitality Brands Hire a Fractional CMO Who's Actually Run the Category",
+    slug: 'fractional-cmo-wine-hospitality-brands',
+    wixSlug: 'fractional-cmo-wine-hospitality-brands',
+    date: '2026-08-11',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1600&q=85',
+    excerpt: "A fractional CMO who has never worked wine or hospitality is learning the category on your budget. The case for hiring one who built a distributor's first marketing department before founding an agency that has run Kendall-Jackson and Resorts World.",
+    category: 'Fractional CMO',
+  },
+  {
+    title: "Healthcare Social Media Compliance: What HIPAA-Aware Marketing Actually Looks Like",
+    slug: 'healthcare-social-media-hipaa-compliance',
+    wixSlug: 'healthcare-social-media-hipaa-compliance',
+    date: '2026-08-11',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1600&q=85',
+    excerpt: "Healthcare social media has one job traditional agencies underrate: don't create compliance exposure while trying to build trust. What a HIPAA-aware content workflow actually includes, and why most agencies get patient story or patient privacy right, never both.",
+    category: 'Healthcare',
+  },
+  {
     title: "We Made Their Ads Worse. Store Revenue Went Up 156%.",
     slug: 'we-made-their-ads-worse',
     wixSlug: 'we-made-their-ads-worse',
