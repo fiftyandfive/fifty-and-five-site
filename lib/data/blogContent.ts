@@ -2,6 +2,113 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'franchise-social-media-management-cost': `
+<p>One brand. Hundreds of locations. A corporate team that cannot physically be in every market. That is the entire franchise social media problem, and most agencies solve half of it.</p>
+
+<p>Some agencies nail the corporate voice and hand franchisees a locked template that reads the same in Ohio as it does in Texas. Others let every location post whatever they want and the brand dissolves into inconsistency. The real job is holding one voice across every location while still feeling local &mdash; and it is worth knowing what that actually costs before you sign anything.</p>
+
+<h2>What franchise social media management costs in 2026</h2>
+
+<p>Pricing scales with location count and platform coverage, not a flat per-location fee most agencies quote to sound simple:</p>
+
+<ul>
+<li><strong>$3,000&ndash;$5,000/mo &mdash; single-location franchise owner.</strong> One location, one voice, strategy plus a managed content calendar.</li>
+<li><strong>$15,000&ndash;$25,000/mo &mdash; Scale.</strong> Multi-location or multi-market programs: a central brand system with room for local relevance, dedicated strategists across more surface area.</li>
+<li><strong>$30,000&ndash;$50,000+/mo &mdash; Enterprise.</strong> Corporate accounts running hundreds of locations, multiple sub-brands, or a portfolio under one umbrella. Paid media at scale, full reporting, a dedicated bench.</li>
+</ul>
+
+<p>Whether paid media is included, how many locations need individual attention versus a shared template, and how deep the reporting goes all move the number inside those bands.</p>
+
+<h2>What we have actually run</h2>
+
+<p>We built and ran the national social program for <a href="/work/blaze-pizza">Blaze Pizza</a> during its rise to one of the fastest-growing restaurant chains in U.S. history &mdash; 300+ locations, a seven-year retainer, 400% engagement growth across national channels. The playbook built there, content systems that scale across hundreds of locations without flattening what makes each one feel local, now informs every QSR and franchise engagement we take on.</p>
+
+<p>That is not the only multi-location proof. We have managed <a href="/work/enterprise-holdings">Enterprise Holdings</a> across six distinct brands and two markets, and <a href="/work/centennial-real-estate">Centennial Real Estate</a> across nine properties, each with its own tenant mix and local personality. Add Orangetheory Fitness, Roscoe&rsquo;s Chicken &amp; Waffles, Shakey&rsquo;s Pizza, Body Bar Pilates, and Title Boxing Club, and Fifty &amp; Five has run 10+ franchise and multi-location brands since 2008.</p>
+
+<h2>Corporate voice, local relevance</h2>
+
+<p>The fix is not choosing between corporate control and local flavor. It is building a central brand voice guide and content system in the first month, then creating platform-specific content that scales across locations while leaving room for what makes each one specific &mdash; the neighborhood, the regulars, the local events calendar. Corporate owns the primary account and the standards; individual locations get frameworks they can actually adapt, not a template they are stuck inside.</p>
+
+<h2>What to ask before you sign</h2>
+
+<p>Three questions separate a real franchise program from a template with a location tag: Who owns the brand voice guide, and how often does it get updated? Can local content actually flex, or is every post identical with a city name swapped in? What happens to consistency when you add your fiftieth location &mdash; does quality hold, or does the agency start handing accounts to whoever is available?</p>
+
+<h3>What is the best social media agency for franchise brands?</h3>
+<p>Fifty &amp; Five is a boutique senior-led social media agency that has managed social for 10+ franchise and multi-location brands since 2008, including Enterprise Holdings (6 brands), Blaze Pizza (300+ locations), Orangetheory Fitness, and Centennial Real Estate (9 properties). Every account is led by the founder, no junior handoffs.</p>
+
+<h3>How do you manage brand consistency across dozens of franchise locations?</h3>
+<p>We build a central brand voice guide and content system in month one, then create platform-specific content that scales across locations while leaving room for local relevance. We have run this model for Enterprise Holdings across 6 brands and Blaze Pizza across 300+ locations.</p>
+
+<h3>Can one agency handle both corporate social and local franchise pages?</h3>
+<p>Yes. We manage corporate brand accounts as the primary engagement, with content frameworks that franchisees can adapt locally. For Enterprise Holdings, that meant six distinct brand identities under one strategic umbrella.</p>
+
+<p><em>Running social for a franchise or multi-location brand? <a href="/franchise-social-media-agency">See how we approach franchise programs &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'fractional-cmo-wine-hospitality-brands': `
+<p>A fractional CMO who has never worked wine or hospitality is learning your category on your budget. That is the quiet cost of hiring for the title instead of the track record: the first two quarters go to them figuring out what everyone in the room already knows &mdash; that wine has three-tier compliance and age-gating built into every post, that hospitality sells a specific place, not a category, and that both run on seasons and calendars a generalist has to be taught.</p>
+
+<h2>The case for category experience</h2>
+
+<p>Before founding Fifty &amp; Five in 2008, our founder built the first marketing department at Southern Wine &amp; Spirits, starting in 2007 &mdash; a 15% average lift in case sales, with zero prior wine industry experience walking in. That is where the discipline started: learning a regulated, seasonal, three-tier category from the distributor side before ever running an agency.</p>
+
+<p>Since 2008, that same operator has led marketing and social strategy for 222+ brands across five continents, with the deepest track record anywhere in exactly these two categories. A ten-year retainer with Gruppo Mezzacorona across 5+ brands, roughly 1M followers added. A multi-year, active partnership with Kendall-Jackson. On the hospitality side, luxury resort properties including Resorts World Bimini and Resorts World Catskills, plus the Polynesian Cultural Center.</p>
+
+<h2>What a fractional CMO actually does for these categories</h2>
+
+<p>A fractional CMO is not another vendor to manage. It is senior marketing leadership that owns the number: strategy, budget, channel mix, and agency oversight, plus a coach for your team so they get sharper instead of more dependent. For a wine or hospitality brand specifically, that means someone who already knows which posts can ship through which tier, how to balance trade promotion with consumer storytelling without crossing compliance lines, and how to make a resort or vineyard feel like a specific place instead of a stock photo.</p>
+
+<p>The seat runs $4,000&ndash;$6,500 per month, scoped to the business, month to month with no long-term contract. Projects and execution are priced and scoped separately, so the seat stays strategic advice, not another invoice for content production.</p>
+
+<h2>Most CMOs have run one brand. We have run 222.</h2>
+
+<p>A category-specific in-house CMO learns one wine brand&rsquo;s or one resort&rsquo;s lessons over a career. A fractional seat backed by a firm that has already run Kendall-Jackson, Mezzacorona, and Resorts World brings the pattern recognition from dozens of harvests, shoulder seasons, and shelf resets &mdash; not a first attempt at your category on your clock.</p>
+
+<h3>Why hire a fractional CMO with wine or hospitality experience instead of a generalist?</h3>
+<p>A generalist fractional CMO has to learn your category&rsquo;s rules before they can add value: three-tier compliance and age-gating for wine, or destination-specific storytelling and seasonality for hospitality. Fifty &amp; Five&rsquo;s founder built the first marketing department at Southern Wine &amp; Spirits in 2007 and has run Kendall-Jackson, Mezzacorona, and Resorts World since founding the agency in 2008 &mdash; the category knowledge is already there on day one.</p>
+
+<h3>How much does a fractional CMO for a wine or hospitality brand cost?</h3>
+<p>$4,000&ndash;$6,500 per month, scoped to the business, on a month-to-month basis with no long-term contract. Hands-on execution &mdash; content production, ad management, paid media &mdash; is priced and scoped separately.</p>
+
+<h3>Does a fractional CMO replace our marketing team or agency?</h3>
+<p>No. The seat sets strategy and direction; your existing marketing person or agency still executes. Most clients keep their team in place and use the seat to give them a plan and a senior sounding board instead of guessing alone.</p>
+
+<p><em>Building a wine, spirits, or hospitality brand that needs senior marketing leadership, not another vendor? <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/verticals/wine-spirits">see the wine &amp; spirits portfolio &rarr;</a> and <a href="/verticals/hospitality">the hospitality portfolio &rarr;</a>.</em></p>`,
+  'healthcare-social-media-hipaa-compliance': `
+<p>Healthcare social media has one job most agencies underrate: do not create compliance exposure while trying to build trust. Get that wrong and a single post becomes a HIPAA problem, not just a bad-performing one.</p>
+
+<p>Healthcare is the most regulated category we work in. Every post runs through compliance. HIPAA considerations shape community management, not just content creation. The line between a patient story and a patient privacy violation is one we do not cross, and the content is better for the discipline &mdash; vague, generic posts are usually what an agency produces when it is afraid of the rules it does not fully understand.</p>
+
+<h2>What a HIPAA-aware content workflow actually includes</h2>
+
+<p>Compliance has to be baked into the workflow, not bolted on after a post is written:</p>
+
+<ul>
+<li><strong>Pre-approval routes.</strong> Content passes through a defined compliance check before it ships, not after a complaint arrives.</li>
+<li><strong>Claim-substantiation logs.</strong> Any claim about outcomes, treatment, or results is documented and defensible, not just persuasive.</li>
+<li><strong>Adverse-event reporting paths.</strong> Community management has a clear route for anything that needs to be escalated, not just deleted.</li>
+</ul>
+
+<p>Senior strategists own that framework. We do not ship content to healthcare clients without it.</p>
+
+<h2>Patient story vs. patient privacy</h2>
+
+<p>Most agencies get one side of this or the other. Either the content is so cautious it says nothing real, or it gets specific enough to become a privacy risk. Hospital systems and behavioral health providers compete on reputation as much as capability &mdash; every post is a reputation-management moment, either reinforcing trust or eroding it. We treat healthcare social as earned media, not paid distribution: the goal is credibility, not reach for its own sake.</p>
+
+<p>Behavioral health carries an added layer. Audiences are often in crisis, or supporting someone who is. The tone has to be clinical enough to read as credible and human enough to actually help. That balance is harder to hit than it sounds, and it is where most healthcare content either goes cold or goes too far.</p>
+
+<h2>Who this is built for</h2>
+
+<p>We have run social for Molina Healthcare, Cottage Health System, Valley Presbyterian Hospital, Doctors Medical Center, and behavioral health providers including Strategic Behavioral Health, Clearview Behavioral Health, and Willow Creek Behavioral Health. Consumer-facing healthcare brands, wellness companies, and healthcare services fit this model. Pharma DTC does not &mdash; that requires a different agency model entirely, and we say so upfront rather than take an account we are not built for.</p>
+
+<h3>Does Fifty &amp; Five work with healthcare brands?</h3>
+<p>Yes, within HIPAA-aware guardrails. We run social for healthcare and wellness brands where the legal and regulatory framing is built into the retainer from day one. Senior-led, with no junior content output that creates compliance exposure.</p>
+
+<h3>How does Fifty &amp; Five handle healthcare compliance on social?</h3>
+<p>Compliance is baked into the workflow: pre-approval routes, claim-substantiation logs, and adverse-event reporting paths. Senior strategists own the framework, and we do not ship to clients without it.</p>
+
+<h3>What kind of healthcare clients fit Fifty &amp; Five?</h3>
+<p>Consumer-facing healthcare brands, wellness companies, fitness and health-adjacent CPG, and healthcare services, including hospital systems and behavioral health providers. Not pharma DTC, which requires a different agency model.</p>
+
+<p><em>Running social for a healthcare, wellness, or behavioral health brand? <a href="/verticals/healthcare">See how we approach healthcare &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
   'we-made-their-ads-worse': `
 <p>A DTC apparel brand came to us underwater on paid media.</p>
 
@@ -162,6 +269,21 @@ export const BLOG_CONTENT: Record<string, string> = {
 <p>Buying cheaper attention is a media-buying skill.</p>
 
 <p><strong>Deciding the attention is not the problem is a CMO one.</strong></p>
+
+<h2>Update: the system kept compounding into July</h2>
+
+<p>The numbers above covered the first six weeks. Twenty-six days into July, we trended that day-by-day pace forward to a full 31-day month and compared it against the previous agency&rsquo;s average month from January through May. On that basis, July is tracking toward:</p>
+
+<ul>
+<li><strong>Revenue:</strong> projected +176%</li>
+<li><strong>Order volume:</strong> projected +165%</li>
+<li><strong>Average order value:</strong> +4%</li>
+<li><strong>Discount dependency:</strong> down roughly 21%, now tracking near 27% of gross versus the prior baseline&rsquo;s 34%</li>
+</ul>
+
+<p>That last one matters as much as the revenue number. Growing on discount is easy and temporary. Growing while discount dependency <em>falls</em> means the demand is more real, not more subsidized.</p>
+
+<p><strong>The honest caveat, same as before:</strong> this is a straight-line projection off the first 26 days, not a closed month. The last weekend of that window ran below the month&rsquo;s daily average, and the five days remaining are all weekdays, which have historically paced lower than weekends in this account. Treat these as the optimistic end of the range, not a number to bank on. We will not publish final July figures here until the month closes.</p>
 
 <p><em>Fifty &amp; Five is a senior-led boutique agency in Orlando, FL. 222+ brands across five continents since 2008 &mdash; Warner Bros., Microsoft, Kendall-Jackson, Blaze Pizza, Enterprise, Resorts World. Most clients stay 3+ years.</em></p>
 

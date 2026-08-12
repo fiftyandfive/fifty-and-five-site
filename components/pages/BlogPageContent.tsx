@@ -23,6 +23,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   'Agency': '#C41E3A',
   'Entertainment': '#7C3AED',
   'Fractional CMO': '#0F766E',
+  'Healthcare': '#2563EB',
 };
 
 export function BlogPageContent() {
