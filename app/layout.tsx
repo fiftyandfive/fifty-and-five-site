@@ -13,25 +13,25 @@ import { Analytics } from '@/components/layout/Analytics';
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
   title: {
-    default: 'Fifty & Five | Fractional CMO + Senior-Led Social Since 2008',
+    default: 'Fifty & Five | Senior Marketing Leadership + Execution | 222 Brands Since 2008',
     template: '%s | Fifty & Five',
   },
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'CMO strategy. Agency execution. ROI you can defend. Most CMOs have run one brand. We\'ve led marketing for over 222+, across five continents since 2008. Fractional CMO seats and senior-led social retainers from $3K/mo.',
+  description: 'CMO strategy. Agency execution. ROI you can defend. We\'ve run marketing for 222 brands across five continents since 2008. Lead the function, run the work, or both. Retainers from $4,000/mo.',
   openGraph: {
     type: 'website',
-    title: 'Fifty & Five | Fractional CMO + Senior-Led Social Since 2008',
+    title: 'Fifty & Five | Senior Marketing Leadership + Execution | 222 Brands Since 2008',
     description:
-      'CMO strategy. Agency execution. ROI you can defend. Most CMOs have run one brand. We\'ve led marketing for over 222+, across five continents since 2008. Fractional CMO seats and senior-led social retainers from $3K/mo.',
+      'CMO strategy. Agency execution. ROI you can defend. We\'ve run marketing for 222 brands across five continents since 2008. Lead the function, run the work, or both. Retainers from $4,000/mo.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fifty & Five | Fractional CMO + Senior-Led Social Since 2008',
-    description: 'CMO strategy. Agency execution. ROI you can defend. Most CMOs have run one brand. We\'ve led marketing for over 222+, across five continents since 2008. Fractional CMO seats and senior-led social retainers from $3K/mo.',
+    title: 'Fifty & Five | Senior Marketing Leadership + Execution | 222 Brands Since 2008',
+    description: 'CMO strategy. Agency execution. ROI you can defend. We\'ve run marketing for 222 brands across five continents since 2008. Lead the function, run the work, or both. Retainers from $4,000/mo.',
   },
   icons: {
     icon: [
@@ -141,6 +141,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Marketing Leadership',
                     'Marketing Strategy',
                     'Brand Strategy',
+                    'Marketing Operations',
+                    'Agency Management',
+                    'Marketing Execution',
                   ],
                   areaServed: [
                     { '@type': 'Country', name: 'United States' },
@@ -226,6 +229,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     { '@type': 'Country', name: 'United States' },
                     { '@type': 'Country', name: 'Canada' },
                   ],
+                },
+                {
+                  '@type': 'Service',
+                  '@id': 'https://fiftyandfive.com/#execution-service',
+                  serviceType: 'Marketing Execution',
+                  name: 'Senior Marketing Execution',
+                  description:
+                    'Senior capacity on named workstreams for teams with an existing marketing leader: social, content, paid, and creative, delivered by senior practitioners with no junior layer to manage.',
+                  provider: { '@id': 'https://fiftyandfive.com/#organization' },
                 },
                 {
                   '@type': 'WebSite',

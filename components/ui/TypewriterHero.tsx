@@ -27,22 +27,24 @@ const HERO_IMAGES = [
 
 export function TypewriterHero() {
   return (
-    <section className="relative bg-bg-primary" aria-label="Fifty & Five — fractional CMO and senior-led social since 2008">
-      <h1 className="sr-only">
-        Fifty &amp; Five — Fractional CMO + Senior-Led Social
-      </h1>
-
+    <section className="relative bg-bg-primary" aria-label="Fifty & Five, senior marketing leadership and execution since 2008">
       {/* Poster headline block */}
       <div className="container-edge pt-32 md:pt-48 pb-12 md:pb-20">
         <SimpleReveal y={10} duration={0.5}>
           <div className="font-mono text-caption uppercase text-graphite tracking-[0.18em]">
-            Senior-led Social Media Marketing since 2008 — 222 brands, 5 continents
+            Senior-led Social Media Marketing since 2008 &middot; 222 brands, 5 continents
           </div>
         </SimpleReveal>
 
         <SimpleReveal y={12} duration={0.6} delay={0.06}>
-          <p className="mt-7 md:mt-9 font-serif text-h3 md:text-h2 text-ink-black max-w-[26ch] tracking-[-0.015em] leading-[1.15]">
-            Most CMOs have run one brand. We&rsquo;ve led marketing for over 222<span className="text-accent">.</span>
+          <h1 className="mt-7 md:mt-9 font-serif text-h3 md:text-h2 text-ink-black max-w-[28ch] tracking-[-0.015em] leading-[1.15]">
+            We&rsquo;ve run marketing for 222 brands. Yours gets the senior team.
+          </h1>
+        </SimpleReveal>
+
+        <SimpleReveal y={12} duration={0.6} delay={0.1}>
+          <p className="mt-3 md:mt-4 text-body-lg text-text-secondary max-w-[30ch]">
+            Lead the function, run the work, or both.
           </p>
         </SimpleReveal>
 

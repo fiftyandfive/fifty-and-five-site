@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: 'How much does a Florida social media agency cost?',
-    a: 'Retainers run from $3,000 per month for ad management to $50,000+ per month for full-service, always-on programs. Pricing is principal-led, with no junior account management or holding-company markup.',
+    a: 'Retainers run from $4,000 per month for ad management to $50,000+ per month for full-service, always-on programs. Pricing is principal-led, with no junior account management or holding-company markup.',
   },
   {
     q: 'What makes Fifty & Five different from other Florida agencies?',
