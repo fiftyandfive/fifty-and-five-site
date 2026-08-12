@@ -63,7 +63,7 @@ export default function HomePage() {
                 name: 'How much does Fifty & Five charge?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'New retainers start at $3,000/mo. Fractional CMO seats are priced separately and scoped to the function, not the deliverable.',
+                  text: 'New retainers start at $4,000/mo. Fractional CMO seats are priced separately and scoped to the function, not the deliverable.',
                 },
               },
               {
@@ -90,12 +90,33 @@ export default function HomePage() {
                   text: 'Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. Fifty & Five does both: senior marketing leadership that owns the number, plus the team that runs the work. A CMO typically runs one brand over a career. Fifty & Five has led marketing for 222+ brands across five continents since 2008.',
                 },
               },
+              {
+                '@type': 'Question',
+                name: 'We already have a CMO. What does Fifty & Five do for us?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Run the work. Fifty & Five operates as the senior execution arm behind an in-house marketing leader: social, content, paid, and creative, delivered by senior practitioners on named workstreams. Blaze Pizza ran as a ten-year national program on this model, and Enterprise Holdings ran six brands across the US and LATAM. Retainers start at $4,000/mo.',
+                },
+              },
             ],
           }),
         }}
       />
       {/* HERO */}
       <TypewriterHero />
+
+      {/* PROOF STRIP: historical duration proof, not current-client claims */}
+      <section className="container-edge py-10 md:py-12 border-t border-glass-border">
+        <SimpleReveal y={8} duration={0.4} margin="-30%">
+          <p className="text-body text-text-secondary max-w-4xl leading-[1.7]">
+            Blaze Pizza, a ten-year national program. Gruppo Mezzacorona, ten years across five
+            portfolio brands. Enterprise Holdings, six brands across the US and LATAM.
+          </p>
+          <p className="mt-2 font-mono text-caption uppercase text-text-tertiary tracking-[0.14em]">
+            Most agencies sell projects. We sell durations.
+          </p>
+        </SimpleReveal>
+      </section>
 
       {/* BIG-BRAND MARQUEE */}
       <BrandMarquee />
@@ -130,12 +151,13 @@ export default function HomePage() {
       <section className="container-edge py-20 md:py-28">
         <SimpleReveal y={10} duration={0.5}>
           <p className="font-serif text-h2 md:text-h1 tracking-[-0.02em] text-text-primary max-w-4xl leading-[1.15]">
-            A CMO learns one brand&rsquo;s lessons over a career. We&rsquo;ve watched 222 brands make every mistake there is.
+            Eighteen years. 222 brands. Five continents. Whatever&rsquo;s in front of you,
+            we&rsquo;ve seen its shape before, and we&rsquo;ve seen how it goes wrong.
           </p>
         </SimpleReveal>
         <SimpleReveal y={10} duration={0.5} delay={0.1}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.7]">
-            You&rsquo;re not buying a title. You&rsquo;re buying the pattern recognition.
+            That&rsquo;s what you&rsquo;re buying. Not a title. Pattern recognition.
           </p>
         </SimpleReveal>
       </section>

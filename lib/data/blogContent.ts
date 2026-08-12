@@ -12,9 +12,9 @@ export const BLOG_CONTENT: Record<string, string> = {
 <p>Pricing scales with location count and platform coverage, not a flat per-location fee most agencies quote to sound simple:</p>
 
 <ul>
-<li><strong>$3,000&ndash;$5,000/mo &mdash; single-location franchise owner.</strong> One location, one voice, strategy plus a managed content calendar.</li>
-<li><strong>$15,000&ndash;$25,000/mo &mdash; Scale.</strong> Multi-location or multi-market programs: a central brand system with room for local relevance, dedicated strategists across more surface area.</li>
-<li><strong>$30,000&ndash;$50,000+/mo &mdash; Enterprise.</strong> Corporate accounts running hundreds of locations, multiple sub-brands, or a portfolio under one umbrella. Paid media at scale, full reporting, a dedicated bench.</li>
+<li><strong>$4,000&ndash;$6,500/mo, single-location franchise owner.</strong> One location, one voice, strategy plus a managed content calendar.</li>
+<li><strong>$15,000&ndash;$25,000/mo, Scale.</strong> Multi-location or multi-market programs: a central brand system with room for local relevance, dedicated strategists across more surface area.</li>
+<li><strong>$30,000&ndash;$50,000+/mo, Enterprise.</strong> Corporate accounts running hundreds of locations, multiple sub-brands, or a portfolio under one umbrella, scoped and not templated. Blaze Pizza ran as a ten-year national program to 300+ locations; Enterprise Holdings ran six brands across the US and LATAM.</li>
 </ul>
 
 <p>Whether paid media is included, how many locations need individual attention versus a shared template, and how deep the reporting goes all move the number inside those bands.</p>
@@ -528,7 +528,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 
 <h2>Option 3: The agency retainer</h2>
 
-<p>An agency gives you a team and production capacity. Good ones deliver real work; the trade-off is that you are often one account among many, sometimes handed to junior staff after a senior pitch. Retainers make sense when you need volume &mdash; content produced, campaigns run, paid managed. We run those too, from $3,000/mo. But a retainer is production. It is not the same as having senior judgment that owns your strategy.</p>
+<p>An agency gives you a team and production capacity. Good ones deliver real work; the trade-off is that you are often one account among many, sometimes handed to junior staff after a senior pitch. Retainers make sense when you need volume: content produced, campaigns run, paid managed. We run those too, from $4,000/mo. But a retainer is production. It is not the same as having senior judgment that owns your strategy.</p>
 
 <h2>Option 4: The fractional CMO seat</h2>
 
@@ -541,7 +541,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 <ul>
 <li><strong>Full-time CMO</strong> &mdash; $200K+/yr. Full ownership, fixed cost, a hire to manage. Fits companies past roughly $20M.</li>
 <li><strong>Coordinator</strong> &mdash; ~$65K/yr. Executes, does not strategize. Needs senior direction to be worth it.</li>
-<li><strong>Agency retainer</strong> &mdash; from $3,000/mo. Team and production capacity. Best when you need volume shipped.</li>
+<li><strong>Agency retainer,</strong> from $4,000/mo. Team and production capacity. Best when you need volume shipped.</li>
 <li><strong>Fractional seat</strong> &mdash; $4,000-$6,500/mo, month to month. Senior strategy on call, no body to manage. Fits $1M-20M owner-operators.</li>
 </ul>
 
@@ -1945,13 +1945,13 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h3>What is the difference between a social-first agency and a traditional agency?</h3>
 <p>A social-first agency was built from day one for social media management and platform-native content strategy. A traditional agency that offers social media services typically started in advertising, PR, or another marketing discipline and added social media capabilities later. The difference shows up in how the agency approaches community management, content formats, and measurement — social-first agencies treat platforms as core infrastructure, not as an additional channel.</p>`,
   'how-much-does-a-social-media-agency-cost': `
-<p><strong>Short answer:</strong> Social media retainers run <strong>$3,000 to $50,000+ per month</strong>. Growth accounts start around $3,000&ndash;$5,000/mo, premium mid-market programs run $6,000&ndash;$10,000/mo, multi-market scale programs run $15,000&ndash;$25,000/mo, and enterprise or multi-brand programs run $30,000&ndash;$50,000+/mo. What you pay should map to scope &mdash; number of platforms, content volume, paid media, and whether senior strategists touch the work or it&rsquo;s handed to juniors.</p>
+<p><strong>Short answer:</strong> Social media retainers run <strong>$4,000 to $50,000+ per month</strong>. Growth accounts start around $4,000&ndash;$6,500/mo, premium mid-market programs run $7,500&ndash;$12,000/mo, multi-market scale programs run $15,000&ndash;$25,000/mo, and enterprise or multi-brand programs run $30,000&ndash;$50,000+/mo. What you pay should map to scope: number of platforms, content volume, paid media, and whether senior strategists touch the work or it&rsquo;s handed to juniors.</p>
 <p>Below is what each tier actually buys, the pricing models to know, and how to tell whether a quote is fair.</p>
 <h2>What you get at each price tier</h2>
-<p><strong>$3,000&ndash;$5,000/mo &mdash; Growth.</strong> The entry point for a serious brand, not a hobbyist budget. Strategy, a managed content calendar, original creative (photo/video), community management, reporting, and a dedicated senior-led team. Boutique hospitality, wine &amp; spirits, and lifestyle brands typically land here.</p>
-<p><strong>$6,000&ndash;$10,000/mo &mdash; Premium.</strong> More platforms, more content volume, and paid media oversight layered in. The differentiator at this tier isn&rsquo;t volume &mdash; it&rsquo;s <em>who&rsquo;s doing the work</em>. A senior-led boutique gives you the judgment of someone who&rsquo;s run hundreds of programs; a body shop gives you a 23-year-old following a template.</p>
-<p><strong>$15,000&ndash;$25,000/mo &mdash; Scale.</strong> Multi-location or multi-market programs: franchise groups, category-leading CPG brands, dedicated strategists across more surface area.</p>
-<p><strong>$30,000&ndash;$50,000+/mo &mdash; Enterprise / multi-brand.</strong> Multi-platform, multi-market, or multiple sub-brands under one roof. Paid media management, influencer programs, high-volume video, and a full bench of dedicated strategists. This is the tier for a brand treating social as a real revenue channel, not a checkbox.</p>
+<p><strong>$4,000&ndash;$6,500/mo, Growth.</strong> The entry point for a serious brand, not a hobbyist budget. Strategy, a managed content calendar, original creative (photo/video), community management, reporting, and a dedicated senior-led team. Boutique hospitality, wine &amp; spirits, and lifestyle brands typically land here.</p>
+<p><strong>$7,500&ndash;$12,000/mo, Premium.</strong> More platforms, more content volume, and paid media oversight layered in. The differentiator at this tier isn&rsquo;t volume, it&rsquo;s <em>who&rsquo;s doing the work</em>. A senior-led boutique gives you the judgment of someone who&rsquo;s run hundreds of programs; a body shop gives you a 23-year-old following a template.</p>
+<p><strong>$15,000&ndash;$25,000/mo, Scale.</strong> Multi-location or multi-market programs: franchise groups, category-leading CPG brands, dedicated strategists across more surface area.</p>
+<p><strong>$30,000&ndash;$50,000+/mo, Enterprise / multi-brand.</strong> Multi-platform, multi-market, or multiple sub-brands under one roof, scoped and not templated. Blaze Pizza ran as a ten-year national program to 300+ locations; Enterprise Holdings ran six brands across the US and LATAM. This is the tier for a brand treating social as a real revenue channel, not a checkbox.</p>
 <h2>The pricing models, explained</h2>
 <p><strong>Monthly retainer (most common, and best):</strong> a fixed monthly fee for an agreed scope. Predictable for you, and it lets the agency build the institutional memory that actually compounds &mdash; brand voice, what worked, what flopped.</p>
 <p><strong>Project-based:</strong> one-off campaigns or launches. Useful for a specific push, but you lose continuity and pay a premium to re-ramp every time.</p>
@@ -1970,7 +1970,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p>Cheap social media is the most expensive kind &mdash; you pay monthly for output that quietly disqualifies your brand. The right question isn&rsquo;t &ldquo;what&rsquo;s the lowest price,&rdquo; it&rsquo;s &ldquo;what&rsquo;s the cost of looking forgettable to the customers who pay the most.&rdquo; Budget for the tier that matches your ambition, and weight it toward seniority over volume.</p>
 <h3>FAQ</h3>
 <h3>How much does a social media agency cost per month?</h3>
-<p>Retainers typically run $3,000 to $50,000+ per month: Growth accounts start at $3,000&ndash;$5,000, Premium runs $6,000&ndash;$10,000, Scale runs $15,000&ndash;$25,000, and Enterprise multi-brand programs run $30,000&ndash;$50,000+, depending on platforms, content volume, and paid media.</p>
+<p>Retainers typically run $4,000 to $50,000+ per month: Growth accounts start at $4,000&ndash;$6,500, Premium runs $7,500&ndash;$12,000, Scale runs $15,000&ndash;$25,000, and Enterprise multi-brand programs run $30,000&ndash;$50,000+, depending on platforms, content volume, and paid media.</p>
 <h3>Is a retainer better than project-based pricing?</h3>
 <p>For ongoing social, yes. A retainer builds continuity &mdash; brand voice, calendar cadence, and institutional memory &mdash; that one-off projects can&rsquo;t, and it avoids paying to re-ramp every campaign.</p>
 <h3>Why are some agencies so much cheaper?</h3>
@@ -2072,7 +2072,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h3>What regulations affect wine and spirits social media?</h3>
 <p>TTB federal guidelines, state-level advertising and shipping restrictions, platform-specific alcohol ad policies (Meta, TikTok, Google), and age-gating requirements all apply. An experienced agency navigates these without slowing your content calendar.</p>
 <h3>How much does a social media agency cost for a winery?</h3>
-<p>Boutique agencies with wine &amp; spirits expertise typically charge $3,000&ndash;$10,000/month depending on platforms, content volume, and whether paid media management is included. The premium over a generalist reflects compliance knowledge and category-native content.</p>
+<p>Boutique agencies with wine &amp; spirits expertise typically charge $4,000&ndash;$12,000/month depending on platforms, content volume, and whether paid media management is included. The premium over a generalist reflects compliance knowledge and category-native content.</p>
 <p><em>Fifty &amp; Five has managed social media for wine &amp; spirits brands since 2008 &mdash; from Kendall-Jackson to boutique single-vineyard producers. <a href="/verticals/wine-spirits">See the wine &amp; spirits work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
   'social-media-agency-pricing-models': `
 <p><strong>Short answer:</strong> There are four pricing models in social media agencies: <strong>monthly retainer, project-based, hourly, and productized</strong>. Each has trade-offs, but for ongoing social media management, the monthly retainer is the best model for most brands because it builds continuity, institutional memory, and compounding results.</p>
@@ -2170,10 +2170,10 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p>A social media agency specializes in social platforms &mdash; content, community, paid social, and platform-specific strategy. A marketing agency may offer social as one service among many (SEO, email, PR, media buying). The trade-off is depth vs. breadth.</p>
 <p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008 &mdash; from Blaze Pizza to Kendall-Jackson. <a href="/services">See our services &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
   'social-media-agency-for-restaurants': `
-<p><strong>Short answer:</strong> A social media agency for restaurants typically costs <strong>$1,500&ndash;$8,000/month</strong> depending on the number of locations, content volume, and whether paid media is included. The right agency understands that restaurant social media exists to drive covers, not just accumulate followers &mdash; and that means food photography, local targeting, real-time community management, and content that makes people hungry enough to book.</p>
+<p><strong>Short answer:</strong> A social media agency for restaurants typically costs <strong>$4,000&ndash;$12,000/month</strong> depending on the number of locations, content volume, and whether paid media is included. The right agency understands that restaurant social media exists to drive covers, not just accumulate followers, and that means food photography, local targeting, real-time community management, and content that makes people hungry enough to book.</p>
 <h2>What restaurant social media costs</h2>
-<p><strong>Single location, $1,500&ndash;$3,000/mo.</strong> Strategy, content calendar, 10&ndash;15 posts per month, basic community management, and monthly reporting. This tier works for an independent restaurant that needs consistent, quality content without a full-time hire.</p>
-<p><strong>Multi-location or high-volume, $3,000&ndash;$8,000/mo.</strong> Multiple platforms, original photography/video, location-specific content, paid media management, influencer coordination, and detailed reporting. This is the tier for restaurant groups, fast-casual chains, or any brand treating social as a real revenue driver. For a full pricing breakdown, see <a href="/blog/how-much-does-a-social-media-agency-cost">How Much Does a Social Media Agency Cost?</a></p>
+<p><strong>Single location, $4,000&ndash;$6,500/mo.</strong> Strategy, content calendar, 10&ndash;15 posts per month, community management, and monthly reporting. This tier works for an independent restaurant that needs consistent, senior-led content without a full-time hire.</p>
+<p><strong>Multi-location or high-volume, $7,500&ndash;$12,000/mo.</strong> Multiple platforms, original photography/video, location-specific content, paid media management, influencer coordination, and detailed reporting. This is the tier for restaurant groups, fast-casual chains, or any brand treating social as a real revenue driver. For a full pricing breakdown, see <a href="/blog/how-much-does-a-social-media-agency-cost">How Much Does a Social Media Agency Cost?</a></p>
 <h2>Services that actually drive covers</h2>
 <p><strong>1. Food photography and video that sells.</strong> Flat-lay menus and dimly lit iPhone shots don&rsquo;t cut it. The agency should produce scroll-stopping food content &mdash; overhead pours, sizzle reels, plating close-ups &mdash; formatted for each platform. This is the single highest-impact investment in restaurant social.</p>
 <p><strong>2. Local targeting and geo-fencing.</strong> Paid social for restaurants should target by radius, not by interest graph. A 5-mile geo-fence around your location with a compelling food visual and a clear CTA (&ldquo;Reserve tonight&rdquo; or &ldquo;Order delivery&rdquo;) outperforms broad targeting every time.</p>
@@ -2185,7 +2185,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p>Restaurant social media lives or dies on one question: does the content make people want to eat there? Everything else &mdash; follower count, impressions, engagement rate &mdash; is a proxy for that. Hire an agency that produces food content worth craving, targets locally, and responds in real time.</p>
 <h3>FAQ</h3>
 <h3>How much should a restaurant spend on social media?</h3>
-<p>Single locations typically invest $1,500&ndash;$3,000/month for agency management. Multi-location restaurant groups run $3,000&ndash;$8,000/month depending on content volume, platforms, and paid media.</p>
+<p>Single locations typically invest $4,000&ndash;$6,500/month for agency management. Multi-location restaurant groups run $7,500&ndash;$12,000/month depending on content volume, platforms, and paid media.</p>
 <h3>Do restaurants need a social media agency or can they do it in-house?</h3>
 <p>In-house works if you have a dedicated person with photography skills, copywriting ability, and time to manage community daily. Most restaurants don&rsquo;t &mdash; the GM or marketing manager is already stretched. An agency provides consistency and quality without adding headcount.</p>
 <h3>What social media platforms are best for restaurants?</h3>
@@ -2211,23 +2211,23 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p><strong>Systems and tools.</strong> Agencies have established workflows for content approval, scheduling, reporting, and crisis management. You benefit from processes refined across dozens of clients.</p>
 <p><strong>Accountability.</strong> A contract, an account lead, and structured reporting create accountability that&rsquo;s harder to enforce with a freelancer.</p>
 <p><strong>Cons:</strong></p>
-<p><strong>Higher cost.</strong> Agencies typically charge $3,000&ndash;$20,000+/month. You&rsquo;re paying for the team, the systems, and the overhead.</p>
+<p><strong>Higher cost.</strong> Agencies typically charge $4,000&ndash;$20,000+/month. You&rsquo;re paying for the team, the systems, and the overhead.</p>
 <p><strong>Potential for junior execution.</strong> Not all agencies are senior-led. Some sell you senior talent in the pitch and deliver junior execution day-to-day.</p>
 <p><strong>Slower communication.</strong> Layers between you and the creator can slow feedback loops and dilute creative direction.</p>
 <h2>Cost comparison</h2>
 <p><strong>Freelancer:</strong> $500&ndash;$3,000/month. Best value for simple, single-platform needs with a hands-on client.</p>
-<p><strong>Boutique agency:</strong> $3,000&ndash;$10,000/month. Best value for multi-platform programs where strategy, quality, and continuity matter.</p>
+<p><strong>Boutique agency:</strong> $4,000&ndash;$12,000/month. Best value for multi-platform programs where strategy, quality, and continuity matter.</p>
 <p><strong>Large agency:</strong> $10,000&ndash;$20,000+/month. Best for enterprise, multi-market, or multi-brand programs.</p>
 <p>For a full pricing breakdown, see <a href="/blog/how-much-does-a-social-media-agency-cost">How Much Does a Social Media Agency Cost?</a></p>
 <h2>How to choose</h2>
-<p><strong>Choose a freelancer if:</strong> your budget is under $3,000/month, you only need one or two platforms, you can provide strategic direction yourself, and you&rsquo;re comfortable managing the relationship closely.</p>
+<p><strong>Choose a freelancer if:</strong> your budget is under $4,000/month, you only need one or two platforms, you can provide strategic direction yourself, and you&rsquo;re comfortable managing the relationship closely.</p>
 <p><strong>Choose an agency if:</strong> you need multiple platforms, original content production, paid media, and strategic leadership. You want continuity that survives individual turnover, and you&rsquo;re investing in social as a serious growth channel.</p>
 <p><strong>The hybrid option:</strong> Some brands start with a freelancer for execution and hire an agency for strategy and oversight. This works if the freelancer and agency communicate well &mdash; and falls apart if they don&rsquo;t.</p>
 <h2>The bottom line</h2>
 <p>A great freelancer beats a mediocre agency, and a great agency beats a great freelancer at scale. The question isn&rsquo;t which model is better in the abstract &mdash; it&rsquo;s which model matches your budget, complexity, and management capacity right now.</p>
 <h3>FAQ</h3>
 <h3>Is a freelancer cheaper than a social media agency?</h3>
-<p>Yes, typically 50&ndash;70% less expensive. Freelancers charge $500&ndash;$3,000/month vs. $3,000&ndash;$20,000+ for agencies. But the comparison isn&rsquo;t apples-to-apples &mdash; agencies provide team depth, systems, and continuity that a single freelancer can&rsquo;t.</p>
+<p>Yes, typically 50&ndash;70% less expensive. Freelancers charge $500&ndash;$3,000/month vs. $4,000&ndash;$20,000+ for agencies. But the comparison isn&rsquo;t apples-to-apples: agencies provide team depth, systems, and continuity that a single freelancer can&rsquo;t.</p>
 <h3>Can a freelancer handle multiple social media platforms?</h3>
 <p>A skilled freelancer can manage 2&ndash;3 platforms, but quality often drops as scope expands. If you need 4+ platforms with original content, paid media, and community management, a team is usually necessary.</p>
 <h3>What happens if my freelancer quits?</h3>
@@ -2247,7 +2247,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h2>Questions to ask before hiring</h2>
 <p><strong>&ldquo;Do I need an agency or a freelancer?&rdquo;</strong> If your needs are simple (one platform, basic posting, low volume), a freelancer may suffice. If you need multi-platform strategy, original content, paid media, and reporting, an agency is the better fit. See <a href="/blog/social-media-agency-vs-freelancer">Social Media Agency vs. Freelancer</a> for a full comparison.</p>
 <p><strong>&ldquo;Do I need a boutique or a big agency?&rdquo;</strong> If you want senior people on the work, speed, and specialization, a boutique is usually the answer. If you need global scale and multi-channel integration, a big agency may be necessary. See <a href="/blog/boutique-vs-big-social-media-agency">Boutique vs. Big Agency</a> for the trade-offs.</p>
-<p><strong>&ldquo;What should I budget?&rdquo;</strong> Most brands investing seriously in social should budget $3,000&ndash;$10,000/month for a quality boutique agency. If that&rsquo;s not feasible, start with a freelancer and graduate to an agency as revenue grows.</p>
+<p><strong>&ldquo;What should I budget?&rdquo;</strong> Most brands investing seriously in social should budget $4,000&ndash;$12,000/month for a quality boutique agency. If that&rsquo;s not feasible, start with a freelancer and graduate to an agency as revenue grows.</p>
 <h2>When you might NOT need an agency</h2>
 <p><strong>You have a skilled in-house team.</strong> If you already have a social media manager with strategy, creative, and analytics skills &mdash; and they have the time and tools to do the job &mdash; an agency adds cost without adding capability.</p>
 <p><strong>Your brand isn&rsquo;t ready.</strong> If you don&rsquo;t have basic brand assets (logo, photography, messaging), product-market fit, or clarity on your audience, hiring an agency is premature. Fix the foundation first.</p>
@@ -2260,7 +2260,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h3>Can I start with a freelancer and switch to an agency later?</h3>
 <p>Yes, and many brands do. Start with a freelancer for execution, develop your brand voice and audience, then graduate to an agency when you need multi-platform strategy, team depth, and scalable systems.</p>
 <h3>What&rsquo;s the minimum budget for a social media agency?</h3>
-<p>Quality boutique agencies typically start around $3,000/month. Below that, you&rsquo;re likely getting junior execution or limited scope. If your budget is under $3,000/month, a skilled freelancer is often a better investment.</p>
+<p>Quality boutique agencies typically start around $4,000/month. Below that, you&rsquo;re likely getting junior execution or limited scope. If your budget is under $4,000/month, a skilled freelancer is often a better investment.</p>
 <p><em>Fifty &amp; Five is a senior-led boutique social media agency that&rsquo;s run programs for 222+ brands across five continents since 2008. <a href="/contact">Start a conversation &rarr;</a>.</em></p>`,
   'best-social-media-agency-hospitality-resorts': `
 <p><strong>Short answer:</strong> The best social media agency for a hospitality or resort brand is one that understands <strong>the guest journey, seasonal booking cycles, property-level content, and the difference between selling rooms and selling experiences</strong>. Generalist agencies default to product marketing playbooks; hospitality-native agencies know that social media for hotels and resorts is about aspiration, timing, and trust.</p>
@@ -2286,7 +2286,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <h3>What makes hospitality social media different from other industries?</h3>
 <p>Hospitality sells experiences, not products. Content must create aspiration and align with booking windows. Reputation management is inseparable from social strategy, and multi-property brands need location-specific content &mdash; not generic templates.</p>
 <h3>How much does a social media agency cost for a hotel or resort?</h3>
-<p>Boutique agencies with hospitality expertise typically charge $3,000&ndash;$10,000/month per property, depending on content volume, platforms, and paid media. Multi-property portfolios often negotiate volume pricing.</p>
+<p>Boutique agencies with hospitality expertise typically charge $4,000&ndash;$12,000/month per property, depending on content volume, platforms, and paid media. Multi-property portfolios often negotiate volume pricing.</p>
 <h3>Should each hotel property have its own social media accounts?</h3>
 <p>Usually, yes. Each property has a distinct personality, location, and guest base. Property-level accounts allow targeted content and local community management. A brand-level account can complement property accounts but shouldn&rsquo;t replace them.</p>
 <p><em>Fifty &amp; Five has managed social media for hospitality brands from boutique hotels to integrated resorts since 2008. <a href="/verticals/hospitality">See the hospitality work &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,

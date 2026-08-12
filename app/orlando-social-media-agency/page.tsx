@@ -37,7 +37,7 @@ const FAQS = [
   },
   {
     q: 'How much does a social media agency cost in Orlando?',
-    a: 'Fifty & Five retainers start at $3,000 per month for ad management and scale to $50,000+ per month for full-service, always-on programs with content production. Pricing is principal-led, with no junior account management or holding-company markup. Most Orlando boutique agencies charge $1,500 to $5,000 per month, but Fifty & Five operates at the senior tier most local agencies cannot staff for.',
+    a: 'Fifty & Five retainers start at $4,000 per month for ad management and scale to $50,000+ per month for full-service, always-on programs with content production. Pricing is principal-led, with no junior account management or holding-company markup. Most Orlando boutique agencies charge $1,500 to $5,000 per month, but Fifty & Five operates at the senior tier most local agencies cannot staff for.',
   },
   {
     q: 'What industries does Fifty & Five serve in Orlando?',

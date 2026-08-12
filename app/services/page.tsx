@@ -10,19 +10,19 @@ import { VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
 export const metadata: Metadata = {
   title: 'Services | Social, Paid, Content, Brand',
   description:
-    'Four senior-led practices on one AI-leveraged operating model. Retainers from $3K to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
+    'Four senior-led practices on one AI-leveraged operating model. Retainers from $4,000 to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
   alternates: {
     canonical: 'https://fiftyandfive.com/services',
   },
   openGraph: {
     title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
-    description: 'Four senior-led practices on one AI-leveraged operating model. Retainers from $3K to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
+    description: 'Four senior-led practices on one AI-leveraged operating model. Retainers from $4,000 to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
     url: 'https://fiftyandfive.com/services',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
-    description: 'Four senior-led practices on one AI-leveraged operating model. Retainers from $3K to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
+    description: 'Four senior-led practices on one AI-leveraged operating model. Retainers from $4,000 to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
   },
 };
 
@@ -78,7 +78,7 @@ const CORE_SERVICES = [
     title: 'Paid Social & Ad Management',
     tag: 'Retainer',
     body:
-      'Meta, TikTok, and LinkedIn ad management for brands spending $1K–$25K/mo on paid social. Campaign strategy, creative direction, audience targeting, optimization, and transparent reporting. No hidden fees on ad spend.',
+      'Meta, TikTok, and LinkedIn ad management for brands running $10,000+/mo in media. Management from $4,000/mo. Campaign strategy, creative direction, audience targeting, optimization, and transparent reporting. No hidden fees on ad spend.',
     meta: 'Typical engagement: Campaign strategy, creative, targeting, optimization, weekly reporting.',
   },
 ];
@@ -86,12 +86,12 @@ const CORE_SERVICES = [
 const RETAINER_TIERS = [
   {
     tier: 'Growth',
-    range: '$3K – $5K',
+    range: '$4,000 – $6,500',
     proof: 'Boutique hospitality · wine & spirits · lifestyle apparel',
   },
   {
     tier: 'Premium',
-    range: '$6K – $10K',
+    range: '$7,500 – $12,000',
     proof: 'Premium wine · regional CPG · resort & destination',
   },
   {
@@ -231,9 +231,16 @@ export default function ServicesPage() {
 
         <SimpleReveal delay={0.3}>
           <p className="mt-10 text-body text-text-secondary max-w-3xl leading-[1.7]">
-            A growth retainer at $3K/mo and an enterprise retainer at $50K+/mo do not run on
+            A growth retainer at $4,000/mo and an enterprise retainer at $50K+/mo do not run on
             different operating principles inside Fifty &amp; Five. They run on the same Senior + AI
-            stack&nbsp;&mdash; the difference is volume, scope, and channel surface area.
+            stack. The difference is volume, scope, and channel surface area.
+          </p>
+        </SimpleReveal>
+        <SimpleReveal delay={0.36}>
+          <p className="mt-5 text-body text-text-secondary max-w-3xl leading-[1.7]">
+            Enterprise programs are scoped, not templated. Blaze Pizza ran as a ten-year national
+            program from day zero to 300+ locations. Enterprise Holdings ran six brands across the
+            US and LATAM.
           </p>
         </SimpleReveal>
       </section>
@@ -429,7 +436,7 @@ export default function ServicesPage() {
                 name: 'How much does Fifty & Five charge?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five offers four retainer tiers: Growth ($3,000–$5,000/mo), Premium ($6,000–$10,000/mo), Scale ($15,000–$25,000/mo), and Enterprise ($30,000–$50,000+/mo). Every tier runs on the same Senior + AI operating model.',
+                  text: 'Fifty & Five offers four retainer tiers: Growth ($4,000–$6,500/mo), Premium ($7,500–$12,000/mo), Scale ($15,000–$25,000/mo), and Enterprise ($30,000–$50,000+/mo). Every tier runs on the same Senior + AI operating model.',
                 },
               },
             ],

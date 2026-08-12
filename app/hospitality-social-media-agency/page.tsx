@@ -33,7 +33,7 @@ const CLIENTS = [
 const FAQS = [
   {
     q: 'How much does a hospitality social media agency cost?',
-    a: 'Retainers run from $3,000 per month for ad management to $50,000+ per month for full-service, always-on programs across multiple properties. Pricing is principal-led, with no junior account management.',
+    a: 'Retainers run from $4,000 per month for ad management to $50,000+ per month for full-service, always-on programs across multiple properties. Pricing is principal-led, with no junior account management.',
   },
   {
     q: 'Do you work with tourism boards or just individual properties?',
@@ -57,7 +57,7 @@ const FAQS = [
   },
   {
     q: 'Can a hospitality brand start with a smaller retainer?',
-    a: 'Yes. Retainers scale from ad-management-only programs at $3,000 per month up to full-service, always-on, multi-property programs at $50,000+ per month.',
+    a: 'Yes. Retainers scale from ad-management-only programs at $4,000 per month up to full-service, always-on, multi-property programs at $50,000+ per month.',
   },
 ];
 

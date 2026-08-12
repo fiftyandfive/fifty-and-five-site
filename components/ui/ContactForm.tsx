@@ -7,8 +7,7 @@ import { trackEvent, gtagEvent } from '@/components/layout/Analytics';
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
 const BUDGET_OPTIONS = [
-  'Under $3K',
-  '$3K–$10K',
+  '$4K–$10K',
   '$10K–$25K',
   '$25K+',
   'Not sure yet',

@@ -50,6 +50,11 @@ export default function AuditPage() {
             sales sequence. An audit.
           </p>
         </SimpleReveal>
+        <SimpleReveal delay={0.4}>
+          <p className="mt-4 font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+            A $2,500 audit. Free for qualified businesses.
+          </p>
+        </SimpleReveal>
       </section>
 
       <section className="container-edge pb-24 md:pb-32">

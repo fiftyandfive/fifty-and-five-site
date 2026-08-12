@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: 'How much does franchise social media management cost?',
-    a: 'Franchise programs typically fall in the Scale ($15,000–$25,000/mo) or Enterprise ($30,000–$50,000+/mo) tier depending on location count, platform coverage, and whether paid media is included. Single-location franchise owners can start at the Growth tier ($3,000–$5,000/mo).',
+    a: 'Franchise programs typically fall in the Scale ($15,000–$25,000/mo) or Enterprise ($30,000–$50,000+/mo) tier depending on location count, platform coverage, and whether paid media is included. Single-location franchise owners can start at the Growth tier ($4,000–$6,500/mo).',
   },
   {
     q: 'What makes Fifty & Five different from other franchise marketing agencies?',
