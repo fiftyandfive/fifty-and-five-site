@@ -38,6 +38,7 @@ const nextConfig = {
       { source: '/post/the-multi-location-social-media-playbook-how-to-scale-without-losing-local', destination: '/blog/multi-location-social-media-playbook-scale-local', permanent: true },
       { source: '/post/orlando-social-media-agency-why-local-expertise-matters-for-hospitality-brands', destination: '/blog/orlando-social-media-agency-hospitality-brands', permanent: true },
       { source: '/post/how-ai-is-changing-social-media-management-without-replacing-the-strategist', destination: '/blog/ai-changing-social-media-management-not-replacing-strategist', permanent: true },
+      { source: '/post/aeo-the-search-strategy-that-ends-the-era-of-the-click', destination: '/blog/aeo-search-strategy-ai-answer-engines', permanent: true },
       { source: '/post/social-media-for-consumer-tech-product-launches-from-sub-brand-to-standalone', destination: '/blog/consumer-tech-product-launch-social-media', permanent: true },
       { source: '/post/legacy-brands-on-social-media-how-to-modernize-without-losing-your-community', destination: '/blog/legacy-brand-social-media-modernize-without-losing-community', permanent: true },
       // Old build slugs still indexed → current vertical slugs
