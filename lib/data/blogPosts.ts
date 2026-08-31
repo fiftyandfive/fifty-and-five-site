@@ -14,6 +14,36 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "One Lead in Ten Years. Four in the First Two Weeks.",
+    slug: 'landmark-contracting-website-rebuild-fractional-cmo',
+    wixSlug: 'landmark-contracting-website-rebuild-fractional-cmo',
+    date: '2026-08-31',
+    minutesToRead: 5,
+    heroImage: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=85',
+    excerpt: "A general contractor's old WordPress site generated one request for quote in ten years. We took the fractional CMO seat, rebuilt the site from scratch, and it generated four in the first two weeks. What changed, and why the old site was the actual problem.",
+    category: 'Fractional CMO',
+  },
+  {
+    title: "How to Handle a Social Media Crisis: A Playbook for When Things Go Wrong",
+    slug: 'social-media-crisis-management-playbook',
+    wixSlug: 'social-media-crisis-management-playbook',
+    date: '2026-08-31',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1600&q=85',
+    excerpt: "A bad review is not a crisis. A viral complaint is not always a crisis either. Most brands either overreact to noise or underreact to a real one. The playbook for telling the difference, and what to actually do in the first hour.",
+    category: 'Social Media Strategy',
+  },
+  {
+    title: "What's Actually Working in Video Content and Meta Ads Right Now",
+    slug: 'video-content-meta-ads-trends-2026',
+    wixSlug: 'video-content-meta-ads-trends-2026',
+    date: '2026-08-31',
+    minutesToRead: 6,
+    heroImage: 'https://images.unsplash.com/photo-1626544827763-d516dce335e2?w=1600&q=85',
+    excerpt: "Polished brand films are losing to footage that looks like it was shot on a phone. Here's what's actually converting in organic video and Meta ads right now, and why the highest-performing creative on the platform increasingly looks the least like an ad.",
+    category: 'Social Media Strategy',
+  },
+  {
     title: "How Much Does Franchise Social Media Management Cost? (2026 Guide)",
     slug: 'franchise-social-media-management-cost',
     wixSlug: 'franchise-social-media-management-cost',

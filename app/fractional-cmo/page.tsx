@@ -272,48 +272,85 @@ export default function FractionalCmoPage() {
         </div>
       </section>
 
-      {/* Case study */}
+      {/* Case studies */}
       <section className="container-edge py-16 md:py-24">
         <SimpleReveal>
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            Case study
+            Case studies
           </div>
-          <Link href="/blog/we-made-their-ads-worse" className="block group mt-4">
-            <GlassCard className="p-8 md:p-12">
-              <h2 className="font-serif text-h2 tracking-[-0.02em] max-w-3xl">
-                We made their ads worse. Store revenue went up 156%.
-              </h2>
-              <p className="mt-4 text-body-lg text-text-secondary max-w-2xl leading-[1.7]">
-                A DTC apparel brand was underwater on every ad dollar. We took the seat as a
-                fractional CMO, not a media buyer, and fixed the revenue system instead of the ad
-                account. Six weeks, same budget.
-              </p>
-              <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl">
-                <div>
-                  <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">+156%</div>
-                  <div className="mt-1 text-meta text-text-secondary">Store revenue</div>
-                </div>
-                <div>
-                  <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">&minus;32%</div>
-                  <div className="mt-1 text-meta text-text-secondary">Customer acquisition cost</div>
-                </div>
-                <div>
-                  <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">+111%</div>
-                  <div className="mt-1 text-meta text-text-secondary">Click-to-purchase</div>
-                </div>
-              </div>
-              <div className="mt-8 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
-                Read the case study, now with a July update
-                <span
-                  aria-hidden
-                  className="transition-transform duration-300 group-hover:translate-x-0.5"
-                >
-                  →
-                </span>
-              </div>
-            </GlassCard>
-          </Link>
         </SimpleReveal>
+        <div className="mt-4 grid grid-cols-1 gap-6">
+          <SimpleReveal>
+            <Link href="/blog/we-made-their-ads-worse" className="block group">
+              <GlassCard className="p-8 md:p-12">
+                <h2 className="font-serif text-h2 tracking-[-0.02em] max-w-3xl">
+                  We made their ads worse. Store revenue went up 156%.
+                </h2>
+                <p className="mt-4 text-body-lg text-text-secondary max-w-2xl leading-[1.7]">
+                  A DTC apparel brand was underwater on every ad dollar. We took the seat as a
+                  fractional CMO, not a media buyer, and fixed the revenue system instead of the ad
+                  account. Six weeks, same budget.
+                </p>
+                <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-2xl">
+                  <div>
+                    <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">+156%</div>
+                    <div className="mt-1 text-meta text-text-secondary">Store revenue</div>
+                  </div>
+                  <div>
+                    <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">&minus;32%</div>
+                    <div className="mt-1 text-meta text-text-secondary">Customer acquisition cost</div>
+                  </div>
+                  <div>
+                    <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">+111%</div>
+                    <div className="mt-1 text-meta text-text-secondary">Click-to-purchase</div>
+                  </div>
+                </div>
+                <div className="mt-8 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                  Read the case study, now with a July update
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                </div>
+              </GlassCard>
+            </Link>
+          </SimpleReveal>
+          <SimpleReveal delay={0.08}>
+            <Link href="/blog/landmark-contracting-website-rebuild-fractional-cmo" className="block group">
+              <GlassCard className="p-8 md:p-12">
+                <h2 className="font-serif text-h2 tracking-[-0.02em] max-w-3xl">
+                  One lead in ten years. Four in the first two weeks.
+                </h2>
+                <p className="mt-4 text-body-lg text-text-secondary max-w-2xl leading-[1.7]">
+                  A general contractor&rsquo;s decade-old WordPress site was the actual bottleneck,
+                  not ad spend or content volume. We took the seat, rebuilt the site as the first
+                  move, and the results showed up in two weeks.
+                </p>
+                <div className="mt-8 grid grid-cols-2 gap-6 max-w-2xl">
+                  <div>
+                    <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">1</div>
+                    <div className="mt-1 text-meta text-text-secondary">Requests for quote, 10 years, old site</div>
+                  </div>
+                  <div>
+                    <div className="font-serif text-h2 tracking-[-0.03em] text-text-primary">4</div>
+                    <div className="mt-1 text-meta text-text-secondary">Requests for quote, first 2 weeks, new site</div>
+                  </div>
+                </div>
+                <div className="mt-8 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                  Read the case study
+                  <span
+                    aria-hidden
+                    className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                </div>
+              </GlassCard>
+            </Link>
+          </SimpleReveal>
+        </div>
       </section>
 
       {/* Pricing */}

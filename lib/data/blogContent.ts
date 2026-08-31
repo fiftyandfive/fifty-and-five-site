@@ -2,6 +2,134 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'landmark-contracting-website-rebuild-fractional-cmo': `
+<p>Landmark Contracting, a general contractor, ran on the same WordPress site for ten years. In that decade, it generated exactly one request for quote through the site.</p>
+
+<p>Not one per year. One, total, in ten years.</p>
+
+<p>We took the fractional CMO seat and rebuilt the site from scratch. In the first two weeks live, it generated four requests for quote.</p>
+
+<h2>The old site was not a minor drag. It was the whole problem.</h2>
+
+<p>A contractor with a decade of real project history, real work in the ground, was running a website that functioned as a business card nobody read. Ten years of traffic, if there was any traffic at all, converted into essentially nothing. That is not a traffic problem. That is a site that gives a visitor no reason to take the next step, on a device most of them are holding in one hand.</p>
+
+<p>This is the pattern we see constantly with owner-operated trade and contracting businesses: the work is real, the reputation is real, and the website is a decade-old placeholder nobody has looked at since it launched. The business is not underperforming because the work is bad. It is underperforming because the one asset that is supposed to convert interest into a request for quote was never built to do that job.</p>
+
+<h2>What the seat actually did here</h2>
+
+<p>This was not a website project we sold separately. It ran through the fractional CMO seat: strategy, budget, and channel decisions owned directly, with the site rebuild as the highest-leverage move available. A contractor does not need twelve marketing initiatives running at once. It needs the one blocking the door fixed first, and someone who owns the number deciding that is where the budget goes.</p>
+
+<p>That is the case for the seat over either alternative. A web design shop builds what it is asked to build and moves on to the next client; it does not own whether the result actually generates a lead. A part-time marketing hire, if a contractor has one at all, rarely has the authority or the experience to say "the website is the problem, not the ad spend" and act on it. The seat exists to make that call and be accountable for it.</p>
+
+<h2>Why this is not a one-off</h2>
+
+<p>One lead in ten years to four in two weeks is a small-sample result, and we are not going to dress it up as more than fourteen days of data. But the mechanism behind it is not small or unusual. A contractor's website is frequently the single most under-invested asset in the business, because it is built once, early, and then never revisited while the rest of the operation grows around it. Fixing the thing nobody has looked at in a decade is often the highest-leverage move available, and it is exactly the kind of call a fractional CMO is supposed to make.</p>
+
+<h3>What does a fractional CMO actually do for a contractor or trade business?</h3>
+<p>Own the marketing budget and channel decisions directly, rather than executing a list of requested tasks. For Landmark Contracting, that meant identifying the website itself, not ad spend or content volume, as the highest-leverage fix and rebuilding it as the seat's first move.</p>
+
+<h3>Why would a 10-year-old website only generate one lead?</h3>
+<p>An old site built once and never revisited typically fails on the basics that actually drive a request for quote: unclear next step, no mobile-first design, and no reason for a visitor to trust the business enough to reach out. Traffic without a reason to convert produces exactly this kind of result, regardless of how much real work the business has actually done.</p>
+
+<h3>Is a website rebuild worth it for a small contracting or trade business?</h3>
+<p>When the current site is the actual bottleneck, it is often the single highest-leverage marketing investment available, ahead of additional ad spend or content volume. Landmark Contracting's result, one request for quote in ten years versus four in the first two weeks post-rebuild, is the kind of gap that shows up when the blocking issue was the site itself.</p>
+
+<p><em>Fifty &amp; Five runs fractional CMO seats for owner-operators doing $1M&ndash;20M in revenue, from $6,000/mo, month to month. <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'social-media-crisis-management-playbook': `
+<p>A bad review is not a crisis. A single angry comment is not a crisis. Most brands either overreact to ordinary noise, torching goodwill by getting defensive in public, or underreact to something that is actually spreading, hoping it blows over while it doesn&rsquo;t. The skill that matters is telling the difference fast, then running a different playbook for each.</p>
+
+<h2>Complaint, controversy, or crisis: know which one you have</h2>
+
+<p>Not every uncomfortable moment deserves the same response.</p>
+
+<p><strong>A complaint</strong> is one customer, one bad experience, contained to your own channels. It needs a real response, fast, from a person, not a script. It does not need a statement.</p>
+
+<p><strong>A controversy</strong> is a disagreement playing out in your comments and shares, still mostly about your brand's choices, not your competence or safety. It needs a considered response, usually within hours, and a decision about whether to engage publicly or let it run its course.</p>
+
+<p><strong>A crisis</strong> is spreading beyond your own audience, touching press, or raising a real question about safety, ethics, or trust. It needs a response within the hour, a single accountable decision-maker, and a plan before you post anything at all.</p>
+
+<p>Treating a complaint like a crisis makes you look rattled. Treating a crisis like a complaint makes you look like you do not understand what is happening to your own brand. The first job, always, is diagnosing which one you are in.</p>
+
+<h2>The first hour</h2>
+
+<p><strong>1. One person owns the decision.</strong> Crisis response by committee is how brands end up posting nothing for six hours while a story runs unanswered. Someone senior needs to be the single point of decision, with the authority to approve or hold a response without a chain of sign-offs.</p>
+
+<p><strong>2. Monitor before you respond.</strong> Know the actual scope, which platforms, how fast it is moving, who is amplifying it, before you say anything. A response built on an incomplete picture usually needs a second, worse response an hour later to correct it.</p>
+
+<p><strong>3. Do not delete and go silent.</strong> Deleting a real complaint without acknowledgment is the single fastest way to turn a bad moment into a story about the deletion. If something needs to come down for a real policy reason, say so.</p>
+
+<p><strong>4. Acknowledge before you have the full answer.</strong> "We are aware and looking into this" said within the hour buys far more trust than a perfect statement six hours later. Silence reads as either indifference or guilt, neither of which is usually true, but audiences fill the gap themselves.</p>
+
+<p><strong>5. Move fast conversations off public comment threads.</strong> Public back-and-forth in the comments rarely resolves anything and gives the moment more runway. Acknowledge publicly, then move the individual conversation to DMs or a direct line where it can actually get resolved.</p>
+
+<h2>What to have ready before you ever need it</h2>
+
+<p>The brands that handle a real moment well are never improvising in real time. They built the plan when nothing was on fire.</p>
+
+<ul>
+<li><strong>A decision-maker and a backup,</strong> named in advance, who can approve a response without waiting on a committee.</li>
+<li><strong>Holding language pre-approved</strong> for the categories most likely to hit your brand: a service failure, a safety concern, an employee incident, a viral complaint. Not a finished statement, a starting point that saves the first thirty minutes.</li>
+<li><strong>A monitoring habit,</strong> not just a tool. Someone actually checking mentions and comments daily, not finding out from a screenshot forwarded by a customer.</li>
+<li><strong>A clear line for legal and compliance-sensitive categories.</strong> Healthcare, financial services, and anything regulated needs a faster internal escalation path, because the cost of a wrong public statement is higher.</li>
+</ul>
+
+<h2>Tone during a real crisis</h2>
+
+<p>Corporate distance reads as evasive. Overly casual brand voice reads as tone-deaf. The right register during an actual crisis is plain, specific, and human: what happened, what you are doing about it, when you will update again. Save the brand personality for the next normal post. A crisis is not the moment to be clever.</p>
+
+<h2>After it passes</h2>
+
+<p>The moment is not over when the mentions slow down. Run a short retrospective: what was the actual first signal, how long until someone saw it, how long until a decision, what would have made the first hour faster. Update the holding language and the escalation plan with what you learned. Most brands skip this step and relearn the same lesson at the next crisis, slower.</p>
+
+<h3>How fast should a brand respond to a social media crisis?</h3>
+<p>Within the hour for anything spreading beyond your own audience or touching safety, ethics, or trust. An initial acknowledgment does not need the full answer: "we are aware and looking into this" said quickly buys far more trust than a polished statement that arrives too late.</p>
+
+<h3>Should we delete negative comments during a crisis?</h3>
+<p>Generally no. Deleting a real complaint without acknowledgment usually becomes its own story. The exception is content that violates an actual policy (harassment, threats, spam), and even then, say so rather than deleting silently.</p>
+
+<h3>Who should be responsible for crisis communications on social media?</h3>
+<p>One named, senior decision-maker with the authority to approve a response without a full committee sign-off, plus a backup. Crisis response by committee is the most common reason brands go quiet for hours during the exact window when speed matters most.</p>
+
+<p><em>Fifty &amp; Five has run crisis-ready social media playbooks for hospitality, tourism, and regulated categories like healthcare since 2008, where weather events, travel advisories, and reputation moments are baked into the retainer, not bolted on after something goes wrong. <a href="/verticals/hospitality">See how we approach hospitality &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+  'video-content-meta-ads-trends-2026': `
+<p>The polished, agency-produced brand film is losing to footage that looks like it was shot on a phone, because increasingly, it was. That is not a lowering of standards. It is a shift in what the format is actually good at, and the brands winning right now are the ones who stopped fighting it.</p>
+
+<h2>What is actually working in organic video</h2>
+
+<p><strong>Native-first over repurposed.</strong> A :30 TV spot cut down to fit Reels almost always underperforms a piece shot vertical, native, from the start. The platforms reward content built for how people actually hold their phone and scroll, not content adapted to fit afterward.</p>
+
+<p><strong>The hook is the whole first second, not the first three.</strong> Attention decisions on short-form video happen almost instantly. If the first frame is a logo, a slow establishing shot, or a title card, most of the audience is already gone before the actual content starts.</p>
+
+<p><strong>Founder-led and behind-the-scenes beats produced-and-polished.</strong> Content that shows the person, the process, or the real moment consistently outperforms content that looks like an ad, because audiences have gotten extremely good at scrolling past anything that reads as one. The camera move that says "professional shoot" is often the exact signal that triggers the scroll.</p>
+
+<p><strong>Specific beats generic, every time.</strong> "Here is exactly how we build this" outperforms "here is why our brand matters." Process, technique, and real specificity read as more credible and more shareable than brand messaging, even when the brand messaging is well-written.</p>
+
+<p>Real proof of this on our own client work: Kendall-Jackson&rsquo;s winter shoot in Breckenridge and the Blaze Pizza &times; LeBron James activation both worked because they were built as specific, native moments, not generic brand advertising retrofitted for social.</p>
+
+<h2>What is working in Meta ads specifically</h2>
+
+<p><strong>Creative diversity is doing more work than targeting precision.</strong> With Meta's algorithm increasingly optimizing delivery on its own, the highest-leverage lever left in your control is feeding it a genuinely varied set of creative, not narrowing the audience further. Multiple angles, formats, and hooks running simultaneously outperform one polished ad running against a tightly defined audience.</p>
+
+<p><strong>UGC-style creative is outperforming produced creative in the feed, even when both are paid.</strong> An ad that visually resembles organic content earns more attention before a viewer registers it as an ad at all. That does not mean lower production value works by accident; it means the ad has to earn the same three seconds a piece of organic content does.</p>
+
+<p><strong>Short-form vertical video is the default unit, not one format among several.</strong> Static image ads and carousel formats still have a role, particularly for retargeting and catalog-style placements, but video is where the bulk of new creative testing budget is going, because it is where the bulk of attention already is.</p>
+
+<p><strong>Testing volume matters more than any single "winning" creative.</strong> The brands getting real efficiency out of Meta right now are the ones treating creative as a constant testing pipeline, not a quarterly production cycle. A handful of new variants shipped weekly beats one expensive hero video shipped once a quarter.</p>
+
+<h2>What this means for budget, not just creative</h2>
+
+<p>The shift toward native, lower-fi, higher-volume creative changes where the money should go. Less budget belongs in a single expensive production; more belongs in a consistent content pipeline that can produce enough raw material to actually test. That is a process and cadence problem as much as a creative one.</p>
+
+<h3>What type of video content performs best on social media right now?</h3>
+<p>Native-first vertical video that hooks in the first second, built around specific, real moments (process, behind-the-scenes, founder-led) rather than produced brand messaging. Content that visually resembles organic footage consistently outperforms polished, ad-coded creative, in both organic and paid placements.</p>
+
+<h3>Does UGC-style content actually work better in Meta ads than professional production?</h3>
+<p>It often outperforms in the feed because it earns attention before a viewer registers it as an ad. This is not an argument for low effort; the creative still needs a strong hook and clear message, it just needs to be built to look native rather than produced.</p>
+
+<h3>How much creative variety do you actually need for Meta ads to work well?</h3>
+<p>More than most brands run. With Meta's delivery increasingly algorithm-driven, creative diversity, multiple angles, formats, and hooks tested simultaneously, is doing more of the performance work than narrow audience targeting. A steady weekly cadence of new variants outperforms one expensive video shipped quarterly.</p>
+
+<p><em>Fifty &amp; Five has produced organic and paid video content for brands from Kendall-Jackson to Blaze Pizza since 2008. <a href="/services">See how we approach paid social &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
   'franchise-social-media-management-cost': `
 <p>One brand. Hundreds of locations. A corporate team that cannot physically be in every market. That is the entire franchise social media problem, and most agencies solve half of it.</p>
 

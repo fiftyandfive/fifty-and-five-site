@@ -45,7 +45,7 @@ const FAQS = [
   },
   {
     q: 'Can you handle crisis communications for hospitality or travel brands?',
-    a: 'Yes. Weather events, travel advisories, and reputation moments are baked into the retainer playbook. Senior crisis comms is on the bench, not outsourced to a junior team.',
+    a: 'Yes. Weather events, travel advisories, and reputation moments are baked into the retainer playbook. Senior strategists handle crisis comms directly, not outsourced to a junior team.',
   },
   {
     q: "What's the difference between Fifty & Five and a hospitality-only boutique?",
