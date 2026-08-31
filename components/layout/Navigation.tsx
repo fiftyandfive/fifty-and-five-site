@@ -56,6 +56,12 @@ export function Navigation() {
                 {l.label}
               </Link>
             ))}
+            <a
+              href={`tel:${SITE.phone.e164}`}
+              className="text-[14px] font-medium text-accent hover:text-accent-light transition-colors duration-200"
+            >
+              {SITE.phone.display}
+            </a>
             <MagneticButton href="/contact" variant="primary" size="small">
               Let&rsquo;s Talk
             </MagneticButton>
@@ -108,6 +114,15 @@ export function Navigation() {
                   </motion.div>
                 ))}
               </nav>
+              <motion.a
+                href={`tel:${SITE.phone.e164}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.4 }}
+                className="mb-4 block text-center font-mono text-caption uppercase text-accent tracking-[0.12em]"
+              >
+                Call {SITE.phone.display}
+              </motion.a>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
