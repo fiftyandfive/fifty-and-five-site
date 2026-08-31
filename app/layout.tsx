@@ -9,6 +9,7 @@ import { StickyCtaButton } from '@/components/ui/StickyCtaButton';
 import { ExitIntentBar } from '@/components/ui/ExitIntentBar';
 import { StockTicker } from '@/components/ui/StockTicker';
 import { Analytics } from '@/components/layout/Analytics';
+import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
@@ -73,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     'Fifty & Five Fractional CMO',
                   ],
                   url: 'https://fiftyandfive.com',
-                  telephone: '+1-310-902-3246',
+                  telephone: SITE.phone.schema,
                   logo: {
                     '@type': 'ImageObject',
                     url: 'https://fiftyandfive.com/logo.svg',
@@ -107,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     {
                       '@type': 'ContactPoint',
                       contactType: 'sales',
-                      telephone: '+1-310-902-3246',
+                      telephone: SITE.phone.schema,
                       email: 'hello@fiftyandfive.com',
                       areaServed: [
                         { '@type': 'Country', name: 'United States' },
@@ -251,7 +252,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   '@id': 'https://fiftyandfive.com/#localbusiness',
                   name: 'Fifty & Five',
                   image: 'https://fiftyandfive.com/opengraph-image',
-                  telephone: '+1-310-902-3246',
+                  telephone: SITE.phone.schema,
                   email: 'hello@fiftyandfive.com',
                   address: {
                     '@type': 'PostalAddress',

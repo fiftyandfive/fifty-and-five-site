@@ -5,6 +5,11 @@ export const SITE = {
   email: 'hello@fiftyandfive.com',
   location: 'Orlando, FL',
   url: 'https://fiftyandfive.com',
+  phone: {
+    e164: '+13214507550',
+    schema: '+1-321-450-7550',
+    display: '(321) 450-7550',
+  },
   social: {
     linkedin: 'https://www.linkedin.com/in/LucasV/',
     instagram: 'https://www.instagram.com/fiftyandfive/',
