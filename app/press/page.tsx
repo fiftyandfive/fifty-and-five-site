@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
+import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Press & Media',
@@ -230,8 +231,8 @@ export default function PressPage() {
             </p>
             <p>
               <span className="text-text-tertiary font-mono text-caption uppercase tracking-[0.1em]">Phone</span>{' '}
-              <a href="tel:+13109023246" className="text-accent hover:text-accent-light transition-colors">
-                (310) 902-3246
+              <a href={`tel:${SITE.phone.e164}`} className="text-accent hover:text-accent-light transition-colors">
+                {SITE.phone.display}
               </a>
             </p>
           </div>

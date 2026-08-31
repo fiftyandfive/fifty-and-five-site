@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { SITE } from '@/lib/constants';
 
 const ITEMS = [
   { label: 'Profile audit', detail: 'Bio, link-in-bio, highlights, pinned posts — does every element earn its spot?' },
@@ -117,7 +118,7 @@ export function AuditChecklistContent() {
               Book a free 30-min audit call →
             </Link>
             <p className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-              fiftyandfive.com · (310) 902-3246
+              fiftyandfive.com · {SITE.phone.display}
             </p>
           </div>
         </div>

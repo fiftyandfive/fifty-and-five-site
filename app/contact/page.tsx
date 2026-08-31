@@ -81,8 +81,8 @@ export default function ContactPage() {
             </p>
             <p className="mt-2 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
               Or call &mdash;{' '}
-              <a href="tel:+13109023246" className="text-accent hover:text-accent-light">
-                (310) 902-3246
+              <a href={`tel:${SITE.phone.e164}`} className="text-accent hover:text-accent-light">
+                {SITE.phone.display}
               </a>
             </p>
           </SimpleReveal>
@@ -117,7 +117,7 @@ export default function ContactPage() {
         </div>
 
         <div className="mt-16 text-center font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
-          Fifty &amp; Five · 1001 N Orange Ave, Orlando, FL 32801 · (310) 902-3246 · hello@fiftyandfive.com
+          Fifty &amp; Five · 1001 N Orange Ave, Orlando, FL 32801 · {SITE.phone.display} · hello@fiftyandfive.com
         </div>
       </section>
     </>
