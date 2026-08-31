@@ -118,7 +118,7 @@ export const VERTICALS: Vertical[] = [
       },
       {
         q: 'Is Fifty & Five experienced with hospitality crisis communications?',
-        a: 'Yes. Weather events, travel advisories, brand reputation moments — all handled by senior strategists, not outsourced. Crisis comms is on the bench.',
+        a: 'Yes. Weather events, travel advisories, and brand reputation moments are all handled by senior strategists, not outsourced to a junior team.',
       },
     ],
   },
@@ -159,7 +159,7 @@ export const VERTICALS: Vertical[] = [
       },
       {
         q: 'Does Fifty & Five handle crisis communications for tourism brands?',
-        a: 'Yes — weather events, travel advisories, and reputation moments are baked into our retainer playbook. Senior crisis comms is on the bench, not outsourced.',
+        a: 'Yes, weather events, travel advisories, and reputation moments are baked into our retainer playbook. Senior strategists handle crisis comms directly, not outsourced to a junior team.',
       },
     ],
   },
