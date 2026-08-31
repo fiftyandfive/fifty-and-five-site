@@ -2,6 +2,39 @@
 // Source: blog-content-raw/*.html
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'landmark-contracting-website-rebuild-fractional-cmo': `
+<p>Landmark Contracting, a general contractor, ran on the same WordPress site for ten years. In that decade, it generated exactly one request for quote through the site.</p>
+
+<p>Not one per year. One, total, in ten years.</p>
+
+<p>We took the fractional CMO seat and rebuilt the site from scratch. In the first two weeks live, it generated four requests for quote.</p>
+
+<h2>The old site was not a minor drag. It was the whole problem.</h2>
+
+<p>A contractor with a decade of real project history, real work in the ground, was running a website that functioned as a business card nobody read. Ten years of traffic, if there was any traffic at all, converted into essentially nothing. That is not a traffic problem. That is a site that gives a visitor no reason to take the next step, on a device most of them are holding in one hand.</p>
+
+<p>This is the pattern we see constantly with owner-operated trade and contracting businesses: the work is real, the reputation is real, and the website is a decade-old placeholder nobody has looked at since it launched. The business is not underperforming because the work is bad. It is underperforming because the one asset that is supposed to convert interest into a request for quote was never built to do that job.</p>
+
+<h2>What the seat actually did here</h2>
+
+<p>This was not a website project we sold separately. It ran through the fractional CMO seat: strategy, budget, and channel decisions owned directly, with the site rebuild as the highest-leverage move available. A contractor does not need twelve marketing initiatives running at once. It needs the one blocking the door fixed first, and someone who owns the number deciding that is where the budget goes.</p>
+
+<p>That is the case for the seat over either alternative. A web design shop builds what it is asked to build and moves on to the next client; it does not own whether the result actually generates a lead. A part-time marketing hire, if a contractor has one at all, rarely has the authority or the experience to say "the website is the problem, not the ad spend" and act on it. The seat exists to make that call and be accountable for it.</p>
+
+<h2>Why this is not a one-off</h2>
+
+<p>One lead in ten years to four in two weeks is a small-sample result, and we are not going to dress it up as more than fourteen days of data. But the mechanism behind it is not small or unusual. A contractor's website is frequently the single most under-invested asset in the business, because it is built once, early, and then never revisited while the rest of the operation grows around it. Fixing the thing nobody has looked at in a decade is often the highest-leverage move available, and it is exactly the kind of call a fractional CMO is supposed to make.</p>
+
+<h3>What does a fractional CMO actually do for a contractor or trade business?</h3>
+<p>Own the marketing budget and channel decisions directly, rather than executing a list of requested tasks. For Landmark Contracting, that meant identifying the website itself, not ad spend or content volume, as the highest-leverage fix and rebuilding it as the seat's first move.</p>
+
+<h3>Why would a 10-year-old website only generate one lead?</h3>
+<p>An old site built once and never revisited typically fails on the basics that actually drive a request for quote: unclear next step, no mobile-first design, and no reason for a visitor to trust the business enough to reach out. Traffic without a reason to convert produces exactly this kind of result, regardless of how much real work the business has actually done.</p>
+
+<h3>Is a website rebuild worth it for a small contracting or trade business?</h3>
+<p>When the current site is the actual bottleneck, it is often the single highest-leverage marketing investment available, ahead of additional ad spend or content volume. Landmark Contracting's result, one request for quote in ten years versus four in the first two weeks post-rebuild, is the kind of gap that shows up when the blocking issue was the site itself.</p>
+
+<p><em>Fifty &amp; Five runs fractional CMO seats for owner-operators doing $1M&ndash;20M in revenue, from $6,000/mo, month to month. <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
   'social-media-crisis-management-playbook': `
 <p>A bad review is not a crisis. A single angry comment is not a crisis. Most brands either overreact to ordinary noise, torching goodwill by getting defensive in public, or underreact to something that is actually spreading, hoping it blows over while it doesn&rsquo;t. The skill that matters is telling the difference fast, then running a different playbook for each.</p>
 
