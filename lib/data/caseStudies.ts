@@ -93,8 +93,8 @@ export const CASE_STUDIES: CaseStudy[] = [
     verticalLabel: 'Restaurant',
     verticalColor: 'restaurant',
     services: ['National social media program', 'Content strategy', 'Community management'],
-    duration: '2014\u20132021',
-    durationBadge: '7-Year Program',
+    duration: '2012\u20132022',
+    durationBadge: '10-Year Program',
     platforms: ['Instagram', 'Facebook', 'Twitter'],
     tagline:
       'Built and ran the national social media program during Blaze\u2019s rise to one of the fastest-growing restaurant chains in U.S. history.',
@@ -116,7 +116,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     },
     metrics: [
       '400% engagement growth across national social channels',
-      '7-year retainer managing social through hyper-growth from emerging concept to household name',
+      '10-year retainer, from four months before the first restaurant opened through hyper-growth to household name',
       'Scalable content system across hundreds of franchise locations',
     ],
   },

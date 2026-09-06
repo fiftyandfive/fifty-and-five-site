@@ -3,12 +3,12 @@ import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
-import { SITE } from '@/lib/constants';
+import { PRICING, SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: { absolute: 'Lucas Vandenberg | Fractional CMO Orlando' },
   description:
-    'Lucas Vandenberg takes on a small number of Orlando-area companies as fractional CMO. Founder of Fifty & Five, 18 years, 222+ brands. From $6,000/mo.',
+    'Lucas Vandenberg takes on a small number of Orlando-area companies as fractional CMO. Founder of Fifty & Five, 18 years, 222+ brands. From $4,000/mo.',
   alternates: { canonical: 'https://fiftyandfive.com/fractional-cmo-orlando' },
   openGraph: {
     title: 'Lucas Vandenberg | Fractional CMO Orlando',
@@ -52,7 +52,7 @@ const MENU = [
 const FAQS = [
   {
     q: 'What does a fractional CMO in Orlando cost?',
-    a: 'My seats run $6,000-$9,500 per month, scoped to the business and how much oversight it needs, on a month-to-month basis with no long-term contract. That is roughly a third of what a full-time CMO costs before benefits and equity.',
+    a: 'My seats start at $4,000 per month, scoped to the business and how much oversight it needs, on a month-to-month basis with no long-term contract. That is a fraction of what a full-time CMO costs before benefits and equity.',
   },
   {
     q: "What is Lucas Vandenberg's background?",
@@ -136,11 +136,10 @@ export default function FractionalCmoOrlandoPage() {
                   '@type': 'Offer',
                   priceSpecification: {
                     '@type': 'PriceSpecification',
-                    minPrice: '6000',
-                    maxPrice: '9500',
+                    minPrice: String(PRICING.fractionalCmo.min),
                     priceCurrency: 'USD',
                   },
-                  description: '$6,000-$9,500 per month, scoped to your business, month to month.',
+                  description: `${PRICING.fractionalCmo.from.replace('/mo', ' per month')}, scoped to your business, month to month.`,
                 },
                 areaServed: [
                   { '@type': 'City', name: 'Orlando' },

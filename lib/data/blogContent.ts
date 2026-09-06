@@ -286,7 +286,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 <h3>Is a website rebuild worth it for a small contracting or trade business?</h3>
 <p>When the current site is the actual bottleneck, it is often the single highest-leverage marketing investment available, ahead of additional ad spend or content volume. Landmark Contracting's result, one request for quote in ten years versus four in the first two weeks post-rebuild, is the kind of gap that shows up when the blocking issue was the site itself.</p>
 
-<p><em>Fifty &amp; Five runs fractional CMO seats for owner-operators doing $1M&ndash;20M in revenue, from $6,000/mo, month to month. <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
+<p><em>Fifty &amp; Five runs fractional CMO seats for owner-operators doing $1M&ndash;20M in revenue, from $4,000/mo, month to month. <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/contact">start a conversation &rarr;</a>.</em></p>`,
   'social-media-crisis-management-playbook': `
 <p>A bad review is not a crisis. A single angry comment is not a crisis. Most brands either overreact to ordinary noise, torching goodwill by getting defensive in public, or underreact to something that is actually spreading, hoping it blows over while it doesn&rsquo;t. The skill that matters is telling the difference fast, then running a different playbook for each.</p>
 
@@ -436,7 +436,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 
 <p>A fractional CMO is not another vendor to manage. It is senior marketing leadership that owns the number: strategy, budget, channel mix, and agency oversight, plus a coach for your team so they get sharper instead of more dependent. For a wine or hospitality brand specifically, that means someone who already knows which posts can ship through which tier, how to balance trade promotion with consumer storytelling without crossing compliance lines, and how to make a resort or vineyard feel like a specific place instead of a stock photo.</p>
 
-<p>The seat runs $4,000&ndash;$6,500 per month, scoped to the business, month to month with no long-term contract. Projects and execution are priced and scoped separately, so the seat stays strategic advice, not another invoice for content production.</p>
+<p>The seat starts at $4,000 per month, scoped to the business, month to month with no long-term contract. Projects and execution are priced and scoped separately, so the seat stays strategic advice, not another invoice for content production.</p>
 
 <h2>Most CMOs have run one brand. We have run 222.</h2>
 
@@ -446,7 +446,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 <p>A generalist fractional CMO has to learn your category&rsquo;s rules before they can add value: three-tier compliance and age-gating for wine, or destination-specific storytelling and seasonality for hospitality. Fifty &amp; Five&rsquo;s founder built the first marketing department at Southern Wine &amp; Spirits in 2007 and has run Kendall-Jackson, Mezzacorona, and Resorts World since founding the agency in 2008 &mdash; the category knowledge is already there on day one.</p>
 
 <h3>How much does a fractional CMO for a wine or hospitality brand cost?</h3>
-<p>$4,000&ndash;$6,500 per month, scoped to the business, on a month-to-month basis with no long-term contract. Hands-on execution &mdash; content production, ad management, paid media &mdash; is priced and scoped separately.</p>
+<p>From $4,000 per month, scoped to the business, on a month-to-month basis with no long-term contract. Hands-on execution, meaning content production, ad management, and paid media, is priced and scoped separately.</p>
 
 <h3>Does a fractional CMO replace our marketing team or agency?</h3>
 <p>No. The seat sets strategy and direction; your existing marketing person or agency still executes. Most clients keep their team in place and use the seat to give them a plan and a senior sounding board instead of guessing alone.</p>
@@ -921,7 +921,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 
 <h2>Option 4: The fractional CMO seat</h2>
 
-<p>A <a href="/fractional-cmo">fractional CMO seat</a> runs <strong>$4,000-$6,500 per month</strong>, scoped to the business and how much oversight it needs &mdash; roughly a third of a full-time CMO&rsquo;s salary. It is an advisory relationship, not embedded production: a monthly strategy session, a written brief on what moved and what is next, one prioritized recommendation scoped and ready to execute, and direct text access in between.</p>
+<p>A <a href="/fractional-cmo">fractional CMO seat</a> starts at <strong>$4,000 per month</strong>, scoped to the business and how much oversight it needs, a fraction of a full-time CMO&rsquo;s salary. It is an advisory relationship, not embedded production: a monthly strategy session, a written brief on what moved and what is next, one prioritized recommendation scoped and ready to execute, and direct text access in between.</p>
 
 <p>The point is not that it is cheaper. It is that it is the right <em>shape</em> for a company that needs senior direction without needing &mdash; or being able to fill &mdash; a full-time executive. <strong>You are buying judgment, not headcount.</strong> Hands-on execution is priced separately, so the seat stays strategic instead of quietly turning into another vendor bill.</p>
 
@@ -931,7 +931,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 <li><strong>Full-time CMO</strong> &mdash; $200K+/yr. Full ownership, fixed cost, a hire to manage. Fits companies past roughly $20M.</li>
 <li><strong>Coordinator</strong> &mdash; ~$65K/yr. Executes, does not strategize. Needs senior direction to be worth it.</li>
 <li><strong>Agency retainer,</strong> from $4,000/mo. Team and production capacity. Best when you need volume shipped.</li>
-<li><strong>Fractional seat</strong> &mdash; $4,000-$6,500/mo, month to month. Senior strategy on call, no body to manage. Fits $1M-20M owner-operators.</li>
+<li><strong>Fractional seat</strong>, from $4,000/mo, month to month. Senior strategy on call, no body to manage. Fits $1M-20M owner-operators.</li>
 </ul>
 
 <h2>Which one fits you</h2>
@@ -943,7 +943,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 <p><em>Not sure which fits? The first conversation sorts it out. <a href="/fractional-cmo">See how the seat works &rarr;</a> or <a href="/services">compare it against our retainers &rarr;</a></em></p>
 
 <h3>How much does a fractional CMO cost vs. a full-time CMO?</h3>
-<p>A full-time CMO costs $200,000 or more per year before benefits and equity. A fractional CMO seat runs $4,000-$6,500 per month &mdash; roughly a third of the cost &mdash; on a month-to-month basis, because it provides senior strategic direction rather than a full-time executive hire you have to manage.</p>
+<p>A full-time CMO costs $200,000 or more per year before benefits and equity. A fractional CMO seat starts at $4,000 per month, a fraction of the cost, on a month-to-month basis, because it provides senior strategic direction rather than a full-time executive hire you have to manage.</p>
 
 <h3>Is a fractional CMO better than an agency?</h3>
 <p>They solve different problems. An agency provides a team and production capacity &mdash; content, campaigns, paid media. A fractional CMO provides senior strategy and direction without embedded execution. Many companies use both: the fractional seat sets strategy and an agency or in-house coordinator executes it.</p>
@@ -1072,14 +1072,14 @@ export const BLOG_CONTENT: Record<string, string> = {
 <p>Worth being precise here, because &ldquo;fractional CMO&rdquo; gets used loosely. At Fifty &amp; Five, a seat is an advisory relationship, not embedded production: a monthly strategy session, a written brief on what moved and what is next, one prioritized recommendation scoped and ready to execute, and direct text access in between. Hands-on execution &mdash; content production, ad management, website builds &mdash; is real work, priced and scoped separately, so the seat stays strategic instead of turning into another vendor bill in disguise.</p>
 
 <h2>What it costs</h2>
-<p>Seats run $4,000-$6,500 a month, scoped to the business and how much oversight it needs &mdash; roughly a third of a full-time CMO&rsquo;s salary, on a month-to-month basis with no contract. <strong>We cap it at three seats at a time, because senior attention does not scale past that without becoming the exact problem a fractional seat is supposed to solve.</strong></p>
+<p>Seats start at $4,000 a month, scoped to the business and how much oversight it needs, a fraction of a full-time CMO&rsquo;s salary, on a month-to-month basis with no contract. <strong>We cap it at three seats at a time, because senior attention does not scale past that without becoming the exact problem a fractional seat is supposed to solve.</strong></p>
 
 <p>None of this replaces a marketing person you already trust &mdash; it gives them direction. And it is not for everyone: pre-revenue companies, anyone who wants to approve every post, and anyone who wants content volume without strategy are better served elsewhere.</p>
 
 <p><em>If two or more of the seven signs above sound familiar, it is worth a conversation. <a href="/fractional-cmo">See how the seat works &rarr;</a></em></p>
 
 <h3>What does a fractional CMO cost compared to a full-time hire?</h3>
-<p>A full-time CMO typically costs $200,000 or more per year before benefits and equity. A fractional CMO seat runs $4,000-$6,500 per month &mdash; roughly a third of the cost &mdash; on a month-to-month basis with no long-term contract.</p>
+<p>A full-time CMO typically costs $200,000 or more per year before benefits and equity. A fractional CMO seat starts at $4,000 per month, a fraction of the cost, on a month-to-month basis with no long-term contract.</p>
 
 <h3>What size company needs a fractional CMO?</h3>
 <p>Fractional CMOs are typically the best fit for owner-operated companies doing $1M to $20M in annual revenue &mdash; large enough that marketing run on instinct is costing real money, but not yet large enough to justify a full in-house executive team.</p>

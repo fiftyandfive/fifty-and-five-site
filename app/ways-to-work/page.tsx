@@ -9,7 +9,7 @@ import { SITE } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Ways to Work With Us | Fifty & Five',
   description:
-    'Same senior team at every depth. Run the work, lead the function, or both. Retainers from $4,000/mo, fractional CMO seats from $6,000/mo.',
+    'Same senior team at every depth. Run the work, lead the function, or both. Retainers from $4,000/mo, fractional CMO seats from $4,000/mo.',
   alternates: { canonical: 'https://fiftyandfive.com/ways-to-work' },
   openGraph: {
     title: 'Ways to Work With Us | Fifty & Five',
