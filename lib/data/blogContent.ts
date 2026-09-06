@@ -401,7 +401,7 @@ export const BLOG_CONTENT: Record<string, string> = {
 
 <h2>What we have actually run</h2>
 
-<p>We built and ran the national social program for <a href="/work/blaze-pizza">Blaze Pizza</a> during its rise to one of the fastest-growing restaurant chains in U.S. history &mdash; 300+ locations, a seven-year retainer, 400% engagement growth across national channels. The playbook built there, content systems that scale across hundreds of locations without flattening what makes each one feel local, now informs every QSR and franchise engagement we take on.</p>
+<p>We built and ran the national social program for <a href="/work/blaze-pizza">Blaze Pizza</a> during its rise to one of the fastest-growing restaurant chains in U.S. history: 300+ locations, a ten-year retainer, 400% engagement growth across national channels. The playbook built there, content systems that scale across hundreds of locations without flattening what makes each one feel local, now informs every QSR and franchise engagement we take on.</p>
 
 <p>That is not the only multi-location proof. We have managed <a href="/work/enterprise-holdings">Enterprise Holdings</a> across six distinct brands and two markets, and <a href="/work/centennial-real-estate">Centennial Real Estate</a> across nine properties, each with its own tenant mix and local personality. Add Orangetheory Fitness, Roscoe&rsquo;s Chicken &amp; Waffles, Shakey&rsquo;s Pizza, Body Bar Pilates, and Title Boxing Club, and Fifty &amp; Five has run 10+ franchise and multi-location brands since 2008.</p>
 
