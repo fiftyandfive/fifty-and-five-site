@@ -86,6 +86,7 @@ export async function generateMetadata({
       url: `https://fiftyandfive.com/blog/${post.slug}`,
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: post.updated ?? post.date,
       authors: ['Lucas Vandenberg'],
       images: [{ url: post.heroImage, width: 1200, height: 630, alt: post.title }],
     },
@@ -188,8 +189,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             headline: post.title,
             description: post.excerpt,
             datePublished: post.date,
-            dateModified: post.date,
-            author: { '@type': 'Person', name: 'Lucas Vandenberg', url: 'https://fiftyandfive.com/about' },
+            dateModified: post.updated ?? post.date,
+            author: {
+              '@type': 'Person',
+              '@id': 'https://fiftyandfive.com/#lucas-vandenberg',
+              name: 'Lucas Vandenberg',
+              url: 'https://fiftyandfive.com/about',
+            },
             publisher: { '@id': 'https://fiftyandfive.com/#organization' },
             mainEntityOfPage: `https://fiftyandfive.com/blog/${post.slug}`,
             image: post.heroImage,
@@ -310,6 +316,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </span>
             <span>·</span>
             <time dateTime={post.date}>{formatDate(post.date)}</time>
+            {post.updated && post.updated !== post.date && (
+              <>
+                <span>·</span>
+                <span>
+                  Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                </span>
+              </>
+            )}
             <span>·</span>
             <span>{post.minutesToRead} min read</span>
           </div>
