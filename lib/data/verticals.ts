@@ -134,7 +134,7 @@ export const VERTICALS: Vertical[] = [
       },
       {
         q: 'Hospitality-only boutique vs multi-category agency for a resort brand: what is the trade-off?',
-        a: 'A hospitality-only boutique knows the category cold but usually cannot staff enterprise process: reporting, paid media at scale, multi-market localization, and crisis playbooks. A multi-category agency has the process but may be learning hospitality on your budget. Fifty & Five sits in between: hospitality and destination social since 2008, starting with the Hong Kong Tourism Board in 2013, plus a Fortune 500 client list in other categories, so the reporting and crisis discipline built for Microsoft and Enterprise Holdings is applied to the Polynesian Cultural Center. The trade-off is that you are not the only category the team serves.',
+        a: 'A hospitality-only boutique knows the category cold but usually cannot staff enterprise process: reporting, paid media at scale, multi-market localization, and crisis playbooks. A multi-category agency has the process but may be learning hospitality on your budget. Fifty & Five sits in between: hospitality and destination social since the Hong Kong Tourism Board engagement in 2013, plus a Fortune 500 client list in other categories, so the reporting and crisis discipline built for Microsoft and Enterprise Holdings is applied to the Polynesian Cultural Center. The trade-off is that you are not the only category the team serves.',
       },
     ],
   },
@@ -228,7 +228,7 @@ export const VERTICALS: Vertical[] = [
       },
       {
         q: 'Social agency vs in-house social manager for a 30-unit restaurant group: which costs less at 12 months?',
-        a: 'At 12 months the in-house route usually costs more than it looks, because one social manager cannot cover 30 units, paid media, community management, and design, so the real number is a salary plus a designer plus a paid-media contractor plus turnover. An agency retainer is one line item with a senior team behind it and no backfill risk. The honest answer is that the agency costs less until the group is large enough to staff a full in-house team of three or four, which for most restaurant groups is well past 30 units. Fifty & Five ran Blaze Pizza\u2019s national program from day zero to 300+ locations on that model.',
+        a: 'At 12 months the in-house route usually costs more than it looks, because one social manager cannot cover 30 units, paid media, community management, and design, so the real number is a salary plus a designer plus a paid-media contractor plus turnover. An agency retainer is one line item with a senior team behind it and no backfill risk. The honest answer is that the agency costs less until the group can staff a full in-house team of three or four, which for most restaurant groups is well past 30 units. Fifty & Five ran Blaze Pizza\u2019s national program from day zero to 300+ locations on that model.',
       },
       {
         q: 'Franchise-focused agency vs general social agency for a QSR chain: what changes at 300 locations?',

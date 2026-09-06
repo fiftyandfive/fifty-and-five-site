@@ -1,4 +1,4 @@
-import { ADDRESS_LINE, FACTS } from '@/lib/site-facts';
+import { FACTS } from '@/lib/site-facts';
 
 // Rendered from lib/site-facts.ts so the credential numbers cannot drift from
 // the rest of the site. Do not edit numbers here; edit site-facts.
