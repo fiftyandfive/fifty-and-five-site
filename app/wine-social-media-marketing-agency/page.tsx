@@ -6,12 +6,12 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Wine & Spirits Social Media Marketing Agency | Kendall-Jackson, Mezzacorona' },
+  title: { absolute: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five' },
   description:
-    '34+ wine and spirits brands managed since 2008. A 10-year Gruppo Mezzacorona retainer and multi-year Kendall-Jackson partnership. Three-tier compliance built in.',
+    'Wine marketing agency for wine and spirits brands: social, content, and influencer programs with three-tier compliance built in. 34+ brands since 2008, including Kendall-Jackson and Mezzacorona.',
   alternates: { canonical: 'https://fiftyandfive.com/wine-social-media-marketing-agency' },
   openGraph: {
-    title: 'Wine & Spirits Social Media Marketing Agency | Kendall-Jackson, Mezzacorona',
+    title: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five',
     description:
       '34+ wine and spirits brands since 2008. The agency wine brands and distributors actually vet.',
     url: 'https://fiftyandfive.com/wine-social-media-marketing-agency',
@@ -73,9 +73,9 @@ export default function WineSocialMediaLandingPage() {
               {
                 '@type': 'WebPage',
                 '@id': 'https://fiftyandfive.com/wine-social-media-marketing-agency',
-                name: 'Wine & Spirits Social Media Marketing Agency | Kendall-Jackson, Mezzacorona',
+                name: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five',
                 description:
-                  '34+ wine and spirits brands managed since 2008. A 10-year Gruppo Mezzacorona retainer and multi-year Kendall-Jackson partnership. Three-tier compliance built in.',
+                  'Wine marketing agency for wine and spirits brands: social, content, and influencer programs with three-tier compliance built in. 34+ brands since 2008, including Kendall-Jackson and Mezzacorona.',
                 url: 'https://fiftyandfive.com/wine-social-media-marketing-agency',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/wine-social-media-marketing-agency#service' },
@@ -83,11 +83,11 @@ export default function WineSocialMediaLandingPage() {
               {
                 '@type': 'Service',
                 '@id': 'https://fiftyandfive.com/wine-social-media-marketing-agency#service',
-                serviceType: 'Social Media Marketing Agency',
+                serviceType: 'Marketing Agency',
                 category: 'Wine and Spirits Marketing',
-                name: 'Wine & Spirits Social Media Marketing Agency',
+                name: 'Wine & Spirits Marketing Agency',
                 description:
-                  'Senior-led social media agency specializing in wine and spirits, with three-tier compliance built in since 2008.',
+                  'Senior-led wine marketing agency: social, content, influencer, and paid programs for wine and spirits brands, with three-tier compliance built in since 2008.',
                 provider: { '@id': 'https://fiftyandfive.com/#organization' },
                 areaServed: [{ '@type': 'Country', name: 'United States' }],
                 audience: {
@@ -115,7 +115,7 @@ export default function WineSocialMediaLandingPage() {
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Wine & Spirits Social Media Marketing Agency',
+                name: 'Wine Marketing Agency',
                 item: 'https://fiftyandfive.com/wine-social-media-marketing-agency',
               },
             ],
@@ -144,15 +144,23 @@ export default function WineSocialMediaLandingPage() {
         </div>
         <AnimatedHeadline
           as="h1"
-          text="The social media agency wine brands and distributors actually vet."
+          text={'Wine & Spirits Marketing Agency'}
           className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-5xl"
           stagger={0.03}
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
-            34+ wine and spirits brands managed since 2008. A 10-year retainer with Gruppo
-            Mezzacorona across 5+ brands, roughly 1M followers added. A multi-year partnership
-            with Kendall-Jackson. This is not a vertical we dabble in, it is one we have lived in.
+            A wine marketing agency plans and runs the marketing a wine or spirits brand cannot
+            staff in-house: brand and content strategy, social media, influencer programs, paid
+            media, and the trade and DTC communication that has to stay inside three-tier
+            compliance. Fifty &amp; Five is different in three ways. The wine marketing and
+            spirits marketing work is run by the founder, who built the first marketing
+            department at Southern Wine &amp; Spirits before founding the agency in 2008. The
+            portfolio is 34+ wine and spirits brands, including a 10-year Gruppo Mezzacorona
+            retainer across 5+ brands and a multi-year Kendall-Jackson partnership. And
+            compliance is treated as craft: which posts ship through which tier, what is legal
+            for DTC versus distributor markets, and how trade promotion and consumer storytelling
+            coexist.
           </p>
         </SimpleReveal>
         <SimpleReveal delay={0.4}>
@@ -186,8 +194,8 @@ export default function WineSocialMediaLandingPage() {
         </div>
         <p className="mt-8 max-w-2xl text-body text-text-secondary leading-[1.6]">
           Full write-ups on <Link href="/work/kendall-jackson" className="text-accent hover:text-accent-light underline underline-offset-2">Kendall-Jackson</Link> and{' '}
-          <Link href="/work/mezzacorona" className="text-accent hover:text-accent-light underline underline-offset-2">Mezzacorona</Link>, or the full{' '}
-          <Link href="/verticals/wine-spirits" className="text-accent hover:text-accent-light underline underline-offset-2">wine &amp; spirits portfolio</Link>.
+          <Link href="/work/mezzacorona" className="text-accent hover:text-accent-light underline underline-offset-2">Mezzacorona</Link>, or the full portfolio on our{' '}
+          <Link href="/verticals/wine-spirits" className="text-accent hover:text-accent-light underline underline-offset-2">wine and spirits social media agency</Link> page.
         </p>
       </section>
 

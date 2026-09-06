@@ -6,16 +6,17 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { CASE_STUDIES } from '@/lib/data/caseStudies';
 import { PRICING, SITE } from '@/lib/constants';
+import { FACTS } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Fractional CMO for $1M-20M Companies | Fifty & Five' },
+  title: { absolute: 'Fractional CMO for $1M to $20M Companies | Fifty & Five' },
   description:
     'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
   alternates: {
     canonical: 'https://fiftyandfive.com/fractional-cmo',
   },
   openGraph: {
-    title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
+    title: 'Fractional CMO for $1M to $20M Companies | Fifty & Five',
     description:
       'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
     url: 'https://fiftyandfive.com/fractional-cmo',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
+    title: 'Fractional CMO for $1M to $20M Companies | Fifty & Five',
     description:
       'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
   },
@@ -97,7 +98,7 @@ export default function FractionalCmoPage() {
             '@graph': [
               {
                 '@type': 'WebPage',
-                name: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
+                name: 'Fractional CMO for $1M to $20M Companies | Fifty & Five',
                 description:
                   'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands.',
                 url: 'https://fiftyandfive.com/fractional-cmo',
@@ -459,6 +460,27 @@ export default function FractionalCmoPage() {
           }),
         }}
       />
+
+      {/* Orlando seat */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Local seat
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Fractional CMO in Orlando
+          </h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            Fifty &amp; Five has run from Orlando since {FACTS.founded}, and the founder takes a
+            small number of Central Florida owner-operators as fractional CMO clients in person.
+            If you are in Orlando, Winter Park, or Lake Nona, start with the{' '}
+            <Link href="/fractional-cmo-orlando" className="text-accent hover:text-accent-light underline underline-offset-2">
+              Fractional CMO Orlando
+            </Link>{' '}
+            page.
+          </p>
+        </div>
+      </section>
 
       {/* Close CTA */}
       <section className="container-edge py-20 md:py-28 text-center">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { FACTS } from '@/lib/site-facts';
 import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -31,9 +32,9 @@ const PRESS_MENTIONS = [
   },
   {
     source: 'Clutch.co',
-    title: '5.0/5.0 Rating — 18 Verified Client Reviews',
+    title: `${FACTS.clutchRating}/5.0 Rating, ${FACTS.clutchReviewCount} Verified Client Reviews`,
     description:
-      'Verified reviews from Microsoft, Blaze Pizza, Barsha, StreetStrider, and other clients across 15+ verticals.',
+      'Verified client reviews from Microsoft, Blaze Pizza, Barsha, and StreetStrider.',
     url: 'https://clutch.co/profile/fifty-five',
     type: 'Review Platform' as const,
     date: 'Ongoing',

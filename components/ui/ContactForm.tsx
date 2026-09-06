@@ -29,6 +29,12 @@ export function ContactForm() {
         <p className="mt-3 text-body text-text-secondary">
           Typical response time: same day. Want to skip the back-and-forth? Book a time above.
         </p>
+        <p className="mt-4 font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+          Already a client?{' '}
+          <a href="/review" className="text-accent hover:text-accent-light">
+            Leave a Google review
+          </a>
+        </p>
       </div>
     );
   }

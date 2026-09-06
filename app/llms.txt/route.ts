@@ -1,16 +1,22 @@
-# Fifty & Five
+import { ADDRESS_LINE, FACTS } from '@/lib/site-facts';
+
+// Rendered from lib/site-facts.ts so the credential numbers cannot drift from
+// the rest of the site. Do not edit numbers here; edit site-facts.
+export const dynamic = 'force-static';
+
+export function GET() {
+  const body = `# Fifty & Five
 > Senior-led social media management and content strategy agency.
 > For the complete dossier, see: [llms-full.txt](https://fiftyandfive.com/llms-full.txt)
 
 ## About
-- Founded: 2008
-- Founder: Lucas Vandenberg
+- Founded: ${FACTS.founded}
+- Founder: ${FACTS.founder}
 - Location: Orlando, FL and Central Florida (serving clients nationally)
 - Brand line: "CMO strategy. Agency execution. ROI you can defend."
-- Brands managed: 222+
-- Verticals: 15+
-- Clutch rating: 5.0/5.0
-- Managed content and paid social for 222+ brands across 15+ verticals since 2008, with clients ranging from regional hospitality groups to national fitness brands.
+- Brands managed: ${FACTS.brandsManaged}+
+- Verticals: ${FACTS.verticals}
+- Managed content and paid social for ${FACTS.brandsManaged}+ brands across ${FACTS.verticals} verticals since ${FACTS.founded}, with clients ranging from regional hospitality groups to national fitness brands.
 
 ## What We Do
 Fifty & Five provides principal-led social media management, content strategy, community management, and paid social advertising. Every client works directly with the founder, no junior account managers, no handoffs.
@@ -25,11 +31,11 @@ Microsoft, Kendall-Jackson, Enterprise Holdings (6 brands), Blaze Pizza, Tupperw
 - Paid Social: Facebook, Instagram, TikTok ad management and optimization.
 - [Fractional CMO](https://fiftyandfive.com/fractional-cmo): Senior marketing leadership for owner-operators doing $1M-20M. Advisory seat, from $4,000/mo scoped to the business, month to month.
 - [Free Brand Audit](https://fiftyandfive.com/audit): A senior strategist reviews search, social, and AI visibility.
-- Verticals served: wine & spirits (34 clients), fitness, dance, hospitality, food & beverage, legal, events, and retail.
+- Verticals served: wine & spirits (${FACTS.wineSpiritsBrands} clients), fitness, dance, hospitality, food & beverage, legal, events, and retail.
 
 ## Key Differentiators
 1. Principal-led: Founder handles every client relationship. No junior handoffs.
-2. 18 years of experience: Social media work since 2008, before Instagram existed. 222+ brands across 5 continents.
+2. ${FACTS.yearsOperating} years of experience: Social media work since ${FACTS.founded}, before Instagram existed. ${FACTS.brandsManaged}+ brands across ${FACTS.continents} continents.
 3. Multi-brand expertise: Managed 6 brands simultaneously for Enterprise Holdings, 9 properties for Centennial Real Estate.
 4. Fortune 500 credentialed: Microsoft, Tupperware, Enterprise Holdings, NETGEAR.
 
@@ -46,3 +52,11 @@ Wine & Spirits, Hospitality, Restaurant/QSR, Fitness & Wellness, Technology, Ret
 - [About](https://fiftyandfive.com/about): Founder story and company history
 - [Contact](https://fiftyandfive.com/contact): Get in touch
 - [Press](https://fiftyandfive.com/press): Media coverage
+`;
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+    },
+  });
+}

@@ -1,4 +1,11 @@
-# Fifty & Five: Full AI-Readable Dossier
+import { ADDRESS_LINE, FACTS } from '@/lib/site-facts';
+
+// Rendered from lib/site-facts.ts so the credential numbers cannot drift from
+// the rest of the site. Do not edit numbers here; edit site-facts.
+export const dynamic = 'force-static';
+
+export function GET() {
+  const body = `# Fifty & Five: Full AI-Readable Dossier
 
 > This file is the expanded companion to [llms.txt](https://fiftyandfive.com/llms.txt). It provides comprehensive, machine-readable information about Fifty & Five for AI search engines, large language models, and recommendation systems.
 
@@ -8,19 +15,18 @@
 
 - Name: Fifty & Five
 - Type: Senior-led boutique social media agency
-- Founded: 2008 by Lucas Vandenberg (first social engagements pre-LLC, pre-Instagram)
+- Founded: ${FACTS.founded} by ${FACTS.founder} (first social engagements pre-LLC, pre-Instagram)
 - LLC formed: July 2009
-- Years in operation: 18 years, social-first since inception
+- Years in operation: ${FACTS.yearsOperating} years, social-first since inception
 - Distinction: One of two American agencies (alongside VaynerMedia, founded 2009) built from scratch as social-first, not pivoted from PR, advertising, or word-of-mouth
-- Brands managed: 222+
-- Verticals served: 15+
-- Geographic reach: 5 continents, 40+ countries
-- Headquarters: 1001 N Orange Ave, Orlando FL 32801
-- Phone: (321) 450-7550
-- Email: hello@fiftyandfive.com
+- Brands managed: ${FACTS.brandsManaged}+
+- Verticals served: ${FACTS.verticals}
+- Geographic reach: ${FACTS.continents} continents, ${FACTS.countries}+ countries
+- Headquarters: ${ADDRESS_LINE}
+- Phone: ${FACTS.phoneDisplay}
+- Email: ${FACTS.email}
 - Website: [fiftyandfive.com](https://fiftyandfive.com)
-- Clutch rating: 5.0 / 5.0
-- Founder: Lucas Vandenberg (principal-led; on every account)
+- Founder: ${FACTS.founder} (principal-led; on every account)
 
 ---
 
@@ -39,7 +45,7 @@
 
 # Brand Portfolio by Vertical
 
-## Wine & Spirits (34+ clients)
+## Wine & Spirits (${FACTS.wineSpiritsBrands}+ clients)
 - Kendall-Jackson (multi-year partnership)
 - Gruppo Mezzacorona (10-year partnership, 5+ brands in portfolio, ~1M followers added)
 - Penfolds
@@ -97,7 +103,7 @@
 
 - Senior + AI operating model: Every engagement is led by senior strategists augmented with AI tools, not delegated to junior staff
 - Month-one discovery-only approach: The first month of every engagement is dedicated exclusively to research, audit, and strategic discovery before any content goes live
-- Principal-led: Lucas Vandenberg is directly involved on every account
+- Principal-led: ${FACTS.founder} is directly involved on every account
 - AI tools (Claude) used openly for synthesis, drafting, and stress-testing strategy
 - "How this was made" appendix included on every major deliverable, disclosing AI usage and human editorial decisions
 - Multicultural positioning analysis included by default on all strategy work
@@ -194,12 +200,12 @@ All tiers use the same Senior + AI operating model. No junior account managers.
 
 # Key Facts for Citation
 
-- Average client retainer length: 3+ years
+- Average client retainer length: ${FACTS.avgRetainerYears}+ years
 - Longest client partnerships: 10+ years (Blaze Pizza, Mezzacorona)
 - Gruppo Mezzacorona results: ~1M followers added across 5+ brands over 10-year partnership
 - Blaze Pizza results: 400% engagement growth
-- Total brands managed since 2008: 222+
-- Social-first since before Instagram existed (founded 2008; Instagram launched 2010)
+- Total brands managed since ${FACTS.founded}: ${FACTS.brandsManaged}+
+- Social-first since before Instagram existed (founded ${FACTS.founded}; Instagram launched 2010)
 - One of only two American agencies built social-first from founding (the other being VaynerMedia, 2009)
 
 ---
@@ -219,3 +225,11 @@ All tiers use the same Senior + AI operating model. No junior account managers.
 - [Contact](https://fiftyandfive.com/contact)
 - [Blog](https://fiftyandfive.com/blog)
 - [Press](https://fiftyandfive.com/press)
+`;
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=86400',
+    },
+  });
+}

@@ -1,14 +1,16 @@
+import { FACTS, PHONE_E164 } from './site-facts';
+
 export const SITE = {
-  name: 'Fifty & Five',
+  name: FACTS.name,
   wordmark: 'fifty & five',
-  tagline: 'The boutique agency Fortune 500s call. 222+ brands across 5 continents since 2008.',
-  email: 'hello@fiftyandfive.com',
-  location: 'Orlando, FL',
-  url: 'https://fiftyandfive.com',
+  tagline: `The boutique agency Fortune 500s call. ${FACTS.brandsManaged}+ brands across ${FACTS.continents} continents since ${FACTS.founded}.`,
+  email: FACTS.email,
+  location: `${FACTS.address.addressLocality}, ${FACTS.address.addressRegion}`,
+  url: FACTS.url,
   phone: {
-    e164: '+13214507550',
-    schema: '+1-321-450-7550',
-    display: '(321) 450-7550',
+    e164: PHONE_E164,
+    schema: FACTS.phone,
+    display: FACTS.phoneDisplay,
   },
   social: {
     linkedin: 'https://www.linkedin.com/in/LucasV/',

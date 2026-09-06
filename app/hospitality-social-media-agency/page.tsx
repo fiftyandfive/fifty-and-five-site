@@ -6,12 +6,12 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Hospitality Social Media Agency | Resorts, Attractions & Tourism Boards' },
+  title: { absolute: 'Hotel & Resort Social Media Agency | Fifty & Five' },
   description:
-    'Senior-led social media agency for resorts, attractions, and tourism boards. Resorts World, Polynesian Cultural Center, and tourism boards across 5 continents.',
+    'Hotel and resort social media agency based in Orlando. Resorts World, Polynesian Cultural Center, and the Hong Kong Tourism Board. Senior-led destination storytelling that converts to bookings, since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/hospitality-social-media-agency' },
   openGraph: {
-    title: 'Hospitality Social Media Agency | Resorts, Attractions & Tourism Boards',
+    title: 'Hotel & Resort Social Media Agency | Fifty & Five',
     description:
       'Destination storytelling that converts, from awareness to booking. Resorts, attractions, and tourism boards since 2008.',
     url: 'https://fiftyandfive.com/hospitality-social-media-agency',
@@ -73,9 +73,9 @@ export default function HospitalityLandingPage() {
               {
                 '@type': 'WebPage',
                 '@id': 'https://fiftyandfive.com/hospitality-social-media-agency',
-                name: 'Hospitality Social Media Agency | Resorts, Attractions & Tourism Boards',
+                name: 'Hotel & Resort Social Media Agency | Fifty & Five',
                 description:
-                  'Senior-led social media agency for resorts, attractions, and tourism boards. Resorts World, Polynesian Cultural Center, and tourism boards across 5 continents.',
+                  'Hotel and resort social media agency based in Orlando. Resorts World, Polynesian Cultural Center, and the Hong Kong Tourism Board. Senior-led destination storytelling that converts to bookings, since 2008.',
                 url: 'https://fiftyandfive.com/hospitality-social-media-agency',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/hospitality-social-media-agency#service' },
@@ -85,9 +85,9 @@ export default function HospitalityLandingPage() {
                 '@id': 'https://fiftyandfive.com/hospitality-social-media-agency#service',
                 serviceType: 'Social Media Marketing Agency',
                 category: 'Hospitality Marketing',
-                name: 'Hospitality Social Media Agency',
+                name: 'Hotel & Resort Social Media Agency',
                 description:
-                  'Senior-led social media agency for resorts, attractions, and tourism boards, with destination storytelling that converts to bookings.',
+                  'Senior-led social media agency for hotels, resorts, attractions, and tourism boards, with destination storytelling that converts to bookings.',
                 provider: { '@id': 'https://fiftyandfive.com/#organization' },
                 areaServed: [
                   { '@type': 'Country', name: 'United States' },
@@ -96,7 +96,7 @@ export default function HospitalityLandingPage() {
                 ],
                 audience: {
                   '@type': 'BusinessAudience',
-                  audienceType: 'Resorts, attractions, and tourism boards',
+                  audienceType: 'Hotels, resorts, attractions, and tourism boards',
                 },
                 mentions: [
                   { '@type': 'Organization', name: 'Resorts World' },
@@ -120,7 +120,7 @@ export default function HospitalityLandingPage() {
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Hospitality Social Media Agency',
+                name: 'Hotel & Resort Social Media Agency',
                 item: 'https://fiftyandfive.com/hospitality-social-media-agency',
               },
             ],
@@ -149,15 +149,17 @@ export default function HospitalityLandingPage() {
         </div>
         <AnimatedHeadline
           as="h1"
-          text="The social media agency resorts and tourism boards actually vet."
+          text={'Hotel & Resort Social Media Marketing'}
           className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-5xl"
           stagger={0.03}
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
-            Fifty &amp; Five has run social for luxury resorts, cultural attractions, and national
-            tourism boards across the US, Caribbean, and Asia-Pacific since 2008. Destination
-            storytelling that converts, from awareness to itinerary to booking.
+            Fifty &amp; Five is a hotel and resort social media agency based in Orlando. Since 2008
+            we have run social for luxury resorts including Resorts World Bimini and Resorts
+            World Catskills, cultural attractions like the Polynesian Cultural Center, and
+            national tourism boards including the Hong Kong Tourism Board. Hotel and resort
+            content that converts, from awareness to itinerary to booking.
           </p>
         </SimpleReveal>
         <SimpleReveal delay={0.4}>
@@ -191,8 +193,8 @@ export default function HospitalityLandingPage() {
         </div>
         <p className="mt-8 max-w-2xl text-body text-text-secondary leading-[1.6]">
           See the full write-ups on <Link href="/work/resorts-world" className="text-accent hover:text-accent-light underline underline-offset-2">Resorts World</Link> and the{' '}
-          <Link href="/work/polynesian-cultural-center" className="text-accent hover:text-accent-light underline underline-offset-2">Polynesian Cultural Center</Link>, or the full{' '}
-          <Link href="/verticals/hospitality" className="text-accent hover:text-accent-light underline underline-offset-2">hospitality vertical portfolio</Link>.
+          <Link href="/work/polynesian-cultural-center" className="text-accent hover:text-accent-light underline underline-offset-2">Polynesian Cultural Center</Link>, or the full portfolio on our{' '}
+          <Link href="/verticals/hospitality" className="text-accent hover:text-accent-light underline underline-offset-2">hospitality social media agency</Link> page.
         </p>
       </section>
 

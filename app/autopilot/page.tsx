@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { FACTS } from '@/lib/site-facts';
 import Link from 'next/link';
 import { SITE } from '@/lib/constants';
 
@@ -326,7 +327,7 @@ export default function AutopilotPage() {
       <section className="container-edge py-10 md:py-14">
         <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 mb-5">
           <h2 className="ap-display text-[22px] md:text-[20px] font-semibold tracking-[-0.025em]">
-            5.0 on Clutch.{' '}
+            {FACTS.clutchRating} on Clutch.{' '}
             <em className="ap-serif-italic text-[#C41E3A] font-normal">
               Same hands since 2008.
             </em>

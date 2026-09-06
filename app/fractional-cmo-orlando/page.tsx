@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -6,12 +7,12 @@ import { CTASection } from '@/components/layout/CTASection';
 import { PRICING, SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Lucas Vandenberg | Fractional CMO Orlando' },
+  title: { absolute: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five' },
   description:
     'Lucas Vandenberg takes on a small number of Orlando-area companies as fractional CMO. Founder of Fifty & Five, 18 years, 222+ brands. From $4,000/mo.',
   alternates: { canonical: 'https://fiftyandfive.com/fractional-cmo-orlando' },
   openGraph: {
-    title: 'Lucas Vandenberg | Fractional CMO Orlando',
+    title: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five',
     description:
       'Founder-led fractional CMO seat for Orlando-area owner-operators. 18 years, 222+ brands, one senior operator on call.',
     url: 'https://fiftyandfive.com/fractional-cmo-orlando',
@@ -92,7 +93,7 @@ export default function FractionalCmoOrlandoPage() {
               {
                 '@type': 'WebPage',
                 '@id': 'https://fiftyandfive.com/fractional-cmo-orlando',
-                name: 'Lucas Vandenberg | Fractional CMO Orlando',
+                name: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five',
                 description:
                   'Lucas Vandenberg, founder of Fifty & Five, takes on a small number of Orlando-area companies as fractional CMO. 18 years, 222+ brands.',
                 url: 'https://fiftyandfive.com/fractional-cmo-orlando',
@@ -143,6 +144,7 @@ export default function FractionalCmoOrlandoPage() {
                 },
                 areaServed: [
                   { '@type': 'City', name: 'Orlando' },
+                  { '@type': 'AdministrativeArea', name: 'Orange County' },
                   { '@type': 'AdministrativeArea', name: 'Central Florida' },
                 ],
                 audience: {
@@ -196,10 +198,21 @@ export default function FractionalCmoOrlandoPage() {
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
-            I have led marketing and social strategy for 222+ brands across 5 continents since
-            founding Fifty &amp; Five in 2008. I take on a small number of Orlando-area
-            owner-operators as fractional CMO clients &mdash; senior strategy on call, without
-            adding another full-time hire.
+            The fractional CMO in Orlando at Fifty &amp; Five is Lucas Vandenberg, the founder,
+            not a placement from a national firm. The seat is for owner-operators doing $1M to
+            $20M in revenue in Orlando, Winter Park, Lake Nona, and the rest of Central Florida
+            who need senior marketing judgment on call without adding a full-time hire. I have
+            led marketing and social strategy for 222+ brands across 5 continents since founding
+            Fifty &amp; Five in 2008, and I take the seat myself.
+          </p>
+        </SimpleReveal>
+        <SimpleReveal delay={0.35}>
+          <p className="mt-4 text-meta text-text-tertiary">
+            This is the Orlando seat of Fifty &amp; Five&rsquo;s national{' '}
+            <Link href="/fractional-cmo" className="text-accent hover:text-accent-light underline underline-offset-2">
+              Fractional CMO practice
+            </Link>
+            .
           </p>
         </SimpleReveal>
         <SimpleReveal delay={0.4}>
