@@ -91,7 +91,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     '@id': 'https://fiftyandfive.com/#lucas-vandenberg',
                     name: 'Lucas Vandenberg',
                     jobTitle: ['Founder', 'Fractional CMO'],
-                    url: 'https://www.linkedin.com/in/LucasV/',
+                    description:
+                      'Founder of Fifty & Five (2008). Built the first marketing department at Southern Wine & Spirits in 2007. Has led marketing and social strategy for 222+ brands across five continents, including Microsoft, Kendall-Jackson, Enterprise Holdings, and Blaze Pizza.',
+                    url: 'https://fiftyandfive.com/about',
+                    image: 'https://fiftyandfive.com/images/people/lucas.jpg',
+                    worksFor: { '@id': 'https://fiftyandfive.com/#organization' },
+                    knowsAbout: [
+                      'Fractional CMO',
+                      'Social Media Marketing',
+                      'Wine and Spirits Marketing',
+                      'Hospitality Marketing',
+                      'Franchise Marketing',
+                      'Answer Engine Optimization',
+                    ],
                     sameAs: [
                       'https://www.linkedin.com/in/LucasV/',
                     ],
