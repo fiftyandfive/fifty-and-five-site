@@ -101,6 +101,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: 'franchise-social-media-management-cost',
     wixSlug: 'franchise-social-media-management-cost',
     date: '2026-08-11',
+    updated: '2026-09-06',
     minutesToRead: 6,
     heroImage: 'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600&q=85',
     excerpt: "One brand, hundreds of locations, and a corporate team that can't be everywhere. What franchise social media management actually costs in 2026, and what separates a real program from a template with a location tag.",
