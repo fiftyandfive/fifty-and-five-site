@@ -303,14 +303,14 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
       {(v.slug === 'wine-spirits' || v.slug === 'hospitality') && (
         <section className="container-edge pb-16 md:pb-20 text-center">
           <p className="text-body text-text-secondary">
-            Hiring an agency for this vertical?{' '}
+            Hiring an agency for this vertical? See our{' '}
             <Link
               href={v.slug === 'wine-spirits' ? '/wine-social-media-marketing-agency' : '/hospitality-social-media-agency'}
               className="text-accent hover:text-accent-light underline underline-offset-2"
             >
-              See our {v.shortLabel.toLowerCase()} agency page
+              {v.slug === 'wine-spirits' ? 'wine marketing agency' : 'hotel and resort social media agency'}
             </Link>
-            {' '}for pricing and FAQs.
+            {' '}page for pricing and FAQs.
           </p>
         </section>
       )}

@@ -81,6 +81,14 @@ export const VERTICALS: Vertical[] = [
         q: 'Does Fifty & Five work with both luxury and mass-market wine brands?',
         a: 'Both. We’ve operated Kendall-Jackson’s premium positioning and value-tier brands from the same senior team. Vertical specialization, not project work.',
       },
+      {
+        q: 'Boutique wine marketing agency vs holding-company agency for a five-brand portfolio: what changes?',
+        a: 'The senior attention changes. At a holding company, a five-brand wine portfolio is one account among hundreds, pitched by a senior team and handed to a junior one after month two. At Fifty & Five the founder, who built the first marketing department at Southern Wine & Spirits, runs the account, and that model has held for ten years across the 5+ brands in the Gruppo Mezzacorona portfolio, adding roughly 1M followers. What you give up is headcount. What you keep is one point of accountability, three-tier compliance handled by people who have shipped through it, and a team that still knows your brands in year three.',
+      },
+      {
+        q: 'Wine social media agency vs in-house social manager at a winery: which should own the channel?',
+        a: 'An in-house social manager wins on proximity: they are at harvest, in the tasting room, and can shoot the same day. A wine social media agency wins on judgment and coverage: compliance review, paid media, influencer contracts, and continuity when the in-house person leaves. The setup Fifty & Five recommends, and has run across 34+ wine and spirits brands including Kendall-Jackson and Mezzacorona, pairs the two: the winery owns capture, the agency owns strategy, compliance, and distribution. If you can only fund one, fund the agency first and add the in-house role once the system is running. It is easier to add hands than judgment.',
+      },
     ],
   },
   {
@@ -119,6 +127,14 @@ export const VERTICALS: Vertical[] = [
       {
         q: 'Is Fifty & Five experienced with hospitality crisis communications?',
         a: 'Yes. Weather events, travel advisories, and brand reputation moments are all handled by senior strategists, not outsourced to a junior team.',
+      },
+      {
+        q: 'Hotel social media agency vs in-house marketing team for a resort: who should own Instagram?',
+        a: 'The property should own the camera and the agency should own the system. Resort content only works when it feels like a specific place, which is why on-site capture belongs with the in-house team. Strategy, community management at scale, paid media, and crisis response belong with the agency, because those are the parts that fail when a single marketing manager goes on vacation. That is how Fifty & Five has run social for Resorts World Bimini and Resorts World Catskills, with every campaign laddering back to room nights, package upsells, and restaurant covers rather than likes.',
+      },
+      {
+        q: 'Hospitality-only boutique vs multi-category agency for a resort brand: what is the trade-off?',
+        a: 'A hospitality-only boutique knows the category cold but usually cannot staff enterprise process: reporting, paid media at scale, multi-market localization, and crisis playbooks. A multi-category agency has the process but may be learning hospitality on your budget. Fifty & Five sits in between: hospitality and destination social since 2008, starting with the Hong Kong Tourism Board in 2013, plus a Fortune 500 client list in other categories, so the reporting and crisis discipline built for Microsoft and Enterprise Holdings is applied to the Polynesian Cultural Center. The trade-off is that you are not the only category the team serves.',
       },
     ],
   },
@@ -161,6 +177,14 @@ export const VERTICALS: Vertical[] = [
         q: 'Does Fifty & Five handle crisis communications for tourism brands?',
         a: 'Yes, weather events, travel advisories, and reputation moments are baked into our retainer playbook. Senior strategists handle crisis comms directly, not outsourced to a junior team.',
       },
+      {
+        q: 'DMO in-house team vs agency for a destination’s Instagram: who should own it?',
+        a: 'The DMO should own the voice and the partner relationships; the agency should own production cadence and paid distribution. Destination accounts stall when a two-person in-house team has to feed daily content, run paid, answer travelers in three languages, and manage a crisis at the same time. Fifty & Five ran that split for the Hong Kong Tourism Board, Korea Tourism Board, and Macau Tourism Office, with the boards setting priorities and the agency running multi-market campaigns across 40+ countries. If the DMO already has a strong content team, keep it and buy paid and community management. If it does not, buy the whole system.',
+      },
+      {
+        q: 'Single-market vs multi-market destination campaign: agency or in-house, which scales?',
+        a: 'In-house scales fine for one market and one language. It breaks at the second market, because localization is not translation: channels, creative, and messaging change by market while the destination brand has to stay intact. Fifty & Five has operated destination and tourism campaigns across 5 continents and 40+ countries, including the Hong Kong Tourism Board and the Polynesian Cultural Center, with one senior team and market-specific execution. The practical rule: keep in-house for the home market, bring in an agency the moment a second market gets real budget, and make the agency report both markets on one scoreboard.',
+      },
     ],
   },
   {
@@ -201,6 +225,14 @@ export const VERTICALS: Vertical[] = [
       {
         q: 'Does Fifty & Five work with single-location restaurants or only national chains?',
         a: 'Both. We\u2019ve operated local store-level campaigns through to national QSR rollouts. Same senior team, same hourly rate.',
+      },
+      {
+        q: 'Social agency vs in-house social manager for a 30-unit restaurant group: which costs less at 12 months?',
+        a: 'At 12 months the in-house route usually costs more than it looks, because one social manager cannot cover 30 units, paid media, community management, and design, so the real number is a salary plus a designer plus a paid-media contractor plus turnover. An agency retainer is one line item with a senior team behind it and no backfill risk. The honest answer is that the agency costs less until the group is large enough to staff a full in-house team of three or four, which for most restaurant groups is well past 30 units. Fifty & Five ran Blaze Pizza\u2019s national program from day zero to 300+ locations on that model.',
+      },
+      {
+        q: 'Franchise-focused agency vs general social agency for a QSR chain: what changes at 300 locations?',
+        a: 'At 300 locations the job stops being content and becomes a system: brand voice locked at the center, local flexibility defined in writing, franchisee guidance on what to post and how to answer complaints, and reporting by location instead of by system average. A general social agency is built to post for one brand. A franchise-focused agency is built to run that system. Fifty & Five built the framework for Blaze Pizza across 300+ locations over a ten-year program, with 400% engagement growth across national channels, and reuses that playbook for Roscoe\u2019s House of Chicken & Waffles and Shakey\u2019s Pizza.',
       },
     ],
   },

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FOOTER_VERTICALS, NAV_LINKS, SITE } from '@/lib/constants';
+import { FACTS } from '@/lib/site-facts';
 import { BrandLogo } from '@/components/ui/BrandLogo';
 import { NewsletterSignup } from '@/components/ui/NewsletterSignup';
 
@@ -66,6 +67,11 @@ export function Footer() {
                 </a>
               </li>
               <li>{SITE.location}</li>
+              <li>
+                <Link href="/review" className="hover:text-text-primary transition-colors">
+                  Leave a Google review
+                </Link>
+              </li>
               <li className="flex gap-4 pt-2">
                 <a
                   href={SITE.social.linkedin}
@@ -139,7 +145,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
             <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
-            <div>Senior + AI · Since 2008 · 222 brands across 5 continents · Most clients 3+ years · The agency built for the next decade.</div>
+            <div>{`Senior + AI · Since ${FACTS.founded} · ${FACTS.brandsManaged} brands across ${FACTS.continents} continents · Most clients ${FACTS.avgRetainerYears}+ years · The agency built for the next decade.`}</div>
           </div>
         </div>
       </div>

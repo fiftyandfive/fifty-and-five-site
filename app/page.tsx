@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FACTS } from '@/lib/site-facts';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
 import { PlatformGraveyard } from '@/components/ui/PlatformGraveyard';
@@ -55,7 +56,7 @@ export default function HomePage() {
                 name: 'What industries does Fifty & Five specialize in?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five specializes in 15+ verticals, including Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, Entertainment, Luxury, and Education.',
+                  text: `Fifty & Five specializes in ${FACTS.verticals} verticals, including Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, Entertainment, Luxury, and Education.`,
                 },
               },
               {

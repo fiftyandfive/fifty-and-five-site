@@ -3,23 +3,26 @@ import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline
 import { GlassCard } from '@/components/ui/GlassCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { CTASection } from '@/components/layout/CTASection';
+import { FACTS } from '@/lib/site-facts';
+
+const ABOUT_TITLE = `About | ${FACTS.yearsOperating} Years, ${FACTS.brandsManaged} Brands`;
+const ABOUT_DESCRIPTION = `${FACTS.brandsManaged}+ brands across five continents since ${FACTS.founded}. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.`;
 
 export const metadata: Metadata = {
-  title: 'About | 18 Years, 222 Brands',
-  description:
-    '222+ brands across five continents since 2008. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.',
+  title: ABOUT_TITLE,
+  description: ABOUT_DESCRIPTION,
   alternates: {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
-    title: 'About | 18 Years, 222 Brands | Fifty & Five',
-    description: '222+ brands across five continents since 2008. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.',
+    title: `${ABOUT_TITLE} | Fifty & Five`,
+    description: ABOUT_DESCRIPTION,
     url: 'https://fiftyandfive.com/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About | 18 Years, 222 Brands | Fifty & Five',
-    description: '222+ brands across five continents since 2008. Senior-led practices, an AI-leveraged operating model, and the decade-long retainers that prove it works.',
+    title: `${ABOUT_TITLE} | Fifty & Five`,
+    description: ABOUT_DESCRIPTION,
   },
 };
 
@@ -50,7 +53,7 @@ export default function AboutPage() {
                 name: 'Who founded Fifty & Five?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five was founded in 2008 by Lucas Vandenberg. The agency is headquartered in Orlando, Florida, and has managed social media for 222+ brands across 5 continents.',
+                  text: `Fifty & Five was founded in ${FACTS.founded} by ${FACTS.founder}. The agency is headquartered in Orlando, Florida, and has managed social media for ${FACTS.brandsManaged}+ brands across ${FACTS.continents} continents.`,
                 },
               },
               {
@@ -58,7 +61,7 @@ export default function AboutPage() {
                 name: 'How many brands has Fifty & Five worked with?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Fifty & Five has managed social media for 222+ brands since 2008, including Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Warner Bros., Tupperware, and Resorts World.',
+                  text: `Fifty & Five has managed social media for ${FACTS.brandsManaged}+ brands since ${FACTS.founded}, including Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Warner Bros., Tupperware, and Resorts World.`,
                 },
               },
               {
@@ -88,7 +91,7 @@ export default function AboutPage() {
         </div>
         <AnimatedHeadline
           as="h1"
-          text="The team behind 222 brands."
+          text={`The team behind ${FACTS.brandsManaged} brands.`}
           className="mt-4 font-serif text-display tracking-[-0.03em] max-w-4xl"
           stagger={0.05}
         />
@@ -102,15 +105,15 @@ export default function AboutPage() {
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6">
             <div>
               <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
-                222+
+                {`${FACTS.brandsManaged}+`}
               </div>
               <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
-                Brands served since 2008
+                {`Brands served since ${FACTS.founded}`}
               </div>
             </div>
             <div>
               <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
-                18
+                {FACTS.yearsOperating}
               </div>
               <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
                 Years of compounding pattern recognition
@@ -118,7 +121,7 @@ export default function AboutPage() {
             </div>
             <div>
               <div className="font-serif text-[clamp(48px,7vw,72px)] leading-none tracking-[-0.02em] text-text-primary">
-                3+
+                {`${FACTS.avgRetainerYears}+`}
               </div>
               <div className="mt-3 font-mono text-caption uppercase text-text-tertiary tracking-[0.15em]">
                 Average years per retained client

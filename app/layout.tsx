@@ -9,7 +9,7 @@ import { StickyCtaButton } from '@/components/ui/StickyCtaButton';
 import { ExitIntentBar } from '@/components/ui/ExitIntentBar';
 import { StockTicker } from '@/components/ui/StockTicker';
 import { Analytics } from '@/components/layout/Analytics';
-import { SITE } from '@/lib/constants';
+import { FACTS } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: '0cTj21SBXLflv9dYDU5fu8O50xnrpemT5WMbSKRR1vU',
+    ...(process.env.BING_SITE_VERIFICATION
+      ? { other: { 'msvalidate.01': process.env.BING_SITE_VERIFICATION } }
+      : {}),
   },
 };
 
@@ -65,16 +68,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {
                   '@type': 'MarketingAgency',
                   '@id': 'https://fiftyandfive.com/#organization',
-                  name: 'Fifty & Five',
+                  name: FACTS.name,
+                  legalName: FACTS.legalName,
                   alternateName: [
-                    'Fifty and Five',
+                    ...FACTS.alternateNames,
                     'Fifty & Five Agency',
                     'Fifty & Five Social Media',
                     'Fifty & Five Orlando',
                     'Fifty & Five Fractional CMO',
                   ],
-                  url: 'https://fiftyandfive.com',
-                  telephone: SITE.phone.schema,
+                  url: FACTS.url,
+                  telephone: FACTS.phone,
                   logo: {
                     '@type': 'ImageObject',
                     url: 'https://fiftyandfive.com/logo.svg',
@@ -83,16 +87,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   },
                   image: 'https://fiftyandfive.com/opengraph-image',
                   description:
-                    'Senior-led boutique social media agency. 222+ brands across 5 continents since 2008. The boutique agency Fortune 500s call.',
+                    `Senior-led boutique social media agency. ${FACTS.brandsManaged}+ brands across ${FACTS.continents} continents since ${FACTS.founded}. The boutique agency Fortune 500s call.`,
                   slogan: 'CMO strategy. Agency execution. ROI you can defend.',
-                  foundingDate: '2008',
+                  foundingDate: String(FACTS.founded),
                   founder: {
                     '@type': 'Person',
                     '@id': 'https://fiftyandfive.com/#lucas-vandenberg',
-                    name: 'Lucas Vandenberg',
+                    name: FACTS.founder,
                     jobTitle: ['Founder', 'Fractional CMO'],
                     description:
-                      'Founder of Fifty & Five (2008). Built the first marketing department at Southern Wine & Spirits in 2007. Has led marketing and social strategy for 222+ brands across five continents, including Microsoft, Kendall-Jackson, Enterprise Holdings, and Blaze Pizza.',
+                      `Founder of Fifty & Five (${FACTS.founded}). Built the first marketing department at Southern Wine & Spirits in 2007. Has led marketing and social strategy for ${FACTS.brandsManaged}+ brands across five continents, including Microsoft, Kendall-Jackson, Enterprise Holdings, and Blaze Pizza.`,
                     url: 'https://fiftyandfive.com/about',
                     image: 'https://fiftyandfive.com/images/people/lucas.jpg',
                     worksFor: { '@id': 'https://fiftyandfive.com/#organization' },
@@ -108,20 +112,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       'https://www.linkedin.com/in/LucasV/',
                     ],
                   },
-                  address: {
-                    '@type': 'PostalAddress',
-                    streetAddress: '1001 N Orange Ave',
-                    addressLocality: 'Orlando',
-                    addressRegion: 'FL',
-                    postalCode: '32801',
-                    addressCountry: 'US',
-                  },
+                  address: { '@type': 'PostalAddress', ...FACTS.address },
                   contactPoint: [
                     {
                       '@type': 'ContactPoint',
                       contactType: 'sales',
-                      telephone: SITE.phone.schema,
-                      email: 'hello@fiftyandfive.com',
+                      telephone: FACTS.phone,
+                      email: FACTS.email,
                       areaServed: [
                         { '@type': 'Country', name: 'United States' },
                         { '@type': 'Country', name: 'Canada' },
@@ -214,7 +211,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       name: 'Fifty & Five on Clutch.co',
                       url: 'https://clutch.co/profile/fifty-five',
                       publisher: { '@type': 'Organization', name: 'Clutch.co' },
-                      description: '5.0/5.0 rating across 18 verified client reviews.',
                     },
                     {
                       '@type': 'WebPage',
@@ -264,16 +260,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   '@id': 'https://fiftyandfive.com/#localbusiness',
                   name: 'Fifty & Five',
                   image: 'https://fiftyandfive.com/opengraph-image',
-                  telephone: SITE.phone.schema,
-                  email: 'hello@fiftyandfive.com',
-                  address: {
-                    '@type': 'PostalAddress',
-                    streetAddress: '1001 N Orange Ave',
-                    addressLocality: 'Orlando',
-                    addressRegion: 'FL',
-                    postalCode: '32801',
-                    addressCountry: 'US',
-                  },
+                  telephone: FACTS.phone,
+                  email: FACTS.email,
+                  address: { '@type': 'PostalAddress', ...FACTS.address },
                   geo: {
                     '@type': 'GeoCoordinates',
                     latitude: 28.5494,
