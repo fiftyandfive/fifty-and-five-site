@@ -5,16 +5,17 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 import { PRICING, SITE } from '@/lib/constants';
+import { FACTS } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
   title: { absolute: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five' },
   description:
-    'Lucas Vandenberg takes on a small number of Orlando-area companies as fractional CMO. Founder of Fifty & Five, 18 years, 222+ brands. From $4,000/mo.',
+    `Lucas Vandenberg takes on a small number of Orlando-area companies as fractional CMO. Founder of Fifty & Five, ${FACTS.yearsOperating} years, ${FACTS.brandsManaged}+ brands. From $4,000/mo.`,
   alternates: { canonical: 'https://fiftyandfive.com/fractional-cmo-orlando' },
   openGraph: {
     title: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five',
     description:
-      'Founder-led fractional CMO seat for Orlando-area owner-operators. 18 years, 222+ brands, one senior operator on call.',
+      `Founder-led fractional CMO seat for Orlando-area owner-operators. ${FACTS.yearsOperating} years, ${FACTS.brandsManaged}+ brands, one senior operator on call.`,
     url: 'https://fiftyandfive.com/fractional-cmo-orlando',
     type: 'website',
   },
@@ -95,7 +96,7 @@ export default function FractionalCmoOrlandoPage() {
                 '@id': 'https://fiftyandfive.com/fractional-cmo-orlando',
                 name: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five',
                 description:
-                  'Lucas Vandenberg, founder of Fifty & Five, takes on a small number of Orlando-area companies as fractional CMO. 18 years, 222+ brands.',
+                  `Lucas Vandenberg, founder of Fifty & Five, takes on a small number of Orlando-area companies as fractional CMO. ${FACTS.yearsOperating} years, ${FACTS.brandsManaged}+ brands.`,
                 url: 'https://fiftyandfive.com/fractional-cmo-orlando',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/fractional-cmo-orlando#service' },
@@ -236,7 +237,7 @@ export default function FractionalCmoOrlandoPage() {
             Track record
           </div>
           <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
-            Eighteen years, one operator, running from Orlando.
+            {`${FACTS.yearsOperating} years, one operator, running from Orlando.`}
           </h2>
         </div>
         <div className="mt-12 max-w-3xl space-y-6">
@@ -303,7 +304,7 @@ export default function FractionalCmoOrlandoPage() {
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
               Fifty &amp; Five has run from Orlando since 2008. If you are an Orlando-area
-              owner-operator, you get an operator who has run this playbook in this market for 18
+              owner-operator, you get an operator who has run this playbook in this market for {FACTS.yearsOperating}
               years, backed by the same team that runs marketing for Microsoft, Kendall-Jackson,
               and Enterprise Holdings. Not a coach parachuting in from out of state.
             </p>

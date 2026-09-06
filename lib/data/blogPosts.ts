@@ -108,7 +108,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Agency',
   },
   {
-    title: "Fractional CMO for Hospitality Brands, and Wine Brands: Hire One Who Has Actually Run the Category",
+    title: "Fractional CMO for Hospitality and Wine Brands: Hire One Who Has Actually Run the Category",
     slug: 'fractional-cmo-wine-hospitality-brands',
     wixSlug: 'fractional-cmo-wine-hospitality-brands',
     date: '2026-08-11',
