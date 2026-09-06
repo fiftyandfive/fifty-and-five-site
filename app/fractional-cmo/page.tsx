@@ -5,19 +5,19 @@ import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline
 import { GlassCard } from '@/components/ui/GlassCard';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { CASE_STUDIES } from '@/lib/data/caseStudies';
-import { SITE } from '@/lib/constants';
+import { PRICING, SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: { absolute: 'Fractional CMO for $1M-20M Companies | Fifty & Five' },
   description:
-    'Senior marketing leadership for owner-operators doing $1M-20M. From $6,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
+    'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
   alternates: {
     canonical: 'https://fiftyandfive.com/fractional-cmo',
   },
   openGraph: {
     title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
     description:
-      'Senior marketing leadership for owner-operators doing $1M-20M. From $6,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
+      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
     url: 'https://fiftyandfive.com/fractional-cmo',
     type: 'website',
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
     description:
-      'Senior marketing leadership for owner-operators doing $1M-20M. From $6,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
+      'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',
   },
 };
 
@@ -39,7 +39,7 @@ const SEAT_MENU = [
 const FAQS = [
   {
     q: 'Why not hire a full-time marketer?',
-    a: 'You could. A real CMO runs $200K+. A coordinator runs $65K and still needs managing. A seat gives you senior judgment on call, at a third of the cost.',
+    a: 'You could. A real CMO runs $200K+. A coordinator runs $65K and still needs managing. A seat gives you senior judgment on call, at a fraction of the cost.',
   },
   {
     q: 'What if we already have a marketing person?',
@@ -99,7 +99,7 @@ export default function FractionalCmoPage() {
                 '@type': 'WebPage',
                 name: 'Fractional CMO for $1M-20M Companies | Fifty & Five',
                 description:
-                  'Senior marketing leadership for owner-operators doing $1M-20M. From $6,000/mo, month to month. Run by the operator behind 222 brands.',
+                  'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. Run by the operator behind 222 brands.',
                 url: 'https://fiftyandfive.com/fractional-cmo',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/fractional-cmo#service' },
@@ -117,12 +117,11 @@ export default function FractionalCmoPage() {
                   '@type': 'Offer',
                   priceSpecification: {
                     '@type': 'PriceSpecification',
-                    minPrice: '6000',
-                    maxPrice: '9500',
+                    minPrice: String(PRICING.fractionalCmo.min),
                     priceCurrency: 'USD',
                   },
                   description:
-                    '$6,000-$9,500 per month, scoped to your business, month to month. Projects priced separately.',
+                    `${PRICING.fractionalCmo.from.replace('/mo', ' per month')}, scoped to your business, month to month. Projects priced separately.`,
                 },
                 areaServed: [
                   { '@type': 'Country', name: 'United States' },
@@ -360,7 +359,7 @@ export default function FractionalCmoPage() {
             Pricing
           </div>
           <div className="mt-5 flex flex-wrap items-baseline gap-3">
-            <span className="font-serif text-h1 tracking-[-0.03em] text-text-primary">$6,000-$9,500</span>
+            <span className="font-serif text-h1 tracking-[-0.03em] text-text-primary">From {PRICING.fractionalCmo.display}</span>
             <span className="text-body-lg text-text-secondary">
               /mo, scoped to your business and how much oversight you need. Month to month.
             </span>

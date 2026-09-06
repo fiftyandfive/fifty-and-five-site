@@ -17,6 +17,19 @@ export const SITE = {
   calendly: 'https://calendly.com/lucasv/30-minute-intro-call',
 };
 
+/**
+ * Published Fractional CMO seat price. Single source for the two CMO landing
+ * pages (visible price block + Service schema). Prose mentions in blog posts
+ * and llms*.txt are plain text and must be grepped when this changes.
+ */
+export const PRICING = {
+  fractionalCmo: {
+    min: 4000,
+    display: '$4,000',
+    from: 'From $4,000/mo',
+  },
+};
+
 export const NAV_LINKS = [
   { href: '/work', label: 'Work' },
   { href: '/services', label: 'Services' },
