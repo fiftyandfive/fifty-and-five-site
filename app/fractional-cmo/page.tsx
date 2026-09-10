@@ -55,9 +55,49 @@ const FAQS = [
     a: 'No lock-in. Month to month, 30-day notice. That is the guarantee: the work has to earn the renewal every single month.',
   },
   {
+    q: 'What does a fractional CMO actually do?',
+    a: 'A fractional CMO sets marketing strategy, budget, and channel priorities on a part-time basis and stays accountable for the result, without becoming a full-time hire. In practice that is a monthly strategy session, a written brief covering what moved and what is next, one prioritized recommendation scoped and ready to execute, and direct access in between. Hands-on execution is priced separately so the seat stays strategic.',
+  },
+  {
+    q: 'How much does a fractional CMO cost compared to a full-time CMO?',
+    a: 'A full-time CMO runs $200,000 or more per year before benefits, bonus, and equity. A fractional CMO seat starts at $4,000 per month on a month-to-month basis with 30 days notice. The seat is not just cheaper, it is a different shape: you are buying senior judgment and accountability rather than headcount you have to manage, onboard, and eventually replace.',
+  },
+  {
+    q: 'What size company needs a fractional CMO?',
+    a: 'Owner-operated companies doing roughly $1M to $20M in annual revenue are the best fit. Below $1M, the founder can usually still hold marketing themselves. Above $20M, most companies have the budget and the workload to justify a full-time CMO and an in-house team. In between is where marketing run on instinct starts costing real money and a full executive hire is still hard to fill.',
+  },
+  {
+    q: 'Is a fractional CMO better than an agency?',
+    a: 'They solve different problems. An agency gives you a team and production capacity: content, campaigns, paid media. A fractional CMO gives you senior strategy and ownership of the number, without embedded execution. Many companies use both, with the seat setting strategy and an agency or in-house coordinator executing it. If you already have a plan and just need more of it shipped, you want the retainer, not the seat.',
+  },
+  {
     q: 'Why hire Fifty & Five instead of a fractional CMO?',
     a: 'Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. Fifty & Five does both: senior marketing leadership that owns the number, plus the team that runs the work. A CMO typically runs one brand over a career. Fifty & Five has led marketing for 222+ brands across five continents since 2008.',
   },
+];
+
+const SEVEN_SIGNS = [
+  { sign: 'Marketing happens after hours, not during them', why: 'If strategy gets decided at 11pm because it never made the calendar during business hours, that is a resourcing problem, not a discipline problem.' },
+  { sign: 'You are comparing a $200K salary to doing nothing', why: 'Those are rarely the only two options, but they are the only two most owners have priced out.' },
+  { sign: 'Your digital presence is ten years behind your work', why: 'Referral-built businesses are prone to this. The work is excellent and nobody with senior marketing judgment has owned the storefront.' },
+  { sign: 'You have a marketing person, but no marketing direction', why: 'A coordinator can execute. Most cannot set strategy, and should not be asked to. The gap is seniority, not headcount.' },
+  { sign: 'You want strategy, not another person to manage', why: 'Hiring in-house means onboarding, managing, and eventually replacing someone. The seat is built to skip that.' },
+  { sign: 'You are doing $1M to $20M in revenue', why: 'Below that, the founder can usually still hold marketing. Above $20M, most companies can staff a full team. In between is where the seat earns its cost.' },
+  { sign: 'You want the option to walk away', why: 'A full-time hire is a long commitment either way it goes. Month to month with 30 days notice is a different kind of bet.' },
+];
+
+const COST_COMPARISON = [
+  { option: 'Full-time CMO', cost: '$200,000+ per year', get: 'Full ownership and senior strategy, plus a fixed cost and a hire to manage', fits: 'Companies past roughly $20M' },
+  { option: 'Marketing coordinator', cost: 'About $65,000 per year', get: 'Execution capacity. A coordinator runs a plan, they do not set one', fits: 'Any of the above, once someone senior sets direction' },
+  { option: 'Agency retainer', cost: 'From $4,000 per month', get: 'A team and production capacity: content, campaigns, paid media', fits: 'When you need volume shipped' },
+  { option: 'Fractional CMO seat', cost: 'From $4,000 per month', get: 'Senior strategy and accountability on call, with no headcount to manage', fits: '$1M to $20M owner-operators' },
+];
+
+const REVENUE_BANDS = [
+  { band: '$1M to $3M', what: 'The founder is still the marketing department. The seat buys back the 11pm shift and puts one prioritized move in front of you each month instead of ten half-finished ones.' },
+  { band: '$3M to $10M', what: 'There is usually a coordinator or an agency, and nobody senior directing either. The seat sets the plan, holds the vendors to it, and builds the scoreboard.' },
+  { band: '$10M to $20M', what: 'Budget is real enough that the wrong channel mix costs six figures a year. The seat owns budget allocation and the decision of what to stop doing.' },
+  { band: 'Above $20M', what: 'Most companies here can justify a full-time CMO and an in-house team. We will tell you that rather than sell you a seat you have outgrown.' },
 ];
 
 const PROOF_STATS = [
@@ -197,6 +237,38 @@ export default function FractionalCmoPage() {
         </div>
       </section>
 
+      {/* Seven signs */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            The signs
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Do you need a fractional CMO? Seven signs
+          </h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            You need a fractional CMO when nobody senior owns where marketing goes next and the
+            business is large enough that guessing costs real money. If two or more of these sound
+            like your company, the seat is worth a conversation.
+          </p>
+        </div>
+        <div className="mt-12 max-w-3xl space-y-4">
+          {SEVEN_SIGNS.map((s, i) => (
+            <SimpleReveal key={s.sign} delay={Math.min(i * 0.05, 0.3)}>
+              <div className="glass rounded-glass p-6 flex gap-5">
+                <div className="font-serif text-h3 tracking-[-0.03em] text-accent shrink-0 w-8">
+                  {i + 1}
+                </div>
+                <div>
+                  <h3 className="font-serif text-[21px] leading-[1.25] text-text-primary">{s.sign}</h3>
+                  <p className="mt-2 text-body text-text-secondary leading-[1.6]">{s.why}</p>
+                </div>
+              </div>
+            </SimpleReveal>
+          ))}
+        </div>
+      </section>
+
       {/* Who this is NOT for */}
       <section className="container-edge py-16 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
@@ -224,6 +296,35 @@ export default function FractionalCmoPage() {
               </li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Revenue bands */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Fit by size
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Fractional CMO for companies doing $1M to $20M
+          </h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            The seat is built for owner-operated companies between $1M and $20M in revenue, and
+            what it does changes across that range. Here is what the job actually looks like at
+            each size.
+          </p>
+        </div>
+        <div className="mt-12 max-w-3xl space-y-4">
+          {REVENUE_BANDS.map((b, i) => (
+            <SimpleReveal key={b.band} delay={Math.min(i * 0.06, 0.3)}>
+              <div className="glass rounded-glass p-6 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
+                <div className="font-mono text-caption uppercase text-accent tracking-[0.12em] sm:w-32 shrink-0">
+                  {b.band}
+                </div>
+                <p className="text-body text-text-secondary leading-[1.6]">{b.what}</p>
+              </div>
+            </SimpleReveal>
+          ))}
         </div>
       </section>
 
@@ -353,12 +454,72 @@ export default function FractionalCmoPage() {
         </div>
       </section>
 
+      {/* Cost comparison */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            The comparison
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Fractional CMO vs full-time CMO vs agency: the real cost
+          </h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            A full-time CMO runs $200,000 or more per year before benefits, bonus, and equity. A
+            fractional CMO seat starts at $4,000 per month. The point is not that the seat is
+            cheaper, it is that it is the right shape for a company that needs senior direction
+            without needing a full-time executive.
+          </p>
+        </div>
+        <div className="mt-10 max-w-4xl overflow-x-auto">
+          <table className="w-full border-collapse text-left">
+            <thead>
+              <tr>
+                {['Option', 'Cost', 'What you get', 'Best fit'].map((h) => (
+                  <th
+                    key={h}
+                    className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em] pb-3 pr-5 border-b border-glass-border align-bottom"
+                  >
+                    {h}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {COST_COMPARISON.map((r) => (
+                <tr key={r.option}>
+                  <td className="py-4 pr-5 border-b border-glass-border align-top text-body text-text-primary font-medium">
+                    {r.option}
+                  </td>
+                  <td className="py-4 pr-5 border-b border-glass-border align-top text-body text-text-primary whitespace-nowrap">
+                    {r.cost}
+                  </td>
+                  <td className="py-4 pr-5 border-b border-glass-border align-top text-body text-text-secondary">
+                    {r.get}
+                  </td>
+                  <td className="py-4 border-b border-glass-border align-top text-body text-text-secondary">
+                    {r.fits}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-6 max-w-3xl text-body text-text-secondary leading-[1.65]">
+          None of these are mutually exclusive. The setup we see work most often is a seat setting
+          strategy, a coordinator or agency executing it, and the owner finally out of the 11pm
+          marketing shift.
+        </p>
+      </section>
+
       {/* Pricing */}
       <section className="container-edge py-16 md:py-24">
         <div className="glass rounded-glass p-8 md:p-12 max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
             Pricing
           </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            What a fractional CMO costs
+          </h2>
           <div className="mt-5 flex flex-wrap items-baseline gap-3">
             <span className="font-serif text-h1 tracking-[-0.03em] text-text-primary">From {PRICING.fractionalCmo.display}</span>
             <span className="text-body-lg text-text-secondary">
@@ -386,6 +547,15 @@ export default function FractionalCmoPage() {
             <p className="mt-2 text-body text-text-secondary leading-[1.6]">
               No contract. Thirty days is the whole commitment. If the work is not earning its
               keep, you walk. No penalty, no hard feelings.
+            </p>
+          </div>
+          <div className="mt-6 pt-6 border-t border-glass-border">
+            <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+              Why the seat is capped
+            </div>
+            <p className="mt-2 text-body text-text-secondary leading-[1.6]">
+              We hold a maximum of three seats at a time. Senior attention does not scale past
+              that without becoming the exact problem a fractional seat is supposed to solve.
             </p>
           </div>
         </div>
@@ -422,6 +592,63 @@ export default function FractionalCmoPage() {
               </div>
             </GlassCard>
           ))}
+        </div>
+      </section>
+
+      {/* By industry */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            By category
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Fractional CMO by industry
+          </h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            The seat is the same in every category. What changes is how much of the first quarter
+            goes to learning your rules instead of fixing your bottleneck. Three categories where
+            we start on day one instead of month seven.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <SimpleReveal>
+            <GlassCard className="h-full flex flex-col p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">Hospitality and resorts</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6] flex-1">
+                Hospitality sells a specific place, not a category, and it runs on seasons a
+                generalist has to be taught. We have run social for Resorts World and the
+                Polynesian Cultural Center.
+              </p>
+              <Link href="/blog/fractional-cmo-wine-hospitality-brands" className="mt-5 text-meta text-accent hover:text-accent-light">
+                A fractional CMO for hospitality &rarr;
+              </Link>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.08}>
+            <GlassCard className="h-full flex flex-col p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">Wine and spirits</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6] flex-1">
+                Three-tier compliance and age-gating shape every post before creative does. The
+                founder built the first marketing department at Southern Wine &amp; Spirits before
+                starting the agency.
+              </p>
+              <Link href="/blog/fractional-cmo-wine-hospitality-brands" className="mt-5 text-meta text-accent hover:text-accent-light">
+                A fractional CMO for wine brands &rarr;
+              </Link>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.16}>
+            <GlassCard className="h-full flex flex-col p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">Franchise and multi-location</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6] flex-1">
+                The problem is rarely content. It is that nobody has written down who is allowed to
+                decide what. Blaze Pizza ran ten years to 300+ locations on that framework.
+              </p>
+              <Link href="/blog/fractional-cmo-for-franchise-and-multi-location-brands" className="mt-5 text-meta text-accent hover:text-accent-light">
+                A fractional CMO at franchise scale &rarr;
+              </Link>
+            </GlassCard>
+          </SimpleReveal>
         </div>
       </section>
 

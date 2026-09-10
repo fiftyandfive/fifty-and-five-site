@@ -44,11 +44,23 @@ const TIMELINE = [
   },
 ];
 
-const MENU = [
-  { when: 'Every month', what: 'a 60-90 minute strategy session. Not a status meeting.' },
-  { when: 'Every month', what: "a written Marketing Command Brief: what moved, what I'm flagging, what's next." },
-  { when: 'Every month', what: 'one prioritized strategic recommendation, scoped and ready to execute.' },
-  { when: 'On call', what: 'direct text access to me. Not a support queue.' },
+const LOCAL_WORK = [
+  {
+    client: 'Landmark Contracting',
+    what: 'A Central Florida general contractor whose decade-old website had produced one request for quote in ten years. I took the seat, called the site the actual bottleneck, and rebuilt it first. Four requests for quote came in the first two weeks.',
+  },
+  {
+    client: 'Central Florida Talent',
+    what: "Orlando's longest-operating SAG-AFTRA franchised talent agency, in business since 1994. We rebuilt their site so casting directors and AI assistants could both find and cite it.",
+  },
+  {
+    client: 'BODYBar SoDo',
+    what: 'A boutique fitness studio in SoDo, run on the same operating model as the national franchise stacks we manage, sized to one location.',
+  },
+  {
+    client: 'Solar Bears Orlando and Andretti Indoor Karting',
+    what: 'Orlando entertainment venues, where every event is its own micro-campaign and the calendar is set by the schedule, not by a content plan.',
+  },
 ];
 
 const FAQS = [
@@ -73,8 +85,16 @@ const FAQS = [
     a: 'No lock-in. Month to month, 30-day notice. The work has to earn the renewal every single month, that is the guarantee.',
   },
   {
-    q: 'What does a fractional CMO do?',
-    a: 'A fractional CMO sets marketing strategy, budget, and channel priorities on a part-time or advisory basis, without becoming a full-time hire. I run a monthly strategy session, deliver a written brief on what moved and what is next, hand over one prioritized recommendation, and stay on call by text in between.',
+    q: 'What does a fractional CMO in Orlando do?',
+    a: 'The same job a full-time CMO does, part-time, for a local owner-operator. I set marketing strategy, budget, and channel priorities, oversee whoever executes, and stay accountable for the number. In Orlando specifically that has meant calling a general contractor\'s website the bottleneck rather than his ad spend, and rebuilding a thirty-year talent agency\'s digital presence so casting directors and AI assistants could both find it. The full menu of what the seat includes is on the fractional CMO seat page.',
+  },
+  {
+    q: 'Which Orlando companies has Lucas Vandenberg worked with?',
+    a: 'Locally the list includes Landmark Contracting, Central Florida Talent, BODYBar SoDo, Crafty Bartender, Solar Bears Orlando, Andretti Indoor Karting, Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA. Fifty & Five has operated from Orlando since 2008, and I serve on the SoDo Main Street Board. The national roster, including Microsoft, Kendall-Jackson, and Enterprise Holdings, is run from the same desk.',
+  },
+  {
+    q: 'Do you take fractional CMO clients outside Orlando?',
+    a: 'Yes, the seat is not restricted to Central Florida, and several clients are not local. The reason this page exists is that proximity genuinely changes the first ninety days for an Orlando owner-operator: I can sit in your office, walk your location, and meet the people who answer your phone. If you are outside the market, the seat works the same way and the fractional CMO page is the better starting point.',
   },
   {
     q: 'Why hire a fractional CMO in Orlando instead of a national firm?',
@@ -254,40 +274,69 @@ export default function FractionalCmoOrlandoPage() {
         </div>
       </section>
 
-      {/* What's included */}
+      {/* Local work */}
       <section className="container-edge py-16 md:py-24">
         <div className="max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            The seat
+            Local work
           </div>
           <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
-            What working with me looks like.
+            Orlando companies I have actually run marketing for
           </h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            The Fortune 500 logos are real, and they are not why an Orlando owner-operator should
+            hire me. This is the local work, in this market, where I was the one holding the seat.
+          </p>
         </div>
         <div className="mt-12 max-w-3xl space-y-4">
-          {MENU.map((item, i) => (
-            <SimpleReveal key={item.what} delay={Math.min(i * 0.06, 0.3)}>
-              <div className="glass rounded-glass p-6 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
-                <div className="font-mono text-caption uppercase text-accent tracking-[0.12em] sm:w-24 shrink-0">
-                  {item.when}
-                </div>
-                <p className="text-body-lg text-text-primary">{item.what}</p>
+          {LOCAL_WORK.map((item, i) => (
+            <SimpleReveal key={item.client} delay={Math.min(i * 0.06, 0.3)}>
+              <div className="glass rounded-glass p-6">
+                <h3 className="font-serif text-[21px] leading-[1.25] text-text-primary">
+                  {item.client}
+                </h3>
+                <p className="mt-2 text-body text-text-secondary leading-[1.65]">{item.what}</p>
               </div>
             </SimpleReveal>
           ))}
         </div>
         <SimpleReveal>
-          <div className="mt-6 max-w-3xl glass rounded-glass p-6">
-            <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
-              Not included
+          <p className="mt-8 max-w-3xl text-body text-text-secondary leading-[1.65]">
+            Beyond those, the Orlando and Central Florida roster includes Crafty Bartender,
+            Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA. Full detail on what the
+            engagement includes, what it costs, and how it compares to a full-time hire lives on
+            the{' '}
+            <Link href="/fractional-cmo" className="text-accent hover:text-accent-light underline underline-offset-2">
+              fractional CMO seat
+            </Link>{' '}
+            page. This page is about who holds it here.
+          </p>
+        </SimpleReveal>
+      </section>
+
+      {/* In the market */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+              In the market
             </div>
-            <p className="mt-2 text-body text-text-secondary leading-[1.6]">
-              Hands-on execution: content production, ad management, website builds. That is real
-              work, priced and scoped separately through <a href="/fractional-cmo" className="text-accent hover:text-accent-light underline underline-offset-2">Fifty &amp; Five</a>, so the seat
-              stays strategic advice.
+            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+              Orlando is where I work, not a service area.
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
+              Fifty &amp; Five has run from 1001 N Orange Ave since 2008, and I serve on the SoDo
+              Main Street Board here in Orlando. That matters for a practical reason rather than a
+              sentimental one: when an owner-operator in Winter Park or Lake Nona describes their
+              market, I do not need it explained. I know which industries in this city run on
+              tourism cycles, which run on relocation, and which run on referrals from the same
+              two hundred people. Most national fractional CMO firms assign you a consultant who
+              learns that on your budget.
             </p>
           </div>
-        </SimpleReveal>
+        </div>
       </section>
 
       {/* Why local matters */}
