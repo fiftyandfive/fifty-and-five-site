@@ -686,7 +686,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         "blocks": [
           {
             "type": "p",
-            "text": "The constraint was timing. Twitter had no ad products worth buying, Facebook pages were barely two years into being a brand surface, and there was no agreed way to measure whether a room full of people holding a product had done anything for a launch. Everything had to be argued from first principles, in front of a parent company with real brand safety obligations and a legal review process built for television."
+            "text": "The constraint was timing. Paid social was in its infancy, brand pages were still a young surface, and there was no agreed way to measure whether a room full of people holding a product had done anything for a launch. Everything had to be argued from first principles, in front of a parent company with real brand safety obligations and a legal review process built for television."
           },
           {
             "type": "p",
