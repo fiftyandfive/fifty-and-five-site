@@ -10,6 +10,7 @@ import { TiltCard } from '@/components/ui/TiltCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { CTASection } from '@/components/layout/CTASection';
+import { ProseSections } from '@/components/ui/ProseSection';
 
 export function generateStaticParams() {
   return CASE_STUDIES.map((c) => ({ slug: c.slug }));
@@ -24,10 +25,12 @@ export async function generateMetadata({
   if (!cs) return { title: 'Case Study Not Found' };
   const hook = CASE_STUDY_TITLE_HOOKS[cs.slug];
   return {
-    title: hook
-      ? { absolute: `${cs.client} Social Media Case Study | ${hook}` }
-      : `${cs.client} | Case Study`,
-    description: cs.tagline,
+    title: cs.seoTitle
+      ? { absolute: cs.seoTitle }
+      : hook
+        ? { absolute: `${cs.client} Social Media Case Study | ${hook}` }
+        : `${cs.client} | Case Study`,
+    description: cs.metaDescription ?? cs.tagline,
     alternates: {
       canonical: `https://fiftyandfive.com/work/${cs.slug}`,
     },
@@ -280,6 +283,45 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           </TiltCard>
         </Link>
       </section>
+
+      {cs.deepDive && cs.deepDive.length > 0 && <ProseSections sections={cs.deepDive} />}
+
+      {cs.faqs && cs.faqs.length > 0 && (
+        <>
+          <section className="container-edge pb-16 md:pb-24">
+            <div className="max-w-3xl">
+              <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+                Frequently asked
+              </div>
+              <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+                About the {cs.client} engagement.
+              </h2>
+            </div>
+            <div className="mt-10 max-w-3xl space-y-5">
+              {cs.faqs.map((f) => (
+                <GlassCard key={f.q} className="p-7">
+                  <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">{f.q}</h3>
+                  <p className="mt-3 text-body text-text-secondary leading-[1.6]">{f.a}</p>
+                </GlassCard>
+              ))}
+            </div>
+          </section>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: cs.faqs.map((f) => ({
+                  '@type': 'Question',
+                  name: f.q,
+                  acceptedAnswer: { '@type': 'Answer', text: f.a },
+                })),
+              }),
+            }}
+          />
+        </>
+      )}
 
       <CTASection />
     </>

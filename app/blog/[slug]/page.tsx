@@ -76,8 +76,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const post = getBlogPost(params.slug);
   if (!post) return {};
+  // The <title> uses seoTitle when set; the H1 keeps the editorial title.
+  // Long titles drop the brand suffix rather than overflow 60 characters.
+  const seoTitle = post.seoTitle ?? post.title;
+  const titleField =
+    (seoTitle + ' | Fifty & Five').length <= 60 ? seoTitle : { absolute: seoTitle };
   return {
-    title: post.title,
+    title: titleField,
     description: clampDescription(post.excerpt),
     alternates: { canonical: `https://fiftyandfive.com/blog/${post.slug}` },
     openGraph: {
@@ -151,9 +156,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     ? processContent(rawContent)
     : `<p class="text-xl">${post.excerpt}</p>`;
 
-  const related = BLOG_POSTS.filter(
-    (p) => p.category === post.category && p.slug !== post.slug,
-  ).slice(0, 3);
+  // Rotate through the category rather than always taking the first three.
+  // A fixed slice meant late posts in a category never received an inbound
+  // link; cycling from this post's position spreads them across the cluster.
+  const sameCategory = BLOG_POSTS.filter((p) => p.category === post.category);
+  const here = sameCategory.findIndex((p) => p.slug === post.slug);
+  const related = Array.from({ length: Math.min(3, Math.max(0, sameCategory.length - 1)) }, (_, i) =>
+    sameCategory[(here + 1 + i) % sameCategory.length],
+  ).filter((p) => p.slug !== post.slug);
 
   const categoryColor = CATEGORY_COLORS[post.category] ?? '#C41E3A';
   const faqs = rawContent ? extractFaqs(rawContent) : [];

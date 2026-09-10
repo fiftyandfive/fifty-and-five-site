@@ -7,7 +7,7 @@ import { CTASection } from '@/components/layout/CTASection';
 import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Press & Media',
+  title: { absolute: 'Fifty & Five in the Press | Media and Commentary' },
   description:
     'Fifty & Five in the press. Featured in Moneywise, Clutch, Digital Agency Network, and Crunchbase. Expert commentary on AI, social media, and branded content.',
   alternates: { canonical: 'https://fiftyandfive.com/press' },

@@ -8,7 +8,7 @@ import { CTASection } from '@/components/layout/CTASection';
 export const metadata: Metadata = {
   title: { absolute: 'Hotel & Resort Social Media Agency | Fifty & Five' },
   description:
-    'Hotel and resort social media agency based in Orlando. Resorts World, Polynesian Cultural Center, and the Hong Kong Tourism Board. Senior-led destination storytelling that converts to bookings, since 2008.',
+    'Hotel and resort social media agency in Orlando. Resorts World, Polynesian Cultural Center, Hong Kong Tourism Board. Senior-led since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/hospitality-social-media-agency' },
   openGraph: {
     title: 'Hotel & Resort Social Media Agency | Fifty & Five',
@@ -75,7 +75,7 @@ export default function HospitalityLandingPage() {
                 '@id': 'https://fiftyandfive.com/hospitality-social-media-agency',
                 name: 'Hotel & Resort Social Media Agency | Fifty & Five',
                 description:
-                  'Hotel and resort social media agency based in Orlando. Resorts World, Polynesian Cultural Center, and the Hong Kong Tourism Board. Senior-led destination storytelling that converts to bookings, since 2008.',
+                  'Hotel and resort social media agency in Orlando. Resorts World, Polynesian Cultural Center, Hong Kong Tourism Board. Senior-led since 2008.',
                 url: 'https://fiftyandfive.com/hospitality-social-media-agency',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/hospitality-social-media-agency#service' },
