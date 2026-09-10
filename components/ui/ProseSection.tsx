@@ -1,7 +1,10 @@
+import Link from 'next/link';
 import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 
 export type ProseBlock =
-  | { type: 'p'; text: string }
+  /** `href` + `anchor` append a real link after the text, so prose copy never
+   *  has to carry a bare URL that would render as unclickable plain text. */
+  | { type: 'p'; text: string; href?: string; anchor?: string }
   | { type: 'ul'; items: string[] }
   | { type: 'ol'; items: string[] }
   | { type: 'table'; headers: string[]; rows: string[][] };
@@ -30,6 +33,17 @@ export function ProseSection({ h2, blocks, eyebrow }: ProseSectionData & { eyebr
             return (
               <p key={i} className="text-body-lg text-text-secondary leading-[1.75]">
                 {b.text}
+                {b.href && b.anchor && (
+                  <>
+                    {' '}
+                    <Link
+                      href={b.href}
+                      className="text-accent hover:text-accent-light underline underline-offset-2"
+                    >
+                      {b.anchor}
+                    </Link>
+                  </>
+                )}
               </p>
             );
           }
