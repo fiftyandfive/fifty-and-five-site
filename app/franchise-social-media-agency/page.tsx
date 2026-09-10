@@ -189,7 +189,9 @@ const DEEP_SECTIONS: ProseSectionData[] = [
       },
       {
         "type": "p",
-        "text": "The full breakdown, including what sits inside each line item and where franchise budgets get misallocated, is at /blog/franchise-social-media-management-cost. Read that before you build the budget."
+        "text": "The full breakdown, including what sits inside each line item and where franchise budgets get misallocated, is worth reading before you build the budget:",
+        "href": "/blog/franchise-social-media-management-cost",
+        "anchor": "what franchise social media management costs"
       }
     ]
   },
