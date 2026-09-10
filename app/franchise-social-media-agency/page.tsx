@@ -5,9 +5,9 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Franchise Social Media Agency | Multi-Location Brands',
+  title: { absolute: 'Franchise Social Media Agency | Fifty & Five' },
   description:
-    'Social media agency for franchises and multi-location brands. Blaze Pizza, Enterprise Holdings, Orangetheory, Roscoe\'s, Shakey\'s, and more. Senior-led since 2008.',
+    'Social media agency for franchise and multi-location brands. Blaze Pizza, Enterprise Holdings, Orangetheory, and more. Senior-led since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/franchise-social-media-agency' },
   openGraph: {
     title: 'Franchise Social Media Agency | Fifty & Five',

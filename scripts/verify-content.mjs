@@ -117,13 +117,17 @@ check('no page has more than one FAQPage block', multiFaq.length === 0, multiFaq
 
 // ── 6. Case-study titles follow the hook pattern ───────────────────────
 const workFiles = fs.readdirSync(path.join(APP_OUT, 'work')).filter((f) => f.endsWith('.html') && f !== 'index.html');
+// Case-study titles carry "Case Study" and a hook, and must fit the SERP.
+// Length is the point: these ran 63 to 88 characters before 2026-09-10.
 let badCs = [];
 for (const f of workFiles) {
   const markup = fs.readFileSync(path.join(APP_OUT, 'work', f), 'utf8');
-  const title = (markup.match(/<title>([^<]*)<\/title>/) || [])[1] || '';
-  if (!/Social Media Case Study \|/.test(title)) badCs.push(`${f}: "${title}"`);
+  const title = ((markup.match(/<title>([^<]*)<\/title>/) || [])[1] || '')
+    .replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'");
+  if (!/Case Study/.test(title)) badCs.push(`${f}: no "Case Study": "${title}"`);
+  else if (title.length < 30 || title.length > 60) badCs.push(`${f}: ${title.length} chars: "${title}"`);
 }
-check(`all ${workFiles.length} case-study titles use the hook pattern`, badCs.length === 0, badCs.join(' | ').slice(0, 300));
+check(`all ${workFiles.length} case-study titles carry "Case Study" and fit 30-60 chars`, badCs.length === 0, badCs.join(' | ').slice(0, 300));
 
 // ── 7. Blog: no future dates, Marblism gone ────────────────────────────
 const postsSrc = fs.readFileSync(path.join(ROOT, 'lib/data/blogPosts.ts'), 'utf8');

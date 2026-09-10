@@ -6,7 +6,7 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: { absolute: "Florida's Leading Social Media Marketing Agency for Hospitality, Wine & Consumer Brands" },
+  title: { absolute: 'Florida Social Media Marketing Agency | Fifty & Five' },
   description:
     'Orlando-based, senior-led social media agency serving Florida hospitality, wine & spirits, and consumer brands. 222+ brands across 5 continents since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/social-media-marketing-agency-florida' },

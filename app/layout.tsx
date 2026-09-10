@@ -14,25 +14,25 @@ import { FACTS } from '@/lib/site-facts';
 export const metadata: Metadata = {
   metadataBase: new URL('https://fiftyandfive.com'),
   title: {
-    default: 'Fifty & Five | Senior Marketing Leadership + Execution | 222 Brands Since 2008',
+    default: 'Fifty & Five | Marketing Leadership + Execution Since 2008',
     template: '%s | Fifty & Five',
   },
   alternates: {
     canonical: 'https://fiftyandfive.com',
   },
-  description: 'CMO strategy. Agency execution. ROI you can defend. We\'ve run marketing for 222 brands across five continents since 2008. Lead the function, run the work, or both. Retainers from $4,000/mo.',
+  description: 'CMO strategy. Agency execution. ROI you can defend. Marketing for 222 brands across five continents since 2008. Retainers from $4,000/mo.',
   openGraph: {
     type: 'website',
     title: 'Fifty & Five | Senior Marketing Leadership + Execution | 222 Brands Since 2008',
     description:
-      'CMO strategy. Agency execution. ROI you can defend. We\'ve run marketing for 222 brands across five continents since 2008. Lead the function, run the work, or both. Retainers from $4,000/mo.',
+      'CMO strategy. Agency execution. ROI you can defend. Marketing for 222 brands across five continents since 2008. Retainers from $4,000/mo.',
     url: 'https://fiftyandfive.com',
     siteName: 'Fifty & Five',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Fifty & Five | Senior Marketing Leadership + Execution | 222 Brands Since 2008',
-    description: 'CMO strategy. Agency execution. ROI you can defend. We\'ve run marketing for 222 brands across five continents since 2008. Lead the function, run the work, or both. Retainers from $4,000/mo.',
+    description: 'CMO strategy. Agency execution. ROI you can defend. Marketing for 222 brands across five continents since 2008. Retainers from $4,000/mo.',
   },
   icons: {
     icon: [

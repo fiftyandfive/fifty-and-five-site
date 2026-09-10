@@ -99,6 +99,8 @@ export const VERTICALS: Vertical[] = [
     headline: 'Hospitality Social Media Agency',
     subhead:
       'Luxury resorts, cultural attractions, and national tourism boards across the US, Caribbean, and Asia-Pacific.',
+    metaDescription:
+      'Hospitality social media agency for luxury resorts, cultural attractions, and national tourism boards. Resorts World and Hong Kong Tourism Board.',
     clients: [
       'Hong Kong Tourism Board',
       'Resorts World Bimini',
@@ -147,7 +149,7 @@ export const VERTICALS: Vertical[] = [
     subhead:
       'Destination marketing that drives bookings, not just impressions. Senior-led social for resorts, attractions, and travel brands since 2008.',
     metaDescription:
-      'Tourism social media agency. Destination marketing for resorts, attractions, and travel brands. Polynesian Cultural Center, Resorts World, 222+ brands since 2008.',
+      'Tourism social media agency. Destination marketing for resorts, attractions, and travel brands. Polynesian Cultural Center and Resorts World.',
     clients: [
       'Polynesian Cultural Center',
       'Resorts World Bimini',
@@ -260,6 +262,7 @@ export const VERTICALS: Vertical[] = [
       'Voice protection: every post passes through a senior strategist before it ships. No content-mill output.',
       'Worked with Kendall-Jackson and other premium brands \u2014 we understand restraint as much as reach.',
       'Brand-equity-first metrics: we don\u2019t trade taste for engagement.',
+      'Luxury social fails in a specific way: the brand chases engagement, wins it with something slightly off-brand, and spends the next two years explaining to its best customers why the feed no longer feels like the product. Restraint is the discipline. Every post passes a senior strategist before it ships, brand voice frameworks are written by principals rather than coordinators, and we will argue against a piece of content that would perform well and cost you positioning.',
     ],
     featuredCaseStudies: ['kendall-jackson'],
     faqs: [
@@ -301,6 +304,7 @@ export const VERTICALS: Vertical[] = [
       'Studio-level + national-brand expertise \u2014 we\u2019ve operated both stacks for Bodybar Pilates.',
       'Class-fill conversion mechanics built in: every post ladders back to a bookable action.',
       'Influencer + UGC + paid social orchestration \u2014 no single-channel bets.',
+      'Fitness marketing lives or dies on the trial-to-paid conversion, not the follower count. A studio can grow an audience of people who will never walk in, and a national franchise can post daily without filling a single 6am class. We build the content calendar backwards from the booking: what makes someone try, what makes them come back a second time, and what makes them buy the package. That is why the reporting we send tracks class fills and trial conversions rather than reach.',
     ],
     featuredCaseStudies: [],
     faqs: [
@@ -367,6 +371,8 @@ export const VERTICALS: Vertical[] = [
     headline: 'Retail & CPG Social Media Agency',
     subhead:
       'From iconic retail brands to DTC challengers, social strategies that move product, not just impressions.',
+    metaDescription:
+      'Retail and CPG social media agency. Shopper-marketing-grade social for Tupperware, Axe by Unilever, and DTC challenger brands, senior-led since 2008.',
     clients: [
       'Tupperware',
       'Axe (Unilever)',

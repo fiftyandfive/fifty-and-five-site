@@ -7,9 +7,9 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Orlando Social Media Agency | Senior-Led Since 2008',
+  title: { absolute: 'Orlando Social Media Agency | Fifty & Five' },
   description:
-    'Orlando social media agency for boutique to enterprise brands. Senior-led, no junior team. 222+ brands across 5 continents since 2008. Local roots, global roster.',
+    'Orlando social media agency for boutique to enterprise brands. Senior-led, no junior team. 222+ brands across 5 continents since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/orlando-social-media-agency' },
   openGraph: {
     title: 'Orlando Social Media Agency | Fifty & Five',

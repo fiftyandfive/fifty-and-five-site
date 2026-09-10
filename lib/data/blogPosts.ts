@@ -8,6 +8,9 @@ export interface BlogPost {
   date: string;
   /** Last substantive edit (ISO date). Drives dateModified and sitemap lastmod. */
   updated?: string;
+  /** Short title for the <title> tag only. The H1 keeps the editorial `title`.
+   *  Set when `title` plus the brand suffix would exceed 60 characters. */
+  seoTitle?: string;
   minutesToRead: number;
   heroImage: string;
   excerpt: string;
@@ -18,6 +21,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "What a Fractional CMO Actually Does in the First 90 Days",
     slug: 'what-a-fractional-cmo-does-in-the-first-90-days',
+    seoTitle: "Fractional CMO: What Happens in the First 90 Days",
     wixSlug: 'what-a-fractional-cmo-does-in-the-first-90-days',
     date: '2026-09-06',
     updated: '2026-09-10',
@@ -29,6 +33,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How to Choose a Fractional CMO: 9 Questions to Ask Before You Sign",
     slug: 'how-to-choose-a-fractional-cmo-questions-to-ask',
+    seoTitle: "How to Choose a Fractional CMO: 9 Questions to Ask",
     wixSlug: 'how-to-choose-a-fractional-cmo-questions-to-ask',
     date: '2026-09-06',
     updated: '2026-09-10',
@@ -40,6 +45,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Fractional CMO for Franchise and Multi-Location Brands: What the Seat Looks Like at Scale",
     slug: 'fractional-cmo-for-franchise-and-multi-location-brands',
+    seoTitle: "Fractional CMO for Franchise and Multi-Location Brands",
     wixSlug: 'fractional-cmo-for-franchise-and-multi-location-brands',
     date: '2026-09-06',
     updated: '2026-09-10',
@@ -51,6 +57,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "What Is a Marketing Command Brief? The One-Page Document That Replaces the Status Meeting",
     slug: 'what-is-a-marketing-command-brief',
+    seoTitle: "What Is a Marketing Command Brief? A One-Page Doc",
     wixSlug: 'what-is-a-marketing-command-brief',
     date: '2026-09-06',
     updated: '2026-09-10',
@@ -62,6 +69,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Fractional CMO vs. Marketing Consultant: Who Owns the Number?",
     slug: 'fractional-cmo-vs-marketing-consultant',
+    seoTitle: "Fractional CMO vs. Marketing Consultant: Who Owns It",
     wixSlug: 'fractional-cmo-vs-marketing-consultant',
     date: '2026-09-06',
     updated: '2026-09-10',
@@ -73,6 +81,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "One Lead in Ten Years. Four in the First Two Weeks.",
     slug: 'landmark-contracting-website-rebuild-fractional-cmo',
+    seoTitle: "Contractor Website Rebuild: 4 Leads in Two Weeks",
     wixSlug: 'landmark-contracting-website-rebuild-fractional-cmo',
     date: '2026-08-31',
     updated: '2026-09-10',
@@ -84,6 +93,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How to Handle a Social Media Crisis: A Playbook for When Things Go Wrong",
     slug: 'social-media-crisis-management-playbook',
+    seoTitle: "Social Media Crisis Management: A Real Playbook",
     wixSlug: 'social-media-crisis-management-playbook',
     date: '2026-08-31',
     minutesToRead: 7,
@@ -94,6 +104,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "What's Actually Working in Video Content and Meta Ads Right Now",
     slug: 'video-content-meta-ads-trends-2026',
+    seoTitle: "Video Content and Meta Ads: What's Working Now",
     wixSlug: 'video-content-meta-ads-trends-2026',
     date: '2026-08-31',
     minutesToRead: 6,
@@ -104,6 +115,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Much Does Franchise Social Media Management Cost? (2026 Guide)",
     slug: 'franchise-social-media-management-cost',
+    seoTitle: "Franchise Social Media Management Cost: 2026 Guide",
     wixSlug: 'franchise-social-media-management-cost',
     date: '2026-08-11',
     updated: '2026-09-10',
@@ -115,6 +127,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Fractional CMO for Hospitality and Wine Brands: Hire One Who Has Actually Run the Category",
     slug: 'fractional-cmo-wine-hospitality-brands',
+    seoTitle: "Fractional CMO for Hospitality and Wine Brands",
     wixSlug: 'fractional-cmo-wine-hospitality-brands',
     date: '2026-08-11',
     updated: '2026-09-10',
@@ -126,6 +139,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Healthcare Social Media Compliance: What HIPAA-Aware Marketing Actually Looks Like",
     slug: 'healthcare-social-media-hipaa-compliance',
+    seoTitle: "Healthcare Social Media: HIPAA-Aware Marketing",
     wixSlug: 'healthcare-social-media-hipaa-compliance',
     date: '2026-08-11',
     minutesToRead: 6,
@@ -136,6 +150,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "We Made Their Ads Worse. Store Revenue Went Up 156%.",
     slug: 'we-made-their-ads-worse',
+    seoTitle: "Retail Ads Case Study: Store Revenue Up 156%",
     wixSlug: 'we-made-their-ads-worse',
     date: '2026-07-17',
     updated: '2026-09-06',
@@ -147,6 +162,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Most Actors Don't Need to Shoot a Demo Reel. They Need to Edit One.",
     slug: 'actors-demo-reel-edit-not-shoot',
+    seoTitle: "Actor Demo Reel Editing: Edit, Don't Shoot One",
     wixSlug: 'actors-demo-reel-edit-not-shoot',
     date: '2026-07-16',
     updated: '2026-09-10',
@@ -158,6 +174,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media for Real Estate: The Multi-Property Playbook",
     slug: 'social-media-real-estate-multi-property',
+    seoTitle: "Social Media for Real Estate: Multi-Property Guide",
     wixSlug: 'social-media-real-estate-multi-property',
     date: '2026-07-16',
     minutesToRead: 5,
@@ -168,6 +185,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Talent and Entertainment Brands Get Found in 2026: Search, Social, and AI",
     slug: 'talent-entertainment-brands-get-found-search-social-ai',
+    seoTitle: "Talent and Entertainment Brands: Get Found in 2026",
     wixSlug: 'talent-entertainment-brands-get-found-search-social-ai',
     date: '2026-07-15',
     minutesToRead: 6,
@@ -178,6 +196,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media for Luxury Resorts: Aspiration That Sells Rooms",
     slug: 'social-media-luxury-resorts-hospitality',
+    seoTitle: "Social Media for Luxury Resorts: Sell More Rooms",
     wixSlug: 'social-media-luxury-resorts-hospitality',
     date: '2026-07-14',
     minutesToRead: 5,
@@ -188,6 +207,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media for Automotive and Mobility Brands: A Multi-Brand Playbook",
     slug: 'social-media-automotive-mobility-brands',
+    seoTitle: "Social Media for Automotive and Mobility Brands",
     wixSlug: 'social-media-automotive-mobility-brands',
     date: '2026-07-14',
     minutesToRead: 5,
@@ -198,6 +218,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media for Retail and CPG Brands: Heritage Meets the Feed",
     slug: 'social-media-retail-cpg-brands',
+    seoTitle: "Retail and CPG Social Media: Heritage Meets Feed",
     wixSlug: 'social-media-retail-cpg-brands',
     date: '2026-07-10',
     minutesToRead: 5,
@@ -208,6 +229,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Often Should You Update Your Website for SEO and AEO?",
     slug: 'how-often-update-website-seo-aeo',
+    seoTitle: "How Often to Update Your Website for SEO and AEO",
     wixSlug: 'how-often-update-website-seo-aeo',
     date: '2026-07-08',
     updated: '2026-09-10',
@@ -219,6 +241,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Hollywood's $300K-to-$3K Problem Is Already Here for Branded Content",
     slug: 'hollywood-ai-production-costs-branded-content',
+    seoTitle: "AI Branded Content: The $300K to $3K Problem",
     wixSlug: 'hollywood-ai-production-costs-branded-content',
     date: '2026-06-11',
     updated: '2026-09-06',
@@ -230,6 +253,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Yelp Just Won the AI Local Discovery Race — Here's What That Means for Your Business",
     slug: 'yelp-ai-local-discovery-citations',
+    seoTitle: "Yelp Won the AI Local Discovery Race: What It Means",
     wixSlug: 'yelp-ai-local-discovery-citations',
     date: '2026-06-09',
     updated: '2026-09-06',
@@ -241,6 +265,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Best Social Media Agency for Hospitality & Resorts: What to Look For",
     slug: 'best-social-media-agency-hospitality-resorts',
+    seoTitle: "Best Social Media Agency for Hospitality & Resorts",
     wixSlug: 'best-social-media-agency-hospitality-resorts',
     date: '2026-06-05',
     minutesToRead: 4,
@@ -251,6 +276,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Do You Need a Social Media Agency? 7 Signs It’s Time",
     slug: 'do-you-need-a-social-media-agency',
+    seoTitle: "Do You Need a Social Media Agency? 7 Signs",
     wixSlug: 'do-you-need-a-social-media-agency',
     date: '2026-06-03',
     minutesToRead: 4,
@@ -261,6 +287,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media Agency vs. Freelancer: Pros, Cons & Costs",
     slug: 'social-media-agency-vs-freelancer',
+    seoTitle: "Social Media Agency vs. Freelancer: Pros and Costs",
     wixSlug: 'social-media-agency-vs-freelancer',
     date: '2026-06-01',
     minutesToRead: 4,
@@ -271,6 +298,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Restaurant Franchise Social Media Agency: Costs, Services, and What to Expect",
     slug: 'social-media-agency-for-restaurants',
+    seoTitle: "Restaurant Franchise Social Media Agency: Costs",
     wixSlug: 'social-media-agency-for-restaurants',
     date: '2026-05-30',
     updated: '2026-09-06',
@@ -282,6 +310,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "What Does a Social Media Agency Actually Do? (Full Breakdown)",
     slug: 'what-does-a-social-media-agency-do',
+    seoTitle: "What Does a Social Media Agency Do? Full Breakdown",
     wixSlug: 'what-does-a-social-media-agency-do',
     date: '2026-05-28',
     minutesToRead: 4,
@@ -292,6 +321,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Boutique vs. Big Social Media Agency: Which Is Right for Your Brand?",
     slug: 'boutique-vs-big-social-media-agency',
+    seoTitle: "Boutique vs. Big Social Media Agency: Which to Pick",
     wixSlug: 'boutique-vs-big-social-media-agency',
     date: '2026-07-01',
     minutesToRead: 4,
@@ -302,6 +332,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media Agency Pricing Models: Retainer vs. Project vs. Hourly",
     slug: 'social-media-agency-pricing-models',
+    seoTitle: "Social Media Agency Pricing: Retainer vs. Project",
     wixSlug: 'social-media-agency-pricing-models',
     date: '2026-06-24',
     minutesToRead: 4,
@@ -312,6 +343,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Alcohol Influencer Marketing: How Wine & Spirits Brands Do It Compliantly",
     slug: 'wine-spirits-influencer-marketing',
+    seoTitle: "Alcohol Influencer Marketing for Wine & Spirits",
     wixSlug: 'wine-spirits-influencer-marketing',
     date: '2026-06-24',
     updated: '2026-09-10',
@@ -323,6 +355,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Your Website Ranks on Google. But Does ChatGPT Know You Exist?",
     slug: 'aeo-how-to-get-cited-by-ai-search',
+    seoTitle: "AEO: How to Get Cited by ChatGPT and AI Search",
     wixSlug: 'aeo-how-to-get-cited-by-ai-search',
     date: '2026-06-19',
     minutesToRead: 6,
@@ -333,6 +366,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Wine and Spirits Brands Should Actually Use Social Media in 2026",
     slug: 'wine-spirits-social-media-2026',
+    seoTitle: "Social Media for Wine and Spirits Brands in 2026",
     wixSlug: 'wine-spirits-social-media-2026',
     date: '2026-06-17',
     updated: '2026-09-10',
@@ -344,6 +378,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Best Social Media Agency for Wine & Spirits Brands: What to Look For",
     slug: 'best-social-media-agency-wine-spirits',
+    seoTitle: "Best Social Media Agency for Wine & Spirits Brands",
     wixSlug: 'best-social-media-agency-wine-spirits',
     date: '2026-06-17',
     updated: '2026-09-10',
@@ -355,6 +390,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Long Does Social Media Marketing Take to Work? (A Realistic Timeline)",
     slug: 'how-long-until-social-media-works',
+    seoTitle: "How Long Does Social Media Marketing Take to Work?",
     wixSlug: 'how-long-until-social-media-works',
     date: '2026-06-10',
     updated: '2026-09-10',
@@ -366,6 +402,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How to Measure Social Media ROI (The Metrics That Actually Matter)",
     slug: 'measure-social-media-roi',
+    seoTitle: "Social Media ROI: Metrics That Actually Matter",
     wixSlug: 'measure-social-media-roi',
     date: '2026-06-03',
     minutesToRead: 4,
@@ -376,6 +413,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Much Does a Social Media Agency Cost? (2026 Pricing Guide)",
     slug: 'how-much-does-a-social-media-agency-cost',
+    seoTitle: "Social Media Agency Cost: 2026 Pricing Guide",
     wixSlug: 'how-much-does-a-social-media-agency-cost',
     date: '2026-05-29',
     minutesToRead: 5,
@@ -386,6 +424,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "The First Social Media Agencies: Who Actually Started From Scratch?",
     slug: 'first-social-media-agencies-who-started-from-scratch',
+    seoTitle: "First Social Media Agencies: Who Started From Scratch?",
     wixSlug: 'first-social-media-agencies-who-started-from-scratch',
     date: '2026-05-26',
     minutesToRead: 12,
@@ -396,6 +435,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
         title: "AEO: The Search Strategy That Ends the Era of the Click",
         slug: 'aeo-search-strategy-ai-answer-engines',
+    seoTitle: "AEO for AI Answer Engines: Search Without Clicks",
         wixSlug: 'aeo-the-search-strategy-that-ends-the-era-of-the-click',
         date: '2026-05-15',
         minutesToRead: 18,
@@ -406,6 +446,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Fitness Studios Can Use Instagram Ads and Google Ads to Fill Classes (Without Wasting Budget)",
     slug: 'how-fitness-studios-can-use-instagram-ads-and-google-ads-to-fill-classes-without-wasting-budget',
+    seoTitle: "Instagram Ads for Fitness Studios: Fill Classes",
     wixSlug: 'how-fitness-studios-can-use-instagram-ads-and-google-ads-to-fill-classes-without-wasting-budget',
     date: '2026-05-13',
     updated: '2026-09-06',
@@ -417,6 +458,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How to Choose a Social Media Agency for Your Restaurant Group",
     slug: 'choose-social-media-agency-restaurant-group',
+    seoTitle: "Social Media Agency for Restaurant Groups: How to Choose",
     wixSlug: 'how-to-choose-a-social-media-agency-for-your-restaurant-group',
     date: '2026-05-12',
     updated: '2026-09-06',
@@ -428,6 +470,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Wine Brand Social Media: Why Most Wineries Sound the Same Online (And How to Fix It)",
     slug: 'wine-brand-social-media-wineries-sound-same-fix',
+    seoTitle: "Wine Brand Social Media: Why Wineries Sound the Same",
     wixSlug: 'wine-brand-social-media-why-most-wineries-sound-the-same-online-and-how-to-fix-it',
     date: '2026-05-09',
     updated: '2026-09-10',
@@ -439,6 +482,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media for Boutique Fitness Studios: A Paid + Organic Playbook",
     slug: 'social-media-boutique-fitness-studios-paid-organic-playbook',
+    seoTitle: "Boutique Fitness Studio Social Media: Paid + Organic",
     wixSlug: 'social-media-for-boutique-fitness-studios-a-paid-organic-playbook',
     date: '2026-05-07',
     updated: '2026-09-06',
@@ -450,6 +494,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "What 222+ Brands Taught Us About Social Media Strategy That Actually Works",
     slug: '222-brands-social-media-strategy-that-works',
+    seoTitle: "Social Media Strategy Lessons From 222+ Brands",
     wixSlug: 'what-215-brands-taught-us-about-social-media-strategy-that-actually-works',
     date: '2026-05-05',
     updated: '2026-09-06',
@@ -461,6 +506,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Why Hotels Need Social Media That Sells Rooms, Not Just Gets Likes",
     slug: 'hotel-social-media-sells-rooms-not-likes',
+    seoTitle: "Hotel Social Media That Sells Rooms, Not Just Likes",
     wixSlug: 'why-hotels-need-social-media-that-sells-rooms-not-just-gets-likes',
     date: '2026-05-02',
     updated: '2026-09-06',
@@ -472,6 +518,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "The Multi-Location Social Media Playbook: How to Scale Without Losing Local",
     slug: 'multi-location-social-media-playbook-scale-local',
+    seoTitle: "Multi-Location Social Media: Scale Without Losing Local",
     wixSlug: 'the-multi-location-social-media-playbook-how-to-scale-without-losing-local',
     date: '2026-04-30',
     updated: '2026-09-10',
@@ -483,6 +530,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Orlando Social Media Agency: Why Local Expertise Matters for Hospitality Brands",
     slug: 'orlando-social-media-agency-hospitality-brands',
+    seoTitle: "Orlando Social Media Agency for Hospitality Brands",
     wixSlug: 'orlando-social-media-agency-why-local-expertise-matters-for-hospitality-brands',
     date: '2026-04-28',
     updated: '2026-09-10',
@@ -494,6 +542,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How AI Is Changing Social Media Management (Without Replacing the Strategist)",
     slug: 'ai-changing-social-media-management-not-replacing-strategist',
+    seoTitle: "How AI Is Changing Social Media Management",
     wixSlug: 'how-ai-is-changing-social-media-management-without-replacing-the-strategist',
     date: '2026-04-25',
     updated: '2026-09-06',
@@ -505,6 +554,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Social Media for Consumer Tech Product Launches: From Sub-Brand to Standalone",
     slug: 'consumer-tech-product-launch-social-media',
+    seoTitle: "Social Media for Consumer Tech Product Launches",
     wixSlug: 'social-media-for-consumer-tech-product-launches-from-sub-brand-to-standalone',
     date: '2026-04-23',
     updated: '2026-09-06',
@@ -516,6 +566,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Legacy Brands on Social Media: How to Modernize Without Losing Your Community",
     slug: 'legacy-brand-social-media-modernize-without-losing-community',
+    seoTitle: "Legacy Brands on Social Media: How to Modernize",
     wixSlug: 'legacy-brands-on-social-media-how-to-modernize-without-losing-your-community',
     date: '2026-04-21',
     updated: '2026-09-06',
@@ -527,6 +578,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Beyond the Booking: 5 Secret Weapons for Travel Agent Client Retention in 2026",
     slug: 'beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention',
+    seoTitle: "Travel Agent Client Retention: 5 Secret Weapons",
     wixSlug: 'beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention-in-2026',
     date: '2026-01-27',
     updated: '2026-09-06',
@@ -538,6 +590,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Are Static Hotel Photos Dead? Why Dynamic Video Content Is Your New Booking Driver",
     slug: 'static-hotel-photos-dead-dynamic-video-content-booking-driver',
+    seoTitle: "Hotel Video Content: Are Static Photos Dead?",
     wixSlug: 'are-static-hotel-photos-dead-why-dynamic-video-content-is-your-new-booking-driver',
     date: '2026-01-27',
     updated: '2026-09-06',
@@ -549,6 +602,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Lights, Camera, Local Flavor: Boosting Hotel Storytelling with Video & Drones",
     slug: 'hotel-storytelling-video-drones-local-flavor',
+    seoTitle: "Hotel Storytelling With Video and Drones",
     wixSlug: 'lights-camera-local-flavor-boosting-hotel-storytelling-with-video-amp-drones',
     date: '2026-01-13',
     updated: '2026-09-06',
@@ -560,6 +614,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Why Everyone Is Talking About Episodic Brand Storytelling",
     slug: 'episodic-brand-storytelling-replacing-one-off-posts',
+    seoTitle: "Episodic Brand Storytelling: Why Everyone's Talking",
     wixSlug: 'why-everyone-is-talking-about-episodic-brand-storytelling-and-how-it-39-s-replacing-one-off-posts',
     date: '2026-01-13',
     updated: '2026-09-06',
@@ -571,6 +626,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "AI Content Fatigue: 5 Signs Your Social Media Feels Too Robotic",
     slug: 'ai-content-fatigue-social-media-too-robotic',
+    seoTitle: "AI Content Fatigue: 5 Signs Your Social Feels Robotic",
     wixSlug: 'ai-content-fatigue-5-signs-your-social-media-feels-too-robotic-plus-the-human-touch-framework-that',
     date: '2026-01-08',
     updated: '2026-09-06',
@@ -582,6 +638,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "From Boutique Charm to Massive Resorts: Our Resorts World Success Stories",
     slug: 'boutique-charm-massive-resorts-success-stories',
+    seoTitle: "Resorts World Success Stories: Boutique to Massive",
     wixSlug: 'from-boutique-charm-to-massive-resorts-our-resorts-world-success-stories',
     date: '2026-01-07',
     updated: '2026-09-06',
@@ -593,6 +650,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Why Orlando Hospitality Brands Choose Fifty & Five",
     slug: 'why-orlando-hospitality-brands-choose-fifty-and-five',
+    seoTitle: "Why Orlando Hospitality Brands Choose Fifty & Five",
     wixSlug: 'why-orlando-hospitality-brands-choose-fifty-amp-five-as-their-marketing-agency',
     date: '2026-01-06',
     updated: '2026-09-10',
@@ -604,6 +662,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "7 Mistakes You're Making with AI Social Content (and How to Fix Them)",
     slug: '7-mistakes-ai-social-content-how-to-fix',
+    seoTitle: "AI Social Content: 7 Mistakes and How to Fix Them",
     wixSlug: '7-mistakes-you-39-re-making-with-ai-social-content-and-how-to-fix-them-without-losing-authenticity',
     date: '2025-11-14',
     updated: '2026-09-06',
@@ -615,6 +674,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Why Beverage Brands Choose Fifty & Five: Lucas Vandenberg's Story",
     slug: 'why-beverage-brands-choose-fifty-and-five',
+    seoTitle: "Why Beverage Brands Choose Fifty & Five",
     wixSlug: 'why-beverage-brands-choose-fifty-amp-five-lucas-vandenberg-s-story',
     date: '2025-08-18',
     updated: '2026-09-06',
@@ -626,28 +686,31 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Short-Form Video: The Secret Sauce for Social Media Success in 2025",
     slug: 'short-form-video-secret-sauce-social-media-2025',
+    seoTitle: "Short-Form Video: The Secret Sauce for Social in 2025",
     wixSlug: 'short-form-video-the-not-so-secret-sauce-for-social-media-success-in-2025',
     date: '2025-08-16',
     updated: '2026-09-06',
     minutesToRead: 4,
     heroImage: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=1600&q=85',
-    excerpt: "Short-Form Video's Total Takeover: Why 2025 looks different and what brands need to do about it.",
+    excerpt: "Short-form video is where attention lives, and most brands still treat it as an afterthought. What actually earns watch time, and what to stop doing.",
     category: 'Social Media Strategy',
   },
   {
     title: "Short-Form, Long Impact: Why Reels, Shorts, and TikToks Are Changing the Game",
     slug: 'reels-shorts-tiktoks-changing-the-game-for-brands',
+    seoTitle: "Reels, Shorts, and TikToks Are Changing the Game",
     wixSlug: 'short-form-long-impact-why-reels-shorts-and-tiktoks-are-changing-the-game-for-brands',
     date: '2025-07-28',
     updated: '2026-09-06',
     minutesToRead: 5,
     heroImage: 'https://images.unsplash.com/photo-1576267423048-15c0040fec78?w=1600&q=85',
-    excerpt: "Remember when marketing meant perfectly polished 30-second TV spots? The 15-second revolution changed everything.",
+    excerpt: "Reels, Shorts, and TikToks changed what a brand has to produce every week. What the shift actually demands, and how to build a system that keeps up.",
     category: 'Social Media Strategy',
   },
   {
     title: "Authenticity Over Perfection: Why Unfiltered Content Wins",
     slug: 'authenticity-over-perfection-unfiltered-content-wins',
+    seoTitle: "Authenticity Over Perfection: Unfiltered Content Wins",
     wixSlug: 'authenticity-over-perfection-why-unfiltered-content-is-your-best-marketing-move-this-year',
     date: '2025-07-15',
     updated: '2026-09-06',
@@ -659,6 +722,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How to Choose the Right Social Media Marketing Agency: A Checklist",
     slug: 'choose-right-social-media-marketing-agency-checklist',
+    seoTitle: "Social Media Marketing Agency: A Hiring Checklist",
     wixSlug: 'how-to-choose-the-right-social-media-marketing-agency-a-checklist-for-brands',
     date: '2025-07-08',
     updated: '2026-09-10',
@@ -670,17 +734,19 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Short-Form, Big Impact: Why Bite-Sized Video Rules Social Media",
     slug: 'bite-sized-video-rules-social-media',
+    seoTitle: "Bite-Sized Video: Why Short-Form Rules Social Media",
     wixSlug: 'short-form-big-impact-why-bite-sized-video-still-rules-social-media-this-year',
     date: '2025-07-01',
     updated: '2026-09-06',
     minutesToRead: 5,
     heroImage: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1600&q=85',
-    excerpt: "In a world where attention is the ultimate currency, short-form video isn't just surviving, it's thriving.",
+    excerpt: "Bite-sized video still rules the feed. Why the format keeps winning, what separates a clip people finish from one they scroll past, and how to plan for it.",
     category: 'Social Media Strategy',
   },
   {
     title: "How Boutique Wine Brands Can Level the Social Media Playing Field",
     slug: 'boutique-wine-brands-social-media-playing-field',
+    seoTitle: "Boutique Wine Brands: Level the Social Media Field",
     wixSlug: 'how-boutique-wine-brands-can-level-the-social-media-playing-field-and-stand-out-against-the-big-guy',
     date: '2025-06-26',
     updated: '2026-09-10',
@@ -692,6 +758,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How AI Is Powering the Next Wave of Social Media Magic for Brands",
     slug: 'ai-powering-next-wave-social-media-brands-2025',
+    seoTitle: "How AI Is Powering the Next Wave of Social Media",
     wixSlug: 'how-ai-is-powering-the-next-wave-of-social-media-magic-and-what-it-means-for-brands-in-2025',
     date: '2025-06-25',
     updated: '2026-09-06',
@@ -703,6 +770,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "Building Brand Loyalty in 2025: Community-Led Marketing Strategies That Work",
     slug: 'brand-loyalty-2025-community-led-marketing-strategies',
+    seoTitle: "Building Brand Loyalty in 2025: Community-Led Marketing",
     wixSlug: 'building-brand-loyalty-in-2025-community-led-marketing-strategies-that-work',
     date: '2025-06-23',
     updated: '2026-09-06',

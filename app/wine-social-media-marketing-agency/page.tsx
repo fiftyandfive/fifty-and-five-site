@@ -7,9 +7,9 @@ import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five' },
+  title: { absolute: 'Wine & Spirits Marketing Agency | Fifty & Five' },
   description:
-    'Wine marketing agency for wine and spirits brands: social, content, and influencer programs with three-tier compliance built in. 34+ brands since 2008, including Kendall-Jackson and Mezzacorona.',
+    'Wine marketing agency for wine and spirits brands. Social, content, and influencer work with three-tier compliance built in. 34+ brands since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/wine-social-media-marketing-agency' },
   openGraph: {
     title: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five',
@@ -238,7 +238,7 @@ export default function WineSocialMediaLandingPage() {
                 '@id': 'https://fiftyandfive.com/wine-social-media-marketing-agency',
                 name: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five',
                 description:
-                  'Wine marketing agency for wine and spirits brands: social, content, and influencer programs with three-tier compliance built in. 34+ brands since 2008, including Kendall-Jackson and Mezzacorona.',
+                  'Wine marketing agency for wine and spirits brands. Social, content, and influencer work with three-tier compliance built in. 34+ brands since 2008.',
                 url: 'https://fiftyandfive.com/wine-social-media-marketing-agency',
                 isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
                 about: { '@id': 'https://fiftyandfive.com/wine-social-media-marketing-agency#service' },
