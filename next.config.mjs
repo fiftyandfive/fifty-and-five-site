@@ -9,6 +9,9 @@ const nextConfig = {
     },
     async redirects() {
       return [
+      // Absorbed into the /fractional-cmo hub, 2026-09-10.
+      { source: '/blog/do-you-need-a-fractional-cmo', destination: '/fractional-cmo', permanent: true },
+      { source: '/blog/fractional-cmo-vs-full-time-vs-agency-cost', destination: '/fractional-cmo', permanent: true },
       { source: '/post/beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention-in-2026', destination: '/blog/beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention', permanent: true },
       { source: '/post/are-static-hotel-photos-dead-why-dynamic-video-content-is-your-new-booking-driver', destination: '/blog/static-hotel-photos-dead-dynamic-video-content-booking-driver', permanent: true },
       { source: '/post/lights-camera-local-flavor-boosting-hotel-storytelling-with-video-amp-drones', destination: '/blog/hotel-storytelling-video-drones-local-flavor', permanent: true },

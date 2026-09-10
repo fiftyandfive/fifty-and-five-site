@@ -308,7 +308,7 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
               href={v.slug === 'wine-spirits' ? '/wine-social-media-marketing-agency' : '/hospitality-social-media-agency'}
               className="text-accent hover:text-accent-light underline underline-offset-2"
             >
-              {v.slug === 'wine-spirits' ? 'wine marketing agency' : 'hotel and resort social media agency'}
+              {v.slug === 'wine-spirits' ? 'wine and spirits marketing agency' : 'hotel and resort social media agency'}
             </Link>
             {' '}page for pricing and FAQs.
           </p>

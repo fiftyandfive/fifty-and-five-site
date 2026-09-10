@@ -540,8 +540,9 @@ export const VERTICALS: Vertical[] = [
       'Entertainment social lives on urgency. A show drops tonight. The game tips off at 7. The promotion ends Sunday. We built the content calendars for Discovery Channel\u2019s tentpole reality franchises and Game Show Network\u2019s daytime lineup, fast-turn, platform-native, always matched to the programming window.',
       'Live-event venues (American Airlines Center, Solar Bears, Andretti) have a different cadence. Every event is its own micro-campaign, pre-event hype, day-of activation, post-event recap. Multiply by 100+ events a year and you need a content engine, not a content team.',
       'Game launches and entertainment IP are where social gets creative. For Warner Bros.\u2019 Spy Hunter launch and Hasbro\u2019s B-Daman rollout, the social was the campaign, not a channel supporting the campaign. We treat entertainment social that way every time, content that earns the attention a paid buy has to rent.',
+      'Talent is its own corner of this vertical. We rebuilt the digital presence for <a href="/work/central-florida-talent" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:3px">Central Florida Talent</a>, Orlando\u2019s longest-operating SAG-AFTRA franchised agency, so casting directors and AI assistants could both find it. The same discipline applies one level down, to the performers themselves: read our take on <a href="/blog/actors-demo-reel-edit-not-shoot" style="color:var(--color-accent);text-decoration:underline;text-underline-offset:3px">why most actors need a reel edited, not shot</a>.',
     ],
-    featuredCaseStudies: [],
+    featuredCaseStudies: ['central-florida-talent'],
     faqs: [
       {
         q: 'What entertainment brands has Fifty & Five worked with?',
