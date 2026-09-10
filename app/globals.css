@@ -275,6 +275,28 @@ body {
   text-decoration-color: rgba(0, 0, 0, 0.5);
 }
 
+.blog-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.95em;
+  display: block;
+  overflow-x: auto;
+}
+.blog-prose th,
+.blog-prose td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+.blog-prose th {
+  font-family: var(--font-mono);
+  font-size: 0.72em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
 .blog-prose strong {
   color: var(--color-ink-black);
   font-weight: 600;
