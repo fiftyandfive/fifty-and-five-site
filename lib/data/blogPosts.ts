@@ -374,7 +374,7 @@ export const BLOG_POSTS: BlogPost[] = [
     updated: '2026-09-10',
     minutesToRead: 4,
     heroImage: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&q=85',
-    excerpt: "How long does social media marketing take to work? Traction in 3 to 6 months, compounding by 9 to 12. The month-by-month timeline and why quitting early costs the most.",
+    excerpt: "How long does social media marketing take to work? Traction in 3 to 6 months, compounding by 9 to 12. Month-by-month timeline and why quitting early costs most.",
     category: 'Social Media Strategy',
   },
   {
