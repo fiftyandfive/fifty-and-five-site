@@ -165,6 +165,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     sameCategory[(here + 1 + i) % sameCategory.length],
   ).filter((p) => p.slug !== post.slug);
 
+  // Small categories cannot fill three slots from their own cluster, which left
+  // the posts in one and two post categories with almost no inbound links. Pad
+  // from the wider index, cycling from this post's position so the fill spreads
+  // across the archive instead of piling onto whichever posts sort first.
+  if (related.length < 3) {
+    const pool = BLOG_POSTS.filter(
+      (p) => p.slug !== post.slug && !related.some((r) => r.slug === p.slug),
+    );
+    const start = Math.max(0, BLOG_POSTS.findIndex((p) => p.slug === post.slug));
+    for (let i = 0; i < pool.length && related.length < 3; i++) {
+      related.push(pool[(start + i) % pool.length]);
+    }
+  }
+
   const categoryColor = CATEGORY_COLORS[post.category] ?? '#C41E3A';
   const faqs = rawContent ? extractFaqs(rawContent) : [];
   const plainText = rawContent

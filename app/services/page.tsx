@@ -399,6 +399,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      <section className="container-edge pb-16 md:pb-20 text-center">
+        <p className="text-body text-text-secondary max-w-2xl mx-auto">
+          Not sure which of these you actually need? Run the{' '}
+          <Link
+            href="/audit-checklist"
+            className="text-accent hover:text-accent-light underline underline-offset-2"
+          >
+            5-minute social media audit checklist
+          </Link>{' '}
+          first. Ten checks, no email required, and it will tell you whether your gap is strategy,
+          content, or conversion before you buy any of it.
+        </p>
+      </section>
+
       {/* FAQPage schema for Services */}
       <script
         type="application/ld+json"

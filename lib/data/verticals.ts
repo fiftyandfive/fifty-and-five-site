@@ -569,3 +569,78 @@ export const VERTICALS: Vertical[] = [
 export function getVertical(slug: string) {
   return VERTICALS.find((v) => v.slug === slug);
 }
+
+/**
+ * Blog posts each vertical hub links out to. Slugs only: the vertical page
+ * resolves titles through getBlogPost at render time, so there is no second
+ * copy of a headline to drift out of sync when a post is retitled.
+ *
+ * This is the hub to spoke half of the internal link graph. Related-post
+ * rotation inside the blog cannot help a post whose category holds one or two
+ * entries, so the topical posts land here instead of relying on the archive.
+ */
+export const VERTICAL_RELATED_READING: Record<VerticalSlug, string[]> = {
+  'wine-spirits': [
+    'wine-spirits-influencer-marketing',
+    'wine-brand-social-media-wineries-sound-same-fix',
+    'wine-spirits-social-media-2026',
+  ],
+  hospitality: [
+    'boutique-charm-massive-resorts-success-stories',
+    'social-media-luxury-resorts-hospitality',
+    'hotel-social-media-sells-rooms-not-likes',
+  ],
+  tourism: [
+    'boutique-charm-massive-resorts-success-stories',
+    'beyond-the-booking-5-secret-weapons-for-travel-agent-client-retention',
+    'static-hotel-photos-dead-dynamic-video-content-booking-driver',
+  ],
+  restaurant: [
+    'social-media-agency-for-restaurants',
+    'choose-social-media-agency-restaurant-group',
+    'multi-location-social-media-playbook-scale-local',
+  ],
+  luxury: [
+    'social-media-luxury-resorts-hospitality',
+    'legacy-brand-social-media-modernize-without-losing-community',
+    'wine-spirits-influencer-marketing',
+  ],
+  'fitness-wellness': [
+    'social-media-boutique-fitness-studios-paid-organic-playbook',
+    'how-fitness-studios-can-use-instagram-ads-and-google-ads-to-fill-classes-without-wasting-budget',
+    // Wellness clinics and med spas hit the same health claim and patient
+    // privacy rules this post covers, and it is the only post in its category
+    // so the blog's own rotation cannot lift it.
+    'healthcare-social-media-hipaa-compliance',
+  ],
+  'tech-saas': [
+    'consumer-tech-product-launch-social-media',
+    'social-media-retail-cpg-brands',
+    'measure-social-media-roi',
+  ],
+  'retail-cpg': [
+    'social-media-retail-cpg-brands',
+    'consumer-tech-product-launch-social-media',
+    'brand-loyalty-2025-community-led-marketing-strategies',
+  ],
+  healthcare: [
+    'healthcare-social-media-hipaa-compliance',
+    'social-media-crisis-management-playbook',
+    'measure-social-media-roi',
+  ],
+  'real-estate': [
+    'social-media-real-estate-multi-property',
+    'multi-location-social-media-playbook-scale-local',
+    'yelp-ai-local-discovery-citations',
+  ],
+  automotive: [
+    'social-media-automotive-mobility-brands',
+    'video-content-meta-ads-trends-2026',
+    'legacy-brand-social-media-modernize-without-losing-community',
+  ],
+  entertainment: [
+    'actors-demo-reel-edit-not-shoot',
+    'talent-entertainment-brands-get-found-search-social-ai',
+    'hollywood-ai-production-costs-branded-content',
+  ],
+};

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { VERTICALS, getVertical } from '@/lib/data/verticals';
+import { VERTICALS, VERTICAL_RELATED_READING, getVertical } from '@/lib/data/verticals';
+import { getBlogPost } from '@/lib/data/blogPosts';
 import { VERTICAL_COLOR_HEX, getCaseStudy } from '@/lib/data/caseStudies';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -54,6 +55,10 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
     .map((cs) => cs!);
 
   const topClients = v.clients.slice(0, 4).join(', ');
+  const reading = (VERTICAL_RELATED_READING[v.slug] ?? [])
+    .map((s) => getBlogPost(s))
+    .filter(Boolean)
+    .map((p) => p!);
   const faqs = v.faqs ?? [
     {
       q: `What's the best ${v.shortLabel} social media agency?`,
@@ -287,6 +292,45 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
           }),
         }}
       />
+
+      {/* Further reading, the hub to spoke half of the internal link graph.
+          Related-post rotation inside the blog cannot lift a post whose
+          category holds one or two entries, so those land here instead. */}
+      {reading.length > 0 && (
+        <section className="container-edge py-16 md:py-24">
+          <div className="max-w-3xl">
+            <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+              Further reading
+            </div>
+            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+              More on {v.shortLabel.toLowerCase()} marketing.
+            </h2>
+          </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+            {reading.map((p) => (
+              <Link key={p.slug} href={`/blog/${p.slug}`} className="block h-full group">
+                <GlassCard className="h-full p-6 flex flex-col">
+                  <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+                    {p.category}
+                  </div>
+                  <h3 className="mt-4 font-serif text-[22px] leading-[1.2] tracking-[-0.015em] text-text-primary flex-1">
+                    {p.title}
+                  </h3>
+                  <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                    Read
+                    <span
+                      aria-hidden
+                      className="transition-transform duration-300 group-hover:translate-x-0.5"
+                    >
+                      →
+                    </span>
+                  </div>
+                </GlassCard>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Portfolio Strip */}
       <section className="container-edge py-16 md:py-20">
