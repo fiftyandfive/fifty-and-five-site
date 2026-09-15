@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { AuditChecklistContent } from '@/components/pages/AuditChecklistContent';
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/audit-checklist',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: '5-Minute Social Media Audit Checklist | Fifty & Five',
     description:
       '10-point social media audit you can run in 5 minutes. Free, printable checklist from Fifty & Five.',
@@ -24,5 +26,10 @@ export const metadata: Metadata = {
 };
 
 export default function AuditChecklistPage() {
-  return <AuditChecklistContent />;
+  return (
+    <>
+      <BreadcrumbSchema trail={[{ name: 'Audit Checklist', path: '/audit-checklist' }]} />
+      <AuditChecklistContent />
+    </>
+  );
 }

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     'Same senior team at every depth. Run the work, lead the function, or both. Retainers and fractional CMO seats from $4,000/mo.',
   alternates: { canonical: 'https://fiftyandfive.com/ways-to-work' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Ways to Work With Us | Fifty & Five',
     description: 'Same senior team at every depth. The only difference is how much of the function we hold.',
     url: 'https://fiftyandfive.com/ways-to-work',

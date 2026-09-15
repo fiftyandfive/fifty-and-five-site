@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { BlogPageContent } from '@/components/pages/BlogPageContent';
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/blog',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Blog | Social Strategy & AI Insights | Fifty & Five',
     description:
       'Social media strategy, AI automation, AEO, and brand-storytelling insights from the senior team behind 222+ brands, five continents, since 2008. No hype.',
@@ -24,5 +26,10 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogPageContent />;
+  return (
+    <>
+      <BreadcrumbSchema trail={[{ name: 'Blog', path: '/blog' }]} />
+      <BlogPageContent />
+    </>
+  );
 }

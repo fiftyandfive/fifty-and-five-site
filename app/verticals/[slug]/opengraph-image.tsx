@@ -1,23 +1,23 @@
 import { ImageResponse } from 'next/og';
-import { CASE_STUDIES, getCaseStudy, VERTICAL_COLOR_DEEP_HEX } from '@/lib/data/caseStudies';
+import { VERTICALS, getVertical } from '@/lib/data/verticals';
+import { VERTICAL_COLOR_DEEP_HEX } from '@/lib/data/caseStudies';
 
 export const runtime = 'edge';
-export const alt = 'Fifty & Five case study';
+export const alt = 'Fifty & Five industry practice';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export function generateStaticParams() {
-  return CASE_STUDIES.map((c) => ({ slug: c.slug }));
+  return VERTICALS.map((v) => ({ slug: v.slug }));
 }
 
 export default async function Image({ params }: { params: { slug: string } }) {
-  const cs = getCaseStudy(params.slug);
-  const idx = CASE_STUDIES.findIndex((c) => c.slug === params.slug);
-  const caseNumber = String((idx >= 0 ? idx : 0) + 1).padStart(2, '0');
-  const bg = (cs && VERTICAL_COLOR_DEEP_HEX[cs.verticalColor]) || '#1F2937';
+  const v = getVertical(params.slug);
+  const bg = (v && VERTICAL_COLOR_DEEP_HEX[v.colorKey]) || '#1F2937';
   const fg = '#F5EFE6';
-  const client = cs?.client ?? 'Case study';
-  const vertical = cs?.verticalLabel ?? 'Fifty & Five';
+  const name = v?.name ?? 'Industry practice';
+  // Three named clients read as proof faster than a claim does.
+  const clients = (v?.clients ?? []).slice(0, 3).join('  ·  ');
 
   return new ImageResponse(
     (
@@ -47,48 +47,33 @@ export default async function Image({ params }: { params: { slug: string } }) {
           }}
         >
           <div style={{ display: 'flex' }}>fifty &amp; five</div>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              textAlign: 'right',
-              lineHeight: 1.5,
-            }}
-          >
-            {/* Explicit display: Satori rejects a div with more than one
-                child without it, and `case {caseNumber}` is two children. */}
-            <div style={{ display: 'flex' }}>{`case ${caseNumber}`}</div>
-            <div style={{ display: 'flex' }}>{vertical.toLowerCase()}</div>
-          </div>
+          <div style={{ display: 'flex' }}>{(v?.shortLabel ?? '').toLowerCase()}</div>
         </div>
 
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-          }}
-        >
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div
             style={{
-              fontSize: 110,
-              lineHeight: 0.95,
+              fontSize: 96,
+              lineHeight: 0.98,
               letterSpacing: '-0.025em',
               fontFamily: 'ui-sans-serif, system-ui, sans-serif',
               fontWeight: 500,
             }}
           >
-            {client}
+            {name}
           </div>
-          <div
-            style={{
-              marginTop: 24,
-              fontSize: 24,
-              opacity: 0.7,
-              fontFamily: 'ui-sans-serif, system-ui, sans-serif',
-            }}
-          >
-            {cs?.industry ?? ''}
-          </div>
+          {clients && (
+            <div
+              style={{
+                marginTop: 28,
+                fontSize: 26,
+                opacity: 0.72,
+                fontFamily: 'ui-sans-serif, system-ui, sans-serif',
+              }}
+            >
+              {clients}
+            </div>
+          )}
         </div>
 
         <div

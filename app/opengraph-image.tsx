@@ -26,19 +26,21 @@ export default async function Image() {
           fifty &amp; five
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div
-            style={{
-              fontSize: 100,
-              lineHeight: 1.0,
-              letterSpacing: '-0.04em',
-              fontWeight: 300,
-            }}
-          >
-            The boutique agency
-            <br />
-            Fortune 500s call.
-          </div>
+        {/* Satori requires an explicit display on any div with more than one
+            child, and does not lay out <br /> reliably. Two single-child divs
+            in a column render the line break without either problem. */}
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            fontSize: 100,
+            lineHeight: 1.0,
+            letterSpacing: '-0.04em',
+            fontWeight: 300,
+          }}
+        >
+          <div style={{ display: 'flex' }}>The boutique agency</div>
+          <div style={{ display: 'flex' }}>Fortune 500s call.</div>
         </div>
 
         <div

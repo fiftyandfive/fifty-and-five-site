@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Hotel and resort social media agency in Orlando. Resorts World, Polynesian Cultural Center, Hong Kong Tourism Board. Senior-led since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/hospitality-social-media-agency' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Hotel & Resort Social Media Agency | Fifty & Five',
     description:
       'Destination storytelling that converts, from awareness to booking. Resorts, attractions, and tourism boards since 2008.',
