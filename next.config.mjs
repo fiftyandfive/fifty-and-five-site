@@ -49,6 +49,26 @@ const nextConfig = {
       { source: '/verticals/tech', destination: '/verticals/tech-saas', permanent: true },
       // Blog slug renamed 215 → 222 to match the credential line
       { source: '/blog/215-brands-social-media-strategy-that-works', destination: '/blog/222-brands-social-media-strategy-that-works', permanent: true },
+      // Wix-era top-level paths. /home and /blazepizza were both observed still
+      // indexed on 2026-09-15; the rest follow the same de-hyphenated client
+      // page pattern that /blazepizza confirms. All of these 404 today, so the
+      // redirect costs nothing where a path was never published.
+      { source: '/home', destination: '/', permanent: true },
+      { source: '/kendalljackson', destination: '/work/kendall-jackson', permanent: true },
+      { source: '/mezzacorona', destination: '/work/mezzacorona', permanent: true },
+      { source: '/blazepizza', destination: '/work/blaze-pizza', permanent: true },
+      { source: '/enterpriseholdings', destination: '/work/enterprise-holdings', permanent: true },
+      { source: '/centennialrealestate', destination: '/work/centennial-real-estate', permanent: true },
+      { source: '/resortsworld', destination: '/work/resorts-world', permanent: true },
+      { source: '/netgeararlo', destination: '/work/netgear-arlo', permanent: true },
+      { source: '/tupperware', destination: '/work/tupperware', permanent: true },
+      { source: '/axeunilever', destination: '/work/axe-unilever', permanent: true },
+      { source: '/polynesianculturalcenter', destination: '/work/polynesian-cultural-center', permanent: true },
+      { source: '/microsoft', destination: '/work/microsoft', permanent: true },
+      { source: '/selectquoteinsurance', destination: '/work/selectquote-insurance', permanent: true },
+      { source: '/barsha', destination: '/work/barsha', permanent: true },
+      { source: '/streetstrider', destination: '/work/streetstrider', permanent: true },
+      { source: '/centralfloridatalent', destination: '/work/central-florida-talent', permanent: true },
       ];
     },
 };
