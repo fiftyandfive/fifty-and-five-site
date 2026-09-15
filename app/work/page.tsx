@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { WorkPageContent } from '@/components/pages/WorkPageContent';
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/work',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Our Work | 222+ Brands Since 2008 | Fifty & Five',
     description:
       'Case studies from 222+ brands across 15 verticals. Real outcomes, senior-led execution.',
@@ -24,5 +26,10 @@ export const metadata: Metadata = {
 };
 
 export default function WorkPage() {
-  return <WorkPageContent />;
+  return (
+    <>
+      <BreadcrumbSchema trail={[{ name: 'Our Work', path: '/work' }]} />
+      <WorkPageContent />
+    </>
+  );
 }

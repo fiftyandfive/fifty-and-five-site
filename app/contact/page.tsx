@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/contact',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Contact | Book a Working Session | Fifty & Five',
     description: 'No pitch decks, no junior handoffs. Same-day response, a paid pilot within 14 days. Book a 30-minute working session with the senior team that runs the work.',
     url: 'https://fiftyandfive.com/contact',

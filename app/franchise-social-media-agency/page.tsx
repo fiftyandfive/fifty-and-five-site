@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     'Social media agency for franchise and multi-location brands. Blaze Pizza, Enterprise Holdings, Orangetheory, and more. Senior-led since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/franchise-social-media-agency' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Franchise Social Media Agency | Fifty & Five',
     description:
       'The social media agency franchises trust. Blaze Pizza (300+ locations), Enterprise Holdings (6 brands), Orangetheory, and more. Senior-led since 2008.',

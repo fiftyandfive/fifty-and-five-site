@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/about',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: `${ABOUT_TITLE} | Fifty & Five`,
     description: ABOUT_DESCRIPTION,
     url: 'https://fiftyandfive.com/about',
@@ -41,6 +43,7 @@ const TIMELINE: { year: string; text: string }[] = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema trail={[{ name: 'About', path: '/about' }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

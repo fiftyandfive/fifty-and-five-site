@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import Link from 'next/link';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/services',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Services | Social, Paid, Content, Brand | Fifty & Five',
     description: 'Four senior-led practices on one AI-leveraged operating model. Retainers from $4,000 to $50K+/mo, the same senior team at every tier. 222+ brands since 2008.',
     url: 'https://fiftyandfive.com/services',
@@ -109,6 +111,7 @@ const RETAINER_TIERS = [
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema trail={[{ name: 'Services', path: '/services' }]} />
       <section className="container-edge pt-36 md:pt-44 pb-16">
         <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
           Services

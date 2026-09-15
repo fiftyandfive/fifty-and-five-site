@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Fifty & Five in the press. Featured in Moneywise, Clutch, Digital Agency Network, and Crunchbase. Expert commentary on AI, social media, and branded content.',
   alternates: { canonical: 'https://fiftyandfive.com/press' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Press & Media | Fifty & Five',
     description:
       'Fifty & Five in the press. Expert commentary on AI, social media, and branded content from a senior-led agency with 222+ brands since 2008.',

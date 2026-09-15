@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     `Lucas Vandenberg takes on a small number of Orlando-area companies as fractional CMO. Founder of Fifty & Five, ${FACTS.yearsOperating} years, ${FACTS.brandsManaged}+ brands. From $4,000/mo.`,
   alternates: { canonical: 'https://fiftyandfive.com/fractional-cmo-orlando' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Fractional CMO Orlando | Lucas Vandenberg, Fifty & Five',
     description:
       `Founder-led fractional CMO seat for Orlando-area owner-operators. ${FACTS.yearsOperating} years, ${FACTS.brandsManaged}+ brands, one senior operator on call.`,

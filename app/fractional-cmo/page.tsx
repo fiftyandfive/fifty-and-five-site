@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/fractional-cmo',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Fractional CMO for $1M to $20M Companies | Fifty & Five',
     description:
       'Senior marketing leadership for owner-operators doing $1M-20M. From $4,000/mo, month to month. We run the function and own the number, backed by 222+ brands.',

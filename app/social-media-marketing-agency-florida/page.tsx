@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Orlando-based, senior-led social media agency serving Florida hospitality, wine & spirits, and consumer brands. 222+ brands across 5 continents since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/social-media-marketing-agency-florida' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: "Florida's Leading Social Media Marketing Agency for Hospitality, Wine & Consumer Brands",
     description:
       'Senior-led social media agency headquartered in Florida. Hospitality, wine & spirits, and consumer brands, backed by an enterprise client list.',
