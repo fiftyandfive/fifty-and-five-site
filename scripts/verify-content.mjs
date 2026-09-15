@@ -146,5 +146,65 @@ const newFiles = [
 const emDashHits = newFiles.filter((f) => fs.readFileSync(path.join(ROOT, f), 'utf8').includes('—'));
 check('no em dashes in new copy files', emDashHits.length === 0, emDashHits.join(', '));
 
+// ── 9. Sitemap lastmod dates are not stale ─────────────────────────────
+// lastmod is only useful to a crawler while it stays accurate. These dates
+// are hand-maintained in lib/sitemap-dates.ts, so verify none of them is
+// older than the last commit touching the files that produce that route.
+// Skips itself when git history is unavailable (shallow clone): being unable
+// to prove a date is not the same as the date being wrong.
+{
+  const gitDate = (file) => {
+    try {
+      return execSync(`git log -1 --format=%cs -- '${file}' 2>/dev/null`, { cwd: ROOT }).toString().trim();
+    } catch { return ''; }
+  };
+  const hasGit = (() => {
+    try { return execSync('git rev-parse --is-inside-work-tree 2>/dev/null', { cwd: ROOT }).toString().trim() === 'true'; }
+    catch { return false; }
+  })();
+
+  if (!hasGit || !gitDate('package.json')) {
+    console.log('SKIP  sitemap lastmod freshness — git history unavailable');
+  } else {
+    const src = fs.readFileSync(path.join(ROOT, 'lib/sitemap-dates.ts'), 'utf8');
+    const literal = (name) => (src.match(new RegExp(`export const ${name} = '([\\d-]+)'`)) || [])[1] || '';
+    const arrayOf = (name) => {
+      const raw = (src.match(new RegExp(`export const ${name} = \\[([^\\]]*)\\]`)) || [])[1] || '';
+      return [...raw.matchAll(/'([^']+)'/g)].map((m) => m[1]);
+    };
+    const depsBlock = (src.match(/export const ROUTE_DEPS[^=]*= \{([\s\S]*?)\n\};/) || [])[1] || '';
+    const pagesBlock = (src.match(/export const PAGE_UPDATED[^=]*= \{([\s\S]*?)\n\};/) || [])[1] || '';
+    const pageDates = Object.fromEntries(
+      [...pagesBlock.matchAll(/'([^']+)':\s*'([\d-]+)'/g)].map((m) => [m[1], m[2]]),
+    );
+
+    const stale = [];
+    for (const m of depsBlock.matchAll(/'([^']+)':\s*\[([^\]]*)\]/g)) {
+      const route = m[1];
+      const files = [...m[2].matchAll(/'([^']+)'/g)].map((f) => f[1]);
+      const newest = files.map(gitDate).filter(Boolean).sort().pop();
+      const recorded = pageDates[route];
+      if (newest && recorded && newest > recorded) {
+        stale.push(`${route}: recorded ${recorded}, sources changed ${newest}`);
+      }
+    }
+    for (const [depsName, dateName, label] of [
+      ['CASE_STUDY_DEPS', 'CASE_STUDY_UPDATED', 'case studies'],
+      ['VERTICAL_DEPS', 'VERTICAL_UPDATED', 'verticals'],
+    ]) {
+      const newest = arrayOf(depsName).map(gitDate).filter(Boolean).sort().pop();
+      const recorded = literal(dateName);
+      if (newest && recorded && newest > recorded) {
+        stale.push(`${label}: recorded ${recorded}, sources changed ${newest}`);
+      }
+    }
+    check(
+      'sitemap lastmod dates are not older than their source files',
+      stale.length === 0,
+      stale.join(' | '),
+    );
+  }
+}
+
 console.log(failures === 0 ? '\nAll checks passed.' : `\n${failures} check(s) FAILED.`);
 process.exit(failures === 0 ? 0 : 1);
