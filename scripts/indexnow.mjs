@@ -30,20 +30,47 @@ async function main() {
     return;
   }
   const xml = fs.readFileSync(sitemapPath, 'utf8');
-  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
-    .map((m) => m[1].trim())
-    .filter((u) => u.includes(HOST));
+  // Pair each <loc> with the <lastmod> in the same <url> block.
+  const entries = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)]
+    .map((m) => ({
+      loc: ((m[1].match(/<loc>([^<]+)<\/loc>/) || [])[1] || '').trim(),
+      lastmod: ((m[1].match(/<lastmod>([^<]+)<\/lastmod>/) || [])[1] || '').trim(),
+    }))
+    .filter((e) => e.loc.includes(HOST));
 
-  log(`${urls.length} URLs in sitemap`);
-  urls.forEach((u) => log('  ', u));
+  log(`${entries.length} URLs in sitemap`);
 
   const isProd = process.env.VERCEL_ENV === 'production';
   if (!isProd && !process.env.INDEXNOW_FORCE) {
     log(`VERCEL_ENV=${process.env.VERCEL_ENV || '(unset)'}; not a production build, not submitting`);
     return;
   }
+
+  // Submit only what actually changed recently. Now that sitemap lastmod is a
+  // real content date rather than the build time, resubmitting all 109 URLs on
+  // every deploy would be the same false freshness signal in a different
+  // channel: deploys happen for reasons that have nothing to do with content.
+  // INDEXNOW_ALL=1 forces a full resubmit, for a deliberate reindex push.
+  const windowDays = Number(process.env.INDEXNOW_WINDOW_DAYS || 30);
+  const submitAll = process.env.INDEXNOW_ALL === '1';
+  const cutoff = Date.now() - windowDays * 86400000;
+  const selected = submitAll
+    ? entries
+    : entries.filter((e) => {
+        const t = Date.parse(e.lastmod);
+        return Number.isNaN(t) ? true : t >= cutoff;
+      });
+
+  const urls = selected.map((e) => e.loc);
+  log(
+    submitAll
+      ? `INDEXNOW_ALL=1, submitting all ${urls.length}`
+      : `${urls.length} of ${entries.length} changed within ${windowDays} days`,
+  );
+  urls.forEach((u) => log('  ', u));
+
   if (urls.length === 0) {
-    log('no URLs to submit');
+    log('nothing changed recently, not submitting');
     return;
   }
 
