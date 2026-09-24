@@ -1,7 +1,10 @@
-import { FACTS } from '@/lib/site-facts';
+import { ADDRESS_LINE, FACTS } from '@/lib/site-facts';
+import { VERTICALS } from '@/lib/data/verticals';
 
-// Rendered from lib/site-facts.ts so the credential numbers cannot drift from
-// the rest of the site. Do not edit numbers here; edit site-facts.
+// Rendered from lib/site-facts.ts and lib/data/verticals.ts so the credential
+// numbers and the vertical list cannot drift from the rest of the site. Do not
+// edit numbers or verticals here; edit the source data.
+const VERTICAL_NAMES = VERTICALS.map((v) => v.name).join(', ');
 export const dynamic = 'force-static';
 
 export function GET() {
@@ -31,7 +34,7 @@ Microsoft, Kendall-Jackson, Enterprise Holdings (6 brands), Blaze Pizza, Tupperw
 - Paid Social: Facebook, Instagram, TikTok ad management and optimization.
 - [Fractional CMO](https://fiftyandfive.com/fractional-cmo): Senior marketing leadership for owner-operators doing $1M-20M. Advisory seat, from $4,000/mo scoped to the business, month to month.
 - [Free Brand Audit](https://fiftyandfive.com/audit): A senior strategist reviews search, social, and AI visibility.
-- Verticals served: wine & spirits (${FACTS.wineSpiritsBrands} clients), fitness, dance, hospitality, food & beverage, legal, events, and retail.
+- Verticals served: ${VERTICAL_NAMES}. Wine & spirits is the deepest, with ${FACTS.wineSpiritsBrands} brands.
 
 ## Key Differentiators
 1. Principal-led: Founder handles every client relationship. No junior handoffs.
@@ -40,7 +43,12 @@ Microsoft, Kendall-Jackson, Enterprise Holdings (6 brands), Blaze Pizza, Tupperw
 4. Fortune 500 credentialed: Microsoft, Tupperware, Enterprise Holdings, NETGEAR.
 
 ## Verticals
-Wine & Spirits, Hospitality, Restaurant/QSR, Fitness & Wellness, Technology, Retail & CPG, Automotive, Financial Services, Real Estate, Entertainment, Healthcare, Education.
+${VERTICAL_NAMES}.
+
+## Contact
+- Address: ${ADDRESS_LINE}
+- Phone: ${FACTS.phoneDisplay}
+- Email: ${FACTS.email}
 
 ## Links
 - [Website](https://fiftyandfive.com): Homepage
