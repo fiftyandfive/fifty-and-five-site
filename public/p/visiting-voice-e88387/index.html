@@ -728,6 +728,31 @@ h1.display{letter-spacing:-.034em}
 .ft-areas a{color:var(--footer-text);text-decoration:none}
 .ft-areas a:hover{text-decoration:underline}
 .ft-areas .ft-h{margin-right:6px}
+
+/* ---------- 12. SERVICE INDEX AS TILES ---------- */
+.idx-list{list-style:none;border:0!important;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:minmax(210px,auto);gap:16px;padding:0;margin:0}
+.idx-list li{position:relative;display:flex!important;flex-direction:column;gap:10px;grid-template-columns:none!important;padding:26px 26px 22px!important;border:0!important;border-radius:22px;background:#FFFFFF;box-shadow:0 1px 2px rgba(51,100,91,.06);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.idx-list li:hover{transform:translateY(-4px);box-shadow:0 26px 46px -28px rgba(51,100,91,.45)}
+.idx-list .num{grid-column:auto!important;grid-row:auto!important;font-size:15px!important;color:var(--brass);margin-bottom:8px}
+.idx-list h3{grid-column:auto!important;font-size:clamp(20px,1rem + .45vw,24px)!important;line-height:1.15!important;letter-spacing:-.02em!important;font-weight:600!important}
+.idx-list p{grid-column:auto!important;font-size:15px;line-height:1.5;color:var(--text)}
+.idx-list a{grid-column:auto!important;justify-self:auto;margin-top:auto;padding-top:8px;font-size:13.5px;text-decoration:none!important}
+.idx-list a::before{content:"";position:absolute;inset:0;border-radius:inherit}
+.idx-list li:first-child{grid-row:span 2;background:linear-gradient(160deg,#3A6F65 0%,#2A564E 100%);padding:34px!important}
+.idx-list li:first-child::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(70% 55% at 100% 0%,rgba(244,215,126,.2),transparent 70%)}
+.idx-list li:first-child .num{color:#F4D77E}
+.idx-list li:first-child h3{color:#fff;font-size:clamp(26px,1.2rem + 1vw,36px)!important;margin-top:auto}
+.idx-list li:first-child p{color:rgba(255,255,255,.85);font-size:16px}
+.idx-list li:first-child a{color:#fff;margin-top:6px}
+@media (max-width:1099px){
+  .idx-list{grid-template-columns:none;grid-auto-rows:auto;grid-auto-flow:column;grid-auto-columns:min(78%,320px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad-x);margin-inline:calc(var(--pad-x) * -1);padding:4px var(--pad-x) 18px;scrollbar-width:none}
+  .idx-list::-webkit-scrollbar{display:none}
+  .idx-list li{scroll-snap-align:start;min-height:250px}
+  .idx-list li:first-child{grid-row:auto}
+  .idx-list li:first-child h3{margin-top:0}
+}
+.idx-swipe{display:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+@media (max-width:1099px){.idx-swipe{display:block}}
 svg.wave,.hero-wave{display:none}
 /* numbered chapters */
 .eyebrow.chap{gap:0}
@@ -846,6 +871,7 @@ svg.wave,.hero-wave{display:none}
         <li><span class="num" aria-hidden="true">06</span><h3>Motor Speech</h3><p>Treatment for slurred or effortful speech caused by neurological conditions.</p><a class="textlink" href="#services" data-scroll="svc-motor">About motor speech</a></li>
         <li><span class="num" aria-hidden="true">07</span><h3>Caregiver Training</h3><p>Hands on coaching for families and staff on feeding safety and communication at home.</p><a class="textlink" href="#services" data-scroll="svc-caregivers">About caregiver training</a></li>
       </ol>
+      <p class="idx-swipe" aria-hidden="true">Swipe to see all seven</p>
     </div>
   </section>
 
