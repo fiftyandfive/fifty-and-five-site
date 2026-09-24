@@ -686,6 +686,13 @@ h1.display{letter-spacing:-.034em}
 .js-reveal .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 .js-reveal .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.hero-full-bg{animation:none}.js-reveal .reveal{opacity:1;transform:none;transition:none}}
+
+/* area list aligned to headline */
+.area-grid{align-items:start}
+.area-grid .places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(24px,3vw,56px);row-gap:6px;margin-top:calc(var(--fs-eyebrow) * 1.5 + 18px);padding:0}
+.area-grid .places li{padding-block:10px;border-bottom:1px solid var(--line)}
+.area-grid .places li::after{display:none}
+@media (max-width:899px){.area-grid .places{margin-top:0}}
 svg.wave,.hero-wave{display:none}
 /* numbered chapters */
 .eyebrow.chap{gap:0}
