@@ -35,7 +35,7 @@
   --brass-sm:#8A6008;
   --dark:#33645B;
   --dark-text:#EFE8D8;
-  --dark-muted:#D8D2C4;
+  --dark-muted:#E6EEEB;
   --dark-accent:#E6D4A8;
   --dark-line:#5A857B;
   --dark-btn-bg:#FFFFFF;
@@ -753,6 +753,32 @@ h1.display{letter-spacing:-.034em}
 }
 .idx-swipe{display:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:4px}
 @media (max-width:1099px){.idx-swipe{display:block}}
+
+/* feature tile text: always light */
+.cards>.card:first-child :is(h2,h3,h4,.display,.chap-l,.quote,strong,b,dt,dd,span:not(.num):not(.eyebrow)){color:#fff}
+.cards>.card:first-child .display em{color:#F4D77E}
+.cards>.card:first-child :is(p,li,small,.small,.muted){color:rgba(255,255,255,.88)}
+.cards>.card:first-child .eyebrow,.cards>.card:first-child .eyebrow::before{color:#F4D77E}
+.cards>.card:first-child :is(a,.textlink,.btn.ghost){color:#fff;text-decoration-color:rgba(255,255,255,.55)}
+.cards>.card:first-child .btn:not(.ghost){background:#fff;color:#2A564E;border-color:#fff}
+.steps-row>li:first-child :is(h3,h4,strong,b){color:#fff}
+.steps-row>li:first-child :is(p,li,span:not(.num)){color:rgba(255,255,255,.88)}
+.steps-row>li:first-child a{color:#fff}
+
+/* contrast fixes */
+.num{color:var(--brass-sm)}
+.cards>.card:first-child .num,.steps-row>li:first-child .num,.idx-list li:first-child .num{color:#F4D77E!important}
+.card .display{color:var(--ink)}
+.cards>.card:first-child .display{color:#fff}
+.dark,.dark p,.dark li{color:var(--dark-muted)}
+.idx-list li:not(:first-child) .num{color:var(--brass-sm)!important}
+.scape .flag{color:#fff!important;border-color:rgba(255,255,255,.6)!important;background:rgba(0,0,0,.18)}
+/* headshot caption card: smaller, off her neck */
+#page-about .hero-media .float-card{max-width:230px;padding:16px 18px;gap:6px;bottom:28px;left:0;border-radius:16px}
+#page-about .hero-media .float-card .eyebrow{font-size:10px;letter-spacing:.2em}
+#page-about .hero-media .float-card .eyebrow::before{width:18px}
+#page-about .hero-media .float-card .quote{font-size:16px;line-height:1.25;letter-spacing:-.01em}
+@media (max-width:899px){#page-about .hero-media .float-card{position:relative;left:auto;bottom:auto;margin:12px 0 0;max-width:none}}
 svg.wave,.hero-wave{display:none}
 /* numbered chapters */
 .eyebrow.chap{gap:0}
@@ -1546,7 +1572,7 @@ svg.wave,.hero-wave{display:none}
       </div>
       <div class="cards c2">
         <article class="card">
-          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">01</span><div style="text-align:right"><div class="display" style="font-size:26px;color:var(--ink);font-weight:600">Rates by agreement</div><div class="small muted">Based on coverage hours and scope</div></div></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">01</span><div style="text-align:right"><div class="display" style="font-size:26px;font-weight:600">Rates by agreement</div><div class="small muted">Based on coverage hours and scope</div></div></div>
           <h3>PRN and Vacancy Coverage</h3>
           <p>Licensed SLP coverage for leaves of absence, open positions, weekends, and caseload spikes in skilled nursing and rehab. Under consolidated billing your facility bills Medicare, and we invoice you as agreed. Rates by agreement, based on coverage hours and scope.</p>
           <ul class="ticks">
@@ -1556,7 +1582,7 @@ svg.wave,.hero-wave{display:none}
           </ul>
         </article>
         <article class="card">
-          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">02</span><div style="text-align:right"><div class="display" style="font-size:26px;color:var(--ink);font-weight:600">Billed to residents</div><div class="small muted">Assisted and independent living</div></div></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">02</span><div style="text-align:right"><div class="display" style="font-size:26px;font-weight:600">Billed to residents</div><div class="small muted">Assisted and independent living</div></div></div>
           <h3>On Site Therapy Days</h3>
           <p>A set day each week or month when a licensed SLP sees residents in your community. We bill Medicare Part B or private pay for each resident directly, with a certified plan of care on file for each Medicare resident.</p>
           <ul class="ticks">
@@ -1566,7 +1592,7 @@ svg.wave,.hero-wave{display:none}
           </ul>
         </article>
         <article class="card">
-          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">03</span><div style="text-align:right"><div class="display" style="font-size:26px;color:var(--ink);font-weight:600">$350 per session</div><div class="small muted">At your community</div></div></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">03</span><div style="text-align:right"><div class="display" style="font-size:26px;font-weight:600">$350 per session</div><div class="small muted">At your community</div></div></div>
           <h3>Staff In Services</h3>
           <p>Practical, hands on training for nurses, CNAs, dining staff, and life enrichment teams, tailored to your residents and scheduled around your shifts.</p>
           <ul class="ticks">
@@ -1577,7 +1603,7 @@ svg.wave,.hero-wave{display:none}
           </ul>
         </article>
         <article class="card">
-          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">04</span><div style="text-align:right"><div class="display" style="font-size:26px;color:var(--ink);font-weight:600">Billed to the patient</div><div class="small muted">Medicare Part B or private pay</div></div></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><span class="num">04</span><div style="text-align:right"><div class="display" style="font-size:26px;font-weight:600">Billed to the patient</div><div class="small muted">Medicare Part B or private pay</div></div></div>
           <h3>Hospital and Physician Referral Follow Up</h3>
           <p>When a patient leaves the hospital or your clinic with speech, cognitive, or swallowing needs, we see them at home or in their community and close the loop with the referring provider.</p>
           <ul class="ticks">
@@ -2940,7 +2966,7 @@ svg.wave,.hero-wave{display:none}
     <div class="wrap">
       <article class="card ix-cta">
         <div>
-          <span class="eyebrow chap"><b class="chap-n">01</b><span class="chap-l">New patients</span></span>
+          <span class="eyebrow">New patients</span>
           <h2 class="display" style="font-size:30px;font-weight:600">Already scheduled? Complete your intake online</h2>
           <p>Takes about 8 to 10 minutes. Have your insurance card and physician's name handy.</p>
         </div>
@@ -2953,7 +2979,7 @@ svg.wave,.hero-wave{display:none}
     <div class="wrap cards c3">
       <article class="card">
         <span class="num">01</span>
-        <span class="eyebrow chap"><b class="chap-n">02</b><span class="chap-l">Families and patients</span></span>
+        <span class="eyebrow">Families and patients</span>
         <h2 class="display" style="font-size:30px;font-weight:600">Caring for a parent, spouse, or child</h2>
         <p>Tell us what you are noticing: coughing at meals, trouble finding words, a softer voice, or new confusion. For a school age child: speech that is hard to understand, trouble with language or reading, or stuttering. We will explain your options, including Medicare, private pay, and the Step Up scholarship where eligible.</p>
         <p class="muted">Call [PHONE NUMBER] or use the form below.</p>
@@ -2981,7 +3007,7 @@ svg.wave,.hero-wave{display:none}
   <section class="sec band2" id="contact-form" tabindex="-1" aria-labelledby="con-form-t">
     <div class="wrap split top">
       <div class="stack">
-        <span class="eyebrow chap"><b class="chap-n">03</b><span class="chap-l">Send a message</span></span>
+        <span class="eyebrow chap"><b class="chap-n">01</b><span class="chap-l">Send a message</span></span>
         <h2 class="display" id="con-form-t">Start with <em>a short note.</em></h2>
         <p>One form for families, parents, facilities, and physicians. Tell us who you are and the best time to call, and we will take it from there.</p>
         <div class="card" id="contact-details" tabindex="-1">
@@ -3048,7 +3074,7 @@ svg.wave,.hero-wave{display:none}
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="eyebrow chap"><b class="chap-n">04</b><span class="chap-l">What happens next</span></span>
+          <span class="eyebrow chap"><b class="chap-n">02</b><span class="chap-l">What happens next</span></span>
           <h2 class="display" id="con-next-t">From first call <em>to first visit.</em></h2>
         </div>
         <p>No pressure and no obligation. The first conversation is simply about understanding your situation.</p>
