@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Orlando social media agency for boutique to enterprise brands. Senior-led, no junior team. 222+ brands across 5 continents since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/orlando-social-media-agency' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Orlando Social Media Agency | Fifty & Five',
     description:
       'Boutique senior-led Orlando social media agency. 222+ brands since 2008. The Fortune 500 list with the local team.',

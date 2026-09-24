@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { SMS_CONSENT_LABEL, isPlausiblePhone } from '@/lib/sms-consent';
 
 export const runtime = 'nodejs';
 
@@ -10,6 +11,19 @@ type Payload = {
   budget?: string;
   message?: string;
   honey?: string;
+  phone?: string;
+  smsConsent?: boolean;
+  pageUrl?: string;
+};
+
+/** Proof of SMS opt-in, stamped server side. Carriers can ask for it. */
+type SmsConsentRecord = {
+  smsConsent: boolean;
+  smsConsentAt: string;
+  consentText: string;
+  pageUrl: string;
+  ip: string;
+  userAgent: string;
 };
 
 function esc(s: string) {
@@ -32,7 +46,33 @@ function wrapEmail(body: string) {
   `;
 }
 
-function buildInternalEmail(name: string, email: string, company: string, budget: string, message: string) {
+function buildConsentBlock(phone: string, c: SmsConsentRecord | null) {
+  if (!phone && !c) return '';
+  const rows = [
+    phone ? `<p><strong>Mobile:</strong> <a href="tel:${esc(phone)}">${esc(phone)}</a></p>` : '',
+    c
+      ? `<div style="margin-top:16px;padding:12px 16px;border:1px solid #e5e5e5;background:#fafaf8;font-size:13px">
+          <p style="margin:0 0 6px"><strong>SMS consent: YES</strong></p>
+          <p style="margin:0"><strong>smsConsentAt:</strong> ${esc(c.smsConsentAt)}</p>
+          <p style="margin:0"><strong>Page URL:</strong> ${esc(c.pageUrl)}</p>
+          <p style="margin:0"><strong>IP:</strong> ${esc(c.ip)}</p>
+          <p style="margin:0"><strong>User agent:</strong> ${esc(c.userAgent)}</p>
+          <p style="margin:6px 0 0"><strong>Consent text shown:</strong> ${esc(c.consentText)}</p>
+        </div>`
+      : '<p><strong>SMS consent:</strong> no</p>',
+  ];
+  return rows.join('');
+}
+
+function buildInternalEmail(
+  name: string,
+  email: string,
+  company: string,
+  budget: string,
+  message: string,
+  phone = '',
+  consent: SmsConsentRecord | null = null,
+) {
   return `
     <div style="font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.6;color:#111">
       <h2 style="margin:0 0 12px;font-family:Georgia,serif;font-weight:400">New inquiry via fiftyandfive.com</h2>
@@ -45,6 +85,7 @@ function buildInternalEmail(name: string, email: string, company: string, budget
           ? `<p><strong>Looking for:</strong></p><blockquote style="margin:0;padding:12px 16px;border-left:3px solid ${BRAND};background:#f7f7f5">${esc(message).replace(/\n/g, '<br/>')}</blockquote>`
           : ''
       }
+      ${buildConsentBlock(phone, consent)}
     </div>
   `;
 }
@@ -177,12 +218,35 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: 'Missing name or valid email' }, { status: 400 });
   }
 
+  // SMS: the phone is optional, but consent without a usable number is rejected.
+  const phone = (body.phone || '').trim().slice(0, 40);
+  const smsConsent = body.smsConsent === true;
+  if (smsConsent && !isPlausiblePhone(phone)) {
+    return NextResponse.json(
+      { ok: false, error: 'A mobile number is required to receive texts.' },
+      { status: 400 },
+    );
+  }
+  const consent: SmsConsentRecord | null = smsConsent
+    ? {
+        smsConsent: true,
+        smsConsentAt: new Date().toISOString(),
+        consentText: SMS_CONSENT_LABEL,
+        pageUrl: (body.pageUrl || req.headers.get('referer') || '').slice(0, 500),
+        ip: (req.headers.get('x-forwarded-for') || '').split(',')[0].trim() || req.headers.get('x-real-ip') || '',
+        userAgent: (req.headers.get('user-agent') || '').slice(0, 500),
+      }
+    : null;
+  // Logged on every consent, independent of email delivery, so a Resend failure
+  // never loses the opt-in record.
+  if (consent) console.log('[sms-consent]', JSON.stringify({ name, email, phone, ...consent }));
+
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL || 'hello@fiftyandfive.com';
   const from = process.env.CONTACT_FROM_EMAIL || 'Fifty & Five <hello@fiftyandfive.com>';
 
   if (!apiKey) {
-    console.log('[contact] Resend not configured. Submission:', { name, email, company, budget, message });
+    console.log('[contact] Resend not configured. Submission:', { name, email, company, budget, message, phone, smsConsent });
     return NextResponse.json({ ok: true, delivered: false });
   }
 
@@ -195,7 +259,7 @@ export async function POST(req: Request) {
       to,
       replyTo: email,
       subject: `New inquiry, ${name}${company ? ` (${company})` : ''}${budget ? ` · ${budget}` : ''}`,
-      html: buildInternalEmail(name, email, company, budget, message),
+      html: buildInternalEmail(name, email, company, budget, message, phone, consent),
     });
 
     if (isAuditRequest) {

@@ -103,6 +103,84 @@ export function AuditChecklistContent() {
           </p>
         </div>
 
+        {/* Scoring guidance */}
+        <div className="mt-14 space-y-6">
+          <h2 className="font-serif text-h3 tracking-[-0.02em] text-text-primary">
+            What your answers actually mean.
+          </h2>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            Count the checks you could answer cleanly, without hedging. The number matters less
+            than the pattern, because the ten checks split into three groups and whichever group
+            you failed tells you what to fix first.
+          </p>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            <strong className="text-text-primary">Eight or more.</strong> Your fundamentals are
+            sound and your problem is almost certainly distribution or budget, not content. Brands
+            in this band usually do not need an agency, they need paid media discipline and someone
+            willing to kill the channels that are not converting.
+          </p>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            <strong className="text-text-primary">Five to seven.</strong> The most common result,
+            and the most fixable. Something is working, and it is working in spite of the system
+            rather than because of it. This is what a strategy engagement is for.
+          </p>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            <strong className="text-text-primary">Four or fewer.</strong> Do not buy more content.
+            Adding volume to an unclear strategy makes the problem more expensive, not smaller.
+            Start at the last check on the list, the one sentence strategy test, and do not
+            commission anything else until you can finish that sentence.
+          </p>
+
+          <h2 className="pt-4 font-serif text-h3 tracking-[-0.02em] text-text-primary">
+            Where the three groups sit.
+          </h2>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            <strong className="text-text-primary">Checks 1, 9 and 10 are strategy.</strong> Profile,
+            visual consistency, and the one sentence test. Failing here means the brand has not
+            decided what it is, and every downstream fix inherits that. Nothing else on the list is
+            worth doing until these are settled.
+          </p>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            <strong className="text-text-primary">Checks 2, 3, 7 and 8 are content.</strong> Fit,
+            engagement ratio, platform match, and velocity. Failing here with strategy intact is the
+            good version of this problem, because it is a staffing and process fix rather than a
+            positioning one.
+          </p>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            <strong className="text-text-primary">Checks 4, 5 and 6 are conversion.</strong>
+            {' '}Competitor gap, conversion path, and community response time. Failing only here
+            usually means you are making good work and losing people between the post and the
+            purchase, which is the cheapest of the three to fix and the one most often ignored.
+          </p>
+
+          <h2 className="pt-4 font-serif text-h3 tracking-[-0.02em] text-text-primary">
+            The honest caveat.
+          </h2>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            Five minutes buys you a diagnosis, not a plan. This checklist will reliably tell you
+            which of the three groups is broken. It will not tell you what your competitors are
+            spending, whether your category rewards volume or restraint, or whether AI answer
+            engines are citing you when someone asks for a recommendation in your vertical. Those
+            take a real audit.
+          </p>
+          <p className="no-print text-body-lg text-text-secondary leading-[1.75]">
+            If you want the longer version, the{' '}
+            <Link href="/audit" className="text-accent hover:text-accent-light underline underline-offset-2">
+              free brand audit
+            </Link>{' '}
+            covers search presence, social presence, and AI answer engine visibility, with written
+            findings back inside two business days. If you would rather read first, start with{' '}
+            <Link href="/blog/measure-social-media-roi" className="text-accent hover:text-accent-light underline underline-offset-2">
+              how to measure social media ROI
+            </Link>{' '}
+            or{' '}
+            <Link href="/blog/do-you-need-a-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">
+              whether you need an agency at all
+            </Link>
+            .
+          </p>
+        </div>
+
         {/* CTA */}
         <div className="mt-12 text-center">
           <p className="text-body-lg text-text-secondary">

@@ -59,6 +59,13 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
   const caseIndex = CASE_STUDIES.findIndex((c) => c.slug === cs.slug);
   const caseNumber = String(caseIndex + 1).padStart(2, '0');
 
+  // Three more studies, cycling from the one after `next` so this block never
+  // just repeats the Next card above it.
+  const alsoSee = Array.from(
+    { length: Math.min(3, Math.max(0, CASE_STUDIES.length - 2)) },
+    (_, i) => CASE_STUDIES[(caseIndex + 2 + i) % CASE_STUDIES.length],
+  ).filter((o) => o.slug !== cs.slug && o.slug !== next.slug);
+
   return (
     <>
       <script
@@ -283,6 +290,47 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           </TiltCard>
         </Link>
       </section>
+
+      {/* MORE WORK. The single "next" ring gave every case study a floor of two
+          inbound links, one from here and one from the index. Cycling three
+          siblings from this study's position spreads links across the set
+          without pointing every page at the same few. */}
+      {alsoSee.length > 0 && (
+        <section className="container-edge pb-32">
+          <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.15em] mb-8">
+            More client work
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-fr">
+            {alsoSee.map((o) => (
+              <Link key={o.slug} href={`/work/${o.slug}`} className="block h-full group">
+                <GlassCard padded={false} className="h-full flex overflow-hidden">
+                  <div
+                    className="w-1.5 shrink-0 self-stretch transition-all duration-300 group-hover:w-2"
+                    style={{ background: VERTICAL_COLOR_HEX[o.verticalColor] ?? '#C41E3A' }}
+                    aria-hidden
+                  />
+                  <div className="flex-1 flex flex-col p-6">
+                    <VerticalPill label={o.verticalLabel} colorKey={o.verticalColor} />
+                    <h3 className="mt-5 font-serif text-[24px] leading-[1.1] tracking-[-0.02em]">
+                      {o.client}
+                    </h3>
+                    <p className="mt-3 text-body text-text-secondary flex-1">{o.tagline}</p>
+                    <div className="mt-5 inline-flex items-center gap-2 text-meta text-accent group-hover:text-accent-light transition-colors">
+                      Read case study
+                      <span
+                        aria-hidden
+                        className="transition-transform duration-300 group-hover:translate-x-0.5"
+                      >
+                        →
+                      </span>
+                    </div>
+                  </div>
+                </GlassCard>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {cs.deepDive && cs.deepDive.length > 0 && <ProseSections sections={cs.deepDive} />}
 

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Wine marketing agency for wine and spirits brands. Social, content, and influencer work with three-tier compliance built in. 34+ brands since 2008.',
   alternates: { canonical: 'https://fiftyandfive.com/wine-social-media-marketing-agency' },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Wine Marketing Agency | Social, Content, Influencer | Fifty & Five',
     description:
       '34+ wine and spirits brands since 2008. The agency wine brands and distributors actually vet.',

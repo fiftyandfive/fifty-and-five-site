@@ -3,6 +3,13 @@
 import { useState } from 'react';
 import { MagneticButton } from './MagneticButton';
 import { trackEvent, gtagEvent } from '@/components/layout/Analytics';
+import {
+  SMS_CONSENT_LABEL,
+  SMS_PHONE_HELPER,
+  SMS_PHONE_LABEL,
+  SMS_PHONE_REQUIRED_ERROR,
+  isPlausiblePhone,
+} from '@/lib/sms-consent';
 
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -16,6 +23,8 @@ const BUDGET_OPTIONS = [
 export function ContactForm() {
   const [state, setState] = useState<State>('idle');
   const [error, setError] = useState<string | null>(null);
+  const [smsConsent, setSmsConsent] = useState(false);
+  const [phoneError, setPhoneError] = useState<string | null>(null);
 
   if (state === 'success') {
     return (
@@ -43,10 +52,18 @@ export function ContactForm() {
     <form
       onSubmit={async (e) => {
         e.preventDefault();
-        setState('submitting');
         setError(null);
+        setPhoneError(null);
         const form = e.currentTarget;
         const fd = new FormData(form);
+        const phone = String(fd.get('phone') || '').trim();
+        // The phone number is optional unless the SMS consent box is checked.
+        if (smsConsent && !isPlausiblePhone(phone)) {
+          setPhoneError(SMS_PHONE_REQUIRED_ERROR);
+          form.querySelector<HTMLInputElement>('input[name="phone"]')?.focus();
+          return;
+        }
+        setState('submitting');
         const payload = {
           name: String(fd.get('name') || ''),
           email: String(fd.get('email') || ''),
@@ -54,6 +71,9 @@ export function ContactForm() {
           budget: String(fd.get('budget') || ''),
           message: String(fd.get('message') || ''),
           honey: String(fd.get('website') || ''),
+          phone,
+          smsConsent,
+          pageUrl: window.location.href,
         };
         try {
           const res = await fetch('/api/contact', {
@@ -107,6 +127,49 @@ export function ContactForm() {
 
       <Field label="What are you looking for?" name="message" as="textarea" />
 
+      <label className="block">
+        <span className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+          {SMS_PHONE_LABEL} {smsConsent && <span className="text-accent">*</span>}
+        </span>
+        <input
+          name="phone"
+          type="tel"
+          autoComplete="tel"
+          inputMode="tel"
+          required={smsConsent}
+          aria-invalid={phoneError ? true : undefined}
+          aria-describedby="phone-help"
+          onChange={() => phoneError && setPhoneError(null)}
+          className="mt-2 w-full bg-transparent border border-glass-border rounded-lg px-4 py-3 text-body text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent transition-colors"
+        />
+        <span id="phone-help" className="mt-2 block text-meta text-text-tertiary">
+          {SMS_PHONE_HELPER}
+        </span>
+        {phoneError && (
+          <span role="alert" className="mt-1 block text-meta text-[#FF6B6B]">
+            {phoneError}
+          </span>
+        )}
+      </label>
+
+      {/* SMS consent: optional, unchecked by default, separate from every other
+          field. Links open in a new tab so reading them never loses the form. */}
+      <label className="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          name="smsConsent"
+          checked={smsConsent}
+          onChange={(e) => {
+            setSmsConsent(e.target.checked);
+            if (!e.target.checked) setPhoneError(null);
+          }}
+          className="mt-1 h-4 w-4 shrink-0 accent-[#C41E3A] cursor-pointer"
+        />
+        <span className="text-meta text-text-secondary leading-[1.55]">
+          <ConsentLabel />
+        </span>
+      </label>
+
       {/* Honeypot, hidden from users, bots fill it */}
       <div aria-hidden className="hidden">
         <label>
@@ -129,6 +192,26 @@ export function ContactForm() {
         Typical response time: same day
       </p>
     </form>
+  );
+}
+
+/** Renders SMS_CONSENT_LABEL verbatim, turning its two policy names into links. */
+function ConsentLabel() {
+  const [beforePrivacy, afterPrivacy] = SMS_CONSENT_LABEL.split('Privacy Policy');
+  const [between, afterTerms] = afterPrivacy.split('Terms');
+  const link = 'text-accent hover:text-accent-light underline underline-offset-2';
+  return (
+    <>
+      {beforePrivacy}
+      <a href="/privacy" target="_blank" rel="noopener" className={link}>
+        Privacy Policy
+      </a>
+      {between}
+      <a href="/terms" target="_blank" rel="noopener" className={link}>
+        Terms
+      </a>
+      {afterTerms}
+    </>
   );
 }
 

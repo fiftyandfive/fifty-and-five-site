@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: 'https://fiftyandfive.com/audit',
   },
   openGraph: {
+    images: ['/opengraph-image'],
     title: 'Free Brand Audit | Fifty & Five',
     description:
       'A senior strategist reviews your search, social, and AI visibility, then sends real findings to your inbox within 2 business days. No pitch, no obligation.',

@@ -2,42 +2,54 @@ import type { MetadataRoute } from 'next';
 import { CASE_STUDIES } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 import { BLOG_POSTS } from '@/lib/data/blogPosts';
+import { caseStudyUpdated, pageUpdated, verticalUpdated } from '@/lib/sitemap-dates';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fiftyandfive.com';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+// lastmod is the last substantive content change, never the build time. See
+// lib/sitemap-dates.ts for why, and for how the dates are kept honest.
+type StaticRoute = { path: string; changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number };
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/`, lastModified: now, changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${baseUrl}/work`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/fractional-cmo`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/ways-to-work`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/audit`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
-    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.7 },
-    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.9 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/orlando-social-media-agency`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/franchise-social-media-agency`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${baseUrl}/fractional-cmo-orlando`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/social-media-marketing-agency-florida`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/hospitality-social-media-agency`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/wine-social-media-marketing-agency`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${baseUrl}/press`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${baseUrl}/audit-checklist`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
-  ];
+const STATIC_ROUTES: StaticRoute[] = [
+  { path: '/', changeFrequency: 'monthly', priority: 1.0 },
+  { path: '/work', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/services', changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/fractional-cmo', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/ways-to-work', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/audit', changeFrequency: 'yearly', priority: 0.7 },
+  { path: '/about', changeFrequency: 'yearly', priority: 0.7 },
+  { path: '/contact', changeFrequency: 'yearly', priority: 0.9 },
+  { path: '/blog', changeFrequency: 'weekly', priority: 0.8 },
+  { path: '/orlando-social-media-agency', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/franchise-social-media-agency', changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/fractional-cmo-orlando', changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/social-media-marketing-agency-florida', changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/hospitality-social-media-agency', changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/wine-social-media-marketing-agency', changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/press', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/audit-checklist', changeFrequency: 'yearly', priority: 0.6 },
+  { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes: MetadataRoute.Sitemap = STATIC_ROUTES.map((r) => ({
+    url: `${baseUrl}${r.path === '/' ? '/' : r.path}`,
+    lastModified: new Date(pageUpdated(r.path)),
+    changeFrequency: r.changeFrequency,
+    priority: r.priority,
+  }));
 
   const caseRoutes: MetadataRoute.Sitemap = CASE_STUDIES.map((c) => ({
     url: `${baseUrl}/work/${c.slug}`,
-    lastModified: now,
+    lastModified: new Date(caseStudyUpdated(c.slug)),
     changeFrequency: 'yearly',
     priority: 0.7,
   }));
 
   const verticalRoutes: MetadataRoute.Sitemap = VERTICALS.map((v) => ({
     url: `${baseUrl}/verticals/${v.slug}`,
-    lastModified: now,
+    lastModified: new Date(verticalUpdated(v.slug)),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
