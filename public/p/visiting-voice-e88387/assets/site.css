@@ -780,7 +780,7 @@ h1.display{letter-spacing:-.034em}
 .hero-media .float-card .eyebrow::before{width:18px}
 .hero-media .float-card .quote{font-size:16px;line-height:1.25;letter-spacing:-.01em}
 @media (max-width:899px){.hero-media .float-card{position:relative;left:auto;bottom:auto;margin:12px 0 0;max-width:none}}
-svg.wave,.hero-wave{display:none}
+
 /* numbered chapters */
 .eyebrow.chap{gap:0}
 .eyebrow.chap::before{display:none}
@@ -788,6 +788,17 @@ svg.wave,.hero-wave{display:none}
 .dark .chap-n{color:#fff;border-color:rgba(255,255,255,.3)}
 .scape .chap-n{color:#fff;border-color:rgba(255,255,255,.4)}
 .eyebrow.chap:not(:has(.chap-l)) .chap-n{border-right:0;padding-right:0;margin-right:0;font-size:14px}
+
+/* ---------- 14. BRAND MARK ---------- */
+.wordmark.has-mark{flex-direction:row;align-items:center;gap:12px}
+.wordmark .wm-text,.site-footer .brand .wm-text{display:flex;flex-direction:column;gap:7px}
+.brand-mark{width:44px;height:44px;flex:none;display:block}
+.site-footer .brand a.has-mark{flex-direction:row;align-items:center;gap:14px}
+.site-footer .brand .wm-text{gap:9px}
+.site-footer .brand-mark{width:52px;height:52px}
+.hero .hero-wave{margin-top:clamp(36px,4vw,64px)}
+@media (min-width:1100px) and (max-width:1279px){.bar{gap:18px}.site-nav ul{gap:14px}.site-nav a{font-size:13.5px}.wordmark .wm-sub{letter-spacing:.22em}.brand-mark{width:40px;height:40px}.wordmark.has-mark{gap:10px}.site-nav a.pill{padding:0 16px}}
+@media (max-width:420px){.brand-mark{width:34px;height:34px}.wordmark.has-mark{gap:9px}.menu-btn .menu-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 
 /* ---------- 13. MULTI PAGE ADDITIONS (additive) ---------- */
 .svc-intro h1.display{font-size:clamp(32px,1.3rem + 1.9vw,52px);line-height:1.04}

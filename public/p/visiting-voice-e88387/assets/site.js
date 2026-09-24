@@ -27,7 +27,7 @@
     var role = b.getAttribute('data-role');
     if (role){
       var sel = document.querySelector('main form select[name="role"]');
-      if (sel){ for (var i = 0; i < sel.options.length; i++){ var o = sel.options[i]; if (o.value === role || o.text === role){ sel.selectedIndex = i; break; } } }
+      if (sel){ for (var i = 0; i < sel.options.length; i++){ var o = sel.options[i]; if (o.value === role || o.text === role){ sel.selectedIndex = i; break; } } if (sel.form) sel.form.dispatchEvent(new Event('vv-role')); }
     }
     scrollToId(b.getAttribute('data-scroll'));
   });
@@ -38,6 +38,7 @@
     if (!m || !AUD[m[1]]) return;
     Array.prototype.forEach.call(document.querySelectorAll('main form select[name="role"]'), function(sel){
       for (var i = 0; i < sel.options.length; i++){ if (sel.options[i].text === AUD[m[1]]){ sel.selectedIndex = i; break; } }
+      if (sel.form) sel.form.dispatchEvent(new Event('vv-role'));
     });
   })();
   function closeMenu(returnFocus){
@@ -105,6 +106,14 @@
     });
     return firstBad;
   }
+  Array.prototype.forEach.call(document.querySelectorAll('form.form[data-kind="request"]'), function(form){
+    var role = form.querySelector('select[name="role"]'), btn = form.querySelector('button[type="submit"]');
+    if (!role || !btn) return;
+    function sync(){ btn.textContent = role.value === 'Facility administrator' ? 'Discuss a Partnership' : 'Request a Consultation'; }
+    role.addEventListener('change', sync);
+    form.addEventListener('vv-role', sync);
+    sync();
+  });
   Array.prototype.forEach.call(document.querySelectorAll('form.form'), function(form){
     var panel = form.nextElementSibling;
     Array.prototype.forEach.call(form.querySelectorAll('[required]'), function(input){

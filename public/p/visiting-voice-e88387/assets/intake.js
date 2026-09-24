@@ -383,7 +383,7 @@
       openForm(false, true);
       return;
     }
-    setErr(code, v ? 'That code did not match. Check your welcome text or email and try again.' : 'Please enter your access code.');
+    setErr(code, v ? 'That code did not match. You can also choose Preview without a code.' : 'Please enter your access code.');
     code.focus();
   });
   code.addEventListener('input', function(){ if (code.getAttribute('aria-invalid') === 'true') setErr(code, ''); });
