@@ -91,7 +91,7 @@ const FAQS = [
   },
   {
     q: 'Which Orlando companies has Lucas Vandenberg worked with?',
-    a: 'Locally the list includes Landmark Contracting, Central Florida Talent, BODYBar SoDo, Crafty Bartender, Solar Bears Orlando, Andretti Indoor Karting, Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA. Fifty & Five has operated from Orlando since 2008, and I serve on the SoDo Main Street Board. The national roster, including Microsoft, Kendall-Jackson, and Enterprise Holdings, is run from the same desk.',
+    a: 'Locally the list includes Landmark Contracting, Central Florida Talent, BODYBar SoDo, Crafty Bartender, Solar Bears Orlando, Andretti Indoor Karting, Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA. Fifty & Five is based at 1001 N Orange Ave, and I serve on the SoDo Main Street Board. The national roster, including Microsoft, Kendall-Jackson, and Enterprise Holdings, is run from the same desk.',
   },
   {
     q: 'Do you take fractional CMO clients outside Orlando?',
@@ -99,7 +99,7 @@ const FAQS = [
   },
   {
     q: 'Why hire a fractional CMO in Orlando instead of a national firm?',
-    a: 'A national fractional CMO firm assigns you a consultant you may never meet in person and who has not run this specific market. I am based in Orlando, have run Fifty & Five from here since 2008, and take the seat myself, not a firm placement.',
+    a: 'A national fractional CMO firm assigns you a consultant you may never meet in person and who has not run this specific market. I am based in Orlando, run Fifty & Five from here, and take the seat myself, not a firm placement.',
   },
 ];
 
@@ -328,8 +328,8 @@ export default function FractionalCmoOrlandoPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
-              Fifty &amp; Five has run from 1001 N Orange Ave since 2008, and I serve on the SoDo
-              Main Street Board here in Orlando. That matters for a practical reason rather than a
+              Fifty &amp; Five runs from 1001 N Orange Ave, and I serve on the SoDo Main Street
+              Board here in Orlando. That matters for a practical reason rather than a
               sentimental one: when an owner-operator in Winter Park or Lake Nona describes their
               market, I do not need it explained. I know which industries in this city run on
               tourism cycles, which run on relocation, and which run on referrals from the same
@@ -353,10 +353,15 @@ export default function FractionalCmoOrlandoPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
-              Fifty &amp; Five has run from Orlando since 2008. If you are an Orlando-area
-              owner-operator, you get an operator who has run this playbook in this market for {FACTS.yearsOperating}
-              years, backed by the same team that runs marketing for Microsoft, Kendall-Jackson,
-              and Enterprise Holdings. Not a coach parachuting in from out of state.
+              If you are an Orlando-area owner-operator, you get an operator who works from here
+              and has run marketing for {FACTS.yearsOperating} years and {FACTS.brandsManaged}{' '}
+              brands, including Microsoft, Kendall-Jackson, and Enterprise Holdings. Not a coach
+              parachuting in from out of state. When the plan needs a team to run it, the same
+              people handle{' '}
+              <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">
+                Orlando social media services
+              </Link>
+              .
             </p>
           </div>
         </div>

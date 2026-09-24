@@ -44,20 +44,20 @@ export const ROUTE_DEPS: Record<string, string[]> = {
 
 /** Last substantive content change per static route. */
 export const PAGE_UPDATED: Record<string, string> = {
-  '/': '2026-09-15',
-  '/work': '2026-09-15',
-  '/services': '2026-09-15',
-  '/fractional-cmo': '2026-09-15',
+  '/': '2026-09-24',
+  '/work': '2026-09-24',
+  '/services': '2026-09-24',
+  '/fractional-cmo': '2026-09-24',
   '/ways-to-work': '2026-09-15',
   '/audit': '2026-09-15',
-  '/about': '2026-09-15',
+  '/about': '2026-09-24',
   '/contact': '2026-09-24',
-  '/blog': '2026-09-15',
-  '/orlando-social-media-agency': '2026-09-15',
+  '/blog': '2026-09-24',
+  '/orlando-social-media-agency': '2026-09-24',
   '/franchise-social-media-agency': '2026-09-15',
-  '/fractional-cmo-orlando': '2026-09-15',
-  '/social-media-marketing-agency-florida': '2026-09-15',
-  '/hospitality-social-media-agency': '2026-09-15',
+  '/fractional-cmo-orlando': '2026-09-24',
+  '/social-media-marketing-agency-florida': '2026-09-24',
+  '/hospitality-social-media-agency': '2026-09-24',
   '/wine-social-media-marketing-agency': '2026-09-15',
   '/press': '2026-09-15',
   '/audit-checklist': '2026-09-15',
@@ -71,11 +71,11 @@ export const PAGE_UPDATED: Record<string, string> = {
  * matching OVERRIDES map when a single entry is edited on its own.
  */
 export const CASE_STUDY_DEPS = ['lib/data/caseStudies.ts', 'app/work/[slug]/page.tsx', 'components/ui/ProseSection.tsx'];
-export const CASE_STUDY_UPDATED = '2026-09-15';
+export const CASE_STUDY_UPDATED = '2026-09-24';
 export const CASE_STUDY_UPDATED_OVERRIDES: Record<string, string> = {};
 
 export const VERTICAL_DEPS = ['lib/data/verticals.ts', 'app/verticals/[slug]/page.tsx'];
-export const VERTICAL_UPDATED = '2026-09-15';
+export const VERTICAL_UPDATED = '2026-09-24';
 export const VERTICAL_UPDATED_OVERRIDES: Record<string, string> = {};
 
 /** Used only if a route is added to the sitemap without a date recorded here. */

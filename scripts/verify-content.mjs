@@ -176,7 +176,9 @@ check('no em dashes in new copy files', emDashHits.length === 0, emDashHits.join
     const src = fs.readFileSync(path.join(ROOT, 'lib/sitemap-dates.ts'), 'utf8');
     const literal = (name) => (src.match(new RegExp(`export const ${name} = '([\\d-]+)'`)) || [])[1] || '';
     const arrayOf = (name) => {
-      const raw = (src.match(new RegExp(`export const ${name} = \\[([^\\]]*)\\]`)) || [])[1] || '';
+      // Up to the closing `];`, not the first `]`: dependency paths contain
+      // [slug], and stopping at its bracket silently dropped those files.
+      const raw = (src.match(new RegExp(`export const ${name} = \\[([\\s\\S]*?)\\];`)) || [])[1] || '';
       return [...raw.matchAll(/'([^']+)'/g)].map((m) => m[1]);
     };
     const depsBlock = (src.match(/export const ROUTE_DEPS[^=]*= \{([\s\S]*?)\n\};/) || [])[1] || '';

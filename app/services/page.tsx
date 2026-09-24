@@ -127,6 +127,14 @@ export default function ServicesPage() {
             Senior-led social media management, content strategy, and paid media, without the
             holding-company markup.
           </p>
+          <p className="mt-4 text-body text-text-secondary max-w-2xl">
+            We are based in Orlando and work with brands nationally. Local businesses can start
+            with{' '}
+            <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">
+              social media management for Orlando businesses
+            </Link>
+            , which covers Central Florida clients and pricing.
+          </p>
         </SimpleReveal>
       </section>
 

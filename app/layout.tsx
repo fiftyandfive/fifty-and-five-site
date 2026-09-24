@@ -100,6 +100,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     url: 'https://fiftyandfive.com/about',
                     image: 'https://fiftyandfive.com/images/people/lucas.jpg',
                     worksFor: { '@id': 'https://fiftyandfive.com/#organization' },
+                    // The board seat is his, per the page copy, not the company's.
+                    memberOf: {
+                      '@type': 'Organization',
+                      name: 'SoDo Main Street',
+                      description: 'Board member, SoDo Main Street (Orlando)',
+                    },
                     knowsAbout: [
                       'Fractional CMO',
                       'Social Media Marketing',
@@ -113,6 +119,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     ],
                   },
                   address: { '@type': 'PostalAddress', ...FACTS.address },
+                  // MarketingAgency is a LocalBusiness subtype, so the local fields
+                  // live here. A separate LocalBusiness node split one business
+                  // into two unlinked entities.
+                  email: FACTS.email,
+                  geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: 28.5494,
+                    longitude: -81.3792,
+                  },
+                  openingHoursSpecification: {
+                    '@type': 'OpeningHoursSpecification',
+                    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                    opens: '09:00',
+                    closes: '18:00',
+                  },
+                  priceRange: '$$$$',
                   contactPoint: [
                     {
                       '@type': 'ContactPoint',
@@ -163,10 +185,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     { '@type': 'AdministrativeArea', name: 'Latin America' },
                     { '@type': 'AdministrativeArea', name: 'Asia-Pacific' },
                   ],
-                  serviceArea: {
-                    '@type': 'AdministrativeArea',
-                    name: 'Global',
-                  },
                   hasOfferCatalog: {
                     '@type': 'OfferCatalog',
                     name: 'Fifty & Five Services',
@@ -176,6 +194,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         name: 'Social Media Management',
                         description:
                           'Senior-led social media strategy, content, and community for boutique-to-Fortune-500 brands.',
+                      },
+                      {
+                        '@type': 'Service',
+                        name: 'Paid Social Advertising',
+                        description:
+                          'Meta, TikTok, and LinkedIn campaign strategy, creative, targeting, optimization, and reporting.',
+                      },
+                      {
+                        '@type': 'Service',
+                        name: 'Community Management',
+                        description:
+                          'Engagement, reputation management, and audience growth handled by the senior team.',
                       },
                       {
                         '@type': 'Service',
@@ -197,17 +227,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       },
                     ],
                   },
-                  memberOf: [
-                    {
-                      '@type': 'Organization',
-                      name: 'SoDo Main Street',
-                      description:
-                        'Lucas Vandenberg serves on the SoDo Main Street Board (Orlando)',
-                    },
-                  ],
                   subjectOf: [
                     {
-                      '@type': 'Article',
+                      '@type': 'WebPage',
                       name: 'Fifty & Five on Clutch.co',
                       url: 'https://clutch.co/profile/fifty-five',
                       publisher: { '@type': 'Organization', name: 'Clutch.co' },
@@ -254,29 +276,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   url: 'https://fiftyandfive.com',
                   name: 'Fifty & Five',
                   publisher: { '@id': 'https://fiftyandfive.com/#organization' },
-                },
-                {
-                  '@type': 'LocalBusiness',
-                  '@id': 'https://fiftyandfive.com/#localbusiness',
-                  name: 'Fifty & Five',
-                  image: 'https://fiftyandfive.com/opengraph-image',
-                  telephone: FACTS.phone,
-                  email: FACTS.email,
-                  address: { '@type': 'PostalAddress', ...FACTS.address },
-                  geo: {
-                    '@type': 'GeoCoordinates',
-                    latitude: 28.5494,
-                    longitude: -81.3792,
-                  },
-                  url: 'https://fiftyandfive.com',
-                  sameAs: ['https://www.linkedin.com/company/fiftyandfive'],
-                  openingHoursSpecification: {
-                    '@type': 'OpeningHoursSpecification',
-                    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                    opens: '09:00',
-                    closes: '18:00',
-                  },
-                  priceRange: '$$$$',
                 },
               ],
             }),

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://fiftyandfive.com/social-media-marketing-agency-florida' },
   openGraph: {
     images: ['/opengraph-image'],
-    title: "Florida's Leading Social Media Marketing Agency for Hospitality, Wine & Consumer Brands",
+    title: 'Florida Social Media Marketing Agency for Hospitality, Wine & Consumer Brands',
     description:
       'Senior-led social media agency headquartered in Florida. Hospitality, wine & spirits, and consumer brands, backed by an enterprise client list.',
     url: 'https://fiftyandfive.com/social-media-marketing-agency-florida',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: 'Is Fifty & Five a Florida-based social media agency?',
-    a: 'Yes. Fifty & Five has been headquartered in Orlando, Florida since 2008. The agency is senior-led, with every account run by senior strategists rather than junior account managers.',
+    a: 'Yes. Fifty & Five is based at 1001 N Orange Ave in Orlando, Florida, and was founded in 2008. The agency is senior-led, with every account run by senior strategists rather than junior account managers.',
   },
   {
     q: 'What Florida industries does Fifty & Five specialize in?',
@@ -39,7 +39,7 @@ const FAQS = [
   },
   {
     q: 'What makes Fifty & Five different from other Florida agencies?',
-    a: 'Most Florida agencies serve local clients only. Fifty & Five combines a Florida address with a Fortune 500 client list and specialist depth in hospitality and wine and spirits, two categories with real compliance and seasonality rules most generalist agencies have not built against.',
+    a: 'Fifty & Five combines a Florida address with a Fortune 500 client list and specialist depth in hospitality and wine and spirits, two categories with real compliance and seasonality rules most generalist agencies have not built against.',
   },
   {
     q: 'What cities does Fifty & Five serve in Florida?',
@@ -63,7 +63,7 @@ export default function FloridaLandingPage() {
               {
                 '@type': 'WebPage',
                 '@id': 'https://fiftyandfive.com/social-media-marketing-agency-florida',
-                name: "Florida's Leading Social Media Marketing Agency for Hospitality, Wine & Consumer Brands",
+                name: 'Florida Social Media Marketing Agency for Hospitality, Wine & Consumer Brands',
                 description:
                   'Orlando-based, senior-led social media agency serving Florida hospitality, wine & spirits, and consumer brands. 222+ brands across 5 continents since 2008.',
                 url: 'https://fiftyandfive.com/social-media-marketing-agency-florida',
@@ -145,9 +145,9 @@ export default function FloridaLandingPage() {
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
             Fifty &amp; Five is headquartered in Orlando, Florida. Since 2008 we have managed
-            social media for 222+ brands across 5 continents, with the deepest track record
-            anywhere in hospitality and wine &amp; spirits &mdash; Kendall-Jackson, Mezzacorona,
-            Resorts World, the Polynesian Cultural Center, and 34+ wine and spirits brands.
+            social media for 222+ brands across 5 continents, with our deepest track record in
+            hospitality and wine &amp; spirits: Kendall-Jackson, Mezzacorona, Resorts World, the
+            Polynesian Cultural Center, and 34+ wine and spirits brands.
           </p>
         </SimpleReveal>
         <SimpleReveal delay={0.4}>
@@ -225,10 +225,11 @@ export default function FloridaLandingPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
-              Most Florida social media agencies serve local clients only. Fifty &amp; Five is
-              headquartered in Orlando and runs accounts for Microsoft, Hasbro, Warner Bros., and
-              Tupperware alongside a local Central Florida roster. Every account is senior-led,
-              no junior handoffs. See our <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">Orlando-specific work</Link> for the local roster.
+              Fifty &amp; Five is based in Orlando and has run accounts for Microsoft, Hasbro,
+              Warner Bros., and Tupperware alongside Central Florida clients. Every account is
+              senior-led, no junior handoffs. For businesses in the Orlando area, local services,
+              clients, and pricing are on the page for{' '}
+              <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">our Central Florida team</Link>.
             </p>
           </div>
         </div>
