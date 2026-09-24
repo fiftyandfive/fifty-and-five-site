@@ -413,12 +413,12 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     title: "How Much Does a Social Media Agency Cost? (2026 Pricing Guide)",
     slug: 'how-much-does-a-social-media-agency-cost',
-    seoTitle: "Social Media Agency Cost: 2026 Pricing Guide",
+    seoTitle: "Social Media Retainer Cost 2026: $4K to $50K+/mo",
     wixSlug: 'how-much-does-a-social-media-agency-cost',
     date: '2026-05-29',
     minutesToRead: 5,
     heroImage: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=85',
-    excerpt: "Social media retainers run $4,000 to $50,000+ per month depending on scope and seniority. Here’s what each tier actually buys, why retainers beat project work, and how to know what you should pay in 2026.",
+    excerpt: "Social media retainers cost $4,000 to $50,000+ a month in 2026. See what each tier buys, from Growth to Enterprise, and how to tell if a quote is fair.",
     category: 'Agency',
   },
   {

@@ -9,6 +9,7 @@ import { StickyCtaButton } from '@/components/ui/StickyCtaButton';
 import { ExitIntentBar } from '@/components/ui/ExitIntentBar';
 import { StockTicker } from '@/components/ui/StockTicker';
 import { Analytics } from '@/components/layout/Analytics';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 import { FACTS } from '@/lib/site-facts';
 
 export const metadata: Metadata = {
@@ -312,6 +313,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StickyCtaButton />
         <ExitIntentBar />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );
