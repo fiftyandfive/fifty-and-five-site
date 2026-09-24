@@ -699,8 +699,8 @@ export default function FractionalCmoPage() {
             Fractional CMO in Orlando
           </h2>
           <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
-            Fifty &amp; Five has run from Orlando since {FACTS.founded}, and the founder takes a
-            small number of Central Florida owner-operators as fractional CMO clients in person.
+            Fifty &amp; Five is based in Orlando, and the founder takes a small number of Central
+            Florida owner-operators as fractional CMO clients in person.
             If you are in Orlando, Winter Park, or Lake Nona, start with the{' '}
             <Link href="/fractional-cmo-orlando" className="text-accent hover:text-accent-light underline underline-offset-2">
               Fractional CMO Orlando

@@ -1942,7 +1942,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p>If you're tired of the same old "golden hour" shots and generic captions, it might be time for a change. Let's talk about how we can take your brand's story and turn it into a movement that drives real, measurable growth.</p>
 <p><strong>Looking to take your hospitality brand to the next level? Contact Fifty &amp; Five today and let's build something visionary together.</strong></p>
 
-<p><em>Fifty &amp; Five is an <a href="/orlando-social-media-agency">Orlando social media agency</a>, working from Orlando since 2008.</em></p>
+<p><em>Fifty &amp; Five is an <a href="/orlando-social-media-agency">Orlando social media agency</a> based at 1001 N Orange Ave, founded in 2008.</em></p>
 
 <h3>Why should a hospitality brand in Orlando hire a local social media agency?</h3>
 <p>A local Orlando social media agency understands how to market to two very different audiences at once: tourists looking for a once-in-a-lifetime experience on International Drive and residents looking for a new Friday night spot in Winter Park or Lake Nona. An agency with its feet on the ground also knows the seasonal traffic patterns, including convention crowds at the OCCC, spring break surges, and the shoulder seasons when local engagement becomes the lifeblood of revenue.</p>
@@ -2398,7 +2398,7 @@ Encourage guests to contribute to your storytelling through user-generated conte
 <p>Orlando's hospitality market rewards brands that understand the local landscape while embracing innovative marketing approaches. If you're ready to work with a top Orlando marketing agency that specializes in hospitality and combines local expertise with cutting-edge technology, we'd love to connect.</p>
 <p>Book a strategy call to discuss how Fifty &amp; Five can help your hospitality brand stand out, drive more traffic, and build lasting success in Orlando's competitive market. Let's create something remarkable together.</p>
 
-<p><em>Fifty &amp; Five is an <a href="/orlando-social-media-agency">Orlando social media agency</a>, working from Orlando since 2008.</em></p>
+<p><em>Fifty &amp; Five is a <a href="/orlando-social-media-agency">social media agency in Orlando</a>, based at 1001 N Orange Ave and founded in 2008.</em></p>
 
 <h3>Why should an Orlando hospitality brand hire a local marketing agency?</h3>
 <p>Orlando operates unlike any other market, with tourism cycles, seasonal travel patterns, major conventions, diverse neighborhoods, and constant special events shaping how people discover hospitality brands, so strategies that work in Austin or Nashville often fall flat. Fifty &amp; Five brings street-level knowledge of Downtown Orlando, SoDo, Winter Park, and Lake Nona, the balance between tourist traffic and local repeat customers, and event-driven marketing around conventions, festivals, and seasonal peaks.</p>

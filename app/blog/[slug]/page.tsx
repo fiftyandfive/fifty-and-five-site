@@ -132,7 +132,9 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 function extractFaqs(html: string): { question: string; answer: string }[] {
   const faqs: { question: string; answer: string }[] = [];
-  const faqRe = /<h3>(?!FAQ)(.*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g;
+  // The question may not span a heading boundary. With (.*?) a section heading
+  // followed directly by the first question was glued onto it.
+  const faqRe = /<h3>(?!FAQ)((?:(?!<\/?h3>)[\s\S])*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g;
   let started = false;
   let m: RegExpExecArray | null;
   while ((m = faqRe.exec(html)) !== null) {
