@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="googlebot" content="noindex,nofollow">
+<base href="/p/visiting-voice-e88387/">
+<title>New Patient Intake (Preview) | The Visiting Voice</title>
+<meta name="description" content="Preview of the new patient intake. In this preview nothing is saved or sent.">
+<script>document.documentElement.setAttribute("data-theme","light")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Manrope:wght@400..700&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fiftyandfive.com/p/visiting-voice-e88387/"}, {"@type": "ListItem", "position": 2, "name": "New Patient Intake (Preview)", "item": "https://fiftyandfive.com/p/visiting-voice-e88387/intake"}]}</script>
+</head>
+<body>
+<button type="button" class="skip" id="skip-link">Skip to main content</button>
+<div class="preview" id="preview-banner" role="region" aria-label="Preview notice">
+  <div class="wrap">
+    <p>Preview for review. Forms are demos and send nothing. Contact details, Medicare enrollment, and Step Up approval are pending. Photos are Unsplash stock.</p>
+    <button type="button" id="banner-close" aria-label="Dismiss preview notice">Close</button>
+  </div>
+</div>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="wordmark" href="./" aria-label="The Visiting Voice, home">
+      <span class="wm-name">The Visiting Voice</span>
+      <span class="wm-sub">SPEECH · LANGUAGE · SWALLOWING</span>
+    </a>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span>Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul class="wrap">
+        <li><a href="adult-care">Adult Care</a></li>
+        <li><a href="school-age">School Age</a></li>
+        <li><a href="families">For Families</a></li>
+        <li><a href="facilities">For Facilities</a></li>
+        <li><a href="pricing">Pricing</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="faq">FAQ</a></li>
+        <li class="nav-more"><a href="service-areas">Service Areas</a></li>
+        <li class="nav-more"><a href="contact">Contact</a></li>
+        <li class="nav-more"><a href="careers">Careers</a></li>
+        <li class="nav-more"><a href="intake" aria-current="page">Patient Intake</a></li>
+        <li><a href="contact" class="pill" data-pill>Request a Consultation</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="page-intake">
+  <section class="hero ix-hero">
+    <div class="wrap">
+      <div class="ix-wrap stack">
+        <span class="eyebrow">Patients and families</span>
+        <h1 class="display" tabindex="-1">New Patient <em>Intake</em></h1>
+        <p class="lede">Already scheduled? Complete your intake online so your first visit can start in the right place.</p>
+        <ul class="ix-meta">
+          <li>Takes about 8 to 10 minutes. Have your insurance card and physician's name handy.</li>
+        </ul>
+        <div class="note" role="note">
+          <span class="eyebrow">In an emergency</span>
+          <p>In an emergency, call 911.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-tight band" aria-label="Intake form">
+    <div class="wrap">
+      <div class="ix-wrap stack">
+
+        <!-- Gate -->
+        <div class="ix-card ix-gate" id="ix-gate">
+          <h2 id="ix-gate-t" tabindex="-1">Try the new patient intake.</h2>
+          <p>This is a demonstration. Choose Preview without a code, or enter an access code if you were given one.</p>
+          <form id="ix-gate-form" novalidate aria-labelledby="ix-gate-t">
+            <div class="stack-sm">
+              <div class="field">
+                <label for="ix-code">Access code</label>
+                <input type="text" id="ix-code" name="access_code" autocomplete="off" inputmode="text" autocapitalize="characters" spellcheck="false" aria-describedby="ix-code-err">
+                <p class="err" id="ix-code-err" aria-live="polite"></p>
+              </div>
+              <div class="btns">
+                <button type="submit" class="btn">Open my intake</button>
+                <button type="button" class="textlink" id="ix-preview-btn">Preview without a code</button>
+              </div>
+              <p class="ix-hint">Nothing you enter is saved or sent. Please use sample information only.</p>
+            </div>
+          </form>
+          <div class="note">
+            <span class="eyebrow">Privacy</span>
+            <p class="small">Before the practice opens, intake will move to a secure patient system chosen by the practice. Until then, do not enter real health or insurance information.</p>
+          </div>
+        </div>
+
+        <!-- Form app -->
+        <div id="ix-app" class="stack" hidden>
+          <p class="flag" id="ix-mode"></p>
+          <p class="sr-only" id="ix-live" aria-live="polite" aria-atomic="true"></p>
+
+          <form id="ix-form" class="ix-card ix-form" novalidate aria-labelledby="ix-form-t">
+            <p class="sr-only" id="ix-form-t">New patient intake form</p>
+            <div class="ix-progress" id="ix-progress">
+              <div class="ix-progress-top">
+                <span id="ix-count">Step 1 of 8</span>
+                <span class="muted" id="ix-count-title">About the patient</span>
+              </div>
+              <div class="ix-track" aria-hidden="true"><span class="ix-fill" id="ix-fill"></span></div>
+              <nav aria-label="Intake steps">
+                <ol class="ix-steplist" id="ix-steplist">
+                  <li><button type="button" data-go="1"><span class="n">1</span> About</button></li>
+                  <li><button type="button" data-go="2"><span class="n">2</span> Contacts</button></li>
+                  <li><button type="button" data-go="3"><span class="n">3</span> Reason</button></li>
+                  <li><button type="button" data-go="4"><span class="n">4</span> Health</button></li>
+                  <li><button type="button" data-go="5"><span class="n">5</span> Physician</button></li>
+                  <li><button type="button" data-go="6"><span class="n">6</span> Payment</button></li>
+                  <li><button type="button" data-go="7"><span class="n">7</span> Consents</button></li>
+                  <li><button type="button" data-go="8"><span class="n">8</span> Review</button></li>
+                </ol>
+              </nav>
+              <p class="ix-hint">Fields marked <span class="req" aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+            </div>
+
+            <!-- STEP 1 -->
+            <section class="ix-step" data-step="1" data-title="About the patient" aria-labelledby="ix-s1-t">
+              <h2 id="ix-s1-t" tabindex="-1">About the patient</h2>
+
+              <fieldset class="ix-group" id="ix-for" data-req data-sum="Intake is for" aria-describedby="ix-for-err">
+                <legend>Who is this intake for? <span class="req" aria-hidden="true">*</span></legend>
+                <div class="ix-opts">
+                  <div class="ix-opt"><input type="radio" id="ix-for-adult" name="for" value="adult" required><label for="ix-for-adult">An adult or senior</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-for-child" name="for" value="child" required><label for="ix-for-child">A school age child, 5 to 18</label></div>
+                </div>
+                <p class="err" id="ix-for-err"></p>
+              </fieldset>
+
+              <fieldset class="ix-group" id="ix-by" data-req data-sum="Completed by" aria-describedby="ix-by-err">
+                <legend>Who is completing it? <span class="req" aria-hidden="true">*</span></legend>
+                <div class="ix-opts">
+                  <div class="ix-opt"><input type="radio" id="ix-by-self" name="by" value="self" required><label for="ix-by-self">The patient</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-by-parent" name="by" value="parent" required><label for="ix-by-parent">Parent or legal guardian</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-by-family" name="by" value="family" required><label for="ix-by-family">Adult child or family member</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-by-poa" name="by" value="poa" required><label for="ix-by-poa">Power of attorney or legal representative</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-by-facility" name="by" value="facility" required><label for="ix-by-facility">Facility staff</label></div>
+                </div>
+                <p class="err" id="ix-by-err"></p>
+              </fieldset>
+
+              <p class="ix-hint">Please answer the rest of this step about the patient.</p>
+
+              <div class="row2">
+                <div class="field">
+                  <label for="ix-first">Legal first name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="ix-first" name="first_name" autocomplete="given-name" required data-sum="Legal first name" data-msg="Please enter the patient's legal first name." aria-describedby="ix-first-err">
+                  <p class="err" id="ix-first-err"></p>
+                </div>
+                <div class="field">
+                  <label for="ix-last">Legal last name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="ix-last" name="last_name" autocomplete="family-name" required data-sum="Legal last name" data-msg="Please enter the patient's legal last name." aria-describedby="ix-last-err">
+                  <p class="err" id="ix-last-err"></p>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="field">
+                  <label for="ix-pref">Preferred name</label>
+                  <input type="text" id="ix-pref" name="preferred_name" autocomplete="nickname" data-sum="Preferred name">
+                </div>
+                <div class="field">
+                  <label for="ix-dob">Date of birth <span class="req" aria-hidden="true">*</span></label>
+                  <input type="date" id="ix-dob" name="dob" autocomplete="bday" required data-fmt="dob" data-sum="Date of birth" data-msg="Please enter the patient's date of birth." aria-describedby="ix-dob-err">
+                  <p class="err" id="ix-dob-err"></p>
+                </div>
+              </div>
+
+              <fieldset class="ix-group" id="ix-sex" data-sum="Sex assigned at birth" aria-describedby="ix-sex-hint">
+                <legend>Sex assigned at birth</legend>
+                <p class="ix-hint" id="ix-sex-hint">For clinical records.</p>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-sex-f" name="sex" value="Female"><label for="ix-sex-f">Female</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-sex-m" name="sex" value="Male"><label for="ix-sex-m">Male</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-sex-n" name="sex" value="Prefer not to say"><label for="ix-sex-n">Prefer not to say</label></div>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="ix-gender">Gender identity (optional)</label>
+                <input type="text" id="ix-gender" name="gender_identity" autocomplete="off" data-sum="Gender identity">
+              </div>
+
+              <div class="field">
+                <label for="ix-lang">Preferred language <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="ix-lang" name="language" autocomplete="language" required data-sum="Preferred language" data-msg="Please enter the preferred language." aria-describedby="ix-lang-err">
+                <p class="err" id="ix-lang-err"></p>
+              </div>
+
+              <fieldset class="ix-group" id="ix-interp" data-sum="Interpreter needed" aria-describedby="ix-interp-hint">
+                <legend>Interpreter needed?</legend>
+                <p class="ix-hint" id="ix-interp-hint">Tell us, and we will plan the visit around it.</p>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-interp-y" name="interpreter" value="Yes"><label for="ix-interp-y">Yes</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-interp-n" name="interpreter" value="No"><label for="ix-interp-n">No</label></div>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="ix-addr">Street address <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="ix-addr" name="address" autocomplete="street-address" required data-sum="Street address" data-msg="Please enter the street address." aria-describedby="ix-addr-err">
+                <p class="err" id="ix-addr-err"></p>
+              </div>
+              <div class="row2">
+                <div class="field">
+                  <label for="ix-city">City <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="ix-city" name="city" autocomplete="address-level2" required data-sum="City" data-msg="Please enter the city." aria-describedby="ix-city-err">
+                  <p class="err" id="ix-city-err"></p>
+                </div>
+                <div class="row2 ix-tight">
+                  <div class="field">
+                    <label for="ix-state">State <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="ix-state" name="state" value="FL" autocomplete="address-level1" required data-sum="State" data-msg="Please enter the state." aria-describedby="ix-state-err">
+                    <p class="err" id="ix-state-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ix-zip">ZIP <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="ix-zip" name="zip" autocomplete="postal-code" inputmode="numeric" maxlength="10" required data-fmt="zip" data-sum="ZIP" data-msg="Please enter the ZIP code." aria-describedby="ix-zip-err">
+                    <p class="err" id="ix-zip-err"></p>
+                  </div>
+                </div>
+              </div>
+
+              <fieldset class="ix-group" id="ix-where" data-req data-sum="Where visits should happen" aria-describedby="ix-where-err">
+                <legend>Where should visits happen? <span class="req" aria-hidden="true">*</span></legend>
+                <div class="ix-opts">
+                  <div class="ix-opt"><input type="radio" id="ix-where-home" name="where" value="home" required><label for="ix-where-home">Home</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-where-alf" name="where" value="alf" required><label for="ix-where-alf">Assisted living or memory care</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-where-snf" name="where" value="snf" required><label for="ix-where-snf">Skilled nursing facility</label></div>
+                </div>
+                <p class="err" id="ix-where-err"></p>
+              </fieldset>
+
+              <div class="field" data-if="facility" hidden>
+                <label for="ix-facility">Facility name and room number</label>
+                <input type="text" id="ix-facility" name="facility" autocomplete="off" data-sum="Facility and room">
+              </div>
+              <div class="field" data-if="access" hidden>
+                <label for="ix-access">Access notes for visits</label>
+                <input type="text" id="ix-access" name="access_notes" autocomplete="off" data-sum="Access notes" aria-describedby="ix-access-hint">
+                <p class="ix-hint" id="ix-access-hint">Gate code, parking, pets, or anything that helps us arrive smoothly.</p>
+              </div>
+
+              <div class="row2">
+                <div class="field">
+                  <label for="ix-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                  <input type="tel" id="ix-phone" name="phone" autocomplete="tel" inputmode="tel" required data-fmt="tel" data-sum="Phone" data-msg="Please enter a phone number." aria-describedby="ix-phone-hint ix-phone-err">
+                  <p class="ix-hint" id="ix-phone-hint">Best number for the patient, or for you if you are completing this for someone else.</p>
+                  <p class="err" id="ix-phone-err"></p>
+                </div>
+                <div class="field">
+                  <label for="ix-email">Email</label>
+                  <input type="email" id="ix-email" name="email" autocomplete="email" data-fmt="email" data-sum="Email" aria-describedby="ix-email-err">
+                  <p class="err" id="ix-email-err"></p>
+                </div>
+              </div>
+
+              <fieldset class="ix-group" id="ix-contact" data-sum="Preferred contact method">
+                <legend>Preferred contact method</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-contact-call" name="contact_method" value="Phone call"><label for="ix-contact-call">Phone call</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-contact-text" name="contact_method" value="Text message"><label for="ix-contact-text">Text message</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-contact-email" name="contact_method" value="Email"><label for="ix-contact-email">Email</label></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="ix-group" id="ix-vm" data-sum="OK to leave a detailed voicemail">
+                <legend>OK to leave a detailed voicemail?</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-vm-y" name="voicemail" value="Yes"><label for="ix-vm-y">Yes</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-vm-n" name="voicemail" value="No"><label for="ix-vm-n">No</label></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="ix-group" id="ix-sms" data-sum="Appointment texts" aria-describedby="ix-sms-hint">
+                <legend>Do you consent to appointment reminder texts?</legend>
+                <p class="ix-hint" id="ix-sms-hint">Message and data rates may apply. Reply STOP to opt out.</p>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-sms-y" name="texts" value="Yes"><label for="ix-sms-y">Yes</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-sms-n" name="texts" value="No"><label for="ix-sms-n">No</label></div>
+                </div>
+              </fieldset>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="ix-step" data-step="2" data-title="Family and emergency contacts" aria-labelledby="ix-s2-t" hidden>
+              <h2 id="ix-s2-t" tabindex="-1">Family and emergency contacts</h2>
+
+              <div class="ix-sub" data-if="rp" hidden>
+                <h3>Parent, guardian, or responsible party</h3>
+                <p class="ix-hint">The person completing this form for the patient, or who makes healthcare or financial decisions for them.</p>
+                <div class="row2">
+                  <div class="field">
+                    <label for="ix-rp-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="ix-rp-name" name="rp_name" autocomplete="name" required data-sum="Responsible party" data-msg="Please enter this person's name." aria-describedby="ix-rp-name-err">
+                    <p class="err" id="ix-rp-name-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ix-rp-rel">Relationship to patient <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="ix-rp-rel" name="rp_relationship" autocomplete="off" required data-sum="Relationship" data-msg="Please enter the relationship to the patient." aria-describedby="ix-rp-rel-err">
+                    <p class="err" id="ix-rp-rel-err"></p>
+                  </div>
+                </div>
+                <div class="row2">
+                  <div class="field">
+                    <label for="ix-rp-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="ix-rp-phone" name="rp_phone" autocomplete="tel" inputmode="tel" required data-fmt="tel" data-sum="Responsible party phone" data-msg="Please enter a phone number." aria-describedby="ix-rp-phone-err">
+                    <p class="err" id="ix-rp-phone-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ix-rp-email">Email</label>
+                    <input type="email" id="ix-rp-email" name="rp_email" autocomplete="email" data-fmt="email" data-sum="Responsible party email" aria-describedby="ix-rp-email-err">
+                    <p class="err" id="ix-rp-email-err"></p>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="ix-rp-addr">Address, if different from the patient</label>
+                  <input type="text" id="ix-rp-addr" name="rp_address" autocomplete="off" data-sum="Responsible party address">
+                </div>
+                <fieldset class="ix-group" id="ix-rp-auth" data-sum="Legal authority" aria-describedby="ix-rp-auth-hint">
+                  <legend>Legal authority</legend>
+                  <p class="ix-hint" id="ix-rp-auth-hint">We may ask for documentation.</p>
+                  <div class="ix-opts">
+                    <div class="ix-opt"><input type="radio" id="ix-rp-auth-parent" name="rp_authority" value="Parent"><label for="ix-rp-auth-parent">Parent</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-rp-auth-guardian" name="rp_authority" value="Legal guardian"><label for="ix-rp-auth-guardian">Legal guardian</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-rp-auth-surrogate" name="rp_authority" value="Healthcare surrogate"><label for="ix-rp-auth-surrogate">Healthcare surrogate</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-rp-auth-poa" name="rp_authority" value="Power of attorney"><label for="ix-rp-auth-poa">Power of attorney</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-rp-auth-none" name="rp_authority" value="None, helping as family or staff"><label for="ix-rp-auth-none">None, I am helping as family or staff</label></div>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="ix-sub">
+                <h3>Emergency contact</h3>
+                <div class="field">
+                  <label for="ix-ec-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="ix-ec-name" name="ec_name" autocomplete="off" required data-sum="Emergency contact" data-msg="Please enter an emergency contact." aria-describedby="ix-ec-name-err">
+                  <p class="err" id="ix-ec-name-err"></p>
+                </div>
+                <div class="row2">
+                  <div class="field">
+                    <label for="ix-ec-rel">Relationship <span class="req" aria-hidden="true">*</span></label>
+                    <input type="text" id="ix-ec-rel" name="ec_relationship" autocomplete="off" required data-sum="Emergency contact relationship" data-msg="Please enter the relationship." aria-describedby="ix-ec-rel-err">
+                    <p class="err" id="ix-ec-rel-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ix-ec-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                    <input type="tel" id="ix-ec-phone" name="ec_phone" autocomplete="off" inputmode="tel" required data-fmt="tel" data-sum="Emergency contact phone" data-msg="Please enter a phone number." aria-describedby="ix-ec-phone-err">
+                    <p class="err" id="ix-ec-phone-err"></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- STEP 3 -->
+            <section class="ix-step" data-step="3" data-title="Reason for referral" aria-labelledby="ix-s3-t" hidden>
+              <h2 id="ix-s3-t" tabindex="-1">Reason for referral</h2>
+              <p class="ix-hint">Check all that apply.</p>
+
+              <fieldset class="ix-group" id="ix-reason-adult" data-if="notchild" data-sum="Concerns">
+                <legend>Adults</legend>
+                <div class="ix-opts">
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-swallow" name="reason" value="Swallowing or choking"><label for="ix-r-swallow">Swallowing or choking</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-stroke" name="reason" value="Speech after stroke or brain injury"><label for="ix-r-stroke">Speech after stroke or brain injury</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-aphasia" name="reason" value="Language or aphasia"><label for="ix-r-aphasia">Language or aphasia</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-memory" name="reason" value="Memory or thinking"><label for="ix-r-memory">Memory or thinking</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-voice" name="reason" value="Voice or Parkinson's"><label for="ix-r-voice">Voice or Parkinson's</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-motor" name="reason" value="Slurred or unclear speech"><label for="ix-r-motor">Slurred or unclear speech</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-tbi" name="reason" value="Brain injury or concussion"><label for="ix-r-tbi">Brain injury or concussion</label></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="ix-group" id="ix-reason-child" data-if="notadult" data-sum="Concerns">
+                <legend>School age</legend>
+                <div class="ix-opts">
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-sounds" name="reason" value="Speech sounds"><label for="ix-r-sounds">Speech sounds</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-lang" name="reason" value="Language"><label for="ix-r-lang">Language</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-read" name="reason" value="Reading and writing"><label for="ix-r-read">Reading and writing</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-social" name="reason" value="Social communication"><label for="ix-r-social">Social communication</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-stutter" name="reason" value="Stuttering"><label for="ix-r-stutter">Stuttering</label></div>
+                  <div class="ix-opt"><input type="checkbox" id="ix-r-ctbi" name="reason" value="Brain injury or concussion"><label for="ix-r-ctbi">Brain injury or concussion</label></div>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="ix-concern">In your own words, what are you noticing? <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="ix-concern" name="concern" rows="5" required data-sum="What you are noticing" data-msg="Please tell us briefly what you are noticing." aria-describedby="ix-concern-err"></textarea>
+                <p class="err" id="ix-concern-err"></p>
+              </div>
+              <div class="field">
+                <label for="ix-onset">When did it start?</label>
+                <input type="text" id="ix-onset" name="onset" autocomplete="off" data-sum="When it started" aria-describedby="ix-onset-hint">
+                <p class="ix-hint" id="ix-onset-hint">For example: after a stroke in March, or over the past year.</p>
+              </div>
+
+              <fieldset class="ix-group" id="ix-ref" data-sum="Referred by">
+                <legend>Referred by</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-ref-self" name="referred_by" value="Self or family"><label for="ix-ref-self">Self or family</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-ref-md" name="referred_by" value="Physician"><label for="ix-ref-md">Physician</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-ref-hosp" name="referred_by" value="Hospital"><label for="ix-ref-hosp">Hospital</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-ref-school" name="referred_by" value="School"><label for="ix-ref-school">School</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-ref-fac" name="referred_by" value="Facility"><label for="ix-ref-fac">Facility</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-ref-other" name="referred_by" value="Other"><label for="ix-ref-other">Other</label></div>
+                </div>
+              </fieldset>
+            </section>
+
+            <!-- STEP 4 -->
+            <section class="ix-step" data-step="4" data-title="Health history" aria-labelledby="ix-s4-t" hidden>
+              <h2 id="ix-s4-t" tabindex="-1">Health history</h2>
+
+              <div class="field">
+                <label for="ix-dx">Diagnoses</label>
+                <textarea id="ix-dx" name="diagnoses" rows="3" data-sum="Diagnoses" aria-describedby="ix-dx-hint"></textarea>
+                <p class="ix-hint" id="ix-dx-hint">For example: stroke, Parkinson's, dementia, COPD, head and neck cancer.</p>
+              </div>
+              <div class="field">
+                <label for="ix-hosp">Hospitalizations or ER visits in the last 12 months</label>
+                <textarea id="ix-hosp" name="hospitalizations" rows="3" data-sum="Recent hospitalizations" aria-describedby="ix-hosp-hint"></textarea>
+                <p class="ix-hint" id="ix-hosp-hint">Dates and reasons, if you know them.</p>
+              </div>
+
+              <fieldset class="ix-group" id="ix-pneu" data-sum="History of pneumonia">
+                <legend>History of pneumonia</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-pneu-y" name="pneumonia" value="Yes"><label for="ix-pneu-y">Yes</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-pneu-n" name="pneumonia" value="No"><label for="ix-pneu-n">No</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-pneu-u" name="pneumonia" value="Unsure"><label for="ix-pneu-u">Unsure</label></div>
+                </div>
+              </fieldset>
+
+              <div class="field">
+                <label for="ix-meds">Current medications (optional)</label>
+                <textarea id="ix-meds" name="medications" rows="3" data-sum="Current medications" aria-describedby="ix-meds-hint"></textarea>
+                <p class="ix-hint" id="ix-meds-hint">Or bring a list to the first visit.</p>
+              </div>
+              <div class="field">
+                <label for="ix-allergies">Allergies <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="ix-allergies" name="allergies" autocomplete="off" required data-sum="Allergies" data-msg="Please list allergies, or type None." aria-describedby="ix-allergies-hint ix-allergies-err">
+                <p class="ix-hint" id="ix-allergies-hint">Include food and medication allergies. Type None if there are none.</p>
+                <p class="err" id="ix-allergies-err"></p>
+              </div>
+
+              <fieldset class="ix-group" id="ix-hear" data-sum="Hearing">
+                <legend>Hearing</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-hear-ok" name="hearing" value="Normal"><label for="ix-hear-ok">Normal</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-hear-aids" name="hearing" value="Hearing aids"><label for="ix-hear-aids">Hearing aids</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-hear-c" name="hearing" value="Concerns"><label for="ix-hear-c">Concerns</label></div>
+                </div>
+              </fieldset>
+              <fieldset class="ix-group" id="ix-vision" data-sum="Vision">
+                <legend>Vision</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-vision-ok" name="vision" value="Normal"><label for="ix-vision-ok">Normal</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-vision-gl" name="vision" value="Glasses"><label for="ix-vision-gl">Glasses</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-vision-c" name="vision" value="Concerns"><label for="ix-vision-c">Concerns</label></div>
+                </div>
+              </fieldset>
+              <fieldset class="ix-group" id="ix-dent" data-if="notchild" data-sum="Dentures">
+                <legend>Dentures</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-dent-none" name="dentures" value="None"><label for="ix-dent-none">None</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-dent-up" name="dentures" value="Upper"><label for="ix-dent-up">Upper</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-dent-low" name="dentures" value="Lower"><label for="ix-dent-low">Lower</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-dent-both" name="dentures" value="Upper and lower"><label for="ix-dent-both">Upper and lower</label></div>
+                </div>
+              </fieldset>
+
+              <fieldset class="ix-group" id="ix-prior" data-sum="Prior speech therapy">
+                <legend>Prior speech, language, or swallowing therapy?</legend>
+                <div class="ix-opts cols">
+                  <div class="ix-opt"><input type="radio" id="ix-prior-y" name="prior_therapy" value="Yes"><label for="ix-prior-y">Yes</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-prior-n" name="prior_therapy" value="No"><label for="ix-prior-n">No</label></div>
+                </div>
+              </fieldset>
+              <div class="row2" data-if="prior" hidden>
+                <div class="field">
+                  <label for="ix-prior-where">Where</label>
+                  <input type="text" id="ix-prior-where" name="prior_where" autocomplete="off" data-sum="Prior therapy, where">
+                </div>
+                <div class="field">
+                  <label for="ix-prior-when">When</label>
+                  <input type="text" id="ix-prior-when" name="prior_when" autocomplete="off" data-sum="Prior therapy, when">
+                </div>
+              </div>
+
+              <div class="ix-sub" data-if="swallow" hidden>
+                <h3>Swallowing details</h3>
+                <p class="ix-hint" id="ix-iddsi-hint">IDDSI levels are the international standard for diet textures; choose Not sure if you do not know.</p>
+                <fieldset class="ix-group" id="ix-diet" data-sum="Diet texture" aria-describedby="ix-iddsi-hint">
+                  <legend>Current diet texture</legend>
+                  <div class="ix-opts">
+                    <div class="ix-opt"><input type="radio" id="ix-diet-reg" name="diet" value="Regular"><label for="ix-diet-reg">Regular</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-diet-soft" name="diet" value="Soft and bite sized"><label for="ix-diet-soft">Soft and bite sized</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-diet-minced" name="diet" value="Minced and moist"><label for="ix-diet-minced">Minced and moist</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-diet-puree" name="diet" value="Pureed"><label for="ix-diet-puree">Pureed</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-diet-liq" name="diet" value="Liquidized"><label for="ix-diet-liq">Liquidized</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-diet-tube" name="diet" value="Tube feeding"><label for="ix-diet-tube">Tube feeding</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-diet-ns" name="diet" value="Not sure"><label for="ix-diet-ns">Not sure</label></div>
+                  </div>
+                </fieldset>
+                <fieldset class="ix-group" id="ix-liquid" data-sum="Liquids" aria-describedby="ix-iddsi-hint">
+                  <legend>Liquids</legend>
+                  <div class="ix-opts">
+                    <div class="ix-opt"><input type="radio" id="ix-liq-thin" name="liquids" value="Thin"><label for="ix-liq-thin">Thin</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-liq-slight" name="liquids" value="Slightly thick"><label for="ix-liq-slight">Slightly thick</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-liq-mild" name="liquids" value="Mildly thick"><label for="ix-liq-mild">Mildly thick</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-liq-mod" name="liquids" value="Moderately thick"><label for="ix-liq-mod">Moderately thick</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-liq-ext" name="liquids" value="Extremely thick"><label for="ix-liq-ext">Extremely thick</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-liq-ns" name="liquids" value="Not sure"><label for="ix-liq-ns">Not sure</label></div>
+                  </div>
+                </fieldset>
+                <fieldset class="ix-group" id="ix-cough" data-sum="Coughing or choking during meals">
+                  <legend>Coughing or choking during meals?</legend>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-cough-y" name="coughing" value="Yes"><label for="ix-cough-y">Yes</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-cough-n" name="coughing" value="No"><label for="ix-cough-n">No</label></div>
+                  </div>
+                </fieldset>
+                <fieldset class="ix-group" id="ix-wt" data-sum="Unplanned weight loss">
+                  <legend>Unplanned weight loss?</legend>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-wt-y" name="weight_loss" value="Yes"><label for="ix-wt-y">Yes</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-wt-n" name="weight_loss" value="No"><label for="ix-wt-n">No</label></div>
+                  </div>
+                </fieldset>
+                <fieldset class="ix-group" id="ix-study" data-sum="Recent swallow study">
+                  <legend>Recent swallow study?</legend>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-study-y" name="swallow_study" value="Yes"><label for="ix-study-y">Yes</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-study-n" name="swallow_study" value="No"><label for="ix-study-n">No</label></div>
+                  </div>
+                </fieldset>
+                <div class="field" data-if="study" hidden>
+                  <label for="ix-study-date">Date of swallow study, if known</label>
+                  <input type="date" id="ix-study-date" name="swallow_study_date" autocomplete="off" data-sum="Swallow study date">
+                </div>
+              </div>
+
+              <div class="ix-sub" data-if="child" hidden>
+                <h3>School details</h3>
+                <div class="row2">
+                  <div class="field">
+                    <label for="ix-school">School name</label>
+                    <input type="text" id="ix-school" name="school" autocomplete="off" data-sum="School">
+                  </div>
+                  <div class="field">
+                    <label for="ix-grade">Grade</label>
+                    <select id="ix-grade" name="grade" data-sum="Grade">
+                      <option value="">Choose a grade</option>
+                      <option>Kindergarten</option><option>1st</option><option>2nd</option><option>3rd</option><option>4th</option><option>5th</option><option>6th</option><option>7th</option><option>8th</option><option>9th</option><option>10th</option><option>11th</option><option>12th</option><option>Not in school</option>
+                    </select>
+                  </div>
+                </div>
+                <fieldset class="ix-group" id="ix-stype" data-sum="School type">
+                  <legend>School type</legend>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-stype-pub" name="school_type" value="Public"><label for="ix-stype-pub">Public</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-stype-ch" name="school_type" value="Charter"><label for="ix-stype-ch">Charter</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-stype-pri" name="school_type" value="Private"><label for="ix-stype-pri">Private</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-stype-home" name="school_type" value="Homeschool"><label for="ix-stype-home">Homeschool</label></div>
+                  </div>
+                </fieldset>
+                <fieldset class="ix-group" id="ix-iep" data-sum="IEP or 504 plan">
+                  <legend>IEP or 504 plan?</legend>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-iep-y" name="iep" value="Yes"><label for="ix-iep-y">Yes</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-iep-n" name="iep" value="No"><label for="ix-iep-n">No</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-iep-p" name="iep" value="In process"><label for="ix-iep-p">In process</label></div>
+                  </div>
+                </fieldset>
+                <fieldset class="ix-group" id="ix-sslp" data-sum="School speech services now">
+                  <legend>Currently receiving speech services at school?</legend>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-sslp-y" name="school_speech" value="Yes"><label for="ix-sslp-y">Yes</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-sslp-n" name="school_speech" value="No"><label for="ix-sslp-n">No</label></div>
+                  </div>
+                </fieldset>
+                <div class="field">
+                  <label for="ix-devdx">Developmental or medical diagnoses</label>
+                  <textarea id="ix-devdx" name="child_diagnoses" rows="3" data-sum="Developmental or medical diagnoses"></textarea>
+                </div>
+                <div class="field">
+                  <label for="ix-teacher">Teacher concerns</label>
+                  <textarea id="ix-teacher" name="teacher_concerns" rows="3" data-sum="Teacher concerns" aria-describedby="ix-teacher-hint"></textarea>
+                  <p class="ix-hint" id="ix-teacher-hint">What the teacher has noticed in class.</p>
+                </div>
+                <div class="field">
+                  <label for="ix-times">Best days and times for after school sessions</label>
+                  <input type="text" id="ix-times" name="session_times" autocomplete="off" data-sum="Best session times" aria-describedby="ix-times-hint">
+                  <p class="ix-hint" id="ix-times-hint">For example: Tuesdays and Thursdays after 3:30.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- STEP 5 -->
+            <section class="ix-step" data-step="5" data-title="Physician" aria-labelledby="ix-s5-t" hidden>
+              <h2 id="ix-s5-t" tabindex="-1">Physician</h2>
+              <div class="note">
+                <p>For Medicare, your physician, nurse practitioner, or physician assistant certifies the plan of care. We will send it to them.</p>
+              </div>
+              <div class="field">
+                <label for="ix-md-name">Primary or referring physician name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="ix-md-name" name="physician_name" autocomplete="off" required data-sum="Physician" data-msg="Please enter the physician's name." aria-describedby="ix-md-name-err">
+                <p class="err" id="ix-md-name-err"></p>
+              </div>
+              <div class="field">
+                <label for="ix-md-practice">Practice name</label>
+                <input type="text" id="ix-md-practice" name="physician_practice" autocomplete="off" data-sum="Practice">
+              </div>
+              <div class="row2">
+                <div class="field">
+                  <label for="ix-md-phone">Phone</label>
+                  <input type="tel" id="ix-md-phone" name="physician_phone" autocomplete="off" inputmode="tel" data-fmt="tel" data-sum="Physician phone" aria-describedby="ix-md-phone-err">
+                  <p class="err" id="ix-md-phone-err"></p>
+                </div>
+                <div class="field">
+                  <label for="ix-md-fax">Fax</label>
+                  <input type="tel" id="ix-md-fax" name="physician_fax" autocomplete="off" inputmode="tel" data-fmt="tel" data-sum="Physician fax" aria-describedby="ix-md-fax-err">
+                  <p class="err" id="ix-md-fax-err"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="ix-md-npi">Physician NPI (optional)</label>
+                <input type="text" id="ix-md-npi" name="physician_npi" autocomplete="off" inputmode="numeric" maxlength="10" data-fmt="npi" data-sum="Physician NPI" aria-describedby="ix-md-npi-hint ix-md-npi-err">
+                <p class="ix-hint" id="ix-md-npi-hint">10 digits. Leave blank if you do not know it; we can look it up.</p>
+                <p class="err" id="ix-md-npi-err"></p>
+              </div>
+            </section>
+
+            <!-- STEP 6 -->
+            <section class="ix-step" data-step="6" data-title="Payment" aria-labelledby="ix-s6-t" hidden>
+              <h2 id="ix-s6-t" tabindex="-1">Payment</h2>
+              <fieldset class="ix-group" id="ix-pay" data-req data-sum="Payment method" aria-describedby="ix-pay-err">
+                <legend>How will you pay for therapy? <span class="req" aria-hidden="true">*</span></legend>
+                <div class="ix-opts">
+                  <div class="ix-opt"><input type="radio" id="ix-pay-medicare" name="payment" value="medicare" required><label for="ix-pay-medicare">Medicare Part B</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-pay-private" name="payment" value="private" required><label for="ix-pay-private">Private pay</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-pay-superbill" name="payment" value="superbill" required><label for="ix-pay-superbill">Private pay with a superbill for my own insurance</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-pay-stepup" name="payment" value="stepup" required><label for="ix-pay-stepup">Step Up For Students Unique Abilities scholarship</label></div>
+                  <div class="ix-opt"><input type="radio" id="ix-pay-facility" name="payment" value="facility" required><label for="ix-pay-facility">Facility contract</label></div>
+                </div>
+                <p class="err" id="ix-pay-err"></p>
+              </fieldset>
+
+              <div class="ix-sub" data-if="medicare" hidden>
+                <h3>Medicare</h3>
+                <div class="field">
+                  <label for="ix-mbi">Medicare number (MBI)</label>
+                  <input type="text" id="ix-mbi" name="mbi" autocomplete="off" inputmode="text" autocapitalize="characters" spellcheck="false" maxlength="13" data-fmt="mbi" data-sum="Medicare number" aria-describedby="ix-mbi-hint ix-mbi-err">
+                  <p class="ix-hint" id="ix-mbi-hint">11 characters, letters and numbers, printed on the red, white, and blue Medicare card. It starts with a number, for example 1EG4TE5MK73.</p>
+                  <p class="err" id="ix-mbi-err"></p>
+                </div>
+                <div class="row2">
+                  <div class="field">
+                    <label for="ix-sec-name">Secondary insurance name (optional)</label>
+                    <input type="text" id="ix-sec-name" name="secondary_insurance" autocomplete="off" data-sum="Secondary insurance">
+                  </div>
+                  <div class="field">
+                    <label for="ix-sec-id">Secondary member ID (optional)</label>
+                    <input type="text" id="ix-sec-id" name="secondary_member_id" autocomplete="off" spellcheck="false" data-sum="Secondary member ID">
+                  </div>
+                </div>
+                <fieldset class="ix-group" id="ix-ma" data-sum="Medicare Advantage plan" aria-describedby="ix-ma-hint">
+                  <legend>Do you have a Medicare Advantage plan?</legend>
+                  <p class="ix-hint" id="ix-ma-hint">The practice is not in network with Medicare Advantage plans at this time.</p>
+                  <div class="ix-opts cols">
+                    <div class="ix-opt"><input type="radio" id="ix-ma-y" name="medicare_advantage" value="Yes"><label for="ix-ma-y">Yes</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-ma-n" name="medicare_advantage" value="No"><label for="ix-ma-n">No</label></div>
+                    <div class="ix-opt"><input type="radio" id="ix-ma-ns" name="medicare_advantage" value="Not sure"><label for="ix-ma-ns">Not sure</label></div>
+                  </div>
+                </fieldset>
+                <div class="field" data-if="ma" hidden>
+                  <label for="ix-ma-name">Medicare Advantage plan name</label>
+                  <input type="text" id="ix-ma-name" name="medicare_advantage_plan" autocomplete="off" data-sum="Medicare Advantage plan name">
+                </div>
+              </div>
+
+              <div class="ix-sub" data-if="private" hidden>
+                <h3>Private pay rates</h3>
+                <ul class="ix-rates">
+                  <li><span>Comprehensive evaluation, with written report</span><span>$275</span></li>
+                  <li><span>Treatment session, 60 minutes</span><span>$175</span></li>
+                  <li><span>Treatment session, 45 minutes</span><span>$135</span></li>
+                  <li><span>Treatment session, 30 minutes</span><span>$100</span></li>
+                  <li><span>Package of 8 sixty minute sessions</span><span>$1,280</span></li>
+                  <li><span>Home visit travel fee, per visit</span><span>+$25</span></li>
+                </ul>
+                <p class="ix-hint" data-if="superbill" hidden>We give you a superbill after each visit to submit to your own insurance. Reimbursement depends on your plan.</p>
+              </div>
+
+              <div class="ix-sub" data-if="stepup" hidden>
+                <h3>Step Up For Students</h3>
+                <p class="ix-hint">Unique Abilities scholarship. Provider approval is in progress, so scholarship funds cannot be used yet.</p>
+                <div class="field">
+                  <label for="ix-stepup-id">Student ID (optional)</label>
+                  <input type="text" id="ix-stepup-id" name="stepup_student_id" autocomplete="off" spellcheck="false" data-sum="Step Up student ID">
+                </div>
+              </div>
+
+              <div class="note" data-if="facilitypay" hidden>
+                <p>We confirm contract details with the facility before the first visit.</p>
+              </div>
+
+              <div class="note">
+                <p>We never collect card numbers online. We will collect payment securely at your first visit.</p>
+              </div>
+            </section>
+
+            <!-- STEP 7 -->
+            <section class="ix-step" data-step="7" data-title="Consents and acknowledgments" aria-labelledby="ix-s7-t" hidden>
+              <h2 id="ix-s7-t" tabindex="-1">Consents and acknowledgments</h2>
+              <p class="ix-hint">Each item has a short summary. Open Read full text for the complete wording.</p>
+
+              <div class="ix-consent">
+                <h3>Consent to evaluation and treatment</h3>
+                <p>You agree that a licensed speech language pathologist may evaluate and treat the patient at home or in a facility.</p>
+                <details><summary>Read full text</summary><p>The complete policy text will be provided before your first visit.</p></details>
+                <div class="ix-check"><input type="checkbox" id="ix-cn-treat" name="consent_treatment" value="Agreed" required data-sum="Consent to evaluation and treatment" data-msg="Please check this box to continue." aria-describedby="ix-cn-treat-err"><label for="ix-cn-treat">I consent to evaluation and treatment. <span class="req" aria-hidden="true">*</span></label></div>
+                <p class="err" id="ix-cn-treat-err"></p>
+              </div>
+
+              <div class="ix-consent">
+                <h3>Notice of Privacy Practices</h3>
+                <p>The notice explains how we use and protect health information and your rights. You can ask for a paper copy at any time.</p>
+                <details><summary>Read full text</summary><p>The complete policy text will be provided before your first visit.</p></details>
+                <div class="ix-check"><input type="checkbox" id="ix-cn-npp" name="consent_npp" value="Agreed" required data-sum="Notice of Privacy Practices received" data-msg="Please check this box to continue." aria-describedby="ix-cn-npp-err"><label for="ix-cn-npp">I acknowledge receipt of the Notice of Privacy Practices. <span class="req" aria-hidden="true">*</span></label></div>
+                <p class="err" id="ix-cn-npp-err"></p>
+              </div>
+
+              <div class="ix-consent">
+                <h3>Financial and cancellation policy</h3>
+                <p>You are responsible for charges your coverage does not pay. Cancellation terms will be confirmed in writing before your first visit.</p>
+                <details><summary>Read full text</summary><p>The complete policy text will be provided before your first visit.</p></details>
+                <div class="ix-check"><input type="checkbox" id="ix-cn-fin" name="consent_financial" value="Agreed" required data-sum="Financial and cancellation policy" data-msg="Please check this box to continue." aria-describedby="ix-cn-fin-err"><label for="ix-cn-fin">I agree to the financial and cancellation policy. <span class="req" aria-hidden="true">*</span></label></div>
+                <p class="err" id="ix-cn-fin-err"></p>
+              </div>
+
+              <div class="ix-consent">
+                <h3>Authorization to communicate</h3>
+                <p>You allow us to share evaluation results, the plan of care, and updates with the physician above and with the family members you name here.</p>
+                <details><summary>Read full text</summary><p>The complete policy text will be provided before your first visit.</p></details>
+                <fieldset class="ix-group" id="ix-people-set" aria-describedby="ix-people-hint">
+                  <legend>Family members we may talk with (up to 3)</legend>
+                  <p class="ix-hint" id="ix-people-hint">Optional. Leave blank if you only want us to talk with the physician.</p>
+                  <div id="ix-people" class="stack-sm"></div>
+                  <div><button type="button" class="btn ghost" id="ix-add-person">Add another</button></div>
+                </fieldset>
+                <div class="ix-check"><input type="checkbox" id="ix-cn-comm" name="consent_communicate" value="Agreed" required data-sum="Authorization to communicate" data-msg="Please check this box to continue." aria-describedby="ix-cn-comm-err"><label for="ix-cn-comm">I authorize communication with the physician and the people named above. <span class="req" aria-hidden="true">*</span></label></div>
+                <p class="err" id="ix-cn-comm-err"></p>
+              </div>
+
+              <div class="note" data-if="medicare" hidden>
+                <span class="eyebrow">Medicare note</span>
+                <p>If a service may not be covered, we will ask you to sign an Advance Beneficiary Notice before that service.</p>
+              </div>
+
+              <div class="ix-consent" data-if="child" hidden>
+                <h3>Consent for a minor</h3>
+                <div class="ix-check"><input type="checkbox" id="ix-cn-minor" name="consent_minor" value="Agreed" required data-sum="Parent or guardian consent for a minor" data-msg="Please check this box to continue." aria-describedby="ix-cn-minor-err"><label for="ix-cn-minor">I am the parent or legal guardian and consent for this child. <span class="req" aria-hidden="true">*</span></label></div>
+                <p class="err" id="ix-cn-minor-err"></p>
+              </div>
+            </section>
+
+            <!-- STEP 8 -->
+            <section class="ix-step" data-step="8" data-title="Review and sign" aria-labelledby="ix-s8-t" hidden>
+              <h2 id="ix-s8-t" tabindex="-1">Review and sign</h2>
+              <p class="ix-hint">Check your answers. Use Edit to change anything.</p>
+              <div class="ix-sum" id="ix-summary"></div>
+
+              <div class="ix-sub">
+                <h3>Electronic signature</h3>
+                <div class="field">
+                  <label for="ix-sig-name">Your full legal name <span class="req" aria-hidden="true">*</span></label>
+                  <input type="text" id="ix-sig-name" name="signature_name" autocomplete="name" required data-msg="Please type your full legal name." aria-describedby="ix-sig-name-err">
+                  <p class="err" id="ix-sig-name-err"></p>
+                </div>
+                <div class="row2">
+                  <div class="field">
+                    <label for="ix-sig-rel">Relationship to patient <span class="req" aria-hidden="true">*</span></label>
+                    <select id="ix-sig-rel" name="signature_relationship" required data-msg="Please choose your relationship to the patient." aria-describedby="ix-sig-rel-err">
+                      <option value="">Choose one</option>
+                      <option>Self</option><option>Parent</option><option>Legal guardian</option><option>Healthcare surrogate</option><option>Power of attorney</option><option>Other</option>
+                    </select>
+                    <p class="err" id="ix-sig-rel-err"></p>
+                  </div>
+                  <div class="field">
+                    <label for="ix-sig-date">Date</label>
+                    <input type="text" id="ix-sig-date" name="signature_date" readonly>
+                  </div>
+                </div>
+                <div class="ix-check"><input type="checkbox" id="ix-sig-agree" name="esign_agree" value="Agreed" required data-msg="Please check this box to sign." aria-describedby="ix-sig-agree-err"><label for="ix-sig-agree">I agree that typing my name is my electronic signature. <span class="req" aria-hidden="true">*</span></label></div>
+                <p class="err" id="ix-sig-agree-err"></p>
+              </div>
+            </section>
+
+            <div class="ix-nav">
+              <button type="button" class="btn ghost" id="ix-back">Back</button>
+              <button type="button" class="btn" id="ix-next">Continue</button>
+              <button type="submit" class="btn" id="ix-submit" hidden>Submit intake</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Confirmation -->
+        <div class="confirm" id="ix-done" hidden tabindex="-1" role="status">
+          <h3>Intake complete</h3>
+          <p id="ix-done-text"></p>
+          <div class="btns">
+            <button type="button" class="btn" id="ix-restart">Start over</button>
+            <a class="btn ghost" href="./">Back to home</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30.0 L3 30.8 L6 30.9 L9 30.1 L12 29.2 L15 28.9 L18 29.5 L21 30.6 L24 31.4 L27 31.2 L30 30.1 L33 28.7 L36 28.0 L39 28.5 L42 30.1 L45 31.8 L48 32.7 L51 32.2 L54 30.4 L57 28.0 L60 26.4 L63 26.3 L66 28.1 L69 31.0 L72 34.0 L75 35.4 L78 34.7 L81 31.9 L84 27.9 L87 24.4 L90 22.8 L93 23.8 L96 27.3 L99 32.1 L102 36.4 L105 38.6 L108 37.9 L111 34.5 L114 29.4 L117 24.3 L120 21.1 L123 20.7 L126 23.4 L129 28.1 L132 33.4 L135 37.6 L138 39.3 L141 38.0 L144 34.3 L147 29.4 L150 24.8 L153 22.0 L156 21.8 L159 24.1 L162 28.3 L165 32.8 L168 36.3 L171 37.6 L174 36.5 L177 33.2 L180 29.0 L183 25.1 L186 23.0 L189 23.3 L192 26.0 L195 30.2 L198 34.3 L201 36.9 L204 36.9 L207 34.2 L210 29.7 L213 25.1 L216 22.4 L219 22.8 L222 26.4 L225 32.0 L228 37.1 L231 39.3 L234 37.0 L237 30.8 L240 23.6 L243 19.0 L246 20.0 L249 27.0 L252 36.7 L255 43.4 L258 42.5 L261 33.3 L264 20.7 L267 13.2 L270 16.7 L273 30.4 L276 45.2 L279 49.6 L282 38.7 L285 19.7 L288 7.9 L291 14.7 L294 35.7 L297 52.6 L300 48.7 L303 26.1 L306 6.7 L309 11.3 L312 36.2 L315 54.2 L318 44.2 L321 17.7 L324 6.8 L327 25.5 L330 49.6 L333 46.4 L336 20.4 L339 9.3 L342 29.7 L345 49.7 L348 37.1 L351 13.5 L354 19.7 L357 43.4 L360 40.8 L363 18.3 L366 20.6 L369 41.4 L372 36.5 L375 18.3 L378 27.8 L381 41.1 L384 26.9 L387 21.9 L390 37.7 L393 31.9 L396 21.8 L399 35.2 L402 32.4 L405 23.1 L408 35.4 L411 29.8 L414 25.5 L417 36.1 L420 25.6 L423 31.2 L426 32.1 L429 25.7 L432 35.3 L435 24.8 L438 34.4 L441 26.5 L444 32.7 L447 28.0 L450 31.8 L453 28.1 L456 32.4 L459 26.6 L462 34.8 L465 23.8 L468 37.2 L471 23.3 L474 34.0 L477 31.2 L480 23.0 L483 39.4 L486 25.4 L489 24.5 L492 41.0 L495 26.9 L498 19.6 L501 38.1 L504 39.4 L507 20.9 L510 18.7 L513 35.4 L516 44.3 L519 35.0 L522 20.6 L525 15.4 L528 21.3 L531 31.9 L534 40.3 L537 43.9 L540 43.3 L543 40.5 L546 37.1 L549 34.2 L552 32.2 L555 31.1 L558 30.8 L561 31.3 L564 32.3 L567 33.7 L570 35.3 L573 36.9 L576 38.1 L579 38.9 L582 39.0 L585 38.4 L588 37.4 L591 36.1 L594 34.7 L597 33.6 L600 32.8 L603 32.7 L606 33.1 L609 34.2 L612 35.9 L615 37.4 L618 37.6 L621 34.7 L624 28.2 L627 22.3 L630 25.2 L633 36.2 L636 35.0 L639 21.6 L642 32.6 L645 34.0 L648 22.4 L651 38.9 L654 21.2 L657 36.5 L660 30.0 L663 20.6 L666 39.4 L669 37.5 L672 22.5 L675 16.6 L678 19.2 L681 22.8 L684 23.5 L687 20.3 L690 15.1 L693 14.7 L696 28.2 L699 46.5 L702 36.1 L705 11.6 L708 37.3 L711 38.6 L714 12.5 L717 49.8 L720 10.5 L723 49.2 L726 10.2 L729 50.4 L732 11.3 L735 42.2 L738 29.8 L741 16.7 L744 49.7 L747 18.3 L750 23.4 L753 48.5 L756 19.6 L759 20.4 L762 47.0 L765 27.7 L768 15.3 L771 40.8 L774 37.5 L777 15.7 L780 31.2 L783 42.5 L786 21.3 L789 24.3 L792 41.9 L795 26.3 L798 22.2 L801 40.1 L804 27.5 L807 23.4 L810 39.4 L813 25.0 L816 27.9 L819 37.3 L822 21.8 L825 35.5 L828 28.8 L831 27.0 L834 35.9 L837 22.7 L840 37.6 L843 22.9 L846 36.4 L849 24.3 L852 35.3 L855 24.8 L858 35.4 L861 24.0 L864 36.8 L867 22.4 L870 38.0 L873 22.4 L876 35.7 L879 27.8 L882 27.5 L885 37.0 L888 20.9 L891 36.9 L894 29.7 L897 22.8 L900 39.9 L903 25.6 L906 24.2 L909 40.6 L912 26.5 L915 21.7 L918 39.5 L921 33.0 L924 18.8 L927 31.1 L930 41.0 L933 27.0 L936 19.3 L939 32.6 L942 40.8 L945 29.9 L948 19.6 L951 25.8 L954 37.8 L957 38.6 L960 28.4 L963 20.7 L966 23.8 L969 33.1 L972 38.8 L975 36.4 L978 29.0 L981 22.8 L984 21.9 L987 26.1 L990 32.3 L993 36.9 L996 38.1 L999 36.0 L1002 31.8 L1005 27.3 L1008 23.8 L1011 22.1 L1014 22.0 L1017 23.3 L1020 25.4 L1023 27.8 L1026 30.1 L1029 32.1 L1032 33.7 L1035 34.8 L1038 35.6 L1041 36.0 L1044 36.2 L1047 36.2 L1050 36.0 L1053 35.6 L1056 35.0 L1059 34.2 L1062 33.2 L1065 31.9 L1068 30.4 L1071 28.7 L1074 27.0 L1077 25.7 L1080 24.9 L1083 25.0 L1086 26.1 L1089 28.1 L1092 30.6 L1095 32.9 L1098 34.1 L1101 33.6 L1104 31.5 L1107 28.7 L1110 26.7 L1113 26.8 L1116 29.1 L1119 32.0 L1122 33.2 L1125 31.6 L1128 28.5 L1131 27.1 L1134 29.0 L1137 32.0 L1140 32.4 L1143 29.5 L1146 27.5 L1149 29.4 L1152 32.2 L1155 31.1 L1158 28.1 L1161 28.9 L1164 31.9 L1167 30.7 L1170 28.1 L1173 30.1 L1176 31.7 L1179 28.9 L1182 29.2 L1185 31.6 L1188 29.3 L1191 29.2 L1194 31.5 L1197 29.0 L1200 30.0"/></svg>
+    <div class="top">
+      <div class="brand">
+        <a href="./" aria-label="The Visiting Voice, home"><span class="wm-name">The Visiting Voice</span><span class="wm-sub">SPEECH · LANGUAGE · SWALLOWING</span></a>
+        <p>Concierge speech, language, and swallowing therapy for older adults and school age children.</p>
+        <p>Lake&nbsp;Nona, Orlando, Florida</p>
+      </div>
+      <nav aria-label="Footer" class="ft-col ft-nav">
+        <p class="ft-h">Explore</p>
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="adult-care">Adult Care</a></li>
+          <li><a href="school-age">School Age</a></li>
+          <li><a href="families">For Families</a></li>
+          <li><a href="facilities">For Facilities</a></li>
+          <li><a href="pricing">Pricing</a></li>
+          <li><a href="service-areas">Service Areas</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="careers">Careers</a></li>
+          <li><a href="faq">FAQ</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="intake" aria-current="page">Patient Intake</a></li>
+        </ul>
+      </nav>
+      <div class="ft-col ft-contact">
+        <p class="ft-h">Reach us</p>
+        <a href="contact">Request a Consultation</a>
+        <a href="contact?for=facility" data-audience="facility">Discuss a Partnership</a>
+        <a href="facilities#referrals">Send a Referral</a>
+      </div>
+    </div>
+    <div class="ft-areas"><span class="ft-h">Speech therapy in</span><a href="service-areas/lake-nona">Lake Nona</a><a href="service-areas/orlando">Orlando</a><a href="service-areas/winter-park">Winter Park</a><a href="service-areas/kissimmee">Kissimmee</a><a href="service-areas/st-cloud">St. Cloud</a><a href="service-areas/celebration">Celebration</a><a href="service-areas/dr-phillips">Dr. Phillips</a><a href="service-areas/windermere">Windermere</a><a href="service-areas/oviedo">Oviedo</a><a href="service-areas/lake-mary">Lake Mary</a></div>
+    <div class="bottom">
+      <span>Florida licensed speech language pathologist</span>
+      <span>Whitney Albert, M.S., CCC-SLP</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js" defer></script>
+<script src="assets/intake.js" defer></script>
+</body>
+</html>
