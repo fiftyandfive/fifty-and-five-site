@@ -28,6 +28,8 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: '/wine-social-media-marketing-agency', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/press', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/audit-checklist', changeFrequency: 'yearly', priority: 0.6 },
+  { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
+  { path: '/terms', changeFrequency: 'yearly', priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

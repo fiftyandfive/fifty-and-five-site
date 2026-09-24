@@ -66,6 +66,14 @@ export function Footer() {
                   {SITE.email}
                 </a>
               </li>
+              <li>
+                <a
+                  href={`tel:${SITE.phone.e164}`}
+                  className="hover:text-text-primary transition-colors"
+                >
+                  {SITE.phone.display}
+                </a>
+              </li>
               <li>{SITE.location}</li>
               <li>
                 <Link href="/review" className="hover:text-text-primary transition-colors">
@@ -144,7 +152,16 @@ export function Footer() {
             </Link>
           </div>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-            <div>© 2026 Fifty &amp; Five LLC · Orlando, FL</div>
+            <div>
+              © 2026 Fifty &amp; Five LLC · Orlando, FL ·{' '}
+              <Link href="/privacy" className="hover:text-text-primary transition-colors">
+                Privacy
+              </Link>{' '}
+              ·{' '}
+              <Link href="/terms" className="hover:text-text-primary transition-colors">
+                Terms
+              </Link>
+            </div>
             <div>{`Senior + AI · Since ${FACTS.founded} · ${FACTS.brandsManaged} brands across ${FACTS.continents} continents · Most clients ${FACTS.avgRetainerYears}+ years · The agency built for the next decade.`}</div>
           </div>
         </div>

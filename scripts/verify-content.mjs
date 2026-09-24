@@ -153,8 +153,13 @@ check('no em dashes in new copy files', emDashHits.length === 0, emDashHits.join
 // Skips itself when git history is unavailable (shallow clone): being unable
 // to prove a date is not the same as the date being wrong.
 {
+  // A file with uncommitted edits counts as changed today. Reading commit dates
+  // alone let a stale date through until the next commit, one step too late.
+  const today = new Date().toISOString().slice(0, 10);
   const gitDate = (file) => {
     try {
+      const dirty = execSync(`git status --porcelain -- '${file}' 2>/dev/null`, { cwd: ROOT }).toString().trim();
+      if (dirty) return today;
       return execSync(`git log -1 --format=%cs -- '${file}' 2>/dev/null`, { cwd: ROOT }).toString().trim();
     } catch { return ''; }
   };
@@ -203,6 +208,23 @@ check('no em dashes in new copy files', emDashHits.length === 0, emDashHits.join
       stale.length === 0,
       stale.join(' | '),
     );
+  }
+}
+
+// ── 10. SMS consent copy matches the approved compliance file ─────────
+{
+  const md = fs.readFileSync(path.join(ROOT, 'fiftyandfive-sms-compliance.md'), 'utf8');
+  const lib = fs.readFileSync(path.join(ROOT, 'lib/sms-consent.ts'), 'utf8');
+  const constants = ['SMS_CONSENT_LABEL', 'SMS_PHONE_LABEL', 'SMS_PHONE_HELPER', 'SMS_PHONE_REQUIRED_ERROR'];
+  const drift = constants.filter((name) => {
+    // \s* spans the line break when the value sits on the next line.
+    const m = lib.match(new RegExp(`${name}\\s*=\\s*'([^']*)'`));
+    return !m || !md.includes(m[1]);
+  });
+  check('SMS consent copy in lib/sms-consent.ts matches fiftyandfive-sms-compliance.md verbatim', drift.length === 0, drift.join(', '));
+  for (const route of ['/privacy', '/terms']) {
+    const out = html(route);
+    check(`${route} prerendered with policy text`, !!out && /Effective September/.test(out) && /hello@fiftyandfive\.com/.test(out));
   }
 }
 
