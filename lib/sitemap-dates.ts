@@ -52,7 +52,7 @@ export const PAGE_UPDATED: Record<string, string> = {
   '/audit': '2026-09-15',
   '/about': '2026-09-15',
   '/contact': '2026-09-24',
-  '/blog': '2026-09-15',
+  '/blog': '2026-09-24',
   '/orlando-social-media-agency': '2026-09-15',
   '/franchise-social-media-agency': '2026-09-15',
   '/fractional-cmo-orlando': '2026-09-15',
