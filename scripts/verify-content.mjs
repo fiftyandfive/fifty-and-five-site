@@ -153,6 +153,8 @@ check('no em dashes in new copy files', emDashHits.length === 0, emDashHits.join
 // Skips itself when git history is unavailable (shallow clone): being unable
 // to prove a date is not the same as the date being wrong.
 {
+  // Author date, not committer date: a rebase rewrites the committer date to
+  // the moment of the rebase, which made every page look edited that day.
   // A file with uncommitted edits counts as changed today. Reading commit dates
   // alone let a stale date through until the next commit, one step too late.
   const today = new Date().toISOString().slice(0, 10);
@@ -160,7 +162,7 @@ check('no em dashes in new copy files', emDashHits.length === 0, emDashHits.join
     try {
       const dirty = execSync(`git status --porcelain -- '${file}' 2>/dev/null`, { cwd: ROOT }).toString().trim();
       if (dirty) return today;
-      return execSync(`git log -1 --format=%cs -- '${file}' 2>/dev/null`, { cwd: ROOT }).toString().trim();
+      return execSync(`git log -1 --format=%as -- '${file}' 2>/dev/null`, { cwd: ROOT }).toString().trim();
     } catch { return ''; }
   };
   const hasGit = (() => {
