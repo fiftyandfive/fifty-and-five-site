@@ -14,6 +14,52 @@ import { SelectedWork } from '@/components/ui/SelectedWork';
 import { VERTICAL_COLOR_HEX, getCaseStudy } from '@/lib/data/caseStudies';
 import { VERTICALS } from '@/lib/data/verticals';
 
+const VERTICAL_NAMES = VERTICALS.map((v) => v.name).join(', ');
+
+// Rendered visibly near the foot of the page and as FAQPage schema from this
+// one array. Corrections from the previous hidden version: the vertical list
+// now comes from the vertical data (it named Education, which is not one of
+// the twelve), and the "one of the only boutique agencies" claim is replaced
+// with what the client list actually shows.
+const HOME_FAQS = [
+  {
+    q: 'What is Fifty & Five?',
+    a: 'Fifty & Five is a boutique senior-led social media and content agency founded in 2008. The agency has managed social media for 222+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, Warner Bros., Tupperware, Resorts World, and Blaze Pizza.',
+  },
+  {
+    q: 'Where is Fifty & Five located?',
+    a: 'Fifty & Five is based at 1001 N Orange Ave in Orlando, Florida, and serves clients across the United States, Latin America, Europe, Asia, and Oceania.',
+  },
+  {
+    q: 'How long has Fifty & Five been in business?',
+    a: 'Fifty & Five was founded in 2008 by Lucas Vandenberg, which makes 18 years, and has retained some clients, including Mezzacorona, for over a decade.',
+  },
+  {
+    q: 'What industries does Fifty & Five specialize in?',
+    a: `Fifty & Five works across ${FACTS.verticals} verticals: ${VERTICAL_NAMES}. Wine and spirits is the deepest, with ${FACTS.wineSpiritsBrands} brands.`,
+  },
+  {
+    q: 'How much does Fifty & Five charge?',
+    a: 'New retainers start at $4,000/mo. Fractional CMO seats are priced separately and scoped to the function, not the deliverable.',
+  },
+  {
+    q: 'What makes Fifty & Five different from other social media agencies?',
+    a: 'A boutique, senior-led team with an enterprise client list, including Microsoft, Hasbro, Warner Bros., Enterprise Holdings, and Tupperware. Every account is run by senior practitioners on an AI-leveraged operating model, with no junior account managers.',
+  },
+  {
+    q: 'Does Fifty & Five work with international brands?',
+    a: 'Yes. Fifty & Five has worked with brands across 5 continents and 40+ countries, including Mezzacorona (Italy), Penfolds (Australia), Melora (New Zealand), Koenig (Germany), Happy Egg Co. (United Kingdom), Don Papa Rum (Philippines), and the Hong Kong, Korea, and Macau Tourism Boards.',
+  },
+  {
+    q: 'Why hire Fifty & Five instead of a fractional CMO?',
+    a: 'Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. Fifty & Five does both: senior marketing leadership that owns the number, plus the team that runs the work. A CMO typically runs one brand over a career. Fifty & Five has led marketing for 222+ brands across five continents since 2008.',
+  },
+  {
+    q: 'We already have a CMO. What does Fifty & Five do for us?',
+    a: 'Run the work. Fifty & Five operates as the senior execution arm behind an in-house marketing leader: social, content, paid, and creative, delivered by senior practitioners on named workstreams. Blaze Pizza ran as a ten-year national program on this model, and Enterprise Holdings ran six brands across the US and LATAM. Retainers start at $4,000/mo.',
+  },
+];
+
 export default function HomePage() {
   const featuredSlugs = ['blaze-pizza', 'resorts-world', 'kendall-jackson', 'enterprise-holdings'];
   const featured = featuredSlugs.map((s) => getCaseStudy(s)!).filter(Boolean);
@@ -26,80 +72,11 @@ export default function HomePage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'What is Fifty & Five?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Fifty & Five is a boutique senior-led social media and content agency founded in 2008. The agency has managed social media for 222+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, Warner Bros., Tupperware, Resorts World, and Blaze Pizza.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Where is Fifty & Five located?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Fifty & Five is headquartered in Orlando, Florida, and serves clients across the United States, Latin America, Europe, Asia, and Oceania.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How long has Fifty & Five been in business?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Fifty & Five was founded in 2008 by Lucas Vandenberg. The agency has been continuously operating for 18 years and has retained some clients, including Mezzacorona, for over a decade.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What industries does Fifty & Five specialize in?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: `Fifty & Five specializes in ${FACTS.verticals} verticals, including Wine and Spirits, Hospitality and Tourism, Restaurant and Food, Fitness and Wellness, Tech and SaaS, Retail and CPG, Healthcare, Real Estate, Automotive, Entertainment, Luxury, and Education.`,
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How much does Fifty & Five charge?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'New retainers start at $4,000/mo. Fractional CMO seats are priced separately and scoped to the function, not the deliverable.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'What makes Fifty & Five different from other social media agencies?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Fifty & Five is one of the only boutique social media agencies with an enterprise client list including Microsoft, Hasbro, Warner Bros., Enterprise Holdings, and Tupperware. Every account is run with senior-led practices and an AI-leveraged operating model.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Does Fifty & Five work with international brands?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. Fifty & Five has worked with brands across 5 continents and 40+ countries, including Mezzacorona (Italy), Penfolds (Australia), Melora (New Zealand), Koenig (Germany), Happy Egg Co. (United Kingdom), Don Papa Rum (Philippines), and the Hong Kong, Korea, and Macau Tourism Boards.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Why hire Fifty & Five instead of a fractional CMO?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Most fractional CMOs hand you a strategy and leave. Most agencies execute without one. Fifty & Five does both: senior marketing leadership that owns the number, plus the team that runs the work. A CMO typically runs one brand over a career. Fifty & Five has led marketing for 222+ brands across five continents since 2008.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'We already have a CMO. What does Fifty & Five do for us?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Run the work. Fifty & Five operates as the senior execution arm behind an in-house marketing leader: social, content, paid, and creative, delivered by senior practitioners on named workstreams. Blaze Pizza ran as a ten-year national program on this model, and Enterprise Holdings ran six brands across the US and LATAM. Retainers start at $4,000/mo.',
-                },
-              },
-            ],
+            mainEntity: HOME_FAQS.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
           }),
         }}
       />
@@ -109,7 +86,17 @@ export default function HomePage() {
       {/* PROOF STRIP: historical duration proof, not current-client claims */}
       <section className="container-edge py-10 md:py-12 border-t border-glass-border">
         <SimpleReveal y={8} duration={0.4} margin="-30%">
-          <p className="text-body text-text-secondary max-w-4xl leading-[1.7]">
+          <p className="text-body-lg text-text-primary max-w-4xl leading-[1.65]">
+            Fifty &amp; Five is a senior-led social media and marketing agency based in Orlando,
+            Florida. Brands hire us for social media strategy, management, content, community,
+            and paid social, and for marketing leadership when they need someone to own the plan.
+            Hiring close to home? See{' '}
+            <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">
+              social media management in Orlando
+            </Link>
+            .
+          </p>
+          <p className="mt-5 text-body text-text-secondary max-w-4xl leading-[1.7]">
             Blaze Pizza, a ten-year national program. Gruppo Mezzacorona, ten years across five
             portfolio brands. Enterprise Holdings, six brands across the US and LATAM.
           </p>
@@ -371,6 +358,27 @@ export default function HomePage() {
               </SimpleReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FAQ: rendered from HOME_FAQS, the same array as the FAQPage schema
+          above, so the markup always describes questions a visitor can read. */}
+      <section className="container-edge py-20 md:py-28">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Frequently asked
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            The questions people ask before the first call.
+          </h2>
+        </div>
+        <div className="mt-12 max-w-3xl space-y-5">
+          {HOME_FAQS.map((f) => (
+            <GlassCard key={f.q} className="p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">{f.q}</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6]">{f.a}</p>
+            </GlassCard>
+          ))}
         </div>
       </section>
 

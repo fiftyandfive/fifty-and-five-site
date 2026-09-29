@@ -1,235 +1,175 @@
 import Link from 'next/link';
-import { ProseSections, type ProseSectionData } from '@/components/ui/ProseSection';
 import type { Metadata } from 'next';
-import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
+import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { VerticalPill } from '@/components/ui/DurationBadge';
+import { getCaseStudy, VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
+import { FACTS } from '@/lib/site-facts';
+import { SITE } from '@/lib/constants';
+
+// Role of this page: the local service page for businesses in Orlando and
+// Central Florida hiring for social media. The Florida page covers statewide
+// reach, the industry pages carry sector depth, and the fractional CMO pages
+// cover marketing leadership. Copy here links out to those rather than
+// repeating them.
+//
+// Facts only. Local clients are listed as clients the agency has had, not as
+// current accounts, and the two documented local results are named for what
+// they were (website and search work), not presented as social retainers.
+// National and international work is labelled as such.
+
+const URL = 'https://fiftyandfive.com/orlando-social-media-agency';
+const DESCRIPTION =
+  'Social media management, content, community, and paid social from a senior-led agency based in Orlando. 222 brands since 2008. Retainers from $4,000/mo.';
 
 export const metadata: Metadata = {
   title: { absolute: 'Orlando Social Media Agency | Fifty & Five' },
-  description:
-    'Orlando social media agency for boutique to enterprise brands. Senior-led, no junior team. 222+ brands across 5 continents since 2008.',
-  alternates: { canonical: 'https://fiftyandfive.com/orlando-social-media-agency' },
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
   openGraph: {
     images: ['/opengraph-image'],
     title: 'Orlando Social Media Agency | Fifty & Five',
-    description:
-      'Boutique senior-led Orlando social media agency. 222+ brands since 2008. The Fortune 500 list with the local team.',
-    url: 'https://fiftyandfive.com/orlando-social-media-agency',
+    description: DESCRIPTION,
+    url: URL,
     type: 'website',
   },
 };
 
-const ORLANDO_CLIENTS = [
-  { name: 'BODYBar SoDo', vertical: 'Fitness' },
-  { name: 'Crafty Bartender', vertical: 'Beverage' },
-  { name: 'Solar Bears Orlando', vertical: 'Sports / Entertainment' },
-  { name: 'Andretti Indoor Karting', vertical: 'Entertainment' },
-  { name: 'Velocity Title', vertical: 'Real Estate' },
-  { name: 'Laser Lab', vertical: 'Aesthetics' },
-  { name: 'Chance 2 Dance', vertical: 'Nonprofit' },
-  { name: 'Teoxane SA (ASDS Orlando)', vertical: 'Medical Aesthetics' },
+const SERVICES = [
+  {
+    name: 'Social media strategy',
+    text: 'Month one is discovery: the category, the competitive field, and the plan the next year runs on. If month one does not land, we do not continue, and you keep the work.',
+  },
+  {
+    name: 'Social media management',
+    text: 'Planning, scheduling, publishing, and monthly reporting across Instagram, Facebook, TikTok, LinkedIn, and X. A typical program runs 8 to 20 posts a month per platform.',
+  },
+  {
+    name: 'Content creation',
+    text: 'Platform-specific content with photography and video direction included, built for each channel rather than recycled from another one.',
+  },
+  {
+    name: 'Community management',
+    text: 'Comments, messages, and reputation handled by the team that knows the brand, so the reply sounds like you and not like a template.',
+  },
+  {
+    name: 'Paid social',
+    text: 'Meta, TikTok, and LinkedIn campaigns for brands running $10,000 or more a month in media. Management starts at $4,000 a month, with weekly reporting.',
+  },
 ];
+
+// Named on the site as Orlando and Central Florida clients. Not labelled as
+// current: which of these are active today is an owner confirmation item.
+const LOCAL_CLIENTS = [
+  'BODYBar SoDo',
+  'Solar Bears Orlando',
+  'Andretti Indoor Karting',
+  'Crafty Bartender',
+  'Velocity Title',
+  'Laser Lab',
+  'Chance 2 Dance',
+  'Landmark Contracting',
+  'Central Florida Talent',
+];
+
+const INDUSTRIES = [
+  {
+    name: 'Restaurants',
+    href: '/verticals/restaurant',
+    anchor: 'restaurant social media',
+    text: 'Our restaurant proof is national. We ran the Blaze Pizza social program, content strategy, and community management for ten years, starting four months before the first restaurant opened. The chain grew on its own food and operations; our job was the social program that ran alongside it. Other restaurant work includes Shakey’s Pizza, Wolfgang’s Steakhouse, and MidiCi.',
+    caseHref: '/work/blaze-pizza',
+    caseAnchor: 'Blaze Pizza case study',
+  },
+  {
+    name: 'Hotels, resorts, and attractions',
+    href: '/hospitality-social-media-agency',
+    anchor: 'hotel and resort social media',
+    text: 'Hotel and resort programs are built backwards from the booking window rather than the stay date. That experience comes from Resorts World and the Polynesian Cultural Center, not from Orlando properties. Locally, Solar Bears Orlando and Andretti Indoor Karting sell dated capacity, so the calendar starts from the soft dates, not from a content plan.',
+    caseHref: '/work/resorts-world',
+    caseAnchor: 'Resorts World case study',
+  },
+  {
+    name: 'Wine and spirits',
+    href: '/wine-social-media-marketing-agency',
+    anchor: 'wine and spirits social media',
+    text: `The deepest category on the roster: ${FACTS.wineSpiritsBrands} wine and spirits brands, including Kendall-Jackson and a ten year Gruppo Mezzacorona retainer across five portfolio brands, with alcohol compliance built into the calendar.`,
+    caseHref: '/work/mezzacorona',
+    caseAnchor: 'Mezzacorona case study',
+  },
+  {
+    name: 'Fitness, entertainment, and retail',
+    href: '/verticals/fitness-wellness',
+    anchor: 'fitness and wellness social media',
+    text: 'BODYBar SoDo, a boutique fitness studio, runs on the same operating model as the multi-location programs we manage, sized to one location. Consumer and retail experience includes Tupperware and Axe under Unilever.',
+    caseHref: '/verticals/retail-cpg',
+    caseAnchor: 'retail and CPG work',
+  },
+];
+
+const PROCESS = [
+  'A 30 minute working session about your business, not ours. You leave knowing whether there is a fit.',
+  'A scoping conversation once we understand the problem well enough to price it honestly.',
+  'A paid pilot within 14 days, on a real workstream, so you see how we operate before a retainer starts.',
+  'Month one is discovery, then the program runs on a monthly strategy and reporting rhythm, with weekly reporting on paid media.',
+];
+
+const TIERS = [
+  ['Growth', '$4,000 to $6,500', 'Strategy, managed calendar, original creative, community, reporting'],
+  ['Premium', '$7,500 to $12,000', 'More platforms and content volume, paid media oversight layered in'],
+  ['Scale', '$15,000 to $25,000', 'Multi location or multi market programs'],
+  ['Enterprise', '$30,000 to $50,000+', 'Portfolios, sub brands, and always on programs'],
+];
+
+const CASE_SLUGS = ['blaze-pizza', 'resorts-world', 'polynesian-cultural-center', 'central-florida-talent'];
 
 const FAQS = [
   {
-    q: 'What is the best social media agency in Orlando?',
-    a: 'Fifty & Five is a boutique senior-led social media agency headquartered in Orlando, FL. Since 2008, the agency has managed social for 222+ brands across 5 continents, including Microsoft, Hasbro, Kendall-Jackson, Mezzacorona, Enterprise Holdings, and Resorts World, alongside local Orlando clients like BODYBar SoDo, Solar Bears Orlando, and Crafty Bartender.',
+    q: 'Where is Fifty & Five based, and do you only work with Orlando businesses?',
+    a: `Fifty & Five is based at ${FACTS.address.streetAddress} in Orlando and works with businesses across Central Florida. Most of the roster is not local: the agency has run social media for ${FACTS.brandsManaged} brands across ${FACTS.continents} continents since ${FACTS.founded}. Orlando clients get the same senior team, plus the option to meet in person.`,
+  },
+  {
+    q: 'What does social media management from Fifty & Five include?',
+    a: 'Strategy, a managed content calendar, content creation with photography and video direction, publishing, community management, and monthly reporting across Instagram, Facebook, TikTok, LinkedIn, and X. Paid social on Meta, TikTok, and LinkedIn can be added or run on its own.',
   },
   {
     q: 'How much does a social media agency cost in Orlando?',
-    a: 'Fifty & Five retainers start at $4,000 per month for ad management and scale to $50,000+ per month for full-service, always-on programs with content production. Pricing is principal-led, with no junior account management or holding-company markup. Most Orlando boutique agencies charge $1,500 to $5,000 per month, but Fifty & Five operates at the senior tier most local agencies cannot staff for.',
+    a: 'Fifty & Five retainers start at $4,000 per month and run in four tiers: Growth at $4,000 to $6,500, Premium at $7,500 to $12,000, Scale at $15,000 to $25,000, and Enterprise at $30,000 to $50,000 or more. Engagements run month to month with 30 days notice. Scope sets the tier.',
   },
   {
-    q: 'What industries does Fifty & Five serve in Orlando?',
-    a: 'Locally, Fifty & Five works with Orlando-based fitness studios, restaurants, hospitality, real estate, beverage, entertainment, and medical aesthetics brands. Active and recent Orlando engagements include BODYBar SoDo, Crafty Bartender, Solar Bears Orlando, Andretti Indoor Karting, Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA.',
+    q: 'Which Orlando and Central Florida businesses has Fifty & Five worked with?',
+    a: 'Orlando and Central Florida clients have included BODYBar SoDo, Solar Bears Orlando, Andretti Indoor Karting, Crafty Bartender, Velocity Title, Laser Lab, and Chance 2 Dance. Two documented local engagements were website and search work rather than social retainers: Landmark Contracting, where a rebuilt site produced four requests for quote in its first two weeks, and Central Florida Talent.',
   },
   {
-    q: 'How long has Fifty & Five been an Orlando social media agency?',
-    a: 'Fifty & Five was founded by Lucas Vandenberg in 2008 and has been continuously operating from Orlando, FL for 18 years. Some clients, including Mezzacorona, have stayed with the agency for over a decade.',
+    q: 'Do you manage social media for Orlando restaurants?',
+    a: 'Yes. Restaurant work to date is national rather than local: a ten year social program for Blaze Pizza, plus Shakey’s Pizza, Wolfgang’s Steakhouse, and MidiCi. The same approach applies to an Orlando restaurant or group: content built around what fills seats and drives orders, and community management that treats reviews and messages as service.',
   },
   {
-    q: 'What makes Fifty & Five different from other Orlando social media agencies?',
-    a: 'Most Orlando agencies serve local clients only. Fifty & Five is one of the only boutique social media agencies anywhere with a Fortune 500 client list (Microsoft, Hasbro, Warner Bros., Enterprise Holdings, Tupperware) AND a local Orlando roster. Every account is run senior-led with no junior team handoffs.',
+    q: 'Do you work with Orlando hotels, resorts, and attractions?',
+    a: 'Yes. Hospitality experience comes from Resorts World and the Polynesian Cultural Center, and destination work for the Hong Kong, Korea, and Macau tourism boards. None of those are Orlando properties. Locally, Solar Bears Orlando and Andretti Indoor Karting are entertainment venues where the calendar is set by dated events and soft dates.',
   },
   {
-    q: "Does Fifty & Five do hotel social media marketing in Orlando?",
-    a: "Yes. Fifty & Five is headquartered at 1001 N Orange Ave in Orlando and builds hospitality social programs for hotels and resorts. The named resort and destination work is not Orlando based, it is category experience: Resorts World Bimini, Resorts World Catskills, Pali Hotels, the Polynesian Cultural Center, the Hong Kong Tourism Board, the Korea Tourism Board, the Macau Tourism Office, and Newport Beach Tourism. Hotel programs here are built backwards from the booking window rather than the stay date, handle guest content rights up front, and carry weekend and holiday response coverage. Retainers start at $4,000 per month.",
+    q: 'What does senior-led mean for my account?',
+    a: 'The people who pitch you are the people who run the work. There is no junior account manager between you and the strategy, and founder Lucas Vandenberg is involved in every engagement. That is also why the retainer floor is $4,000 a month.',
   },
   {
-    q: "Which Orlando agency should manage social media for an attraction?",
-    a: "Pick an agency that plans against capacity rather than reach. Fifty & Five works with Andretti Indoor Karting and Solar Bears Orlando, both of which sell dated capacity in this market, and has run work for the Polynesian Cultural Center. An attraction program has to fill the soft dates, bend its cadence around a schedule of dated events, separate the resident audience from the visitor audience, and respond to weather and closures within the same hour they happen. Being based in Orlando and senior led is what makes that last part possible. Call (321) 450-7550.",
+    q: 'Can an Orlando brand hire Fifty & Five for CPG and retail advertising?',
+    a: 'Yes. Consumer and retail advertising experience includes Tupperware, Axe under Unilever, Toys R Us, Pelican Products, Happy Egg Co., and Saint Jane Beauty. Brands selling direct and through retail get two measured lines under one creative platform.',
   },
   {
-    q: "Does Fifty & Five handle CPG advertising in Orlando?",
-    a: "Yes. Fifty & Five has run CPG and retail advertising for Tupperware, Axe under Unilever, Toys R Us, Pelican Products, Rainbow Light, Happy Egg Co., Saint Jane Beauty, and Hammit. The work is built around shelf recall, meaning the ad creative and the package have to be recognizably the same object, and around a retail calendar that runs months ahead of resets and buyer meetings. Brands selling direct and through retail get two measured lines under one creative platform. Retainers run from $4,000 per month for ad management to $50,000 and up for full service.",
+    q: 'How quickly can we start?',
+    a: 'Book a 30 minute working session or send a note, and expect a same-day reply in most cases. If there is a fit, a paid pilot can start within 14 days.',
   },
 ];
 
-const DEEP_SECTIONS: ProseSectionData[] = [
-  {
-    "h2": "Hotel and resort social media in Orlando",
-    "blocks": [
-      {
-        "type": "p",
-        "text": "Selling a hotel room is selling a specific date, and that changes how the whole social program has to be built. A Tuesday night in September expires on Tuesday night in September. So an Orlando hotel or resort program is not brand awareness with a booking link attached. It is a demand tool pointed at the nights you have not sold yet."
-      },
-      {
-        "type": "p",
-        "text": "The second difference is that guests produce more content about the property than you ever will, and most of it is better proof than anything a crew would shoot. The job is to capture it, clear the rights up front, and keep the property looking the same in a guest photo as in the brand assets."
-      },
-      {
-        "type": "p",
-        "text": "Third, social is the service layer. A comment about a broken air conditioner at 11pm is a maintenance ticket and a public record at once. Orlando properties carry heavy inbound volume year round, and a program without a response protocol and a named human behind it will cost more than it earns."
-      },
-      {
-        "type": "p",
-        "text": "What an Orlando hotel or resort actually needs is narrower than most proposals suggest:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "A calendar built backwards from the booking window rather than the stay date, so pressure lands while the decision is still open.",
-          "Rate and package messaging that can change inside 48 hours when the occupancy forecast moves.",
-          "A guest content pipeline with rights handled up front, not chased after a post performs.",
-          "Response coverage on weekends and holidays, when the property is busiest and most agencies are not staffed.",
-          "Creative that separates the property from every other pool photo in the market."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Our hospitality proof is category proof, and it is not Orlando based. Fifty & Five has run work for Resorts World Bimini, Resorts World Catskills, Pali Hotels, and the Polynesian Cultural Center, plus destination work for the Hong Kong Tourism Board, the Korea Tourism Board, the Macau Tourism Office, and Newport Beach Tourism. What that work gave us is operating knowledge: how a resort marketing calendar is actually run, how a property fights for a share of a trip someone has already decided to take, and how a destination separates visits from bookings. The team applying that here sits at 1001 N Orange Ave."
-      }
-    ]
-  },
-  {
-    "h2": "Attractions, tourism, and destination marketing",
-    "blocks": [
-      {
-        "type": "p",
-        "text": "An attraction's social program has one job that a normal brand's does not, which is to fill specific capacity on specific days. Orlando is an attractions market, so the buyer here is rarely asking about reach. They are asking whether Saturday sells out and what Wednesday afternoon looks like. A post is judged on whether it moved tickets for a date that was soft."
-      },
-      {
-        "type": "p",
-        "text": "Capacity and seasonality set the calendar before creative does. School calendars, holiday weeks, and the gap between resident and visitor audiences produce a demand curve with real peaks and troughs. The peaks do not need help. The work sits in the troughs, which means planning by period rather than by month and holding budget back from the weeks that sell themselves."
-      },
-      {
-        "type": "p",
-        "text": "Event cadence is the second demand. Attractions run on a stream of dated moments: seasonal overlays, tournaments, group nights, limited promotions. Each has a short selling window, and a program publishing on a fixed weekly rhythm will miss most of them."
-      },
-      {
-        "type": "p",
-        "text": "Weather and crisis are the third, and they are why an Orlando attraction should think hard before hiring a team three time zones away. Central Florida operations get interrupted. Storms, closures, and equipment issues become social events within minutes. Someone has to pause paid spend, change the pinned post, and answer the inbox inside the same hour."
-      },
-      {
-        "type": "p",
-        "text": "A soft period gets run like this:"
-      },
-      {
-        "type": "ol",
-        "items": [
-          "Start from the capacity forecast, not the content calendar. The soft dates are the brief.",
-          "Split the resident audience from the visitor audience, one is choosing a weekend plan, the other decided to come here months ago.",
-          "Build offers and creative against those specific dates, with the date visible in the asset.",
-          "Weight paid toward the troughs and pull spend off the peaks that fill without help.",
-          "Read results against tickets moved on those dates, then reset for the next period."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "The proof is local and it is in the category. Fifty & Five works with Andretti Indoor Karting and Solar Bears Orlando, both of which sell dated capacity in this market, and has run work for the Polynesian Cultural Center, an attraction selling to visitors who arrive with a fixed itinerary. Those three cover most of the shapes an attraction takes here: the local entertainment destination, the ticketed season, and the visitor attraction competing for one slot in somebody's trip."
-      }
-    ]
-  },
-  {
-    "h2": "Orlando CPG and retail brands",
-    "blocks": [
-      {
-        "type": "p",
-        "text": "CPG advertising has to win a decision that takes about three seconds in front of a shelf, which is why the ad creative and the package have to look like the same object. Shelf recall is the whole game. Someone sees the ad on Tuesday, walks the aisle on Saturday, and either recognizes the package or does not. If the creative crops the product out or changes its look every quarter, you are paying to build recall of something the shopper will never see."
-      },
-      {
-        "type": "p",
-        "text": "The retail calendar also runs earlier than most founders expect. Retail works backwards from resets, promotional windows, and buyer meetings, so the creative supporting a spring set is planned while the holiday set is still on shelf. A social program built one month out is structurally late. It cannot support a launch, hand the sales team demand proof ahead of a buyer meeting, or put velocity behind a promotion in the weeks that decide reorders."
-      },
-      {
-        "type": "p",
-        "text": "Then there is the two channel problem. Most CPG brands sell direct and through retail at once, and those channels want different things from the same budget. Run them as one undifferentiated program and one of them quietly suffers. Run them as two measured lines under one creative platform and both work."
-      },
-      {
-        "type": "table",
-        "headers": [
-          "What differs",
-          "Direct to consumer",
-          "Retail"
-        ],
-        "rows": [
-          [
-            "Job of the ad",
-            "Close the purchase in the ad unit",
-            "Build recognition of the package before the aisle"
-          ],
-          [
-            "Creative emphasis",
-            "Offer, proof, reason to buy now",
-            "Product front and center, exactly as it sits on shelf"
-          ],
-          [
-            "Planning horizon",
-            "Weeks, tied to inventory and promotions",
-            "Months, tied to resets and buyer meetings"
-          ],
-          [
-            "What good looks like",
-            "Cost per acquisition and repeat rate",
-            "Velocity in the weeks that decide reorders"
-          ]
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Fifty & Five has run this work for Tupperware, Axe under Unilever, Toys R Us, Pelican Products, Rainbow Light, Happy Egg Co., Saint Jane Beauty, and Hammit. That range covers the three situations most CPG operators are in: a legacy brand that needs to look current without losing the recognition it owns, a challenger that needs the package itself to become the ad, and a direct to consumer brand walking into retail for the first time."
-      }
-    ]
-  },
-  {
-    "h2": "Working with a local agency versus a national one",
-    "blocks": [
-      {
-        "type": "p",
-        "text": "A local senior team wins on access, speed, and context, and a national shop wins on scale and coverage, so the right answer depends on which of those is your real constraint. Most agencies will not say the second half of that out loud. We will, because the engagements that go badly are usually the ones where a client bought the wrong shape of team, not a bad team."
-      },
-      {
-        "type": "p",
-        "text": "What a local senior team gives you is a short line to the people doing the work. Fifty & Five has operated from Orlando since 2008, 18 years, and founder Lucas Vandenberg serves on the SoDo Main Street Board here. You can be in a room with the person making decisions on your account within a day, and when something breaks on a Saturday the answer comes from someone in your time zone who knows your business. Senior led with no junior account managers is the largest quality difference between a boutique and a large shop: at scale, the team that pitches you and the team that runs the work are different people."
-      },
-      {
-        "type": "p",
-        "text": "It shows up in results you can check. Landmark Contracting, a general contractor, had a website for ten years that produced one request for quote in that entire decade. We took the fractional CMO seat, rebuilt the site, and it produced four requests for quote in the first two weeks. Central Florida Talent, Orlando's longest operating SAG-AFTRA franchised talent agency and in business since 1994, needed a modern site engineered to be found and cited by search engines and AI answer engines. That is what we built."
-      },
-      {
-        "type": "p",
-        "text": "A national shop is the better call in specific cases, and there is no point pretending otherwise:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "You are buying paid media across many markets at a spend level where volume changes your rates.",
-          "You need raw headcount, such as an around the clock newsroom or a program running in a dozen languages.",
-          "Procurement requires a certification, audit history, or master services agreement your legal team already knows.",
-          "The work is commodity execution at volume, where cost per unit matters more than judgment."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "The reason this choice is interesting here is that Fifty & Five carries both profiles at once. 222+ brands across 5 continents and 40+ countries since 2008, across 12 verticals, with Microsoft, Hasbro, Warner Bros., Discovery Channel, Enterprise Holdings and its six brands, NETGEAR and Arlo, and SAP on the roster, run by a team you can sit down with in Orlando. Average client retainer is 3 years and up, which is the number we would look at first if we were on your side of the table. Call (321) 450-7550 or come to 1001 N Orange Ave."
-      }
-    ]
-  }
-];
+const link = 'text-accent hover:text-accent-light underline underline-offset-2';
 
 export default function OrlandoLandingPage() {
+  const cases = CASE_SLUGS.map((s) => getCaseStudy(s)).filter(Boolean).map((c) => c!);
+
   return (
     <>
       <script
@@ -237,43 +177,52 @@ export default function OrlandoLandingPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Service',
-            '@id': 'https://fiftyandfive.com/orlando-social-media-agency',
-            serviceType: 'Social Media Marketing Agency',
-            name: 'Orlando Social Media Agency',
-            description:
-              'Senior-led boutique social media agency serving Orlando, FL and brands across 5 continents.',
-            provider: { '@id': 'https://fiftyandfive.com/#organization' },
-            areaServed: [
-              { '@type': 'City', name: 'Orlando' },
-              { '@type': 'AdministrativeArea', name: 'Florida' },
-              { '@type': 'AdministrativeArea', name: 'Central Florida' },
-            ],
-            audience: {
-              '@type': 'BusinessAudience',
-              audienceType: 'Boutique to enterprise brands',
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://fiftyandfive.com/' },
+            '@graph': [
               {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Orlando Social Media Agency',
-                item: 'https://fiftyandfive.com/orlando-social-media-agency',
+                '@type': 'WebPage',
+                '@id': URL,
+                url: URL,
+                name: 'Orlando Social Media Agency | Fifty & Five',
+                description: DESCRIPTION,
+                dateModified: '2026-09-24',
+                isPartOf: { '@id': 'https://fiftyandfive.com/#website' },
+                about: { '@id': `${URL}#service` },
+              },
+              {
+                '@type': 'Service',
+                '@id': `${URL}#service`,
+                serviceType: 'Social media marketing',
+                name: 'Social media marketing agency in Orlando',
+                description:
+                  'Social media strategy, management, content creation, community management, and paid social for businesses in Orlando and Central Florida.',
+                provider: { '@id': 'https://fiftyandfive.com/#organization' },
+                areaServed: [
+                  { '@type': 'City', name: 'Orlando' },
+                  { '@type': 'Place', name: 'Central Florida' },
+                ],
+                hasOfferCatalog: {
+                  '@type': 'OfferCatalog',
+                  name: 'Social media services',
+                  itemListElement: SERVICES.map((s) => ({
+                    '@type': 'Offer',
+                    itemOffered: { '@type': 'Service', name: s.name, description: s.text },
+                  })),
+                },
+                offers: {
+                  '@type': 'Offer',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    minPrice: 4000,
+                    priceCurrency: 'USD',
+                    unitText: 'MONTH',
+                  },
+                },
               },
             ],
           }),
         }}
       />
+      <BreadcrumbSchema trail={[{ name: 'Orlando Social Media Agency', path: '/orlando-social-media-agency' }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -289,133 +238,279 @@ export default function OrlandoLandingPage() {
         }}
       />
 
-      {/* HERO */}
-      <section className="container-edge pt-32 pb-16 md:pt-40 md:pb-24">
-        <SimpleReveal>
-          <div className="font-mono text-caption uppercase text-text-tertiary tracking-[0.18em]">
-            Orlando, FL · senior-led since 2008
-          </div>
-        </SimpleReveal>
-
-        <AnimatedHeadline
-          as="h1"
-          text={'Orlando social media agency.\nFortune 500 roster.'}
-          className="mt-8 font-serif text-display text-text-primary max-w-5xl"
-          stagger={0.06}
-        />
-
-        <SimpleReveal delay={0.6}>
-          <p className="mt-6 text-body-lg text-text-secondary max-w-2xl leading-[1.55]">
-            Fifty &amp; Five is a boutique senior-led social media agency
-            headquartered in Orlando. Since 2008 we have managed social for 222+
-            brands across 5 continents. Microsoft, Hasbro, Kendall-Jackson,
-            Mezzacorona, Enterprise Holdings, and locally for BODYBar SoDo,
-            Solar Bears, Crafty Bartender, and more.
-          </p>
-        </SimpleReveal>
-
-        <SimpleReveal delay={0.85}>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <MagneticButton
-              href="/contact"
-              variant="primary"
-              size="large"
-              trackName="Orlando CTA, Let's Talk"
-            >
-              Start a conversation →
-            </MagneticButton>
-            <MagneticButton
-              href="/work"
-              variant="secondary"
-              size="large"
-              trackName="Orlando CTA, See the Work"
-            >
-              See the work
-            </MagneticButton>
-          </div>
-        </SimpleReveal>
+      {/* HERO. A plain server-rendered H1: the animated headline component
+          ships each word at opacity 0 until JavaScript runs. */}
+      <section className="container-edge pt-36 md:pt-44 pb-16 md:pb-20">
+        <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+          Based in Orlando, FL &middot; Serving Central Florida
+        </div>
+        <h1 className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-4xl">
+          Social Media Marketing Agency in Orlando
+        </h1>
+        <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
+          Fifty &amp; Five is a boutique, senior-led agency at 1001 N Orange Ave. Businesses in
+          Orlando and across Central Florida hire us for social media strategy, day to day
+          management, content creation, community management, and paid social, run by the same
+          team that has handled social for {FACTS.brandsManaged} brands across{' '}
+          {FACTS.continents} continents since {FACTS.founded}.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <MagneticButton href="/contact" variant="primary" size="large" trackName="Orlando CTA, Let's Talk">
+            Book a working session &rarr;
+          </MagneticButton>
+          <MagneticButton href="#case-studies" variant="secondary" size="large" trackName="Orlando CTA, See the Work">
+            See case studies
+          </MagneticButton>
+        </div>
+        <p className="mt-8 text-body text-text-secondary max-w-3xl leading-[1.65]">
+          Nationally, the roster includes Microsoft, Kendall-Jackson, Enterprise Holdings, and a
+          ten year program for Blaze Pizza. Here, clients have included BODYBar SoDo, Solar Bears
+          Orlando, and Andretti Indoor Karting.
+        </p>
       </section>
 
-      {/* LOCAL ROSTER */}
-      <section className="container-edge py-20 md:py-28">
+      {/* SERVICES */}
+      <section className="container-edge py-16 md:py-24">
         <div className="max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            Local roster
+            What you can hire us for
           </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Built in Orlando, trusted by brands here."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Social media management, content, and paid social under one senior team.
+          </h2>
         </div>
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {ORLANDO_CLIENTS.map((c) => (
-            <GlassCard key={c.name} className="p-6">
-              <div className="font-serif text-[20px] leading-[1.15] text-text-primary">
-                {c.name}
-              </div>
-              <div className="mt-2 font-mono text-caption uppercase text-text-tertiary tracking-[0.14em]">
-                {c.vertical}
-              </div>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {SERVICES.map((s) => (
+            <GlassCard key={s.name} className="p-7 h-full">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">{s.name}</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6]">{s.text}</p>
             </GlassCard>
           ))}
         </div>
+        <p className="mt-8 max-w-3xl text-body text-text-secondary leading-[1.65]">
+          Full scope, tiers, and the operating model are on the{' '}
+          <Link href="/services" className={link}>services page</Link>. If the gap is marketing
+          leadership rather than execution, see the{' '}
+          <Link href="/fractional-cmo-orlando" className={link}>fractional CMO seat in Orlando</Link>.
+        </p>
       </section>
 
-      {/* THE PARADOX */}
-      <section className="container-edge py-20 md:py-28">
+      {/* SENIOR LEADERSHIP */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+              Who does the work
+            </div>
+            <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+              A boutique agency, run by the people you meet.
+            </h2>
+          </div>
+          <div className="md:col-span-8 space-y-6 max-w-2xl">
+            <p className="text-body-lg text-text-secondary leading-[1.75]">
+              Every engagement is led by senior leadership. The team that pitches you is the team
+              on the Tuesday call in month seven, and there is no junior account manager in
+              between. Founder {FACTS.founder} is involved in every account.
+            </p>
+            <p className="text-body-lg text-text-secondary leading-[1.75]">
+              Being a boutique means a short line to the person making decisions. Orlando clients
+              can sit down with that person, and {FACTS.founder.split(' ')[0]} serves on the SoDo
+              Main Street Board here. It also sets the price: a senior team cannot be staffed on a
+              small retainer, which is why retainers start at $4,000 a month.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCAL WORK */}
+      <section className="container-edge py-16 md:py-24">
         <div className="max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            The Orlando paradox
+            Orlando and Central Florida
           </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Local team. Global client list."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
-          <p className="mt-6 text-body-lg text-text-secondary leading-[1.55]">
-            Most Orlando social media agencies serve local clients only. The
-            ones that work with national brands tend to be holding companies
-            with junior account managers running the day-to-day. Fifty &amp;
-            Five sits in the rare middle: a senior-led boutique with a Fortune
-            500 client list. You get the local relationship. They get
-            enterprise-grade execution.
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">Local clients and local results.</h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            Orlando and Central Florida clients have included:
+          </p>
+        </div>
+        <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl">
+          {LOCAL_CLIENTS.map((c) => (
+            <li key={c} className="glass rounded-glass px-5 py-4 font-serif text-[19px] leading-[1.2] text-text-primary">
+              {c}
+            </li>
+          ))}
+        </ul>
+        <div className="mt-10 max-w-3xl space-y-6">
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            The two local engagements with documented outcomes were website and search work, not
+            social retainers. Landmark Contracting, a Central Florida general contractor, had a
+            site that produced one request for quote in ten years; after we took the fractional CMO
+            seat and rebuilt it, four arrived in the first two weeks. For{' '}
+            <Link href="/work/central-florida-talent" className={link}>Central Florida Talent</Link>,
+            we built a site designed to be found and cited by search engines and AI assistants.
+          </p>
+          <p className="text-body-lg text-text-secondary leading-[1.75]">
+            Everything else on this page labelled national or international is exactly that. We
+            would rather you know which experience is local before you hire us.
           </p>
         </div>
       </section>
 
-      <ProseSections sections={DEEP_SECTIONS} />
-
-      {/* FAQ */}
-      <section className="container-edge py-20 md:py-28">
+      {/* INDUSTRIES */}
+      <section className="container-edge py-16 md:py-24">
         <div className="max-w-3xl">
           <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
-            Frequently asked
+            Industry depth
           </div>
-          <AnimatedHeadline
-            as="h2"
-            text="Quick answers about working with us in Orlando."
-            className="mt-4 font-serif text-h2 tracking-[-0.02em]"
-          />
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            The categories Orlando businesses ask us about most.
+          </h2>
         </div>
-        <div className="mt-12 max-w-3xl space-y-5">
-          {FAQS.map((f, i) => (
-            <GlassCard key={i} className="p-7">
-              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">
-                {f.q}
-              </h3>
-              <p className="mt-3 text-body text-text-secondary leading-[1.6]">
-                {f.a}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+          {INDUSTRIES.map((i) => (
+            <GlassCard key={i.name} className="p-8 h-full">
+              <h3 className="font-serif text-[24px] leading-[1.2] text-text-primary">{i.name}</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.65]">{i.text}</p>
+              <p className="mt-5 text-meta text-text-secondary">
+                More on <Link href={i.href} className={link}>{i.anchor}</Link> &middot;{' '}
+                <Link href={i.caseHref} className={link}>{i.caseAnchor}</Link>
               </p>
             </GlassCard>
           ))}
         </div>
+        <p className="mt-8 max-w-3xl text-body text-text-secondary leading-[1.65]">
+          Working statewide? The{' '}
+          <Link href="/social-media-marketing-agency-florida" className={link}>Florida social media agency</Link>{' '}
+          page covers service beyond Central Florida.
+        </p>
+      </section>
+
+      {/* PROCESS + REPORTING */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            How it works
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">From first call to monthly reporting.</h2>
+        </div>
+        <ol className="mt-10 max-w-3xl space-y-4 list-decimal pl-6 marker:text-accent">
+          {PROCESS.map((p) => (
+            <li key={p} className="text-body-lg text-text-secondary leading-[1.7] pl-2">
+              {p}
+            </li>
+          ))}
+        </ol>
+        <p className="mt-8 max-w-3xl text-body-lg text-text-secondary leading-[1.75]">
+          Reporting covers the numbers that matter to the business, including acquisition cost,
+          customer value, and attribution, alongside the brand health the program is building.
+          Both get reported, and neither gets traded away to flatter the other.
+        </p>
+      </section>
+
+      {/* CASE STUDIES */}
+      <section id="case-studies" className="container-edge py-16 md:py-24 scroll-mt-28">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Case studies
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">Work you can read in full.</h2>
+        </div>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr">
+          {cases.map((cs) => (
+            <Link key={cs.slug} href={`/work/${cs.slug}`} className="block h-full group">
+              <GlassCard padded={false} className="h-full flex overflow-hidden">
+                <div
+                  className="w-1.5 shrink-0 self-stretch"
+                  style={{ background: VERTICAL_COLOR_HEX[cs.verticalColor] ?? '#C41E3A' }}
+                  aria-hidden
+                />
+                <div className="flex-1 flex flex-col p-6">
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <VerticalPill label={cs.verticalLabel} colorKey={cs.verticalColor} />
+                    <span className="font-mono text-caption uppercase text-text-tertiary tracking-[0.12em]">
+                      {cs.slug === 'central-florida-talent' ? 'Central Florida' : 'National work'}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-serif text-[26px] leading-[1.1] tracking-[-0.02em]">{cs.client}</h3>
+                  <p className="mt-3 text-body text-text-secondary flex-1">{cs.tagline}</p>
+                  <div className="mt-5 text-meta text-accent group-hover:text-accent-light transition-colors">
+                    Read the case study &rarr;
+                  </div>
+                </div>
+              </GlassCard>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Pricing
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">Published, not quoted on request.</h2>
+          <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
+            Retainers run in four tiers, and scope decides the tier. Engagements are month to
+            month with 30 days notice.
+          </p>
+        </div>
+        <div className="mt-10 max-w-3xl overflow-x-auto">
+          <table className="w-full text-left text-body text-text-secondary">
+            <thead>
+              <tr className="border-b border-glass-border">
+                <th className="py-3 pr-4 font-mono text-caption uppercase tracking-[0.12em] text-text-tertiary">Tier</th>
+                <th className="py-3 pr-4 font-mono text-caption uppercase tracking-[0.12em] text-text-tertiary">Monthly</th>
+                <th className="hidden sm:table-cell py-3 font-mono text-caption uppercase tracking-[0.12em] text-text-tertiary">Shape of the work</th>
+              </tr>
+            </thead>
+            <tbody>
+              {TIERS.map(([tier, range, shape]) => (
+                <tr key={tier} className="border-b border-glass-border align-top">
+                  <td className="py-4 pr-4 text-text-primary">
+                    {tier}
+                    {/* On narrow screens the third column folds under the tier name. */}
+                    <span className="mt-1 block sm:hidden text-meta text-text-secondary">{shape}</span>
+                  </td>
+                  <td className="py-4 pr-4 whitespace-nowrap">{range}</td>
+                  <td className="hidden sm:table-cell py-4">{shape}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="container-edge py-16 md:py-24">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Frequently asked
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">
+            Questions Orlando businesses ask before hiring us.
+          </h2>
+        </div>
+        <div className="mt-12 max-w-3xl space-y-5">
+          {FAQS.map((f) => (
+            <GlassCard key={f.q} className="p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">{f.q}</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6]">{f.a}</p>
+            </GlassCard>
+          ))}
+        </div>
+        <SimpleReveal>
+          <p className="mt-10 max-w-3xl text-body text-text-secondary leading-[1.65]">
+            Prefer the phone? Call{' '}
+            <a href={`tel:${SITE.phone.e164}`} className={link}>{SITE.phone.display}</a>.
+          </p>
+        </SimpleReveal>
       </section>
 
       <CTASection
-        headline="Let's talk Orlando."
-        body="A conversation about what you're building, no proposal until we know it's a fit."
-        ctaLabel="Talk to our founder →"
+        headline="Talk to the team that would run it."
+        body="A 30 minute working session about your business. No deck, and no proposal until we know it is a fit."
+        ctaLabel="Book a working session →"
       />
     </>
   );

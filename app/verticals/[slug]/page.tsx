@@ -359,6 +359,23 @@ export default function VerticalPage({ params }: { params: { slug: string } }) {
         </section>
       )}
 
+      {/* The restaurant work above is national. Point Central Florida operators to
+          the local page rather than implying local restaurant clients. */}
+      {v.slug === 'restaurant' && (
+        <section className="container-edge pb-16 md:pb-20 text-center">
+          <p className="text-body text-text-secondary">
+            Running a restaurant or group in Central Florida? The work above is national, and our{' '}
+            <Link
+              href="/orlando-social-media-agency"
+              className="text-accent hover:text-accent-light underline underline-offset-2"
+            >
+              Orlando social media agency
+            </Link>
+            {' '}page covers local services, clients, and pricing.
+          </p>
+        </section>
+      )}
+
       <CTASection
         headline={`Run social for ${v.shortLabel.toLowerCase()}?`}
         body="Book a 30-min working session — no pitch deck, no proposal until we know it's a fit."

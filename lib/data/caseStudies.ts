@@ -1152,6 +1152,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: 'central-florida-talent',
+    metaDescription: "Central Florida Talent case study. A modern website for an Orlando SAG-AFTRA franchised talent agency, built to be found and cited by search engines and AI.",
     deepDive: [
       {
         "h2": "Three decades of reputation that machines could not read",
@@ -1209,6 +1210,12 @@ export const CASE_STUDIES: CaseStudy[] = [
           {
             "type": "p",
             "text": "The result is verifiable in the page source rather than asserted in a deck, and the off site picture supports it with 463 backlinks across 241 referring domains per Ahrefs. This build, running from 2025 into 2026, is now the template. Modern framework, structured answer content, verifiable entity signals, applied to every local authority and professional services brand that has to win Google and the assistants reading Google."
+          },
+          {
+            "type": "p",
+            "text": "Central Florida Talent is one of the local engagements on our Orlando page, which also lists the social media services Central Florida businesses hire us for.",
+            "href": "/orlando-social-media-agency",
+            "anchor": "See our Central Florida work."
           }
         ]
       }
@@ -1233,7 +1240,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     durationBadge: 'Website + AEO Build',
     platforms: ['Next.js', 'Google', 'ChatGPT', 'Perplexity'],
     tagline:
-      'Built a 30-year Orlando talent agency a modern website engineered to be found — and cited — by both search engines and AI.',
+      'Built a 30-year Orlando talent agency a modern website engineered to be found and cited by both search engines and AI.',
     challenge:
       'Central Florida Talent has been Orlando’s longest-operating SAG-AFTRA franchised agency since 1994 — three decades of placements, from Stranger Things to national Disney and Lay’s campaigns. But its digital presence didn’t reflect its standing. The bigger shift: casting directors, prospective talent, and now AI assistants are all first filters. When someone asks an AI “who’s a good talent agency in Florida,” the answer is built from structured, verifiable content a site explicitly provides. CFT needed a site as authoritative online — to both Google and the AI layer above it — as the agency is on set.',
     approach:

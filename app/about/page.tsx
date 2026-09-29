@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -40,6 +41,27 @@ const TIMELINE: { year: string; text: string }[] = [
   { year: '2026', text: '222+ brands · senior + AI model in market.' },
 ];
 
+// Rendered visibly above the close and as FAQPage schema from this one array,
+// so the markup always describes questions a visitor can read.
+const ABOUT_FAQS = [
+  {
+    q: 'Who founded Fifty & Five?',
+    a: `Fifty & Five was founded in ${FACTS.founded} by ${FACTS.founder}. The agency is based in Orlando, Florida, and has managed social media for ${FACTS.brandsManaged}+ brands across ${FACTS.continents} continents.`,
+  },
+  {
+    q: 'How many brands has Fifty & Five worked with?',
+    a: `Fifty & Five has managed social media for ${FACTS.brandsManaged}+ brands since ${FACTS.founded}, including Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Warner Bros., Tupperware, and Resorts World.`,
+  },
+  {
+    q: 'Is Fifty & Five one of the first social media agencies?',
+    a: 'Yes. Founded in 2008, Fifty & Five is one of only two American agencies, alongside VaynerMedia (2009), built entirely from scratch as a social-first entity. No pivot from PR, advertising, or another model. Social media management, community building, and platform-native content strategy from day one.',
+  },
+  {
+    q: "What is Fifty & Five's operating model?",
+    a: 'Fifty & Five uses a Senior + AI operating model. Every engagement is run by senior strategists with a vetted network of specialists. The agency uses AI tools like Claude as a strategic layer, not a junior-staff replacement.',
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -50,40 +72,11 @@ export default function AboutPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: 'Who founded Fifty & Five?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: `Fifty & Five was founded in ${FACTS.founded} by ${FACTS.founder}. The agency is headquartered in Orlando, Florida, and has managed social media for ${FACTS.brandsManaged}+ brands across ${FACTS.continents} continents.`,
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'How many brands has Fifty & Five worked with?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: `Fifty & Five has managed social media for ${FACTS.brandsManaged}+ brands since ${FACTS.founded}, including Microsoft, Kendall-Jackson, Enterprise Holdings, Blaze Pizza, Warner Bros., Tupperware, and Resorts World.`,
-                },
-              },
-              {
-                '@type': 'Question',
-                name: 'Is Fifty & Five one of the first social media agencies?',
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Yes. Founded in 2008, Fifty & Five is one of only two American agencies — alongside VaynerMedia (2009) — built entirely from scratch as a social-first entity. No pivot from PR, advertising, or another model. Social media management, community building, and platform-native content strategy from day one.',
-                },
-              },
-              {
-                '@type': 'Question',
-                name: "What is Fifty & Five's operating model?",
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: 'Fifty & Five uses a Senior + AI operating model. Every engagement is run by senior strategists with a vetted network of specialists. The agency uses AI tools like Claude as a strategic layer, not a junior-staff replacement.',
-                },
-              },
-            ],
+            mainEntity: ABOUT_FAQS.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
           }),
         }}
       />
@@ -374,6 +367,30 @@ export default function AboutPage() {
             ))}
           </ul>
         </div>
+      </section>
+
+      <section className="container-edge py-20 md:py-28">
+        <div className="max-w-3xl">
+          <div className="font-mono text-caption uppercase text-accent tracking-[0.15em]">
+            Frequently asked
+          </div>
+          <h2 className="mt-4 font-serif text-h2 tracking-[-0.02em]">About Fifty &amp; Five, briefly.</h2>
+        </div>
+        <div className="mt-12 max-w-3xl space-y-5">
+          {ABOUT_FAQS.map((f) => (
+            <GlassCard key={f.q} className="p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">{f.q}</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6]">{f.a}</p>
+            </GlassCard>
+          ))}
+        </div>
+        <p className="mt-10 max-w-3xl text-body text-text-secondary leading-[1.65]">
+          Hiring in Central Florida? Our{' '}
+          <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">
+            Orlando social media agency
+          </Link>{' '}
+          page covers local services, clients, and pricing.
+        </p>
       </section>
 
       <CTASection

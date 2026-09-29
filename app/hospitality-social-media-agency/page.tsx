@@ -156,8 +156,8 @@ export default function HospitalityLandingPage() {
         />
         <SimpleReveal delay={0.3}>
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
-            Fifty &amp; Five is a hotel and resort social media agency based in Orlando. Since 2008
-            we have run social for luxury resorts including Resorts World Bimini and Resorts
+            Fifty &amp; Five is a hotel and resort social media agency based in Orlando. We have
+            run social for luxury resorts including Resorts World Bimini and Resorts
             World Catskills, cultural attractions like the Polynesian Cultural Center, and
             national tourism boards including the Hong Kong Tourism Board. Hotel and resort
             content that converts, from awareness to itinerary to booking.
@@ -196,6 +196,12 @@ export default function HospitalityLandingPage() {
           See the full write-ups on <Link href="/work/resorts-world" className="text-accent hover:text-accent-light underline underline-offset-2">Resorts World</Link> and the{' '}
           <Link href="/work/polynesian-cultural-center" className="text-accent hover:text-accent-light underline underline-offset-2">Polynesian Cultural Center</Link>, or the full portfolio on our{' '}
           <Link href="/verticals/hospitality" className="text-accent hover:text-accent-light underline underline-offset-2">hospitality social media agency</Link> page.
+        </p>
+        <p className="mt-4 max-w-2xl text-body text-text-secondary leading-[1.6]">
+          None of these are Orlando properties. The team applying that experience is based here,
+          though, and local hotels, resorts, and attractions can see how we work in Central Florida,
+          including with Solar Bears Orlando and Andretti Indoor Karting, on our page for{' '}
+          <Link href="/orlando-social-media-agency" className="text-accent hover:text-accent-light underline underline-offset-2">Orlando hospitality and attraction clients</Link>.
         </p>
       </section>
 
