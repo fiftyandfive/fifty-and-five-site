@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
+import { BrandsWorkedWith } from '@/components/sections/BrandsWorkedWith';
 import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { PlaceholderImage } from '@/components/ui/PlaceholderImage';
@@ -330,6 +331,8 @@ export default function AboutPage() {
           brought in when the work genuinely calls for their depth.
         </p>
       </section>
+
+      <BrandsWorkedWith />
 
       <section className="container-edge py-24 md:py-32">
         <div className="max-w-3xl">
