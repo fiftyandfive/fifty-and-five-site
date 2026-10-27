@@ -4,7 +4,7 @@ const BRANDS = [
   'Warner Bros.', 'Microsoft', 'SAP', 'Hasbro', 'Bain & Company',
   'Discovery Channel', 'Enterprise', 'Toys R Us', 'Resorts World',
   'Penfolds', 'Kendall-Jackson', 'Unilever', 'AutoNation',
-  'The Irvine Company', "Wolfgang's Steakhouse", 'Blaze Pizza', 'Barsha',
+  'The Irvine Company', "Wolfgang's Steakhouse", 'Blaze Pizza', 'Barsha', 'StackCommerce',
 ];
 
 export function BrandMarquee() {

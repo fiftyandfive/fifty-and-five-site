@@ -75,6 +75,7 @@ export function GET() {
 - Microsoft
 - NETGEAR / Arlo
 - SAP
+- StackCommerce
 
 ## Automotive
 - Enterprise Holdings (6 brands)
