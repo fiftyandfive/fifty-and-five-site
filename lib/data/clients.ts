@@ -37,4 +37,5 @@ export const CLIENT_LOGOS: ClientLogo[] = [
   { name: 'Bain & Company', asset: favicon('bain.com') },
   { name: "Wolfgang's Steakhouse", asset: favicon('wolfgangssteakhouse.net') },
   { name: 'Hasbro', asset: favicon('hasbro.com') },
+  { name: 'StackCommerce', asset: favicon('stackcommerce.com') },
 ];
