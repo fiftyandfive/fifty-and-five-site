@@ -10,7 +10,7 @@ import { FACTS } from '@/lib/site-facts';
 const URL = 'https://fiftyandfive.com/wine-us-market-entry';
 const TITLE = 'Imported Wine & Spirits: US Market Entry';
 const DESCRIPTION =
-  'Social, creator and trade marketing for imported wine and spirits brands entering the US. Ten years building Mezzacorona from zero in the US. Senior-led since 2008.';
+  'Social, creator and trade marketing for imported wine and spirits brands entering the US. Ten years running US social for Mezzacorona, built from zero. Senior-led since 2008.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -38,7 +38,7 @@ const OFFERS = [
   },
   {
     title: 'Creator program',
-    body: 'Creators matched to communities that already drink your category, pitched on the bottle rather than a fee schedule. Commission, product, or paid, set per creator. We built the StreetStrider program from zero to 100+ creator partnerships on the same matching principle.',
+    body: 'Creators matched to communities that already drink your category, pitched on the bottle rather than a fee schedule, with compensation set per creator. We built the StreetStrider program from zero to 100+ creator partnerships on the same matching principle.',
   },
   {
     title: 'Trade association workshops',
@@ -53,15 +53,15 @@ const FAQS = [
   },
   {
     q: 'Do you work with our importer and distributor, or only the brand?',
-    a: 'Both. Three-tier rules decide which messages can come from the brand, so brand channels carry story and provenance while retailer and trade assets are produced separately for the importer and distributor. The founder built the first marketing department at Southern Wine & Spirits in 2007, inside the distributor tier, before founding the agency in 2008.',
+    a: 'Both. Three-tier rules decide which messages can come from the brand, so brand channels carry story and provenance while retailer and trade assets are produced separately for the importer and distributor. The founder helped build the first marketing department at Southern Wine & Spirits in 2007, inside the distributor tier, before founding the agency in 2008.',
   },
   {
-    q: 'Can a creator program run on commission instead of paid posts?',
-    a: 'Often, yes. Creators who already love the category will work for product, commission or a small fee when the brief is about the bottle and the occasion rather than a rate card. The mix is set per creator, and the content each partnership produces is reused across the brand feed so the program keeps working after each deal closes.',
+    q: 'Does a creator program have to run on paid posts?',
+    a: 'Not always. It can work without a rate card when the creator already loves the category and the brief is about the bottle and the occasion. Compensation is set per creator, and the content each partnership produces is reused across the brand feed so the program keeps working after each deal closes.',
   },
   {
     q: 'Do you run workshops for wine associations and alliances?',
-    a: 'Yes. Fifty & Five runs working sessions on DTC and social for member wineries of trade associations and alliances, in person or virtual, at a fixed fee per session quoted in advance.',
+    a: 'Yes. We offer working sessions on DTC and social for the member wineries of trade associations and alliances, in person or virtual, at a fixed fee per session quoted in advance.',
   },
   {
     q: 'Which markets beyond the US do you cover?',
@@ -111,7 +111,7 @@ const DEEP_SECTIONS: ProseSectionData[] = [
       },
       {
         type: 'p',
-        text: 'The founder learned the distributor side first: he built the first marketing department at Southern Wine & Spirits in 2007, with a 15% average lift in case sales, before founding the agency in 2008.',
+        text: 'The founder learned the distributor side first: he helped build the first marketing department at Southern Wine & Spirits in 2007 and went on to run trade marketing with a 15% average lift in case sales, before founding the agency in 2008.',
         href: '/about',
         anchor: 'About the founder',
       },
@@ -205,8 +205,8 @@ export default function WineUsMarketEntryPage() {
           <p className="mt-6 text-body-lg text-text-secondary max-w-3xl leading-[1.7]">
             Fifty &amp; Five plans and runs US marketing for imported wine and spirits brands:
             social, creators, and the trade assets your importer and distributor need. We built
-            the US presence for the Gruppo Mezzacorona portfolio from nothing and ran it for ten
-            years across 5+ brands, inside {FACTS.wineSpiritsBrands}+ wine and spirits brands since{' '}
+            the English-language social presence for the Gruppo Mezzacorona portfolio in the US
+            from nothing and ran it for ten years across 5+ brands, inside {FACTS.wineSpiritsBrands}+ wine and spirits brands since{' '}
             {FACTS.founded}.
           </p>
         </SimpleReveal>
