@@ -67,7 +67,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@graph': [
                 {
-                  '@type': 'MarketingAgency',
+                  // ProfessionalService is a schema.org LocalBusiness subtype; MarketingAgency
+                  // is not a schema.org type, so validators fell back to a generic Thing.
+                  '@type': ['ProfessionalService', 'Organization'],
                   '@id': 'https://fiftyandfive.com/#organization',
                   name: FACTS.name,
                   legalName: FACTS.legalName,
@@ -105,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     memberOf: {
                       '@type': 'Organization',
                       name: 'SoDo Main Street',
-                      description: 'Board member, SoDo Main Street (Orlando)',
+                      description: 'President of the Board, SoDo Main Street (Orlando)',
                     },
                     knowsAbout: [
                       'Fractional CMO',
@@ -120,7 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     ],
                   },
                   address: { '@type': 'PostalAddress', ...FACTS.address },
-                  // MarketingAgency is a LocalBusiness subtype, so the local fields
+                  // ProfessionalService is a LocalBusiness subtype, so the local fields
                   // live here. A separate LocalBusiness node split one business
                   // into two unlinked entities.
                   email: FACTS.email,

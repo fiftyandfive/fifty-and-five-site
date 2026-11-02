@@ -36,6 +36,7 @@ export const ROUTE_DEPS: Record<string, string[]> = {
   '/social-media-marketing-agency-florida': ['app/social-media-marketing-agency-florida/page.tsx'],
   '/hospitality-social-media-agency': ['app/hospitality-social-media-agency/page.tsx'],
   '/wine-social-media-marketing-agency': ['app/wine-social-media-marketing-agency/page.tsx'],
+  '/wine-us-market-entry': ['app/wine-us-market-entry/page.tsx'],
   '/press': ['app/press/page.tsx'],
   '/audit-checklist': ['app/audit-checklist/page.tsx', 'components/pages/AuditChecklistContent.tsx'],
   '/privacy': ['app/privacy/page.tsx', 'fiftyandfive-sms-compliance.md'],
@@ -44,21 +45,22 @@ export const ROUTE_DEPS: Record<string, string[]> = {
 
 /** Last substantive content change per static route. */
 export const PAGE_UPDATED: Record<string, string> = {
-  '/': '2026-09-24',
-  '/work': '2026-09-24',
-  '/services': '2026-09-24',
-  '/fractional-cmo': '2026-09-24',
-  '/ways-to-work': '2026-09-15',
+  '/': '2026-11-02',
+  '/work': '2026-11-02',
+  '/services': '2026-11-02',
+  '/fractional-cmo': '2026-11-02',
+  '/ways-to-work': '2026-11-02',
   '/audit': '2026-11-02',
   '/about': '2026-09-24',
   '/contact': '2026-11-02',
   '/blog': '2026-11-02',
-  '/orlando-social-media-agency': '2026-09-24',
+  '/orlando-social-media-agency': '2026-11-02',
   '/franchise-social-media-agency': '2026-09-15',
-  '/fractional-cmo-orlando': '2026-09-24',
+  '/fractional-cmo-orlando': '2026-11-02',
   '/social-media-marketing-agency-florida': '2026-09-24',
   '/hospitality-social-media-agency': '2026-09-24',
-  '/wine-social-media-marketing-agency': '2026-09-15',
+  '/wine-social-media-marketing-agency': '2026-11-02',
+  '/wine-us-market-entry': '2026-11-02',
   '/press': '2026-09-15',
   '/audit-checklist': '2026-09-15',
   '/privacy': '2026-09-24',
@@ -75,7 +77,7 @@ export const CASE_STUDY_UPDATED = '2026-09-24';
 export const CASE_STUDY_UPDATED_OVERRIDES: Record<string, string> = {};
 
 export const VERTICAL_DEPS = ['lib/data/verticals.ts', 'app/verticals/[slug]/page.tsx'];
-export const VERTICAL_UPDATED = '2026-09-24';
+export const VERTICAL_UPDATED = '2026-11-02';
 export const VERTICAL_UPDATED_OVERRIDES: Record<string, string> = {};
 
 /** Used only if a route is added to the sitemap without a date recorded here. */
