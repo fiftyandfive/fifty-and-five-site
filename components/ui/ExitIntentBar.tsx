@@ -62,7 +62,8 @@ export function ExitIntentBar() {
                     const fd = new FormData(e.currentTarget);
                     const email = String(fd.get('email') || '');
                     trackEvent('Exit Intent Submit');
-                    gtagEvent('generate_lead', {
+                    // A checklist download is a lead magnet, not a sales lead.
+                    gtagEvent('checklist_download', {
                       event_category: 'exit_intent',
                       event_label: 'audit_checklist',
                       value: 1,
