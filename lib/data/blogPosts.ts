@@ -30,6 +30,17 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Wine & Beverage',
   },
   {
+    title: "How Imported Wine and Spirits Brands Win Their First Year in the US",
+    slug: 'imported-wine-spirits-brands-first-year-us',
+    seoTitle: "Imported Wine & Spirits: Your First US Year",
+    wixSlug: 'imported-wine-spirits-brands-first-year-us',
+    date: '2026-11-02',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1600&q=85',
+    excerpt: "Year one is not won on followers. It is won on a story US shoppers get, a program built inside three-tier, and assets your distributor can sell with.",
+    category: 'Wine & Beverage',
+  },
+  {
     title: "What a Fractional CMO Actually Does in the First 90 Days",
     slug: 'what-a-fractional-cmo-does-in-the-first-90-days',
     seoTitle: "Fractional CMO: What Happens in the First 90 Days",

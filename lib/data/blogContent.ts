@@ -76,6 +76,92 @@ export const BLOG_CONTENT: Record<string, string> = {
 
 <h3>Has Fifty &amp; Five built creator programs from zero?</h3>
 <p>Yes. For StreetStrider, Fifty &amp; Five built an influencer engine from zero creator relationships to more than 100 active partnerships, including Natalie Jill, Olympic medalists and CrossFit athletes, and it became the brand's primary acquisition channel. The same matching approach carries over to wine and spirits brands.</p>`,
+  'imported-wine-spirits-brands-first-year-us': `<p>An imported wine or spirits brand wins its first year in the US by building three things before it chases reach: a story an American shopper understands, a marketing program that works inside the three-tier system, and assets that give its importer and distributor a reason to sell it. Follower counts, launch parties and a big first-month ad spend do not win year one. A brand that gets the three foundations right in the first twelve months has something that compounds. A brand that skips them usually spends year two starting over.</p>
+
+<p>We built the English-language social presence for the Gruppo Mezzacorona portfolio in the US from nothing and ran it for ten years. Fifty &amp; Five has worked with ${FACTS.wineSpiritsBrands}+ wine and spirits brands since ${FACTS.founded}, and our founder learned the distributor side of the business before he started the agency. Here is how we would plan the first year for an imported label, in order.</p>
+
+<h2>Why the home-market story does not travel on its own</h2>
+
+<p>An imported label arrives at zero recognition in the United States. The things that sell it at home, the appellation, the family name, the region, mean close to nothing to a shopper standing in front of forty bottles on a Tuesday evening.</p>
+
+<p>The answer is not to drop the region. Region of origin is the whole argument for an imported bottle. The answer is to change the register. On <a href="/work/mezzacorona">Mezzacorona</a>, the brief was a Trentino-Alto Adige story for people who buy Italian wine for dinner, not for people studying for an exam. Leading with appellation rules and geography turns a feed into homework. Leading with the growers, the place and the food the wine belongs next to gives an American buyer a reason to pick the bottle up.</p>
+
+<h2>Decide who you are selling to before you post anything</h2>
+
+<p>The US is not one market. Distribution usually opens state by state, and a brand that markets nationally on day one pays to reach people who cannot buy the bottle yet. The first month of a launch program should be research, not content: who already buys your category, in which states, at what price, and where your importer actually has distribution.</p>
+
+<p>Two decisions belong in that month. The first is which states get the attention, which follows distribution, not ambition. The second is the Hispanic market. We map it on day one in Miami, Houston, Los Angeles, Phoenix and San Antonio, as part of the strategy rather than a translation line item added later.</p>
+
+<p>Our rule on every new account is that month one is discovery only. Nothing gets published until we understand the portfolio, the distributor map, and how legal review works on the brand side. It feels slow. It is the cheapest month of the year to be wrong in.</p>
+
+<h2>Build inside the three tiers from the start</h2>
+
+<p>An imported brand reaches a glass through an importer, a distributor and a retailer, and the tier a message comes from decides whether that message is legal. As the brand, you can talk about the wine, the vineyard, the winemaker and the occasion. You cannot post a price, promote a retailer's deal, or run a call to action for inventory you do not legally control. The retailer can post price and availability. The distributor mostly speaks to trade.</p>
+
+<p>Most first-year compliance problems come from a brand writing retailer copy on a brand account, usually because the team running social came from a category without these rules. Build the split in from the first content calendar:</p>
+
+<ul>
+<li>Brand channels carry story, provenance, pairing and occasion, with no price and no retailer call to action.</li>
+<li>Retailer and trade assets are produced separately and handed to the importer, distributor or chain, never published from the brand account.</li>
+<li>Paid media is split by state, because what is legal for DTC shipping in one state is not legal next door.</li>
+<li>Every account, paid audience and creator post is age-gated, and every caption clears a claims check before it is scheduled.</li>
+</ul>
+
+<p>In year one, compliance is a design decision, not a review step at the end.</p>
+
+<h2>Give your importer and distributor something to sell with</h2>
+
+<p>This is the part most imported brands underweight. A distributor sales rep carries hundreds of items and has no reason to care about your follower count. What moves that rep is a reason to open the bag: a program that is easy to sell, an account that already asked for the item, point of sale material that needs no explaining, and a brand story short enough to survive a buyer meeting.</p>
+
+<p>Our founder learned this from inside the distributor tier. He helped build the first marketing department at Southern Wine &amp; Spirits starting in 2007, with a 15 percent average lift in case sales, and founded Fifty &amp; Five in 2008. The lesson that carried over is simple: consumer marketing that never reaches the trade creates demand nobody in the chain is set up to fill. In year one, every consumer story should have a trade version, built for the people who decide whether your bottle is on the shelf at all.</p>
+
+<h2>The first year, quarter by quarter</h2>
+
+<p>This is how we sequence a <a href="/wine-us-market-entry">US market entry program</a> for an imported brand.</p>
+
+<p><strong>Months 1 to 3: foundations.</strong> Audience and market research, the state priority list, the Hispanic market plan, the core story in plain English, and the three-tier content split. Brand accounts get set up or cleaned up, age-gated, and given a base cadence. Trade assets for the importer and distributor get built alongside the consumer content, not after it.</p>
+
+<p><strong>Months 4 to 6: a reliable base.</strong> A weekly rhythm of education, pairing, place and community replies, so the feed is useful in an ordinary week and not only during a launch moment. Community management starts here and never stops, because early questions about a varietal or a region are usually purchase questions in disguise.</p>
+
+<p><strong>Months 7 to 9: distribution and creators.</strong> Paid support gets folded into the plan once organic reach stops carrying the account, aimed at the states where the bottle can be bought. A creator program starts small, matched to communities that already drink the category rather than to the biggest follower counts available. We wrote up how to run that compliantly in our guide to <a href="/blog/wine-spirits-influencer-marketing">alcohol influencer marketing</a>.</p>
+
+<p><strong>Months 10 to 12: the seasonal calendar and the year two plan.</strong> Harvest content is shot and banked before the crush. Holiday assets are approved in late summer, because retail programs lock long before December. The end of year one is when the brand should know which states, which stories and which formats earned their place, and where year two budget goes.</p>
+
+<h2>What to measure in year one</h2>
+
+<p>Likes are the wrong scoreboard for an imported launch. The signals that matter in the first twelve months are the ones that connect to distribution and repeat purchase:</p>
+
+<ul>
+<li>Saves, shares and comment questions, which show intent rather than passing interest.</li>
+<li>Audience growth inside the states where the bottle is actually available.</li>
+<li>Traffic to where a consumer can find or buy the product, within what the brand is allowed to say.</li>
+<li>Whether the importer, distributor reps and trade buyers are using the assets and asking for more.</li>
+<li>Reusable content: how much of what was made in year one still works in year two.</li>
+</ul>
+
+<p>If the brand has more followers at the end of year one but distributors are no keener to carry it, the year did not work.</p>
+
+<h2>Why year one is really about year ten</h2>
+
+<p>The reason to get the foundations right is that the payoff is long. Mezzacorona was never rebuilt from scratch. The same story, the region, the growers and the food, was re-cut for each new format as it arrived: static images, then video, then short vertical video, then shoppable placements. Organic reach collapsed and paid distribution became mandatory, and the plan absorbed it because the story underneath did not depend on any one platform. That retainer ran ten years across 5+ brands in the portfolio and added roughly one million followers over the relationship.</p>
+
+<p>That outcome started with year one decisions: tell one story well, build inside the rules, and support the people who sell the bottle. Brands that rebuild their social strategy every two years make the audience relearn them every two years. Brands that get the first year right spend the following years compounding.</p>
+
+<p><em>Bringing an imported wine or spirits brand to the US? <a href="/wine-us-market-entry">See how we run US market entry &rarr;</a></em></p>
+
+<p><em>Fifty &amp; Five is a <a href="/wine-social-media-marketing-agency">wine and spirits marketing agency</a>, senior-led since 2008 with three-tier compliance built in.</em></p>
+
+<h3>How long does it take an imported wine brand to gain traction in the US?</h3>
+<p>Plan on a full year to build the foundations: a story US shoppers understand, a program that works inside the three-tier system, and trade assets your importer and distributor can use. The first quarter is research and setup, the second builds a reliable base, and paid support and creators come once there is something worth amplifying in the states where the bottle is sold.</p>
+
+<h3>Should an imported wine brand market nationally from day one?</h3>
+<p>Usually not. US distribution typically opens state by state, so national marketing pays to reach people who cannot buy the bottle yet. Prioritize the states where your importer has distribution, and map the Hispanic market from day one in growth markets such as Miami, Houston, Los Angeles, Phoenix and San Antonio.</p>
+
+<h3>What can an imported wine brand legally post on social media in the US?</h3>
+<p>Under the three-tier system, a brand account can talk about the wine, the vineyard, the winemaker, pairings and occasions. It should not post prices, promote a retailer's deal, or run a call to action for inventory it does not legally control. Retailer and trade assets are produced separately and handed to the distributor or chain, and every account and creator post needs age-gating.</p>
+
+<h3>What does Fifty &amp; Five do for imported wine and spirits brands?</h3>
+<p>Fifty &amp; Five plans and runs US marketing for imported wine and spirits brands: social, creator programs, and the trade assets importers and distributors need. The agency built the English-language social presence for the Gruppo Mezzacorona portfolio in the US from nothing and ran it for ten years. Retainers start at $4,000 per month.</p>`,
   'what-a-fractional-cmo-does-in-the-first-90-days': `<p>The most common question we get before someone takes a <a href="/fractional-cmo">fractional CMO seat</a> is not about cost. It is about what actually happens. What does the person do on Monday? What will you see by the end of the first month? And when does it start to show up in the numbers?</p>
 
 <p>Here is what the first 90 days look like when the seat is run properly. Not a pitch, a sequence.</p>
