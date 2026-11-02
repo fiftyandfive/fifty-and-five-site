@@ -63,7 +63,7 @@ const FAQS = [
   },
   {
     q: 'How do you run social for a brand with several hotels or resorts?',
-    a: 'Each property runs as its own account against one shared standard. For Resorts World, the Bimini property in the Bahamas and the Catskills property in upstate New York had separate creative direction and separate seasonal calendars under one brand, because a beach resort and a mountain resort peak at different times and sell different feelings.',
+    a: 'Each property runs as its own account against one shared standard for voice and production quality. Calendars and creative are built per property, so a beach resort and a mountain resort are never forced into one look.',
   },
   {
     q: 'Can a hospitality brand start with a smaller retainer?',
@@ -85,7 +85,7 @@ const DEEP_SECTIONS: ProseSectionData[] = [
           'Which properties have you run, and for how long? Ask for names and durations, not a mood board.',
           'How do you handle a brand with more than one property? One shared look usually sells none of them.',
           'Who answers the direct messages? On a resort account the inbox is a sales channel, and a slow or junior reply loses a booking.',
-          'How do you plan around seasonality? A beach property and a mountain property peak at opposite times of year.',
+          "How do you plan around seasonality? Ask to see last year's calendar for a property they run.",
           'What happens during a hurricane, a travel advisory or a bad review that spreads? Ask to see the playbook, not a promise.',
           'What do you report on? The answer should be inquiries, booking engine clicks and direct bookings, with reach as a supporting number.',
           'Who runs the account in month seven? The team that pitches should be the team on the weekly call.',
@@ -119,7 +119,7 @@ const DEEP_SECTIONS: ProseSectionData[] = [
     blocks: [
       {
         type: 'p',
-        text: 'Resorts World Bimini sells turquoise water and over-water villas. Resorts World Catskills sells fireplaces and foliage. Both carry the same parent brand, and averaging them into one look would have been cheaper and would have sold neither. Each property ran as its own account, with its own creative direction and its own calendar, against a shared standard for quality and response time.',
+        text: 'Resorts World Bimini sells turquoise water and over-water villas. Resorts World Catskills sells fireplaces and foliage. Both carry the same parent brand, and averaging them into one look would have been cheaper and would have sold neither. Each property ran as its own account, with its own creative direction and its own calendar, against a shared standard for voice, production quality and how the inbox was handled.',
         href: '/work/resorts-world',
         anchor: 'Read the Resorts World case study',
       },
