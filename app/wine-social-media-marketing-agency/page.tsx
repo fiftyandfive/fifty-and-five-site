@@ -359,7 +359,9 @@ export default function WineSocialMediaLandingPage() {
         <p className="mt-8 max-w-2xl text-body text-text-secondary leading-[1.6]">
           Full write-ups on <Link href="/work/kendall-jackson" className="text-accent hover:text-accent-light underline underline-offset-2">Kendall-Jackson</Link> and{' '}
           <Link href="/work/mezzacorona" className="text-accent hover:text-accent-light underline underline-offset-2">Mezzacorona</Link>, or the full portfolio on our{' '}
-          <Link href="/verticals/wine-spirits" className="text-accent hover:text-accent-light underline underline-offset-2">wine and spirits social media agency</Link> page.
+          <Link href="/verticals/wine-spirits" className="text-accent hover:text-accent-light underline underline-offset-2">wine and spirits portfolio</Link> page.
+          Bringing an imported label to the US? See{' '}
+          <Link href="/wine-us-market-entry" className="text-accent hover:text-accent-light underline underline-offset-2">US market entry for imported wine and spirits</Link>.
         </p>
       </section>
 
@@ -380,7 +382,7 @@ export default function WineSocialMediaLandingPage() {
               age-gating on every platform, seasonal rhythms dictated by harvest, the holidays,
               ros&eacute; season, and shelf-reset cycles. Our founder built the first marketing
               department at Southern Wine &amp; Spirits in 2007, before founding Fifty &amp; Five
-              in 2008 &mdash; this vertical is where the agency&rsquo;s discipline started.
+              in 2008. This vertical is where the agency&rsquo;s discipline started.
               Read the full playbook in our{' '}
               <Link href="/blog/wine-spirits-social-media-2026" className="text-accent hover:text-accent-light underline underline-offset-2">2026 wine social guide</Link>{' '}
               or our <Link href="/blog/wine-spirits-influencer-marketing" className="text-accent hover:text-accent-light underline underline-offset-2">influencer marketing guide</Link>.

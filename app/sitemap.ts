@@ -26,6 +26,7 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: '/social-media-marketing-agency-florida', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/hospitality-social-media-agency', changeFrequency: 'monthly', priority: 0.85 },
   { path: '/wine-social-media-marketing-agency', changeFrequency: 'monthly', priority: 0.85 },
+  { path: '/wine-us-market-entry', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/press', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/audit-checklist', changeFrequency: 'yearly', priority: 0.6 },
   { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
