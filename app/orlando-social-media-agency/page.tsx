@@ -314,8 +314,8 @@ export default function OrlandoLandingPage() {
             </p>
             <p className="text-body-lg text-text-secondary leading-[1.75]">
               Being a boutique means a short line to the person making decisions. Orlando clients
-              can sit down with that person, and {FACTS.founder.split(' ')[0]} serves on the SoDo
-              Main Street Board here. It also sets the price: a senior team cannot be staffed on a
+              can sit down with that person, and {FACTS.founder.split(' ')[0]} is President of the
+              SoDo Main Street Board here. It also sets the price: a senior team cannot be staffed on a
               small retainer, which is why retainers start at $4,000 a month.
             </p>
           </div>

@@ -1,5 +1,7 @@
 'use client';
 
+import { FACTS } from '@/lib/site-facts';
+
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { CASE_STUDIES, VERTICAL_COLOR_HEX } from '@/lib/data/caseStudies';
@@ -41,7 +43,7 @@ export function WorkPageContent() {
         </div>
         <AnimatedHeadline
           as="h1"
-          text="222+ brands across 15 verticals since 2008."
+          text={`${FACTS.brandsManaged}+ brands across ${FACTS.verticals} verticals since ${FACTS.founded}.`}
           className="mt-4 font-serif text-h1 tracking-[-0.02em] max-w-4xl"
         />
         <SimpleReveal delay={0.2}>

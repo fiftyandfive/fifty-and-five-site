@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { SimpleReveal } from '@/components/ui/AnimatedHeadline';
 import { SITE } from '@/lib/constants';
+import { ClutchProof } from '@/components/ui/ClutchProof';
 
 /* Editorial poster hero — Creative Giants language.
    One oversized hairline-weight headline on warm cream, a quiet meta line,
@@ -100,6 +101,7 @@ export function TypewriterHero() {
           >
             Get your free brand audit →
           </a>
+          <ClutchProof className="mt-4" />
         </SimpleReveal>
       </div>
 

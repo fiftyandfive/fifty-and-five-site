@@ -1,3 +1,4 @@
+import { FACTS } from '@/lib/site-facts';
 import type { Metadata } from 'next';
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema';
 import { WorkPageContent } from '@/components/pages/WorkPageContent';
@@ -5,7 +6,7 @@ import { WorkPageContent } from '@/components/pages/WorkPageContent';
 export const metadata: Metadata = {
   title: 'Our Work | 222+ Brands Since 2008',
   description:
-    'Case studies from 222+ brands across 15 verticals. Wine & spirits, hospitality, franchise, fitness, tech, and more. Real outcomes, senior-led execution.',
+    `Case studies from ${FACTS.brandsManaged}+ brands across ${FACTS.verticals} verticals. Wine & spirits, hospitality, franchise, fitness, tech, and more. Real outcomes, senior-led execution.`,
   alternates: {
     canonical: 'https://fiftyandfive.com/work',
   },
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     images: ['/opengraph-image'],
     title: 'Our Work | 222+ Brands Since 2008 | Fifty & Five',
     description:
-      'Case studies from 222+ brands across 15 verticals. Real outcomes, senior-led execution.',
+      `Case studies from ${FACTS.brandsManaged}+ brands across ${FACTS.verticals} verticals. Real outcomes, senior-led execution.`,
     url: 'https://fiftyandfive.com/work',
     type: 'website',
   },
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Our Work | 222+ Brands Since 2008 | Fifty & Five',
     description:
-      'Case studies from 222+ brands across 15 verticals. Real outcomes, senior-led execution.',
+      `Case studies from ${FACTS.brandsManaged}+ brands across ${FACTS.verticals} verticals. Real outcomes, senior-led execution.`,
   },
 };
 
