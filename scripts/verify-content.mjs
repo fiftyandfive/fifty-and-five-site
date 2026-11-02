@@ -142,6 +142,7 @@ const newFiles = [
   'app/fractional-cmo/page.tsx', 'app/audit/page.tsx',
   'components/ui/AuditForm.tsx', 'components/ui/NewsletterSignup.tsx',
   'app/api/audit-lead/route.ts', 'app/api/newsletter/route.ts', 'lib/rateLimit.ts',
+  'app/hospitality-social-media-agency/page.tsx',
   'app/wine-us-market-entry/page.tsx', 'app/wine-social-media-marketing-agency/page.tsx',
 ];
 const emDashHits = newFiles.filter((f) => fs.readFileSync(path.join(ROOT, f), 'utf8').includes('—'));
