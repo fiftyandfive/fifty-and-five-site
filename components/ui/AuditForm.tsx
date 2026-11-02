@@ -27,12 +27,6 @@ export function AuditForm() {
         e.preventDefault();
         setStatus('sending');
         const fd = new FormData(e.currentTarget);
-        trackEvent('Audit Form Submit');
-        gtagEvent('generate_lead', {
-          event_category: 'audit',
-          event_label: 'free_brand_audit',
-          value: 1,
-        });
         try {
           const res = await fetch('/api/audit-lead', {
             method: 'POST',
@@ -46,6 +40,15 @@ export function AuditForm() {
               honey: fd.get('honey'),
             }),
           });
+          if (res.ok) {
+            // Count the lead only once the server has accepted it.
+            trackEvent('Audit Form Submit');
+            gtagEvent('generate_lead', {
+              event_category: 'audit',
+              event_label: 'free_brand_audit',
+              value: 1,
+            });
+          }
           setStatus(res.ok ? 'done' : 'error');
         } catch {
           setStatus('error');

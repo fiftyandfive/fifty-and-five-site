@@ -1,3 +1,4 @@
+import { FACTS } from '@/lib/site-facts';
 export type VerticalSlug =
   | 'wine-spirits'
   | 'hospitality'
@@ -47,7 +48,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Wine & Spirits',
     shortLabel: 'Wine & Spirits',
     colorKey: 'wine',
-    headline: 'Wine & Spirits Social Media Agency',
+    headline: `Wine & Spirits Work: ${FACTS.wineSpiritsBrands}+ Brands Since ${FACTS.founded}`,
     subhead:
       '34+ wine and spirits brands managed since 2008. 10-year retainer with Gruppo Mezzacorona across 5+ brands. Multi-year partnership with Kendall-Jackson. This isn\u2019t a vertical we dabble in, it\u2019s one we\u2019ve lived in.',
     metaDescription:
@@ -71,11 +72,11 @@ export const VERTICALS: Vertical[] = [
     faqs: [
       {
         q: 'What wine and spirits brands has Fifty & Five worked with?',
-        a: 'We’ve managed social for Kendall-Jackson, Mezzacorona, and 34+ wine and spirits brands across our 222-brand portfolio since 2008. Senior-led on every account — no junior bench.',
+        a: 'We’ve managed social for Kendall-Jackson, Mezzacorona, and 34+ wine and spirits brands across our 222-brand portfolio since 2008. Senior-led on every account, no junior bench.',
       },
       {
         q: 'How does Fifty & Five handle three-tier wine and spirits compliance on social?',
-        a: 'Compliance is baked into every retainer — we know which posts can ship through which tier, what’s legal for DTC vs distributor markets, and how to balance trade promotion with consumer storytelling without crossing TTB lines.',
+        a: 'Compliance is baked into every retainer, we know which posts can ship through which tier, what’s legal for DTC vs distributor markets, and how to balance trade promotion with consumer storytelling without crossing TTB lines.',
       },
       {
         q: 'Does Fifty & Five work with both luxury and mass-market wine brands?',
