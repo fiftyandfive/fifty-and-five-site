@@ -10,6 +10,7 @@ import {
   SMS_PHONE_REQUIRED_ERROR,
   isPlausiblePhone,
 } from '@/lib/sms-consent';
+import { LEAD_SOURCE_OPTIONS } from '@/lib/lead-screen';
 
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -25,6 +26,7 @@ export function ContactForm() {
   const [error, setError] = useState<string | null>(null);
   const [smsConsent, setSmsConsent] = useState(false);
   const [phoneError, setPhoneError] = useState<string | null>(null);
+  const [source, setSource] = useState('');
 
   if (state === 'success') {
     return (
@@ -74,6 +76,8 @@ export function ContactForm() {
           phone,
           smsConsent,
           pageUrl: window.location.href,
+          source: String(fd.get('source') || ''),
+          referredBy: String(fd.get('referredBy') || ''),
         };
         try {
           const res = await fetch('/api/contact', {
@@ -87,11 +91,15 @@ export function ContactForm() {
             company: payload.company || '(none)',
             budget: payload.budget || '(none)',
           });
-          gtagEvent('generate_lead', {
-            event_category: 'contact',
-            event_label: payload.company || '(none)',
-            value: 1,
-          });
+          // The server screens out vendor pitches; only real leads count in GA4.
+          if (data.lead !== false) {
+            gtagEvent('generate_lead', {
+              event_category: 'contact',
+              event_label: payload.company || '(none)',
+              lead_source: payload.source || '(none)',
+              value: 1,
+            });
+          }
           setState('success');
         } catch (err) {
           setState('error');
@@ -124,6 +132,30 @@ export function ContactForm() {
           ))}
         </select>
       </label>
+
+      <label className="block">
+        <span className="font-mono text-caption uppercase text-text-tertiary tracking-[0.1em]">
+          How did you hear about us? <span className="text-accent">*</span>
+        </span>
+        <select
+          name="source"
+          required
+          value={source}
+          onChange={(e) => setSource(e.target.value)}
+          className="mt-2 w-full bg-transparent border border-glass-border rounded-lg px-4 py-3 text-body text-text-primary focus:outline-none focus:border-accent transition-colors appearance-none"
+        >
+          <option value="" disabled className="bg-bg-primary text-text-tertiary">
+            Select one
+          </option>
+          {LEAD_SOURCE_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value} className="bg-bg-primary text-text-primary">
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      {source === 'referral' && <Field label="Who referred you?" name="referredBy" />}
 
       <Field label="What are you looking for?" name="message" as="textarea" />
 

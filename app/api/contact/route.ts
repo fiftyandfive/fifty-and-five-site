@@ -1,6 +1,13 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { SMS_CONSENT_LABEL, isPlausiblePhone } from '@/lib/sms-consent';
+import {
+  type LeadSource,
+  type ScreenResult,
+  leadSourceLabel,
+  normalizeLeadSource,
+  screenSubmission,
+} from '@/lib/lead-screen';
 
 export const runtime = 'nodejs';
 
@@ -14,6 +21,8 @@ type Payload = {
   phone?: string;
   smsConsent?: boolean;
   pageUrl?: string;
+  source?: string;
+  referredBy?: string;
 };
 
 /** Proof of SMS opt-in, stamped server side. Carriers can ask for it. */
@@ -72,10 +81,19 @@ function buildInternalEmail(
   message: string,
   phone = '',
   consent: SmsConsentRecord | null = null,
+  source: LeadSource | null = null,
+  referredBy = '',
+  screen: ScreenResult = { verdict: 'lead', reasons: [] },
 ) {
+  const vendorNote =
+    screen.verdict === 'vendor'
+      ? `<p style="margin:0 0 12px;padding:8px 12px;background:#fbebeb;font-size:13px"><strong>Likely vendor pitch</strong> (${esc(screen.reasons.join(', '))}). No auto-reply was sent and it was not counted as a lead in GA4.</p>`
+      : '';
   return `
     <div style="font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.6;color:#111">
       <h2 style="margin:0 0 12px;font-family:Georgia,serif;font-weight:400">New inquiry via fiftyandfive.com</h2>
+      ${vendorNote}
+      <p><strong>Heard about us:</strong> ${esc(leadSourceLabel(source))}${referredBy ? ` (referred by ${esc(referredBy)})` : ''}</p>
       <p><strong>Name:</strong> ${esc(name)}</p>
       <p><strong>Email:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a></p>
       ${company ? `<p><strong>Company:</strong> ${esc(company)}</p>` : ''}
@@ -205,7 +223,7 @@ export async function POST(req: Request) {
   }
 
   if (body.honey && body.honey.trim() !== '') {
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, lead: false });
   }
 
   const name = (body.name || '').trim().slice(0, 200);
@@ -213,6 +231,10 @@ export async function POST(req: Request) {
   const company = (body.company || '').trim().slice(0, 200);
   const budget = (body.budget || '').trim().slice(0, 100);
   const message = (body.message || '').trim().slice(0, 5000);
+  const source = normalizeLeadSource(body.source);
+  const referredBy = (body.referredBy || '').trim().slice(0, 200);
+  const screen = screenSubmission({ name, email, company, message });
+  const isLead = screen.verdict === 'lead';
 
   if (!name || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: 'Missing name or valid email' }, { status: 400 });
@@ -247,7 +269,7 @@ export async function POST(req: Request) {
 
   if (!apiKey) {
     console.log('[contact] Resend not configured. Submission:', { name, email, company, budget, message, phone, smsConsent });
-    return NextResponse.json({ ok: true, delivered: false });
+    return NextResponse.json({ ok: true, delivered: false, lead: isLead });
   }
 
   const resend = new Resend(apiKey);
@@ -258,8 +280,8 @@ export async function POST(req: Request) {
       from,
       to,
       replyTo: email,
-      subject: `New inquiry, ${name}${company ? ` (${company})` : ''}${budget ? ` · ${budget}` : ''}`,
-      html: buildInternalEmail(name, email, company, budget, message, phone, consent),
+      subject: `${isLead ? '' : '[Vendor pitch?] '}New inquiry, ${name}${company ? ` (${company})` : ''}${budget ? ` · ${budget}` : ''}`,
+      html: buildInternalEmail(name, email, company, budget, message, phone, consent, source, referredBy, screen),
     });
 
     if (isAuditRequest) {
@@ -270,7 +292,8 @@ export async function POST(req: Request) {
         subject: 'Your 5-Minute Social Media Audit Checklist — Fifty & Five',
         html: buildAuditChecklistEmail(),
       });
-    } else {
+    } else if (isLead) {
+      // Vendor pitches get no auto-reply: it invites a follow-up sequence.
       await resend.emails.send({
         from,
         to: email,
@@ -280,7 +303,7 @@ export async function POST(req: Request) {
       });
     }
 
-    return NextResponse.json({ ok: true, delivered: true });
+    return NextResponse.json({ ok: true, delivered: true, lead: isLead });
   } catch (err) {
     console.error('[contact] send failed', err);
     return NextResponse.json({ ok: false, error: 'Send failed' }, { status: 500 });
