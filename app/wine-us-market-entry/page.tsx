@@ -42,7 +42,7 @@ const OFFERS = [
   },
   {
     title: 'Trade association workshops',
-    body: 'A working session for wine alliances, regional associations and importer groups on DTC and social for member wineries. In person or virtual, fixed fee per session, quoted before anything is booked.',
+    body: 'A working session for wine alliances, regional associations and importer groups on DTC and social for member wineries. $5,000 per session in person, $3,000 virtual. Flat fee, agreed before anything is booked.',
   },
 ];
 
@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: 'Do you run workshops for wine associations and alliances?',
-    a: 'Yes. We offer working sessions on DTC and social for the member wineries of trade associations and alliances, in person or virtual, at a fixed fee per session quoted in advance.',
+    a: 'Yes. We offer working sessions on DTC and social for the member wineries of trade associations and alliances, at a flat $5,000 per session in person or $3,000 virtual.',
   },
   {
     q: 'Which markets beyond the US do you cover?',
@@ -151,6 +151,20 @@ export default function WineUsMarketEntryPage() {
                   audienceType: 'Imported wine and spirits brands, importers, and wine trade associations',
                 },
                 mentions: [{ '@type': 'Organization', name: 'Mezzacorona' }],
+                offers: [
+                  {
+                    '@type': 'Offer',
+                    name: 'Trade association workshop, in person',
+                    price: 5000,
+                    priceCurrency: 'USD',
+                  },
+                  {
+                    '@type': 'Offer',
+                    name: 'Trade association workshop, virtual',
+                    price: 3000,
+                    priceCurrency: 'USD',
+                  },
+                ],
               },
             ],
           }),
