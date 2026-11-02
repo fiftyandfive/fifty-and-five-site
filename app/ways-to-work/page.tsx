@@ -8,7 +8,7 @@ import { ProseSections, type ProseSectionData } from '@/components/ui/ProseSecti
 import { SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Ways to Work With Us | Fifty & Five',
+  title: 'Ways to Work With Us',
   description:
     'Same senior team at every depth. Run the work, lead the function, or both. Retainers and fractional CMO seats from $4,000/mo.',
   alternates: { canonical: 'https://fiftyandfive.com/ways-to-work' },

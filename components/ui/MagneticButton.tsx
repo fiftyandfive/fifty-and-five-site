@@ -66,7 +66,9 @@ export function MagneticButton({
   const handleClick = useCallback(() => {
     if (trackName) trackEvent(trackName, href ? { to: href } : undefined);
     if (href?.includes('calendly.com')) {
-      gtagEvent('book_call', { event_category: 'cta', event_label: trackName || 'calendly_cta', value: 1 });
+      // A click on a Calendly link, not a booking. Confirmed bookings fire
+      // `book_call` from CalendlyEmbed.
+      gtagEvent('book_call_click', { event_category: 'cta', event_label: trackName || 'calendly_cta', value: 1 });
     }
     onClick?.();
   }, [trackName, href, onClick]);
