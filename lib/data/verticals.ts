@@ -47,7 +47,7 @@ export const VERTICALS: Vertical[] = [
     name: 'Wine & Spirits',
     shortLabel: 'Wine & Spirits',
     colorKey: 'wine',
-    headline: 'Wine & Spirits Social Media Agency',
+    headline: 'Wine & Spirits Work: 34+ Brands Since 2008',
     subhead:
       '34+ wine and spirits brands managed since 2008. 10-year retainer with Gruppo Mezzacorona across 5+ brands. Multi-year partnership with Kendall-Jackson. This isn\u2019t a vertical we dabble in, it\u2019s one we\u2019ve lived in.',
     metaDescription:
