@@ -42,7 +42,7 @@ export function Navigation() {
             <BrandLogo height={22} className="md:scale-110 origin-left" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8 whitespace-nowrap">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.href}
@@ -70,7 +70,7 @@ export function Navigation() {
           <button
             type="button"
             aria-label="Toggle menu"
-            className="md:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+            className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5"
             onClick={() => setOpen((o) => !o)}
           >
             <motion.span
@@ -94,7 +94,7 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-30 bg-bg-primary md:hidden"
+            className="fixed inset-0 z-30 bg-bg-primary lg:hidden"
           >
             <div className="h-full container-edge pt-24 pb-10 flex flex-col">
               <nav className="flex flex-col gap-6 flex-1">

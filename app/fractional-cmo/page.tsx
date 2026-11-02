@@ -664,10 +664,9 @@ export default function FractionalCmoPage() {
             <GlassCard className="h-full flex flex-col p-7">
               <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">B2B and tech</h3>
               <p className="mt-3 text-body text-text-secondary leading-[1.6] flex-1">
-                B2B buyers decide on LinkedIn and in the sales call, not in a feed. The seat runs
-                LinkedIn, paid and content as one pipeline, sets reporting the sales team trusts,
-                and directs the people already doing the work. Past brands include Microsoft, SAP,
-                and NETGEAR.
+                B2B buyers decide in the sales call, not in a feed. The seat sets strategy, budget,
+                and channel priorities around that cycle and directs the people already doing the
+                work. Past brands include Microsoft, SAP, and NETGEAR.
               </p>
               <Link href="/verticals/tech-saas" className="mt-5 text-meta text-accent hover:text-accent-light">
                 Tech and SaaS work &rarr;
