@@ -10,7 +10,7 @@ import {
   SMS_PHONE_REQUIRED_ERROR,
   isPlausiblePhone,
 } from '@/lib/sms-consent';
-import { LEAD_SOURCE_OPTIONS } from '@/lib/lead-screen';
+import { LEAD_SOURCE_OPTIONS } from '@/lib/lead-source';
 
 type State = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -91,15 +91,12 @@ export function ContactForm() {
             company: payload.company || '(none)',
             budget: payload.budget || '(none)',
           });
-          // The server screens out vendor pitches; only real leads count in GA4.
-          if (data.lead !== false) {
-            gtagEvent('generate_lead', {
-              event_category: 'contact',
-              event_label: payload.company || '(none)',
-              lead_source: payload.source || '(none)',
-              value: 1,
-            });
-          }
+          gtagEvent('generate_lead', {
+            event_category: 'contact',
+            event_label: payload.company || '(none)',
+            lead_source: payload.source || '(none)',
+            value: 1,
+          });
           setState('success');
         } catch (err) {
           setState('error');

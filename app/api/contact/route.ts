@@ -1,13 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { SMS_CONSENT_LABEL, isPlausiblePhone } from '@/lib/sms-consent';
-import {
-  type LeadSource,
-  type ScreenResult,
-  leadSourceLabel,
-  normalizeLeadSource,
-  screenSubmission,
-} from '@/lib/lead-screen';
+import { type LeadSource, leadSourceLabel, normalizeLeadSource } from '@/lib/lead-source';
 
 export const runtime = 'nodejs';
 
@@ -83,16 +77,10 @@ function buildInternalEmail(
   consent: SmsConsentRecord | null = null,
   source: LeadSource | null = null,
   referredBy = '',
-  screen: ScreenResult = { verdict: 'lead', reasons: [] },
 ) {
-  const vendorNote =
-    screen.verdict === 'vendor'
-      ? `<p style="margin:0 0 12px;padding:8px 12px;background:#fbebeb;font-size:13px"><strong>Likely vendor pitch</strong> (${esc(screen.reasons.join(', '))}). It was not counted as a lead in GA4. The normal auto-reply still went out.</p>`
-      : '';
   return `
     <div style="font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.6;color:#111">
       <h2 style="margin:0 0 12px;font-family:Georgia,serif;font-weight:400">New inquiry via fiftyandfive.com</h2>
-      ${vendorNote}
       <p><strong>Heard about us:</strong> ${esc(leadSourceLabel(source))}${referredBy ? ` (referred by ${esc(referredBy)})` : ''}</p>
       <p><strong>Name:</strong> ${esc(name)}</p>
       <p><strong>Email:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a></p>
@@ -223,7 +211,7 @@ export async function POST(req: Request) {
   }
 
   if (body.honey && body.honey.trim() !== '') {
-    return NextResponse.json({ ok: true, lead: false });
+    return NextResponse.json({ ok: true });
   }
 
   const name = (body.name || '').trim().slice(0, 200);
@@ -233,8 +221,6 @@ export async function POST(req: Request) {
   const message = (body.message || '').trim().slice(0, 5000);
   const source = normalizeLeadSource(body.source);
   const referredBy = (body.referredBy || '').trim().slice(0, 200);
-  const screen = screenSubmission({ name, email, company, message });
-  const isLead = screen.verdict === 'lead';
 
   if (!name || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: 'Missing name or valid email' }, { status: 400 });
@@ -269,7 +255,7 @@ export async function POST(req: Request) {
 
   if (!apiKey) {
     console.log('[contact] Resend not configured. Submission:', { name, email, company, budget, message, phone, smsConsent });
-    return NextResponse.json({ ok: true, delivered: false, lead: isLead });
+    return NextResponse.json({ ok: true, delivered: false });
   }
 
   const resend = new Resend(apiKey);
@@ -280,8 +266,8 @@ export async function POST(req: Request) {
       from,
       to,
       replyTo: email,
-      subject: `${isLead ? '' : '[Vendor pitch?] '}New inquiry, ${name}${company ? ` (${company})` : ''}${budget ? ` · ${budget}` : ''}`,
-      html: buildInternalEmail(name, email, company, budget, message, phone, consent, source, referredBy, screen),
+      subject: `New inquiry, ${name}${company ? ` (${company})` : ''}${budget ? ` · ${budget}` : ''}`,
+      html: buildInternalEmail(name, email, company, budget, message, phone, consent, source, referredBy),
     });
 
     if (isAuditRequest) {
@@ -293,7 +279,6 @@ export async function POST(req: Request) {
         html: buildAuditChecklistEmail(),
       });
     } else {
-      // Everyone gets the auto-reply, so a prospect the screen misreads loses nothing.
       await resend.emails.send({
         from,
         to: email,
@@ -303,7 +288,7 @@ export async function POST(req: Request) {
       });
     }
 
-    return NextResponse.json({ ok: true, delivered: true, lead: isLead });
+    return NextResponse.json({ ok: true, delivered: true });
   } catch (err) {
     console.error('[contact] send failed', err);
     return NextResponse.json({ ok: false, error: 'Send failed' }, { status: 500 });

@@ -40,17 +40,14 @@ export function AuditForm() {
               honey: fd.get('honey'),
             }),
           });
-          const data = await res.json().catch(() => ({}));
           if (res.ok) {
-            // Count the lead only once the server has it, and only if it is not a vendor pitch.
+            // Count the lead only once the server has accepted it.
             trackEvent('Audit Form Submit');
-            if (data.lead !== false) {
-              gtagEvent('generate_lead', {
-                event_category: 'audit',
-                event_label: 'free_brand_audit',
-                value: 1,
-              });
-            }
+            gtagEvent('generate_lead', {
+              event_category: 'audit',
+              event_label: 'free_brand_audit',
+              value: 1,
+            });
           }
           setStatus(res.ok ? 'done' : 'error');
         } catch {

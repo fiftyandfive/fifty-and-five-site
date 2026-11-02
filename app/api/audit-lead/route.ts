@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { screenSubmission } from '@/lib/lead-screen';
 import { clientIp, rateLimit } from '@/lib/rateLimit';
 
 export const runtime = 'nodejs';
@@ -27,7 +26,7 @@ export async function POST(req: Request) {
 
   // Honeypot: accept silently so bots learn nothing
   if (body.honey && body.honey.trim() !== '') {
-    return NextResponse.json({ ok: true, lead: false });
+    return NextResponse.json({ ok: true });
   }
 
   const name = (body.name || '').trim().slice(0, 200);
@@ -40,13 +39,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: 'Missing name or valid email' }, { status: 400 });
   }
 
-  const screen = screenSubmission({ name, email, company, message: frustration });
-  const isLead = screen.verdict === 'lead';
-
   const webhookUrl = process.env.AUDIT_WEBHOOK_URL;
   if (!webhookUrl) {
     console.log('[audit-lead] webhook not configured. Submission:', { name, email, company, website });
-    return NextResponse.json({ ok: true, delivered: false, lead: isLead });
+    return NextResponse.json({ ok: true, delivered: false });
   }
 
   try {
@@ -61,12 +57,10 @@ export async function POST(req: Request) {
         company,
         website,
         frustration,
-        likelyVendor: !isLead,
-        vendorReasons: screen.reasons,
       }),
     });
     if (!res.ok) throw new Error(`webhook responded ${res.status}`);
-    return NextResponse.json({ ok: true, delivered: true, lead: isLead });
+    return NextResponse.json({ ok: true, delivered: true });
   } catch (err) {
     console.error('[audit-lead] webhook failed', err);
     return NextResponse.json({ ok: false, error: 'Delivery failed' }, { status: 502 });
