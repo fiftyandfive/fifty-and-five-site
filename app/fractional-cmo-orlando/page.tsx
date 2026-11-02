@@ -41,7 +41,7 @@ const TIMELINE = [
   },
   {
     year: '2026',
-    text: '222+ brands managed across 5 continents. Senior + AI operating model in market. Serves on the SoDo Main Street Board in Orlando.',
+    text: '222+ brands managed across 5 continents. Senior + AI operating model in market. President of the SoDo Main Street Board in Orlando.',
   },
 ];
 
@@ -91,7 +91,7 @@ const FAQS = [
   },
   {
     q: 'Which Orlando companies has Lucas Vandenberg worked with?',
-    a: 'Locally the list includes Landmark Contracting, Central Florida Talent, BODYBar SoDo, Crafty Bartender, Solar Bears Orlando, Andretti Indoor Karting, Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA. Fifty & Five is based at 1001 N Orange Ave, and I serve on the SoDo Main Street Board. The national roster, including Microsoft, Kendall-Jackson, and Enterprise Holdings, is run from the same desk.',
+    a: 'Locally the list includes Landmark Contracting, Central Florida Talent, BODYBar SoDo, Crafty Bartender, Solar Bears Orlando, Andretti Indoor Karting, Velocity Title, Laser Lab, Chance 2 Dance, and Teoxane SA. Fifty & Five is based at 1001 N Orange Ave, and I am President of the SoDo Main Street Board. The national roster, including Microsoft, Kendall-Jackson, and Enterprise Holdings, is run from the same desk.',
   },
   {
     q: 'Do you take fractional CMO clients outside Orlando?',
@@ -328,8 +328,8 @@ export default function FractionalCmoOrlandoPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-body-lg text-text-secondary leading-[1.75] max-w-2xl">
-              Fifty &amp; Five runs from 1001 N Orange Ave, and I serve on the SoDo Main Street
-              Board here in Orlando. That matters for a practical reason rather than a
+              Fifty &amp; Five runs from 1001 N Orange Ave, and I am President of the SoDo Main
+              Street Board here in Orlando. That matters for a practical reason rather than a
               sentimental one: when an owner-operator in Winter Park or Lake Nona describes their
               market, I do not need it explained. I know which industries in this city run on
               tourism cycles, which run on relocation, and which run on referrals from the same
