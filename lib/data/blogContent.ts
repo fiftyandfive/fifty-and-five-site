@@ -4,6 +4,78 @@
 import { FACTS } from '@/lib/site-facts';
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'wine-creator-programs-match-community-not-followers': `<p>A creator program for a wine brand works when each creator is matched to a community that already drinks, cooks or entertains around your category, and fails when creators are picked by follower count. Pick the community first, pitch the creator on the bottle rather than a rate card, and structure every partnership so its content keeps working after the deal closes.</p>
+
+<p>That is the method behind the creator engine we built for <a href="/work/streetstrider">StreetStrider</a>, which went from zero creator relationships to more than 100 active partnerships, and it is how we approach creator work for wine and spirits brands. Fifty &amp; Five has worked with ${FACTS.wineSpiritsBrands}+ wine and spirits brands since ${FACTS.founded}. Here is how a wine creator program should be built, step by step.</p>
+
+<h2>Why follower count is the wrong filter for wine</h2>
+
+<p>Wine is a considered purchase with a lot of noise around it. A shopper has to understand why this bottle, from this place, belongs on their table before a recommendation turns into a sale. A creator with a large general audience can put a bottle in front of a lot of people, but if those people do not already care about wine, food or hosting, the post gets scrolled past the moment the label appears.</p>
+
+<p>The StreetStrider program taught the same lesson in a different category. The product needed explaining, the buyer was a specific kind of athlete, and follower count was the wrong filter. The roster that worked was built on fit: Natalie Jill, Olympic medalists and CrossFit athletes who joined as organic ambassadors because their communities would plausibly use the product. Wine has the same shape. The buyer is specific, the product needs context, and trust in the person recommending it matters more than reach.</p>
+
+<h2>Step 1: define the community before you search for creators</h2>
+
+<p>Before anyone opens a creator database, write down who you want drinking the wine and where they already gather. For most wine brands that is not one audience. It is several small ones:</p>
+
+<ul>
+<li>Home cooks who post what they made for dinner and what they poured with it.</li>
+<li>People who host, whether that is a weeknight table for four or a holiday crowd.</li>
+<li>Travelers and food writers who care about a region, which matters most for imported labels.</li>
+<li>Natural, low-intervention or varietal-specific communities that already argue about what is in the glass.</li>
+</ul>
+
+<p>Each community has its own creators, its own language and its own occasions. A Sunday-dinner cook and a natural wine enthusiast will talk about the same bottle in completely different ways, and both can sell it. The job is to decide which communities the brand belongs in before deciding which people to approach.</p>
+
+<h2>Step 2: match the creator to the part of the wine list they care about</h2>
+
+<p>Once the communities are clear, matching becomes specific. On <a href="/work/barsha">Barsha</a>, an independent LA restaurant and wine bar with a curated natural wine program, the seeding rule was to match each writer or creator to the part of the menu or the wine list they actually cared about, then send the work rather than a pitch deck. There was no pay for play, no gifted meal program and no paid media. The restaurant landed on the LA Times Top 101 Restaurants list two years running, with coverage in BuzzFeed, Thrillist and NBC LA, all organic.</p>
+
+<p>For a wine brand, that means a creator who cooks Italian on weeknights gets the bottle that belongs next to that dinner. A creator who covers a region gets the story of the growers. A creator who only drinks one style does not get sent a different one. A good match is one the creator could explain to their own audience without a script.</p>
+
+<h2>Step 3: pitch the bottle, not the fee schedule</h2>
+
+<p>The StreetStrider roster was built by pitching creators on the product rather than on a fee schedule. That is slower per deal, and it is the reason the partnerships read as recommendations instead of ads. The same holds for wine. A creator who already loves the category and is pitched on a bottle and an occasion will often say yes on the strength of the wine, and the content shows it.</p>
+
+<p>That does not mean every creator works for free. Compensation should be set per creator, based on what the partnership asks of them and what rights the brand gets back. What it does mean is that the pitch leads with fit. If the only reason a creator says yes is the fee, their audience will usually notice.</p>
+
+<h2>Step 4: put compliance in the brief, not in a review</h2>
+
+<p>A creator post about your wine follows the same alcohol marketing rules as your brand account, and creators do not know those rules by default. Write them into every brief before anything is shot. We cover the full set in our guide to <a href="/blog/wine-spirits-influencer-marketing">alcohol influencer marketing</a>.</p>
+
+<h2>Step 5: brief for what to demonstrate</h2>
+
+<p>On StreetStrider, each creator was briefed on what to demonstrate so the footage explained the product. For wine, the equivalent is the occasion: what is on the table, who is around it, why this bottle and not another. A brief that says "post about our white wine" gets a bottle shot. A brief that says "show the dinner you would open this with and tell us why" gets content that teaches a stranger why to buy it.</p>
+
+<h2>Step 6: harvest every partnership for reusable content</h2>
+
+<p>This is the step that turns a list of deals into a program. On StreetStrider, every partnership was harvested for reusable assets, then fed back into the organic calendar for months after each deal ended. That is what made the creator engine the brand's primary acquisition channel rather than a line item that had to be refilled every quarter.</p>
+
+<p>For a wine brand, that means structuring each partnership so the brand can reuse the content: on its own feed, in paid placements where the rules allow, and in assets for the importer or distributor. A single post disappears down a feed in a couple of days. A library of real people pouring your wine at real dinners keeps working all year.</p>
+
+<h2>Step 7: cover every community, not just the easiest one</h2>
+
+<p>Map the roster back to Step 1. The goal at the end of the first year is at least one repeat creator inside each community the brand set out to reach, so no single audience depends on one person.</p>
+
+<h2>What to measure</h2>
+
+<p>On top of the standard intent and trade signals in our <a href="/blog/wine-spirits-influencer-marketing">influencer marketing guide</a>, a community-matched program should track three things of its own: how many reusable assets each partnership produced and how long they kept running, how many creators came back for a second partnership, and whether each community from Step 1 has at least one creator who keeps posting about the wine without being asked.</p>
+
+<p><em>Building a creator program for a wine or spirits brand, or launching an imported label? <a href="/wine-us-market-entry">See how we run US market entry &rarr;</a></em></p>
+
+<p><em>Fifty &amp; Five is a <a href="/wine-social-media-marketing-agency">wine and spirits marketing agency</a>, senior-led since 2008 with three-tier compliance built in.</em></p>
+
+<h3>How should a wine brand choose creators?</h3>
+<p>Choose the community first and the creator second. Define the audiences the wine belongs with, such as home cooks, hosts, region travelers or natural wine drinkers, then pick creators whose followers already care about that part of the category. Fit and trust move more bottles than follower count.</p>
+
+<h3>Do wine creator programs have to be paid?</h3>
+<p>Not always. Creators who already love the category will often partner on the strength of the bottle and the occasion, and compensation can be set per creator based on what the partnership asks and what content rights the brand gets. The pitch should lead with fit, not the fee.</p>
+
+<h3>How do you brief a wine creator?</h3>
+<p>Brief for the occasion, not the bottle shot: what is on the table, who is around it, and why this wine and not another. Add the alcohol marketing rules the post has to follow, what to show and what not to say, before anything is shot. A creator who can explain the match in their own words will produce content that teaches a stranger why to buy.</p>
+
+<h3>Has Fifty &amp; Five built creator programs from zero?</h3>
+<p>Yes. For StreetStrider, Fifty &amp; Five built an influencer engine from zero creator relationships to more than 100 active partnerships, including Natalie Jill, Olympic medalists and CrossFit athletes, and it became the brand's primary acquisition channel. The same matching approach carries over to wine and spirits brands.</p>`,
   'imported-wine-spirits-brands-first-year-us': `<p>An imported wine or spirits brand wins its first year in the US by building three things before it chases reach: a story an American shopper understands, a marketing program that works inside the three-tier system, and assets that give its importer and distributor a reason to sell it. Follower counts, launch parties and a big first-month ad spend do not win year one. A brand that gets the three foundations right in the first twelve months has something that compounds. A brand that skips them usually spends year two starting over.</p>
 
 <p>We built the English-language social presence for the Gruppo Mezzacorona portfolio in the US from nothing and ran it for ten years. Fifty &amp; Five has worked with ${FACTS.wineSpiritsBrands}+ wine and spirits brands since ${FACTS.founded}, and our founder learned the distributor side of the business before he started the agency. Here is how we would plan the first year for an imported label, in order.</p>

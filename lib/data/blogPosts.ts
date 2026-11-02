@@ -19,6 +19,17 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "Creator Programs for Wine Brands: Match the Community, Not the Follower Count",
+    slug: 'wine-creator-programs-match-community-not-followers',
+    seoTitle: "Wine Creator Programs: Match the Community",
+    wixSlug: 'wine-creator-programs-match-community-not-followers',
+    date: '2026-11-02',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1600&q=85',
+    excerpt: "Pick creators by the community they reach, not follower count. A seven-step wine creator program: matching, pitching, compliance and reusable content.",
+    category: 'Wine & Beverage',
+  },
+  {
     title: "How Imported Wine and Spirits Brands Win Their First Year in the US",
     slug: 'imported-wine-spirits-brands-first-year-us',
     seoTitle: "Imported Wine & Spirits: Your First US Year",

@@ -3,7 +3,8 @@
  * site publishes. Organization and Person JSON-LD, the footer credential
  * line, the About page stats, and the llms.txt / llms-full.txt routes all
  * read from here. Change a value here and grep the surfaces listed in the
- * repo before shipping; prose in blog posts is not wired to this file.
+ * repo before shipping; most blog prose is not wired to this file (newer posts
+ * interpolate FACTS in lib/data/blogContent.ts).
  */
 const FOUNDED = 2008;
 
