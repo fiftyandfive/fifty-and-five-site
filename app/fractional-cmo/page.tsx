@@ -7,6 +7,7 @@ import { MagneticButton } from '@/components/ui/MagneticButton';
 import { CASE_STUDIES } from '@/lib/data/caseStudies';
 import { PRICING, SITE } from '@/lib/constants';
 import { FACTS } from '@/lib/site-facts';
+import { ClutchProof } from '@/components/ui/ClutchProof';
 
 export const metadata: Metadata = {
   title: { absolute: 'Fractional CMO for $1M to $20M Companies | Fifty & Five' },
@@ -203,7 +204,7 @@ export default function FractionalCmoPage() {
           </p>
         </SimpleReveal>
         <SimpleReveal delay={0.44}>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap items-center gap-4">
             <MagneticButton
               href={SITE.calendly}
               variant="primary"
@@ -212,7 +213,16 @@ export default function FractionalCmoPage() {
             >
               Book a working session →
             </MagneticButton>
+            <MagneticButton
+              href="/audit"
+              variant="ghost"
+              size="large"
+              trackName="Fractional CMO Hero Audit CTA"
+            >
+              Or start with a free brand audit
+            </MagneticButton>
           </div>
+          <ClutchProof className="mt-6" />
         </SimpleReveal>
       </section>
 
@@ -607,11 +617,11 @@ export default function FractionalCmoPage() {
           </h2>
           <p className="mt-6 text-body-lg text-text-secondary leading-[1.75]">
             The seat is the same in every category. What changes is how much of the first quarter
-            goes to learning your rules instead of fixing your bottleneck. Three categories where
+            goes to learning your rules instead of fixing your bottleneck. Four categories where
             we start on day one instead of month seven.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
           <SimpleReveal>
             <GlassCard className="h-full flex flex-col p-7">
               <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">Hospitality and resorts</h3>
@@ -647,6 +657,20 @@ export default function FractionalCmoPage() {
               </p>
               <Link href="/blog/fractional-cmo-for-franchise-and-multi-location-brands" className="mt-5 text-meta text-accent hover:text-accent-light">
                 A fractional CMO at franchise scale &rarr;
+              </Link>
+            </GlassCard>
+          </SimpleReveal>
+          <SimpleReveal delay={0.24}>
+            <GlassCard className="h-full flex flex-col p-7">
+              <h3 className="font-serif text-[22px] leading-[1.2] text-text-primary">B2B and tech</h3>
+              <p className="mt-3 text-body text-text-secondary leading-[1.6] flex-1">
+                B2B buyers decide on LinkedIn and in the sales call, not in a feed. The seat runs
+                LinkedIn, paid and content as one pipeline, sets reporting the sales team trusts,
+                and directs the people already doing the work. Past brands include Microsoft, SAP,
+                and NETGEAR.
+              </p>
+              <Link href="/verticals/tech-saas" className="mt-5 text-meta text-accent hover:text-accent-light">
+                Tech and SaaS work &rarr;
               </Link>
             </GlassCard>
           </SimpleReveal>
@@ -734,6 +758,9 @@ export default function FractionalCmoPage() {
           >
             Book a working session →
           </MagneticButton>
+          <Link href="/audit" className="text-meta text-accent hover:text-accent-light underline underline-offset-2">
+            Not ready for a call? Start with a free brand audit
+          </Link>
         </div>
       </section>
     </>
