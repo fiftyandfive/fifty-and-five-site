@@ -4,6 +4,7 @@ import { AnimatedHeadline, SimpleReveal } from '@/components/ui/AnimatedHeadline
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { CTASection } from '@/components/layout/CTASection';
+import { ProseSections, type ProseSectionData } from '@/components/ui/ProseSection';
 
 export const metadata: Metadata = {
   title: { absolute: 'Hotel & Resort Social Media Agency | Fifty & Five' },
@@ -57,8 +58,78 @@ const FAQS = [
     a: 'Yes. Fifty & Five has run social for luxury resort properties including Resorts World Bimini in the Bahamas and Resorts World Catskills in upstate New York, each with content built around the specific character of the property, not a shared template.',
   },
   {
+    q: 'How should a hotel measure social media?',
+    a: 'By what it does for bookings and inquiries, not by likes. Track direct messages and inquiries that came from social, clicks to the booking engine, and the share of direct bookings that touched a social channel first. Reach and engagement are leading signals, useful only when they move those numbers.',
+  },
+  {
+    q: 'How do you run social for a brand with several hotels or resorts?',
+    a: 'Each property runs as its own account against one shared standard. For Resorts World, the Bimini property in the Bahamas and the Catskills property in upstate New York had separate creative direction and separate seasonal calendars under one brand, because a beach resort and a mountain resort peak at different times and sell different feelings.',
+  },
+  {
     q: 'Can a hospitality brand start with a smaller retainer?',
     a: 'Yes. Retainers scale from ad-management-only programs at $4,000 per month up to full-service, always-on, multi-property programs at $50,000+ per month.',
+  },
+];
+
+const DEEP_SECTIONS: ProseSectionData[] = [
+  {
+    h2: 'How to choose a hotel or resort social media agency',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Most agency shortlists are built from portfolios, and portfolios all look alike: good photos of beautiful places. These seven questions separate an agency that has run hospitality accounts from one that has posted for them.',
+      },
+      {
+        type: 'ol',
+        items: [
+          'Which properties have you run, and for how long? Ask for names and durations, not a mood board.',
+          'How do you handle a brand with more than one property? One shared look usually sells none of them.',
+          'Who answers the direct messages? On a resort account the inbox is a sales channel, and a slow or junior reply loses a booking.',
+          'How do you plan around seasonality? A beach property and a mountain property peak at opposite times of year.',
+          'What happens during a hurricane, a travel advisory or a bad review that spreads? Ask to see the playbook, not a promise.',
+          'What do you report on? The answer should be inquiries, booking engine clicks and direct bookings, with reach as a supporting number.',
+          'Who runs the account in month seven? The team that pitches should be the team on the weekly call.',
+        ],
+      },
+    ],
+  },
+  {
+    h2: 'What a hotel and resort social program covers',
+    blocks: [
+      {
+        type: 'ul',
+        items: [
+          'Creative direction built from the specific place: the view, the room, the food, the people, not a shared luxury template.',
+          'A seasonal calendar per property, planned months ahead of peak demand.',
+          'Community management that treats every direct message as a possible booking.',
+          'Short-form video as the primary format, with photography in support.',
+          'Paid social aimed at the dates and markets the property needs to fill.',
+          'A crisis playbook for weather events, travel advisories and reputation moments.',
+          'Monthly reporting tied to inquiries and direct bookings.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Tourism boards need the same discipline at a larger scale: one destination story adapted market by market without diluting it. Fifty & Five has run social for the Hong Kong Tourism Board, the Korea Tourism Board and the Macau Tourism Office, and has operated campaigns in 40+ countries.',
+      },
+    ],
+  },
+  {
+    h2: 'Two resorts, one brand: how Resorts World ran',
+    blocks: [
+      {
+        type: 'p',
+        text: 'Resorts World Bimini sells turquoise water and over-water villas. Resorts World Catskills sells fireplaces and foliage. Both carry the same parent brand, and averaging them into one look would have been cheaper and would have sold neither. Each property ran as its own account, with its own creative direction and its own calendar, against a shared standard for quality and response time.',
+        href: '/work/resorts-world',
+        anchor: 'Read the Resorts World case study',
+      },
+      {
+        type: 'p',
+        text: 'Hospitality groups that need more than social, such as a marketing lead across properties, budget and channel decisions, and agency oversight, can bring the same thinking in through a fractional CMO seat.',
+        href: '/fractional-cmo',
+        anchor: 'Fractional CMO for hospitality',
+      },
+    ],
   },
 ];
 
@@ -230,6 +301,8 @@ export default function HospitalityLandingPage() {
           </div>
         </div>
       </section>
+
+      <ProseSections sections={DEEP_SECTIONS} />
 
       {/* FAQ */}
       <section className="container-edge py-16 md:py-24">

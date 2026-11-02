@@ -57,7 +57,7 @@ export const PAGE_UPDATED: Record<string, string> = {
   '/franchise-social-media-agency': '2026-09-15',
   '/fractional-cmo-orlando': '2026-09-24',
   '/social-media-marketing-agency-florida': '2026-09-24',
-  '/hospitality-social-media-agency': '2026-09-24',
+  '/hospitality-social-media-agency': '2026-11-02',
   '/wine-social-media-marketing-agency': '2026-09-15',
   '/press': '2026-09-15',
   '/audit-checklist': '2026-09-15',
