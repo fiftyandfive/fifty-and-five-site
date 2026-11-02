@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { SMS_CONSENT_LABEL, isPlausiblePhone } from '@/lib/sms-consent';
+import { type LeadSource, leadSourceLabel, normalizeLeadSource } from '@/lib/lead-source';
 
 export const runtime = 'nodejs';
 
@@ -14,6 +15,8 @@ type Payload = {
   phone?: string;
   smsConsent?: boolean;
   pageUrl?: string;
+  source?: string;
+  referredBy?: string;
 };
 
 /** Proof of SMS opt-in, stamped server side. Carriers can ask for it. */
@@ -72,10 +75,13 @@ function buildInternalEmail(
   message: string,
   phone = '',
   consent: SmsConsentRecord | null = null,
+  source: LeadSource | null = null,
+  referredBy = '',
 ) {
   return `
     <div style="font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.6;color:#111">
       <h2 style="margin:0 0 12px;font-family:Georgia,serif;font-weight:400">New inquiry via fiftyandfive.com</h2>
+      <p><strong>Heard about us:</strong> ${esc(leadSourceLabel(source))}${referredBy ? ` (referred by ${esc(referredBy)})` : ''}</p>
       <p><strong>Name:</strong> ${esc(name)}</p>
       <p><strong>Email:</strong> <a href="mailto:${esc(email)}">${esc(email)}</a></p>
       ${company ? `<p><strong>Company:</strong> ${esc(company)}</p>` : ''}
@@ -122,7 +128,7 @@ function buildContactAutoReply(name: string) {
 
 function buildAuditChecklistEmail() {
   const items = [
-    { label: 'Profile audit', detail: 'Bio, link-in-bio, highlights, pinned posts — does every element earn its spot?' },
+    { label: 'Profile audit', detail: 'Bio, link-in-bio, highlights, pinned posts. Does every element earn its spot?' },
     { label: 'Content-market fit', detail: 'Pull your last 20 posts. How many would make a stranger follow you? Be honest.' },
     { label: 'Engagement ratio', detail: 'Divide comments + saves by impressions. Under 1%? Your content is being seen, not felt.' },
     { label: 'Competitor gap', detail: 'Find 3 competitors with higher engagement. What are they doing that you\'re not?' },
@@ -159,7 +165,7 @@ function buildAuditChecklistEmail() {
         Your 5-Minute Social Media Audit
       </h1>
       <p style="margin:16px 0 0;font-size:16px;color:#444;line-height:1.65">
-        Set a timer. Run through these 10 checks. By the end you'll know exactly where your social presence is strong — and where it's leaking value.
+        Set a timer. Run through these 10 checks. By the end you'll know exactly where your social presence is strong, and where it's leaking value.
       </p>
 
       <table style="margin:24px 0;width:100%;border-collapse:collapse">
@@ -171,12 +177,12 @@ function buildAuditChecklistEmail() {
           "Most brands know something is off. This checklist tells you where."
         </p>
         <p style="margin:8px 0 0;font-size:13px;color:#888">
-          — Lucas Vandenberg, Founding Principal
+          Lucas Vandenberg, Founding Principal
         </p>
       </div>
 
       <p style="margin:20px 0 0;font-size:16px;color:#444;line-height:1.65">
-        Want me to run this audit for your brand? I do a handful of these each month — 30 minutes, on the house.
+        Want me to run this audit for your brand? I do a handful of these each month: 30 minutes, on the house.
       </p>
       <p style="margin:12px 0 0;font-size:14px;color:#888">
         <a href="https://fiftyandfive.com/audit-checklist" style="color:${BRAND}">View the full checklist online</a> · Print or save as PDF anytime.
@@ -213,6 +219,8 @@ export async function POST(req: Request) {
   const company = (body.company || '').trim().slice(0, 200);
   const budget = (body.budget || '').trim().slice(0, 100);
   const message = (body.message || '').trim().slice(0, 5000);
+  const source = normalizeLeadSource(body.source);
+  const referredBy = (body.referredBy || '').trim().slice(0, 200);
 
   if (!name || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return NextResponse.json({ ok: false, error: 'Missing name or valid email' }, { status: 400 });
@@ -259,7 +267,7 @@ export async function POST(req: Request) {
       to,
       replyTo: email,
       subject: `New inquiry, ${name}${company ? ` (${company})` : ''}${budget ? ` · ${budget}` : ''}`,
-      html: buildInternalEmail(name, email, company, budget, message, phone, consent),
+      html: buildInternalEmail(name, email, company, budget, message, phone, consent, source, referredBy),
     });
 
     if (isAuditRequest) {
@@ -267,7 +275,7 @@ export async function POST(req: Request) {
         from,
         to: email,
         replyTo: to,
-        subject: 'Your 5-Minute Social Media Audit Checklist — Fifty & Five',
+        subject: 'Your 5-Minute Social Media Audit Checklist | Fifty & Five',
         html: buildAuditChecklistEmail(),
       });
     } else {
@@ -275,7 +283,7 @@ export async function POST(req: Request) {
         from,
         to: email,
         replyTo: to,
-        subject: `Thanks for reaching out — Fifty & Five`,
+        subject: `Thanks for reaching out | Fifty & Five`,
         html: buildContactAutoReply(name),
       });
     }
