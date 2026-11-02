@@ -87,7 +87,7 @@ function buildInternalEmail(
 ) {
   const vendorNote =
     screen.verdict === 'vendor'
-      ? `<p style="margin:0 0 12px;padding:8px 12px;background:#fbebeb;font-size:13px"><strong>Likely vendor pitch</strong> (${esc(screen.reasons.join(', '))}). No auto-reply was sent and it was not counted as a lead in GA4.</p>`
+      ? `<p style="margin:0 0 12px;padding:8px 12px;background:#fbebeb;font-size:13px"><strong>Likely vendor pitch</strong> (${esc(screen.reasons.join(', '))}). It was not counted as a lead in GA4. The normal auto-reply still went out.</p>`
       : '';
   return `
     <div style="font-family:ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.6;color:#111">
@@ -140,7 +140,7 @@ function buildContactAutoReply(name: string) {
 
 function buildAuditChecklistEmail() {
   const items = [
-    { label: 'Profile audit', detail: 'Bio, link-in-bio, highlights, pinned posts — does every element earn its spot?' },
+    { label: 'Profile audit', detail: 'Bio, link-in-bio, highlights, pinned posts. Does every element earn its spot?' },
     { label: 'Content-market fit', detail: 'Pull your last 20 posts. How many would make a stranger follow you? Be honest.' },
     { label: 'Engagement ratio', detail: 'Divide comments + saves by impressions. Under 1%? Your content is being seen, not felt.' },
     { label: 'Competitor gap', detail: 'Find 3 competitors with higher engagement. What are they doing that you\'re not?' },
@@ -177,7 +177,7 @@ function buildAuditChecklistEmail() {
         Your 5-Minute Social Media Audit
       </h1>
       <p style="margin:16px 0 0;font-size:16px;color:#444;line-height:1.65">
-        Set a timer. Run through these 10 checks. By the end you'll know exactly where your social presence is strong — and where it's leaking value.
+        Set a timer. Run through these 10 checks. By the end you'll know exactly where your social presence is strong, and where it's leaking value.
       </p>
 
       <table style="margin:24px 0;width:100%;border-collapse:collapse">
@@ -189,12 +189,12 @@ function buildAuditChecklistEmail() {
           "Most brands know something is off. This checklist tells you where."
         </p>
         <p style="margin:8px 0 0;font-size:13px;color:#888">
-          — Lucas Vandenberg, Founding Principal
+          Lucas Vandenberg, Founding Principal
         </p>
       </div>
 
       <p style="margin:20px 0 0;font-size:16px;color:#444;line-height:1.65">
-        Want me to run this audit for your brand? I do a handful of these each month — 30 minutes, on the house.
+        Want me to run this audit for your brand? I do a handful of these each month: 30 minutes, on the house.
       </p>
       <p style="margin:12px 0 0;font-size:14px;color:#888">
         <a href="https://fiftyandfive.com/audit-checklist" style="color:${BRAND}">View the full checklist online</a> · Print or save as PDF anytime.
@@ -289,16 +289,16 @@ export async function POST(req: Request) {
         from,
         to: email,
         replyTo: to,
-        subject: 'Your 5-Minute Social Media Audit Checklist — Fifty & Five',
+        subject: 'Your 5-Minute Social Media Audit Checklist | Fifty & Five',
         html: buildAuditChecklistEmail(),
       });
-    } else if (isLead) {
-      // Vendor pitches get no auto-reply: it invites a follow-up sequence.
+    } else {
+      // Everyone gets the auto-reply, so a prospect the screen misreads loses nothing.
       await resend.emails.send({
         from,
         to: email,
         replyTo: to,
-        subject: `Thanks for reaching out — Fifty & Five`,
+        subject: `Thanks for reaching out | Fifty & Five`,
         html: buildContactAutoReply(name),
       });
     }

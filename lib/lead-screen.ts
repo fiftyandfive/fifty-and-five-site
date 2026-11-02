@@ -5,14 +5,13 @@
  * It is people selling to us: VA staffing, offshore dev and SEO shops,
  * "publish your feature" media. This sorts a submission into a real lead or
  * a likely vendor pitch so that:
- *   - Lucas still gets every email, but vendor pitches are tagged in the subject,
- *   - vendors do not get the prospect auto-reply,
+ *   - Lucas still gets every email, with vendor pitches tagged in the subject,
  *   - only real leads fire the GA4 `generate_lead` key event.
+ * Everyone, vendor or not, still gets the auto-reply, so a misread prospect
+ * loses nothing they can see.
  *
- * Deliberately conservative: a submission is only called a vendor when its own
- * words pitch a service. A false "lead" costs nothing; a false "vendor" costs a
- * prospect their auto-reply, so the bar for "vendor" is two signals, or one
- * signal that is unmistakable on its own.
+ * Deliberately conservative: only seller language counts. A missed vendor costs
+ * one extra lead event; a misread prospect costs a conversion we never see.
  */
 
 export type LeadSource =
@@ -62,42 +61,42 @@ export type ScreenResult = {
   reasons: string[];
 };
 
-/** Phrases that on their own mean "I am selling to you". */
-const STRONG_PITCH: ReadonlyArray<[RegExp, string]> = [
-  [/\bvirtual (assistant|assistants|staff|team)\b/i, 'virtual assistant pitch'],
-  [/\b(offshore|outsourc(e|ed|ing))\b/i, 'outsourcing pitch'],
-  [/\bwhite[- ]?label(ed)?\b/i, 'white label pitch'],
-  [/\b(guest post|link building|backlinks?)\b/i, 'link building pitch'],
-  [/\brank (your|you) (website|site|business)\b/i, 'SEO ranking pitch'],
-  [/\b(first page|page one|1st page) (of|on) google\b/i, 'SEO ranking pitch'],
-  [/\bgrant (us |me )?(read[- ]only )?access\b/i, 'account access request'],
-  [/\bfeature (you|your company) in\b/i, 'paid media feature pitch'],
-];
-
-/** Phrases that are suspicious only in combination. */
-const WEAK_PITCH: ReadonlyArray<[RegExp, string]> = [
-  // Narrow on purpose: prospects also write "we are a family wine company" and
-  // "our team", so only service-shop self descriptions count.
+/**
+ * Seller language only. Every pattern is first person and pointed at us
+ * ("we offer", "for agencies", "$6/hr", "here is my portfolio"). Topic words
+ * a buyer also uses about their own business ("outsource", "virtual
+ * assistant", "white label", "first page of Google", "grant access") are
+ * deliberately NOT patterns: the Nov 2 validator showed each one flags real
+ * prospects. One match is enough; there are no weak signals.
+ */
+const PITCH: ReadonlyArray<[RegExp, string]> = [
+  [/\b(help|helps|helping|serve|serving|for) (digital |marketing |creative )?agencies\b/i, 'sells to agencies'],
+  [/\bagencies like yours\b/i, 'sells to agencies'],
   [
-    /\b(we are|we're|i am|i'm) (a|an) (leading |top |award[- ]winning |full[- ]service )?(digital|marketing|seo|web|software|development|design|staffing|outsourcing|it) (agency|company|firm|studio|team)\b/i,
-    'introduces own agency',
+    /\bwe (offer|provide|deliver|specialize in) (affordable |dedicated |professional |expert |reliable |top[- ]quality )?(seo|ppc|smm|web|website|app|wordpress|shopify|development|design|virtual assistan|va |staffing|outsourc|link building|backlink|lead generation|appointment)/i,
+    'offers own services',
   ],
-  [/\bour (developers|designers|seo experts|virtual assistants|vas)\b/i, 'describes own staff'],
-  [/\b(hourly rate|per hour|\$\d+\s?\/\s?h(ou)?r)\b/i, 'quotes own rate'],
-  [/\b(free (trial|consultation|audit) for you|no obligation)\b/i, 'offers free trial'],
-  [/\b(web ?development|app development|wordpress|shopify) (services|experts?|team)\b/i, 'dev shop language'],
-  [/\b(lead generation|appointment setting) (services|agency)\b/i, 'lead gen pitch'],
-  [/\b(partnership|collaboration) opportunit(y|ies)\b/i, 'partnership pitch'],
+  [/\boffering [\w ,&/-]{0,40}\bservices\b/i, 'offers own services'],
+  [/(starting at|starts at|from|only|just)\s*\$\s?\d+(\.\d+)?\s*(\/|per\s)\s*(hr|hour)\b/i, 'quotes own hourly rate'],
+  [/\bwe (can )?(book|set|deliver) \d+\+? (qualified )?(meetings|appointments|calls)\b/i, 'appointment setting pitch'],
+  [/\b(i am|i'm) a freelance\b/i, 'freelancer pitch'],
+  [/\b(here is|here's|see) my portfolio\b/i, 'freelancer pitch'],
+  [
+    /\b(our team|our developers|our designers|we) can (redesign|rebuild|improve|fix|speed up) (it|your (website|site|(google )?rankings|seo))\b/i,
+    'website fix pitch',
+  ],
+  [/\bwe (can|will) (rank|get) your (website|site|business|company)\b/i, 'SEO ranking pitch'],
+  [/\bnoticed (some|a few|several|a couple of) (issues|errors|problems) (on|with) your (website|site)\b/i, 'website fix pitch'],
+  [/\b(free|complimentary) (seo |website |site )?(report|audit) (for you|of your (website|site))\b/i, 'website fix pitch'],
+  [/\b(send|share|provide)( us| me)? (the |your )?email (address )?(you use|associated)\b/i, 'account access request'],
+  [/\bfeature (you|your company|your agency) in our (upcoming |next )?(issue|edition|magazine|publication|list)\b/i, 'paid media feature pitch'],
 ];
 
 export function screenSubmission(input: ScreenInput): ScreenResult {
-  const text = [input.name, input.company, input.message].filter(Boolean).join('\n');
+  // Message only: company and person names ("Offshore Fishing Charters",
+  // "Virtual Team Co") say nothing about whether someone is selling.
+  const text = input.message || '';
   if (!text.trim()) return { verdict: 'lead', reasons: [] };
-
-  const strong = STRONG_PITCH.filter(([re]) => re.test(text)).map(([, why]) => why);
-  const weak = WEAK_PITCH.filter(([re]) => re.test(text)).map(([, why]) => why);
-  const reasons = Array.from(new Set([...strong, ...weak]));
-
-  const isVendor = strong.length >= 1 || weak.length >= 2;
-  return { verdict: isVendor ? 'vendor' : 'lead', reasons: isVendor ? reasons : [] };
+  const reasons = Array.from(new Set(PITCH.filter(([re]) => re.test(text)).map(([, why]) => why)));
+  return { verdict: reasons.length > 0 ? 'vendor' : 'lead', reasons };
 }
