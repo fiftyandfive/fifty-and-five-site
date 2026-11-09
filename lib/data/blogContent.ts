@@ -4,6 +4,110 @@
 import { FACTS } from '@/lib/site-facts';
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'hotel-group-social-media-multiple-properties': `<p>A hotel group with more than one property should run each property as its own account, with its own creative direction and its own calendar, held to one shared standard for voice, production quality, inbox handling and reporting. Share the standard, not the look. A single feed or a single template averaged across every property is cheaper to produce and usually sells none of them.</p>
+
+<p>That is how we ran social for <a href="/work/resorts-world">Resorts World</a> across a resort in Bimini in the Bahamas and a retreat in the Catskills in upstate New York, and it is the structure we bring to any group whose properties differ in character. Fifty &amp; Five has run <a href="/hospitality-social-media-agency">hotel and resort social</a> for resorts, attractions and tourism boards, and has been senior-led since ${FACTS.founded}. Here is how a multi-property program should be built.</p>
+
+<h2>Why one shared look sells none of the properties</h2>
+
+<p>A guest does not book a hotel group. They book a specific place for a specific trip. The things that make someone commit, the view from the room, the pool at a certain hour, the walk to dinner, belong to one property and not to the portfolio.</p>
+
+<p>When a group pushes every property through one content template, those specifics are the first thing to go. The beach resort and the city hotel end up with the same color grade, the same caption voice and the same stock moments. Production gets cheaper, and the content stops answering the only question a guest is asking: why this place, for this trip?</p>
+
+<p>The Resorts World properties made the point clearly. Bimini sells turquoise water and over-water villas. The Catskills sells fireplaces and foliage. Both carry the same parent brand, and averaging them into one luxury look would have flattened exactly what made each one worth booking. Each had to feel like a place worth traveling for on its own terms.</p>
+
+<h2>Step 1: decide what is shared and what is per property</h2>
+
+<p>Before anything is posted, write down the split. Most multi-property problems come from never making it explicit, so every property manager and every agency coordinator makes it up as they go.</p>
+
+<p><strong>Shared across the group:</strong></p>
+
+<ul>
+<li>Voice: how the brand sounds, what it never says, how it answers a complaint.</li>
+<li>Production bar: the minimum quality for photo, video and captions, so no property drags the brand down.</li>
+<li>Inbox rules: response times, who answers, and when a conversation goes to reservations.</li>
+<li>Crisis playbook: who speaks, who approves, and how fast, across every property.</li>
+<li>Reporting: one set of definitions, so the numbers from each property can be compared.</li>
+</ul>
+
+<p><strong>Built per property:</strong></p>
+
+<ul>
+<li>Creative direction, sourced from the place itself: the view, the room, the food, the people.</li>
+<li>The content calendar, built around that property's seasons and need dates.</li>
+<li>Offers and occasions, because the reasons to visit a beach resort and a mountain lodge are not the same.</li>
+<li>Paid targeting, aimed at the markets that actually travel to that property.</li>
+</ul>
+
+<p>If the group can only afford to build one thing centrally, build the standard. A shared standard keeps the brand reading as one company. A shared look makes the properties read as interchangeable.</p>
+
+<h2>Step 2: give each property its own account</h2>
+
+<p>On Resorts World, each property was treated as its own account against a shared standard. That is the default we recommend for any group where properties sell different experiences. A guest planning a beach trip should not have to scroll past mountain content to find what they came for.</p>
+
+<p>A group-level account can still earn its place. It works for loyalty, careers, corporate news and cross-property trips. It should not be where the selling happens. The property accounts do that job.</p>
+
+<h2>Step 3: run a separate calendar for each property</h2>
+
+<p>Seasonality is where a single calendar fails fastest. On Resorts World, the beach property and the mountain property peaked at different times and sold different feelings, so one calendar with one set of creative would have left a property flat for half the year. The answer was two separate rhythms, one per property, with the brand standard holding them together.</p>
+
+<p>For each property, the calendar should be planned months ahead of peak demand, built backward from the dates the property needs to fill. Holiday and peak-season assets get shot and approved early, while the property still has time to shoot what it needs. A group calendar can sit on top as a rollup, so leadership sees every property at a glance, but it should never replace the property calendars underneath it.</p>
+
+<h2>Step 4: treat every inbox as a sales channel</h2>
+
+<p>A resort direct message is often a conversation worth thousands of dollars. Someone asking about availability in March is a qualified lead in the middle of a decision. On Resorts World, community management treated messages as sales conversations, with reply quality treated as a revenue input rather than a service metric.</p>
+
+<p>With several properties, the risk is that the inbox becomes nobody's job. Set the rules once at group level and apply them everywhere:</p>
+
+<ul>
+<li>Every property inbox has a named owner and a response time target.</li>
+<li>Answers are informed, not templated: whoever replies knows the rooms, the rates policy and the seasons for that property.</li>
+<li>There is a clear handoff to reservations, so a booking question never dies in a social inbox.</li>
+<li>Inquiries are logged by property, so the group can see which inboxes are producing bookings.</li>
+</ul>
+
+<h2>Step 5: plan one crisis playbook, applied per property</h2>
+
+<p>A group has more exposure than a single hotel. A hurricane, a travel advisory or a bad review that spreads can hit one property while the others carry on as normal. The playbook should be written once and applied per property: who confirms the facts, who approves the post, which accounts pause scheduled content, and how the group account responds, if at all.</p>
+
+<p>Senior people should run it. A weather event at one property is not the moment for a junior coordinator to improvise in the comments on the group account.</p>
+
+<h2>Step 6: report by property, then roll up</h2>
+
+<p>Likes are the wrong scoreboard for a hotel, and they are even less useful for a group, because a total across properties hides which ones are working. Report each property on its own numbers, then roll them up:</p>
+
+<ul>
+<li>Direct messages and inquiries that came from social, by property.</li>
+<li>Clicks to the booking engine, by property.</li>
+<li>The share of direct bookings that touched a social channel first, where the booking data allows it.</li>
+<li>Reach and engagement as supporting signals, useful only when they move the numbers above.</li>
+</ul>
+
+<p>Shared definitions are what make the rollup honest. If one property counts a story reply as an inquiry and another does not, the group comparison means nothing.</p>
+
+<h2>Tourism boards follow the same rule at a larger scale</h2>
+
+<p>The structure is not only for hotel groups. We have run social for the Hong Kong Tourism Board, the Korea Tourism Board and the Macau Tourism Office, and operated campaigns in ${FACTS.countries}+ countries across ${FACTS.continents} continents. The job there is one destination story adapted market by market without diluting it. The principle is the same one that runs a hotel group: protect the shared standard, and let each market or property be specific.</p>
+
+<h2>When a group needs a marketing lead, not only social</h2>
+
+<p>Some groups reach the point where the problem is not posting. It is that nobody owns marketing across the properties: budgets get set property by property, channels compete with each other, and agencies report to different people. At that stage the group needs a senior marketing lead across the portfolio, someone who sets the budget split, makes channel decisions and holds the agencies to one standard. A <a href="/fractional-cmo">fractional CMO seat</a> brings that leadership in without a full-time executive hire, and sits naturally on top of the per-property structure above.</p>
+
+<p><em>Running social for more than one hotel or resort? <a href="/hospitality-social-media-agency">See how we run hospitality social &rarr;</a></em></p>
+
+<p><em>Fifty &amp; Five is a senior-led <a href="/hospitality-social-media-agency">hotel and resort social media agency</a> in Orlando, senior-led since ${FACTS.founded}. More on the single-property side in our post on <a href="/blog/social-media-luxury-resorts-hospitality">social media for luxury resorts</a>.</em></p>
+
+<h3>Should a hotel group run one social account or one per property?</h3>
+<p>One per property, in most cases. Each property sells a different experience, and a guest planning a specific trip wants content about that place. A group-level account is useful for loyalty, careers, corporate news and cross-property trips, but the property accounts should do the selling.</p>
+
+<h3>How do you keep several hotel accounts on brand?</h3>
+<p>Share the standard, not the look. Set one group standard for voice, production quality, inbox handling, crisis response and reporting, and let each property build its own creative direction and calendar from the place itself. The standard keeps the group reading as one company without making the properties interchangeable.</p>
+
+<h3>How should a hotel group measure social media?</h3>
+<p>By property first, then as a rollup. Track inquiries and direct messages from social, clicks to the booking engine, and the share of direct bookings that touched social, for each property using shared definitions. Reach and engagement are supporting signals, useful only when they move those numbers.</p>
+
+<h3>Has Fifty &amp; Five run social for a multi-property hospitality brand?</h3>
+<p>Yes. Fifty &amp; Five ran social media management, content creation and community management for two Resorts World properties, one in Bimini in the Bahamas and one in the Catskills in upstate New York. Each ran as its own account with its own creative and calendar, against a shared brand standard. Retainers start at $4,000 per month.</p>`,
   'wine-creator-programs-match-community-not-followers': `<p>A creator program for a wine brand works when each creator is matched to a community that already drinks, cooks or entertains around your category, and fails when creators are picked by follower count. Pick the community first, pitch the creator on the bottle rather than a rate card, and structure every partnership so its content keeps working after the deal closes.</p>
 
 <p>That is the method behind the creator engine we built for <a href="/work/streetstrider">StreetStrider</a>, which went from zero creator relationships to more than 100 active partnerships, and it is how we approach creator work for wine and spirits brands. Fifty &amp; Five has worked with ${FACTS.wineSpiritsBrands}+ wine and spirits brands since ${FACTS.founded}. Here is how a wine creator program should be built, step by step.</p>
