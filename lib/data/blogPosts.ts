@@ -19,6 +19,17 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "Social Media for Hotel Groups with More Than One Property",
+    slug: 'hotel-group-social-media-multiple-properties',
+    seoTitle: "Social Media for Multi-Property Hotel Groups",
+    wixSlug: 'hotel-group-social-media-multiple-properties',
+    date: '2026-11-09',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=85',
+    excerpt: "Run each hotel as its own account against one shared standard. How multi-property groups split creative, calendars, inboxes and reporting.",
+    category: 'Travel & Hospitality',
+  },
+  {
     title: "Creator Programs for Wine Brands: Match the Community, Not the Follower Count",
     slug: 'wine-creator-programs-match-community-not-followers',
     seoTitle: "Wine Creator Programs: Match the Community",
