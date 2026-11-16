@@ -19,6 +19,17 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    title: "What a Fractional CMO Does for a B2B or Tech Company",
+    slug: 'fractional-cmo-for-b2b-and-tech-companies',
+    seoTitle: "Fractional CMO for B2B and Tech Companies",
+    wixSlug: 'fractional-cmo-for-b2b-and-tech-companies',
+    date: '2026-11-16',
+    minutesToRead: 7,
+    heroImage: 'https://images.unsplash.com/photo-1593640495253-23196b27a87f?w=1600&q=85',
+    excerpt: "A B2B fractional CMO builds marketing around the sales cycle: the real buyer, a pipeline scoreboard sales trusts, and content your sales team can use.",
+    category: 'Fractional CMO',
+  },
+  {
     title: "Creator Programs for Wine Brands: Match the Community, Not the Follower Count",
     slug: 'wine-creator-programs-match-community-not-followers',
     seoTitle: "Wine Creator Programs: Match the Community",

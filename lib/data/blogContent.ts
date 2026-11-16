@@ -4,6 +4,104 @@
 import { FACTS } from '@/lib/site-facts';
 
 export const BLOG_CONTENT: Record<string, string> = {
+  'fractional-cmo-for-b2b-and-tech-companies': `<p>A fractional CMO for a B2B or tech company owns the marketing number the way a full-time CMO would, but builds every decision around how your buyer actually decides: over weeks or months, with several people involved, and in a sales conversation rather than in a feed. In practice the seat defines the buyer, ties marketing to the pipeline, picks the few channels that feed it, and directs whoever does the execution.</p>
+
+<p>That is a different job from running marketing for a consumer brand, and it is the reason a lot of B2B companies get poor results from marketing leadership that was built for likes and reach. Fifty &amp; Five has led marketing for ${FACTS.brandsManaged}+ brands since ${FACTS.founded}, including tech work for Microsoft, SAP and NETGEAR. Here is what the <a href="/fractional-cmo">fractional CMO seat</a> does when the company sells to other businesses or sells technology.</p>
+
+<h2>Why B2B and tech marketing breaks in a different place</h2>
+
+<p>In a consumer business, marketing can often close the sale on its own. Someone sees a post, clicks, and buys. In B2B, marketing almost never closes. It earns a conversation, and the sale happens later, on a call, with a proposal, often after more than one person on the buying side has weighed in.</p>
+
+<p>That changes where things go wrong. The common B2B failure is not a lack of content. It is marketing and sales working from different scoreboards. Marketing reports impressions and form fills. Sales says the leads are bad. The founder sits in the middle, and nobody owns the gap between a first touch and a signed contract.</p>
+
+<p>The seat exists to own that gap. Everything below is how.</p>
+
+<h2>1. Defines the buyer and the people around them</h2>
+
+<p>The first job is writing down who actually buys. Not a persona with a stock photo, but the real roles: who feels the problem, who signs, who can kill the deal, and who has to use the product after it is bought. In a tech sale those are often different people with different objections, and content written for one of them rarely persuades the others.</p>
+
+<p>Our work on <a href="/work/microsoft">Microsoft Partners in Learning</a> is a useful example of how much the audience shapes the work. The people the program had to reach were classroom educators, one of the most marketing-resistant audiences in technology. They are pitched constantly and distrust any promise that a tool will change their week. What worked was content built from real teachers and real classroom stories, with the technology in the background. The lesson carries straight into B2B: credibility comes from the practitioner, not the brand, and most professional buyers distrust vendors by default.</p>
+
+<h2>2. Ties marketing to the pipeline, not the feed</h2>
+
+<p>Once the buyer is clear, the seat builds a scoreboard both marketing and sales accept. For most B2B companies that is a short list of numbers that sit between attention and revenue:</p>
+
+<ul>
+<li>Qualified inquiries, defined in writing with sales, so nobody argues later about what counts.</li>
+<li>Conversations booked from those inquiries.</li>
+<li>Deals in the pipeline that marketing touched, and how far they got.</li>
+<li>Time from first inquiry to signed contract, which tells you whether content is shortening the cycle.</li>
+</ul>
+
+<p>Follower counts and impressions can stay on a dashboard, but they do not decide the budget. The seat reviews the scoreboard monthly with the founder or sales lead and moves money toward whatever is producing real conversations. We cover the general version of this in our guide to <a href="/blog/measure-social-media-roi">measuring social media ROI</a>.</p>
+
+<h2>3. Decides whether you have a brand problem or a category problem</h2>
+
+<p>Many tech companies sell something the buyer is not sure they need yet. That is a different marketing problem from beating a known competitor, and treating it like one wastes a year.</p>
+
+<p>We saw this with <a href="/work/netgear-arlo">Arlo</a>, which grew from a NETGEAR product line into a standalone smart home company listed on the NYSE. Connected home cameras were still an emerging category, so much of the audience was not choosing between brands. They were deciding whether they wanted the product at all. Content had to explain why the category was worth having before it could explain why this brand was the right one. That was a consumer launch, but the logic applies directly to new software categories and new B2B tools. If buyers are still deciding whether the product type belongs in their company, comparison content is premature. Category education is what moves them.</p>
+
+<p>The seat makes that call early, because it changes what gets produced, what sales says on the first call, and how long the cycle should be expected to run.</p>
+
+<h2>4. Translates technical depth without dumbing it down</h2>
+
+<p>Technical companies tend to fail in one of two directions. Either the marketing is written by engineers for engineers and nobody else finishes a paragraph, or it is sanded down into slogans that a technical buyer instantly distrusts. Neither earns a meeting.</p>
+
+<p>The seat sets the standard for the middle: plain language about what the product does, specific enough that an expert reader nods, clear enough that the person signing the contract understands why it matters. It also makes sure that material reaches sales. A strong explanation that lives only on the blog is half used. The same story should exist as a one-page leave-behind, a short answer to the objection sales hears most, and a reason for a prospect to forward it to a colleague.</p>
+
+<h2>5. Gets the company found where buyers research</h2>
+
+<p>B2B buyers research before they ever fill out a form, and more of that research now starts with an AI assistant rather than a search results page. If the company is not in the answer when a buyer asks about the category, it may never make the shortlist.</p>
+
+<p>The seat audits how the company shows up across search, social and AI answers, then decides which gaps are worth closing first. For tech brands, winning the AI-search consideration set matters as much as ranking in Google. We go into the mechanics in our guide to <a href="/blog/aeo-how-to-get-cited-by-ai-search">getting cited by AI search</a>.</p>
+
+<h2>6. Directs whoever does the work</h2>
+
+<p>A fractional CMO does not write every post, run the ad account or build the website with its own hands. That is execution, and it is scoped and priced separately so the seat stays strategic. What the seat does is set the plan, own the budget and channel mix, and hold whoever executes to it, whether that is an in-house marketer, an outside agency, or our own team.</p>
+
+<p>If the company already has a marketing person, keep them. The seat should make them sharper, not sidelined. In tech companies that person is often talented and stretched thin, working without anyone senior to say which three things matter this quarter and which ten can wait.</p>
+
+<h2>What the first 90 days look like</h2>
+
+<p>The sequence is the same one we describe in <a href="/blog/what-a-fractional-cmo-does-in-the-first-90-days">what a fractional CMO does in the first 90 days</a>, adjusted for a sales-led business.</p>
+
+<p><strong>Month one is diagnosis.</strong> Read every number that exists, from lead sources to close rates. Sit in on sales calls, because the questions prospects ask tell you what the website and content are failing to answer. Name the single bottleneck that matters most. Sometimes it is not where anyone expects. For one general contractor, the bottleneck was a decade-old website that had produced <a href="/blog/landmark-contracting-website-rebuild-fractional-cmo">one request for quote in ten years</a>. After the rebuild, it produced four in the first two weeks.</p>
+
+<p><strong>Month two fixes that bottleneck and nothing else.</strong> In B2B that is often the offer, the website, or the handoff between marketing and sales, rather than a new channel.</p>
+
+<p><strong>Month three builds the scoreboard</strong> and locks in the monthly rhythm, so the function keeps running without the founder in every decision.</p>
+
+<h2>When a B2B or tech company needs the seat</h2>
+
+<p>The fit is strongest for owner-operated companies doing roughly $1M to $20M in revenue. Below that, a founder can usually still hold marketing. Above it, most companies can justify a full in-house team. In between, three signs point to the seat:</p>
+
+<ul>
+<li>The founder is still the de facto head of marketing and it is costing them selling time.</li>
+<li>Marketing and sales disagree about whether leads are any good, and nobody owns settling it.</li>
+<li>There is activity, such as posts, ads or a newsletter, but no one can say which of it produces pipeline.</li>
+</ul>
+
+<p>If the gap is direction, the seat fits. If you already have a clear plan and just need more of it shipped, a <a href="/services">retainer</a> is the better tool.</p>
+
+<h2>How the seat is structured</h2>
+
+<p>Every month includes a 60 to 90 minute strategy session, a written Marketing Command Brief covering what moved, what is flagged and what is next, one prioritized recommendation scoped and ready to execute, and direct access in between. The seat starts at $4,000 per month, month to month with 30 days notice, so the work has to earn the renewal every month.</p>
+
+<p><em>Running a B2B or tech company and want senior marketing leadership that owns the pipeline number? <a href="/fractional-cmo">See how the seat works &rarr;</a> or see our <a href="/verticals/tech-saas">tech and SaaS work &rarr;</a></em></p>
+
+<p><em>Fifty &amp; Five runs this as a <a href="/fractional-cmo">fractional CMO seat</a>: senior marketing leadership that owns the number, month to month.</em></p>
+
+<h3>What does a fractional CMO do for a B2B company?</h3>
+<p>A fractional CMO for a B2B company defines the real buyer and buying group, builds a scoreboard that marketing and sales both accept, chooses the few channels that feed the pipeline, and directs whoever executes the work. The seat owns the marketing number on a part-time basis, the way a full-time CMO would, without becoming a full-time hire.</p>
+
+<h3>How is B2B marketing leadership different from consumer marketing?</h3>
+<p>In consumer marketing, a post or ad can often close the sale. In B2B, marketing earns a conversation and the sale happens later, usually with several people on the buying side. That means the right measures are qualified inquiries, booked conversations and pipeline, not likes or reach, and marketing has to produce material sales can actually use.</p>
+
+<h3>Does a fractional CMO replace our marketing person or agency?</h3>
+<p>Usually not. The seat sets strategy, budget and channel priorities, then oversees whoever executes, whether that is an in-house marketer, an agency or Fifty &amp; Five's own team. A good seat makes the existing team sharper. Hands-on execution is scoped and priced separately so the seat stays strategic.</p>
+
+<h3>Has Fifty &amp; Five worked with tech companies?</h3>
+<p>Yes. Fifty &amp; Five's tech work includes Microsoft, SAP and NETGEAR, including social and launch support for Arlo as it grew from a NETGEAR product line into a standalone company listed on the NYSE. The fractional CMO seat starts at $4,000 per month, month to month.</p>`,
   'wine-creator-programs-match-community-not-followers': `<p>A creator program for a wine brand works when each creator is matched to a community that already drinks, cooks or entertains around your category, and fails when creators are picked by follower count. Pick the community first, pitch the creator on the bottle rather than a rate card, and structure every partnership so its content keeps working after the deal closes.</p>
 
 <p>That is the method behind the creator engine we built for <a href="/work/streetstrider">StreetStrider</a>, which went from zero creator relationships to more than 100 active partnerships, and it is how we approach creator work for wine and spirits brands. Fifty &amp; Five has worked with ${FACTS.wineSpiritsBrands}+ wine and spirits brands since ${FACTS.founded}. Here is how a wine creator program should be built, step by step.</p>
